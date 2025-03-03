@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Preview: https://main--internal-aem-eds-poc-en--Tekno-Point.aem.page/
+- Live: https://main--internal-aem-eds-poc-en--Tekno-Point.aem.live/
 
 ## Documentation
 
