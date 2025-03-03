@@ -1,8 +1,3 @@
-/*
- * Embed Block
- * Show videos and social posts directly on your page
- * https://www.hlx.live/developer/block-collection/embed
- */
 
 const loadScript = (url, callback, type) => {
     const head = document.querySelector('head');
@@ -17,10 +12,10 @@ const loadScript = (url, callback, type) => {
   };
   
   const getDefaultEmbed = (url) => `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-      <iframe src="${url.href}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen=""
-        scrolling="no" allow="encrypted-media" title="Content from ${url.hostname}" loading="lazy">
-      </iframe>
-    </div>`;
+        <iframe src="${url.href}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen="" allow="autoplay"
+          scrolling="no" allow="encrypted-media" title="Content from ${url.hostname}" loading="lazy">
+        </iframe>
+      </div>`;
   
   const embedYoutube = (url, autoplay) => {
     const usp = new URLSearchParams(url.search);
@@ -30,10 +25,18 @@ const loadScript = (url, callback, type) => {
     if (url.origin.includes('youtu.be')) {
       [, vid] = url.pathname.split('/');
     }
+  
+    /*  const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+          <iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;"
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>
+          </div>`;
+      */
+  
     const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-        <iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
-        allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>
-      </div>`;
+          <iframe src="https://www.youtube.com/${embed}?rel=0${suffix}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
+          allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>
+        </div>`;
+  
     return embedHTML;
   };
   
@@ -41,11 +44,11 @@ const loadScript = (url, callback, type) => {
     const [, video] = url.pathname.split('/');
     const suffix = autoplay ? '?muted=1&autoplay=1' : '';
     const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-        <iframe src="https://player.vimeo.com/video/${video}${suffix}" 
-        style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
-        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  
-        title="Content from Vimeo" loading="lazy"></iframe>
-      </div>`;
+          <iframe src="https://player.vimeo.com/video/${video}${suffix}" 
+          style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  
+          title="Content from Vimeo" loading="lazy"></iframe>
+        </div>`;
     return embedHTML;
   };
   
@@ -54,6 +57,16 @@ const loadScript = (url, callback, type) => {
     loadScript('https://platform.twitter.com/widgets.js');
     return embedHTML;
   };
+  
+  const videoTag = (url) => {
+    // <source src="movie.ogg" type="video/ogg">
+    const videoHTML = `<div class="videotag">
+            <video controls autoplay>
+                      <source src="${url.href}" type="video/mp4">
+            </video>
+    </div>`
+    return videoHTML;
+  }
   
   const loadEmbed = (block, link, autoplay) => {
     if (block.classList.contains('embed-is-loaded')) {
@@ -73,6 +86,10 @@ const loadScript = (url, callback, type) => {
         match: ['twitter'],
         embed: embedTwitter,
       },
+      {
+        match: ['video'],
+        embed: videoTag,
+      }
     ];
   
     const config = EMBEDS_CONFIG.find((e) => e.match.some((match) => link.includes(match)));
@@ -84,6 +101,7 @@ const loadScript = (url, callback, type) => {
       block.innerHTML = getDefaultEmbed(url);
       block.classList = 'block embed';
     }
+  
     block.classList.add('embed-is-loaded');
   };
   
@@ -91,23 +109,26 @@ const loadScript = (url, callback, type) => {
     const placeholder = block.querySelector('picture');
     const link = block.querySelector('a').href;
     block.textContent = '';
+    loadEmbed(block, link, true);
+    // if (!placeholder) {
+    //   const wrapper = document.createElement('div');
+    //   wrapper.className = 'embed-placeholder';
+    //   wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
+    //   wrapper.prepend(placeholder);
+    //   wrapper.addEventListener('click', () => {
+    //     loadEmbed(block, link, true);
+    //   });
+    //   block.append(wrapper);
+    // } else {
+    //   const observer = new IntersectionObserver((entries) => {
+    //     if (entries.some((e) => e.isIntersecting)) {
+    //       observer.disconnect();
+    //       loadEmbed(block, link);
+    //     }
+    //   });
+    //   observer.observe(block);
+    // }
   
-    if (placeholder) {
-      const wrapper = document.createElement('div');
-      wrapper.className = 'embed-placeholder';
-      wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
-      wrapper.prepend(placeholder);
-      wrapper.addEventListener('click', () => {
-        loadEmbed(block, link, true);
-      });
-      block.append(wrapper);
-    } else {
-      const observer = new IntersectionObserver((entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          observer.disconnect();
-          loadEmbed(block, link);
-        }
-      });
-      observer.observe(block);
-    }
+    // playVideoOnClick(block);
   }
+  
