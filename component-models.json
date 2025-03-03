@@ -118,6 +118,52 @@
     ]
   },
   {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Swiper Style",
+            "children": [
+              {
+                "name": "Swiper",
+                "value": "swiper"
+              },
+              {
+                "name": "Swiper Desktop",
+                "value": "swiper-desk"
+              },
+              {
+                "name": "Swiper Mobile",
+                "value": "swiper-mob"
+              },
+              {
+                "name": "Swiper Vertical",
+                "value": "swiper-vertical"
+              },
+              {
+                "name": "Swiper One",
+                "value": "swiper-one"
+              }
+            ]
+          },
+          {
+            "name": "XCL World Academy",
+            "children": [
+              {
+                "name": "Swiper Card",
+                "value": "swiper-card"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -162,6 +208,47 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "XCL World Academy",
+            "children": [
+              {
+                "name": "Hero Video Banner",
+                "value": "hero-video-banner"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "component": "reference",
+        "name": "video_image",
+        "label": "Video Image"
+      },
+      {
+        "component": "text",
+        "name": "video_imageAlt",
+        "label": "Video Image Alt"
+      },
+      {
+        "component": "text",
+        "name": "video_imageTitle",
+        "label": "Video Image Title"
       }
     ]
   },
