@@ -111,7 +111,9 @@ const loadScript = (url, callback, type) => {
     const placeholder = block.querySelector('picture');
     const link = block.querySelector('a').href;
     block.textContent = '';
-    loadEmbed(block, link, true);
+    if(isDesktop.matches){
+      loadEmbed(block, link, true);
+    }
     // if (!placeholder) {
     //   const wrapper = document.createElement('div');
     //   wrapper.className = 'embed-placeholder';
