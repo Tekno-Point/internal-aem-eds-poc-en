@@ -16,5 +16,13 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  
   block.append(footer);
+
+  const mediaQuery = window.matchMedia('(min-width: 768px)');
+  
+    // Check if the media query matches (i.e., desktop)
+    if (mediaQuery.matches) {
+      document.querySelector('.swiper-wrapper-1').appendChild(block);
+    }
 }
