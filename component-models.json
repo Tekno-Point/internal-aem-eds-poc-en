@@ -176,6 +176,13 @@
         "multi": false
       },
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_mobile",
+        "label": "Image",
+        "multi": false
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",

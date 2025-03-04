@@ -61,7 +61,7 @@ const loadScript = (url, callback, type) => {
   const videoTag = (url) => {
     // <source src="movie.ogg" type="video/ogg">
     const videoHTML = `<div class="videotag">
-            <video controls autoplay>
+            <video controls autoplay="true">
                       <source src="${url.href}" type="video/mp4">
             </video>
     </div>`
@@ -103,6 +103,7 @@ const loadScript = (url, callback, type) => {
     }
   
     block.classList.add('embed-is-loaded');
+    
   };
   
   export default function decorate(block) {

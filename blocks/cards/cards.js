@@ -1,11 +1,19 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
+// import { createElement } from '../../scripts/scripts.js';
+// import Swiper from '../swiper/swiper-bundle.min.js';
+// import configObject from '../swiper/carousel-config.js';
+// import embed from '../embed/embed.js';
+
 
 export default function decorate(block) {
   /* change to ul, li */
-  const ul = document.createElement('ul');
+  console.log("print",block)
+  const ul = document.createElement('div');
+  ul.classList.add("swiper-wrapper-1");
   [...block.children].forEach((row) => {
-    const li = document.createElement('li');
+    const li = document.createElement('div');
+    li.classList.add("swiper-slide-item")
     moveInstrumentation(row, li);
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
@@ -15,10 +23,28 @@ export default function decorate(block) {
     ul.append(li);
   });
   ul.querySelectorAll('picture > img').forEach((img) => {
-    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
+    const optimizedPic = createOptimizedPicture(img.src, img.alt);
     moveInstrumentation(img, optimizedPic.querySelector('img'));
     img.closest('picture').replaceWith(optimizedPic);
   });
   block.textContent = '';
   block.append(ul);
+
+  var swiper = new Swiper(block, {
+    direction: "vertical",
+    slidesPerView: 1,
+    spaceBetween: 30,
+    // mousewheel: true,
+  // grabCursor: true,
+    loop: false,
+    // autoplay: {
+    //   delay: 500,
+    //   disableOnInteraction: false,
+    // },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+});
+
 }
