@@ -107,10 +107,17 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
  */
+
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  let navPath;
+  if(isDesktop.matches){
+    navPath = navMeta ? new URL(navMeta, window.location).pathname : '/xcl-world-academy/nav';
+  }
+  else{
+    navPath = navMeta ? new URL(navMeta, window.location).pathname : '/xcl-world-academy/mobile-nav';
+  }
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM
@@ -137,11 +144,12 @@ export default async function decorate(block) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
-        if (isDesktop.matches) {
+        // if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
+          !expanded ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        }
+        // }
       });
     });
   }
