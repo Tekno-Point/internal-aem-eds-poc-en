@@ -1,3 +1,4 @@
+import { isDesktop } from "../../scripts/scripts.js";
 
 const loadScript = (url, callback, type) => {
     const head = document.querySelector('head');

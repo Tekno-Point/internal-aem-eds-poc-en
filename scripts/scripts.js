@@ -189,7 +189,7 @@ export function createElement(tagName, options = {}) {
   return elem;
 }
 
-const isDesktop = window.matchMedia('(min-width: 1024px)');
+export const isDesktop = window.matchMedia('(min-width: 1024px)');
 if (isDesktop.matches) {
 
  window.addEventListener("scroll", (e) => {
