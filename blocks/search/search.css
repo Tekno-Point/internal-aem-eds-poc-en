@@ -139,3 +139,29 @@
   .search ul.search-results{
     display: flex;
   }
+
+  .search .search-box{
+    padding: 4px 4px 4px 10px;
+    height: 22px;
+    background: #e3e3e3;
+  }
+
+  .search .search-box input{
+    display: none;
+    height: 22px;
+    width: 305px;
+    border: unset;
+    border-radius: unset;
+    outline: none;
+    border-bottom: 1px solid grey;
+    background: #e3e3e3;
+  }
+
+  .search .search-box input:hover{
+    border: unset;
+    outline: none;
+  }
+
+  .search .search-box input.active{
+    display: block;
+  }
