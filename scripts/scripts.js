@@ -17,6 +17,19 @@ import {
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
  */
+
+function wrapImgsInLinks(container) {
+  const pictures = container.querySelectorAll('picture');
+  pictures.forEach((pic) => {
+    const link = pic.parentElement.nextElementSibling;
+    if (link?.classList.contains('button-container')) {
+      link.querySelector('a').innerHTML = '';
+      link.querySelector('a').append(pic)
+      // pic.replaceWith(link);
+    }
+  });
+}
+
 export function moveAttributes(from, to, attributes) {
   if (!attributes) {
     // eslint-disable-next-line no-param-reassign
@@ -82,6 +95,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  wrapImgsInLinks(main);
   decorateBlocks(main);
 }
 
@@ -145,3 +159,39 @@ async function loadPage() {
 }
 
 loadPage();
+
+
+const isDesktop = window.matchMedia('(min-width: 1024px)');
+if (isDesktop.matches) {
+
+ window.addEventListener("scroll", (e) => {
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  let navWrapper = document.querySelector(".nav-wrapper");
+  let navTools = document.querySelector(".nav-tools");
+  let navBrand = document.querySelector(".nav-brand");
+  let navUl = navWrapper.querySelector(".nav-sections").querySelectorAll("ul li ul");
+
+  if (scrollPosition > 1) {
+    navWrapper.style.backgroundColor = "#FFF";
+    navWrapper.style.height = "60px";
+    navTools.style.display = "none";
+    navBrand.style.height = "58px";
+
+    navUl.forEach((ul) => {
+      ul.style.top = "60px";
+    });
+
+  } else {
+    navWrapper.style.backgroundColor = "rgba(227, 227, 227, 0.7)";
+    navWrapper.style.height = "95px";
+    navTools.style.display = "flex";
+    navBrand.style.height = "75px";
+
+    navUl.forEach((ul) => {
+      ul.style.top = "95px";
+    });
+  }
+});
+
+}
