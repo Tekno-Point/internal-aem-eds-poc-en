@@ -1,6 +1,7 @@
 {
   "mappings": [
     "/content/internal-aem-eds-poc/:/",
+    "/content/internal-aem-eds-poc/xcl-world-academy/index/contact-form:/xcl-world-academy/index/contact-form.json",
     "/content/internal-aem-eds-poc/configuration:/.helix/config.json",
     "/content/internal-aem-eds-poc/metadata:/metadata.json"
   ],
