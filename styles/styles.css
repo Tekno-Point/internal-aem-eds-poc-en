@@ -366,8 +366,17 @@ main .section.highlight {
   display: none;
 }
 .form input,textarea{
-  border-color: #D5001C !important;
-  color:#D5001C !important;
+  max-width: 100% !important;
+  color: #495057 !important;
+  background-color: #fff !important;
+  background-clip: padding-box !important;
+  border: 1px solid #ced4da !important;
+  border-radius: .25rem !important;
+  transition: border-color .15sease-in-out, box-shadow .15sease-in-out !important;
+}
+::placeholder {
+  color: #ced4da;
+  opacity: 1; /* Firefox */
 }
 .submit-wrapper > button{
   line-height: 1em;
