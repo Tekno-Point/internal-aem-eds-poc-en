@@ -3,11 +3,11 @@ sitemaps:
     lastmod: YYYY-MM-DD
     languages:
        en:
-         source: /en/query-index.json
+         source: /ch/en/site-page.json
          destination: /sitemap-en.xml
          hreflang: en
-       fr:
-         source: /fr/query-index.json
-         destination: /sitemap-fr.xml
-         hreflang: fr
-         alternate: /fr/{path}
+       zh:
+         source: /ch/zh/site-page.json
+         destination: /sitemap-zh.xml
+         hreflang: zh
+         alternate: /zh/{path}
