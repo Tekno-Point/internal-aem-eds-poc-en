@@ -162,36 +162,55 @@ loadPage();
 
 
 const isDesktop = window.matchMedia('(min-width: 1024px)');
-if (isDesktop.matches) {
-
- window.addEventListener("scroll", (e) => {
+window.addEventListener("scroll", (e) => {
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
+  let nav = document.querySelector("nav");
+  let navHamburger = document.querySelector(".nav-hamburger");
   let navWrapper = document.querySelector(".nav-wrapper");
   let navTools = document.querySelector(".nav-tools");
   let navBrand = document.querySelector(".nav-brand");
   let navUl = navWrapper.querySelector(".nav-sections").querySelectorAll("ul li ul");
 
-  if (scrollPosition > 1) {
-    navWrapper.style.backgroundColor = "#FFF";
-    navWrapper.style.height = "60px";
-    navTools.style.display = "none";
-    navBrand.style.height = "58px";
+  if (isDesktop.matches) {
 
-    navUl.forEach((ul) => {
-      ul.style.top = "60px";
-    });
+    if (scrollPosition > 1) {
+      navWrapper.style.backgroundColor = "#FFF";
+      navWrapper.style.height = "60px";
+      navTools.style.display = "none";
+      navBrand.style.height = "58px";
 
-  } else {
-    navWrapper.style.backgroundColor = "rgba(227, 227, 227, 0.7)";
-    navWrapper.style.height = "95px";
-    navTools.style.display = "flex";
-    navBrand.style.height = "75px";
+      navUl.forEach((ul) => {
+        ul.style.top = "60px";
+      });
 
-    navUl.forEach((ul) => {
-      ul.style.top = "95px";
-    });
+    } else {
+      navWrapper.style.backgroundColor = "rgba(227, 227, 227, 0.7)";
+      navWrapper.style.height = "95px";
+      navTools.style.display = "flex";
+      navBrand.style.height = "75px";
+
+      navUl.forEach((ul) => {
+        ul.style.top = "95px";
+      });
+    }
+  }
+  else {
+    if (scrollPosition > 1) {
+      navHamburger.classList.add("abs-ham")
+      navTools.classList.add("abs-tools")
+      navTools.style.marginRight = "50px"
+    }
+    else {
+      navHamburger.classList.remove("abs-ham")
+      navTools.classList.remove("abs-tools")
+      navTools.style.marginRight = "67px"
+
+    }
   }
 });
 
-}
+
+
+let clienthh = document.querySelector(".embed-container");
+console.log(clienthh)

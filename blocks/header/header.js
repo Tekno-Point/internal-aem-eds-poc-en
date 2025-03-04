@@ -71,7 +71,7 @@ function toggleAllNavSections(sections, expanded = false) {
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
-  document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
+  // document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
@@ -146,7 +146,7 @@ export default async function decorate(block) {
       navSection.addEventListener('click', () => {
         // if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          !expanded ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+          // !expanded ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         // }
