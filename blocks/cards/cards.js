@@ -8,7 +8,7 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
   /* change to ul, li */
-  console.log("print",block)
+  // console.log("print",block)
   const ul = document.createElement('div');
   ul.classList.add("swiper-wrapper-1");
   [...block.children].forEach((row) => {
@@ -30,21 +30,20 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
 
-  var swiper = new Swiper(block, {
-    direction: "vertical",
-    slidesPerView: 1,
-    spaceBetween: 30,
-    // mousewheel: true,
-  // grabCursor: true,
-    loop: false,
-    // autoplay: {
-    //   delay: 500,
-    //   disableOnInteraction: false,
-    // },
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   clickable: true,
-    // },
-});
+
+    // Define a media query for screens wider than 768px
+    console.log("hello")
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+  
+    // Check if the media query matches (i.e., desktop)
+    if (mediaQuery.matches) {
+      const form = document.querySelector(".form-wrapper");
+      const fromdata = document.querySelector(".swiper-wrapper-1");
+      fromdata.appendChild(form);
+      // Ensure both elements exist before attempting to append
+      // if (form && fromdata) {
+       
+      // }
+    }
 
 }
