@@ -16,6 +16,8 @@
       "cards",
       "columns",
       "embed",
+      "form",
+      "popup",
       "fragment"
     ]
   },

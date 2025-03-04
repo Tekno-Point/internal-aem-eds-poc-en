@@ -255,6 +255,37 @@
     ]
   },
   {
+    "id": "form",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "XCL World Academy",
+            "children": [
+              {
+                "name": "Contact Us",
+                "value": "contact-us"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "form_url",
+        "label": "Form URL"
+      },
+      {
+        "component": "text",
+        "name": "form_api",
+        "label": "Form API"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
