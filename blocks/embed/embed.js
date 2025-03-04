@@ -62,7 +62,7 @@ const loadScript = (url, callback, type) => {
     // <source src="movie.ogg" type="video/ogg">
     // <video controls autoplay="true">
     const videoHTML = `<div class="videotag">
-      <video loop="true" autoplay="true">
+      <video autoplay loop>
                       <source src="${url.href}" type="video/mp4">
             </video>
     </div>`
