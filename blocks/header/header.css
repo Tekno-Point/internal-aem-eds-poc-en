@@ -283,6 +283,10 @@ header .nav-wrapper {
   background-color: rgba(227, 227, 227, 0.7)
 }
 
+header .nav-wrapper:has(.nav-drop[aria-expanded="true"]){
+  background-color: #fff;
+}
+
 header .nav-brand {
   width: 220px;
   height: 74px;
@@ -358,6 +362,7 @@ header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul
 
 header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li {
   position: relative;
+  transition: transform 0.3s ease;
 }
 
 header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li::after {
@@ -557,6 +562,7 @@ header nav .nav-sections.nav-tools .default-content-wrapper>ul>li[aria-expanded=
   overflow-x: auto;
   scrollbar-width: thin;
   max-width: 234px;
+  overflow-x: hidden;
 }
 
 header nav .nav-sections.nav-tools .default-content-wrapper>ul>li>ul::before {
@@ -572,6 +578,15 @@ header nav[aria-expanded='true'] .nav-sections.nav-tools .default-content-wrappe
   display: block;
   width: 16px;
   height: 16px;
+}
+
+header nav .nav-sections.nav-tools .default-content-wrapper>ul>li[aria-expanded='true']>ul>li:hover{
+  transform: translateX(20px);
+}
+
+header nav .nav-sections.nav-tools .default-content-wrapper>ul>li[aria-expanded='true']>ul>li>a:hover{
+  text-decoration: none; 
+
 }
 
 /* Tools Css End */

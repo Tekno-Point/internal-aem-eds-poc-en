@@ -112,10 +112,10 @@ export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
   let navPath;
-  if(isDesktop.matches){
+  if (isDesktop.matches) {
     navPath = navMeta ? new URL(navMeta, window.location).pathname : '/xcl-world-academy/nav';
   }
-  else{
+  else {
     navPath = navMeta ? new URL(navMeta, window.location).pathname : '/xcl-world-academy/mobile-nav';
   }
   const fragment = await loadFragment(navPath);
@@ -145,10 +145,10 @@ export default async function decorate(block) {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
         // if (isDesktop.matches) {
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          // !expanded ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
-          toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        const expanded = navSection.getAttribute('aria-expanded') === 'true';
+        // !expanded ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+        toggleAllNavSections(navSections);
+        navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         // }
       });
     });
@@ -175,7 +175,12 @@ export default async function decorate(block) {
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', () => {
+    const expanded = nav.getAttribute('aria-expanded') === 'true';
+    toggleMenu(nav, navSections)
+    document.body.style.overflowY = (expanded) ? 'auto' : 'hidden';
+
+  });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
