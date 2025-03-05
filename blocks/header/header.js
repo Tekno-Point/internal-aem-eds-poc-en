@@ -148,6 +148,7 @@ export default async function decorate(block) {
         const expanded = navSection.getAttribute('aria-expanded') === 'true';
         // !expanded ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
         toggleAllNavSections(navSections);
+
         navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         // }
       });
@@ -179,7 +180,7 @@ export default async function decorate(block) {
     const expanded = nav.getAttribute('aria-expanded') === 'true';
     toggleMenu(nav, navSections)
     document.body.style.overflowY = (expanded) ? 'auto' : 'hidden';
-
+    toggleAllNavSections(navSections, 'false');
   });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
