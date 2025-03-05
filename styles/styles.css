@@ -485,6 +485,18 @@ padding: 0;
 .field-wrapper.submit-wrapper .button{
   border-radius: 4px;
 }
+@media (min-width: 768px){
+  .form fieldset {
+    display: unset !important;
+  }
+  .form.contact-us.block{
+    max-width: 50%;
+    width: 100%;
+  }
+  fieldset .field-wrapper.text-wrapper:nth-child(1){
+    margin-bottom: 24px;
+  }
+}
 @media (max-width: 768px) {
   .section.embed-container.cards-container > div:nth-child(1), .section.embed-container.cards-container > div:nth-child(4){
     display: block;
