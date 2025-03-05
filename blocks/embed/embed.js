@@ -1,4 +1,5 @@
-import { isDesktop } from "../../scripts/scripts.js";
+// import { isDesktop } from "../../scripts/scripts.js";
+const isDesktop = window.matchMedia('(min-width: 900px)');
 
 const loadScript = (url, callback, type) => {
     const head = document.querySelector('head');
