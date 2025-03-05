@@ -209,8 +209,3 @@ window.addEventListener("scroll", (e) => {
     }
   }
 });
-
-
-
-let clienthh = document.querySelector(".embed-container");
-console.log(clienthh)
