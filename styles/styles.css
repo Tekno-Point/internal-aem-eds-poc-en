@@ -482,6 +482,9 @@ padding: 0;
  min-height: 300px;
 } 
 /* footer */
+.field-wrapper.submit-wrapper .button{
+  border-radius: 4px;
+}
 @media (max-width: 768px) {
   .section.embed-container.cards-container > div:nth-child(1), .section.embed-container.cards-container > div:nth-child(4){
     display: block;
