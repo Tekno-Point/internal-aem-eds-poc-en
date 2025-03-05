@@ -1,3 +1,5 @@
+// import { isDesktop } from "../../scripts/scripts.js";
+const isDesktop = window.matchMedia('(min-width: 900px)');
 
 const loadScript = (url, callback, type) => {
     const head = document.querySelector('head');
@@ -60,8 +62,9 @@ const loadScript = (url, callback, type) => {
   
   const videoTag = (url) => {
     // <source src="movie.ogg" type="video/ogg">
+    // <video controls autoplay="true">
     const videoHTML = `<div class="videotag">
-            <video controls autoplay="true">
+      <video autoplay loop muted playsinline>
                       <source src="${url.href}" type="video/mp4">
             </video>
     </div>`
@@ -110,7 +113,9 @@ const loadScript = (url, callback, type) => {
     const placeholder = block.querySelector('picture');
     const link = block.querySelector('a').href;
     block.textContent = '';
-    loadEmbed(block, link, true);
+    if(isDesktop.matches){
+      loadEmbed(block, link, true);
+    }
     // if (!placeholder) {
     //   const wrapper = document.createElement('div');
     //   wrapper.className = 'embed-placeholder';

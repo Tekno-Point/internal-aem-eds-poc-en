@@ -270,14 +270,17 @@ export default async function decorate(block) {
     decorateIcons(block);
     // searchIconEl.addEventListener('click', function (e) {
     // })
-    document.addEventListener('click', function (e) {
-        if(e.target.closest('.search.block')){
-            searchInputEl.classList.add('active')
-            
-        }else {
-            searchInputEl.classList.remove('active')
+const isDesktop = window.matchMedia('(min-width: 900px)');
 
-        }
-        
-    })
+    if(isDesktop.matches){
+        document.addEventListener('click', function (e) {
+            if(e.target.closest('.search.block')){
+                searchInputEl.classList.add('active')
+                
+            }else {
+                searchInputEl.classList.remove('active')
+    
+            }
+        })
+    }
 }

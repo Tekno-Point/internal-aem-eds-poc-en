@@ -366,8 +366,17 @@ main .section.highlight {
   display: none;
 }
 .form input,textarea{
-  border-color: #D5001C !important;
-  color:#D5001C !important;
+  max-width: 100% !important;
+  color: #495057 !important;
+  background-color: #fff !important;
+  background-clip: padding-box !important;
+  border: 1px solid #ced4da !important;
+  border-radius: .25rem !important;
+  transition: border-color .15sease-in-out, box-shadow .15sease-in-out !important;
+}
+::placeholder {
+  color: #ced4da;
+  opacity: 1; /* Firefox */
 }
 .submit-wrapper > button{
   line-height: 1em;
@@ -385,6 +394,94 @@ main .section.highlight {
   font-family: Barlow;
   text-transform: uppercase;
 }
+
+/* footer */
+.footer.block .default-content-wrapper{
+  padding-top:12%;
+  padding-inline: 40px;
+  
+  color: white;
+
+}
+.footer.block{
+  background-color: #000;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer.block p,.footer.block a{
+  padding: 0;
+  margin: 0;
+}
+.footer.block .default-content-wrapper > ul{
+display: flex;
+list-style: none;
+justify-content: space-between;
+margin: 0;
+padding: 0;
+}
+.footer.block .default-content-wrapper > ul > li > h6{
+  color: #d6001c;
+  letter-spacing: 1.33px;
+  line-height: 1.175em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top:1.5em
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(1) >.button-container .button{
+  display: flex;
+  background-color: transparent;
+  border: unset;
+  border-radius: unset;
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(1) > ul > li > ul {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(1) > ul > li > ul >li >a{
+  background-color: #d5001c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 50%;
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(1) >.button-container .button span {
+  width: 100%;
+  height: 100%;
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(2) > ul > li  a,.footer.block .default-content-wrapper > ul > li:nth-child(1) > ul > li a{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.4em;
+  font-size: 1.15em;
+  color: white;
+  background-color: transparent;
+
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(2) > ul > li  a:hover{
+  text-decoration: underline;
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(3) > p  {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.4em;
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(3) > p a{
+  color: white;
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(4) > p span {
+ max-width: 300px;
+ width: 100%;
+ min-height: 300px;
+} 
+/* footer */
 @media (max-width: 768px) {
   .section.embed-container.cards-container > div:nth-child(1), .section.embed-container.cards-container > div:nth-child(4){
     display: block;
@@ -471,5 +568,17 @@ main .section.highlight {
   scroll-snap-align: unset;
   max-height: unset;
 }
+/*  */
+.footer.block .default-content-wrapper > ul{
+  flex-direction:column
+}
+.footer.block .default-content-wrapper{
+  padding:unset
+}
+.footer.block .default-content-wrapper > ul > li:nth-child(1) >.button-container .button span{
+  width:250px;
+  margin-bottom:10px;
+}
+/*  */
 }
  /*  */
