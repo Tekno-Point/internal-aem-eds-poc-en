@@ -1,0 +1,12 @@
+<svg width="20" height="20" viewBox="0 0 20 20">
+    <g fill="none" fill-rule="evenodd">
+        <g stroke="#FFF" stroke-width="3">
+            <g>
+                <g transform="translate(-1509 -584) translate(1489 563) translate(20 21)">
+                    <circle cx="8.333" cy="8.333" r="6.833"></circle>
+                    <path d="M13 13L19.667 19.667"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
