@@ -280,7 +280,8 @@ header {
 
 header .nav-wrapper {
   height: 95px;
-  background-color: rgba(227, 227, 227, 0.7)
+  background-color: rgba(227, 227, 227, 0.7);
+  transition: height 0.5s ease-in-out;
 }
 
 header .nav-wrapper:has(.nav-drop[aria-expanded="true"]){

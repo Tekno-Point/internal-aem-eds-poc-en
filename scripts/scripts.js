@@ -203,18 +203,18 @@ export function createElement(tagName, options = {}) {
 }
 
 const isDesktop = window.matchMedia('(min-width: 1024px)');
-window.addEventListener("scroll", (e) => {
-  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+// window.addEventListener("scroll", (e) => {
+  let embedComp =  document.querySelector(".section.embed-container");
 
-  let nav = document.querySelector("nav");
-  let navHamburger = document.querySelector(".nav-hamburger");
+embedComp.addEventListener("scroll", (e) => {
+
+  console.log("scroll");
+  const scrollPosition = e.target.scrollTop || 0;
   let navWrapper = document.querySelector(".nav-wrapper");
   let navTools = document.querySelector(".nav-tools");
   let navBrand = document.querySelector(".nav-brand");
   let navUl = navWrapper.querySelector(".nav-sections").querySelectorAll("ul li ul");
-
   if (isDesktop.matches) {
-
     if (scrollPosition > 1) {
       navWrapper.style.backgroundColor = "#FFF";
       navWrapper.style.height = "60px";
@@ -236,7 +236,17 @@ window.addEventListener("scroll", (e) => {
       });
     }
   }
-  else {
+
+});
+
+if(!isDesktop.matches){
+  // let nav = document.querySelector("nav");
+  
+  window.addEventListener("scroll", (e) => {
+    let navHamburger = document.querySelector(".nav-hamburger");
+    let navTools = document.querySelector(".nav-tools");
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
     if (scrollPosition > 1) {
       navHamburger.classList.add("abs-ham")
       navTools.classList.add("abs-tools")
@@ -248,8 +258,10 @@ window.addEventListener("scroll", (e) => {
       navTools.style.marginRight = "67px"
 
     }
-  }
-});
+  })
+}
+
+
 function autolinkModals(element) {
   element.addEventListener('click', async (e) => {
     const origin = e.target.closest('a');
@@ -261,3 +273,8 @@ function autolinkModals(element) {
     }
   });
 }
+
+// let embedComp =  document.querySelector(".section.embed-container");
+// embedComp.addEventListener("scroll", (e) => {
+//   alert("evebt ")
+// })
