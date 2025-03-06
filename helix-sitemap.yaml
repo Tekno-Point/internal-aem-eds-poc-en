@@ -6,12 +6,12 @@ sitemaps:
     languages:
        en:
          lastmod: YYYY-MM-DD
-         source: /ch/en/site-page.json
+         source: /xcl-world-academy/global/ch/en/site-page.json
          destination: /sitemap-en.xml
          hreflang: en
        zh:
          lastmod: YYYY-MM-DD
-         source: /ch/zh/site-page.json
+         source: /xcl-world-academy/global/ch/zh/site-page.json
          destination: /sitemap-zh.xml
          hreflang: zh
          alternate: /zh/{path}
