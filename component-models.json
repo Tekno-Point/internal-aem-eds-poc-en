@@ -139,10 +139,6 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
-          },
-          {
             "name": "apollo",
             "children": [
               {
@@ -167,8 +163,7 @@
           }
              
             ]
-          
-      }
+          }
         ]
       }
     ]
