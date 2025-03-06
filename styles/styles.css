@@ -255,3 +255,23 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+a:any-link{
+  color: unset;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.apollo-container{
+  width: 66.66666667%;
+}
+
+@media (max-width:786px){
+  
+.apollo-container{
+  width: 83.33333333%;
+}
+}
