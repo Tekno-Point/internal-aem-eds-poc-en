@@ -130,7 +130,8 @@
              
             ]
           
-      }]
+      }
+    ]
     },
       {
         "component": "multiselect",
@@ -140,7 +141,34 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "apollo",
+            "children": [
+              {
+                "name": "apollo container",
+                "value": "apollo-container"
+              },
+              {
+                "name": "apollo one",
+                "value": "apollo-container-one"
+              },
+              {
+                  "name": "apollo two",
+                "value": "apollo-container-two"
+              },
+              {
+                "name": "apollo three",
+              "value": "apollo-container-three"
+            },
+            {
+              "name": "apollo four",
+            "value": "apollo-container-four"
           }
+             
+            ]
+          
+      }
         ]
       }
     ]
