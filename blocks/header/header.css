@@ -316,6 +316,15 @@ header nav .nav-sections .default-content-wrapper>ul>li {
   position: unset;
 }
 
+header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']{
+  position: relative;
+}
+
+header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']::after{
+  position: absolute;
+  content: "";
+}
+
 header nav[aria-expanded='true'] .nav-sections .default-content-wrapper {
   display: flex;
   padding-top: 10px;

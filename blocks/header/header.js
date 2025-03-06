@@ -116,7 +116,7 @@ export default async function decorate(block) {
     navPath = navMeta ? new URL(navMeta, window.location).pathname : '/xcl-world-academy/nav';
   }
   else {
-    navPath = navMeta ? new URL(navMeta, window.location).pathname : '/xcl-world-academy/mobile-nav';
+    navPath ='/xcl-world-academy/mobile-nav';
   }
   const fragment = await loadFragment(navPath);
 
