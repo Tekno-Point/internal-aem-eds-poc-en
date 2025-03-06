@@ -467,7 +467,7 @@ function decorateButtons(element) {
       const img = document.createElement('img');
       img.dataset.iconName = path;
       img.src = `${window.hlx.codeBasePath}${prefix + path}`;
-      img.alt = alt;
+      img.alt = alt || "XCL World Academy";
       img.loading = 'lazy';
       span.append(img);
     } else {
@@ -477,7 +477,7 @@ function decorateButtons(element) {
       const img = document.createElement('img');
       img.dataset.iconName = iconName;
       img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
-      img.alt = alt;
+      img.alt = alt || "icons";
       img.loading = 'lazy';
       span.append(img);
     }
