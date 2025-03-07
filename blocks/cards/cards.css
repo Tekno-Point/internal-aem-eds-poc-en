@@ -1,4 +1,5 @@
-.cards > ul {
+@import url("../swiper/swiper.min.css");
+/* .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -24,4 +25,137 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+} */
+
+
+
+.apollo-container-one {
+  padding: 72px 3%;
+  max-width: 90pc;
+  margin-left: auto;
+}
+
+.apollo-container-one .swiper-wrapper{
+  padding-top: 72px;
+  padding-bottom: 40px;
+}
+
+.apollo-container-one .cards-card-image{
+     background-color: #5c2d91;
+border-radius: 10px;
+  z-index:2;
+  position:relative;
+  height: 315px;
+  overflow: hidden;
+  
+}
+.apollo-container-one .cards-card-image img{
+  position: absolute;
+  bottom: -119px;
+}
+.apollo-container-one .cards-card-body{
+      border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+  box-shadow: 0 9px 13px #c5c5c5;
+  background:white;
+  padding:20px 10px;
+  z-index:-1;
+  margin-top:-5px;
+  
+}
+.apollo-container-one .cards-card-body ul {
+  position: absolute;
+    top: 40px;
+    z-index: 5;
+    left: 20px;
+}
+.apollo-container-one .cards-card-body ul li {
+  font-weight: 700;
+    line-height: 1.06;
+    color: #fff;
+    text-shadow: 0 0 1px #000;
+    font-family: 'ApolloFlama',sans-serif;
+    font-style: italic;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+.apollo-container-one .cards-card-body ul li:nth-child(2) {
+  font-family: 'ApolloFlama',sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: .9pt;
+  text-shadow: 0 0 1px #000;
+  min-height: 30px;
+  text-transform: uppercase;
+}
+.apollo-container-one .cards-card-body p{
+  font-weight: 700;
+  display: block;
+    font-size: 9pt;
+    line-height: 13px;
+    letter-spacing: .9pt;
+    color: #363636;
+}
+.apollo-container-one .button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.apollo-container-one .button-container a{
+  background: #5c2d91;
+  font-family: 'ApolloFlama',sans-serif;
+  font-style: italic;
+  border: 2px solid transparent;
+  border-left-color: #f15a22;
+  font-size: .875rem;
+  font-weight: 700;
+  color: #fff;
+  height: 3rem;
+  letter-spacing: .0875rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  padding: 14px;
+  line-height: 1;
+  display: inline;
+}
+.apollo-container-one .button-container a:hover {
+  border: 2px solid #f15a22;
+}
+.swiper-button-prev.swiper-button-disabled::after,.swiper-button-next.swiper-button-disabled::after{
+
+  opacity: 0.9;
+}
+.swiper-button-next, .swiper-button-prev{
+  color: black;
+  top: 90%;
+}
+.swiper-button-prev{
+  right: 96px;
+  left: unset;
+}
+.swiper-button-next{
+  right: 30px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  top: 87%;
+  left: -150px;
+}
+.swiper-button-next::after,   .swiper-button-prev::after{
+      font-size: 25px;
+      padding: 16px;
+      border-radius: .4375rem;
+      background-color: white;
+}
+
+@media (max-width:786px) {
+  .apollo-container-one{
+    padding: 3pc 5%;
+  }
+  .apollo-container-one .swiper-wrapper{
+    padding-bottom: 125px;
+  }
 }

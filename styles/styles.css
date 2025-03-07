@@ -498,7 +498,7 @@ body::-webkit-scrollbar-thumb {
 {
     padding: 48px 18px;
 }
-.apollo-container-two .hero.block{
+.apollo-container-two .hero.block,.apollo-container-two.apollo-container-three .hero.block{
   flex-direction: column;
 }
 }
