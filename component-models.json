@@ -161,7 +161,6 @@
   {
     "id": "cards",
     "fields": [
-      
       {
         "component": "multiselect",
         "name": "class",
@@ -178,8 +177,6 @@
                 "name": "apollo swiper main",
                 "value": "swiper"
               }
-              
-             
             ]
           }
         ]
