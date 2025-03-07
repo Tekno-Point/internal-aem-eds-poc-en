@@ -155,7 +155,13 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      },
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      
       {
         "component": "multiselect",
         "name": "class",
