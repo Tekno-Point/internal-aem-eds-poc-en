@@ -317,6 +317,14 @@ ul {
   line-height: 1.06;
   font-family:' ApolloFlama',sans-serif;
 }
+.apollo-container h4 {
+  font-size: 18.0px;
+  font-style: normal;
+    font-weight: 700;
+    text-transform: none;
+    color: #000;
+    margin-top: 0;
+}
 /* fontsize */
 
 
@@ -392,6 +400,92 @@ position: relative;
 }
 .apollo-container-two.apollo-container-three .hero.block > div:nth-child(1) > div::after{
   content: "Bharat Stage VI Ready Car Tyres";
+}
+.section:nth-child(8) ,.section:nth-child(10){
+  margin-bottom: 40px !important;
+}
+.section:nth-child(8) p,.section:nth-child(10) p{
+  margin-top: 0px !important;
+}
+.section:nth-child(8) .default-content-wrapper p:nth-child(2) {
+  margin-top:2rem !important;
+}
+.hero-container:nth-child(1) {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, .4)) !important;
+}
+.hero-container:nth-child(1) .hero.block div:nth-child(2)  ul{
+  display: flex;
+  align-items: center;
+} 
+.hero-container:nth-child(1) .hero.block div:nth-child(2)  ul:nth-child(1){
+  gap:10px;
+}
+
+.hero-container:nth-child(1) .hero.block div:nth-child(2)  ul:nth-child(1) li{
+  
+  font-size: 1rem;
+  line-height: 1.38;
+  letter-spacing: .00625rem;
+  font-family: Roboto, sans-serif;
+  text-transform: capitalize;
+  color: #f1ebe5;
+  font-weight: 600;
+  display: flex;
+      align-items: center;
+}
+.hero-container:nth-child(1) .hero.block div:nth-child(2)  ul:nth-child(1) li:nth-child(1)::after{
+  content: '';
+ 
+
+  border-top-style: solid;
+  border-right-style: solid;
+  width: 13px;
+  transform: rotate(45deg);
+  height: 13px;
+}
+.hero-container:nth-child(1) .hero.block div:nth-child(2) > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero.block div:nth-child(2) ul:nth-child(2) {
+  gap: 20px;
+}
+.hero.block div:nth-child(2) ul:nth-child(2) > li > a{
+  background: #5c2d91;
+    font-family: ApolloFlama;
+    font-style: italic;
+    border: 2px solid transparent;
+    border-left-color: #f15a22;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    height: 100%;
+    text-align: center;
+    letter-spacing: .0875rem;
+    font-size: .875rem;
+    display: inline-block;
+    padding-top: 0.600rem;
+    padding-bottom: 0.600rem;
+    text-decoration: none;
+    /* min-width: 190px; */
+    padding-inline: 14px;
+}
+.hero.block div:nth-child(2) ul:nth-child(2) > li > a:hover{
+  border: 2px solid #f15a22;
+}
+body ::-webkit-scrollbar {
+  -webkit-appearance:none;
+  width:9pt;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color:rgba(0,0,0,.5);
+  border:4px solid transparent;
+  background-clip:padding-box;
+  border-radius:9999px;
 }
 /* section apollo-container */
 

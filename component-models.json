@@ -155,6 +155,28 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "class",
+        "label": "Style",
+        "options": [
+          {
+            "name": "apollo-swiper",
+            "children": [
+              {
+                "name": "apollo swiper",
+                "value": "apollo-swiper"
+              },
+              {
+                "name": "apollo swiper main",
+                "value": "swiper"
+              }
+              
+             
+            ]
+          }
+        ]
       }
     ]
   },
