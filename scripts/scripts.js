@@ -82,6 +82,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  wrapImgsInLinks(main);
   decorateBlocks(main);
 }
 
@@ -145,3 +146,15 @@ async function loadPage() {
 }
 
 loadPage();
+
+function wrapImgsInLinks(container) {
+  const pictures = container.querySelectorAll("picture");
+  pictures.forEach((pic) => {
+    const link = pic.parentElement.nextElementSibling;
+    if (link?.classList.contains("button-container")) {
+      link.querySelector("a").innerHTML = "";
+      link.querySelector("a").append(pic);
+      // pic.replaceWith(link);
+    }
+  });
+}
