@@ -153,6 +153,10 @@
               {
                 "name": "Hero Video Banner",
                 "value": "hero-video-banner"
+              },
+              {
+                "name": "Auto Play",
+                "value": "autoplay"
               }
             ]
           }
