@@ -1,0 +1,92 @@
+.apollo-form{
+  background: #d6cae3;
+  
+  padding: 72px 3% 3pc;
+}
+.apollo-form > div {
+  
+  max-width: 90pc;
+}
+.apollo-form  h1 {
+  text-align: center;
+  font-size: 4rem;
+  display: -webkit-box;
+  max-height: 3.9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: #000;
+    font-family: 'ApolloFlama',sans-serif;
+    letter-spacing: normal;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1;
+    margin: 0 auto 2.25rem;
+    max-width: 600px;
+}
+.apollo-form form button{
+  all:  unset;
+}
+.apollo-form form {
+  display: flex;
+justify-content: space-between;
+}
+.apollo-form form > div {
+  width: calc(33.33333% - 1.875rem);
+}
+.apollo-form form input{
+  caret-color: #f15a22;
+  font-size: 1rem;
+  font-family: 'Roboto';
+  font-weight: 400;
+  height: 3rem;
+  line-height: 1.27;
+  padding: 1rem;
+  border-radius: 8px;
+  letter-spacing: .00625rem;
+  width: 100%;
+  border: 2px solid #363636;
+}
+.apollo-form form input:hover{
+  background-color: #5c2d91 ;
+  color: #fff ;
+}
+.apollo-form form input:hover::placeholder {
+  color: white;
+}
+.apollo-form form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 100%;
+  background: #5c2d91;
+  font-family: 'ApolloFlama',sans-serif;
+  font-style: italic;
+  font-size: .875rem;
+    font-weight: 700;
+    color: #fff;
+    height: 3rem;
+    letter-spacing: .0875rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width:786px){
+  .apollo-form  h1 {
+    font-size: 2.25rem;
+    margin: 0 auto 1rem;
+        line-height: 1.03;
+  }
+  .apollo-form form > div {
+    width: 100%;
+  }
+  .apollo-form form {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .apollo-form{
+    padding: 3pc 5%;
+  }
+}
