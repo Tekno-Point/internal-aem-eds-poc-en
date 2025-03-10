@@ -72,7 +72,11 @@ footer .footer p {
  font-weight: 900;
  margin-left: 16%;
 }
-
+.footer.block ul > li:nth-child(5) >  ul > li > a {
+  display:flex;
+  align-items:center;
+  gap:10px;
+ }
 @media (max-width:786px){
  .footer.block ul:nth-child(1) > li{
  flex:0 0 50%;

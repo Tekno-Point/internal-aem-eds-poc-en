@@ -1,42 +1,79 @@
 @import url("../swiper/swiper.min.css");
-/* .cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
-}
-
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.cards .cards-card-body {
-  margin: 16px;
-}
-
-.cards .cards-card-image {
-  line-height: 0;
-}
-
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-} */
-
-
 
 .apollo-container-one {
   padding: 72px 3%;
   max-width: 90pc;
   margin-left: auto;
 }
+.apollo-container-four{
+  padding: 72px 3%;
+  width: 83.33%;
+  margin-left: 8.33%;
+}
+.apollo-container-four h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.06;
+  margin-bottom: 2.0625rem;
+  font-family: 'ApolloFlama',sans-serif;
+  text-transform: uppercase;
+}
+.apollo-container-four h4{
+  font-family: 'ApolloFlama',sans-serif;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: #000;
+  font-size: 22px;
+  text-transform: capitalize;
+  display: -webkit-box;
+  font-style: italic;
+  line-height: 1.07;
+  margin: unset;
+  width: 79%;
+
+
+}
+.apollo-container-four p {
+  margin: 0;
+  padding: 0;
+}
+.apollo-container-four .swiper-slide{
+  border-radius: .625rem .625rem 2.625rem .625rem;
+  box-shadow: 0 6px 8px -3px rgba(54, 54, 54, .19);
+  background-color: white;
+  height: unset;
+
+}
+.apollo-container-four  .cards-card-image img{
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+.apollo-container-four  .cards-card-body {
+  padding: 1.5rem 1.25rem 1.25rem;
+}
+.apollo-container-four  .cards-card-body ul {
+  display: flex;
+}
+.apollo-container-four  .cards-card-body p{
+  
+  line-height: 1.08;
+  margin-bottom: .625rem;
+  text-transform: uppercase;
+  color: #6c6c6c;
+  font-size: .8125rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-family: Roboto, sans-serif;
+}
 
 .apollo-container-one .swiper-wrapper{
   padding-top: 72px;
+  padding-bottom: 40px;
+}
+.apollo-container-four .swiper-wrapper{
   padding-bottom: 40px;
 }
 
@@ -128,6 +165,7 @@ border-bottom-right-radius: 10px;
 
   opacity: 0.9;
 }
+
 .swiper-button-next, .swiper-button-prev{
   color: black;
   top: 90%;
@@ -141,8 +179,19 @@ border-bottom-right-radius: 10px;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-  top: 87%;
-  left: -150px;
+  top: 86.5%;
+  left: -25%;
+}
+.swiper-pagination-bullet{
+  background:white;
+  width: 10%;
+  margin: 0px !important;
+  border-radius: unset;
+  height: .25rem;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active{
+  background: rgb(54, 54, 54) !important;
 }
 .swiper-button-next::after,   .swiper-button-prev::after{
       font-size: 25px;
@@ -152,10 +201,18 @@ border-bottom-right-radius: 10px;
 }
 
 @media (max-width:786px) {
-  .apollo-container-one{
+  .apollo-container-one,.apollo-container-four{
     padding: 3pc 5%;
   }
-  .apollo-container-one .swiper-wrapper{
+  .apollo-container-one .swiper-wrapper,.apollo-container-four .swiper-wrapper{
     padding-bottom: 125px;
+  }
+  .apollo-container-four h2,  .apollo-container-one h2  {
+    margin-bottom: 1.0625rem;
+    font-size: 1.75rem;
+        line-height: 1;
+  }
+  .swiper-slide.swiper-slide-next{
+    opacity: 0.5;
   }
 }

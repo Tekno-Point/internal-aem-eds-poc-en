@@ -140,6 +140,26 @@
     ]
   },
   {
+  "id": "embed",
+  "fields": [
+    {
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Style",
+      "options": [
+        {
+          "name": "XCL World Academy",
+          "children": [
+            {
+              "name": "Hero Video Banner",
+              "value": "hero-video-banner"
+            }
+          ]
+        }
+      ]
+    }]
+  },
+  {
     "id": "card",
     "fields": [
       {
