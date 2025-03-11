@@ -25,6 +25,14 @@
     margin: 0 auto 2.25rem;
     max-width: 600px;
 }
+.apollo-form p {
+  text-align:center;
+
+}
+.apollo-form p span {
+  width: unset;
+  height: unset;
+}
 .apollo-form form button{
   all:  unset;
 }
