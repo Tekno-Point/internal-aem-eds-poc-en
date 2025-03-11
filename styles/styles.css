@@ -267,7 +267,8 @@ main .section.highlight {
   z-index: 1;
 }
 
-.abs-top{
+.abs-top,
+header nav .nav-tools.abs-top{
   position: absolute;
   height: 34px;
   top: 0;
@@ -275,5 +276,5 @@ main .section.highlight {
   width: 100%;
   /* max-width: 1368px; */
   z-index: 1;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, .5);
 }
