@@ -101,7 +101,7 @@ body.modal-open {
 
 .modal.block dialog:has(.section.apollo-search-modal) .modal-content {
   animation-duration: .4s;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   padding: 3rem;
   margin: 0 auto;
   max-width: 1145px;
@@ -130,6 +130,7 @@ body.modal-open {
 .modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .search-input:focus-visible {
   border: unset;
   outline: none;
+  caret-color: #f15a22;
 }
 
 /* Search Modal Css Ends */
@@ -148,7 +149,7 @@ body.modal-open {
   padding: 0px 5.5rem 4.5rem;
 }
 
-.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .heading-wrapper h2{
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .heading-wrapper h2 {
   color: rgb(3, 0, 47);
   font-family: ApolloFlama;
   font-size: 3rem;
@@ -212,11 +213,11 @@ body.modal-open {
 }
 
 
-.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .submit-wrapper button{
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .submit-wrapper button {
   min-width: 240px;
   position: relative;
   color: rgb(255, 255, 255);
-  font-family: ApolloFlama;
+  font-family: ApolloFlama ,sans-serif;
   font-size: 0.875rem;
   font-style: italic;
   font-weight: 775;
@@ -236,39 +237,46 @@ body.modal-open {
 
 .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .plaintext-wrapper p::before {
   position: absolute;
-  content: url('../../images/location.png');
-  top: 0;
+  content: "";
+  /* content: url(../../images/location.png); */
+  background-image: url("../../images/location.png");
+  top: -3px;
   left: 0;
-  width: 22px;
+  font-size: 12px;
+  width: 31px;
+  display: inline-block;
+  height: 27px;
+  background-size: 100% 100%; 
 }
 
 @media screen and (max-width : 765px) {
-  .modal.block dialog:has(.section.apollo-location-modal){
+  .modal.block dialog:has(.section.apollo-location-modal) {
     height: 100%;
     width: 100%;
   }
 
-  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset{
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset {
     flex-direction: column;
   }
 
-  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .heading-wrapper h2{
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .heading-wrapper h2 {
     color: #000;
     font-size: 2rem;
     letter-spacing: .0625rem;
   }
 
-  .modal.block dialog:has(.section.apollo-location-modal) .modal-content{
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content {
     padding: 20px;
   }
 
-  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset select{
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset select {
     width: 100%;
   }
 
-  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .submit-wrapper button{
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .submit-wrapper button {
     width: 100%;
   }
 
 }
+
 /* Location Modal Css Ends */
