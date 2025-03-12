@@ -93,30 +93,30 @@ body.modal-open {
   border: unset;
 }
 
-.modal.block dialog:has(.section.apollo-search-modal) .close-button{
+.modal.block dialog:has(.section.apollo-search-modal) .close-button {
   right: calc((100% - 1039px) / 2);
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.modal.block dialog:has(.section.apollo-search-modal) .modal-content{
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content {
   animation-duration: .4s;
-    overflow-y: scroll;
-    padding: 3rem;
-    margin: 0 auto;
-    max-width: 1145px;
-  }
-  
-  
-.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box:focus-visible .search-input{
+  overflow-y: scroll;
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 1145px;
+}
+
+
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box:focus-visible .search-input {
   border: unset;
 }
 
-.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box{
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box {
   grid-template-columns: auto;
 }
 
-.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .icon.icon-search{
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .icon.icon-search {
   display: none;
 }
 
@@ -127,7 +127,148 @@ body.modal-open {
 }
 
 .modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .search-input:hover,
-.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .search-input:focus-visible   {
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .search-input:focus-visible {
   border: unset;
+  outline: none;
 }
+
 /* Search Modal Css Ends */
+
+
+/* Location Modal Css Start */
+
+
+.modal.block dialog:has(.section.apollo-location-modal) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content {
+  padding: 0px 5.5rem 4.5rem;
+}
+
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .heading-wrapper h2{
+  color: rgb(3, 0, 47);
+  font-family: ApolloFlama;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 750;
+  line-height: normal;
+  margin-bottom: 0px;
+  width: 67%;
+  margin-bottom: 3.125rem;
+}
+
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset {
+  border: unset;
+  display: flex;
+  gap: 30px;
+
+}
+
+
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset select {
+  color: rgb(54, 54, 54);
+  font-family: ApolloFlama, sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 750;
+  line-height: 1.6rem;
+  letter-spacing: 0.125rem;
+  text-transform: capitalize;
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  border-radius: 0.25rem;
+  background-color: rgb(240, 240, 240);
+  border: unset;
+  outline: none;
+  min-width: 278px;
+}
+
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset select:focus-visible {
+  background-color: rgb(92, 45, 145);
+  color: rgb(255, 255, 255);
+
+}
+
+
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .plaintext-wrapper p {
+  position: relative;
+  margin-bottom: 1.25rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(241, 90, 34);
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.0875rem;
+  /* margin-bottom: 0px; */
+  cursor: pointer;
+  width: fit-content;
+  padding-left: 35px;
+}
+
+
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .submit-wrapper button{
+  min-width: 240px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-family: ApolloFlama;
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: 775;
+  line-height: 1rem;
+  letter-spacing: 0.0875rem;
+  text-transform: uppercase;
+  background-color: rgb(92, 45, 145);
+  cursor: pointer;
+  padding: 0.9rem 0px;
+  border-radius: 0.5rem;
+  border-width: 2px 2px 2px 0.125rem;
+  border-style: solid;
+  border-color: transparent transparent transparent rgb(241, 90, 34);
+  border-image: initial;
+  border-left: 0.125rem solid rgb(241, 90, 34);
+}
+
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .plaintext-wrapper p::before {
+  position: absolute;
+  content: url('../../images/location.png');
+  top: 0;
+  left: 0;
+  width: 22px;
+}
+
+@media screen and (max-width : 765px) {
+  .modal.block dialog:has(.section.apollo-location-modal){
+    height: 100%;
+    width: 100%;
+  }
+
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset{
+    flex-direction: column;
+  }
+
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .heading-wrapper h2{
+    color: #000;
+    font-size: 2rem;
+    letter-spacing: .0625rem;
+  }
+
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content{
+    padding: 20px;
+  }
+
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset select{
+    width: 100%;
+  }
+
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .submit-wrapper button{
+    width: 100%;
+  }
+
+}
+/* Location Modal Css Ends */
