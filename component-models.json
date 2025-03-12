@@ -103,7 +103,7 @@
         "name": "name",
         "label": "Section Name",
         "description": "The label shown for this section in the Content Tree"
-    },
+      },
       {
         "component": "multiselect",
         "name": "style",
@@ -121,21 +121,34 @@
                 "value": "apollo-container-one"
               },
               {
-                  "name": "apollo two",
+                "name": "apollo two",
                 "value": "apollo-container-two"
               },
               {
                 "name": "apollo three",
-              "value": "apollo-container-three"
-            },
-            {
-              "name": "apollo four",
-            "value": "apollo-container-four"
+                "value": "apollo-container-three"
+              },
+              {
+                "name": "apollo four",
+                "value": "apollo-container-four"
+              },
+              {
+                "name": "apollo form",
+                "value": "apollo-form"
+              }
+            ]
           },
           {
-            "name": "apollo form",
-              "value": "apollo-form"
-            }
+            "name": "apollo Modal",
+            "children": [
+              {
+                "name": "apollo Location Modal",
+                "value": "apollo-location-modal"
+              },
+              {
+                "name": "apollo Seacrh Modal",
+                "value": "apollo-search-modal"
+              }
             ]
           }
         ]
