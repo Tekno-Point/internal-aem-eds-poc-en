@@ -678,13 +678,18 @@ header nav .nav-tools .default-content-wrapper>ol>li>p>a>span>img {
   header nav .nav-tools {
     top: 45%;
     transform: translateY(-50%);
-    right: 77px;
+    right: 110px;
     width: 32px;
     left: unset;
     background: unset;
     display: block;
     height: 32px;
 
+  }
+
+  header nav[aria-expanded="true"] .nav-tools{
+    top: 31px;
+    right: 125px;
   }
 
   header nav .nav-tools .default-content-wrapper p span,
