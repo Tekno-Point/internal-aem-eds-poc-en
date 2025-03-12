@@ -344,5 +344,31 @@
         "label": "url"
       }
     ]
+  },
+  {
+    "id": "modal",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "apollo modal",
+            "children": [
+              {
+                "name": "modal Block",
+                "value": "apollo-modal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "query Index",
+        "label": "url"
+      }
+    ]
   }
 ]
