@@ -233,5 +233,21 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
-  
 }
+
+document.body.addEventListener("click",(e)=>{
+  let navSections = document.querySelector(".nav-sections") 
+  let navTools = document.querySelector(".nav-tools") 
+  if(!e.target.closest(".nav-tools .default-content-wrapper >ul>li, .nav-sections .default-content-wrapper >ul>li")){
+    toggleAllNavSections(navSections, 'false');
+    toggleAllNavTools(navTools, 'false');
+  }
+  if(e.target.closest(".nav-sections .default-content-wrapper >ul>li")){
+    // toggleAllNavSections(navSections, 'false');
+    toggleAllNavTools(navTools, 'false');
+  }
+  if(e.target.closest(".nav-tools .default-content-wrapper >ul>li")){
+    toggleAllNavSections(navSections, 'false');
+    // toggleAllNavTools(navTools, 'false');
+  }
+})
