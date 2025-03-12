@@ -84,6 +84,8 @@ function toggleAllNavTools(sections, expanded = false) {
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
+  const heroblock =document.querySelector('.hero.block').children[1].children[0].children[1]
+  !expanded ? heroblock.classList.add("nav-mb-fixed") : heroblock.classList.remove("nav-mb-fixed")
   // document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
@@ -230,6 +232,7 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
 }
 
 document.body.addEventListener("click",(e)=>{
