@@ -476,10 +476,10 @@ position: relative;
 .hero.block div:nth-child(2) ul:nth-child(2) > li > a:hover{
   border: 2px solid #f15a22;
 }
-body ::-webkit-scrollbar {
+/* body ::-webkit-scrollbar {
   -webkit-appearance:none;
   width:9pt;
-}
+} */
 
 body::-webkit-scrollbar-thumb {
   background-color:rgba(0,0,0,.5);
