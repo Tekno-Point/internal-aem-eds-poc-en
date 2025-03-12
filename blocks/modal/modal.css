@@ -28,11 +28,11 @@ body.modal-open {
   margin-top: 44px;
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   .modal dialog {
     width: calc(100vw - 64px);
   }
-  
+
   .modal dialog .modal-content {
     max-height: calc(100dvh - (2 * var(--header-height)) - 64px);
     padding: 32px;
@@ -83,3 +83,51 @@ body.modal-open {
 .modal dialog .section {
   padding: 0;
 }
+
+
+/* Search Modal Css Starts */
+
+.modal.block dialog:has(.section.apollo-search-modal) {
+  width: 100%;
+  max-width: 100%;
+  border: unset;
+}
+
+.modal.block dialog:has(.section.apollo-search-modal) .close-button{
+  right: calc((100% - 1039px) / 2);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content{
+  animation-duration: .4s;
+    overflow-y: scroll;
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 1145px;
+  }
+  
+  
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box:focus-visible .search-input{
+  border: unset;
+}
+
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box{
+  grid-template-columns: auto;
+}
+
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .icon.icon-search{
+  display: none;
+}
+
+
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .search-input {
+  border: unset;
+  background: unset;
+}
+
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .search-input:hover,
+.modal.block dialog:has(.section.apollo-search-modal) .modal-content .section.apollo-search-modal .search-wrapper .search-box .search-input:focus-visible   {
+  border: unset;
+}
+/* Search Modal Css Ends */
