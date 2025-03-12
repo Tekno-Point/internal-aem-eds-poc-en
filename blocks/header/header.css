@@ -674,6 +674,27 @@ header nav .nav-tools .default-content-wrapper>ol>li>p>a>span>img {
 
 
 @media (max-width:786px) {
+
+  header nav .nav-tools {
+    top: 45%;
+    transform: translateY(-50%);
+    right: 77px;
+    width: 32px;
+    left: unset;
+    background: unset;
+    display: block;
+    height: 32px;
+
+  }
+
+  header nav .nav-tools .default-content-wrapper p span,
+  header nav .nav-tools .default-content-wrapper p span img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
   header nav .nav-sections .nav-drop>p::after {
     width: 16px;
     height: 16px;
