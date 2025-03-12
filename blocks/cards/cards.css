@@ -156,7 +156,9 @@ border-bottom-right-radius: 10px;
   width: 100%;
   padding: 14px;
   line-height: 1;
-  display: inline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .apollo-container-one .button-container a:hover {
   border: 2px solid #f15a22;

@@ -169,3 +169,33 @@ function wrapImgsInLinks(container) {
     }
   });
 }
+
+const isDesktop = window.matchMedia('(min-width: 900px)');
+
+if(!isDesktop.matches){
+  window.addEventListener('scroll',handscroll)
+function handscroll(){
+  let heroHeight=document.querySelector('.hero')
+  if(heroHeight.clientHeight <= window.scrollY){
+    heroHeight.children[1].children[0].children[1].classList.add("nav-mb-scoll")
+  }
+  else if(heroHeight.clientHeight >= window.scrollY){
+    heroHeight.children[1].children[0].children[1].classList.remove("nav-mb-scoll")
+  }
+ 
+}
+
+let lastScrollTop = 0;
+window.addEventListener("scroll",function(){
+var body = document.querySelector('.header-wrapper');
+let scrollTop = window.pageYOffset || document
+.documentElement.scrollTop;
+if(scrollTop > lastScrollTop){
+    body.classList.remove("shownavbar");
+}
+else{
+    body.classList.add("shownavbar");
+}
+lastScrollTop = scrollTop;
+});
+}
