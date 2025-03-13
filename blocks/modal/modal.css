@@ -143,6 +143,14 @@ body.modal-open {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: unset;
+  border-radius: 0.5rem;
+}
+
+.modal dialog:has(.section.apollo-location-modal)::backdrop{
+  backdrop-filter: blur(1.5px);
+  background: rgba(0, 0, 0, 0.15);
+
 }
 
 .modal.block dialog:has(.section.apollo-location-modal) .modal-content {
@@ -186,7 +194,9 @@ body.modal-open {
   min-width: 278px;
 }
 
-.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset select:focus-visible {
+.modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset select:focus-visible,
+  .modal.block dialog:has(.section.apollo-location-modal) .modal-content .section.apollo-location-modal .form-wrapper .form .fieldset-wrapper fieldset select:hover {
+  cursor: pointer;
   background-color: rgb(92, 45, 145);
   color: rgb(255, 255, 255);
 
