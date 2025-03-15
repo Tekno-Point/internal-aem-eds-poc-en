@@ -675,6 +675,15 @@ header nav .nav-tools .default-content-wrapper>ol>li>p>a>span>img {
 
 @media (max-width:786px) {
 
+  header nav[aria-expanded='true'] .nav-sections{
+    position: absolute;
+    top: 53px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 200px);
+    overflow: auto;
+  }
+
   header nav .nav-tools {
     top: 45%;
     transform: translateY(-50%);
@@ -684,10 +693,9 @@ header nav .nav-tools .default-content-wrapper>ol>li>p>a>span>img {
     background: unset;
     display: block;
     height: 32px;
-
   }
 
-  header nav[aria-expanded="true"] .nav-tools{
+  header nav[aria-expanded="true"] .nav-tools {
     top: 31px;
     right: 125px;
   }
