@@ -190,5 +190,100 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "wysiwyg-table",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Table Style",
+        "options": [
+          {
+            "name": "Table Content Style",
+            "children": [
+              {
+                "name": "No Header",
+                "value": "no-header"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "richtext",
+        "label": "WYSIWYG Table Content",
+        "name": "content",
+        "value": "",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "label": "Hide Breadcrumb",
+        "name": "hideBreadcrumb"
+      },
+      {
+        "component": "text-input",
+        "valueType": "number",
+        "label": "Navigation Start Level",
+        "name": "navigationStartLevel",
+        "value": ""
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "label": "Hide Current Page",
+        "name": "hideCurrentPage"
+      },
+      {
+        "component": "text",
+        "name": "breadcrumb-class",
+        "label": "Breadcrumb Class",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "breadcrumb-text",
+        "label": "Breadcrumb Text",
+        "valueType": "string",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "name": "breadcrumb-url",
+        "label": "Breadcrumb URL",
+        "valueType": "string",
+        "multi": true
+      }
+    ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "videourl",
+        "label": "videourl"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "thumbnail",
+        "label": "thumbnail"
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": []
   }
 ]

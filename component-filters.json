@@ -15,7 +15,11 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "wysiwyg-table",
+      "breadcrumb",
+      "embed",
+      "tabs"
     ]
   },
   {

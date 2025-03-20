@@ -83,6 +83,33 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateExampleModals(main);
+}
+
+async function loadTemplate(doc, templateName) {
+  try {
+    const cssLoaded = new Promise((resolve) => {
+      loadCSS(`${window.hlx.codeBasePath}/templates/${templateName}/${templateName}.css`, resolve);
+    });
+    const decorationComplete = new Promise((resolve) => {
+      (async () => {
+        try {
+          const mod = await import(`../templates/${templateName}/${templateName}.js`);
+          if (mod.default) {
+            await mod.default(doc);
+          }
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.log(`failed to load module for ${templateName}`, error);
+        }
+        resolve();
+      })();
+    });
+    await Promise.all([cssLoaded, decorationComplete]);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.log(`failed to load block ${templateName}`, error);
+  }
 }
 
 /**
@@ -114,6 +141,11 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  const templateName = getMetadata('template');
+  if (templateName) {
+    await loadTemplate(doc, templateName);
+  }
+
   const main = doc.querySelector('main');
   await loadSections(main);
 
@@ -126,6 +158,34 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+}
+
+function decorateExampleModals(main) {
+  const simpleModalButton = main.querySelector('a.button[href="http://modal-demo.simple"]');
+  const customModalButton = main.querySelector('a.button[href="http://modal-demo.custom"]');
+
+  // Listens to the simple modal button
+  simpleModalButton.addEventListener('click', async (e) => {
+    e.preventDefault();
+    // Modals can be imported on-demand to prevent loading unnecessary code
+    const { default: getModal } = await import('./modal/modal.js');
+    const simpleModal = await getModal('simple-modal', () => '<h2>Simple Modal Content</h2>');
+    simpleModal.showModal();
+  });
+
+  // Listens to the custom modal button
+  customModalButton.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const { default: getModal } = await import('./modal/modal.js');
+    const customModal = await getModal('custom-modal', () => `
+      <h2>Custom Modal</h2>
+      <p>This is some content in the custom modal.</p>
+      <button name="close-modal">Close Modal</button>
+    `, (modal) => {
+      modal.querySelector('button[name="close-modal"]').addEventListener('click', () => modal.close());
+    });
+    customModal.showModal();
+  });
 }
 
 /**
