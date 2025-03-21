@@ -244,6 +244,10 @@
               {
                 "name": "Accordion Without Item",
                 "value": "dsp-none-item"
+              },
+              {
+                "name": "Accordion With Item",
+                "value": "dsp-item"
               }
             ]
           }
@@ -255,7 +259,7 @@
         "name": "heading",
         "value": "",
         "label": "Heading"
-      },
+      },  
       {
         "component": "select",
         "valueType": "string",
