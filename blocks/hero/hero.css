@@ -107,7 +107,7 @@
   font-family: Decimal-Medium, BridgestoneType, Noto Sans, Arial;
   margin: unset;
 }
-.section-container1 .default-content-wrapper a{
+.section-container1 .default-content-wrapper a,.section.section-container2 .default-content-wrapper a{
   margin: unset;
   font-size: 1.3333333333rem;
     
@@ -157,10 +157,10 @@
     
   transition: 0.2s ease-out;
   }
-  .section-container1 .default-content-wrapper span img {
+  .section-container1 .default-content-wrapper span img ,.section.section-container2 .default-content-wrapper span img{
     filter: invert(1) brightness(1000%) contrast(1000%);
   }
-  .section-container1 .default-content-wrapper a:hover{
+  .section-container1 .default-content-wrapper a:hover,.section.section-container2 .default-content-wrapper a:hover{
     --button-bg-color: #872518;
     --button-border-color: #872518;
   }
