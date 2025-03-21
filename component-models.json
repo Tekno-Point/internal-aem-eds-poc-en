@@ -112,6 +112,22 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Footer First Container",
+            "value": "footer-first-container"
+          },
+          {
+            "name": "Footer Second Container",
+            "value": "footer-second-container"
+          },
+          {
+            "name": "Footer Third Container",
+            "value": "footer-third-container"
+          },
+          {
+            "name": "Footer Fourth Container",
+            "value": "footer-fourth-container"
           }
         ]
       }
