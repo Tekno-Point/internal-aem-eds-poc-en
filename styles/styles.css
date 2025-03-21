@@ -9,7 +9,13 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
+ *,
+ *::before,
+ *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
 :root {
   /* colors */
   --background-color: white;
@@ -70,7 +76,7 @@
   }
 }
 
-body {
+body{
   display: none;
   margin: 0;
   background-color: var(--background-color);
@@ -78,8 +84,16 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  margin: 0;
+  font-size: 12px;
+  font-family: 'BridgestoneType', 'Noto Sans', Arial;
+  line-height: 1.5;
+  color: #031824;
+  background-color: #fff;
 }
-
+html{
+  font-size: 12px;
+}
 body.appear {
   display: block;
 }
@@ -254,4 +268,79 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+ul {
+  list-style: none;
+}
+.section.section-container {
+  background: #f5f6f6;
+          padding: 64px 0;
+}
+.section.section-container  h3,.section.section-container p{
+margin:0px;
+  padding:0px;
+}
+.section.section-container  h3{
+      color: #1f1f1f;
+      font-family: "Decimal", "BridgestoneType", "Noto Sans", Arial;
+  font-size: 1.6666666667rem;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: normal;
+  font-size: 2.3333333333rem;
+}
+.section.section-container .default-content-wrapper{
+  display:flex;
+  flex-wrap: wrap;
+  gap:30px;
+  align-items:center;
+  justify-content:space-between;
+}
+.section.section-container .button-container{
+  display:flex;
+  align-items:center;
+}
+.section.section-container .button-container a{
+  font-family: "BridgestoneType", "Noto Sans", Arial;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: normal;
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: 16px;
+  gap: 0.8333333333rem;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 24rem;
+  height: 4.1666666667rem;
+  padding: 1rem 1.6666666667rem 1rem 2rem;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: inherit;
+  border: 1px solid #d03825;
+  border-radius: 83.3333333333rem;
+  transition: 0.2s ease-out;
+  margin:0px;
+}
+.section.section-container .button-container a:hover{
+  background-color:#d03825;
+  color:white;
+  
+}
+
+.section.section-container .button-container a:hover img{
+  filter: invert(1) brightness(1000%) contrast(1000%);
+}
+
+@media (max-width: 768px) {
+ 
+  .section.section-container {
+    padding-block: 32px ;
+  }
+  .section.section-container  h3{
+    font-size: 1.6666666667rem;
+  }
 }

@@ -112,6 +112,22 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "section container",
+            "value": "section-container"
+          },
+          {
+            "name": "section container1",
+            "value": "section-container1"
+          },
+          {
+            "name": "section container2",
+            "value": "section-container2"
+          },
+          {
+            "name": "section container3",
+            "value": "section-container3"
           }
         ]
       }
