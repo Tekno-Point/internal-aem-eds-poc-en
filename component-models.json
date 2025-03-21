@@ -128,6 +128,22 @@
           {
             "name": "section container3",
             "value": "section-container3"
+          },
+          {
+            "name": "Footer First Container",
+            "value": "footer-first-container"
+          },
+          {
+            "name": "Footer Second Container",
+            "value": "footer-second-container"
+          },
+          {
+            "name": "Footer Third Container",
+            "value": "footer-third-container"
+          },
+          {
+            "name": "Footer Fourth Container",
+            "value": "footer-fourth-container"
           }
         ]
       }
@@ -279,5 +295,4 @@
       }
     ]
   }
-  
 ]
