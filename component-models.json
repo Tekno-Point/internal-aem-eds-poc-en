@@ -200,6 +200,24 @@
     "id": "accordion",
     "fields": [
       {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Style",
+        "options": [
+          {
+            "name": "bridgestone Header Accordion",
+            "children": [
+              {
+                "name": "Accordion Without Item",
+                "value": "dsp-none-item"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "valueType": "string",
         "name": "heading",
@@ -316,5 +334,3 @@
     ]
   }
 ]
-  
-
