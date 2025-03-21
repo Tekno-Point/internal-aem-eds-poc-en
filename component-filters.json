@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -15,29 +13,25 @@
       "hero",
       "cards",
       "columns",
+      "accordion-group",
       "fragment",
       "embed"
     ]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   }
 ]
