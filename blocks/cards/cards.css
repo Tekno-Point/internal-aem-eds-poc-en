@@ -1,3 +1,4 @@
+@import url("../swiper/swiper.min.css");
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -24,4 +25,65 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards-card-body h5 {
+  font-weight: 400;
+      font-size: 1.5rem;
+      font-kerning: auto;
+      text-transform: inherit;
+          line-height: 2.6666666667rem;
+      font-family: BridgestoneType-Medium, Noto Sans Bold, Arial;
+  margin:unset;
+}
+
+.cards-card-body p{
+          font-family: BridgestoneType, Noto Sans, Arial;
+      font-weight: 400;
+      font-size: 1.3333333333rem;
+      font-kerning: auto;
+      text-transform: inherit;
+      letter-spacing: normal;
+      line-height: 2rem;
+  margin: 16px 0;
+      color: #031824;
+}
+
+.cards-card-body p:last-child{
+  margin:unset;
+  display:flex;
+  align-items:center;
+}
+.cards-card-body .button-container a{
+  font-size: 1.3333333333rem;
+      --button-bg-color: #d03825;
+  --button-border-color: #d03825;
+  --button-text-color: #fff;
+  font-family: "BridgestoneType", "Noto Sans", Arial;
+      font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: normal;
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  gap: 0.8333333333rem;
+  align-items: center;
+  justify-content: space-between;
+      height: 4.1666666667rem;
+  padding: 1rem 1.6666666667rem 1rem 2rem;
+  color: var(--button-text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--button-bg-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: 83.3333333333rem;
+  transition: 0.2s ease-out;
+}
+.cards-card-body .button-container a img{
+  filter: invert(1) brightness(1000%) contrast(1000%);
+}
+.cards-card-body .button-container a:hover{
+  --button-bg-color: #872518;
+    --button-border-color: #872518;
 }

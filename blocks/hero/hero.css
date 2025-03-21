@@ -97,7 +97,7 @@
   display: flex;
   justify-content: center;
 }
-.section-container1 h2{
+.section-container1 h2,.section-container3 h2{
   text-transform: uppercase;
   letter-spacing: .25rem;
   line-height: 3rem;
@@ -163,4 +163,27 @@
   .section-container1 .default-content-wrapper a:hover,.section.section-container2 .default-content-wrapper a:hover{
     --button-bg-color: #872518;
     --button-border-color: #872518;
+  }
+
+  @media (max-width:786px) {
+    .section-container1 .hero.block{
+      flex-direction: column;
+      margin-top: 20px;
+    }
+    .section-container1 h2,.section-container3 h2{
+      font-size: 1.5rem;
+      line-height: 2;
+    }
+    .section.section-container1 .default-content-wrapper:nth-child(1){
+      padding: unset;
+    }
+    .section.section-container1{
+      margin: 20px;
+    }
+    .section.section-container1 .hero.block div:nth-child(1) div {
+      background-image: url(../../images/new-THE-ADVANTAGES-OF-TUBELESS-TYRES-OVER-TUBE-TYPE-TYRES-1_DEFAULT_MOBILE.jpeg);
+      height: 400px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }

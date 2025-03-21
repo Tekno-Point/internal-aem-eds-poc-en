@@ -40,7 +40,7 @@ export default function decorate(block) {
   // block.append(swiperPagination);
 
   var swiper = new Swiper(block, {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 30,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -53,10 +53,34 @@ export default function decorate(block) {
     },
     breakpoints: {
       300: {
-        slidesPerView: 1.4,
+        slidesPerView: 1,
+        spaceBetween:10,
       },
       780: {
-        slidesPerView: 4,
+        slidesPerView: 3,
+      }
+      
+    },
+  });
+  var swiper = new Swiper('bridgestone-swiper1', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween:10,
+      },
+      780: {
+        slidesPerView: 3,
       }
       
     },

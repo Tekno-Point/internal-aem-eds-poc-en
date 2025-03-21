@@ -358,11 +358,69 @@ margin:0px;
  padding: 40px;
  padding-right: 0;
  background-color: #f5f6f6;
-  
+  position: relative;
+}
+.section.section-container2 .default-content-wrapper::before{
+  z-index: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        content: "";
+        border-top: 425px solid #f5f6f6;
+        border-right: 99px solid transparent;
+        transform: translateX(100%);
+}
+.section.section-container2 .default-content-wrapper::after{
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  content: "";
+  background-color: #f00;
+  transform: skew(-13deg) translateX(1px);
+  transform-origin: right bottom;
 }
 .section.section-container2 .embed-wrapper{
   padding: unset;
 }
+
+
+.section:nth-child(1) .hero {
+  min-height:40rem;
+  display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+.section:nth-child(1) .hero div:nth-child(2) div {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+.section:nth-child(1) .hero h1{
+  color: #fff;
+  font-family: "Decimal", "BridgestoneType", "Noto Sans", Arial;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: normal;
+  font-size: 2.6666666667rem;
+margin: unset;
+}
+.section:nth-child(1) .hero p{
+  font-weight: 400;
+        font-size: 2rem;
+        font-kerning: auto;
+        text-transform: inherit;
+        letter-spacing: .0833333333rem;
+        line-height: 3rem;
+        color: white;
+        margin: unset;
+}
+
+
 @media (max-width: 768px) {
  
   .section.section-container {
@@ -371,4 +429,29 @@ margin:0px;
   .section.section-container  h3{
     font-size: 1.6666666667rem;
   }
+  .section:nth-child(1) .hero{
+    background-image: url(../images/home-page-final_DEFAULT_MOBILE.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 26.6666666667rem;
+    background-position: center;
+    /* display: block; */
+    padding-inline: unset;
+  }
+  .section:nth-child(1) .hero div:nth-child(2) div{
+    width: calc(100% - 64px);
+  }
+  .section:nth-child(1) .hero h1{
+    font-size: 2.3333333333rem;
+  }
+  .section:nth-child(1) .hero p{
+    font-size: 1.3333333333rem;
+  }
+  
+.section.section-container2 {
+  flex-direction: column;
+}
+.section.section-container2 .default-content-wrapper::before,.section.section-container2 .default-content-wrapper::after{
+  content: unset;
+}
 }
