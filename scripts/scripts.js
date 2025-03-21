@@ -83,7 +83,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
-  decorateExampleModals(main);
+  // decorateExampleModals(main);
 }
 
 async function loadTemplate(doc, templateName) {
@@ -141,10 +141,10 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
-  const templateName = getMetadata('template');
-  if (templateName) {
-    await loadTemplate(doc, templateName);
-  }
+  // const templateName = getMetadata('template');
+  // if (templateName) {
+  //   await loadTemplate(doc, templateName);
+  // }
 
   const main = doc.querySelector('main');
   await loadSections(main);
