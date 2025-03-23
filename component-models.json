@@ -301,6 +301,7 @@
         "component": "reference",
         "valueType": "string",
         "name": "image",
+        
         "label": "Image",
         "multi": false
       },
@@ -362,6 +363,17 @@
         "component": "text",
         "name": "video_imageTitle",
         "label": "Video Image Title"
+      }
+    ]
+  },
+  {
+    "id": "languageselector",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
       }
     ]
   }

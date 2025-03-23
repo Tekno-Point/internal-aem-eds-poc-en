@@ -25,11 +25,12 @@ footer .footer p {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 32px;
   padding: 0;
 }
 
 .section.footer-first-container .default-content-wrapper p{
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.1;
   font-weight: 300;
   color: #031824;
@@ -54,6 +55,14 @@ footer .footer p {
 }
 
 @media (width <=768px) {
+  .section.footer-first-container {
+    margin: 0;
+    padding: 44px 0;
+  }  
+  .section.footer-first-container .default-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .section.footer-second-container {
@@ -78,8 +87,12 @@ footer .footer p {
   gap: 24px;
 }
 
+.section.footer-second-container .default-content-wrapper ul li {
+  flex: 0 0 25%;
+}
+
 .section.footer-second-container .default-content-wrapper ul li p {
-  font-size: 26px;
+  font-size: 14px;
   line-height: 1.75rem;
   font-weight: 400;
   color: #031824;
@@ -97,7 +110,7 @@ footer .footer p {
 }
 
 .section.footer-second-container .default-content-wrapper ul li ul li a {
-  font-size: 26px;
+  font-size: 14px;
   line-height: 1.75rem;
   font-weight: 400;
   color: #031824;
@@ -105,14 +118,21 @@ footer .footer p {
 }
 
 @media (width <=768px) {
+  .section.footer-second-container {
+    padding-top: 40px;
+  }
   .section.footer-second-container .default-content-wrapper ul {
     flex-direction: column;
+  }
+  .section.footer-second-container .default-content-wrapper ul li ul li {
+    display: none;
   }
 }
 
 .section.footer-third-container {
   padding-top: 32px;
   border-top: 2px solid #c3c8ca80;
+  margin: 0;
 }
 
 .section.footer-third-container .default-content-wrapper {
@@ -122,9 +142,14 @@ footer .footer p {
 @media (width <=768px) {
 }
 
+.section.footer-fourth-container {
+  margin: 0;
+}
+
 .section.footer-fourth-container .default-content-wrapper {
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
 
 .section.footer-fourth-container .default-content-wrapper ul {
@@ -149,15 +174,16 @@ footer .footer p {
 
 .section.footer-fourth-container .default-content-wrapper ul li a {
   text-decoration: none;
-  font-size: 26px;
+  font-size: 14px;
   line-height: 1.75rem;
   font-weight: 400;
   color: #031824;
 }
 
 .section.footer-fourth-container .default-content-wrapper p {
-  font-size: 26px;
+  font-size: 14px;
   line-height: 1.75rem;
   font-weight: 400;
   color: #031824;
+  margin: 0;
 }
