@@ -7,7 +7,14 @@ export function generateAccordionDOM(acc) {
   const props = [...acc.children];
   const [classes, heading1, summary1] = props;
 
-  summary.append(heading1.textContent.trim());
+  let classs = classes.textContent.trim();
+  if(classs.split(",")[1]?.includes("dsp-none-item")){
+    let an = heading1.querySelector("a")
+    summary.append(an);
+  }
+  else{
+    summary.append(heading1.textContent.trim());
+  }
 
   const elementText = summary1.innerHTML.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
   const elementDiv = document.createElement('div');

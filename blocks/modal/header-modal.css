@@ -1,6 +1,138 @@
-{
+.modal dialog:has(.section.header-modal-css) {
     right: 0;
     left: unset;
     max-width: 658px;
+    overflow-y: auto;
+    height: 100%;
+    padding: 50px;
 }
+
+.modal dialog:has(.section.header-modal-css) .modal-content {
+    padding: unset;
+    margin: unset;
+    max-width: 430px;
 }
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .default-content-wrapper {
+    text-align: center;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .default-content-wrapper>p>picture>img {
+    /* display: block; */
+    width: 178px;
+    height: 45px;
+}
+
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group {
+    padding: unset;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details {
+    width: 100%;
+    padding: 2rem 0;
+    font: inherit;
+    line-height: 1.4;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.0833333333rem solid #cbcbcb;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details summary::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    transform: rotate(135deg);
+    width: 8px;
+    height: 8px;
+    border: 2px solid currentcolor;
+    border-radius: 0 3px 0 0;
+    border-width: 2px 2px 0 0;
+    transition: transform 0.6sease-in-out, -webkit-transform 0.6sease-in-out;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion.dsp-none-item details summary::after{
+    /* pointer-events: none; */
+    display: none;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion.dsp-none-item details summary{
+    pointer-events: none;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details[open] summary::after {
+    transform: rotate(-45deg);
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details summary,
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion.dsp-none-item details summary a {
+    padding: unset;
+    padding-left: 2px;
+    position: relative;
+    font-family: "Decimal", "BridgestoneType", "Noto Sans", Arial;
+    font-size: 1.3333333333rem;
+    font-weight: 500;
+    line-height: 1.1;
+
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion.dsp-none-item details summary a {
+    padding: unset;
+    margin: unset;
+    background: unset;
+    color: #000;
+    border-radius: unset;
+    pointer-events: auto;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details summary::before,
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details[open] summary::before {
+    display: none;
+
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details>div>ul>li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    font-family: "Decimal", "BridgestoneType", "Noto Sans", Arial;
+    font-size: 1.3333333333rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #000;
+    border-bottom: 0.0833333333rem solid #cbcbcb;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details>div>ul>li a:hover {
+    text-decoration: unset;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details>div>ul>li a span{
+    margin-right: 20px;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details>div>ul>li a span img,
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details>div>ul>li a span {
+    width: 65px;
+    height: 65px;
+
+}
+
+/* Carousel Start */
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .cards-wrapper .cards .swiper-wrapper .swiper-slide{
+    /* width: 323.846px; */
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 0.666667rem;
+    padding: 10px;
+    margin-right: 30px;
+
+}
+
+/* Carousel End */

@@ -32,34 +32,34 @@ export default function decorate(block) {
   swiperPagination.classList.add("swiper-pagination")
   swiperButtonPrev.classList.add("swiper-button-next")
   swiperButtonNext.classList.add("swiper-button-prev")
-  
+
 
   block.append(swiperPagination);
   block.append(swiperButtonNext);
   block.append(swiperButtonPrev);
   // block.append(swiperPagination);
 
-  var swiper = new Swiper(block, {
-    slidesPerView: 3,
+  new Swiper(block, {
+    slidesPerView: 1.3,
     spaceBetween: 30,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: swiperButtonPrev,
+      prevEl: swiperButtonNext,
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: swiperPagination,
       clickable: true,
-      
+
     },
     breakpoints: {
       300: {
         slidesPerView: 1,
-        spaceBetween:10,
+        spaceBetween: 10,
       },
       780: {
-        slidesPerView: 3,
+        slidesPerView: 1.3,
       }
-      
+
     },
   });
   var swiper = new Swiper('.bridgestone-swiper1', {
@@ -72,17 +72,17 @@ export default function decorate(block) {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-      
+
     },
     breakpoints: {
       300: {
         slidesPerView: 1,
-        spaceBetween:10,
+        spaceBetween: 10,
       },
       780: {
         slidesPerView: 3,
       }
-      
+
     },
   });
 }
