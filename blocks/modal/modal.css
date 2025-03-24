@@ -4,11 +4,22 @@ body.modal-open {
     overflow: hidden;
 }
 
+@animation slide-in-ltr {0% {
+    transform: translateX(100%);
+}
+100% {
+    transform: translateX(0);
+}
+}
+
 .modal dialog::backdrop {
     background-color: rgb(19 19 19 / 75%);
+    background-color: rgba(31, 31, 31, 0.6);
+    backdrop-filter: blur(3px);
 }
 
 .modal dialog {
+    animation: slide-in-ltr 0.5 scubic-bezier(0.5, 0, 0, 1);
     overscroll-behavior: none;
     overflow-y: hidden;
     position: relative;
