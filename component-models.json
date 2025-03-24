@@ -374,7 +374,7 @@
     ]
   },
   {
-    "id": "languageselector",
+    "id": "language-selector",
     "fields": [
       {
         "component": "text-input",
