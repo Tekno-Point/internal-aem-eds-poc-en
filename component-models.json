@@ -114,6 +114,10 @@
             "value": "highlight"
           },
           {
+            "name": "Header Modal Css",
+            "value": "header-modal-css"
+          },
+          {
             "name": "section container",
             "value": "section-container"
           },
