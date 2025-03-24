@@ -10,7 +10,7 @@
 .modal dialog:has(.section.header-modal-css) .modal-content {
     padding: unset;
     margin: unset;
-    max-width: 430px;
+    max-width: 443px;
 }
 
 .modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .default-content-wrapper {
@@ -56,12 +56,12 @@
     transition: transform 0.6sease-in-out, -webkit-transform 0.6sease-in-out;
 }
 
-.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion.dsp-none-item details summary::after{
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion.dsp-none-item details summary::after {
     /* pointer-events: none; */
     display: none;
 }
 
-.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion.dsp-none-item details summary{
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion.dsp-none-item details summary {
     pointer-events: none;
 }
 
@@ -113,7 +113,7 @@
     text-decoration: unset;
 }
 
-.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details>div>ul>li a span{
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .accordion-group-wrapper .accordion-group .accordion details>div>ul>li a span {
     margin-right: 20px;
 }
 
@@ -126,13 +126,98 @@
 
 /* Carousel Start */
 
-.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .cards-wrapper .cards .swiper-wrapper .swiper-slide{
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .cards-wrapper .cards .swiper-wrapper {
+    margin-bottom: 20px;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .cards-wrapper .cards .swiper-wrapper .swiper-slide {
     /* width: 323.846px; */
     border: 1px solid rgb(203, 203, 203);
     border-radius: 0.666667rem;
     padding: 10px;
     margin-right: 30px;
 
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .cards-wrapper .cards .swiper-wrapper .swiper-slide .cards-card-body p strong {
+    font-family: Decimal, BridgestoneType, "Noto Sans", Arial;
+    font-size: 1.6333rem;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: normal;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .cards-wrapper .cards .swiper-wrapper .swiper-slide .cards-card-image picture img {
+    display: block;
+    width: 308px;
+    max-width: 308px;
+    height: 174px;
+}
+
+.modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .cards-wrapper .cards .swiper-wrapper .swiper-slide .cards-card-body p {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: rgb(3, 24, 36);
+}
+
+.modal dialog:has(.section.header-modal-css) .swiper-horizontal>.swiper-pagination-bullets,
+.modal dialog:has(.section.header-modal-css) .swiper-pagination-bullets.swiper-pagination-horizontal,
+.modal dialog:has(.section.header-modal-css) .swiper-pagination-custom,
+.modal dialog:has(.section.header-modal-css) .swiper-pagination-fraction {
+    bottom: 0;
+}
+
+.modal dialog:has(.section.header-modal-css) .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.modal dialog:has(.section.header-modal-css) .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 33.33%;
+    border-radius: unset;
+    margin: unset;
+    height: 2px;
+    background: red;
+}
+
+.modal dialog:has(.section.header-modal-css) .swiper-button-prev {
+    left: 0;
+}
+
+.modal dialog:has(.section.header-modal-css) .swiper-button-next {
+    right: 0;
+}
+
+@media screen and (max-width:768px) {
+
+    header nav .nav-hamburger{
+        display: none;
+    }
+
+    .modal dialog:has(.section.header-modal-css) {
+        max-width: 100%;
+        width: 100%;
+        padding: 27px;
+    }
+
+    .modal dialog:has(.section.header-modal-css) .swiper-horizontal>.swiper-pagination-bullets,
+    .modal dialog:has(.section.header-modal-css) .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .modal dialog:has(.section.header-modal-css) .swiper-pagination-custom,
+    .modal dialog:has(.section.header-modal-css) .swiper-pagination-fraction {
+        display: none;
+    }
+
+    .modal dialog:has(.section.header-modal-css) .swiper-button-next:after,
+    .modal dialog:has(.section.header-modal-css) .swiper-button-prev:after {
+        display: none;
+    }
+
+    .modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .cards-wrapper .cards .swiper-wrapper .swiper-slide .cards-card-image picture img {
+        max-width: 263px;
+        height: 148px;
+        width: 100%;
+    }
+
+    .modal dialog:has(.section.header-modal-css) .modal-content .section.header-modal-css .cards-wrapper .cards .swiper-wrapper .swiper-slide .cards-card-body p strong {
+        font-size: 1.333rem;
+    }
 }
 
 /* Carousel End */

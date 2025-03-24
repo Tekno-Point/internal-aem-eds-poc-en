@@ -83,6 +83,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  wrapImgsInLinks(main)
 }
 
 /**
@@ -121,6 +122,17 @@ function autolinkModals(element) {
   });
 }
 
+function wrapImgsInLinks(container) {
+  const pictures = container.querySelectorAll('picture');
+  pictures.forEach((pic) => {
+    const link = pic.parentElement.nextElementSibling;
+    if (link?.classList.contains('button-container')) {
+      link.querySelector('a').innerHTML = '';
+      link.querySelector('a').append(pic)
+      // pic.replaceWith(link);
+    }
+  });
+}
 /**
  * Loads everything that doesn't need to be delayed.
  * @param {Element} doc The container element
