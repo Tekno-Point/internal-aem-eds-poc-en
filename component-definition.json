@@ -152,7 +152,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "by-line",
+                  "name": "By Line",
                   "model": "by-line"
                 }
               }
