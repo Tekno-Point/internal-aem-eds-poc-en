@@ -372,5 +372,16 @@
         "label": "Video Image Title"
       }
     ]
+  },
+  {
+    "id": "languageselector",
+    "fields": [
+      {
+        "component": "text-input",
+        "label": "URL of Content Fragment",
+        "name": "text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
