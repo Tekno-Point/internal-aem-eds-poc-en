@@ -338,6 +338,7 @@ margin:0px;
 .section.section-container2 {
   display:flex;
     height: 35.4167rem;
+    overflow: hidden;
   
 }
 
@@ -361,6 +362,9 @@ margin:0px;
  padding-right: 0;
  background-color: #f5f6f6;
   position: relative;
+  display: flex;
+      flex-direction: column;
+      justify-content: center;
 }
 .section.section-container2 .default-content-wrapper::before{
   z-index: 2;
@@ -460,6 +464,8 @@ margin: unset;
   
 .section.section-container2 {
   flex-direction: column;
+  height: unset;
+  overflow: unset;
 }
 .section.section-container2 .default-content-wrapper::before,.section.section-container2 .default-content-wrapper::after{
   content: unset;

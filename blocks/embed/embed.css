@@ -16,7 +16,9 @@
     border-radius: 20px;
     padding: 0;
   top:50%;
-  left:50%
+  left:50%;
+  background: transparent;
+  margin: unset;
   }
   
   .embed .embed-placeholder-play button::before {
@@ -31,4 +33,18 @@
     border-left: 6px solid;
     top: 4px;
     left: 7px;
+  }
+
+  .embed.block{
+    height: 100%;
+  }
+  .embed-placeholder{
+    height: 100%;
+  }
+  .embed-placeholder img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .block.embed.embed-youtube >div {
+    height: 100% !important;
   }

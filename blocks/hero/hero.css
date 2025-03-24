@@ -160,6 +160,20 @@
   .section-container1 .default-content-wrapper span img ,.section.section-container2 .default-content-wrapper span img{
     filter: invert(1) brightness(1000%) contrast(1000%);
   }
+  /* .section.section-container2 .default-content-wrapper span img:nth-child(1){
+    filter: unset;
+    height: 60px;
+    max-width: 180px;
+    width: 180px;
+    object-fit: cover;
+  } */
+   .section:nth-child(3) .default-content-wrapper p:nth-child(1) span img {
+    filter: unset;
+    height: 60px;
+    max-width: 180px;
+    width: 180px;
+    object-fit: cover;
+   }
   .section-container1 .default-content-wrapper a:hover,.section.section-container2 .default-content-wrapper a:hover{
     --button-bg-color: #872518;
     --button-border-color: #872518;
@@ -185,5 +199,8 @@
       height: 400px;
       background-position: center;
       background-repeat: no-repeat;
+    }
+    .section.section-container2 .default-content-wrapper{
+      padding: 3.33333rem 2rem ;
     }
   }
