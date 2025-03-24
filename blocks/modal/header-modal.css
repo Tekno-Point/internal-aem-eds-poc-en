@@ -179,10 +179,12 @@
 
 .modal dialog:has(.section.header-modal-css) .swiper-button-prev {
     left: 0;
+    color: #000;
 }
 
 .modal dialog:has(.section.header-modal-css) .swiper-button-next {
     right: 0;
+    color: #000;
 }
 
 @media screen and (max-width:768px) {
