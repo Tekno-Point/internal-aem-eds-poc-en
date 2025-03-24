@@ -62,7 +62,7 @@ export default function decorate(block) {
       
     },
   });
-  var swiper = new Swiper('bridgestone-swiper1', {
+  var swiper = new Swiper('.bridgestone-swiper1', {
     slidesPerView: 3,
     spaceBetween: 30,
     navigation: {

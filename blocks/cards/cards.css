@@ -87,3 +87,25 @@
   --button-bg-color: #872518;
     --button-border-color: #872518;
 }
+
+@media (max-width:786px){
+  .bridgestone-swiper1 .swiper-button-next,.bridgestone-swiper1  .swiper-button-prev{
+    top: -6%;
+    color: #031824;
+    }
+    .bridgestone-swiper1 .swiper-pagination{
+      display: none;
+    }
+    .bridgestone-swiper1 .swiper-button-prev{
+          left: 79%;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+      font-size: 25px;
+    }
+    .bridgestone-swiper1.swiper{
+      overflow: unset;
+    }
+    .section-container3.cards-container{
+      overflow: hidden;
+    }
+}
