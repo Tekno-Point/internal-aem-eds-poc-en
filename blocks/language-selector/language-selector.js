@@ -86,4 +86,9 @@ export default function decorate(block) {
     optionsContainer.classList.toggle("show");
   });
 
+  document.body.addEventListener("click", function (e) {
+    if (!dropdownContainer.contains(e.target)) {
+      optionsContainer.classList.remove("show");
+    }
+  });
 }
