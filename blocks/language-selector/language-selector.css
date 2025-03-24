@@ -37,6 +37,11 @@
   margin-left: 8px;
 }
 
+.custom-dropdown .dropdown-selected img {
+  height: 12px;
+  width: 18px;
+}
+
 .custom-dropdown .dropdown-options {
   position: absolute;
   padding: 0;
