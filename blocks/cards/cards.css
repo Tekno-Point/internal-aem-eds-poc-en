@@ -26,8 +26,11 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+.bridgestone-swiper1{
+  min-height: 314px;
+}
 
-.cards-card-body h5 {
+.bridgestone-swiper1 .cards-card-body h5 {
   font-weight: 400;
       font-size: 1.5rem;
       font-kerning: auto;
@@ -37,7 +40,7 @@
   margin:unset;
 }
 
-.cards-card-body p{
+.bridgestone-swiper1 .cards-card-body p{
           font-family: BridgestoneType, Noto Sans, Arial;
       font-weight: 400;
       font-size: 1.3333333333rem;
@@ -49,12 +52,12 @@
       color: #031824;
 }
 
-.cards-card-body p:last-child{
+.bridgestone-swiper1 .cards-card-body p:last-child{
   margin:unset;
   display:flex;
   align-items:center;
 }
-.cards-card-body .button-container a{
+.bridgestone-swiper1 .cards-card-body .button-container a{
   font-size: 1.3333333333rem;
       --button-bg-color: #d03825;
   --button-border-color: #d03825;
@@ -80,10 +83,10 @@
   border-radius: 83.3333333333rem;
   transition: 0.2s ease-out;
 }
-.cards-card-body .button-container a img{
+.bridgestone-swiper1 .cards-card-body .button-container a img{
   filter: invert(1) brightness(1000%) contrast(1000%);
 }
-.cards-card-body .button-container a:hover{
+.bridgestone-swiper1 .cards-card-body .button-container a:hover{
   --button-bg-color: #872518;
     --button-border-color: #872518;
 }
