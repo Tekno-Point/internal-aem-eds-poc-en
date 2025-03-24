@@ -2,42 +2,42 @@ let pageData = [
   {
     name: "Lithuania | Lietuva",
     url: "#",
-    img: "/content/dam/bridgestone/lithuania.svg"
+    img: "../../images/lithuania.svg"
   },
   {
     name: "Spain | España",
     url: "#",
-    img: "/content/dam/bridgestone/spain.svg"
+    img: "../../images/spain.svg"
   },
   {
     name: "Middle East",
     url: "#",
-    img: "/content/dam/bridgestone/middleeast.png"
+    img: "../../images/middleeast.png"
   },
   {
     name: "Netherlands | Nederland",
     url: "#",
-    img: "/content/dam/bridgestone/netherlands.svg"
+    img: "../../images/netherlands.svg"
   },
   {
     name: "Bosnia and Herzegovina",
     url: "#",
-    img: "/content/dam/bridgestone/bosnia.svg"
+    img: "../../images/bosnia.svg"
   },
   {
     name: "Belgium | België",
     url: "#",
-    img: "/content/dam/bridgestone/spain.svg"
+    img: "../../images/spain.svg"
   },
   {
     name: "Finland | Suomi",
     url: "#",
-    img: "/content/dam/bridgestone/netherlands.svg"
+    img: "../../images/netherlands.svg"
   },
   {
     name: "India",
     url: "#",
-    img: "/content/dam/bridgestone/bosnia.svg"
+    img: "../../images/bosnia.svg"
   }
 ];
 
@@ -49,7 +49,7 @@ export default function decorate(block) {
 
   dropdownContainer.innerHTML = `
      <div class="dropdown-selected">
-      <img src="/content/dam/bridgestone/indian-flag.png" alt="ab"></img>
+      <img src="../../images/indian-flag.png" alt="ab"></img>
       <span>India</span>
     </div>
     <ul class="dropdown-options"></ul>
