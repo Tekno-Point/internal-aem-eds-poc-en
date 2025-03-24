@@ -1,3 +1,5 @@
+@import url("header-modal.css");
+
 body.modal-open {
     overflow: hidden;
 }
