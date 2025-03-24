@@ -49,11 +49,11 @@ export default function decorate(block) {
     pagination: {
       el: swiperPagination,
       clickable: true,
-
+      draggable: true
     },
     breakpoints: {
       300: {
-        slidesPerView: 1,
+        slidesPerView: 1.2,
         spaceBetween: 10,
       },
       780: {
