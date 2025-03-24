@@ -1,4 +1,3 @@
-
 /* this function also gets called by accordion-group */
 export function generateAccordionDOM(block) {
   const details = document.createElement('details');
@@ -27,5 +26,3 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(dom);
 }
-
-

@@ -5,10 +5,10 @@ import Swiper from '../swiper/swiper.min.js';
 export default function decorate(block) {
   /* change to ul, li */
   const ul = document.createElement('div');
-  ul.classList.add("swiper-wrapper");
+  ul.classList.add('swiper-wrapper');
   [...block.children].forEach((row) => {
     const li = document.createElement('div');
-    li.classList.add("swiper-slide")
+    li.classList.add('swiper-slide');
     moveInstrumentation(row, li);
     while (row.firstElementChild) li.append(row.firstElementChild);
     [...li.children].forEach((div) => {
@@ -29,27 +29,26 @@ export default function decorate(block) {
   const swiperPagination = document.createElement('div');
   const swiperButtonPrev = document.createElement('div');
   const swiperButtonNext = document.createElement('div');
-  swiperPagination.classList.add("swiper-pagination")
-  swiperButtonPrev.classList.add("swiper-button-next")
-  swiperButtonNext.classList.add("swiper-button-prev")
-  
+  swiperPagination.classList.add('swiper-pagination');
+  swiperButtonPrev.classList.add('swiper-button-next');
+  swiperButtonNext.classList.add('swiper-button-prev');
 
   block.append(swiperPagination);
   block.append(swiperButtonNext);
   block.append(swiperButtonPrev);
   // block.append(swiperPagination);
 
-  var swiper = new Swiper(block, {
+  const swiper = new Swiper(block, {
     slidesPerView: 4,
     spaceBetween: 30,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
       clickable: true,
-      
+
     },
     breakpoints: {
       300: {
@@ -57,8 +56,8 @@ export default function decorate(block) {
       },
       780: {
         slidesPerView: 4,
-      }
-      
+      },
+
     },
   });
 }

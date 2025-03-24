@@ -41,12 +41,14 @@
   width:100%;
   margin:0 auto;
 }
+
 .section-container1 .hero.block {
   padding:unset;
   display:flex;
   gap:24px;
   margin-top:40px;
 }
+
 .section-container1 .hero picture{
   position:unset;
 }
@@ -58,10 +60,11 @@
       font-size: 1.5rem;
       font-kerning: auto;
       text-transform: inherit;
-      font-family: BridgestoneType-Medium, Noto Sans Bold, Arial;
+      font-family: BridgestoneType-Medium, "Noto Sans Arial" Arial;
 }
+
 .section-container1 .hero.block  div:nth-child(2) p{
-  font-family: BridgestoneType, Noto Sans, Arial;
+  font-family: BridgestoneType, "Noto Sans", Arial;
       font-weight: 400;
       font-size: 1.3333333333rem;
       font-kerning: auto;
@@ -72,31 +75,35 @@
   color: #5f6b73;
   
 }
+
 .section-container1 .hero.block  div:nth-child(2) ul li:nth-child(2) p{
   margin:unset;
 }
+
 .section-container1 .hero.block  div:nth-child(2) a{
       font-weight: 500;
-          font-family: BridgestoneType-Bold, Noto Sans Bold, Arial;
+          font-family: BridgestoneType-Bold, "Noto Sans Arial" Arial;
           font-size: 1.3333333333rem;
       font-kerning: auto;
       text-transform: inherit;
       letter-spacing: normal;
       line-height: 2rem;
   background:unset;
-  
   color: #ed1c24;
   padding:unset;
   margin:unset
 }
+
 .section-container1 .hero.block  div:nth-child(2) a:hover{
       color: #cc080f;
 }
+
 .section-container1 .default-content-wrapper p {
   margin: unset;
   display: flex;
   justify-content: center;
 }
+
 .section-container1 h2{
   text-transform: uppercase;
   letter-spacing: .25rem;
@@ -104,62 +111,44 @@
   font-weight: 400;
   font-size: 2rem;
   font-kerning: auto;
-  font-family: Decimal-Medium, BridgestoneType, Noto Sans, Arial;
+  font-family: Decimal-Medium, BridgestoneType, "Noto Sans", Arial;
   margin: unset;
 }
+
 .section-container1 .default-content-wrapper a,.section.section-container2 .default-content-wrapper a{
   margin: unset;
   font-size: 1.3333333333rem;
     
   --button-bg-color: #d03825;
-    
   --button-border-color: #d03825;
-    
   --button-text-color: #fff;
     
   font-weight: 300;
-    
   line-height: 1.1;
-    
   letter-spacing: normal;
-    
   position: relative;
-    
   box-sizing: border-box;
-    
   display: inline-flex;
-    
   gap: 0.8333333333rem;
-    
   align-items: center;
-    
   justify-content: space-between;
-    
   min-width: 24rem;
-    
   height: 4.1666666667rem;
-    
   padding: 1rem 1.6666666667rem 1rem 2rem;
-    
   color: var(--button-text-color);
-    
   text-decoration: none;
-    
   text-transform: uppercase;
-    
   cursor: pointer;
-    
   background-color: var(--button-bg-color);
-    
   border: 1px solid var(--button-border-color);
-    
   border-radius: 83.3333333333rem;
-    
   transition: 0.2s ease-out;
   }
+
   .section-container1 .default-content-wrapper span img ,.section.section-container2 .default-content-wrapper span img{
     filter: invert(1) brightness(1000%) contrast(1000%);
   }
+
   .section-container1 .default-content-wrapper a:hover,.section.section-container2 .default-content-wrapper a:hover{
     --button-bg-color: #872518;
     --button-border-color: #872518;

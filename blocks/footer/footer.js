@@ -19,20 +19,19 @@ export default async function decorate(block) {
   block.append(footer);
 }
 
-
-//footer accordion
-let acc = document.getElementsByClassName(".footer-second-container ul li p");
-console.log(acc)
+// footer accordion
+const acc = document.querySelectorAll('.footer-second-container > .default-content-wrapper > ul > li > p');
 let i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    let panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+  acc[i].addEventListener('click', function () {
+    this.classList.toggle('active');
+    const panel = this.nextElementSibling;
+    // console.log(panel)
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none';
     } else {
-      panel.style.display = "block";
+      panel.style.display = 'block';
     }
   });
 }
