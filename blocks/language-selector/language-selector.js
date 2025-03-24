@@ -42,7 +42,7 @@ let pageData = [
 ];
 
 export default function decorate(block) {
-
+  const a = block;
   console.log(block)
   let dropdownContainer = document.createElement('div');
   dropdownContainer.classList.add("custom-dropdown");
@@ -54,9 +54,9 @@ export default function decorate(block) {
     </div>
     <ul class="dropdown-options"></ul>
   `;
-  
+
   let optionsContainer = dropdownContainer.querySelector(".dropdown-options");
-  
+
   pageData.forEach(function (page) {
     let optionDiv = document.createElement("li");
     optionDiv.classList.add("dropdown-option");
@@ -68,22 +68,22 @@ export default function decorate(block) {
       </a>
     `;
     optionsContainer.appendChild(optionDiv);
-  
+
     optionDiv.addEventListener("click", function () {
       document.querySelector(".dropdown-selected").innerHTML = `
         <img src="${page.img}" />
         <span>${page.name}</span>
       `;
       optionsContainer.classList.remove("show");
-      // window.location.href = `https;//${page.url}.in`;
     });
   });
-  
-  document
-    .querySelector(".dropdown-selected")
-    .addEventListener("click", function () {
-      optionsContainer.classList.toggle("show");
-    });
 
-  block.appendChild(dropdownContainer)  
+  block.appendChild(dropdownContainer);
+
+  let drpDown = block.querySelector(".dropdown-selected");
+  console.log(drpDown);
+  drpDown?.addEventListener("click", function () {
+    optionsContainer.classList.toggle("show");
+  });
+
 }
