@@ -78,6 +78,11 @@
   margin-left: 16px;
 }
 
+.custom-dropdown ul li a img{
+  height: 12px;
+  width: 18px;
+}
+
 .dropdown-options.show {
   display: block;
 }
