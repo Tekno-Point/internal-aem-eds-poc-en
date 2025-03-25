@@ -1,4 +1,6 @@
+import('./plugin.js');
 // add delayed functionality here
+
 let adobeScript = document.createElement("script");
 adobeScript.type = 'text/javascript';
 adobeScript.async = true;
