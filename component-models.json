@@ -112,6 +112,24 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "container1",
+            "value": "container1"
+          },
+          {
+            "name": "container2",
+            "value": "container2"
+          },
+          
+          {
+            "name": "container3",
+            "value": "container3"
+          },
+          
+          {
+            "name": "container4",
+            "value": "container4"
           }
         ]
       }
@@ -188,6 +206,49 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "hero-swiper",
+            "value": "hero-swiper"
+          }
+         
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Style",
+        "options": [
+          {
+            "name": "alalameyams",
+            "children": [
+              {
+                "name": "bridgestone swiper",
+                "value": "alalameyams-swiper"
+              },
+              {
+                "name": "alalameyams swiper1",
+                "value": "alalameyams-swiper1"
+              },
+              {
+                "name": "alalameyams swiper main",
+                "value": "swiper"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
