@@ -18,3 +18,22 @@ footer .footer p {
     padding: 40px 32px 24px;
   }
 }
+
+
+/* Al-Alameya Footer Css start*/
+
+footer .footer > div {
+  margin: 0 auto;
+  max-width: 857px;
+}
+
+footer .footer .section .default-content-wrapper  >ul{
+  display: flex;
+
+}
+
+footer .footer .section .default-content-wrapper  >ul >li{
+  width: 33.33%;
+}
+
+/* Al-Alameya Footer Css Ends */
