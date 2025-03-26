@@ -118,6 +118,40 @@ footer .footer .section .default-content-wrapper>ul>li>ul>li>ul {
   padding: 0;
 }
 
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul form >div input{
+  max-width: 234px;
+  font-size: 17px;
+  border-radius: 8px;
+  padding: 8px 45px 8px 12px;
+  display: block;
+  position: relative;
+}
+
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul form >div{
+  position: relative;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul form >div::after {
+  background-color: red;
+  right: 3px;
+  top: 48%;
+  transform: translateY(-50%);
+  content: "";
+  background-image: url("../../images/tel-button.png");
+  width: 49px;
+  height: 42px;
+  border-radius: 12px;
+  display: block;
+  background-size: 100% 100%;
+  object-fit: contain;
+  position: absolute;
+  outline: none;
+  border: unset;
+
+}
+
 footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul {
   margin: unset;
   list-style: none;
