@@ -226,7 +226,7 @@ margin: unset;
   transform: translateX(0);
  }
  .alalameyams-swiper .swiper-slide .cards-card-image img{
-  animation: bannerScale 8s ease-in-out 1s;
+  /* animation: bannerScale 8s ease-in-out 1s; */
   object-fit: cover;
   transform: scale(1);
  }
