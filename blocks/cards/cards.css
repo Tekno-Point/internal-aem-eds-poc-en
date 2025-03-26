@@ -225,19 +225,7 @@ margin: unset;
   opacity: 1;
   transform: translateX(0);
  }
- .alalameyams-swiper .swiper-slide .cards-card-image img{
-  /* animation: bannerScale 8s ease-in-out 1s; */
-  object-fit: cover;
-  transform: scale(1);
- }
- @keyframes bannerScale{
-  0%{
-    transform: scale  (1);
-  }
-  100%{
-    transform: scale(1.15);
-  }
- }
+ 
 
  .alalameyams-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
   width: 47px;
