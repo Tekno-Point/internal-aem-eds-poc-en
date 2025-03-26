@@ -9,7 +9,13 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
+ *,
+ *::before,
+ *::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 :root {
   /* colors */
   --background-color: white;
@@ -228,7 +234,7 @@ main img {
 }
 
 /* sections */
-main > .section {
+/* main > .section {
   margin: 40px 0;
 }
 
@@ -236,16 +242,16 @@ main > .section > div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
-}
+} */
 
 main > .section:first-of-type {
   margin-top: 0;
 }
 
 @media (width >= 900px) {
-  main > .section > div {
+  /* main > .section > div {
     padding: 0 32px;
-  }
+  } */
 }
 
 /* section metadata */
@@ -254,4 +260,76 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main > .section.container1{
+  max-width: 1140px;
+  padding-inline: 15px;
+  width: 100%;
+  margin: 0 auto;
+  height: 700px;
+  /* border: 1px solid red; */
+}
+
+main .section.highlight{
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #003366;
+ 
+}
+
+main .section.highlight .default-content-wrapper{
+  max-width: 1140px;
+  padding-inline: 15px;
+  margin: 0 auto;
+}
+
+main .section.highlight h4{
+  text-transform: uppercase;
+  font-family: "BebasNeueBold",sans-serif;
+  line-height: 0.8;
+  font-weight: 500;
+  letter-spacing: -1.6px;
+  font-size: 60px;
+  color: white;
+  margin-bottom: .5rem;
+  margin-top: unset;
+}
+main .section.highlight p{
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-family: "Roboto Light",sans-serif;
+}
+main .section.highlight p:last-child{
+  margin-bottom: unset;
+}
+.container2  {
+  text-align: center;
+  position: relative;
+}
+.container2 h1{
+  text-transform: uppercase;
+  font-family: "BebasNeueBold",sans-serif;
+  font-size: 50px;
+  line-height: 0.8;
+  letter-spacing: -1.6px;
+  color: #fcd054;
+  margin-bottom: 60px;
+  z-index: 10;
+  position: relative;
+}
+.container3 {
+  margin: unset;
+  height: 850px;
+}
+@media (max-width:786px){
+  main .section.highlight{
+  padding-block: 70px;
+  }
+  main .section.highlight h4{
+    font-size: 50px;
+  }
 }

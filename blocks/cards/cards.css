@@ -26,3 +26,275 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+
+.container1 .swiper-wrapper .swiper-slide{
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 8px;
+    padding: 50px;
+    justify-content: space-between;
+    width: 100%;
+    background-image: linear-gradient(to left, #fcd054 250px, #ffffff 1px);
+    -webkit-box-shadow: 0px 20px 51px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 20px 51px 0px rgba(0, 0, 0, 0.1);
+}
+.container1 .swiper-slide .cards-card-body{
+  padding-top: 20px;
+  padding-left: 20px;
+  max-width: 550px;
+  margin: unset;
+}
+.container1 .swiper-slide .cards-card-image{
+  position: relative;
+    border-radius: 8px;
+    max-width: 418px;
+    width: 100%;
+    max-height: 559px;
+    overflow: hidden; 
+}
+.container1 .swiper-slide .cards-card-image img{
+  height: 100%;
+  transition: all .3s linear;
+}
+.container1 .swiper-slide .cards-card-image:hover img {
+  transform: scale(1.05);
+}
+
+.container1 .cards-card-body p:first-child{
+  padding-left: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 6.5px;
+  color: #333333;
+  margin-bottom: 35px;
+  margin-top: unset;
+}
+
+.container1 .cards-card-body h2{
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  font-family: "BebasNeueBold",sans-serif;
+  color: #315b74;
+  font-size: 80px;
+  line-height: 0.8;
+  letter-spacing: -1.6px;
+  margin-top: unset;
+  font-weight: 500;
+}
+.container1 .cards-card-body h3{
+  font-family: "Roboto Bold",sans-serif;
+  font-size: 25px;
+  line-height: 1.4;
+  color: #333333;
+  margin-bottom: 35px;
+  margin-top: unset;
+}
+.container1 .cards-card-body p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 35px;
+  margin-top: unset;
+}
+
+.container1 .cards-card-body a{
+  font-family: "Roboto Bold",sans-serif;
+  font-size: 16.5px;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  color: #fcd054;
+  padding: unset;
+  background-color: transparent;
+  margin: unset;
+}
+.container1 .cards-card-body a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.alalameyams-swiper1{
+  max-width: 1140px;
+  padding-inline: 15px;
+  margin: 0 auto;
+  z-index: 10;
+}
+.alalameyams-swiper1 .cards-card-image{
+  padding-bottom: 90px;
+}
+.alalameyams-swiper1 .cards-card-image img{
+  position: relative;
+  z-index: 1;
+  max-width: 260px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding-bottom: 15px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  
+}
+.alalameyams-swiper1 .cards-card-image img:hover{
+  box-shadow: 0px 18px 32px 0px rgba(0, 0, 0, 0.1); 
+}
+.alalameyams-swiper1 .swiper-button-prev,.alalameyams-swiper1 .swiper-button-next {
+  display: none;
+}
+.alalameyams-swiper1 .swiper-pagination{
+  display: none;
+}
+
+.container2 .default-content-wrapper p{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  max-width: 824px;
+  width: 100%;
+}
+.alalameyams-swiper .cards-card-image img{
+  width: 100%;
+}
+.alalameyams-swiper .cards-card-body{
+  max-width: 1140px;
+  width: 100%;
+  padding-inline: 15px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.alalameyams-swiper h1 {
+  margin-left: -2px;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: "BebasNeue",sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0px;
+    width: 100%;
+    color: #fff;
+margin: unset;
+}
+.alalameyams-swiper h1 em {
+  font-weight: 900;
+  font-family: "BebasNeue",sans-serif;
+  color: #fcd054;
+}
+.alalameyams-swiper .button-container{
+  margin: unset;
+}
+.alalameyams-swiper .button-container a{
+  padding: 25px 37.5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fcd054;
+    overflow: hidden;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    position: relative;
+    font-family: "Roboto Bold",sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3.1px;
+    display: inline-block;
+    color: #ffffff;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+.alalameyams-swiper .swiper-slide .cards-card-body{
+  opacity: 0;
+  -webkit-transform: translateX(150px);
+  transform: translateX(150px);
+  -webkit-transition: all 1s ease-in-out .7s;
+  transition: all 1s ease-in-out .7s;
+ }
+ .alalameyams-swiper .swiper-slide.swiper-slide-active .cards-card-body{
+  opacity: 1;
+  transform: translateX(0);
+ }
+ .alalameyams-swiper .swiper-slide .cards-card-image img{
+  animation: bannerScale 8s ease-in-out 1s;
+  object-fit: cover;
+  transform: scale(1);
+ }
+ @keyframes bannerScale{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.15);
+  }
+ }
+
+ .alalameyams-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  width: 47px;
+  height: 10px;
+  transition: all .3s ease;
+  background-color: #315b74;
+  border-radius: 30px;
+  transition: all .3s ease;
+ }
+ .alalameyams-swiper .swiper-button-prev , .alalameyams-swiper .swiper-button-next{
+display: none;
+ }
+ .alalameyams-swiper .swiper-pagination.swiper-pagination-horizontal{
+  top: 50%;
+    display: flex;
+    left: 12%;
+ }
+@media (max-width:768px) {
+  .container1 .swiper-slide .cards-card-image{
+    display: none;
+  }
+  .container1 .swiper-wrapper .swiper-slide{
+    padding: 70px 15px;
+    background-image: unset;
+  }
+  .container1 .cards-card-body p:first-child{
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-align: unset;
+  }
+  .container1 .swiper-slide .cards-card-body{
+    padding: unset;
+    text-align: center;
+  }
+  .container1 .cards-card-body h2{
+    margin-bottom: 25px;
+    font-size: 50px;
+  }
+  .container1 .cards-card-body h3{
+    font-size: 20px;
+    margin-bottom: 25px;  
+  }
+  .container1 .cards-card-body p{
+    text-align: justify;
+  }
+  .container1 .cards-card-body .button-container{
+    text-align: center;
+    margin: unset;
+  }
+  .container1 .cards-card-body a {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  .alalameyams-swiper1 .swiper-button-prev,.alalameyams-swiper1 .swiper-button-next {
+    display: block;
+    top: 82%;
+    left: 50%;
+   
+  }
+  .alalameyams-swiper1 .swiper-button-prev{
+    left: 37%;
+  }
+  .swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 25px;
+    color: #fcd054;
+    border: 2px solid #fcd054;
+    padding-block: 10px;
+    padding-inline: 15px;
+    border-radius: 8px 
+  }
+}
