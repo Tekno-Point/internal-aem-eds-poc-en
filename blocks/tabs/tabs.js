@@ -1,120 +1,116 @@
-import { loadBlocks } from '../../scripts/lib-franklin.js';
-import { decorateMain } from '../../scripts/scripts.js';
+// import { createTag } from '../../scripts/scripts.js';
 
-async function generateTabMainBlock(html) {
-  const main = document.createElement('main');
-  main.innerHTML = html;
-  decorateMain(main);
-  await loadBlocks(main);
-  return main;
-}
-
-const HASH_REGEX = /tabs--(.*)--(.*)/;
-const HASH_SCROLL_POLL_INTERVAL_DELAY_IN_MILLI_SECONDS = 20;
-function decodeHashToObject() {
-  if (!window.location.hash || window.location.hash.length < 3) {
-    return null;
-  }
-
-  const base = decodeURI(window.location.hash.slice(1));
-  const matches = base.match(HASH_REGEX);
-  if (matches) {
-    return {
-      tabMatches: (title, index) => matches[2] === title && parseFloat(matches[1]) === index,
-      tabsComponentMatches: (index) => parseFloat(matches[1]) === index,
-    };
-  }
-
-  return null;
-}
-
-function generateHiddenInput(tabSectionIndex, presentTabContents, block) {
-  const hashObj = decodeHashToObject();
-  for (let i = presentTabContents.length - 1; i > -1; i -= 1) {
-    const { tabTitle } = presentTabContents[i].dataset;
-    const input = document.createElement('input');
-
-    input.setAttribute('type', 'radio');
-    input.setAttribute('id', `tab-${tabSectionIndex}-${i}`);
-    input.setAttribute('name', `tabs-${tabSectionIndex}`);
-
-    if (
-      (hashObj && hashObj.tabMatches(tabTitle, tabSectionIndex))
-        || ((!hashObj || !hashObj.tabsComponentMatches(tabSectionIndex)) && i === 0)
-    ) {
-      input.setAttribute('checked', true);
+/**
+ * Helper function to create DOM elements
+ * @param {string} tag DOM element to be created
+ * @param {array} attributes attributes to be added
+ */
+function createTag(tag, attributes, html) {
+  const el = document.createElement(tag);
+  if (html) {
+    if (html instanceof HTMLElement || html instanceof SVGElement) {
+      el.append(html);
+    } else {
+      el.insertAdjacentHTML('beforeend', html);
     }
-    block.prepend(input);
   }
+  if (attributes) {
+    Object.entries(attributes).forEach(([key, val]) => {
+      el.setAttribute(key, val);
+    });
+  }
+  return el;
 }
 
-function generateTabNav(tabSectionIndex, presentTabContents) {
-  const ul = document.createElement('ul');
-  ul.setAttribute('class', 'tabs-control');
+function changeTabs(e) {
+  const { target } = e;
+  const tabMenu = target.parentNode;
+  const tabContent = tabMenu.nextElementSibling;
 
-  presentTabContents.forEach((tabContent, index) => {
-    const { tabTitle } = tabContent.dataset;
-    const li = document.createElement('li');
-    li.setAttribute('class', 'tab');
+  tabMenu.querySelectorAll('[aria-selected="true"]').forEach((t) => t.setAttribute('aria-selected', false));
 
-    const label = document.createElement('label');
-    label.setAttribute('for', `tab-${tabSectionIndex}-${index}`);
+  target.setAttribute('aria-selected', true);
 
-    const h2 = document.createElement('h2');
+  tabContent.querySelectorAll('[role="tabpanel"]').forEach((p) => p.classList.remove('active'));
 
-    const a = document.createElement('a');
-    a.innerHTML = tabTitle;
-    h2.append(a);
-    label.append(h2);
-    li.append(label);
+  tabContent.parentNode.querySelector(`#${target.getAttribute('aria-controls')}`).classList.add('active');
+}
 
-    li.addEventListener('click', () => {
-      // eslint-disable-next-line no-restricted-globals
-      history.replaceState(undefined, undefined, `#tabs--${tabSectionIndex}--${tabTitle}`);
-    });
+function initTabs(block) {
+  const tabs = block.querySelectorAll('[role="tab"]');
 
-    ul.append(li);
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', changeTabs);
   });
-  return ul;
 }
 
-export default async function decorate(block) {
-  const presentTabContents = [...block.querySelectorAll(':scope > div.contents-wrapper > div.contents')];
+let initCount = 0;
+export default function decorate(block) {
+  const tabList = createTag('div', { class: 'tab-list', role: 'tablist' });
+  const tabContent = createTag('div', { class: 'tab-content' });
 
-  if (presentTabContents && presentTabContents.length > 0) {
-    const tabSectionIndex = [...block.closest('main').childNodes].indexOf(block.closest('.section'));
+  const tabNames = [];
+  const tabContents = [];
+  // list of Universal Editor instrumented 'tab content' divs
+  const tabInstrumentedDiv = [];
 
-    block.prepend(generateTabNav(tabSectionIndex, presentTabContents));
-    generateHiddenInput(tabSectionIndex, presentTabContents, block);
+  [...block.children].forEach((child) => {
+    // keep the div that has been instrumented for UE
+    tabInstrumentedDiv.push(child);
 
-    const hashObj = decodeHashToObject();
-
-    const promises = presentTabContents.map(async (contents) => {
-      const tabMainBlock = await generateTabMainBlock(contents.innerHTML);
-      if (tabMainBlock) {
-        const fragmentSection = tabMainBlock.querySelector(':scope .section');
-        if (fragmentSection) {
-          const section = block.closest('.section');
-          const cssClasses = [...fragmentSection.classList].filter((val) => val !== 'two-columns');
-          section.classList.add(...cssClasses);
-        }
-        if (hashObj && hashObj.tabMatches(contents.dataset.tabTitle, tabSectionIndex)) {
-          return Promise.resolve(true);
-        }
+    [...child.children].forEach((el, index) => {
+      if (index === 0) {
+        tabNames.push(el.textContent.trim());
+      } else {
+        tabContents.push(el.childNodes);
       }
-      return Promise.resolve(false);
+    });
+  });
+
+  tabNames.forEach((name, i) => {
+    const tabBtnAttributes = {
+      role: 'tab',
+      class: 'tab-title',
+      id: `tab-${initCount}-${i}`,
+      tabindex: i > 0 ? '0' : '-1',
+      'aria-selected': i === 0 ? 'true' : 'false',
+      'aria-controls': `tab-panel-${initCount}-${i}`,
+      'aria-label': name,
+      'data-tab-id': i,
+    };
+
+    const tabNameDiv = createTag('button', tabBtnAttributes);
+    tabNameDiv.textContent = name;
+    tabList.appendChild(tabNameDiv);
+  });
+
+  tabContents.forEach((content, i) => {
+    const tabContentAttributes = {
+      id: `tab-panel-${initCount}-${i}`,
+      role: 'tabpanel',
+      class: 'tabpanel',
+      tabindex: '0',
+      'aria-labelledby': `tab-${initCount}-${i}`,
+    };
+
+    // get the instrumented div
+    const tabContentDiv = tabInstrumentedDiv[i];
+    // add all additional attributes
+    Object.entries(tabContentAttributes).forEach(([key, val]) => {
+      tabContentDiv.setAttribute(key, val);
     });
 
-    const results = await Promise.all(promises);
-    if (results.indexOf(true) > -1) {
-      const section = block.closest('.section');
+    // default first tab is active
+    if (i === 0) tabContentDiv.classList.add('active');
+    tabContentDiv.replaceChildren(...Array.from(content));
+    tabContent.appendChild(tabContentDiv);
+  });
 
-      const pollInterval = window.setInterval(() => {
-        if (section.style.display !== 'none') {
-          window.clearInterval(pollInterval);
-          block.scrollIntoView();
-        }
-      }, HASH_SCROLL_POLL_INTERVAL_DELAY_IN_MILLI_SECONDS);
-    }
-  }
+  // Replace the existing content with the new tab list and tab content
+  block.innerHTML = ''; // Clear the existing content
+  block.appendChild(tabList);
+  block.appendChild(tabContent);
+
+  initTabs(block);
+  initCount += 1;
 }

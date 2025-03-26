@@ -283,20 +283,7 @@
     ]
   },
   {
-    "id": "tab",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "tabTitle",
-        "label": "Tab Title"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "tabContent",
-        "label": "Tab Content"
-      }
-    ]
+    "id": "tabs",
+    "fields": []
   }
 ]

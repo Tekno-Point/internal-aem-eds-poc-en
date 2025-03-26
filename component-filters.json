@@ -42,5 +42,23 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tab",
+      "tabs",
+      "text",
+      "image",
+      "button",
+      "title",
+      "hero",
+      "teaser",
+      "columns"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": ["tabs", "tab"]
   }
 ]
