@@ -1,4 +1,4 @@
-import { loadCSS } from '../lib-franklin.js';
+import { loadCSS } from '../lib-franklin';
 
 /**
  * Creates a modal with id modalId, or if that id already exists, returns the existing modal.
@@ -11,7 +11,7 @@ import { loadCSS } from '../lib-franklin.js';
  * @returns {Promise<HTMLElement>} The <dialog> element, after loading css
  */
 export default async function getModal(modalId, createContent, addEventListeners) {
-  await loadCSS('/styles/modal/modal.css');
+  await loadCSS('../../styles/modal/modal.css');
 
   let dialogElement = document.getElementById(modalId);
   if (!dialogElement) {
