@@ -3,7 +3,7 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer > div {
+footer .footer>div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
@@ -13,8 +13,128 @@ footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
+@media (width >=900px) {
+  footer .footer>div {
     padding: 40px 32px 24px;
   }
 }
+
+
+/* Al-Alameya Footer Css start*/
+
+footer {
+  background-color: #c8c8c8;
+}
+
+footer .footer>div {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+
+footer .footer .section .default-content-wrapper>p {
+  text-align: center;
+}
+
+footer .footer .section .default-content-wrapper>ul {
+  display: flex;
+
+}
+
+footer .footer .section .default-content-wrapper>ul>li {
+  width: 33.33%;
+  list-style: none;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>h2 {
+  margin-left: 1px;
+  margin-top: 3px;
+  margin-bottom: 38px;
+  padding-bottom: 10px;
+  font-size: 38px;
+  font-family: "BebasNeueBold";
+  position: relative;
+  width: 100%;
+  color: #fff;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>h2::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 4px;
+  width: 62px;
+  background-color: #fcd054;
+}
+
+
+footer .footer .section .default-content-wrapper>ul>li>ul{
+  margin: unset;
+  padding: unset;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li {
+  list-style: none;
+  display: flex;
+
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>a,
+footer .footer .section .default-content-wrapper>ul>li>ul>li>p {
+  line-height: 45px;
+  font-size: 18px;
+  color: #ffffff;
+  transition: all 0.3slinear;
+}
+
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li{
+  color: #2b586f;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul{
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul{
+  margin: unset;
+  list-style: none;
+  padding: unset;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>a,
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a{
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #fff;
+  text-align: start;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a>sup{
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 10px 25px;
+  display: inline-block;
+  background-color: #fcd054;
+  margin-top: 15px;
+}
+/* Al-Alameya Footer Css Ends */
