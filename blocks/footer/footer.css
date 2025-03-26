@@ -34,6 +34,10 @@ footer .footer>div {
 
 footer .footer .section .default-content-wrapper>p {
   text-align: center;
+  padding: 0;
+  margin: 0;
+  color: #555f81;
+  text-align: center;
 }
 
 footer .footer .section .default-content-wrapper>ul {
@@ -69,7 +73,7 @@ footer .footer .section .default-content-wrapper>ul>li>h2::after {
 }
 
 
-footer .footer .section .default-content-wrapper>ul>li>ul{
+footer .footer .section .default-content-wrapper>ul>li>ul {
   margin: unset;
   padding: unset;
 }
@@ -96,7 +100,12 @@ footer .footer .section .default-content-wrapper>ul>li>ul>li>p {
   line-height: 1.5;
 }
 
-footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li{
+footer .footer .section .default-content-wrapper>ul>li>ul>li>p>span>img {
+  height: 25px;
+  width: 34px;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li {
   color: #2b586f;
   list-style: none;
   font-size: 1rem;
@@ -104,21 +113,32 @@ footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li{
   line-height: 1.5;
 }
 
-footer .footer .section .default-content-wrapper>ul>li>ul>li>ul{
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul {
   margin: 0;
   padding: 0;
 }
 
-footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul{
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul {
   margin: unset;
   list-style: none;
   padding: unset;
-  padding-left: 15px;
+  padding-left: 25px;
   margin-bottom: 15px;
 }
 
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>em {
+  color: #fff;
+  font-style: normal;
+}
+
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>a:hover,
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a:hover {
+  color: #315b74;
+  text-decoration: unset;
+}
+
 footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>a,
-footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a{
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a {
   display: block;
   font-size: 18px;
   font-weight: bold;
@@ -127,7 +147,8 @@ footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a{
   text-align: start;
 }
 
-footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a>sup{
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>a>sup,
+footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a>sup {
   font-size: 13px;
   margin-bottom: 20px;
   color: #ffffff;
@@ -137,4 +158,43 @@ footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a>sup
   background-color: #fcd054;
   margin-top: 15px;
 }
+
+@media screen and (max-width:768px) {
+  footer .footer .section .default-content-wrapper>ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  footer .footer .section .default-content-wrapper>ul>li {
+    width: 85%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  footer .footer .section .default-content-wrapper>ul>li>h2 {
+    width: max-content;
+    margin-bottom: 35px;
+  }
+
+  footer .footer .section .default-content-wrapper>ul>li>h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  footer .footer .section .default-content-wrapper>ul>li>ul>li {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>a,
+  footer .footer .section .default-content-wrapper>ul>li>ul>li>ul>li>ul>li>p>a {
+    text-align: center;
+  }
+}
+
 /* Al-Alameya Footer Css Ends */
