@@ -11,7 +11,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
-
+import decorateForm from '../blocks/form/form.js';
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
@@ -62,7 +62,7 @@ async function loadFonts() {
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-function buildAutoBlocks() {
+function buildAutoBlocks(main) {
   try {
     // TODO: add auto block, if needed
   } catch (error) {
@@ -121,6 +121,15 @@ function autolinkModals(element) {
     }
   });
 }
+export function autolinkForm(element) {
+  element.querySelectorAll('a').forEach(async function (origin) {
+    console.log(origin.href);
+    
+      if (origin && origin.href && origin.href.includes('email-form')) {
+        decorateForm(origin.closest('ul'))
+      }
+    });
+}
 
 function wrapImgsInLinks(container) {
   const pictures = container.querySelectorAll('picture');
@@ -141,16 +150,17 @@ async function loadLazy(doc) {
   autolinkModals(doc);
   const main = doc.querySelector('main');
   await loadSections(main);
-
+  
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
-
+  
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
-
+  
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+  
 }
 
 /**
