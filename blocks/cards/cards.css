@@ -164,11 +164,12 @@
   position: absolute;
   top: 10%;
   left: 10%;
+  z-index: 2;
 }
 .alalameyams-swiper h1 {
   margin-left: -2px;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 78px;
     font-family: "BebasNeue",sans-serif;
     font-weight: 900;
     line-height: 1;
@@ -181,8 +182,16 @@ margin: unset;
   font-weight: 900;
   font-family: "BebasNeue",sans-serif;
   color: #fcd054;
+  font-style: normal;
 }
-.alalameyams-swiper .button-container{
+.alalameyams-swiper .cards-card-body p{
+  margin-top: 22px;
+  margin-bottom: 34px;
+  font-weight: 100;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+.alalameyams-swiper .cards-card-body p.button-container{
   margin: unset;
 }
 .alalameyams-swiper .button-container a{
@@ -202,6 +211,8 @@ margin: unset;
     color: #ffffff;
     border-radius: 8px;
     text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
 }
 .alalameyams-swiper .swiper-slide .cards-card-body{
   opacity: 0;
@@ -221,7 +232,7 @@ margin: unset;
  }
  @keyframes bannerScale{
   0%{
-    transform: scale(1);
+    transform: scale  (1);
   }
   100%{
     transform: scale(1.15);
@@ -240,10 +251,17 @@ margin: unset;
 display: none;
  }
  .alalameyams-swiper .swiper-pagination.swiper-pagination-horizontal{
-  top: 50%;
-    display: flex;
+  top: 60%;
+    display: inline-flex;
     left: 12%;
  }
+.container3 .default-content-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 @media (max-width:768px) {
   .container1 .swiper-slide .cards-card-image{
     display: none;
@@ -296,5 +314,18 @@ display: none;
     padding-block: 10px;
     padding-inline: 15px;
     border-radius: 8px 
+  }
+  .alalameyams-swiper .swiper-pagination.swiper-pagination-horizontal{
+    display: none;
+  }
+  .alalameyams-swiper .cards-card-body{
+    /* max-width: unset; */
+    text-align: center;
+    left: 0;
+    top: 25%;
+    /* width: unset; */
+  }
+  .alalameyams-swiper h1{
+    font-size: 40px;
   }
 }

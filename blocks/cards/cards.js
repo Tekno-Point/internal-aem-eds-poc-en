@@ -18,7 +18,7 @@ export default function decorate(block) {
     ul.append(li);
   });
   ul.querySelectorAll('picture > img').forEach((img) => {
-    const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
+    const optimizedPic = createOptimizedPicture(img.src, img.alt, false);
     moveInstrumentation(img, optimizedPic.querySelector('img'));
     img.closest('picture').replaceWith(optimizedPic);
   });
@@ -43,6 +43,10 @@ if(block.classList.contains('alalameyams-swiper') || block.classList.contains('a
 new Swiper(".alalameyams-swiper", {
   slidesPerView: 1,
   spaceBetween: 20,
+  autoplay: {
+    delay: 3500,
+  },
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

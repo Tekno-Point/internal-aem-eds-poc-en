@@ -339,4 +339,17 @@ main .section.highlight p:last-child{
   main .section.highlight h4{
     font-size: 50px;
   }
+  .container3{
+    height: 500px;
+  }
+  .container3 .cards-wrapper,.container3 .alalameyams-swiper,.container3 .cards-card-image{
+    height: 100%;
+  }
+  .alalameyams-swiper .cards-card-image img{
+    height: 100%;
+  }
+  .container3 .default-content-wrapper{
+    width: 200px;
+  }
+
 }
