@@ -1,4 +1,4 @@
-import { loadCSS } from '../lib-franklin';
+import { loadCSS } from '../aem.js';
 
 /**
  * Creates a modal with id modalId, or if that id already exists, returns the existing modal.
