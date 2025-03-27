@@ -275,6 +275,14 @@ header nav {
   padding: unset;
 }
 
+@media screen and (max-width:1400px) {
+  header nav {
+    max-width: 1032px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+}
+
 
 @media screen and (max-width:768px) {
   header nav .nav-hamburger {
