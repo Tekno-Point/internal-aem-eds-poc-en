@@ -291,6 +291,7 @@ header nav .nav-tools {
   header .nav-wrapper {
     height: 100px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px;
+    z-index: 12px;
   }
 
   header nav {
