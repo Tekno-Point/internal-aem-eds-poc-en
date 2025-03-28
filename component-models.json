@@ -315,7 +315,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "videourl",
+        "name": "thumbnail",
         "label": "Thumbnail"
       },
       {
