@@ -289,7 +289,7 @@
         "component": "multiselect",
         "name": "classes",
         "value": "",
-        "label": "Video Style",
+        "label": "Style",
         "options": [
           {
             "name": "Video Content Style",
