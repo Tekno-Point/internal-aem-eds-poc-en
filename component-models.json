@@ -289,13 +289,20 @@
         "component": "text",
         "valueType": "string",
         "name": "videourl",
-        "label": "videourl"
+        "label": "Video Url"
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "thumbnail",
-        "label": "thumbnail"
+        "name": "videourl",
+        "label": "Thumbnail"
+      },
+      {
+        "component": "richtext",
+        "label": "Video Text",
+        "name": "content",
+        "value": "",
+        "valueType": "string"
       }
     ]
   },
