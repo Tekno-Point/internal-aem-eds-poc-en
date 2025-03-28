@@ -288,13 +288,13 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
+        "name": "Video_img",
         "label": "Image",
         "multi": false
       },
       {
-        "component": "richtext",
-        "name": "text",
+        "component": "text",
+        "name": "Video_url",
         "value": "",
         "label": "Text",
         "valueType": "string"
