@@ -18,9 +18,9 @@
       "fragment",
       "wysiwyg-table",
       "breadcrumb",
-      "embed",
       "tabs",
-      "video"
+      "video",
+      "blog-list"
     ]
   },
   {

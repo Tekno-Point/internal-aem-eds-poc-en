@@ -266,23 +266,6 @@
     ]
   },
   {
-    "id": "embed",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "videourl",
-        "label": "videourl"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "thumbnail",
-        "label": "thumbnail"
-      }
-    ]
-  },
-  {
     "id": "video",
     "fields": [
       {
@@ -332,5 +315,30 @@
   {
     "id": "tabs",
     "fields": []
+  },
+  {
+    "id": "blog-list",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Blog Details Style",
+        "options": [
+          {
+            "name": "Blog LIst Wrapper",
+            "value": "blog-list-wrapper"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
