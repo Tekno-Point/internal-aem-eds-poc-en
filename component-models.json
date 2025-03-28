@@ -322,9 +322,9 @@
       },
       {
         "component": "richtext",
-        "name": "video-text",
+        "name": "text",
         "value": "",
-        "label": "Video Text",
+        "label": "Text",
         "valueType": "string"
       }
     ]
