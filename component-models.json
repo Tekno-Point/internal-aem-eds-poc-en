@@ -309,13 +309,13 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "videourl",
+        "name": "videourl_vdURl",
         "label": "Video Url"
       },
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
-        "name": "thumbnail",
+        "name": "videourl_imgURl",
         "label": "Thumbnail"
       },
       {
