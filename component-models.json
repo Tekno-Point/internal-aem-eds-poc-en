@@ -286,6 +286,27 @@
     "id": "video",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Video Style",
+        "options": [
+          {
+            "name": "Video Content Style",
+            "children": [
+              {
+                "name": "Hero",
+                "value": "hero"
+              },
+              {
+                "name": "Autoplay",
+                "value": "autoplay"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "component": "text",
         "valueType": "string",
         "name": "videourl",
