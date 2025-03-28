@@ -321,7 +321,7 @@
       {
         "component": "richtext",
         "label": "Video Text",
-        "name": "content",
+        "name": "video-text",
         "value": "",
         "valueType": "string"
       }
