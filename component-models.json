@@ -286,17 +286,45 @@
     "id": "video",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Video Content Style",
+            "children": [
+              {
+                "name": "Hero",
+                "value": "hero"
+              },
+              {
+                "name": "Autoplay",
+                "value": "autoplay"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
-        "name": "Video_img",
-        "label": "Image",
+        "name": "video_img",
+        "label": "Video Image",
         "multi": false
       },
       {
         "component": "text",
-        "name": "Video_url",
+        "name": "video_url",
         "value": "",
-        "label": "Text",
+        "label": "Video URL",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "videotext",
+        "value": "",
+        "label": "Video Text",
         "valueType": "string"
       }
     ]
