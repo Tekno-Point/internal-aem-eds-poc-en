@@ -1,0 +1,10 @@
+.blog-list > div{
+    display: flex;
+    gap: 50px;
+}
+
+.blog-list .blog-card {
+    border: 1px solid black;
+    width: 400px;
+    padding: 20px;
+}
