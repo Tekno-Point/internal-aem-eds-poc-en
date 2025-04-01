@@ -71,8 +71,6 @@ export function domEl(tag, ...items) {
     More short hand functions can be added for very common DOM elements below.
     domEl function from above can be used for one off DOM element occurrences.
   */
-    export function select(...items) { return domEl('select', ...items); }
-
     // Basic HTML Elements
     export function a(...items) { return domEl('a', ...items); }
     export function abbr(...items) { return domEl('abbr', ...items); }
