@@ -11,6 +11,7 @@
     "/content/internal-aem-eds-poc/metadata:/metadata.json",
     "/content/internal-aem-eds-poc/api/test:/api/test.json",
     "/content/internal-aem-eds-poc/dept-best-practice/form:/dept-best-practice/form/contact-form.json"
+    
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
