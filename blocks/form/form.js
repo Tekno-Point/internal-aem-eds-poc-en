@@ -1,14 +1,18 @@
 import createField from './form-fields.js';
+import ffetch from '../../scripts/ffetch.js';
 
 async function createForm(formHref, submitHref) {
-  const { pathname } = new URL(formHref);
-  const resp = await fetch(pathname);
-  const json = await resp.json();
+//   const { pathname } = new URL(formHref);
+//   const resp = await fetch(pathname);
+//   const json = await resp.json();
+
+  const json = await ffetch(formHref).all();
+//   console.log(json)
 
   const form = document.createElement('form');
   form.dataset.action = submitHref;
 
-  const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
+  const fields = await Promise.all(json.map((fd) => createField(fd, form)));
   fields.forEach((field) => {
     if (field) {
       form.append(field);
