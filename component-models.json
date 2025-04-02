@@ -345,14 +345,27 @@
     "id": "form",
     "fields": [
       {
-        "component": "text",
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "value": "",
+        "label": "Form Style",
+        "options": [
+          {
+            "name": "Form Wrapper",
+            "value": "form-wrapper"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
         "name": "form-url",
         "value": "",
         "label": "Form Url",
         "valueType": "string"
       },
       {
-        "component": "aem-content",
+        "component": "text",
         "name": "api-url",
         "value": "",
         "label": "API Url",

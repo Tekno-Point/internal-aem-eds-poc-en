@@ -22,10 +22,10 @@ function generateFieldId(fd, suffix = '') {
 function createLabel(fd) {
   const label = document.createElement('label');
   label.id = generateFieldId(fd, '-label');
-  label.textContent = fd.Label || fd.Name;
-  label.setAttribute('for', fd.Id);
-  if (fd.Mandatory.toLowerCase() === 'true' || fd.Mandatory.toLowerCase() === 'x') {
-    label.dataset.required = true;
+  label.textContent = fd.Label || fd.Name || '';
+  label.setAttribute('for', fd.Id || '');
+  if (fd.Mandatory && (fd.Mandatory.toLowerCase() === 'true' || fd.Mandatory.toLowerCase() === 'x')) {
+    // label.dataset.required = true;
   }
   return label;
 }
@@ -227,8 +227,10 @@ const FIELD_CREATOR_FUNCTIONS = {
 };
 
 export default async function createField(fd, form) {
+    // debugger
   fd.Id = fd.Id || generateFieldId(fd);
-  const type = fd.Type.toLowerCase();
+  const type = fd.Type ? fd.Type.toLowerCase() : '';
+//   console.log(type)
   const createFieldFunc = FIELD_CREATOR_FUNCTIONS[type] || createInput;
   const fieldElements = await createFieldFunc(fd, form);
 
