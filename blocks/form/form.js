@@ -2,120 +2,36 @@ import createField from './form-fields.js';
 import ffetch from '../../scripts/ffetch.js';
 
 async function createForm(formHref, submitHref) {
-    //   const { pathname } = new URL(formHref);
-    //   const resp = await fetch(pathname);
-    //   const json = await resp.json();
+    // console.log(formHref);
 
-    let json, json1;
-    let jsonData;
-    // console.log(formHref)
+    const url = formHref.split('/').filter(Boolean);
+    // console.log(url);
 
-    if (formHref) {
-        json = await ffetch(formHref).all();
-        jsonData = json;
-        //   console.log(json)
+    let fetchData, jsonData;
+
+    if (url.includes('graphql')) {
+        fetchData = async () => {
+            try {
+                const response = await fetch((formHref), {
+                    method: "GET",
+                    credentials: "include", // Include credentials such as cookies
+                });
+
+                const data = await response.json();
+
+                const capitalizedItems = data.data.configurationFrameworkWithoutMultifieldList.items.map(item => capitalizeKeys(item));
+                return capitalizedItems;
+
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        jsonData = await fetchData();
     }
     else {
-        json1 = {
-            "data": {
-                "configurationFrameworkWithoutMultifieldList": {
-                    "items": [
-                        {
-                            "id": "email-id-data",
-                            "_path": "/content/dam/validationframework/configuration-framework-without-multifield/email-id-data",
-                            "dataValidName": "email",
-                            "for": "Enter Email Id",
-                            "labelText": "email Id",
-                            "name": "Email ",
-                            "type": "email",
-                            "dataPattern": "^(([^<>()\\[\\]\\\\.,;:\\s@']+(\\.[^<>()\\[\\]\\\\.,;:\\s@']+)*)|('.+'))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$",
-                            "placeholder": "Enter Your Email Id",
-                            "errorclass": "errormsg",
-                            "errorMsg": "Email Fill karo"
-                        },
-                        {
-                            "id": "firstname",
-                            "_path": "/content/dam/validationframework/configuration-framework-without-multifield/firstname",
-                            "dataValidName": "firstname",
-                            "for": "firstname",
-                            "labelText": "First Name",
-                            "name": "firstname",
-                            "type": "text",
-                            "dataPattern": "^[a-zA-Z]+$",
-                            "placeholder": "Enter Your First Name",
-                            "errorclass": "errormsg",
-                            "errorMsg": "Please enter a valid first name"
-                        },
-                        {
-                            "id": "fullname",
-                            "_path": "/content/dam/validationframework/configuration-framework-without-multifield/fullname",
-                            "dataValidName": "fullname",
-                            "for": "fullname",
-                            "labelText": "Fullname",
-                            "name": "fullname",
-                            "type": "text",
-                            "dataPattern": "^[a-zA-Z\\s]+ [a-zA-Z]+$",
-                            "placeholder": "Enter Your Full Name",
-                            "errorclass": "errormsg",
-                            "errorMsg": "Please enter a valid full name"
-                        },
-                        {
-                            "id": "lastname",
-                            "_path": "/content/dam/validationframework/configuration-framework-without-multifield/lastname",
-                            "dataValidName": "lastname",
-                            "for": "lastname",
-                            "labelText": "Last Name",
-                            "name": "lastname",
-                            "type": "text",
-                            "dataPattern": "^[a-zA-Z]+$",
-                            "placeholder": "Enter your last name",
-                            "errorclass": "errormsg",
-                            "errorMsg": "Please enter a valid last name"
-                        },
-                        {
-                            "id": "middlename",
-                            "_path": "/content/dam/validationframework/configuration-framework-without-multifield/middle-name",
-                            "dataValidName": "firstname",
-                            "for": "middlename",
-                            "labelText": "middle Name",
-                            "name": "middlename",
-                            "type": "text",
-                            "dataPattern": "^[a-zA-Z]+$",
-                            "placeholder": "Enter Your Middle Name",
-                            "errorclass": "errormsg",
-                            "errorMsg": "Please enter a valid Name"
-                        },
-                        {
-                            "id": "mobile",
-                            "_path": "/content/dam/validationframework/configuration-framework-without-multifield/mobile",
-                            "dataValidName": "mobile",
-                            "for": "mobile",
-                            "labelText": "Mobile Number",
-                            "name": "mobile",
-                            "type": "number",
-                            "dataPattern": "^[6789]\\d{9}$",
-                            "placeholder": "Enter Your Phone Number",
-                            "errorclass": "errormsg",
-                            "errorMsg": "Please enter a valid Mobile Number"
-                        },
-                        {
-                            "id": "notebook",
-                            "_path": "/content/dam/validationframework/configuration-framework-without-multifield/textarea",
-                            "dataValidName": "textarea",
-                            "for": "notebook",
-                            "labelText": "write a note",
-                            "name": "notetext",
-                            "type": "text-area",
-                            "dataPattern": "[^A-Za-z0-9]",
-                            "placeholder": "write a note",
-                            "errorclass": "errormsg",
-                            "errorMsg": "Write a valid note"
-                        }
-                    ]
-                }
-            }
-        }
-        jsonData = capitalizeKeys(json1.data.configurationFrameworkWithoutMultifieldList.items);
+        fetchData = await ffetch(formHref).all();
+        jsonData = fetchData;
+        //   console.log(jsonData)
     }
 
     function capitalizeKeys(obj) {
@@ -123,22 +39,26 @@ async function createForm(formHref, submitHref) {
             return obj.map(item => capitalizeKeys(item));
         } else if (typeof obj === 'object' && obj !== null) {
             return Object.keys(obj).reduce((result, key) => {
-                const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1); // Capitalize first letter of key
-                result[capitalizedKey] = capitalizeKeys(obj[key]); // Recursively apply the function to the value
+                const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+                result[capitalizedKey] = capitalizeKeys(obj[key]);
                 return result;
             }, {});
         } else {
             return obj;
         }
     }
-
-    console.log(jsonData);
+    // console.log(jsonData)
 
     const form = document.createElement('form');
     form.dataset.action = submitHref;
 
+    const submitFormBtn = document.createElement('button');
+    submitFormBtn.type = 'submit';
+    submitFormBtn.textContent = 'Submit';
+    submitFormBtn.classList.add('submit-btn');
+
     const fields = await Promise.all(jsonData.map((fd) => createField(fd, form)));
-    console.log(fields);
+    // console.log(fields);
     fields.forEach((field) => {
         if (field) {
             form.append(field);
@@ -153,10 +73,12 @@ async function createForm(formHref, submitHref) {
         });
     });
 
+    form.appendChild(submitFormBtn);
     return form;
 }
 
 function generatePayload(form) {
+    // console.log(form);
     const payload = {};
 
     [...form.elements].forEach((field) => {
@@ -173,16 +95,39 @@ function generatePayload(form) {
     return payload;
 }
 
+function formSubmitData(form) {
+    let formattedData = '';
+    const formData = {};
+
+    [...form.elements].forEach((field) => {
+        formData[field.name] = field.value;
+    })
+
+    for (const [key, value] of Object.entries(formData)) {
+        formattedData += `${key} : ${value} \n`
+    }
+
+    alert(formattedData);
+    return formData;
+}
+
 async function handleSubmit(form) {
     if (form.getAttribute('data-submitting') === 'true') return;
 
     const submit = form.querySelector('button[type="submit"]');
+    const formSubmit = document.querySelector('form');
+
+    formSubmit.addEventListener('submit', ()=> {
+        e.preventDefault();
+        formSubmitData(form);
+    })
     try {
         form.setAttribute('data-submitting', 'true');
         submit.disabled = true;
 
         // create payload
         const payload = generatePayload(form);
+        const formData = formSubmitData(form);
         const response = await fetch(form.dataset.action, {
             method: 'POST',
             body: JSON.stringify({ data: payload }),
@@ -191,6 +136,7 @@ async function handleSubmit(form) {
             },
         });
         if (response.ok) {
+            form.reset();
             if (form.dataset.confirmation) {
                 window.location.href = form.dataset.confirmation;
             }
@@ -209,9 +155,9 @@ async function handleSubmit(form) {
 
 export default async function decorate(block) {
     const links = [...block.querySelectorAll('a')].map((a) => a.href);
-    const formLink = links.find((link) => link.startsWith(window.location.origin) && link.endsWith('.json'));
+    const formLink = links.find((link) => link.includes('.json') || link.endsWith('.json'));
     const submitLink = links.find((link) => link !== formLink);
-    // if (!formLink || !submitLink) return;
+    if (!formLink || !submitLink) return;
 
     const form = await createForm(formLink, submitLink);
     block.replaceChildren(form);

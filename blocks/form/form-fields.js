@@ -34,8 +34,8 @@ function setCommonAttributes(field, fd) {
   field.id = fd.Id;
   field.name = fd.Name;
   field.required = fd.Mandatory && (fd.Mandatory.toLowerCase() === 'true' || fd.Mandatory.toLowerCase() === 'x');
-  field.placeholder = fd.Placeholder;
-  field.value = fd.Value;
+  field.placeholder = fd.Placeholder || '';
+  field.value = fd.Value || '';
 }
 
 const createHeading = (fd) => {
