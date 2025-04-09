@@ -168,3 +168,4 @@ class AEMHeaderWebComponent extends HTMLElement {
 
 // register component
 customElements.define('aem-header', AEMHeaderWebComponent);
+// console.log('hello');
