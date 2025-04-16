@@ -20,6 +20,12 @@
     ]
   },
   {
+    "id": "why-choose-us",
+    "components": [
+      "why-choose-us-item"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"

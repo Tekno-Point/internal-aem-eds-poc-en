@@ -172,6 +172,22 @@
               }
             }
           }
+        },
+        {
+          "title": "why choose us item",
+          "id": "why-choose-us-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "why choose us item",
+                  "model": "why-choose-us-item",
+                  "filter" : "why-choose-us-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
