@@ -232,11 +232,9 @@
     "id": "accordionitem",
     "fields": [
       {
-        "component": "richtext",
-        "name": "column1text",
-        "value": "",
-        "label": "Heading 1",
-        "valueType": "string"
+        "component": "text",
+        "name": "title",
+        "label": "Accordion Title"
       },
       {
         "component": "richtext",
