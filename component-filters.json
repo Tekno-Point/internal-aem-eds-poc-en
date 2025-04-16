@@ -16,13 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "tabs"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tabsitem"
+      "tabs",
+      "hero2"
     ]
   },
   {
