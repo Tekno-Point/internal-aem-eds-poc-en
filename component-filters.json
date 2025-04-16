@@ -33,12 +33,6 @@
     ]
   },
   {
-    "id": "carousel",
-    "components": [
-      "hero-banner"
-    ]
-  },
-  {
     "id": "column",
     "components": [
       "text",
