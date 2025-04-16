@@ -17,7 +17,14 @@
       "columns",
       "fragment",
       "tabs",
-      "swiper"
+      "swiper",
+      "accordion"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordionitem"
     ]
   },
   {

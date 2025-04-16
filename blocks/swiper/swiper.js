@@ -12,10 +12,13 @@ export default function decorate(block) {
     block.append(Div)
     Swiper(block, {
         direction: 'horizontal',
+        slidesPerView: 1,
+        spaceBetween: 30,
         loop: true,
         autoplay: {
             delay: 1000,
         },
     })
+    document.querySelector('.nav-tools').style.display = "none"
 
 }
