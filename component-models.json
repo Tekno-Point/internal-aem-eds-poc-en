@@ -221,16 +221,16 @@
     "id": "accordionitem",
     "fields": [
       {
+        "component": "richtext",
+        "name": "",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
         "component": "text",
         "name": "title",
         "label": "Accordion Title"
-      },
-      {
-        "component": "richtext",
-        "name": "column1text",
-        "value": "",
-        "label": "Heading 2",
-        "valueType": "string"
       }
     ]
   }
