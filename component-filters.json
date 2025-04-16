@@ -16,13 +16,20 @@
       "cards",
       "columns",
       "fragment",
-      "header-compo"
+      "header-compo",
+      "accordian"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "accordian",
+    "components": [
+      "accordian-item"
     ]
   },
   {

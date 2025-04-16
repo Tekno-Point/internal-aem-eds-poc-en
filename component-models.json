@@ -202,5 +202,22 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "accordian-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
