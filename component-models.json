@@ -218,17 +218,6 @@
     ]
   },
   {
-    "id": "accordion",
-    "fields": [
-      {
-        "component": "list",
-        "name": "items",
-        "label": "Accordion Items",
-        "model": "accordionitem"
-      }
-    ]
-  },
-  {
     "id": "accordionitem",
     "fields": [
       {
