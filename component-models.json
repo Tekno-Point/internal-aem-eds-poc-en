@@ -218,6 +218,29 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "ClassName",
+            "children": [
+              {
+                "name": "AccDesk",
+                "value": "accdesk"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "accordionitem",
     "fields": [
       {
