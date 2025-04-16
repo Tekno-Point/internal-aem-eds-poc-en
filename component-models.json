@@ -209,13 +209,13 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Title"
+        "label": "Accoridan Title"
       },
       {
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Text",
+        "label": "Accoridan Body",
         "valueType": "string"
       }
     ]
