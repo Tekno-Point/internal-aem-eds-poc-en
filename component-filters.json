@@ -24,8 +24,7 @@
   {
     "id": "accordion",
     "components": [
-      "accordionitem",
-      "hero"
+      "accordionitem"
     ]
   },
   {
