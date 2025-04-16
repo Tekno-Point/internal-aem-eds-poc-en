@@ -371,6 +371,21 @@
         "component": "text",
         "name": "embedLink",
         "label": "Video Link"
+      },
+      {
+        "id": "button",
+        "fields": [
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Link"
+          },
+          {
+            "component": "text",
+            "name": "linkText",
+            "label": "Text"
+          }
+        ]
       }
     ]
   }
