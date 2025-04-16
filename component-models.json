@@ -224,7 +224,7 @@
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Head",
+        "label": "Main Head",
         "valueType": "string"
       },
       {
@@ -232,13 +232,6 @@
         "name": "image",
         "label": "Image",
         "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Body",
-        "valueType": "string"
       }
     ]
   }
