@@ -227,9 +227,9 @@
       },
       {
         "component": "richtext",
-        "name": "",
+        "name": "text",
         "value": "",
-        "label": "Heading",
+        "label": "Accordion Body",
         "valueType": "string"
       }
     ]
