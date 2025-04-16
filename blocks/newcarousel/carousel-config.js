@@ -1,25 +1,102 @@
-export const configObject={
-    default: {
-            // Default parameters
+const oneSlideOnly = {
+    // loop: true,
     slidesPerView: 1,
-    spaceBetween: 10,
-    // Responsive breakpoints
+    grabCursor: true,
+    autoplay: {
+      delay: 50000000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      // nextEl: swiperButtonNext,
+      // prevEl: swiperButtonPrev,
+    },
+    pagination: {
+      // el: swiperPagination,
+      clickable: true,
+    },
     breakpoints: {
-      // when window width is >= 320px
-      320: {
+      300: {
+        slidesPerView: 1,
+      },
+      780: {
+        slidesPerView: 1,
+      },
+      992: {
+        slidesPerView: 1,
+      },
+      1199: {
+        slidesPerView: 1,
+      },
+    },
+  };
+  const twoSlidesOnly = {
+    loop: true,
+    slidesPerView: 2,
+    grabCursor: true,
+    // autoplay: {
+    //   // delay: 5000,
+    //   // disableOnInteraction: false,
+    // },
+    navigation: {
+      // nextEl: swiperButtonNext,
+      // prevEl: swiperButtonPrev,
+    },
+    pagination: {
+      // el: swiperPagination,
+      clickable: true,
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        grabCursor: true,
+      },
+      780: {
+        slidesPerView: 1,
+        grabCursor: true,
+      },
+      992: {
         slidesPerView: 2,
-        spaceBetween: 20
       },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 30
+      1199: {
+        slidesPerView: 2,
       },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 40
-      }
-    }
-    }
-  }
+    },
+  };
+  const threeSlidesOnly = {
+    loop: true,
+    slidesPerView: 2,
+    grabCursor: true,
+    autoplay: false,
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
+    navigation: {
+      // nextEl: swiperButtonNext,
+      // prevEl: swiperButtonPrev,
+    },
+    pagination: {
+      // el: swiperPagination,
+      clickable: true,
+    },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+      },
+      780: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 2,
+      },
+      1199: {
+        slidesPerView: 2,
+      },
+    },
+  };
+  export default {
+    'one-slide-only': oneSlideOnly,
+    'two-slides-only': twoSlidesOnly,
+    'three-slides-only': threeSlidesOnly,
+    default: threeSlidesOnly,
+  };

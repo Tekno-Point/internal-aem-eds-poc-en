@@ -1,8 +1,10 @@
 import { createElement } from '../../scripts/scripts.js';
 import Swiper from '../testimonial/swiper-bundle.min.js';
-import configObject from '.carousel-config.js';
+import configObject from './carousel-config.js';
 import { loadEmbed } from '../embed/embed.js';
-import { isDesktop } from '../header/header.js';
+// import { isDesktop } from '../header/header.js';
+
+const isDesktop = window.matchMedia('(min-width:900px)')
 
 export default function decorate(block) {
   const rows = Array.from(block.children);
