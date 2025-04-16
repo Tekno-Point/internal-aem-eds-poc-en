@@ -221,13 +221,23 @@
     "id": "accordion",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
+        "valueType": "string",
         "name": "classes",
         "label": "Style",
         "options": [
           {
-            "name": "AccDesk",
-            "value": "accdesk"
+            "name": "Content type",
+            "children": [
+              {
+                "name": " Primary",
+                "value": "primary"
+              },
+              {
+                "name": " Secondary",
+                "value": "secondary"
+              }
+            ]
           }
         ]
       }
