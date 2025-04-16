@@ -29,7 +29,7 @@
   {
     "id": "accordian",
     "components": [
-      "accordian-items"
+      "accordian-item"
     ]
   },
   {

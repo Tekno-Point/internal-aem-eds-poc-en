@@ -204,7 +204,7 @@
     ]
   },
   {
-    "id": "accordian-items",
+    "id": "accordian-item",
     "fields": [
       {
         "component": "text",
