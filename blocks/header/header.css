@@ -18,6 +18,7 @@ header nav {
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
+  flex-wrap: wrap;
 }
 
 header nav[aria-expanded='true'] {
@@ -265,19 +266,40 @@ header nav .nav-tools {
   grid-area: tools;
 }
 
-
-.section.highlight.nav-tools>div {
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: row;
-  margin-left: -66rem;
-  justify-content: space-between;
+.nav-head {
+  width: 100%;
 }
 
-.section.highlight.nav-tools>div>ul {
-  list-style: none;
+.nav-head>div {
   display: flex;
-  flex-direction: row;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav-head>div>ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
   font-size: small;
+}
+
+.nav-head>div>ul:nth-child(2) li:nth-child(2) {
+  position: relative;
+}
+
+.nav-head>div>ul:nth-child(2) li:nth-child(2) p {
+  cursor: pointer;
+}
+
+.nav-head>div>ul:nth-child(2) li:nth-child(2) ul {
+  background: white;
+  list-style: none;
+  position: absolute;
+  padding: 0.3rem 10px;
+  z-index: 1;
+  top: 5px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  display: none;
 }
