@@ -190,5 +190,20 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "tabsitem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fragment URL"
+      }
+    ]
   }
 ]
