@@ -222,14 +222,14 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "column1text",
+        "name": "text",
         "value": "",
         "label": "Head",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "body",
+        "name": "text",
         "value": "",
         "label": "Body",
         "valueType": "string"
