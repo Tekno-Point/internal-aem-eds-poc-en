@@ -192,7 +192,7 @@
     ]
   },
   {
-    "id": "header",
+    "id": "header-compo",
     "fields": [
       {
         "component": "richtext",
