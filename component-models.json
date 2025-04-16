@@ -192,28 +192,17 @@
     ]
   },
   {
-    "id": "hero2",
+    "id": "tabsitem",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
         "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
+        "name": "title",
+        "label": "Tab Title"
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fragment URL"
       }
     ]
   }
