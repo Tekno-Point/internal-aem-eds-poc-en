@@ -224,14 +224,8 @@
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Main Head",
+        "label": "My Head",
         "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Image",
-        "multi": false
       }
     ]
   }
