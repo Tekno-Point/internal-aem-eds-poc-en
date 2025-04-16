@@ -218,32 +218,6 @@
     ]
   },
   {
-    "id": "accordion",
-    "fields": [
-      {
-        "component": "multiselect",
-        "valueType": "string",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Content type",
-            "children": [
-              {
-                "name": " AccDesk",
-                "value": "accdesk"
-              },
-              {
-                "name": " AccMob",
-                "value": "accmob"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "accordionitem",
     "fields": [
       {
