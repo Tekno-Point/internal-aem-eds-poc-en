@@ -156,6 +156,37 @@
               }
             }
           }
+        },
+        {
+          "title": "newcarousel",
+          "id": "newcarousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "newcarousel",
+                  "model": "newcarousel",
+                  "filter": "newcarousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "newcarousel Item",
+          "id": "newcarousel-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "newcarousel Item",
+                  "model": "newcarousel-item"
+                }
+              }
+            }
+          }
         }
       ]
     }

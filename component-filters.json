@@ -38,5 +38,9 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "newcarousel",
+    "components": ["newcarousel-item", "embed"]
   }
 ]
