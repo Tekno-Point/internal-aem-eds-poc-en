@@ -1,16 +1,9 @@
-import {
-  div
-} from "../../scripts/dom-helper";
+import {div} from "../../scripts/dom-helper";
 import Swiper from "../why-choose-us/swiper-bundle.min.js";
 
 export default function decorate(block) {
-  const swiper = div({
-    class: 'swiper'
-  });
-  const wrapper = div({
-    class: 'swiper-wrapper'
-  });
-
+  const swiper = div({class: 'swiper'});
+  const wrapper = div({class: 'swiper-wrapper'});
   [...block.children].forEach((child) => {
     child.classList.add('swiper-slide');
     wrapper.appendChild(child);
@@ -19,16 +12,16 @@ export default function decorate(block) {
   swiper.appendChild(wrapper);
   block.innerHTML = '';
   block.appendChild(swiper);
-  const pagination = document.createElement('div');
-  pagination.className = 'swiper-pagination';
-  swiper.appendChild(pagination);
+//   const pagination = document.createElement('div');
+//   pagination.className = 'swiper-pagination';
+//   swiper.appendChild(pagination);
 
-  const nextBtn = document.createElement('div');
-  nextBtn.className = 'swiper-button-next';
-  const prevBtn = document.createElement('div');
-  prevBtn.className = 'swiper-button-prev';
-  swiper.appendChild(nextBtn);
-  swiper.appendChild(prevBtn);
+//   const nextBtn = document.createElement('div');
+//   nextBtn.className = 'swiper-button-next';
+//   const prevBtn = document.createElement('div');
+//   prevBtn.className = 'swiper-button-prev';
+//   swiper.appendChild(nextBtn);
+//   swiper.appendChild(prevBtn);
 
   // Replace block content with swiper
   block.innerHTML = '';
