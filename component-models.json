@@ -205,5 +205,16 @@
         "label": "Fragment URL"
       }
     ]
+  },
+  {
+    "id": "swiper",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
   }
 ]

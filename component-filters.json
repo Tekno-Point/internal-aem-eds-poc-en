@@ -16,7 +16,15 @@
       "cards",
       "columns",
       "fragment",
-      "tabs"
+      "tabs",
+      "swiper"
+    ]
+  },
+  {
+    "id": "swiper",
+    "components": [
+      "text",
+      "hero"
     ]
   },
   {
