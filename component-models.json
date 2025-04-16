@@ -190,5 +190,20 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "why-choose-us",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Multi Select",
+        "valueType": "string",
+        "options": [
+          { "name": "h3", "value": "h4" },
+          { "name": "h4", "value": "h4" }
+        ]
+      }
+    ]
   }
 ]
