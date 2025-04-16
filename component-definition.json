@@ -206,6 +206,7 @@
         {
           "title": "Accordion",
           "id": "accordion",
+          "container": true,
           "plugins": {
             "xwalk": {
               "page": {
