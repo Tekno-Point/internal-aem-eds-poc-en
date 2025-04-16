@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "bannerFavConner"
+      "bannerFavConner",
+      "carousal"
     ]
   },
   {
@@ -29,6 +30,12 @@
     "id": "columns",
     "components": [
       "column"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "hero-banner"
     ]
   },
   {
