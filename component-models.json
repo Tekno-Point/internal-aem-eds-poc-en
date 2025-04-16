@@ -221,7 +221,7 @@
     "id": "accordion",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "valueType": "string",
         "name": "classes",
         "label": "Style",
@@ -230,12 +230,8 @@
             "name": "Content type",
             "children": [
               {
-                "name": " Primary",
-                "value": "primary"
-              },
-              {
-                "name": " Secondary",
-                "value": "secondary"
+                "name": " AccDesk",
+                "value": "accdesk"
               }
             ]
           }
