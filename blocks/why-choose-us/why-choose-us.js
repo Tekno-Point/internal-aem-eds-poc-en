@@ -1,7 +1,7 @@
 import {
   div
 } from "../../scripts/dom-helper";
-import Swiper from "../why-choose-us/swiper-bundle.min";
+import Swiper from "../why-choose-us/swiper-bundle.min.js";
 
 export default function decorate(block) {
   const swiper = div({
