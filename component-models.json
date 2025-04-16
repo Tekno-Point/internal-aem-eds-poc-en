@@ -226,13 +226,6 @@
         "value": "",
         "label": "Head",
         "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "column2text",
-        "value": "",
-        "label": "Description",
-        "valueType": "string"
       }
     ]
   }
