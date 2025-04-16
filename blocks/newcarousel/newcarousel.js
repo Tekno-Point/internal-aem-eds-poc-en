@@ -1,6 +1,6 @@
 import { createElement } from '../../scripts/scripts.js';
-import Swiper from '../carousel/swiper-bundle.min.js';
-import configObject from '../carousel/carousel-config.js';
+import Swiper from '../testimonial/swiper-bundle.min.js';
+import configObject from '.carousel-config.js';
 import { loadEmbed } from '../embed/embed.js';
 import { isDesktop } from '../header/header.js';
 
@@ -67,7 +67,29 @@ export default function decorate(block) {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          Swiper(block, configData);
+          Swiper(block, {
+            // Default parameters
+            slidesPerView: 1,
+            spaceBetween: 10,
+            // Responsive breakpoints
+            breakpoints: {
+              // when window width is >= 320px
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+              // when window width is >= 480px
+              480: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 40
+              }
+            }
+          });
         }
       });
     },
