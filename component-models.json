@@ -233,7 +233,7 @@
         "value": "",
         "label": "My Head",
         "valueType": "string"
-      }
+      },
       {
         "component": "reference",
         "name": "image",
