@@ -224,14 +224,14 @@
         "component": "richtext",
         "name": "column1text",
         "value": "",
-        "label": "My Head",
+        "label": "Heading 1",
         "valueType": "string"
       },
       {
         "component": "richtext",
         "name": "column2text",
         "value": "",
-        "label": "My Head",
+        "label": "Heading 2",
         "valueType": "string"
       },
       {
