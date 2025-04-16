@@ -221,7 +221,7 @@
     "id": "accordion",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
         "valueType": "string",
         "name": "classes",
         "label": "Style",
@@ -232,6 +232,10 @@
               {
                 "name": " AccDesk",
                 "value": "accdesk"
+              },
+              {
+                "name": " AccMob",
+                "value": "accmob"
               }
             ]
           }
