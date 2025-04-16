@@ -227,7 +227,7 @@
       },
       {
         "component": "richtext",
-        "name": "column2text",
+        "name": "column1text",
         "value": "",
         "label": "Heading 2",
         "valueType": "string"
