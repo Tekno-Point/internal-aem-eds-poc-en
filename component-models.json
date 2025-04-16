@@ -226,6 +226,13 @@
         "value": "",
         "label": "Head",
         "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Body",
+        "valueType": "string"
       }
     ]
   }
