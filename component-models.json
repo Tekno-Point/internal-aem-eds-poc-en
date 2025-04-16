@@ -221,9 +221,18 @@
     "id": "accordionitem",
     "fields": [
       {
-        "component": "text",
-        "name": "title",
-        "label": "Title"
+        "component": "richtext",
+        "name": "column1text",
+        "value": "",
+        "label": "Head",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "column2text",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
       }
     ]
   }
