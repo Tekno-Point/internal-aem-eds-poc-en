@@ -383,5 +383,37 @@
         "label": "Text"
       }
     ]
+  },
+  {
+    "id": "swiper-sec-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Description",
+        "raw": true
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      }
+    ]
   }
 ]
