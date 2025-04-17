@@ -35,3 +35,23 @@
     color:#0D2042;
     font-family: sans-serif;
 }
+#you-can-find-us-here{
+    text-align: center;
+    color: #0D2042;
+    font-family: sans-serif;
+}
+.default-content-wrapper >ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* text-align: center; */
+    gap: 10px;
+    list-style: none;
+}
+.default-content-wrapper >ul >li{
+    border: 0.5px black;
+    gap: 8px;
+    color: #0D2042;
+    padding: 16px 8px;
+    font-size: 10px;
+}
