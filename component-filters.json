@@ -16,7 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "footer-middle-left"
+      "footer-middle"
     ]
   },
   {
@@ -32,9 +32,9 @@
     ]
   },
   {
-    "id": "footer-middle-left",
+    "id": "footer-middle",
     "components": [
-      "footer-middle-left-item"
+      "footer-middle-item"
     ]
   },
   {

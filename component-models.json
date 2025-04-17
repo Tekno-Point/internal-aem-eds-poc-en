@@ -196,7 +196,7 @@
     ]
   },
   {
-    "id": "footer-middle-left-item",
+    "id": "footer-middle-item",
     "fields": [
       {
         "component": "richtext",
