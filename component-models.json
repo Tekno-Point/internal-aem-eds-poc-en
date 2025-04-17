@@ -225,8 +225,8 @@
     "fields": [
       {
         "component": "select",
-        "label": "Select",
-        "name": "select",
+        "name": "classes",
+        "label": "Select Class",
         "valueType": "string",
         "options": [
           {
