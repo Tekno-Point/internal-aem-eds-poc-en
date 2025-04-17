@@ -19,7 +19,7 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(swiper)
   SwiperInit(swiper, {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
     // pagination: {
