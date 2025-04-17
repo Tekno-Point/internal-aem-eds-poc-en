@@ -226,6 +226,11 @@
         "label": "Accordion Title One"
       },
       {
+        "component": "text",
+        "name": "title",
+        "label": "Accordion Title Two"
+      }
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
