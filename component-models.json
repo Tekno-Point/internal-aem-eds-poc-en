@@ -196,6 +196,21 @@
     ]
   },
   {
+    "id": "footer",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Select Class",
+        "valueType": "string",
+        "options": [
+          { "name": "Footer Middle", "value": "footer-middle" },
+          { "name": "Footer Bottom", "value": "footer-bottom" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "footer-item",
     "fields": [
       {
