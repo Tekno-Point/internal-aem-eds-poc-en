@@ -226,8 +226,8 @@
       {
         "component": "select",
         "name": "classes",
-        "label": "Class ",
-        "options": [
+        "label": "Select class Name",
+        "option": [
           {
             "name": "Paints & Products",
             "value": "paints-and-products"
