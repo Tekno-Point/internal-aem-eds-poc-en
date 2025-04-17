@@ -204,7 +204,7 @@
           }
         },
         {
-          "title": "Accordion One",
+          "title": "Accordion",
           "id": "accordion",
           "container": true,
           "plugins": {
@@ -212,7 +212,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Accordion One",
+                  "name": "Accordion",
                   "filter": "accordion",
                   "model": "accordion"
                 }
@@ -221,14 +221,14 @@
           }
         },
         {
-          "title": "Accordion item One",
+          "title": "Accordion item",
           "id": "accordionitem",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "accordion item One",
+                  "name": "accordion item",
                   "model": "accordionitem"
                 }
               }

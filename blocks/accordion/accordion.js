@@ -17,10 +17,10 @@ export default function decorate(block) {
         body.className = 'accordion-item-body';
 
         //
-        const p = document.createElement('p')
-        p.className = 'accordion-item-p'
-        p.textContent = "Heyeyyeye"
-        body.prepend(p)
+        // const p = document.createElement('p')
+        // p.className = 'accordion-item-p'
+        // p.textContent = "Heyeyyeye"
+        // body.prepend(p)
         //
         // decorate accordion item
         const details = document.createElement('details');
@@ -42,21 +42,21 @@ export default function decorate(block) {
     // )
 
     // hide footer
-    setTimeout(() => {
-        document.querySelector('.nav-wrapper').style.display = "none"
-    }, 500);
+    // setTimeout(() => {
+    //     document.querySelector('.nav-wrapper').style.display = "none"
+    // }, 500);
 
     // mobile view or desktop view
-    function isMobileDevice() {
-        return window.innerWidth <= 768;
-    }
+    // function isMobileDevice() {
+    //     return window.innerWidth <= 768;
+    // }
 
-    if (isMobileDevice()) {
-        console.log("Mobile view");
-    } else {
-        console.log("Desktop view");
-    }
+    // if (isMobileDevice()) {
+    //     console.log("Mobile view");
+    // } else {
+    //     console.log("Desktop view");
+    // }
 
 
-    block.append(des1)
+    // block.append(des1)
 }
