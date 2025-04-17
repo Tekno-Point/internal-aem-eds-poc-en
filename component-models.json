@@ -226,7 +226,7 @@
       {
         "component": "multiselect",
         "name": "classes",
-        "label": "Select class Name",
+        "label": "Style",
         "options": [
           {
             "name": "Paints & Products",
