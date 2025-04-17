@@ -112,10 +112,6 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "Footer Top",
-            "value": "footer-top"
           }
         ]
       }
