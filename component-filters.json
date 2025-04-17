@@ -32,6 +32,12 @@
     ]
   },
   {
+    "id": "footer-middle",
+    "components": [
+      "footer-middle-item"
+    ]
+  },
+  {
     "id": "column",
     "components": [
       "text",

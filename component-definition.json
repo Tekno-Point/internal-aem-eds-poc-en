@@ -171,6 +171,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Footer Middle Item",
+          "id": "footer-middle-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Footer Middle Item",
+                  "model": "footer-middle-item"
+                }
+              }
+            }
+          }
         }
       ]
     }

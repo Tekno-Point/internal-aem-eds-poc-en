@@ -194,5 +194,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "footer-middle-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Footer Content",
+        "valueType": "string"
+      }
+    ]
   }
 ]
