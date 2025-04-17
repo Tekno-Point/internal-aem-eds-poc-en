@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "footer-block"
+      "footer-block",
+      "footer-accordion"
     ]
   },
   {
@@ -35,6 +36,12 @@
     "id": "footer-block",
     "components": [
       "footer-block-item"
+    ]
+  },
+  {
+    "id": "footer-accordion",
+    "components": [
+      "footer-accordion-item"
     ]
   },
   {
