@@ -1,17 +1,56 @@
-@import url('./swiper-bundle.min.css');
+@import url('../testimonial/swiper-bundle.min.css');
 
 main>.section.swiper-sec-container {
   margin: 0;
   padding: 0;
+  max-width: 1279px;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
+
+  .default-content-wrapper {
+    padding-bottom: 64px;
+
+    p {
+      padding: 0;
+      margin: 0;
+      color: #0D2042;
+      font-family: sans-serif;
+      font-weight: 700;
+      text-align: center;
+
+      &:nth-child(1) {
+        font-size: 35px;
+        line-height: 45.5px;
+        padding-bottom: 16px;
+      }
+
+      &:nth-child(2) {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28.8px;
+      }
+    }
+  }
 
   .swiper-sec-wrapper {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
     .swiper-sec {
       overflow: hidden;
+      padding-bottom: 30px;
+      height: auto;
+
 
       .swiper-wrapper {
         .swiper-slide {
+          width: 31.6%;
+
           img {
             height: 410px;
           }
