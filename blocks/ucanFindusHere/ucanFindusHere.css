@@ -1,0 +1,20 @@
+.ucanfindushere ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 16px;
+}
+.ucanfindushere  ul li{
+    border: 0.5px solid #BFC4CD;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 10px;
+    color: #0D2042;
+}
+#you-can-find-us-here{
+    text-align: center;
+    color: #0D2042;
+    font-family: sans-serif;
+    padding: 30px
+}
