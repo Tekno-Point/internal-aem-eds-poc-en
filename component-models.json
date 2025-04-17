@@ -224,10 +224,10 @@
     "id": "header-sub-container",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
         "name": "classes",
         "label": "Select class Name",
-        "option": [
+        "options": [
           {
             "name": "Paints & Products",
             "value": "paints-and-products"
