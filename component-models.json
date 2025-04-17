@@ -219,5 +219,36 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "header-sub-container",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Class ",
+        "options": [
+          {
+            "name": "Paints & Products",
+            "value": "paints-and-products"
+          },
+          {
+            "name": "Colours",
+            "value": "colours"
+          },
+          {
+            "name": "Tools",
+            "value": "tools"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Header Sub Body",
+        "valueType": "string"
+      }
+    ]
   }
 ]
