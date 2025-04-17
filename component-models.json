@@ -202,7 +202,7 @@
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Footer Content",
+        "label": "Text",
         "valueType": "string"
       }
     ]
