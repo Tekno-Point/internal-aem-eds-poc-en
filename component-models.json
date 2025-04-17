@@ -223,18 +223,18 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Accordion Title One"
+        "label": "Accordion Title"
       },
       {
         "component": "text",
         "name": "subtitle",
-        "label": "Accordion Title Two"
+        "label": "Accordion Title"
       },
       {
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Accordion Body One",
+        "label": "Accordion Body",
         "valueType": "string"
       }
     ]
