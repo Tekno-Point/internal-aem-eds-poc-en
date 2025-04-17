@@ -114,8 +114,8 @@
             "value": "highlight"
           },
           {
-            "name": "Footer Middle Section",
-            "value": "footer-middle-section"
+            "name": "Footer Section",
+            "value": "footer-section"
           }
         ]
       }
@@ -196,7 +196,22 @@
     ]
   },
   {
-    "id": "footer-middle-item",
+    "id": "footer",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Select Class",
+        "valueType": "string",
+        "options": [
+          { "name": "Footer Middle", "value": "footer-middle" },
+          { "name": "Footer Bottom", "value": "footer-bottom" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "footer-item",
     "fields": [
       {
         "component": "richtext",
