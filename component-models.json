@@ -226,11 +226,6 @@
         "label": "Accordion Title"
       },
       {
-        "component": "text",
-        "name": "subtitle",
-        "label": "Accordion Title"
-      },
-      {
         "component": "richtext",
         "name": "text",
         "value": "",
