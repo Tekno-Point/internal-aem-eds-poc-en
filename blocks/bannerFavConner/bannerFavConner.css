@@ -1,0 +1,37 @@
+.bannerfavconner{
+    position: relative;
+}
+.bannerfavconner >div:nth-child(2){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bannerfavconner >div:nth-child(2) div{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.bannerfavconner >div:nth-child(2)  div #the-favourite-corner{
+    margin: 0 0 4px;
+}
+.bannerfavconner >div:nth-child(2)  div P{
+    color: #001438;
+    font-family: sans-serif;
+    margin: 0;
+}
+.bannerfavconner >div:nth-child(2)  div .button-container{
+    margin: 24px 0 0;
+}
+.bannerfavconner >div:nth-child(2) .button{
+    margin: 0;
+    background-color: #001438;
+    padding: 16px 32px 16px 32px;
+    font-family: sans-serif;
+    border: 1px;
+}
+#the-favourite-corner{
+    color:#0D2042;
+    font-family: sans-serif;
+}
