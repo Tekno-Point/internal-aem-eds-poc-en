@@ -158,8 +158,8 @@
           }
         },
         {
-          "title": "Footer",
-          "id": "footer",
+          "title": "Footer Block",
+          "id": "footer-block",
           "plugins": {
             "xwalk": {
               "page": {
@@ -174,15 +174,15 @@
           }
         },
         {
-          "title": "Footer Item",
-          "id": "footer-item",
+          "title": "Footer Block Item",
+          "id": "footer-block-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Footer Item",
-                  "model": "footer-item"
+                  "name": "Footer Block Item",
+                  "model": "footer-block-item"
                 }
               }
             }

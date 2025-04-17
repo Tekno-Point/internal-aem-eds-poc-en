@@ -196,7 +196,7 @@
     ]
   },
   {
-    "id": "footer",
+    "id": "footer-block",
     "fields": [
       {
         "component": "select",
@@ -211,7 +211,7 @@
     ]
   },
   {
-    "id": "footer-item",
+    "id": "footer-block-item",
     "fields": [
       {
         "component": "richtext",
