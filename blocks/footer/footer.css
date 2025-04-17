@@ -20,19 +20,36 @@ footer .footer p {
 }
 
 .footer {
-  background-color: #00205B;
   padding: 32px 0 0;
 }
 
 footer .footer>div {
+  padding: 0;
+  max-width: 100%;
+  background-color: #00205B;
+}
+
+.footer .footer-section {
   padding: 0 12px;
   max-width: 96.25%;
+  margin: 0 auto;
+}
+
+.footer-section:nth-child(2){
+  padding-top: 48px;
+}
+
+.footer-section:nth-child(2) .footer-block-wrapper {
+  width: calc(100% + 3.75%);
+  margin-left: -1.875%;
+  margin-right: -1.875%;
+  background-color: #222222;
 }
 
 .footer-middle {
   display: flex;
   border-top: 1px solid rgba(255, 255, 255, 0.26);
-  padding: 64px 0;
+  padding: 64px 0 16px;
 }
 
 .footer-middle>div {
@@ -41,31 +58,30 @@ footer .footer>div {
   padding: 0 12px;
 }
 
-.footer-middle>div ul{
+.footer-middle>div ul {
   padding: 0;
   list-style: none;
 }
 
-.footer-middle > div:nth-child(1) div > p:nth-of-type(1),
-.footer-middle>div:nth-child(1) div> ul
-{
+.footer-middle>div:nth-child(1) div>p:nth-of-type(1),
+.footer-middle>div:nth-child(1) div>ul {
   margin: 0 0 45px;
 }
 
-.footer-middle>div:nth-child(1) div>p:nth-of-type(2){
+.footer-middle>div:nth-child(1) div>p:nth-of-type(2) {
   color: #fff;
 }
 
-.footer-middle>div:nth-child(1) div>p:nth-of-type(2) a{
+.footer-middle>div:nth-child(1) div>p:nth-of-type(2) a {
   text-decoration: none;
   color: #fff;
 }
 
-.footer-middle>div > div > ul > li p{
+.footer-middle>div>div>ul>li p {
   color: #fff;
 }
 
-.footer-middle>div:nth-child(1)>div>ul>li >ul{
+.footer-middle>div:nth-child(1)>div>ul>li>ul {
   display: flex;
 }
 
@@ -125,4 +141,27 @@ footer .footer>div {
   line-height: 16.4px;
   font-weight: 400;
   color: #fff;
+}
+
+.footer-bottom {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  max-width: 96.25%;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.footer-bottom>div>div ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-bottom>div>div ul li{
+  cursor: pointer;
 }

@@ -205,7 +205,8 @@
         "valueType": "string",
         "options": [
           { "name": "Footer Middle", "value": "footer-middle" },
-          { "name": "Footer Bottom", "value": "footer-bottom" }
+          { "name": "Footer Bottom", "value": "footer-bottom" },
+          { "name": "Footer Mobile", "value": "footer-mobile" }
         ]
       }
     ]
