@@ -116,6 +116,10 @@
           {
             "name": "Footer Section",
             "value": "footer-section"
+          },
+          {
+            "name": "Footer Mobile Section",
+            "value": "footer-mobile-section"
           }
         ]
       }
@@ -205,8 +209,7 @@
         "valueType": "string",
         "options": [
           { "name": "Footer Middle", "value": "footer-middle" },
-          { "name": "Footer Bottom", "value": "footer-bottom" },
-          { "name": "Footer Mobile", "value": "footer-mobile" }
+          { "name": "Footer Bottom", "value": "footer-bottom" }
         ]
       }
     ]
