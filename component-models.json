@@ -420,14 +420,14 @@
     "id": "accordion-item",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
         "name": "question",
         "value": "",
         "label": "question"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "answer",
         "label": "Description",
         "raw": true
