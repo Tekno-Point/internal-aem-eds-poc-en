@@ -16,7 +16,8 @@
       "fragment",
       "embed",
       "newcarousel",
-      "swiper-sec"
+      "swiper-sec",
+      "accordion"
     ]
   },
   {
@@ -38,5 +39,9 @@
   {
     "id": "swiper-sec",
     "components": ["swiper-sec-item"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
   }
 ]

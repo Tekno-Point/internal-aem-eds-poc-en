@@ -1,4 +1,6 @@
 @import url('../testimonial/swiper-bundle.min.css');
+@import "../common-themes/css/fluid-typography";
+@import "../common-themes/css/variables_mixins";
 
 main>.section.swiper-sec-container {
   margin: 0;
@@ -43,21 +45,132 @@ main>.section.swiper-sec-container {
 
     .swiper-sec {
       overflow: hidden;
-      padding-bottom: 30px;
+      padding-bottom: 35px;
       height: auto;
-
 
       .swiper-wrapper {
         .swiper-slide {
-          width: 31.6%;
+          position: relative;
+          width: 372px !important;
+          display: flex;
+          height: 100%;
+          padding: 16px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 18px;
+          flex-shrink: 0;
+          border-radius: 16px;
+          background: var(--Neutrals-N30, #EBECEF);
 
-          img {
-            height: 410px;
+          &-cards-1 {
+            width: 100%;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          &-cards-2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            align-self: stretch;
+
+            & p:first-child {
+              color: #001438;
+              font-family: $raleway;
+              font-size: rem(14px);
+              font-weight: 400;
+              line-height: 16px;
+              margin: 0;
+              padding: 0;
+            }
+
+            .button-container,
+            .button {
+              padding: 0;
+              margin: 0;
+            }
+
+            .button-container {
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 4px;
+            }
+
+            .button {
+              background: transparent;
+              display: flex;
+              justify-content: center;
+              gap: 4px;
+              color: #2E3E5C;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 15.6px;
+
+              &::before {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-image: url(/icons/material-symbols_star.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+              }
+            }
+          }
+
+          &-cards-3 {
+            position: absolute;
+            // width: 65px;
+            // height: 65px;
+            // background: #ffffff;
+            // border-radius: 50%;
+            // background: #ffffff;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+
+            .button-container {
+              margin: 0;
+              padding: 0;
+
+              .button {
+                background: transparent;
+
+                .icon {
+                  width: 42px;
+                  height: 54px;
+                  flex-shrink: 0;
+                }
+              }
+            }
           }
         }
       }
 
-      // .swiper-pagination {}
+      .swiper-pagination {
+        bottom: -9px;
+
+        .swiper-pagination-bullet {
+          width: 111px;
+          height: 3px;
+          background-color: #F6A1B6;
+
+          &-active {
+            background-color: #E91A4E;
+            width: 111px;
+            height: 3px;
+            border-radius: 20px;
+            width: 111px;
+          }
+        }
+      }
     }
   }
 }

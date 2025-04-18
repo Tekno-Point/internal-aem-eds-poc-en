@@ -1,0 +1,65 @@
+@import "./variables_mixins";
+@import "./fluid-typography";
+
+.pointer {
+  cursor: pointer;
+}
+
+.pointer-event-none {
+  pointer-events: none;
+}
+
+.pointer-none {
+  cursor: none;
+}
+
+// DISPLAY
+
+.dsp {
+  display: none;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.dsp-none {
+  display: none !important;
+}
+
+.mob-dsp-none {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  // opacity: 0.4;
+  background-color: #969696 !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.background-color-body {
+  background: #f3f3f3;
+}
+
