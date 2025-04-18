@@ -1,0 +1,31 @@
+main>section.accordion-container {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .default-content-wrapper {
+        width: 20%;
+    }
+}
+
+.accordion-question {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5em;
+    width: 100%;
+    background: #f0f0f0;
+    border: none;
+    text-align: left;
+}
+
+.accordion-answer {
+    padding: 0.5em;
+    background: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.accordion-question.open {
+    background: #ddd;
+}
