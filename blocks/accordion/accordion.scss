@@ -104,7 +104,9 @@ main>.section.accordion-container {
                         font-size: unset;
                         display: flex;
                         align-items: center;
+                        gap: 24px;
                         justify-content: space-between;
+                        white-space: inherit;
 
                         &::after {
                             content: "";

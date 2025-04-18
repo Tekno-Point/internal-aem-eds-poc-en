@@ -96,7 +96,9 @@ main > .section.accordion-container .accordion-wrapper .accordion .accordion-sec
   font-size: unset;
   display: flex;
   align-items: center;
+  gap: 24px;
   justify-content: space-between;
+  white-space: inherit;
 }
 main > .section.accordion-container .accordion-wrapper .accordion .accordion-sec-container-column .accordion-question::after {
   content: "";
