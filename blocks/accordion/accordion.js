@@ -9,15 +9,13 @@
 //     });
 // }
 export default function decorate(block) {
-    const defaultContent = block.querySelector('.accordion-container .default-content-wrapper');
-    const accordion = block.querySelector('.accordion-container .accordion-wrapper');
-  
-    if (defaultContent) {
-      defaultContent.classList.add('accordion-default-content');
-    }
-  
-    if (accordion) {
-      accordion.classList.add('accordion-content-wrapper');
-    }
-  }
-  
+    const children = Array.from(block.children);
+
+    children.forEach((child) => {
+        if (child.classList.contains('default-content-wrapper')) {
+            child.classList.add('accordion-default-content');
+        } else if (child.classList.contains('accordion-wrapper')) {
+            child.classList.add('accordion-content-wrapper');
+        }
+    });
+}
