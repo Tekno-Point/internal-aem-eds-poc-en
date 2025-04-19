@@ -440,20 +440,24 @@
     "fields": [
       {
         "component": "reference",
+        "valueType": "string",
         "name": "image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
+        "valueType": "string",
         "name": "imageAlt",
-        "label": "Alt Text"
+        "label": "Alt",
+        "value": ""
       },
       {
         "component": "richtext",
         "name": "text",
-        "label": "Description",
-        "raw": true
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       },
       {
         "component": "aem-content",
@@ -469,28 +473,6 @@
   },
   {
     "id": "favourite-corner",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "label": "Description",
-        "raw": true
-      }
-    ]
-  },
-  {
-    "id": "hero-dream",
     "fields": [
       {
         "component": "reference",
