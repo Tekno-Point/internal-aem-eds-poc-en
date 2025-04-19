@@ -307,6 +307,36 @@
               }
             }
           }
+        },
+        {
+          "title": "Why Choose Us",
+          "id": "why-choose-us",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Why Choose Us",
+                  "filter": "why-choose-us"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Why Choose Us item",
+          "id": "why-choose-us-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Why Choose Us item",
+                  "model": "why-choose-us-item"
+                }
+              }
+            }
+          }
         }
       ]
     }

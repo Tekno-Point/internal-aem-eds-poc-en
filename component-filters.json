@@ -20,7 +20,8 @@
       "accordion",
       "dream-home",
       "favourite-corner",
-      "find-us"
+      "find-us",
+      "why-choose-us"
     ]
   },
   {
@@ -46,5 +47,9 @@
   {
     "id": "accordion",
     "components": ["accordion-item"]
+  },
+  {
+    "id": "why-choose-us",
+    "components": ["why-choose-us-item"]
   }
 ]
