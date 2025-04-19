@@ -455,6 +455,16 @@
         "name": "text",
         "label": "Description",
         "raw": true
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
       }
     ]
   }
