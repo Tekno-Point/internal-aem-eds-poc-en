@@ -436,7 +436,7 @@
     ]
   },
   {
-    "id": "dream-home-item",
+    "id": "dream-home",
     "type": "dream-home/text",
     "fields": [
       {
@@ -469,7 +469,7 @@
     ]
   },
   {
-    "id": "favourite-corner-item",
+    "id": "favourite-corner",
     "type": "favourite-corner/text",
     "fields": [
       {

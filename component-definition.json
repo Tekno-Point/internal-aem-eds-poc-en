@@ -279,21 +279,6 @@
           }
         },
         {
-          "title": "dream home item",
-          "id": "dream-home-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "dream home item",
-                  "model": "dream-home-item"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "favourite corner",
           "id": "favourite-corner",
           "plugins": {
@@ -303,21 +288,6 @@
                 "template": {
                   "name": "favourite corner",
                   "filter": "favourite-corner"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "favourite corner item",
-          "id": "favourite-corner-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "favourite corner item",
-                  "model": "favourite-corner-item"
                 }
               }
             }
