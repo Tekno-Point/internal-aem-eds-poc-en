@@ -467,6 +467,29 @@
         "label": "Text"
       }
     ]
+  },
+  {
+    "id": "favourite-corner-item",
+    "type": "favourite-corner/text",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Description",
+        "raw": true
+      }
+    ]
   }
   
 ]
