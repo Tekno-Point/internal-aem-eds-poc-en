@@ -1,0 +1,64 @@
+main > .section.favourite-corner-container {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  width: 92%;
+  margin: 0 auto;
+}
+
+main > .section.favourite-corner-container {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  width: 94.12%;
+  margin: 0 auto;
+}
+main > .section.favourite-corner-container .favourite-corner-wrapper {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  width: 100%;
+}
+main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner {
+  position: relative;
+}
+main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner .favourite-corner-banner .favourite-corner-banner-col img {
+  width: 100%;
+  height: 100%;
+}
+main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner .favourite-corner-banner-2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner .favourite-corner-banner-2 .favourite-corner-banner-col.sec-1 .button-container {
+  margin: 0;
+  padding: 0;
+}
+main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner .favourite-corner-banner-2 .favourite-corner-banner-col.sec-1 .button-container a {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  width: 54px;
+  height: 54px;
+}
+main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner .favourite-corner-banner-2 .favourite-corner-banner-col.sec-1 .button-container a .icon {
+  width: 100%;
+  height: 100%;
+}
+main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner .favourite-corner-banner-2 .favourite-corner-banner-col.sec-2 .sec-2-text-1 {
+  color: #FFF;
+  text-align: center;
+  font-family: var(--Typeface-Family-Heading, Manrope);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 52.8px;
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+}/*# sourceMappingURL=favourite-corner.css.map */
