@@ -27,4 +27,30 @@ main > .section.dream-home-container .dream-home-wrapper .dream-home .dream-home
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+main > .section.dream-home-container .dream-home-wrapper .dream-home .dream-home-banner-2 .dream-home-banner-col.sec-1 .button-container {
+  margin: 0;
+  padding: 0;
+}
+main > .section.dream-home-container .dream-home-wrapper .dream-home .dream-home-banner-2 .dream-home-banner-col.sec-1 .button-container a {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  width: 54px;
+  height: 54px;
+}
+main > .section.dream-home-container .dream-home-wrapper .dream-home .dream-home-banner-2 .dream-home-banner-col.sec-1 .button-container a .icon {
+  width: 100%;
+  height: 100%;
+}
+main > .section.dream-home-container .dream-home-wrapper .dream-home .dream-home-banner-2 .dream-home-banner-col.sec-2 .sec-2-text-1 {
+  color: #FFF;
+  text-align: center;
+  font-family: var(--Typeface-Family-Heading, Manrope);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 52.8px;
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
 }/*# sourceMappingURL=dream-home.css.map */
