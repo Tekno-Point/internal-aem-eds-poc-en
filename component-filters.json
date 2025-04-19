@@ -17,7 +17,8 @@
       "embed",
       "newcarousel",
       "swiper-sec",
-      "accordion"
+      "accordion",
+      "dream-home"
     ]
   },
   {
@@ -43,5 +44,9 @@
   {
     "id": "accordion",
     "components": ["accordion-item"]
+  },
+  {
+    "id": "dream-home",
+    "components": ["dream-home-item"]
   }
 ]

@@ -262,6 +262,36 @@
               }
             }
           }
+        },
+        {
+          "title": "dream home",
+          "id": "dream-home",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "dream home",
+                  "filter": "dream-home"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "dream home item",
+          "id": "dream-home-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "dream home item",
+                  "model": "dream-home-item"
+                }
+              }
+            }
+          }
         }
       ]
     }

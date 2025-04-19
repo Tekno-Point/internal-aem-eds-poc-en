@@ -434,6 +434,29 @@
         "raw": true
       }
     ]
+  },
+  {
+    "id": "dream-home-item",
+    "type": "dream-home/text",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Description",
+        "raw": true
+      }
+    ]
   }
   
 ]
