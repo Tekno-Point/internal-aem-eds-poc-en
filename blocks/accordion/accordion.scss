@@ -17,13 +17,11 @@ main>.section.accordion-container {
         background: var(--Primary-P25, #FDE8ED);
 
         ul {
-            width: 100%;
+            // width: 100%;
             height: 100%;
             margin: 0;
             padding: 0;
             display: flex;
-            // width: 430px;
-            // height: 595px;
             padding: 40px;
             flex-direction: column;
             align-items: flex-start;

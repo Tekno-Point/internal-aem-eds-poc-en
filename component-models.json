@@ -112,6 +112,18 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Tab section",
+            "value": "tab-section"
+          },
+          {
+            "name": "Why Choose Us",
+            "value": "why-chooseus"
+          },
+          {
+            "name": "Find Us",
+            "value": "find-us"
           }
         ]
       }

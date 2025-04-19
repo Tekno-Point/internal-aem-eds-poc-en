@@ -17,7 +17,6 @@ main > .section.accordion-container .default-content-wrapper {
   background: var(--Primary-P25, #FDE8ED);
 }
 main > .section.accordion-container .default-content-wrapper ul {
-  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
