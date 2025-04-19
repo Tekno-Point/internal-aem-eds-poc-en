@@ -465,13 +465,6 @@
         "value": ""
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
         "component": "aem-content",
         "name": "link",
         "label": "Link"
@@ -480,6 +473,13 @@
         "component": "text",
         "name": "linkText",
         "label": "Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },

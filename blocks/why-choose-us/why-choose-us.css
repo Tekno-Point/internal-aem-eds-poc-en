@@ -41,6 +41,9 @@ main > .section.why-choose-us-container .why-choose-us-wrapper .why-choose-us {
   padding-bottom: 35px;
   height: auto;
 }
+main > .section.why-choose-us-container .why-choose-us-wrapper .why-choose-us.swiper.swiper-initialized .swiper-wrapper {
+  gap: unset;
+}
 main > .section.why-choose-us-container .why-choose-us-wrapper .why-choose-us .swiper-wrapper {
   display: flex;
   align-items: center;
@@ -48,7 +51,7 @@ main > .section.why-choose-us-container .why-choose-us-wrapper .why-choose-us .s
 }
 main > .section.why-choose-us-container .why-choose-us-wrapper .why-choose-us .swiper-wrapper .swiper-slide {
   position: relative;
-  width: 286.047px !important;
+  width: 24% !important;
   display: flex;
   height: 100%;
   align-items: center;

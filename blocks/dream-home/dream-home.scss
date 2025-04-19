@@ -1,7 +1,44 @@
-main>.section.dream-home-container{
+main>.section.dream-home-container {
     margin: 0;
     padding: 0;
     max-width: 100%;
-    width: 92%;
+    width: 94.12%;
     margin: 0 auto;
+
+    .dream-home-wrapper {
+        margin: 0;
+        padding: 0;
+        min-width: 100%;
+        width: 100%;
+
+        .dream-home {
+            position: relative;
+
+            .dream-home-banner {
+                .dream-home-banner-col {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .dream-home-banner-2 {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .dream-home-banner-col {
+                    &.sec-1 {}
+
+                    &.sec-2 {}
+                }
+            }
+        }
+    }
 }

@@ -34,7 +34,7 @@ export default function decorate(block) {
   if (shouldInitSwiper) {
     Swiper(block, {
       slidesPerView: 'auto',
-      spaceBetween: 32,
+      spaceBetween: 16,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 0,
       pagination: {
