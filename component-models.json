@@ -501,7 +501,7 @@
     "id": "find-us",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "name": "text",
         "value": "",
         "label": "Heading",
@@ -511,8 +511,9 @@
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Tab Text",
-        "valueType": "string"
+        "label": "TabText",
+        "valueType": "string",
+        "raw": true
       }
     ]
   } 
