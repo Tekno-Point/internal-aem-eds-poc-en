@@ -277,3 +277,68 @@ main .section.highlight {
 .footer-wrapper {
   display: none;
 }
+
+/* tab-section css start */
+main>.section.tab-section {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 54px;
+  margin-bottom: 54px;
+}
+
+.section.tab-section .default-content-wrapper {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  width: auto;
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  align-self: stretch;
+  background: #D2D8EF;
+}
+
+.section.tab-section .default-content-wrapper ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  list-style: none;
+}
+
+.section.tab-section .default-content-wrapper ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.tab-section .default-content-wrapper ul li a {
+  color: #0D2042;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.8px;
+  padding-right: 32px;
+}
+
+.section.tab-section .default-content-wrapper ul li::after {
+  content: "";
+  background-image: url(/icons/dot.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 5px;
+  height: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* tab-section css start */

@@ -4,4 +4,7 @@ main > .section.tab-section {
   max-width: 100%;
   width: 92%;
   margin: 0 auto;
+}
+main > .section.tab-section .default-content-wrapper {
+  width: 100%;
 }/*# sourceMappingURL=tab-section.css.map */
