@@ -1,15 +1,18 @@
 export default function decorate(block) {
-    Array.from(block.children).forEach((row) => {
-        row.classList.add("header-sec-container");
+    // Loop through each row in the block
+    Array.from(block.children).forEach((row, rowIndex) => {
+      row.classList.add("favourite-corner-container");
+      row.classList.add(`corner-${rowIndex + 1}`);
 
-        Array.from(row.children).forEach((column, index) => {
-            column.classList.add("header-sec-container-column");
-            column.classList.add(`column-${index + 1}`);
-        });
+      Array.from(row.children).forEach((column, colIndex) => {
+        column.classList.add("favourite-corner-container-column");
+        column.classList.add(`column-${colIndex + 1}`);
+      });
     });
-
-    const blockdrop = block.querySelectorAll(".header-sec-container-column ul");
-    Array.from(blockdrop).forEach((column, index) => {
-        column.classList.add("header-sec-container-ul-" + (index + 1));
+  
+    const listBlocks = block.querySelectorAll(".favourite-corner-container-column ul");
+    listBlocks.forEach((ul, index) => {
+      ul.classList.add(`favourite-corner-container-ul-${index + 1}`);
     });
-}
+  }
+  

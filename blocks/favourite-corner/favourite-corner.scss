@@ -1,10 +1,3 @@
-main>.section.favourite-corner-container{
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    width: 92%;
-    margin: 0 auto;
-}
 main>.section.favourite-corner-container {
     margin: 0;
     padding: 0;
@@ -17,67 +10,98 @@ main>.section.favourite-corner-container {
         padding: 0;
         min-width: 100%;
         width: 100%;
+        position: relative;
 
         .favourite-corner {
-            position: relative;
-
-            .favourite-corner-banner {
-                .favourite-corner-banner-col {
-                    img {
-                        width: 100%;
-                        height: 100%;
+            &-container {
+                &.corner-1 {
+                    .column-1 {
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
-            }
 
-            .favourite-corner-banner-2 {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                &.corner-2 {
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
 
-                .favourite-corner-banner-col {
-                    &.sec-1 {
-                        .button-container {
+                    .column-1 {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 4px;
+                        // padding-top: 81px;
+                        border-radius: 16px;
+                        // background: url(<path-to-image>) lightgray 0px -283.296px / 100% 170.34% no-repeat;
+
+                        p {
                             margin: 0;
                             padding: 0;
+                        }
 
-                            a {
-                                background: transparent;
+                        p:nth-child(1) {
+                            color: #0D2042;
+                            text-align: center;
+                            font-family: var(--Typeface-Family-Heading, Manrope);
+                            font-size: var(--Typeface-Size-H3, 44px);
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 52.8px;
+                            padding-top: 81px;
+                        }
+
+                        p:nth-child(2) {
+                            color: var(--Neutrals-N800, #0D2042);
+                            text-align: center;
+                            font-family: var(--Typeface-Family-Body, Manrope);
+                            font-size: var(--Typeface-Size-Body-3, 16px);
+                            font-weight: 400;
+                            line-height: 25.6px;
+                        }
+
+                        .button-container {
+                            margin-top: 20px;
+
+                            .button {
                                 margin: 0;
                                 padding: 0;
-                                width: 54px;
-                                height: 54px;
+                                display: flex;
+                                padding: 16px 32px;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 8px;
+                                border-radius: 16px;
+                                border: 0px solid var(--Secondary-S500, #001438);
+                                background: var(--Secondary-S500, #001438);
+                                color: var(--Neutrals-N0, #FFF);
+                                font-family: var(--Typeface-Family-Heading, Manrope);
+                                font-size: var(--Typeface-Size-Body-4, 14px);
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 16px;
 
-                                .icon {
-                                    width: 100%;
-                                    height: 100%;
-                                    // img {
-                                    //     width: 42px;
-                                    //     height: 54px;
-                                    // }
+                                &::after {
+                                    content: "";
+                                    background-image: url(/icons/arrow-right.svg);
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: 100%;
+                                    display: flex;
+                                    width: 16px;
+                                    height: 16px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-shrink: 0;
                                 }
                             }
                         }
 
-                    }
-
-                    &.sec-2 {
-                        .sec-2-text-1 {
-                            color: #FFF;
-                            text-align: center;
-                            font-family: var(--Typeface-Family-Heading, Manrope);
-                            font-size: 44px;
-                            font-weight: 700;
-                            line-height: 52.8px;
-                            margin: 0;
-                            padding: 0;
-                            margin-top: 24px;
-                        }
                     }
                 }
             }

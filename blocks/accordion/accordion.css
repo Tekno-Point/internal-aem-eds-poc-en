@@ -6,6 +6,7 @@ main > .section.accordion-container {
   align-items: stretch;
   margin: 0 auto;
   margin-top: 72px;
+  margin-bottom: 72px;
   gap: 111px;
 }
 main > .section.accordion-container .default-content-wrapper {
