@@ -504,14 +504,14 @@
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "questio",
-        "label": "Ques"
+        "name": "title",
+        "label": "Heading"
       },
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "answe",
-        "label": "Answ",
+        "name": "text",
+        "label": "Tabtext",
         "raw": true
       }
     ]
