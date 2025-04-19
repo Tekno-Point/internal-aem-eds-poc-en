@@ -496,5 +496,24 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "find-us",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Tab Text",
+        "valueType": "string"
+      }
+    ]
   } 
 ]
