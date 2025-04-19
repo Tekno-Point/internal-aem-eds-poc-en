@@ -1,57 +1,46 @@
 import Swiper from '../testimonial/swiper-bundle.min.js';
 
 export default function decorate(block) {
-    const slides = Array.from(block.children);
+  const slides = Array.from(block.children);
 
-    // Only apply Swiper if there are more than 4 slides
-    if (slides.length <= 4) return;
+  // Create Swiper DOM structure regardless of slide count
+  const swiperWrapper = document.createElement('div');
+  const swiperPagination = document.createElement('div');
 
-    // Create Swiper container elements
-    const swiperWrapper = document.createElement('div');
-    const swiperPagination = document.createElement('div');
+  swiperWrapper.classList.add('swiper-wrapper');
+  swiperPagination.classList.add('swiper-pagination');
+  block.classList.add('swiper');
 
-    swiperWrapper.classList.add('swiper-wrapper');
-    swiperPagination.classList.add('swiper-pagination');
-    block.classList.add('swiper');
+  // Prepare and move slides into Swiper wrapper
+  slides.forEach((slide, slideIndex) => {
+    slide.classList.add('swiper-slide');
 
-    // Prepare each slide
-    slides.forEach((slide, slideIndex) => {
-        slide.classList.add('swiper-slide');
-
-        // Add unique class to each direct <div> inside the slide
-        const innerDivs = slide.querySelectorAll(':scope > div');
-        innerDivs.forEach((div, divIndex) => {
-            div.classList.add(`swiper-slide-cards-${divIndex + 1}`);
-        });
-
-        swiperWrapper.appendChild(slide);
+    const innerDivs = slide.querySelectorAll(':scope > div');
+    innerDivs.forEach((div, divIndex) => {
+      div.classList.add(`swiper-slide-cards-${divIndex + 1}`);
     });
 
-    // Assemble the Swiper DOM structure
-    block.appendChild(swiperWrapper);
-    block.appendChild(swiperPagination);
+    swiperWrapper.appendChild(slide);
+  });
 
-    // Define Swiper initialization
-    const initializeSwiper = () => {
-        Swiper(block, {
-            slidesPerView: 'auto',
-            spaceBetween: 16,
-            slidesOffsetBefore: 0,
-            slidesOffsetAfter: 0,
-            pagination: {
-                el: swiperPagination,
-                clickable: true,
-            },
-        });
-    };
+  // Append Swiper structure to the block
+  block.appendChild(swiperWrapper);
+  block.appendChild(swiperPagination);
 
-    // Check viewport for mobile
-    const isMobileView = window.matchMedia('(max-width: 768px)').matches;
+  // Only initialize Swiper if more than 4 slides (desktop) or more than 1 (mobile)
+  const isMobileView = window.matchMedia('(max-width: 768px)').matches;
+  const shouldInitSwiper = slides.length > 4 || (isMobileView && slides.length > 1);
 
-    // Only initialize Swiper if:
-    // - Desktop/tablet view, OR
-    // - Mobile view AND more than one slide
-    if (!isMobileView || slides.length > 1) {
-        initializeSwiper();
-    }
+  if (shouldInitSwiper) {
+    Swiper(block, {
+      slidesPerView: 'auto',
+      spaceBetween: 32,
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
+      pagination: {
+        el: swiperPagination,
+        clickable: true,
+      },
+    });
+  }
 }
