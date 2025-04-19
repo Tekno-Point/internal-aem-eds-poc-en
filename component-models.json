@@ -499,20 +499,19 @@
   },
   {
     "id": "find-us",
+    "type": "findus/text",
     "fields": [
       {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Heading",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "questio",
+        "label": "Ques"
       },
       {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "TabText",
         "valueType": "string",
+        "name": "answe",
+        "label": "Answ",
         "raw": true
       }
     ]
