@@ -120,6 +120,10 @@
           {
             "name": "Footer Mobile Section",
             "value": "footer-mobile-section"
+          },
+          {
+            "name": "Footer Bottom Section",
+            "value": "footer-bottom-section"
           }
         ]
       }
