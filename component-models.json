@@ -273,24 +273,5 @@
         "valueType": "string"
       }
     ]
-  },
-  {
-    "id": "footer-top-item",
-    "fields": [
-      {
-        "component": "text-input",
-        "name": "text",
-        "value": "",
-        "label": "Input Field",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "Text",
-        "value": "",
-        "label": "Button Text",
-        "valueType": "string"
-      }
-    ]
   }
 ]
