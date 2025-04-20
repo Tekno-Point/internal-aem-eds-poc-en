@@ -1,4 +1,5 @@
 @import url(../tabs/tabs.scss);
+
 .our-service .tabs-list {
   display: flex;
   gap: 0.5ch;
@@ -7,16 +8,18 @@
   overflow-x: auto;
 }
 
-@media (width >= 600px) {
+@media (width >=600px) {
   .our-service .tabs-list {
     font-size: var(--body-font-size-s);
   }
 }
-@media (width >= 900px) {
+
+@media (width >=900px) {
   .our-service .tabs-list {
     font-size: var(--body-font-size-m);
   }
 }
+
 .our-service .tabs-list button {
   flex: 0 0 max-content;
   margin: 0;
@@ -53,4 +56,6 @@
 
 .our-service .tabs-panel[aria-hidden=true] {
   display: none;
-}/*# sourceMappingURL=our-service.css.map */
+}
+
+/*# sourceMappingURL=our-service.css.map */
