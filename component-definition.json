@@ -189,7 +189,7 @@
           }
         },
         {
-          "title": "Footer Top Section",
+          "title": "Footer Top Block",
           "id": "footer-top-section",
           "plugins": {
             "xwalk": {
