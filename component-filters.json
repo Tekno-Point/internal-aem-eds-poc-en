@@ -21,7 +21,8 @@
       "dream-home",
       "favourite-corner",
       "find-us",
-      "why-choose-us"
+      "why-choose-us",
+      "our-service"
     ]
   },
   {
@@ -51,5 +52,9 @@
   {
     "id": "why-choose-us",
     "components": ["why-choose-us-item"]
+  },
+  {
+    "id": "our-service",
+    "components": ["our-service-item"]
   }
 ]

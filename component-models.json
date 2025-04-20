@@ -549,5 +549,21 @@
         "raw": true
       }
     ]
+  },
+  {
+    "id": "our-service-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fragment URL"
+      }
+    ]
   }
 ]

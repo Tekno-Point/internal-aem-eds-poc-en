@@ -10,6 +10,17 @@ main > .section.why-choose-us-container {
 main > .section.why-choose-us-container .default-content-wrapper {
   padding-bottom: 64px;
 }
+main > .section.why-choose-us-container .default-content-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 16px;
+  color: #0D2042;
+  font-family: var(--Typeface-Family-Heading, Manrope);
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 45.5px;
+}
 main > .section.why-choose-us-container .default-content-wrapper p {
   padding: 0;
   margin: 0;
@@ -19,14 +30,44 @@ main > .section.why-choose-us-container .default-content-wrapper p {
   text-align: center;
 }
 main > .section.why-choose-us-container .default-content-wrapper p:nth-child(1) {
-  font-size: 35px;
-  line-height: 45.5px;
-  padding-bottom: 16px;
-}
-main > .section.why-choose-us-container .default-content-wrapper p:nth-child(2) {
-  font-size: 24px;
+  font-size: 21px;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  line-height: 28.8px;
+  line-height: 27.3px;
+}
+main > .section.why-choose-us-container .default-content-wrapper .button-container {
+  width: 100%;
+  padding-top: 27px;
+}
+main > .section.why-choose-us-container .default-content-wrapper .button-container .button {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  border: 1px solid var(--Secondary-S500, #001438);
+  background: var(--Primary-Clean-White, #FFF);
+  color: #001438;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 16px;
+}
+main > .section.why-choose-us-container .default-content-wrapper .button-container .button::after {
+  content: "";
+  background-image: url(/icons/arrow-right-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: flex;
+  width: 16px;
+  height: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 main > .section.why-choose-us-container .why-choose-us-wrapper {
   padding: 0;

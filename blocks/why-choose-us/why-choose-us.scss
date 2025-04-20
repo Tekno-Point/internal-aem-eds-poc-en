@@ -13,6 +13,18 @@ main>.section.why-choose-us-container {
     .default-content-wrapper {
         padding-bottom: 64px;
 
+        h3 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 16px;
+            color: #0D2042;
+            font-family: var(--Typeface-Family-Heading, Manrope);
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 45.5px;
+        }
+
         p {
             padding: 0;
             margin: 0;
@@ -22,17 +34,50 @@ main>.section.why-choose-us-container {
             text-align: center;
 
             &:nth-child(1) {
-                font-size: 35px;
-                line-height: 45.5px;
-                padding-bottom: 16px;
-            }
-
-            &:nth-child(2) {
-                font-size: 24px;
+                font-size: 21px;
+                font-family: Arial, Helvetica, sans-serif;
                 font-weight: 700;
-                line-height: 28.8px;
+                line-height: 27.3px;
             }
         }
+
+        & .button-container {
+            width: 100%;
+            padding-top: 27px;
+
+            .button {
+                margin: 0;
+                padding: 0;
+                display: inline-flex;
+                padding: 16px 32px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 16px;
+                border: 1px solid var(--Secondary-S500, #001438);
+                background: var(--Primary-Clean-White, #FFF);
+                color: #001438;
+                font-size: 14px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                line-height: 16px;
+
+                &::after {
+                    content: "";
+                    background-image: url(/icons/arrow-right-black.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    display: flex;
+                    width: 16px;
+                    height: 16px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
     }
 
     .why-choose-us-wrapper {
@@ -48,9 +93,9 @@ main>.section.why-choose-us-container {
             padding-bottom: 35px;
             height: auto;
 
-            &.swiper.swiper-initialized{
+            &.swiper.swiper-initialized {
                 .swiper-wrapper {
-                   gap: unset;
+                    gap: unset;
                 }
             }
 

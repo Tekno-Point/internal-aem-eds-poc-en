@@ -23,7 +23,7 @@ main > .section.find-us-container .find-us-wrapper .find-us {
 main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-1 {
   text-align: center;
 }
-main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-1 .sebtxt-1 {
+main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-1 .sebtxt-1 h2 {
   margin: 0;
   padding: 0;
   color: #0D2042;
@@ -43,11 +43,17 @@ main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.s
 }
 main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-2 .sebtxt-1 ul li a {
   display: flex;
-  height: 30px;
+  height: auto;
   padding: 8px 16px;
   align-items: center;
   gap: 8px;
   border-radius: 100px;
-  border: 0.5px solid var(--Neutrals-N50, #BFC4CD);
-  background: var(--Neutrals-N0, #FFF);
+  border: 0.5px solid #BFC4CD;
+  background: #FFF;
+  color: #0D2042;
+  font-family: var(--Typeface-Family-Body, Manrope);
+  font-size: var(--Typeface-Size-Caption, 12px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15.6px;
 }/*# sourceMappingURL=find-us.css.map */
