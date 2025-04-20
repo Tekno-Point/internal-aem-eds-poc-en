@@ -118,6 +118,10 @@
             "value": "footer-section"
           },
           {
+            "name": "Footer Top Section",
+            "value": "footer-top-section"
+          },
+          {
             "name": "Footer Mobile Section",
             "value": "footer-mobile-section"
           },

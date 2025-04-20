@@ -37,11 +37,11 @@ footer .footer>div {
   margin: 0 auto;
 }
 
-.footer-section:nth-child(2){
+.footer-section.footer-bottom-section{
   padding-top: 48px;
 }
 
-.footer-section:nth-child(2) .footer-block-wrapper {
+.footer-bottom-section .footer-block-wrapper {
   width: calc(100% + 3.75%);
   margin-left: -1.875%;
   margin-right: -1.875%;
@@ -166,4 +166,12 @@ footer .footer>div {
 
 .footer-bottom>div>div ul li{
   cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .footer-top-section{
+    display: none;
+  }
 }
