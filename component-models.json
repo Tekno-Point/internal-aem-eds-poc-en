@@ -282,8 +282,7 @@
         "name": "text",
         "value": "",
         "label": "Input Field",
-        "valueType": "string",
-        "placeholder": "string"
+        "valueType": "string"
       },
       {
         "component": "text",
