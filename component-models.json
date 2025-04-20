@@ -118,12 +118,12 @@
             "value": "footer-section"
           },
           {
-            "name": "Footer Top Section",
-            "value": "footer-top-section"
+            "name": "Footer Middle Desktop Section",
+            "value": "footer-middle-desk"
           },
           {
-            "name": "Footer Mobile Section",
-            "value": "footer-mobile-section"
+            "name": "Footer Middle Mobile Section",
+            "value": "footer-middle-mobile"
           },
           {
             "name": "Footer Bottom Section",
