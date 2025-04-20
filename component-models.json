@@ -118,6 +118,10 @@
             "value": "footer-section"
           },
           {
+            "name": "Footer Top Section",
+            "value": "footer-top-desk"
+          },
+          {
             "name": "Footer Middle Desktop Section",
             "value": "footer-middle-desk"
           },
@@ -267,6 +271,26 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "footer-top-item",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "text",
+        "value": "",
+        "label": "Input Field",
+        "valueType": "string",
+        "placeholder": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "text",
+        "value": "",
+        "label": "Input Button",
+        "valueType": "button"
       }
     ]
   }

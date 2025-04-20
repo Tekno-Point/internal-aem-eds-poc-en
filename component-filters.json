@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "footer-block",
-      "footer-accordion"
+      "footer-accordion",
+      "footer-top-section"
     ]
   },
   {
@@ -42,6 +43,12 @@
     "id": "footer-accordion",
     "components": [
       "footer-accordion-item"
+    ]
+  },
+  {
+    "id": "footer-top-section",
+    "components": [
+      "footer-top-item"
     ]
   },
   {
