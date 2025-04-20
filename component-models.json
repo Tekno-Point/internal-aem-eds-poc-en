@@ -286,11 +286,11 @@
         "placeholder": "string"
       },
       {
-        "component": "text-input",
-        "name": "text",
+        "component": "text",
+        "name": "Text",
         "value": "",
-        "label": "Input Button",
-        "valueType": "button"
+        "label": "Button Text",
+        "valueType": "string"
       }
     ]
   }
