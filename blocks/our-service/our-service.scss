@@ -1,5 +1,5 @@
 @import url(../tabs/tabs.scss);
-.tab-sec .tabs-list {
+.our-service .tabs-list {
     display: flex;
     gap: 0.5ch;
     max-width: 100%;
@@ -8,18 +8,18 @@
   }
   
   @media (width >= 600px) {
-    .tab-sec .tabs-list {
+    .our-service .tabs-list {
       font-size: var(--body-font-size-s);
     }
   }
   
   @media (width >= 900px) {
-    .tab-sec .tabs-list {
+    .our-service .tabs-list {
       font-size: var(--body-font-size-m);
     }
   }
   
-  .tab-sec .tabs-list button {
+  .our-service .tabs-list button {
     flex: 0 0 max-content;
     margin: 0;
     border: 1px solid #dadada;
@@ -36,24 +36,24 @@
     transition: background-color 0.2s;
   }
   
-  .tab-sec .tabs-list button p {
+  .our-service .tabs-list button p {
     margin: 0;
   }
   
   
-  .tab-sec .tabs-list button[aria-selected='true'] {
+  .our-service .tabs-list button[aria-selected='true'] {
     border-bottom: 1px solid var(--background-color);
     background-color: var(--background-color);
     cursor: initial;
   }
   
-  .tab-sec .tabs-panel {
+  .our-service .tabs-panel {
     margin-top: -1px;
     padding: 24px;
     border: 1px solid #dadada;
     overflow: auto;
   }
   
-  .tab-sec .tabs-panel[aria-hidden='true'] {
+  .our-service .tabs-panel[aria-hidden='true'] {
     display: none;
   }
