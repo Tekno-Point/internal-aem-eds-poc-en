@@ -11,12 +11,12 @@ export default function decorate(block) {
     block.append(Div)
     Swiper(block, {
         direction: 'horizontal',
-        slidesPerView: 2,
+        slidesPerView: "auto",
         spaceBetween: 30,
-        // loop: true,
-        // autoplay: {
-        //     delay: 1000,
-        // },
+        loop: true,
+        autoplay: {
+            delay: 1000,
+        }
     })
     Array.from(document.querySelectorAll('.col1-div2 .swiper-container')).forEach(function (item, index) {
         if (index !== 0) {

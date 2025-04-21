@@ -4,6 +4,7 @@
  * https://www.hlx.live/developer/block-collection/accordion
  */
 import { div, ul, li, a, p } from "../../scripts/dom-helpers.js"
+import newSwiper from "../swiper/swiper-bundle.min.js"
 
 export default function decorate(block) {
     [...block.children].forEach((row) => {
@@ -32,9 +33,9 @@ export default function decorate(block) {
 
 
     // hide footer
-    setTimeout(() => {
-        document.querySelector('.nav-wrapper').style.display = "none"
-    }, 500);
+    // setTimeout(() => {
+    //     document.querySelector('.nav-wrapper').style.display = "none"
+    // }, 500);
 
     // mobile view or desktop view
     function isMobileDevice() {
@@ -44,18 +45,18 @@ export default function decorate(block) {
 
     if (!isMobileDevice()) {
 
+
         const destContainer = div({ class: "accordian-container" },
             div({ class: "left-container" },
                 ul({ class: "left-container-items" },
-                    ...Array.from(block.children).map((element) => {
+                    ...Array.from(block.children).map((element, uindex) => {
                         return li({
                             class: "left-container-item",
-                            id: element.querySelector("a").textContent.trim(),
+                            id: uindex,
                             onclick: ((event) => {
-                                // event.target.id
-                                // block.querySelector(".right-container-element").innerHTML = "";
-                                // const mopTemp = div({ class: "left-container-subitem" }, a({ href: div({ class: "left-container-subitem" }, a({ href: event.target.id }, event.target.id)) })
-                                // block.querySelector(".right-container-element").append(mo)
+                                const tempBody = Array.from(block.children)[event.target.id].querySelector(".accordion-item-body").cloneNode(true);
+                                block.nextElementSibling.querySelector(".left-container-subitem").innerHTML = ""
+                                block.nextElementSibling.querySelector(".left-container-subitem").append(tempBody);
 
                             })
                         }, element.querySelector(".accordion-item-label").textContent.trim());
@@ -65,13 +66,24 @@ export default function decorate(block) {
             div({ class: "right-container" },
                 div({ class: "right-container-element" },
                     ...Array.from(block.children).map((element, index) => {
-                        return index === 0 ? div({ class: "left-container-subitem" }, a({ href: element.querySelector("a").textContent.trim() }, element.querySelector("a").textContent.trim())) : "";
+                        return index === 0 ? div({ class: "left-container-subitem" }, element.querySelector(".accordion-item-body").cloneNode(true)) : "";
                     })
                 )
             )
         )
         block.parentElement.append(destContainer)
     }
+
+
+    newSwiper(document.querySelector('.left-container-subitem .swiper'), {
+        direction: 'horizontal',
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 1000,
+        }
+    })
 
     // if (isMobileDevice()) {
     //     console.log("Mobile view");
@@ -102,18 +114,18 @@ export default function decorate(block) {
     // }
 
 
-    document.querySelector('.col1-div1').addEventListener('click', function (e) {
-        const currrID = +e.target.classList.value.split('-').slice(-1).join() - 1
-        Array.from(document.querySelectorAll('.col1-div2 .swiper-container')).forEach(function (item, index) {
-            console.log("in")
-            if (index !== currrID) {
-                item.style.display = "none"
-            } else {
-                item.style.display = "block"
-                item.style.display = "flex"
-            }
-        })
-    })
+    // document.querySelector('.col1-div1').addEventListener('click', function (e) {
+    //     const currrID = +e.target.classList.value.split('-').slice(-1).join() - 1
+    //     Array.from(document.querySelectorAll('.col1-div2 .swiper-container')).forEach(function (item, index) {
+    //         console.log("in")
+    //         if (index !== currrID) {
+    //             item.style.display = "none"
+    //         } else {
+    //             item.style.display = "block"
+    //             item.style.display = "flex"
+    //         }
+    //     })
+    // })
 
     setTimeout(() => {
         hideonLoad()
