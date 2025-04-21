@@ -283,7 +283,7 @@ main>.section.tab-section {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  width: 92%;
+  width: 94.12%;
   margin: 0 auto;
   margin-top: 54px;
   margin-bottom: 54px;
@@ -310,12 +310,14 @@ main>.section.tab-section {
   align-items: center;
   gap: 33px;
   list-style: none;
+  overflow-x: auto;
 }
 
 .section.tab-section .default-content-wrapper ul li{
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .section.tab-section .default-content-wrapper ul li a {

@@ -1,4 +1,4 @@
-import { loadFragment } from '../blocks/fragment/fragment.js';
+import loadFragment from '../blocks/fragment/fragment.js';
 import {
   loadHeader,
   loadFooter,
