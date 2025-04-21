@@ -114,8 +114,8 @@
             "value": "highlight"
           },
           {
-            "name": "Banner Form",
-            "value": "banner-form"
+            "name": "Banner Form Container",
+            "value": "banner-form-container"
           }
         ]
       }
