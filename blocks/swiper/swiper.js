@@ -11,7 +11,7 @@ export default function decorate(block) {
     block.append(Div)
     Swiper(block, {
         direction: 'horizontal',
-        slidesPerView: "auto",
+        slidesPerView: 2,
         spaceBetween: 30,
         loop: true,
         autoplay: {
