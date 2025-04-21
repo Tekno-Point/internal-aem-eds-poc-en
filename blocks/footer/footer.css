@@ -50,14 +50,15 @@ footer .footer>div {
 
 .footer-middle-desk .footer-middle {
   display: flex;
+  gap: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.26);
   padding: 64px 0 16px;
 }
 
 .footer-middle-desk .footer-middle>div {
-  max-width: 25%;
+  max-width: 23.62%;
   width: 100%;
-  padding: 0 12px;
+  /* padding: 0 12px; */
 }
 
 .footer-middle-desk .footer-middle>div ul {
@@ -92,26 +93,30 @@ footer .footer>div {
 } */
 
 .footer-middle-desk .footer-middle div:nth-child(2) {
-  max-width: 75%;
+  max-width: 76.38%;
   width: 100%;
-  padding: 0 12px;
+  /* padding: 0 12px; */
 }
 
 .footer-middle div:nth-child(2) div>ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   list-style: none;
+  gap: 24px;
+  /* flex-wrap: wrap; */
 }
 
 .footer-middle div:nth-child(2) div>ul>li {
-  max-width: 18%;
+  max-width: 15.82%;
+  /* max-width: 17.37%; */
   width: 100%;
 }
 
 .footer-middle div:nth-child(2) div>ul>li:nth-child(2) {
-  max-width: 28%;
+  max-width: 30.18%;
+  /* max-width: 28.63%; */
   width: 100%;
 }
 
@@ -168,7 +173,11 @@ footer .footer>div {
   cursor: pointer;
 }
 
-
+@media screen and (max-width: 1024) {
+  .footer-middle div:nth-child(2) div>ul {
+    flex-wrap: wrap;
+  }
+}
 
 @media screen and (min-width: 769px) {
   .footer-middle-mobile {
@@ -238,11 +247,11 @@ footer .footer>div {
     margin-top: 16px;
   }
 
-    .footer-middle-mobile .footer-middle div div>ul>li:nth-child(1) ul li{
-      display: flex;
-      gap: 24px;
-      align-items: center;
-    }
+  .footer-middle-mobile .footer-middle div div>ul>li:nth-child(1) ul li {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
 
   .footer-middle-mobile .footer-middle div div>ul>li:not(:nth-child(1)) ul {
     margin-top: 12px;
