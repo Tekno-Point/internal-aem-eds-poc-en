@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "banner-image"
+      "banner-image",
+      "banner-form"
     ]
   },
   {
@@ -35,6 +36,12 @@
     "id": "banner-image",
     "components": [
       "banner-image-item"
+    ]
+  },
+  {
+    "id": "banner-form",
+    "components": [
+      "banner-form-item"
     ]
   },
   {

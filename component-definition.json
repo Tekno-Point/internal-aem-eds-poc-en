@@ -186,6 +186,36 @@
               }
             }
           }
+        },
+        {
+          "title": "Banner Form",
+          "id": "banner-form",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Banner Form",
+                  "filter": "banner-form"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner Form Item",
+          "id": "banner-form-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner Form Item",
+                  "filter": "banner-form-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
