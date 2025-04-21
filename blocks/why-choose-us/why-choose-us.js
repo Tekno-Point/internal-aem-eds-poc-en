@@ -22,14 +22,6 @@ export default function decorate(block) {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
-    // pagination: {
-    //   el: pagination,
-    //   clickable: true,
-    // },
-    // navigation: {
-    //   nextEl: nextBtn,
-    //   prevEl: prevBtn,
-    // },
   });
 
 }
