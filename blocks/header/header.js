@@ -119,7 +119,7 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['head','brand', 'sections', 'tools'];
+  const classes = ['head', 'brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
@@ -161,12 +161,150 @@ export default async function decorate(block) {
 
   const div = document.createElement("div");
   div.classList.add("nav-band-sections");
+  div.append(nav.querySelector(".nav-hamburger"));
   div.append(nav.querySelector('.nav-brand'))
   div.append(nav.querySelector('.nav-sections'))
   nav.append(div);
+
+  const navClass = nav.querySelectorAll(".nav-sections ul");
+  navClass.forEach((eleClass, index) => {
+    const div = document.createElement("div");
+    div.classList.add("nav-band-class-" + (index + 1));
+    eleClass.classList.add("nav-band-" + (index + 1));
+
+    eleClass.querySelectorAll('li').forEach((eleliClass, jindex) => {
+      eleliClass.classList.add("nav-band-" + (index + 1) + "-" + (jindex + 1))
+    })
+    const parentElementTemp = eleClass.parentElement;
+    div.append(eleClass)
+    parentElementTemp.append(div);
+  })
+
+  const eventOnNav = nav.querySelectorAll(".nav-band-1 li");
+  eventOnNav.forEach((element) => {
+    element.addEventListener("mouseover", (e, elementSub) => {
+      if (element.querySelector("p") != undefined) {
+        if (element.querySelector("p").textContent.trim() === "PAINTS") {
+          element.querySelector("div").style.display = "block";
+          element.querySelector(".nav-band-class-2").style.display = "block";
+
+          element.querySelector(".nav-band-class-2").addEventListener("mouseout", () => {
+            element.querySelector(".nav-band-class-2").style.display = "none";
+          })
+
+          nav.querySelector(".nav-band-class-3").style.display = "none";
+          nav.querySelector(".nav-band-class-4").style.display = "none";
+          nav.querySelector(".nav-band-class-5").style.display = "none";
+        } else if (element.querySelector("p").textContent.trim() === "COLOURS") {
+          element.querySelector("div").style.display = "block";
+          element.querySelector(".nav-band-class-3").style.display = "block";
+
+          element.querySelector(".nav-band-class-3").addEventListener("mouseout", () => {
+            element.querySelector(".nav-band-class-3").style.display = "none";
+          })
+          nav.querySelector(".nav-band-class-2").style.display = "none";
+          nav.querySelector(".nav-band-class-4").style.display = "none";
+          nav.querySelector(".nav-band-class-5").style.display = "none";
+
+        } else if (element.querySelector("p").textContent.trim() === "TOOLS") {
+          element.querySelector("div").style.display = "block";
+          element.querySelector(".nav-band-class-4").style.display = "block"
+
+          element.querySelector(".nav-band-class-4").addEventListener("mouseout", () => {
+            element.querySelector(".nav-band-class-4").style.display = "none";
+          })
+          nav.querySelector(".nav-band-class-3").style.display = "none";
+          nav.querySelector(".nav-band-class-2").style.display = "none";
+          nav.querySelector(".nav-band-class-5").style.display = "none";
+
+        } else if (element.querySelector("p").textContent.trim() === "WARRANTY REGISTRATION") {
+          element.querySelector("div").style.display = "block";
+          element.querySelector(".nav-band-class-5").style.display = "block";
+
+          element.querySelector(".nav-band-class-5").addEventListener("mouseout", () => {
+            element.querySelector(".nav-band-class-5").style.display = "none";
+          })
+          nav.querySelector(".nav-band-class-3").style.display = "none";
+          nav.querySelector(".nav-band-class-4").style.display = "none";
+          nav.querySelector(".nav-band-class-2").style.display = "none";
+        }
+      }
+    })
+  })
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
+    navWrapper.append(await buildBreadcrumbs());
+  }
+
+}
+
+
+function getDirectTextContent(menuItem) {
+  const menuLink = menuItem.querySelector(':scope > a');
+  if (menuLink) {
+    return menuLink.textContent.trim();
+  }
+  return Array.from(menuItem.childNodes)
+    .filter((n) => n.nodeType === Node.TEXT_NODE)
+    .map((n) => n.textContent)
+    .join(' ');
+}
+
+async function buildBreadcrumbsFromNavTree(nav, currentUrl) {
+  const crumbs = [];
+
+  const homeUrl = document.querySelector('.nav-brand a[href]').href;
+
+  let menuItem = Array.from(nav.querySelectorAll('a')).find((a) => a.href === currentUrl);
+  if (menuItem) {
+    do {
+      const link = menuItem.querySelector(':scope > a');
+      crumbs.unshift({ title: getDirectTextContent(menuItem), url: link ? link.href : null });
+      menuItem = menuItem.closest('ul')?.closest('li');
+    } while (menuItem);
+  } else if (currentUrl !== homeUrl) {
+    crumbs.unshift({ title: getMetadata('og:title'), url: currentUrl });
+  }
+
+  const placeholders = await fetchPlaceholders();
+  const homePlaceholder = placeholders.breadcrumbsHomeLabel || 'Home';
+
+  crumbs.unshift({ title: homePlaceholder, url: homeUrl });
+
+  // last link is current page and should not be linked
+  if (crumbs.length > 1) {
+    crumbs[crumbs.length - 1].url = null;
+  }
+  crumbs[crumbs.length - 1]['aria-current'] = 'page';
+  return crumbs;
+}
+
+async function buildBreadcrumbs() {
+  const breadcrumbs = document.createElement('nav');
+  breadcrumbs.className = 'breadcrumbs';
+
+  const crumbs = await buildBreadcrumbsFromNavTree(document.querySelector('.nav-sections'), document.location.href);
+
+  const ol = document.createElement('ol');
+  ol.append(...crumbs.map((item) => {
+    const li = document.createElement('li');
+    if (item['aria-current']) li.setAttribute('aria-current', item['aria-current']);
+    if (item.url) {
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.textContent = item.title;
+      li.append(a);
+    } else {
+      li.textContent = item.title;
+    }
+    return li;
+  }));
+
+  breadcrumbs.append(ol);
+  return breadcrumbs;
 }
