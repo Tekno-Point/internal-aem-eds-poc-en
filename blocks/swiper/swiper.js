@@ -28,11 +28,4 @@ export default function decorate(block) {
             type: 'bullets',
         }
     })
-    Array.from(document.querySelectorAll('.col1-div2 .swiper-container')).forEach(function (item, index) {
-        if (index !== 0) {
-            item.style.display = "none"
-        } else {
-            item.style.display = "block"
-        }
-    })
 }

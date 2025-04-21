@@ -1,5 +1,5 @@
 .accordion details {
-    border: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
   }
   
   /* stylelint-disable-next-line no-descending-specificity */
@@ -124,7 +124,7 @@ width: 200px !important;
   .left-container-items .left-container-item{
     list-style-type: none;
     padding: 16px 24px 24px;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid #BFC7E8;;
     display: flex;
     gap: 10px;
     justify-content: space-between;
@@ -168,3 +168,33 @@ width: 200px !important;
     font-weight: 400;
     line-height: 16px;
   }
+
+
+/* Mobile Style */
+@media (max-width: 480px) {
+  .accordion details summary::after {
+    content: "➕";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 24px;
+    /* height: 24px; */
+    border-radius: 50%;
+    /* background-color: #000; */
+    color: #fff;
+    transition: all 0.3s ease;
+    transform: none;
+  }
+
+  details[open] summary.accordion-item-label::after {
+    content: "➖";
+    transform: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
