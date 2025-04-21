@@ -15,7 +15,8 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "banner-image"
     ]
   },
   {
@@ -28,6 +29,12 @@
     "id": "columns",
     "components": [
       "column"
+    ]
+  },
+  {
+    "id": "banner-image",
+    "components": [
+      "banner-image-item"
     ]
   },
   {
