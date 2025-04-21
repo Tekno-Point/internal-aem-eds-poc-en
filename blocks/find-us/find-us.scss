@@ -7,6 +7,10 @@ main>.section.find-us-container {
     margin-top: 60px;
     margin-bottom: 60px;
 
+    @media (max-width: 768px) {
+        width: 89%;
+    }
+
     .find-us-wrapper {
         margin: 0;
         padding: 0;
@@ -19,6 +23,10 @@ main>.section.find-us-container {
             flex-direction: column;
             align-items: center;
             gap: 40px;
+
+            @media (max-width: 768px) {
+                gap: 24px;
+            }
 
             .find-us-container {
                 &.sec-1 {
@@ -33,6 +41,11 @@ main>.section.find-us-container {
                             font-size: 35px;
                             font-weight: 700;
                             line-height: 45.5px;
+
+                            @media (max-width: 768px) {
+                                font-size: var(--Typeface-Size-H3, 24px);
+                                line-height: 28.8px;
+                            }
                         }
                     }
                 }
@@ -40,6 +53,8 @@ main>.section.find-us-container {
                 &.sec-2 {
                     .sebtxt-1 {
                         ul {
+                            margin: 0;
+                            padding: 0;
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -47,6 +62,9 @@ main>.section.find-us-container {
                             gap: 16px;
                             flex-wrap: wrap;
                             list-style: none;
+                            @media (max-width: 768px){
+                                gap: 8px;
+                            }
 
                             li {
                                 a {
@@ -64,6 +82,11 @@ main>.section.find-us-container {
                                     font-style: normal;
                                     font-weight: 400;
                                     line-height: 15.6px;
+
+                                    @media (max-width: 768px) {
+                                        font-size: 11px;
+                                        line-height: 14.3px;
+                                    }
                                 }
                             }
                         }

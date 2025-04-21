@@ -48,9 +48,12 @@ main>.section.our-service-container {
 
     .our-service {
       display: flex;
-      // width: 1286px;
       align-items: flex-start;
       gap: 80px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
 
       .tabs-list {
         display: flex;

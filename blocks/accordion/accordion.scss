@@ -7,7 +7,13 @@ main>.section.accordion-container {
     margin: 0 auto;
     margin-top: 72px;
     margin-bottom: 72px;
-    gap: 111px;
+    gap: 80px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        width: 89%;
+        gap: 32px;
+    }
 
     .default-content-wrapper {
         width: 30%;
@@ -16,6 +22,10 @@ main>.section.accordion-container {
         height: auto;
         border-radius: 16px;
         background: var(--Primary-P25, #FDE8ED);
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
 
         ul {
             // width: 100%;
@@ -30,6 +40,10 @@ main>.section.accordion-container {
             flex-shrink: 0;
             list-style: none;
 
+            @media (max-width: 768px) {
+                padding: 24px 32px;
+            }
+
             li {
                 display: flex;
                 justify-content: flex-end;
@@ -43,16 +57,31 @@ main>.section.accordion-container {
                 &:nth-child(1) {
                     font-size: 44px;
                     line-height: 52.8px;
+
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                        line-height: 20.8px;
+                    }
                 }
 
                 &:nth-child(2) {
                     font-size: 16px;
                     line-height: 20.8px;
+
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                        line-height: 20.8px;
+                    }
                 }
 
                 &:nth-child(3) {
                     font-size: 28px;
                     line-height: 36.4px;
+
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                        line-height: 20.8px;
+                    }
                 }
 
                 &:nth-child(4) {
@@ -64,6 +93,11 @@ main>.section.accordion-container {
                     text-decoration-thickness: auto;
                     text-underline-offset: auto;
                     text-underline-position: from-font;
+
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                        line-height: 20.8px;
+                    }
                 }
             }
         }
@@ -73,6 +107,10 @@ main>.section.accordion-container {
         width: 55%;
         padding: 0;
         margin: 0;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
 
         .accordion {
             display: flex;
@@ -161,6 +199,11 @@ main>.section.accordion-container {
                             font-weight: 400;
                             line-height: 16px;
                             padding-right: 99px;
+
+                            @media (max-width: 768px) {
+                                padding-right: 40px;
+                                line-height: 22px;
+                            }
                         }
                     }
 

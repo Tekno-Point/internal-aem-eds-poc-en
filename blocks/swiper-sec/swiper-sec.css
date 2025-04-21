@@ -7,9 +7,23 @@ main > .section.swiper-sec-container {
   height: 100%;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  main > .section.swiper-sec-container {
+    max-width: 89%;
+  }
+}
 main > .section.swiper-sec-container .default-content-wrapper {
   width: 100%;
   padding-bottom: 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  main > .section.swiper-sec-container .default-content-wrapper {
+    padding-bottom: 7px;
+  }
 }
 main > .section.swiper-sec-container .default-content-wrapper p {
   padding: 0;
@@ -24,10 +38,23 @@ main > .section.swiper-sec-container .default-content-wrapper p:nth-child(1) {
   line-height: 45.5px;
   padding-bottom: 16px;
 }
+@media (max-width: 768px) {
+  main > .section.swiper-sec-container .default-content-wrapper p:nth-child(1) {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+}
 main > .section.swiper-sec-container .default-content-wrapper p:nth-child(2) {
   font-size: 24px;
   font-weight: 700;
   line-height: 28.8px;
+}
+@media (max-width: 768px) {
+  main > .section.swiper-sec-container .default-content-wrapper p:nth-child(2) {
+    width: 242px;
+    font-size: 16px;
+    line-height: 20.8px;
+  }
 }
 main > .section.swiper-sec-container .swiper-sec-wrapper {
   padding: 0;
@@ -55,6 +82,11 @@ main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wra
   border-radius: 16px;
   background: var(--Neutrals-N30, #EBECEF);
 }
+@media (max-width: 768px) {
+  main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide {
+    width: 253px !important;
+  }
+}
 main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide-cards-1 {
   width: 100%;
 }
@@ -76,6 +108,12 @@ main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wra
   line-height: 16px;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 768px) {
+  main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide-cards-2 p:first-child {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide-cards-2 .button-container,
 main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide-cards-2 .button {
@@ -130,11 +168,14 @@ main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wra
 }
 main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-pagination {
   bottom: -9px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-pagination .swiper-pagination-bullet {
   width: 111px;
   height: 3px;
   background-color: #F6A1B6;
+  border-radius: unset;
 }
 main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #E91A4E;

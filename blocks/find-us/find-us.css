@@ -7,6 +7,11 @@ main > .section.find-us-container {
   margin-top: 60px;
   margin-bottom: 60px;
 }
+@media (max-width: 768px) {
+  main > .section.find-us-container {
+    width: 89%;
+  }
+}
 main > .section.find-us-container .find-us-wrapper {
   margin: 0;
   padding: 0;
@@ -20,6 +25,11 @@ main > .section.find-us-container .find-us-wrapper .find-us {
   align-items: center;
   gap: 40px;
 }
+@media (max-width: 768px) {
+  main > .section.find-us-container .find-us-wrapper .find-us {
+    gap: 24px;
+  }
+}
 main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-1 {
   text-align: center;
 }
@@ -32,7 +42,15 @@ main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.s
   font-weight: 700;
   line-height: 45.5px;
 }
+@media (max-width: 768px) {
+  main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-1 .sebtxt-1 h2 {
+    font-size: var(--Typeface-Size-H3, 24px);
+    line-height: 28.8px;
+  }
+}
 main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-2 .sebtxt-1 ul {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,6 +58,11 @@ main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.s
   gap: 16px;
   flex-wrap: wrap;
   list-style: none;
+}
+@media (max-width: 768px) {
+  main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-2 .sebtxt-1 ul {
+    gap: 8px;
+  }
 }
 main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-2 .sebtxt-1 ul li a {
   display: flex;
@@ -56,4 +79,10 @@ main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.s
   font-style: normal;
   font-weight: 400;
   line-height: 15.6px;
+}
+@media (max-width: 768px) {
+  main > .section.find-us-container .find-us-wrapper .find-us .find-us-container.sec-2 .sebtxt-1 ul li a {
+    font-size: 11px;
+    line-height: 14.3px;
+  }
 }/*# sourceMappingURL=find-us.css.map */

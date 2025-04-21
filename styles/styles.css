@@ -313,7 +313,11 @@ main>.section.tab-section {
   overflow-x: auto;
 }
 
-.section.tab-section .default-content-wrapper ul li{
+.section.tab-section .default-content-wrapper ul::-webkit-scrollbar {
+  display: none;
+}
+
+.section.tab-section .default-content-wrapper ul li {
   display: flex;
   align-items: center;
   justify-content: center;

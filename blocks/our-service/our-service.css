@@ -45,6 +45,11 @@ main > .section.our-service-container .our-service-wrapper .our-service {
   align-items: flex-start;
   gap: 80px;
 }
+@media (max-width: 768px) {
+  main > .section.our-service-container .our-service-wrapper .our-service {
+    flex-direction: column;
+  }
+}
 main > .section.our-service-container .our-service-wrapper .our-service .tabs-list {
   display: flex;
   flex-direction: column;
