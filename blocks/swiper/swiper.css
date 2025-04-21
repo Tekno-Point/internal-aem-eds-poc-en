@@ -5,6 +5,12 @@
     height: 300px;
   }
   
-/* .swiper img{
+.swiper img{
     height: 200px;
-} */
+    width: 250px;
+}
+
+.swiper-container{
+  display: flex;
+  flex-direction: column-reverse;
+}
