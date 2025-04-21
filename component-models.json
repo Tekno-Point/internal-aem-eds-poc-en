@@ -112,10 +112,6 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "Banner Form Container",
-            "value": "banner-form-container"
           }
         ]
       }
