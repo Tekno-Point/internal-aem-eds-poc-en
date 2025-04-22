@@ -273,10 +273,9 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-/* .header-wrapper,
-.footer-wrapper {
+.header-wrapper {
   display: none;
-} */
+}
 
 /* tab-section css start */
 main>.section.tab-section {
