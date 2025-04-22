@@ -4,6 +4,10 @@
     "fields": [
       {
         "component": "text",
+        "name": "og:title",
+        "label": "asdfg "
+      },{
+        "component": "text",
         "name": "og:timepass",
         "label": "OG Time Pass"
       },
