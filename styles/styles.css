@@ -377,3 +377,7 @@ main>.section.tab-section {
 }
 
 /* tab-section css start */
+
+.header-wrapper {
+  display: none;
+} 
