@@ -110,17 +110,17 @@ body .header-wrapper,
         height: 100%;
     }
 
-    .banner-image-swiper>div div:nth-child(1) img {
+    .banner-image-swiper>div >div:nth-child(1) img {
         /* width: 535px; */
         width: 495px;
         height: 462px;
     }
 
-    .banner-image-swiper>div div:nth-child(2) {
+    .banner-image-swiper>div >div:nth-child(2) {
         left: 25px;
     }
 
-    .banner-image-swiper>div div:nth-child(1)::after {
+    .banner-image-swiper>div >div:nth-child(1)::after {
         background-position: top right;
     }
 }
