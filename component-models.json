@@ -196,37 +196,49 @@
     ]
   },
   {
-    "id": "banner-image-item",
+    "id": "banner-image-deskItem",
     "fields": [
       {
         "component": "reference",
         "valueType": "string",
         "name": "col1_deskImage",
-        "label": "Desk Image"
+        "label": "Desktop Image"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "col1_deskImageAlt",
-        "label": "Desk Image Alt",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col2_mobImage",
-        "label": "Mob Image"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col2_mobImageAlt",
-        "label": "Mob Image Alt",
+        "label": "Desktop Image Alt",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "col3_text",
+        "name": "2",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "banner-image-mobItem",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_mobImage",
+        "label": "Mobile Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_mobImageAlt",
+        "label": "Mobile Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
         "value": "",
         "label": "Text",
         "valueType": "string"

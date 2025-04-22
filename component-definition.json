@@ -173,15 +173,30 @@
           }
         },
         {
-          "title": "Banner Image Item",
-          "id": "banner-image-item",
+          "title": "Banner Image Desktop Item",
+          "id": "banner-image-deskItem",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Banner Image Item",
-                  "model": "banner-image-item"
+                  "name": "Banner Image Desktop Item",
+                  "model": "banner-image-deskItem"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner Image Mobile Item",
+          "id": "banner-image-mobItem",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner Image Mobile Item",
+                  "model": "banner-image-mobItem"
                 }
               }
             }
