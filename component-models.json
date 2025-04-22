@@ -3,9 +3,34 @@
     "id": "page-metadata",
     "fields": [
       {
-        "component": "reference",
-        "name": "image",
-        "label": "Image"
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "name": "theme",
+        "label": "Theme"
+      },
+      {
+        "component": "text",
+        "name": "twitter-title",
+        "label": "Twitter Title"
+      },
+      {
+        "component": "text",
+        "name": "facebook:title",
+        "label": "Facebook Title"
+      },
+      {
+        "component": "text",
+        "name": "canonical",
+        "label": "Canonical URL"
       }
     ]
   },
