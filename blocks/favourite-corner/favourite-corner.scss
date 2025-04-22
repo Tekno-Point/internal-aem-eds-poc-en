@@ -6,7 +6,8 @@ main>.section.favourite-corner-container {
     margin: 0 auto;
 
     @media (max-width: 768px) {
-        width: 89%;
+        width: 100%;
+        padding: 40px 20px;
     }
 
     .favourite-corner-wrapper {

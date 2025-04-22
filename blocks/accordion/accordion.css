@@ -5,14 +5,20 @@ main > .section.accordion-container {
   justify-content: space-between;
   align-items: stretch;
   margin: 0 auto;
-  margin-top: 72px;
-  margin-bottom: 72px;
+  padding-top: 72px;
+  padding-bottom: 72px;
   gap: 80px;
+}
+@media (max-width: 1025px) {
+  main > .section.accordion-container {
+    gap: 40px;
+  }
 }
 @media (max-width: 768px) {
   main > .section.accordion-container {
     flex-direction: column;
-    width: 89%;
+    width: 100%;
+    padding: 40px 20px;
     gap: 32px;
   }
 }
@@ -23,6 +29,11 @@ main > .section.accordion-container .default-content-wrapper {
   height: auto;
   border-radius: 16px;
   background: var(--Primary-P25, #FDE8ED);
+}
+@media (max-width: 1025px) {
+  main > .section.accordion-container .default-content-wrapper {
+    width: 35%;
+  }
 }
 @media (max-width: 768px) {
   main > .section.accordion-container .default-content-wrapper {
@@ -41,7 +52,7 @@ main > .section.accordion-container .default-content-wrapper ul {
   flex-shrink: 0;
   list-style: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
   main > .section.accordion-container .default-content-wrapper ul {
     padding: 24px 32px;
   }
@@ -56,9 +67,20 @@ main > .section.accordion-container .default-content-wrapper ul li {
   font-weight: 700;
   line-height: 52.8px;
 }
+@media (max-width: 1025px) {
+  main > .section.accordion-container .default-content-wrapper ul li {
+    gap: 8px;
+  }
+}
 main > .section.accordion-container .default-content-wrapper ul li:nth-child(1) {
   font-size: 44px;
   line-height: 52.8px;
+}
+@media (max-width: 1025px) {
+  main > .section.accordion-container .default-content-wrapper ul li:nth-child(1) {
+    font-size: 29px;
+    line-height: 30.8px;
+  }
 }
 @media (max-width: 768px) {
   main > .section.accordion-container .default-content-wrapper ul li:nth-child(1) {
@@ -70,6 +92,12 @@ main > .section.accordion-container .default-content-wrapper ul li:nth-child(2) 
   font-size: 16px;
   line-height: 20.8px;
 }
+@media (max-width: 1025px) {
+  main > .section.accordion-container .default-content-wrapper ul li:nth-child(2) {
+    font-size: 14px;
+    line-height: 19.8px;
+  }
+}
 @media (max-width: 768px) {
   main > .section.accordion-container .default-content-wrapper ul li:nth-child(2) {
     font-size: 16px;
@@ -79,6 +107,12 @@ main > .section.accordion-container .default-content-wrapper ul li:nth-child(2) 
 main > .section.accordion-container .default-content-wrapper ul li:nth-child(3) {
   font-size: 28px;
   line-height: 36.4px;
+}
+@media (max-width: 1025px) {
+  main > .section.accordion-container .default-content-wrapper ul li:nth-child(3) {
+    font-size: 18px;
+    line-height: 20.8px;
+  }
 }
 @media (max-width: 768px) {
   main > .section.accordion-container .default-content-wrapper ul li:nth-child(3) {
@@ -97,6 +131,12 @@ main > .section.accordion-container .default-content-wrapper ul li:nth-child(4) 
   text-underline-offset: auto;
   text-underline-position: from-font;
 }
+@media (max-width: 1025px) {
+  main > .section.accordion-container .default-content-wrapper ul li:nth-child(4) {
+    font-size: 18px;
+    line-height: 20.8px;
+  }
+}
 @media (max-width: 768px) {
   main > .section.accordion-container .default-content-wrapper ul li:nth-child(4) {
     font-size: 16px;
@@ -107,6 +147,11 @@ main > .section.accordion-container .accordion-wrapper {
   width: 55%;
   padding: 0;
   margin: 0;
+}
+@media (max-width: 1024px) {
+  main > .section.accordion-container .accordion-wrapper {
+    width: 60%;
+  }
 }
 @media (max-width: 768px) {
   main > .section.accordion-container .accordion-wrapper {

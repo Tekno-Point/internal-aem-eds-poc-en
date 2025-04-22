@@ -285,8 +285,16 @@ main>.section.tab-section {
   max-width: 100%;
   width: 94.12%;
   margin: 0 auto;
-  margin-top: 54px;
-  margin-bottom: 54px;
+  padding-top: 54px;
+  /* padding-bottom: 54px; */
+}
+
+@media (max-width:768px) {
+  main>.section.tab-section {
+    width: 100%;
+    padding: 40px 0px;
+    margin: 0;
+  }
 }
 
 .section.tab-section .default-content-wrapper {
@@ -301,6 +309,12 @@ main>.section.tab-section {
   gap: 34px;
   align-self: stretch;
   background: #D2D8EF;
+}
+
+@media (max-width:768px) {
+  .section.tab-section .default-content-wrapper {
+    width: 100%;
+  }
 }
 
 .section.tab-section .default-content-wrapper ul {

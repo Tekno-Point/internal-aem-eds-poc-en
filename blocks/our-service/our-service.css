@@ -5,8 +5,14 @@ main > .section.our-service-container {
   max-width: 100%;
   width: 94.12%;
   margin: 0 auto;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 768px) {
+  main > .section.our-service-container {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 main > .section.our-service-container > .default-content-wrapper {
   width: auto;
@@ -45,6 +51,11 @@ main > .section.our-service-container .our-service-wrapper .our-service {
   align-items: flex-start;
   gap: 80px;
 }
+@media (max-width: 1025px) {
+  main > .section.our-service-container .our-service-wrapper .our-service {
+    gap: 24px;
+  }
+}
 @media (max-width: 768px) {
   main > .section.our-service-container .our-service-wrapper .our-service {
     flex-direction: column;
@@ -60,14 +71,14 @@ main > .section.our-service-container .our-service-wrapper .our-service .tabs-li
   align-items: flex-start;
   flex-shrink: 0;
 }
-@media (width >= 600px) {
+@media (max-width: 1025px) {
   main > .section.our-service-container .our-service-wrapper .our-service .tabs-list {
-    font-size: var(--body-font-size-s);
+    width: 304px;
   }
 }
-@media (width >= 900px) {
+@media (max-width: 768px) {
   main > .section.our-service-container .our-service-wrapper .our-service .tabs-list {
-    font-size: var(--body-font-size-m);
+    width: 100%;
   }
 }
 main > .section.our-service-container .our-service-wrapper .our-service .tabs-list .tabs-tab {
@@ -87,6 +98,11 @@ main > .section.our-service-container .our-service-wrapper .our-service .tabs-li
   border-radius: unset;
   background: var(--Primary-Clean-White, #FFF);
   border-bottom: 1px solid #BFC7E8;
+}
+@media (max-width: 768px) {
+  main > .section.our-service-container .our-service-wrapper .our-service .tabs-list .tabs-tab {
+    border: unset;
+  }
 }
 main > .section.our-service-container .our-service-wrapper .our-service .tabs-list .tabs-tab p {
   margin: 0;
@@ -120,6 +136,43 @@ main > .section.our-service-container .our-service-wrapper .our-service .tabs-li
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  main > .section.our-service-container .our-service-wrapper .our-service .tabs-list .tabs-tab[aria-selected=true]::after {
+    display: none;
+  }
+}
+main > .section.our-service-container .our-service-wrapper .our-service .tabs-list .tabs-wrapper {
+  display: flex;
+  padding: 12px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-bottom: 1px solid #BFC7E8;
+}
+main > .section.our-service-container .our-service-wrapper .our-service .tabs-list .tabs-wrapper .tabs-tab::after {
+  content: "";
+  background-image: url(/icons/plus-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: 1px solid #667288;
+  border-radius: 50%;
+}
+main > .section.our-service-container .our-service-wrapper .our-service .tabs-list .tabs-wrapper .tabs-tab[aria-selected=true]::after {
+  background-image: url(/icons/negative-icon.svg);
+  background-size: 40%;
+}
+main > .section.our-service-container .our-service-wrapper .our-service .tabs-list .tabs-wrapper .tabs-panel {
+  padding-left: 24px;
 }
 main > .section.our-service-container .our-service-wrapper .our-service .tabs-panels-wrapper {
   height: 100%;
@@ -162,6 +215,11 @@ main > .section.our-service-container .our-service-wrapper .our-service .tabs-pa
 main > .section.our-service-container .our-service-wrapper .our-service .tabs-panel .button-container .swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide {
   width: 32.7%;
   border-radius: 16px;
+}
+@media (max-width: 1025px) {
+  main > .section.our-service-container .our-service-wrapper .our-service .tabs-panel .button-container .swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide {
+    width: 45%;
+  }
 }
 main > .section.our-service-container .our-service-wrapper .our-service .tabs-panel .button-container .swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide img {
   width: 100%;

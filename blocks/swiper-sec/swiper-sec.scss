@@ -11,7 +11,8 @@ main>.section.swiper-sec-container {
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    max-width: 89%;
+    width: 100%;
+    padding: 0 20px;
   }
 
   .default-content-wrapper {

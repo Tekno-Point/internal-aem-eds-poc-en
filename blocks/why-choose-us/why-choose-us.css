@@ -5,12 +5,13 @@ main > .section.why-choose-us-container {
   max-width: 100%;
   width: 87.3%;
   margin: 0 auto;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 }
 @media (max-width: 768px) {
   main > .section.why-choose-us-container {
-    width: 89%;
-    margin-bottom: 56px;
+    width: 100%;
+    padding: 0 20px;
+    padding-bottom: 40px;
   }
 }
 main > .section.why-choose-us-container .default-content-wrapper {
@@ -128,7 +129,7 @@ main > .section.why-choose-us-container .why-choose-us-wrapper .why-choose-us .s
 }
 main > .section.why-choose-us-container .why-choose-us-wrapper .why-choose-us .swiper-wrapper .swiper-slide {
   position: relative;
-  width: 24% !important;
+  width: 286.047px !important;
   display: flex;
   height: 100%;
   align-items: center;
