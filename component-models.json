@@ -196,19 +196,7 @@
     ]
   },
   {
-    "id": "banner-image",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Banner Text Content",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "banner-image-deskItem",
+    "id": "banner-image-item",
     "fields": [
       {
         "component": "reference",
@@ -222,24 +210,26 @@
         "name": "col1_deskImageAlt",
         "label": "Desktop Image Alt",
         "value": ""
-      }
-    ]
-  },
-  {
-    "id": "banner-image-mobItem",
-    "fields": [
+      },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_mobImage",
+        "name": "col2_mobImage",
         "label": "Mobile Image"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_mobImageAlt",
+        "name": "col2_mobImageAlt",
         "label": "Mobile Image Alt",
         "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col3_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },

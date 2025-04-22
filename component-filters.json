@@ -35,8 +35,7 @@
   {
     "id": "banner-image",
     "components": [
-      "banner-image-deskItem",
-      "banner-image-mobItem"
+      "banner-image-item"
     ]
   },
   {
