@@ -210,13 +210,6 @@
         "name": "col1_deskImageAlt",
         "label": "Desktop Image Alt",
         "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "2",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -235,13 +228,6 @@
         "name": "col1_mobImageAlt",
         "label": "Mobile Image Alt",
         "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "col2_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
