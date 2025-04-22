@@ -1,0 +1,281 @@
+@import url('../testimonial/swiper-bundle.min.css');
+@import "../common-themes/css/fluid-typography";
+@import "../common-themes/css/variables_mixins";
+
+main>.section.why-choose-us-container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 87.3%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+
+    @media (max-width: 768px) {
+        width: auto;
+        // margin-bottom: 56px;
+        padding: 0 20px;
+        padding-bottom: 40px;
+    }
+
+    .default-content-wrapper {
+        padding-bottom: 64px;
+        max-width: 100%;
+        padding: 0;
+        padding-bottom: 20px;
+
+        h3 {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 16px;
+            color: #0D2042;
+            font-family: var(--Typeface-Family-Heading, Manrope);
+            font-size: 35px;
+            font-weight: 700;
+            line-height: 45.5px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                line-height: 28.8px;
+            }
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            color: #0D2042;
+            font-family: var(--Typeface-Family-Heading, Manrope);
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28.8px;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                font-size: 21px;
+                line-height: 20.8px;
+            }
+
+            &:nth-child(1) {
+                font-size: 24px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                line-height: 27.3px;
+
+                @media (max-width: 768px) {}
+            }
+        }
+
+        & .button-container {
+            width: 100%;
+            padding-top: 27px;
+
+            .button {
+                margin: 0;
+                padding: 0;
+                display: inline-flex;
+                padding: 16px 32px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 16px;
+                border: 1px solid var(--Secondary-S500, #001438);
+                background: var(--Primary-Clean-White, #FFF);
+                color: #001438;
+                font-size: 14px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                line-height: 16px;
+
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                    line-height: 16px;
+                    padding: 16px 32px;
+                    gap: 8px;
+                }
+
+                &::after {
+                    content: "";
+                    background-image: url(/icons/arrow-right-black.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                    display: flex;
+                    width: 16px;
+                    height: 16px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;
+
+                }
+            }
+        }
+
+    }
+
+    .why-choose-us-wrapper {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        .why-choose-us {
+            overflow: hidden;
+            padding-bottom: 35px;
+            height: auto;
+
+            @media (max-width: 768px) {
+                padding-bottom: 25px;
+            }
+
+            &.swiper.swiper-initialized {
+                .swiper-wrapper {
+                    gap: unset;
+                }
+            }
+
+            .swiper-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+
+                .swiper-slide {
+                    position: relative;
+                    width: 286.047px !important;
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    gap: 18px;
+                    flex-shrink: 0;
+                    border-radius: 16px;
+                    height: auto;
+                    overflow: hidden;
+
+                    @media (max-width: 768px) {
+                        width: 220.954px !important;
+                        height: auto;
+                    }
+
+                    &-cards-1 {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 12px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    &-cards-2 {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        bottom: 10px;
+                        display: flex;
+                        align-items: flex-end;
+                        border-radius: 12px;
+                        background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 13.86%, rgba(0, 0, 0, 0.00) 45.01%);
+
+                        & p:first-child {
+                            width: 100%;
+                            color: #FFF;
+                            font-family: "raleway", sans-serif;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            line-height: 20.8px;
+                            padding: 0;
+                            margin: 0px 79px 18px 24px;
+                        }
+
+                        .button-container,
+                        .button {
+                            padding: 0;
+                            margin: 0;
+                        }
+
+                        .button-container {
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 4px;
+                        }
+
+                        .button {
+                            background: transparent;
+                            display: flex;
+                            justify-content: center;
+                            gap: 4px;
+                            color: #2E3E5C;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 15.6px;
+
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 16px;
+                                height: 16px;
+                                background-image: url(/icons/material-symbols_star.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: 100%;
+                            }
+                        }
+                    }
+
+                    &-cards-3 {
+                        position: absolute;
+                        left: 50%;
+                        top: 40%;
+                        transform: translate(-50%, -50%);
+
+                        .button-container {
+                            margin: 0;
+                            padding: 0;
+
+                            .button {
+                                background: transparent;
+
+                                .icon {
+                                    width: 42px;
+                                    height: 54px;
+                                    flex-shrink: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                bottom: -9px;
+
+                @media (max-width: 768px) {
+                    bottom: 10px;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                }
+
+                .swiper-pagination-bullet {
+                    width: 111px;
+                    height: 3px;
+                    background-color: #F6A1B6;
+                    border-radius: unset;
+
+                    &-active {
+                        background-color: #E91A4E;
+                        width: 111px;
+                        height: 3px;
+                        border-radius: 20px;
+                        width: 111px;
+                    }
+                }
+            }
+        }
+    }
+}

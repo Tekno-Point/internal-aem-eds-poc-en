@@ -114,6 +114,18 @@
             "value": "highlight"
           },
           {
+            "name": "Tab section",
+            "value": "tab-section"
+          },
+          {
+            "name": "Why Choose Us",
+            "value": "why-chooseus"
+          },
+          {
+            "name": "Find Us",
+            "value": "find-us"
+          },
+          {
             "name": "Banner Form Container",
             "value": "banner-form-container"
           },
@@ -136,6 +148,18 @@
           {
             "name": "Footer Bottom Section",
             "value": "footer-bottom-section"
+          },
+          {
+            "name": "Tab section",
+            "value": "tab-section"
+          },
+          {
+            "name": "Why Choose Us",
+            "value": "why-chooseus"
+          },
+          {
+            "name": "Find Us",
+            "value": "find-us"
           }
         ]
       }
@@ -216,12 +240,360 @@
     ]
   },
   {
-    "id": "tabsitem",
+    "id": "embed",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "XCL World Academy",
+            "children": [
+              {
+                "name": "Hero Video Banner",
+                "value": "hero-video-banner"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "component": "reference",
+        "name": "video_image",
+        "label": "Video Image"
+      },
+      {
+        "component": "text",
+        "name": "video_imageAlt",
+        "label": "Video Image Alt"
+      },
+      {
+        "component": "text",
+        "name": "video_imageTitle",
+        "label": "Video Image Title"
+      }
+    ]
+  },
+  {
+    "id": "newcarousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "One Slide Only",
+                "value": "one-slide-only"
+              },
+              {
+                "name": "Two Slides Only",
+                "value": "two-slides-only"
+              },
+              {
+                "name": "Three Slides Only",
+                "value": "three-slides-only"
+              },
+              {
+                "name": "Reviews",
+                "value": "reviews"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "boolean",
+        "label": "Infinite",
+        "name": "infinite",
+        "value": "",
+        "valueType": "boolean"
+      },
+      {
+        "component": "reference",
+        "name": "prevIcon",
+        "label": "Prev Icon"
+      },
+      {
+        "component": "reference",
+        "name": "nextIcon",
+        "label": "Next Icon"
+      }
+    ]
+  },
+  {
+    "id": "newcarousel-item",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "newcarousel Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "One Slide Only",
+                "value": "one-slide-only"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "carousel_desk-image",
+        "label": "Desktop Image",
+        "description": "The Desktop image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "carousel_desk-imageAlt",
+        "label": "The Desktop image alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "newcarousel_mob-image",
+        "label": "Mobile Image",
+        "description": "The Mobile image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "newcarousel_mob-imageAlt",
+        "label": "The Mobile image alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "newCarousel Heading"
+      },
+      {
+        "component": "select",
+        "name": "headingType",
+        "label": "newCarousel Heading Type",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Description",
+        "raw": true
+      },
+      {
+        "component": "text",
+        "name": "embedLink",
+        "label": "Video Link"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "id": "swiper-sec-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Description",
+        "raw": true
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "type": "accordion/text",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "question",
+        "label": "Question"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "answer",
+        "label": "Answer",
+        "raw": true
+      }
+    ]
+  },
+  {
+    "id": "dream-home",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "favourite-corner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "find-us",
+    "type": "findus/text",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "title",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "label": "Tabtext",
+        "raw": true
+      }
+    ]
+  },
+  {
+    "id": "why-choose-us-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Heading",
+        "raw": true
+      }
+    ]
+  },
+  {
+    "id": "our-service-item",
     "fields": [
       {
         "component": "text",
         "name": "title",
-        "label": "Tab Title"
+        "label": "Tab Title",
+        "multi": false
       },
       {
         "component": "aem-content",

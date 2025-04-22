@@ -355,6 +355,218 @@
               }
             }
           }
+        },
+        {
+          "title": "Embed",
+          "id": "embed",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Embed",
+                  "model": "embed"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "newcarousel",
+          "id": "newcarousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "newcarousel",
+                  "model": "newcarousel",
+                  "filter": "newcarousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "newcarousel Item",
+          "id": "newcarousel-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "newcarousel Item",
+                  "model": "newcarousel-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "swiper sec",
+          "id": "swiper-sec",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "swiper sec",
+                  "filter": "swiper-sec"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "swiper sec item",
+          "id": "swiper-sec-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "swiper sec item",
+                  "model": "swiper-sec-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "accordion",
+          "id": "accordion",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "accordion",
+                  "filter": "accordion"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "accordion item",
+          "id": "accordion-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "accordion item",
+                  "model": "accordion-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Dream Home",
+          "id": "dream-home",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Dream Home",
+                  "model": "dream-home"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Favourite Corner",
+          "id": "favourite-corner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Favourite Corner",
+                  "model": "favourite-corner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Find Us",
+          "id": "find-us",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Find Us",
+                  "model": "find-us"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Why Choose Us",
+          "id": "why-choose-us",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Why Choose Us",
+                  "filter": "why-choose-us"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Why Choose Us item",
+          "id": "why-choose-us-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Why Choose Us item",
+                  "model": "why-choose-us-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Our Service",
+          "id": "our-service",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Our Service",
+                  "filter": "our-service",
+                  "model":"our-service"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Our Service Item",
+          "id": "our-service-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Our Service Item",
+                  "model": "our-service-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
