@@ -196,7 +196,7 @@
     ]
   },
   {
-    "id": "banner-image-deskItem",
+    "id": "banner-image-item",
     "fields": [
       {
         "component": "reference",
