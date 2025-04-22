@@ -115,12 +115,13 @@ body .header-wrapper,
         width: 495px;
         height: 462px;
     }
-
-    .banner-image-swiper>div >div:nth-child(2) {
-        left: 25px;
-    }
-
+    
     .banner-image-swiper>div >div:nth-child(1)::after {
         background-position: top right;
     }
+    
+    .banner-image-swiper>div >div:nth-child(3) {
+        left: 25px;
+    }
+
 }
