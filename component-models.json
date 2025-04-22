@@ -214,19 +214,19 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_mobImage",
+        "name": "col2_mobImage",
         "label": "Mob Image"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_mobImageAlt",
+        "name": "col2_mobImageAlt",
         "label": "Mob Image Alt",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "col2_text",
+        "name": "col3_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
