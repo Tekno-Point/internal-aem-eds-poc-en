@@ -1,5 +1,20 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "og:image:height",
+        "label": "OG Image Height"
+      },
+      {
+        "component": "text",
+        "name": "og:image:width",
+        "label": "OG Image Width"
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
