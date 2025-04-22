@@ -11,6 +11,11 @@
         "component": "text",
         "name": "og:image:width",
         "label": "OG Image Width"
+      },
+      {
+        "component": "text",
+        "name": "new-title",
+        "label": "new title"
       }
     ]
   },
