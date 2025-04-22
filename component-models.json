@@ -202,26 +202,26 @@
         "component": "reference",
         "valueType": "string",
         "name": "col1_deskImage",
-        "label": "Image"
+        "label": "Desk Image"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "col1_deskImageAlt",
-        "label": "Alt",
+        "label": "Desk Image Alt",
         "value": ""
       },
       {
         "component": "reference",
         "valueType": "string",
         "name": "col1_mobImage",
-        "label": "Image"
+        "label": "Mob Image"
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "col1_mobImageAlt",
-        "label": "Alt",
+        "label": "Mob Image Alt",
         "value": ""
       },
       {
