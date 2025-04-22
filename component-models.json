@@ -196,6 +196,18 @@
     ]
   },
   {
+    "id": "banner-image",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Banner Text Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "banner-image-deskItem",
     "fields": [
       {
