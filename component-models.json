@@ -124,6 +124,42 @@
           {
             "name": "Find Us",
             "value": "find-us"
+          },
+          {
+            "name": "Banner Form Container",
+            "value": "banner-form-container"
+          },
+          {
+            "name": "Footer Section",
+            "value": "footer-section"
+          },
+          {
+            "name": "Footer Top Section",
+            "value": "footer-top-desk"
+          },
+          {
+            "name": "Footer Middle Desktop Section",
+            "value": "footer-middle-desk"
+          },
+          {
+            "name": "Footer Middle Mobile Section",
+            "value": "footer-middle-mobile"
+          },
+          {
+            "name": "Footer Bottom Section",
+            "value": "footer-bottom-section"
+          },
+          {
+            "name": "Tab section",
+            "value": "tab-section"
+          },
+          {
+            "name": "Why Choose Us",
+            "value": "why-chooseus"
+          },
+          {
+            "name": "Find Us",
+            "value": "find-us"
           }
         ]
       }
@@ -563,6 +599,134 @@
         "component": "aem-content",
         "name": "link",
         "label": "Fragment URL"
+      }
+    ]
+  },
+  {
+    "id": "swiper",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "accordionitem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Accordion Title"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Accordion Body",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "banner-image-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "banner-form-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "footer-block",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Select Class",
+        "valueType": "string",
+        "options": [
+          { "name": "Footer Middle", "value": "footer-middle" },
+          { "name": "Footer Bottom", "value": "footer-bottom" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "footer-block-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "footer-accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Accordion Title"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Accordion Title Type",
+        "options": [
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }

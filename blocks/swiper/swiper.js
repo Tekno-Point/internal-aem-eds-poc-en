@@ -1,0 +1,31 @@
+import Swiper from "../swiper/swiper-bundle.min.js"
+
+export default function decorate(block) {
+    block.classList.add('swiper')
+    const Div = document.createElement('div')
+    Div.classList.add('swiper-wrapper')
+    Array.from(block.children).forEach((item) => {
+        item.classList.add('swiper-slide')
+        Div.append(item)
+    })
+    block.append(Div)
+
+    // Pagination
+    const DivPagination = document.createElement('div')
+    DivPagination.classList.add('swiper-pagination')
+    block.append(DivPagination)
+
+    Swiper(block, {
+        direction: 'horizontal',
+        slidesPerView: 2.5,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 1000,
+        },
+        pagination: {
+            el: DivPagination,
+            type: 'bullets',
+        }
+    })
+}

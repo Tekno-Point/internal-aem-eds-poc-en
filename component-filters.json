@@ -22,8 +22,27 @@
       "favourite-corner",
       "find-us",
       "why-choose-us",
-      "our-service"
+      "our-service",
+      "tabs",
+      "accordion",
+      "swiper",
+      "banner-image",
+      "banner-form",
+      "footer-block",
+      "footer-accordion"
     ]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordionitem"]
+  },
+  {
+    "id": "swiper",
+    "components": ["text", "hero"]
+  },
+  {
+    "id": "tabs",
+    "components": ["tabsitem"]
   },
   {
     "id": "cards",
@@ -32,6 +51,22 @@
   {
     "id": "columns",
     "components": ["column"]
+  },
+  {
+    "id": "banner-image",
+    "components": ["banner-image-item"]
+  },
+  {
+    "id": "banner-form",
+    "components": ["banner-form-item"]
+  },
+  {
+    "id": "footer-block",
+    "components": ["footer-block-item"]
+  },
+  {
+    "id": "footer-accordion",
+    "components": ["footer-accordion-item"]
   },
   {
     "id": "column",

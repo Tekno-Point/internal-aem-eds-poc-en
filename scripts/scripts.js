@@ -169,6 +169,7 @@ async function loadLazy(doc) {
   autolinkModals(doc)
   autolinkFragements(doc)
   const main = doc.querySelector('main');
+  autolinkFragements(doc);
   await loadSections(main);
 
   const { hash } = window.location;
@@ -199,3 +200,16 @@ async function loadPage() {
 }
 
 loadPage();
+
+
+function autolinkFragements(element) {
+  element.querySelectorAll('a').forEach((origin) => {
+    if (origin && origin.href && origin.href.includes('/fragment/')) {
+      const parent = origin.parentElement;
+      const div = document.createElement("div");
+      div.append(origin);
+      parent.append(div);
+      loadFragment(div);
+    }
+  })
+}
