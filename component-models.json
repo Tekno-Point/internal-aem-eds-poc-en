@@ -1,40 +1,5 @@
 [
   {
-    "id": "page-metadata",
-    "fields": [
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Title"
-      },
-      {
-        "component": "text",
-        "name": "description",
-        "label": "Description"
-      },
-      {
-        "component": "text",
-        "name": "theme",
-        "label": "Theme"
-      },
-      {
-        "component": "text",
-        "name": "twitter-title",
-        "label": "Twitter Title"
-      },
-      {
-        "component": "text",
-        "name": "facebook:title",
-        "label": "Facebook Title"
-      },
-      {
-        "component": "text",
-        "name": "canonical",
-        "label": "Canonical URL"
-      }
-    ]
-  },
-  {
     "id": "image",
     "fields": [
       {
@@ -235,14 +200,8 @@
         "label": "Multi Select",
         "valueType": "string",
         "options": [
-          {
-            "name": "h3",
-            "value": "h4"
-          },
-          {
-            "name": "h4",
-            "value": "h4"
-          }
+          { "name": "h3", "value": "h4" },
+          { "name": "h4", "value": "h4" }
         ]
       }
     ]
