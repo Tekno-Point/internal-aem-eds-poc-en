@@ -196,18 +196,31 @@
     ]
   },
   {
-    "id": "banner-image-item",
+    "id": "banner-image-deskItem",
     "fields": [
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_image",
+        "name": "col1_deskImage",
         "label": "Image"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_imageAlt",
+        "name": "col1_deskImageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_mobImage",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_mobImageAlt",
         "label": "Alt",
         "value": ""
       },
