@@ -4,12 +4,12 @@
     "fields": [
       {
         "component": "text",
-        "name": "og:image:height",
-        "label": "OG Image Height"
+        "name": "og:timepass",
+        "label": "OG Time Pass"
       },
       {
         "component": "text",
-        "name": "og:image:width",
+        "name": "og:image-width",
         "label": "OG Image Width"
       },
       {
