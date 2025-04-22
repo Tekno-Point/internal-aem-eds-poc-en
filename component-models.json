@@ -196,6 +196,49 @@
     ]
   },
   {
+    "id": "tabsitem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fragment URL"
+      }
+    ]
+  },
+  {
+    "id": "swiper",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "accordionitem",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Accordion Title"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Accordion Body",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "banner-image-item",
     "fields": [
       {

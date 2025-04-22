@@ -16,8 +16,30 @@
       "cards",
       "columns",
       "fragment",
+      "tabs",
+      "accordion",
+      "swiper",
       "banner-image",
       "banner-form"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordionitem"
+    ]
+  },
+  {
+    "id": "swiper",
+    "components": [
+      "text",
+      "hero"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabsitem"
     ]
   },
   {

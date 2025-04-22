@@ -1,0 +1,19 @@
+@import url("./swiper-bundle.min.css");
+
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+  
+.swiper img{
+    height: 200px;
+    width: 250px;
+}
+
+.swiper-container{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.swiper-wrapper{
+  margin-top: 10px;
+}
