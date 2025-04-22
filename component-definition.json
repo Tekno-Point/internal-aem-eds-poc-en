@@ -158,6 +158,144 @@
           }
         },
         {
+          "title": "Tabs",
+          "id": "tabs",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tabs",
+                  "filter": "tabs",
+                  "model": "tabs"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs item",
+          "id": "tabsitem",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tabs item",
+                  "model": "tabsitem"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Swiper",
+          "id": "swiper",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Swiper",
+                  "filter": "swiper"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Accordion",
+          "id": "accordion",
+          "container": true,
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Accordion",
+                  "filter": "accordion",
+                  "model": "accordion"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Accordion item",
+          "id": "accordionitem",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "accordion item",
+                  "model": "accordionitem"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner Image Swiper",
+          "id": "banner-image",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Banner Image Swiper",
+                  "filter": "banner-image"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner Image Item",
+          "id": "banner-image-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner Image Item",
+                  "model": "banner-image-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner Form",
+          "id": "banner-form",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Banner Form",
+                  "filter": "banner-form"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner Form Item",
+          "id": "banner-form-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Banner Form Item",
+                  "model": "banner-form-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Footer Block",
           "id": "footer-block",
           "plugins": {
