@@ -4,8 +4,8 @@
     "fields": [
       {
         "component": "text",
-        "name": "og:title",
-        "label": "asdfg "
+        "name": "title",
+        "label": "Title"
       },{
         "component": "text",
         "name": "og:timepass",
