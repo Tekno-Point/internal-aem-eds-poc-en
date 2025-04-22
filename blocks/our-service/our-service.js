@@ -4,7 +4,6 @@ import Swiper from '../testimonial/swiper-bundle.min.js';
 export default function decorate(block) {
   buildtabblock(block);
 
-
   const tabPanels = block.querySelectorAll('.tabs-panel');
 
   const tabs = block.querySelectorAll('.tabs-tab');
@@ -23,30 +22,26 @@ export default function decorate(block) {
     }
   }
 
-
   if (window.innerWidth < 768) {
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+  
     tabs.forEach(tab => {
       const tabId = tab.getAttribute('aria-controls');
-      // console.log('Tab controls panel ID:', tabId);
-      const wrapper = document.createElement('div');
-      wrapper.classList.add('tabs-wrapper');
-
-      tab.parentNode.insertBefore(wrapper, tab);
-      wrapper.appendChild(tab);
-
-
-
-      tabPanels.forEach(panel => {
-        const panelTabId = panel.id;
-
-        if (tabId === panelTabId) {
-          wrapper.appendChild(panel)
-        }
-      });
+      const panel = document.getElementById(tabId);
+  
+      if (panel) {
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('tabs-wrapper');
+  
+        // Insert wrapper before the tab, then move tab and panel into it
+        tab.parentNode.insertBefore(wrapper, tab);
+        wrapper.appendChild(tab);
+        wrapper.appendChild(panel);
+      }
     });
   }
-
-
+  
 
   const swiperEl = block.querySelector('.tabs-panel .swiper');
   if (swiperEl) {

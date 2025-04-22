@@ -10,19 +10,23 @@ main>.section.our-service-container {
   padding-bottom: 80px;
 
   @media (max-width:768px) {
-    width: 100%;
+    width: auto;
     padding: 0 20px;
   }
 
   &>.default-content-wrapper {
     width: auto;
     text-align: center;
-    margin-bottom: 64px;
+    padding-bottom: 64px;
     display: flex;
     // width: 592px;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+
+    @media (max-width:768px) {
+      padding-bottom: 32px;
+    }
 
     p {
       margin: 0;
@@ -232,7 +236,6 @@ main>.section.our-service-container {
 
                   .swiper-slide {
                     width: 32.7%;
-                    // width: 331px;
                     border-radius: 16px;
 
                     @media (max-width: 1025px) {

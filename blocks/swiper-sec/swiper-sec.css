@@ -9,7 +9,7 @@ main > .section.swiper-sec-container {
 }
 @media (max-width: 768px) {
   main > .section.swiper-sec-container {
-    width: 100%;
+    width: auto;
     padding: 0 20px;
   }
 }
