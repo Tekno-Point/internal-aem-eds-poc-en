@@ -1,7 +1,9 @@
 [
   {
     "id": "main",
-    "components": ["section"]
+    "components": [
+      "section"
+    ]
   },
   {
     "id": "section",
@@ -15,7 +17,7 @@
       "columns",
       "fragment",
       "tabs",
-      "accordion",
+      "accordion01",
       "swiper",
       "banner-image",
       "banner-form",
@@ -24,43 +26,67 @@
     ]
   },
   {
-    "id": "accordion",
-    "components": ["accordionitem"]
+    "id": "accordion01",
+    "components": [
+      "accordionitem"
+    ]
   },
   {
     "id": "swiper",
-    "components": ["text", "hero"]
+    "components": [
+      "text",
+      "hero"
+    ]
   },
   {
     "id": "tabs",
-    "components": ["tabsitem"]
+    "components": [
+      "tabsitem"
+    ]
   },
   {
     "id": "cards",
-    "components": ["card"]
+    "components": [
+      "card"
+    ]
   },
   {
     "id": "columns",
-    "components": ["column"]
+    "components": [
+      "column"
+    ]
   },
   {
     "id": "banner-image",
-    "components": ["banner-image-item"]
+    "components": [
+      "banner-image-item"
+    ]
   },
   {
     "id": "banner-form",
-    "components": ["banner-form-item"]
+    "components": [
+      "banner-form-item"
+    ]
   },
   {
     "id": "footer-block",
-    "components": ["footer-block-item"]
+    "components": [
+      "footer-block-item"
+    ]
   },
   {
     "id": "footer-accordion",
-    "components": ["footer-accordion-item"]
+    "components": [
+      "footer-accordion-item"
+    ]
   },
   {
     "id": "column",
-    "components": ["text", "image", "button", "title"]
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
   }
 ]
