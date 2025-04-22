@@ -1,5 +1,16 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
@@ -200,8 +211,14 @@
         "label": "Multi Select",
         "valueType": "string",
         "options": [
-          { "name": "h3", "value": "h4" },
-          { "name": "h4", "value": "h4" }
+          {
+            "name": "h3",
+            "value": "h4"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          }
         ]
       }
     ]
