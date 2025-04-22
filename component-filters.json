@@ -26,7 +26,7 @@
       "why-choose-us",
       "our-service",
       "tabs",
-      "accordion01",
+      "accordion",
       "swiper",
       "banner-image",
       "banner-form",
@@ -35,7 +35,7 @@
     ]
   },
   {
-    "id": "accordion01",
+    "id": "accordion",
     "components": [
       "accordionitem"
     ]
