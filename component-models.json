@@ -5,6 +5,7 @@
       {
         "component": "text",
         "name": "og:title",
+        "property":"og:title",
         "label": "OG Title"
       },{
         "component": "text",
