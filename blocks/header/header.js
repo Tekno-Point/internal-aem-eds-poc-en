@@ -180,6 +180,16 @@ export default async function decorate(block) {
     parentElementTemp.append(div);
   })
 
+  const classnavhead = nav.querySelectorAll(".nav-head ul");
+  classnavhead.forEach((element,index)=>{
+    element.classList.add("navhead-"+(index + 1));
+    if (element.querySelectorAll("li").length != 0) {
+      element.querySelectorAll("li").forEach((elementer,jindex)=>{
+        elementer.classList.add("head"+(index + 1)+"-"+"inner"+(jindex + 1))
+      })
+    }
+  })
+
   const eventOnNav = nav.querySelectorAll(".nav-band-1 li");
   eventOnNav.forEach((element) => {
     element.addEventListener("mouseover", (e, elementSub) => {
