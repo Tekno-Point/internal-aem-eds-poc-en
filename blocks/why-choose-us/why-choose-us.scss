@@ -10,6 +10,11 @@ main>.section.why-choose-us-container {
     margin: 0 auto;
     padding-bottom: 80px;
 
+    @media(max-width: 1025px) {
+        width: auto;
+        padding: 0 20px;
+    }
+
     @media (max-width: 768px) {
         width: auto;
         // margin-bottom: 56px;
@@ -29,7 +34,7 @@ main>.section.why-choose-us-container {
             padding: 0;
             padding-bottom: 16px;
             color: #0D2042;
-            font-family: var(--Typeface-Family-Heading, Manrope);
+            font-family: "Manrope-Bold";
             font-size: 35px;
             font-weight: 700;
             line-height: 45.5px;
@@ -44,7 +49,7 @@ main>.section.why-choose-us-container {
             padding: 0;
             margin: 0;
             color: #0D2042;
-            font-family: var(--Typeface-Family-Heading, Manrope);
+            font-family: " Manrope-Bold";
             font-weight: 700;
             font-size: 24px;
             line-height: 28.8px;
@@ -57,7 +62,7 @@ main>.section.why-choose-us-container {
 
             &:nth-child(1) {
                 font-size: 24px;
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: "Manrope-Bold";
                 font-weight: 700;
                 line-height: 27.3px;
 
@@ -82,7 +87,7 @@ main>.section.why-choose-us-container {
                 background: var(--Primary-Clean-White, #FFF);
                 color: #001438;
                 font-size: 14px;
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: "Manrope-Bold";
                 font-weight: 700;
                 line-height: 16px;
 
@@ -132,18 +137,28 @@ main>.section.why-choose-us-container {
             &.swiper.swiper-initialized {
                 .swiper-wrapper {
                     gap: unset;
+
+                    .swiper-slide {
+                        width: 286.047px !important;
+
+                        @media (max-width: 768px) {
+                            width: 220.954px !important;
+                            height: auto;
+                        }
+                    }
                 }
             }
 
             .swiper-wrapper {
                 display: flex;
                 align-items: center;
+                // justify-content: center;
                 gap: 16px;
 
 
                 .swiper-slide {
                     position: relative;
-                    width: 286.047px !important;
+                    width: 23.6%;
                     display: flex;
                     height: 100%;
                     align-items: center;
@@ -152,6 +167,10 @@ main>.section.why-choose-us-container {
                     border-radius: 16px;
                     height: auto;
                     overflow: hidden;
+
+                    @media (max-width: 1200px) {
+                        width: 23.6%;
+                    }
 
                     @media (max-width: 768px) {
                         width: 220.954px !important;
@@ -182,12 +201,16 @@ main>.section.why-choose-us-container {
                         & p:first-child {
                             width: 100%;
                             color: #FFF;
-                            font-family: "raleway", sans-serif;
+                            font-family: "Manrope-Bold";
                             font-size: 1rem;
                             font-weight: 700;
                             line-height: 20.8px;
                             padding: 0;
-                            margin: 0px 79px 18px 24px;
+                            padding: 0px 76px 16px 24px;
+
+                            @media(max-width: 1207px) {
+                                padding: 0px 17px 18px 17px;
+                            }
                         }
 
                         .button-container,
@@ -210,7 +233,7 @@ main>.section.why-choose-us-container {
                             justify-content: center;
                             gap: 4px;
                             color: #2E3E5C;
-                            font-family: Arial, Helvetica, sans-serif;
+                            font-family: "Manrope-Regular";
                             font-size: 12px;
                             font-weight: 400;
                             line-height: 15.6px;
@@ -257,8 +280,8 @@ main>.section.why-choose-us-container {
 
                 @media (max-width: 768px) {
                     bottom: 10px;
-                    overflow-x: auto;
-                    white-space: nowrap;
+                    // overflow-x: auto;
+                    // white-space: nowrap;
                 }
 
                 .swiper-pagination-bullet {
@@ -266,13 +289,18 @@ main>.section.why-choose-us-container {
                     height: 3px;
                     background-color: #F6A1B6;
                     border-radius: unset;
+                    margin: 0;
+
+                    @media(max-width: 1025px) {
+                        width: 77px;
+                    }
+
 
                     &-active {
                         background-color: #E91A4E;
-                        width: 111px;
                         height: 3px;
                         border-radius: 20px;
-                        width: 111px;
+                        margin: 0;
                     }
                 }
             }

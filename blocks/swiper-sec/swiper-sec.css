@@ -30,7 +30,7 @@ main > .section.swiper-sec-container .default-content-wrapper p {
   padding: 0;
   margin: 0;
   color: #0D2042;
-  font-family: sans-serif;
+  font-family: "Manrope-Bold";
   font-weight: 700;
   text-align: center;
 }
@@ -81,7 +81,7 @@ main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wra
   gap: 18px;
   flex-shrink: 0;
   border-radius: 16px;
-  background: var(--Neutrals-N30, #EBECEF);
+  background: #EBECEF;
 }
 @media (max-width: 768px) {
   main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide {
@@ -103,7 +103,7 @@ main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wra
 }
 main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wrapper .swiper-slide-cards-2 p:first-child {
   color: #001438;
-  font-family: "raleway", sans-serif;
+  font-family: "Manrope-Regular";
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 16px;
@@ -134,7 +134,7 @@ main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-wra
   justify-content: center;
   gap: 4px;
   color: #2E3E5C;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Manrope-Regular";
   font-size: 12px;
   font-weight: 400;
   line-height: 15.6px;
@@ -177,13 +177,18 @@ main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-pag
   height: 3px;
   background-color: #F6A1B6;
   border-radius: unset;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-pagination .swiper-pagination-bullet {
+    width: 77px;
+  }
 }
 main > .section.swiper-sec-container .swiper-sec-wrapper .swiper-sec .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #E91A4E;
-  width: 111px;
   height: 3px;
   border-radius: 20px;
-  width: 111px;
+  margin: 0;
 }
 
 main > .section.swiper-sec-container > div {

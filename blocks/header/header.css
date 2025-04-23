@@ -21,7 +21,7 @@ header nav {
   max-width: 1248px;
   height: var(--nav-height);
   padding: 0 24px;
-  font-family: var(--body-font-family);
+  font-family:" Manrope-Regular";
   flex-wrap: wrap;
 }
 
@@ -428,7 +428,7 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
   width: 32.5%;
   font-size: 14px;
   font-weight: 500;
-  font-family: sans-serif;
+  font-family:"Manrope-Medium";
   color: #8B8B8B;
   margin-bottom: 0.3rem;
 }
