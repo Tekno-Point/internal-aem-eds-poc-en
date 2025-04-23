@@ -118,6 +118,18 @@
             "value": "tab-section"
           },
           {
+            "name": "Tabs",
+            "value": "tabs"
+          },
+          {
+            "name": "Why Choose Us",
+            "value": "why-chooseus"
+          },
+          {
+            "name": "Find Us",
+            "value": "find-us"
+          },
+          {
             "name": "Why Choose Us",
             "value": "why-chooseus"
           },
@@ -148,18 +160,6 @@
           {
             "name": "Footer Bottom Section",
             "value": "footer-bottom-section"
-          },
-          {
-            "name": "Tab section",
-            "value": "tab-section"
-          },
-          {
-            "name": "Why Choose Us",
-            "value": "why-chooseus"
-          },
-          {
-            "name": "Find Us",
-            "value": "find-us"
           }
         ]
       }

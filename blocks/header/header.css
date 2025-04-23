@@ -496,3 +496,15 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
   list-style: none;
   gap: 10px;
 }
+
+@media (max-width:768px) {
+  .nav-head .default-content-wrapper ul {
+    display: none;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: row;
+
+  }
+}
