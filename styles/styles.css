@@ -285,9 +285,6 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-.header-wrapper {
-  display: none;
-}
 
 /* tab-section css start */
 main>.section.tab-section {
@@ -389,6 +386,3 @@ main>.section.tab-section {
 
 /* tab-section css start */
 
-/* .header-wrapper {
-  display: none;
-}  */
