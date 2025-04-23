@@ -747,5 +747,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "breadcrums",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]

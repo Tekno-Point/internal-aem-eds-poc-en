@@ -498,13 +498,42 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
 }
 
 @media (max-width:768px) {
-  .nav-head .default-content-wrapper ul {
-    display: none;
-  }
-
   header nav {
     display: flex;
     flex-direction: row;
+  }
 
+  header nav .nav-band-sections {
+    height: 56px;
+    padding: 12px 0px 4px 0px;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+
+  header nav .nav-hamburger {
+    padding-left: 15px;
+  }
+
+  .nav-head .default-content-wrapper .navhead-1 .head1-inner2,
+  .head1-inner3,
+  .head1-inner4 {
+    display: none;
+  }
+
+  .nav-head .default-content-wrapper .navhead-2 .head2-inner1,
+  .head2-inner2 {
+    display: none;
+  }
+
+  .nav-head>div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  header nav[aria-expanded='true'] {
+    min-height: 0;
   }
 }

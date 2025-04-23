@@ -1,0 +1,14 @@
+.block.breadcrums > div > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.block.breadcrums > div > div ul:nth-child(1){
+    display: flex;
+}
+
+.block.breadcrums > div > div ul:nth-child(1),ul:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}

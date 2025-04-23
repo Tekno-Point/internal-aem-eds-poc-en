@@ -30,7 +30,8 @@
       "banner-image",
       "banner-form",
       "footer-block",
-      "footer-accordion"
+      "footer-accordion",
+      "breadcrums"
     ]
   },
   {
