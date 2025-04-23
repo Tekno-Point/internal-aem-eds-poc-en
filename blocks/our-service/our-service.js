@@ -5,7 +5,6 @@ export default function decorate(block) {
   buildtabblock(block);
 
   const tabPanels = block.querySelectorAll('.tabs-panel');
-
   const tabs = block.querySelectorAll('.tabs-tab');
 
   if (tabPanels.length > 0) {
@@ -22,26 +21,39 @@ export default function decorate(block) {
     }
   }
 
-  if (window.innerWidth < 768) {
-    const tabs = document.querySelectorAll('[role="tab"]');
-    const tabPanels = document.querySelectorAll('[role="tabpanel"]');
-  
-    tabs.forEach(tab => {
+  function updateTabsForMobile() {
+    const isMobile = window.innerWidth < 768;
+    const roleTabs = block.querySelectorAll('[role="tab"]');
+
+    roleTabs.forEach(tab => {
       const tabId = tab.getAttribute('aria-controls');
-      const panel = document.getElementById(tabId);
-  
-      if (panel) {
+      const panel = block.querySelector(`#${tabId}`);
+
+      if (!panel) return;
+
+      const alreadyWrapped = tab.closest('.tabs-wrapper');
+
+      if (isMobile && !alreadyWrapped) {
         const wrapper = document.createElement('div');
         wrapper.classList.add('tabs-wrapper');
-  
-        // Insert wrapper before the tab, then move tab and panel into it
+
         tab.parentNode.insertBefore(wrapper, tab);
         wrapper.appendChild(tab);
         wrapper.appendChild(panel);
       }
+
+      if (!isMobile && alreadyWrapped) {
+        const parent = alreadyWrapped.parentNode;
+        parent.insertBefore(tab, alreadyWrapped);
+        parent.insertBefore(panel, alreadyWrapped);
+        alreadyWrapped.remove();
+      }
     });
   }
-  
+
+  updateTabsForMobile();
+
+  window.addEventListener('resize', updateTabsForMobile);
 
   const swiperEl = block.querySelector('.tabs-panel .swiper');
   if (swiperEl) {
