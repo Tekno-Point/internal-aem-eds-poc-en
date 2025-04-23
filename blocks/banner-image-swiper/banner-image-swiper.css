@@ -24,14 +24,6 @@ body .header-wrapper,
     margin: 0;
 }
 
-.section.banner-form-container .banner-form-wrapper {
-    max-width: 30%;
-    width: 100%;
-    background-color: grey;
-    margin: 0 0 16px;
-    padding: 0;
-}
-
 .banner-image-swiper,
 .banner-image-swiper>div {
     position: relative;
@@ -260,16 +252,6 @@ body .header-wrapper,
         margin: 0;
     }
 
-    .section.banner-form-container .banner-form-wrapper {
-        position: absolute;
-        top: 159px;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 74.45%;
-        border-radius: 16px;
-        z-index: 1;
-    }
-
     /* Pagination CSS */
     .banner-image-swiper-wrapper .swiper-pagination {
         top: 130px;
@@ -284,5 +266,204 @@ body .header-wrapper,
 @media screen and (max-width:769px) {
     .section.banner-form-container .banner-image-swiper-wrapper {
         height: 307px;
+    }
+}
+
+
+.section.banner-form-container .banner-form-wrapper {
+    max-width: 30%;
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 0;
+    background-color: #fff;
+}
+
+.banner-form h3 {
+    color: #001640;
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36.4px;
+    margin: 0 0 16px;
+}
+
+.form-content,
+.form-content .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px;
+}
+
+.form-content .form-field {
+    gap: 4px;
+    padding-bottom: 0;
+
+}
+
+.form-field label,
+.form-field input {
+    color: #0D2042;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.form-field label::after {
+    content: '*';
+    color: #E91A1A;
+}
+
+.form-field input {
+    padding: 11px 8px;
+    border-radius: 8px;
+    border: 0.5px solid #B0B6C1;
+    outline: none;
+    color: #2E3E5C;
+    font-weight: 700;
+}
+
+.form-field.phone-field div {
+    display: flex;
+    gap: 6px;
+}
+
+.form-field.phone-field div input:nth-of-type(1) {
+    width: 8.1%;
+}
+
+.form-field.phone-field div input:nth-of-type(2) {
+    width: 91.9%;
+}
+
+.form-field.pincode-field div {
+    display: flex;
+    gap: 12px;
+}
+
+.form-field.pincode-field div input {
+    border-radius: 8px;
+    border: 0.5px solid #BFC4CD;
+    width: 4%;
+    text-align: center;
+}
+
+.banner-form p {
+    color: #3B4A66;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.6px;
+    margin: 0;
+}
+
+.banner-form p:nth-of-type(1) {
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.banner-form .form-btn {
+    border-radius: 16px;
+    border: 0px solid #001438;
+    background-color: #001438;
+    margin: 16px 0 0;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.banner-form .form-btn::after {
+    content: '';
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    width: 9px;
+    height: 9px;
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1025px) {
+    .section.banner-form-container .banner-form-wrapper {
+        /* position: relative; */
+        position: absolute;
+        top: 159px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 74.45%;
+        border-radius: 16px;
+        z-index: 1;
+        padding: 32px 24px 16px;
+        max-width: 61.12%;
+        border-radius: 16px;
+        border: 1px solid var(--Neutrals-N40, #DEE0E5);
+        background: var(--Neutrals-N0, #FFF);
+        /* margin: -165px auto 0; */
+    }
+
+    .banner-form h3 {
+        text-align: center;
+        font-size: 16px;
+        line-height: 20.8px;
+        margin: 0 0 20px;
+    }
+
+    .form-content,
+    .form-content .form-field {
+        gap: 12px;
+        margin: 0 -6px;
+    }
+
+    .form-field label,
+    .form-field input {
+        font-size: 12px;
+        line-height: 13.33px;
+    }
+
+    .form-field input {
+        padding: 11px 16px;
+        font-weight: 700;
+    }
+
+    .form-field.phone-field div input:nth-of-type(1) {
+        width: 10.5%;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .form-field.phone-field div input:nth-of-type(2) {
+        width: 87.6%;
+    }
+
+    .form-field.pincode-field div input {
+        width: 11%;
+        padding: 12px 2px;
+        font-size: 11px;
+        line-height: 14.3px;
+        color: #0D2042;
+    }
+
+    .banner-form p {
+        font-size: 11px;
+        line-height: 14.3px;
+    }
+
+    .banner-form .form-btn {
+        width: 100%;
+        margin: 20px 0 0;
+        font-size: 12px;
+    }
+
+    .banner-form .form-btn::after {
+        width: 7px;
+        height: 7px;
     }
 }
