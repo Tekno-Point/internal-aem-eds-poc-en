@@ -175,8 +175,7 @@
             "url": {
               "type": "string",
               "label": "Embed URL",
-              "description": "Paste the video URL (e.g., YouTube, Vimeo)",
-              "default": ""
+              "description": "Paste the video URL (e.g., YouTube, Vimeo)"
             }
           }
         }

@@ -20,13 +20,6 @@
     ]
   },
   {
-    "embed": {
-      "selectors": [
-        ".embed"
-      ]
-    }
-  },
-  {
     "id": "cards",
     "components": [
       "card"
