@@ -348,7 +348,7 @@
                 "template": {
                   "name": "Our Service",
                   "filter": "our-service",
-                  "model":"our-service"
+                  "model": "our-service"
                 }
               }
             }

@@ -60,6 +60,12 @@
     ]
   },
   {
+    "id": "accordian",
+    "components": [
+      "accordian-item"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
