@@ -567,21 +567,6 @@
               }
             }
           }
-        },
-        {
-          "title": "BREADCRUMS",
-          "id": "breadcrums",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "BREADCRUMS",
-                  "filter": "breadcrums"
-                }
-              }
-            }
-          }
         }
       ]
     }
