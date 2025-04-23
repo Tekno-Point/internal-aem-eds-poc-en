@@ -1,7 +1,9 @@
 [
   {
     "id": "main",
-    "components": ["section"]
+    "components": [
+      "section"
+    ]
   },
   {
     "id": "section",
@@ -34,62 +36,72 @@
   },
   {
     "id": "accordion",
-    "components": ["accordionitem"]
+    "components": [
+      "accordionitem"
+    ]
   },
   {
     "id": "swiper",
-    "components": ["text", "hero"]
+    "components": [
+      "text",
+      "hero"
+    ]
   },
   {
     "id": "tabs",
-    "components": ["tabsitem"]
+    "components": [
+      "tabsitem"
+    ]
   },
   {
     "id": "cards",
-    "components": ["card"]
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "accordian",
+    "components": [
+      "accordian-item"
+    ]
   },
   {
     "id": "columns",
-    "components": ["column"]
+    "components": [
+      "column"
+    ]
   },
   {
     "id": "banner-image",
-    "components": ["banner-image-item"]
+    "components": [
+      "banner-image-item"
+    ]
   },
   {
     "id": "banner-form",
-    "components": ["banner-form-item"]
+    "components": [
+      "banner-form-item"
+    ]
   },
   {
     "id": "footer-block",
-    "components": ["footer-block-item"]
+    "components": [
+      "footer-block-item"
+    ]
   },
   {
     "id": "footer-accordion",
-    "components": ["footer-accordion-item"]
+    "components": [
+      "footer-accordion-item"
+    ]
   },
   {
     "id": "column",
-    "components": ["text", "image", "button", "title"]
-  },
-  {
-    "id": "newcarousel",
-    "components": ["newcarousel-item", "embed"]
-  },
-  {
-    "id": "swiper-sec",
-    "components": ["swiper-sec-item"]
-  },
-  {
-    "id": "accordion",
-    "components": ["accordion-item"]
-  },
-  {
-    "id": "why-choose-us",
-    "components": ["why-choose-us-item"]
-  },
-  {
-    "id": "our-service",
-    "components": ["our-service-item"]
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
   }
 ]
