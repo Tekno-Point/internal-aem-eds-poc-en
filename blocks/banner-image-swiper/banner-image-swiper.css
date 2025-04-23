@@ -1,15 +1,17 @@
+@import url('../banner-image-swiper/swiper-min.css');
+
 body .header-wrapper,
 .footer-wrapper {
     display: none;
 }
 
 .section.banner-form-container {
-    background-color: lavender;
+    /* background-color: lavender; */
     display: flex;
     gap: 24px;
     max-width: 1212px;
-    padding: 0 74px 0 0;
-    margin: 0 40px;
+    padding: 0 114px 0 40px;
+    margin: 0 auto;
 }
 
 .section.banner-form-container .banner-image-swiper-wrapper {
@@ -18,7 +20,7 @@ body .header-wrapper,
     width: 100%;
     height: 514px;
     /* height: 100%; */
-    padding: 0;
+    padding: 0 0 16px;
     margin: 0;
 }
 
@@ -26,7 +28,7 @@ body .header-wrapper,
     max-width: 30%;
     width: 100%;
     background-color: grey;
-    margin: 0;
+    margin: 0 0 16px;
     padding: 0;
 }
 
@@ -110,9 +112,35 @@ body .header-wrapper,
     display: none;
 }
 
+/* Pagination CSS */
+.banner-image-swiper-wrapper .swiper-pagination {
+    /* background-color: red; */
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    top: unset;
+    bottom: 0;
+}
+
+.banner-image-swiper-wrapper .swiper-pagination .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    background-color: #949CAB;
+    margin: 0;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.banner-image-swiper-wrapper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #E91A4E;
+    width: 24px;
+    border-radius: 8px;
+}
+
+
 @media screen and (max-width:1299px) {
     .section.banner-form-container {
-        padding: 0;
+        padding: 0 40px;
     }
 
     .section.banner-form-container .banner-image-swiper-wrapper {
@@ -150,6 +178,7 @@ body .header-wrapper,
         display: block;
         position: relative;
         margin: 0;
+        padding: 0;
     }
 
     .section.banner-form-container .banner-image-swiper-wrapper {
@@ -231,9 +260,6 @@ body .header-wrapper,
         margin: 0;
     }
 
-
-
-
     .section.banner-form-container .banner-form-wrapper {
         position: absolute;
         top: 159px;
@@ -241,6 +267,17 @@ body .header-wrapper,
         transform: translateX(-50%);
         max-width: 74.45%;
         border-radius: 16px;
+        z-index: 1;
+    }
+
+    /* Pagination CSS */
+    .banner-image-swiper-wrapper .swiper-pagination {
+        top: 130px;
+        bottom: unset;
+    }
+
+    .banner-image-swiper-wrapper .swiper-pagination .swiper-pagination-bullet {
+        background-color: #fff;
     }
 }
 
