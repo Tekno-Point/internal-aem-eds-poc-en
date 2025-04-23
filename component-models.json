@@ -21,7 +21,23 @@
         "component": "text",
         "name": "new-title",
         "label": "new title"
+      },
+      {
+        "component": "text",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "name": "ogImageWidth",
+        "label": "Image Width"
+      },
+      {
+        "component": "text",
+        "name": "ogImageHeight",
+        "label": "Image Height"
       }
+      
     ]
   },
   {
