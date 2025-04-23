@@ -63,7 +63,7 @@ main > .section.accordion-container .default-content-wrapper ul li {
   align-items: center;
   gap: 24px;
   color: #0D2042;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Manrope-Bold";
   font-weight: 700;
   line-height: 52.8px;
 }
@@ -217,8 +217,8 @@ main > .section.accordion-container .accordion-wrapper .accordion .accordion-sec
 main > .section.accordion-container .accordion-wrapper .accordion .accordion-sec-container-column .accordion-question p {
   margin: 0;
   padding: 0;
-  color: var(--Neutrals-N600, #2E3E5C);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #2E3E5C;
+  font-family: "Manrope-Bold";
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -233,7 +233,7 @@ main > .section.accordion-container .accordion-wrapper .accordion .accordion-sec
   margin: 0;
   padding: 0;
   color: var(--Neutrals-N600, #2E3E5C);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: " Manrope-Regular";
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;

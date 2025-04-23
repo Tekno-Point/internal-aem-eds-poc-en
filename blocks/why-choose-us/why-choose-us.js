@@ -34,12 +34,34 @@ export default function decorate(block) {
   if (shouldInitSwiper) {
     Swiper(block, {
       slidesPerView: 'auto',
-      spaceBetween: 16,
+      spaceBetween: 12,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 0,
       pagination: {
         el: swiperPagination,
         clickable: true,
+      },
+      breakpoints: {
+        361: {
+          spaceBetween: 12,
+          slidesOffsetBefore: -0.1,
+          slidesOffsetAfter: -0.1,
+        },
+        769: {
+          spaceBetween: 14,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+        },
+        1025: {
+          spaceBetween: 16,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+        },
+        1367: {
+          spaceBetween: 16,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+        }
       },
     });
   }

@@ -77,7 +77,7 @@
 
 .banner-image-swiper>div div:nth-child(2) h3 {
     color: #0D2042;
-    font-family: sans-serif;
+    font-family: "Manrope-Bold";
     font-size: 44px;
     font-weight: 700;
     line-height: 52.8px;
@@ -87,7 +87,7 @@
 .banner-image-swiper>div div:nth-child(2) p {
     max-width: 239px;
     color: #1C2E4E;
-    font-family: sans-serif;
+    font-family: "Manrope-Regular";
     font-size: 16px;
     font-weight: 400;
     line-height: 25.6px;
@@ -97,8 +97,8 @@
 @media screen and (max-width:1299px) {
     /* .banner-image-swiper>div div:nth-child(1) img {
         /* width: 510px; */
-        /* height: 438px; */
-    
+    /* height: 438px; */
+
 
     .banner-image-swiper>div div:nth-child(1)::after {
         background-position: top right;

@@ -118,8 +118,32 @@
             "value": "tab-section"
           },
           {
+            "name": "Our Service",
+            "value": "our-service"
+          },
+          {
             "name": "Why Choose Us",
             "value": "why-chooseus"
+          },
+          {
+            "name": "Testimonials",
+            "value": "testimonials"
+          },
+          {
+            "name": "Dream Home",
+            "value": "dream home"
+          },
+          {
+            "name": "Get in touch",
+            "value": "get-in-touch"
+          },
+          {
+            "name": "Accordion",
+            "value": "accordion"
+          },
+          {
+            "name": "Favourite Corner",
+            "value": "favourite-corner"
           },
           {
             "name": "Find Us",
@@ -148,18 +172,6 @@
           {
             "name": "Footer Bottom Section",
             "value": "footer-bottom-section"
-          },
-          {
-            "name": "Tab section",
-            "value": "tab-section"
-          },
-          {
-            "name": "Why Choose Us",
-            "value": "why-chooseus"
-          },
-          {
-            "name": "Find Us",
-            "value": "find-us"
           }
         ]
       }
@@ -727,6 +739,18 @@
           }
         ]
       },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "breadcrums",
+    "fields": [
       {
         "component": "richtext",
         "name": "text",

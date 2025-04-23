@@ -31,17 +31,17 @@ main > .section.our-service-container > .default-content-wrapper {
 main > .section.our-service-container > .default-content-wrapper p {
   margin: 0;
   padding: 0;
-  color: var(--Neutrals-N800, #0D2042);
+  color: #0D2042;
   text-align: center;
   font-weight: 700;
-  font-family: var(--Typeface-Family-Heading, Manrope);
+  font-family: "Manrope-Bold";
 }
 main > .section.our-service-container > .default-content-wrapper p:nth-child(1) {
-  font-size: var(--Typeface-Size-H4, 35px);
+  font-size: 35px;
   line-height: 45.5px;
 }
 main > .section.our-service-container > .default-content-wrapper p:nth-child(2) {
-  font-size: var(--Typeface-Size-Body-2, 21px);
+  font-size: 21px;
   line-height: 27.3px;
 }
 main > .section.our-service-container .our-service-wrapper {
@@ -101,7 +101,7 @@ main > .section.our-service-container .our-service-wrapper .our-service .tabs-li
   white-space: unset;
   transition: background-color 0.2s;
   border-radius: unset;
-  background: var(--Primary-Clean-White, #FFF);
+  background: #fff;
   border-bottom: 1px solid #BFC7E8;
 }
 @media (max-width: 768px) {
@@ -112,10 +112,10 @@ main > .section.our-service-container .our-service-wrapper .our-service .tabs-li
 main > .section.our-service-container .our-service-wrapper .our-service .tabs-list .tabs-tab p {
   margin: 0;
   padding: 0;
-  color: var(--Neutrals-N900, #001438);
+  color: #001438;
   text-align: center;
-  font-family: var(--Typeface-Family-Body, Manrope);
-  font-size: var(--Typeface-Size-Body-2, 21px);
+  font-family: "Manrope-Regular";
+  font-size: 21px;
   font-style: normal;
   font-weight: 400;
   line-height: 27.3px;
@@ -202,9 +202,9 @@ main > .section.our-service-container .our-service-wrapper .our-service .tabs-pa
 main > .section.our-service-container .our-service-wrapper .our-service .tabs-panel .button-container .swiper-sec-container .default-content-wrapper p {
   margin: 0;
   padding: 0;
-  color: var(--Neutrals-N900, #001438);
-  font-family: var(--Typeface-Family-Body, Manrope);
-  font-size: var(--Typeface-Size-Body-4, 14px);
+  color: #001438;
+  font-family: "Manrope-Regular";
+  font-size: 14px;
   font-weight: 400;
   line-height: 16px;
 }
@@ -248,5 +248,5 @@ main > .section.our-service-container .our-service-wrapper .our-service .tabs-pa
   height: 4px;
   flex-shrink: 0;
   border-radius: 8px;
-  background: var(--Primary-P300, #E91A4E);
+  background: #E91A4E;
 }/*# sourceMappingURL=our-service.css.map */
