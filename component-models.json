@@ -118,8 +118,8 @@
             "value": "tab-section"
           },
           {
-            "name": "Tabs",
-            "value": "tabs"
+            "name": "Our Service",
+            "value": "our-service"
           },
           {
             "name": "Why Choose Us",
@@ -132,6 +132,22 @@
           {
             "name": "Why Choose Us",
             "value": "why-chooseus"
+          },
+          {
+            "name": "Testimonials",
+            "value": "testimonials"
+          },
+          {
+            "name": "Dream Home",
+            "value": "dream home"
+          },
+          {
+            "name": "Get in touch",
+            "value": "get-in-touch"
+          },
+          {
+            "name": "Favourite Corner",
+            "value": "favourite-corner"
           },
           {
             "name": "Find Us",
