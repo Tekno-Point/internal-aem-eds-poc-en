@@ -15,9 +15,18 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "embed"
     ]
   },
+  {
+    "embed": {
+      "selectors": [
+        ".embed"
+      ]
+    }
+  }
+  
   {
     "id": "cards",
     "components": [
