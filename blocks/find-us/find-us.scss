@@ -38,7 +38,7 @@ main>.section.find-us-container {
                             margin: 0;
                             padding: 0;
                             color: #0D2042;
-                            font-family: var(--Typeface-Family-Heading, Manrope);
+                            font-family: "Manrope-Bold";
                             font-size: 35px;
                             font-weight: 700;
                             line-height: 45.5px;
@@ -63,7 +63,8 @@ main>.section.find-us-container {
                             gap: 16px;
                             flex-wrap: wrap;
                             list-style: none;
-                            @media (max-width: 768px){
+
+                            @media (max-width: 768px) {
                                 gap: 8px;
                             }
 
@@ -78,7 +79,7 @@ main>.section.find-us-container {
                                     border: 0.5px solid #BFC4CD;
                                     background: #FFF;
                                     color: #0D2042;
-                                    font-family: var(--Typeface-Family-Body, Manrope);
+                                    font-family: "Manrope-Regular";
                                     font-size: var(--Typeface-Size-Caption, 12px);
                                     font-style: normal;
                                     font-weight: 400;

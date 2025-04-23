@@ -353,7 +353,7 @@ main>.section.tab-section {
 
 .section.tab-section .default-content-wrapper ul li a {
   color: #0D2042;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Manrope-Medium";
   font-size: 16px;
   font-weight: 700;
   line-height: 20.8px;
@@ -372,6 +372,9 @@ main>.section.tab-section {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+.section.tab-section .default-content-wrapper ul li:last-child:after {
+  display: none;
 }
 
 @media (max-width:768px) {

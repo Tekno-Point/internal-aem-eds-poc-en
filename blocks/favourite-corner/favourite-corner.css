@@ -31,7 +31,7 @@ main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-
   height: 100%;
   border-radius: 16px;
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner-container.corner-1 .column-1 img {
     height: 192px;
   }
@@ -63,8 +63,8 @@ main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-
 main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner-container.corner-2 .column-1 p:nth-child(1) {
   color: #0D2042;
   text-align: center;
-  font-family: var(--Typeface-Family-Heading, Manrope);
-  font-size: var(--Typeface-Size-H3, 44px);
+  font-family: "Manrope-Bold";
+  font-size: 44px;
   font-style: normal;
   font-weight: 700;
   line-height: 52.8px;
@@ -80,7 +80,7 @@ main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-
 main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-corner-container.corner-2 .column-1 p:nth-child(2) {
   color: var(--Neutrals-N800, #0D2042);
   text-align: center;
-  font-family: var(--Typeface-Family-Body, Manrope);
+  font-family: "Manrope-Regular";
   font-size: 16px;
   font-weight: 400;
   line-height: 25.6px;
@@ -108,11 +108,11 @@ main > .section.favourite-corner-container .favourite-corner-wrapper .favourite-
   align-items: center;
   gap: 8px;
   border-radius: 16px;
-  border: 0px solid var(--Secondary-S500, #001438);
-  background: var(--Secondary-S500, #001438);
-  color: var(--Neutrals-N0, #FFF);
-  font-family: var(--Typeface-Family-Heading, Manrope);
-  font-size: var(--Typeface-Size-Body-4, 14px);
+  border: 0px solid #001438;
+  background: #001438;
+  color: #FFF;
+  font-family: "Manrope-Bold";
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
