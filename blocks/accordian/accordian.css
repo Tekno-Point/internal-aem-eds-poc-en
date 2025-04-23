@@ -1,0 +1,61 @@
+.accordian details {
+    border: 1px solid #dadada;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.accordian details+details {
+    margin-top: 24px;
+}
+
+.accordian details p {
+    margin-bottom: 0.8em;
+}
+
+.accordian details summary {
+    position: relative;
+    padding: 0 16px;
+    padding-right: 46px;
+    cursor: pointer;
+    list-style: none;
+    overflow: auto;
+    transition: background-color 0.2s;
+}
+
+.accordian details[open] summary {
+    background-color: var(--light-color);
+}
+
+.accordian details summary:focus,
+.accordian details summary:hover {
+    background-color: var(--light-color);
+}
+
+.accordian details summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordian details summary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 6px;
+    height: 6px;
+    border: 2px solid;
+    border-width: 2px 2px 0 0;
+    transition: transform 0.2s;
+}
+
+.accordian details[open] summary::after {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.accordian details .accordian-item-body {
+    padding: 0 16px;
+}
+
+.accordian details[open] .accordion-item-body {
+    border-top: 1px solid #dadada;
+    background-color: var(--background-color);
+}
