@@ -126,14 +126,6 @@
             "value": "why-chooseus"
           },
           {
-            "name": "Find Us",
-            "value": "find-us"
-          },
-          {
-            "name": "Why Choose Us",
-            "value": "why-chooseus"
-          },
-          {
             "name": "Testimonials",
             "value": "testimonials"
           },
@@ -144,6 +136,10 @@
           {
             "name": "Get in touch",
             "value": "get-in-touch"
+          },
+          {
+            "name": "Accordion",
+            "value": "accordion"
           },
           {
             "name": "Favourite Corner",
