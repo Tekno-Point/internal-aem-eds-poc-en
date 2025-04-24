@@ -242,6 +242,16 @@ export default async function decorate(block) {
     })
   })
 
+
+  Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
+    element.addEventListener("click", (event) => {
+      Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
+        element.removeAttribute("open");
+      })
+      event.currentTarget.setAttribute("open")
+    })
+  })
+  
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
