@@ -309,16 +309,7 @@ export default async function decorate(block) {
       event.currentTarget.setAttribute("open")
     })
   })
-
-  // Array.from(nav.querySelector(".multiAccordain1").children).forEach((element) => {
-  //   element.addEventListener("click", (event) => {
-  //     Array.from(nav.querySelector(".multiAccordain1").children).forEach((element) => {
-  //       element.removeAttribute("open");
-  //     })
-  //     event.currentTarget.setAttribute("open")
-  //   })
-  // })
-
+  
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
