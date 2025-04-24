@@ -245,7 +245,7 @@
                 "template": {
                   "name": "Get In Touch",
                   "model": "getintouch",
-                  "filter": "getintouch",
+                  "filter": "getintouch"
                 }
               }
             }
