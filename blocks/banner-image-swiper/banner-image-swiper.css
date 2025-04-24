@@ -261,6 +261,7 @@
 @media screen and (max-width:769px) {
     .section.banner-form-container .banner-image-swiper-wrapper {
         height: 307px;
+        padding: 0;
     }
 }
 
@@ -388,11 +389,11 @@
 
 @media screen and (max-width: 1025px) {
     .section.banner-form-container .banner-form-wrapper {
-        /* position: relative; */
-        position: absolute;
-        top: 159px;
-        left: 50%;
-        transform: translateX(-50%);
+        position: relative;
+        /* position: absolute; */
+        /* top: 159px; */
+        /* left: 50%; */
+        /* transform: translateX(-50%); */
         max-width: 74.45%;
         border-radius: 16px;
         z-index: 1;
@@ -401,7 +402,7 @@
         border-radius: 16px;
         border: 1px solid var(--Neutrals-N40, #DEE0E5);
         background: var(--Neutrals-N0, #FFF);
-        /* margin: -165px auto 0; */
+        margin: -280px auto 0;
     }
 
     .banner-form h3 {
@@ -460,5 +461,11 @@
     .banner-form .form-btn::after {
         width: 7px;
         height: 7px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .section.banner-form-container .banner-form-wrapper {
+        margin: -165px auto 0;
     }
 }

@@ -25,9 +25,9 @@ export default function decorate(block) {
     direction: "horizontal",
     loop: true,
     speed: 2000,
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
 
     pagination: {
       el: ".swiper-pagination",
