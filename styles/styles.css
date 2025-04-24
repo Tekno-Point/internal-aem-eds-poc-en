@@ -22,6 +22,8 @@
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: Manrope, Manrope-fallback, sans-serif;
+  --heading-font-family: Manrope-Bold, Manrope-Bold-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -52,8 +54,19 @@
   size-adjust: 99.529%;
   src: local('Arial');
 }
+@font-face {
+  font-family: Manrope-Bold-fallback;
+  size-adjust: 88.82%;
+  src: local('Arial');
+}
 
-@media (width >= 900px) {
+@font-face {
+  font-family: Manrope-fallback;
+  size-adjust: 99.529%;
+  src: local('Arial');
+}
+
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -104,20 +117,36 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin: 0;
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -142,7 +171,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -228,22 +257,22 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }
@@ -255,3 +284,115 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* .header-wrapper,
+.footer-wrapper {
+  display: none;
+} */
+
+/* tab-section css start */
+main>.section.tab-section {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  width: 94.12%;
+  margin: 0 auto;
+  padding-top: 54px;
+  /* padding-bottom: 54px; */
+}
+
+@media (max-width:768px) {
+  main>.section.tab-section {
+    width: auto;
+    padding: 40px 0px;
+    margin: 0;
+  }
+}
+
+.section.tab-section .default-content-wrapper {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  width: auto;
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  align-self: stretch;
+  background: #D2D8EF;
+}
+
+/* @media (max-width:768px) {
+  .section.tab-section .default-content-wrapper {
+    width: 100%;
+  }
+} */
+
+.section.tab-section .default-content-wrapper ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  list-style: none;
+  overflow-x: auto;
+}
+
+
+.section.tab-section .default-content-wrapper ul::-webkit-scrollbar {
+  display: none;
+}
+
+.section.tab-section .default-content-wrapper ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.section.tab-section .default-content-wrapper ul li a {
+  color: #0D2042;
+  font-family: "Manrope-Medium";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.8px;
+  padding-right: 32px;
+}
+
+.section.tab-section .default-content-wrapper ul li::after {
+  content: "";
+  background-image: url(/icons/dot.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  width: 5px;
+  height: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.section.tab-section .default-content-wrapper ul li:last-child:after {
+  display: none;
+}
+
+@media (max-width:768px) {
+  .section.tab-section .default-content-wrapper {
+    padding: 16px 20px;
+  }
+
+  .section.tab-section .default-content-wrapper ul {
+    gap: 16px;
+  }
+
+  .section.tab-section .default-content-wrapper ul li a {
+    padding-right: 16px;
+  }
+}
+
+/* tab-section css start */
+
+/* .header-wrapper {
+  display: none;
+}  */

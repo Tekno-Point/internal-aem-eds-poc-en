@@ -1,0 +1,100 @@
+main>.section.find-us-container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 74.2%;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (max-width: 768px) {
+        width: auto;
+        padding: 40px 20px;
+    }
+
+    .find-us-wrapper {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+
+        .find-us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+
+            @media (max-width: 768px) {
+                gap: 24px;
+            }
+
+            .find-us-container {
+                &.sec-1 {
+                    text-align: center;
+
+                    .sebtxt-1 {
+                        h2 {
+                            margin: 0;
+                            padding: 0;
+                            color: #0D2042;
+                            font-family: "Manrope-Bold";
+                            font-size: 35px;
+                            font-weight: 700;
+                            line-height: 45.5px;
+
+                            @media (max-width: 768px) {
+                                font-size: var(--Typeface-Size-H3, 24px);
+                                line-height: 28.8px;
+                            }
+                        }
+                    }
+                }
+
+                &.sec-2 {
+                    .sebtxt-1 {
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            align-content: center;
+                            gap: 16px;
+                            flex-wrap: wrap;
+                            list-style: none;
+
+                            @media (max-width: 768px) {
+                                gap: 8px;
+                            }
+
+                            li {
+                                a {
+                                    display: flex;
+                                    height: auto;
+                                    padding: 8px 16px;
+                                    align-items: center;
+                                    gap: 8px;
+                                    border-radius: 100px;
+                                    border: 0.5px solid #BFC4CD;
+                                    background: #FFF;
+                                    color: #0D2042;
+                                    font-family: "Manrope-Regular";
+                                    font-size: var(--Typeface-Size-Caption, 12px);
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 15.6px;
+
+                                    @media (max-width: 768px) {
+                                        font-size: 11px;
+                                        line-height: 14.3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -16,9 +16,22 @@
       "cards",
       "columns",
       "fragment",
-      "tabs",
+      "embed",
+      "newcarousel",
+      "swiper-sec",
       "accordion",
+      "dream-home",
+      "favourite-corner",
+      "find-us",
+      "why-choose-us",
+      "our-service",
+      "tabs",
       "swiper",
+      "banner-image",
+      "banner-form",
+      "footer-block",
+      "footer-accordion",
+      "breadcrums",
       "getintouch"
     ]
   },
@@ -48,9 +61,39 @@
     ]
   },
   {
+    "id": "accordian",
+    "components": [
+      "accordian-item"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
+    ]
+  },
+  {
+    "id": "banner-image",
+    "components": [
+      "banner-image-item"
+    ]
+  },
+  {
+    "id": "banner-form",
+    "components": [
+      "banner-form-item"
+    ]
+  },
+  {
+    "id": "footer-block",
+    "components": [
+      "footer-block-item"
+    ]
+  },
+  {
+    "id": "footer-accordion",
+    "components": [
+      "footer-accordion-item"
     ]
   },
   {
