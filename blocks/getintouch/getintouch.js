@@ -10,7 +10,7 @@ export default async function decorate(block) {
         button({ class: "submit" }, "Submit")
     );
     block.append(formDiv)
-    // getintouch
+    console.log("getintouch")
 
 }
 
