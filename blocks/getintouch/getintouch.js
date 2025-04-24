@@ -2,6 +2,7 @@ import { div, input, button } from "../../scripts/dom-helpers.js";
 
 export default async function decorate(block) {
     block.textContent = '';
+    debugger;
 
     // const formDiv = div(
     //     { class: "form-maindiv" },
