@@ -221,12 +221,6 @@ header nav .nav-sections ul>li>ul>li {
     transform: rotate(315deg);
   }
 
-  header nav .nav-sections ul {
-    display: flex;
-    gap: 24px;
-    margin: 0;
-  }
-
   header nav .nav-sections .default-content-wrapper>ul>li {
     flex: 0 1 auto;
     position: relative;
@@ -590,7 +584,7 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
   display: none;
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 768px) {
   header nav {
     display: flex;
     flex-direction: row;
@@ -614,7 +608,7 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
     display: none;
     position: absolute;
     top: 101%;
-    background: rgb(245, 241, 241);
+    background: #ffffff;
     width: 100%;
     overflow-y: auto;
     height: 500px;

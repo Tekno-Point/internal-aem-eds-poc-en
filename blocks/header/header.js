@@ -249,15 +249,18 @@ export default async function decorate(block) {
     }
   }
   const eventOnNav = nav.querySelectorAll(".nav-band-1 li");
+  const body = document.querySelector("body");
   eventOnNav.forEach((element) => {
     element.addEventListener("mouseover", (e, elementSub) => {
       if (element.querySelector("p") != undefined) {
         if (element.querySelector("p").textContent.trim() === "PAINTS") {
           element.querySelector("div").style.display = "block";
+          body.classList.add("overlay-bg")
           element.querySelector(".nav-band-class-2").style.display = "block";
 
           element.querySelector(".nav-band-class-2").addEventListener("mouseout", () => {
             element.querySelector(".nav-band-class-2").style.display = "none";
+            body.classList.remove("overlay-bg")
           })
 
           nav.querySelector(".nav-band-class-3").style.display = "none";
@@ -265,10 +268,12 @@ export default async function decorate(block) {
           nav.querySelector(".nav-band-class-5").style.display = "none";
         } else if (element.querySelector("p").textContent.trim() === "COLOURS") {
           element.querySelector("div").style.display = "block";
+          body.classList.add("overlay-bg")
           element.querySelector(".nav-band-class-3").style.display = "block";
 
           element.querySelector(".nav-band-class-3").addEventListener("mouseout", () => {
             element.querySelector(".nav-band-class-3").style.display = "none";
+            body.classList.remove("overlay-bg")
           })
           nav.querySelector(".nav-band-class-2").style.display = "none";
           nav.querySelector(".nav-band-class-4").style.display = "none";
@@ -276,10 +281,12 @@ export default async function decorate(block) {
 
         } else if (element.querySelector("p").textContent.trim() === "TOOLS") {
           element.querySelector("div").style.display = "block";
+          body.classList.add("overlay-bg")
           element.querySelector(".nav-band-class-4").style.display = "block"
 
           element.querySelector(".nav-band-class-4").addEventListener("mouseout", () => {
             element.querySelector(".nav-band-class-4").style.display = "none";
+            body.classList.remove("overlay-bg")
           })
           nav.querySelector(".nav-band-class-3").style.display = "none";
           nav.querySelector(".nav-band-class-2").style.display = "none";
@@ -287,14 +294,22 @@ export default async function decorate(block) {
 
         } else if (element.querySelector("p").textContent.trim() === "WARRANTY REGISTRATION") {
           element.querySelector("div").style.display = "block";
+          body.classList.add("overlay-bg")
           element.querySelector(".nav-band-class-5").style.display = "block";
 
           element.querySelector(".nav-band-class-5").addEventListener("mouseout", () => {
             element.querySelector(".nav-band-class-5").style.display = "none";
+            body.classList.remove("overlay-bg")
           })
           nav.querySelector(".nav-band-class-3").style.display = "none";
           nav.querySelector(".nav-band-class-4").style.display = "none";
           nav.querySelector(".nav-band-class-2").style.display = "none";
+        }else{
+          body.classList.remove("overlay-bg")
+          nav.querySelector(".nav-band-class-2").style.display = "none";
+          nav.querySelector(".nav-band-class-3").style.display = "none";
+          nav.querySelector(".nav-band-class-4").style.display = "none";
+          nav.querySelector(".nav-band-class-5").style.display = "none";
         }
       }
     })
@@ -309,7 +324,7 @@ export default async function decorate(block) {
       event.currentTarget.setAttribute("open")
     })
   })
-  
+
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
