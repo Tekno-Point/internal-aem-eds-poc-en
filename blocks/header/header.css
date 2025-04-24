@@ -496,3 +496,167 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
   list-style: none;
   gap: 10px;
 }
+
+.section.nav-sections .nav-band-class-1 ul li a {
+  font-weight: 700;
+  color: #222222;
+}
+
+.section.nav-sections .accordian-container {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  header nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
+  header nav .nav-band-sections {
+    height: 56px;
+    padding: 12px 0px 4px 0px;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+
+  header nav .nav-hamburger {
+    padding-left: 15px;
+  }
+
+  .section.nav-sections {
+    display: none;
+    position: absolute;
+    top: 101%;
+    background: rgb(245, 241, 241);
+    width: 100%;
+    overflow-y: auto;
+    height: 500px;
+  }
+
+  header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 {
+    display: none;
+  }
+
+  .section.nav-sections .accordian-container {
+    display: block;
+    flex-direction: column;
+    left: 0.75rem;
+    top: 102px;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow: auto;
+  }
+
+  .section.nav-sections .accordian-container .accordion-item .accordion-item-label {
+    padding: 1rem 0;
+    color: #3d3d3d;
+    font-size: 18px;
+    border-bottom: rgba(34, 34, 34, 0.1) solid 1px;
+    display: block;
+  }
+
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-label,
+  .section.nav-sections .multiAccordain2 .accordion-item .accordion-item-label,
+  .section.nav-sections .multiAccordain3 .accordion-item .accordion-item-label,
+  .section.nav-sections .multiAccordain4 .accordion-item .accordion-item-label {
+    font-size: 1rem;
+    font-weight: 400;
+    position: relative;
+    padding: 1rem 0 1rem 1rem;
+    margin-bottom: 0;
+    border-top: rgba(34, 34, 34, 0.1) solid 1px;
+  }
+
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-body .initalStr1 li,
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-body .initalStr2 li,
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-body .initalStr3 li,
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-body .initalStr4 li,
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-body .initalStr5 li,
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-body .initalStr6 li,
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-body .initalStr7 li,
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-body .initalStr8 li,
+  .section.nav-sections .multiAccordain1 .accordion-item .accordion-item-body .initalStr9 li {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    font-weight: 400;
+    color: #8B8B8B;
+    border-bottom: none;
+  }
+
+  .section.nav-sections .nav-band-class-1 .accordian-container .accordion-item-label {
+    list-style: none;
+  }
+
+  .nav-head .default-content-wrapper .navhead-1 .head1-inner2,
+  .head1-inner3,
+  .head1-inner4 {
+    display: none;
+  }
+
+  .nav-head .default-content-wrapper .navhead-2 .head2-inner1,
+  .head2-inner2 {
+    display: none;
+  }
+
+  .nav-head>div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  header nav[aria-expanded='true'] {
+    min-height: 100%;
+    overflow: unset;
+  }
+
+  header nav .nav-brand img {
+    padding-right: 300px;
+  }
+
+  .section.nav-sections .nav-band-class-1 {
+    padding: 16px;
+    height: 100%;
+  }
+
+  .section.nav-sections .nav-band-class-1 ul li {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0.8rem;
+    padding: 1rem 0;
+    color: #222222;
+    border-bottom: rgba(34, 34, 34, 0.1) solid 1px;
+    display: block;
+  }
+
+  .section.nav-sections .nav-band-class-1 ul li a {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0.8rem;
+    padding: 1rem 0;
+    color: #222222;
+    border-bottom: rgba(34, 34, 34, 0.1) solid 1px;
+    display: block;
+  }
+
+  .section.nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 .nav-band-1-1 .nav-band-class-2 {
+    z-index: 0;
+  }
+
+  .section.nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 .nav-band-1-1 .nav-band-class-2 .nav-band-2 {
+    display: contents;
+  }
+
+}
+
+.overlay-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+}

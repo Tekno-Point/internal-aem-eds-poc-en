@@ -1,14 +1,69 @@
-.block.breadcrums > div > div{
+.block.breadcrums>div>div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.block.breadcrums > div > div ul:nth-child(1){
-    display: flex;
+.block.breadcrums>div>div ul:nth-child(1) li {
+    color: #262626;
+    font-family: "Gotham Book";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 133.333% */
 }
 
-.block.breadcrums > div > div ul:nth-child(1),ul:nth-child(2){
+
+.block.breadcrums>div>div ul:nth-child(1),
+.block.breadcrums>div>div ul:nth-child(2) {
     display: flex;
-    justify-content: space-around;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+
+.block.breadcrums>div>div ul:nth-child(2) select {
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 0.6px solid #DEE0E5;
+    background: #FFF;
+}
+
+.block.breadcrums>div>div ul:nth-child(2) .button-container a {
+    border-radius: 12px;
+    background: #001438;
+    color: #FFF;
+    font-family: var(--Typeface-Family-Body, Manrope);
+    font-size: var(--Typeface-Size-Caption, 12px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+ul li{
+    list-style: none;
+}
+
+@media (max-width:768px) {
+    .block.breadcrums>div>div {
+        display: flex;
+        height: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+    .block.breadcrums>div>div ul:nth-child(1) li {
+        display: none;
+    }
+
+    .block.breadcrums>div>div ul:nth-child(2) {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 }

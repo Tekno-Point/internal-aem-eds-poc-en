@@ -1,5 +1,8 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
+import { div, ul, li } from "../../scripts/dom-helper.js"
+import buildAccoridanBlock from "../accordian/accordian.js"
+
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
@@ -75,6 +78,12 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+  const body = document.querySelector("body");
+  if (!expanded && !forceExpanded) {
+    body.classList.add("overlay-bg")
+  } else {
+    body.classList.remove("overlay-bg")
+  }
   // enable nav dropdown keyboard accessibility
   const navDrops = navSections.querySelectorAll('.nav-drop');
   if (isDesktop.matches) {
@@ -159,27 +168,86 @@ export default async function decorate(block) {
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
-  const div = document.createElement("div");
-  div.classList.add("nav-band-sections");
-  div.append(nav.querySelector(".nav-hamburger"));
-  div.append(nav.querySelector('.nav-brand'))
-  div.append(nav.querySelector('.nav-sections'))
-  nav.append(div);
+  const divSection = document.createElement("div");
+  divSection.classList.add("nav-band-sections");
+  divSection.append(nav.querySelector(".nav-hamburger"));
+  divSection.append(nav.querySelector('.nav-brand'))
+  divSection.append(nav.querySelector('.nav-sections'))
+  nav.append(divSection);
+
+  const classnavhead = nav.querySelectorAll(".nav-head ul");
+  classnavhead.forEach((element, index) => {
+    element.classList.add("navhead-" + (index + 1));
+    if (element.querySelectorAll("li").length != 0) {
+      element.querySelectorAll("li").forEach((elementer, jindex) => {
+        elementer.classList.add("head" + (index + 1) + "-" + "inner" + (jindex + 1))
+      })
+    }
+  })
 
   const navClass = nav.querySelectorAll(".nav-sections ul");
   navClass.forEach((eleClass, index) => {
-    const div = document.createElement("div");
-    div.classList.add("nav-band-class-" + (index + 1));
+    const divSections = document.createElement("div");
+    divSections.classList.add("nav-band-class-" + (index + 1));
     eleClass.classList.add("nav-band-" + (index + 1));
 
     eleClass.querySelectorAll('li').forEach((eleliClass, jindex) => {
       eleliClass.classList.add("nav-band-" + (index + 1) + "-" + (jindex + 1))
     })
     const parentElementTemp = eleClass.parentElement;
-    div.append(eleClass)
-    parentElementTemp.append(div);
+    divSections.append(eleClass)
+    parentElementTemp.append(divSections);
   })
 
+  const mobNavMenu = nav.querySelector(".nav-band-1");
+  const tempData = {};
+  const divAccordian = div({ class: "accordian-container" },
+    ...Array.from(mobNavMenu.children).map((element, index) => {
+      return div({ class: "accordian-item" },
+        div({ class: "labelName" },
+          element.querySelector("p").textContent.trim()
+        ),
+        div({ class: "labelbody" },
+          element.querySelector("div") != null ?
+            div({ class: "labelboday" + (index + 1) }, initalStructure(element, index))
+            : ""
+        )
+      )
+    })
+  )
+  buildAccoridanBlock(divAccordian);
+  const ArrayValue = Object.keys(tempData)
+  for (let index = 0; index < ArrayValue.length; index++) {
+    divAccordian.children[ArrayValue[index]].querySelector(".accordion-item-body").innerHTML = ""
+    divAccordian.children[ArrayValue[index]].querySelector(".accordion-item-body").innerHTML = tempData[ArrayValue[index]]
+    divAccordian.children[ArrayValue[index]].querySelector(".accordion-item-body").classList.add("multiAccordain" + (index + 1))
+  }
+  mobNavMenu.parentElement.append(divAccordian);
+
+  function initalStructure(params, index) {
+    if (params.querySelector("div") && params.querySelector("div").querySelectorAll("ul li").length != 0) {
+      const accordianChild = params.querySelector("div").querySelectorAll("ul li")
+      const divChildAccordian = div({ class: "accoridan-container" },
+        ...Array.from(accordianChild).map((element, index) => {
+          return div({ class: "accordian-item" + (index + 1) },
+            div({ class: "labelName" + (index + 1) },
+              element.querySelector("a").textContent.trim()
+            ),
+            div({ class: "labelbody" },
+              ul({ class: "initalStr" + (index + 1) },
+                ...Array.from(element.innerHTML.split("<br>")).map((elem, index) => {
+                  return index != 0 ? li(elem) : ""
+                })
+
+              )
+            )
+          )
+        })
+      )
+      buildAccoridanBlock(divChildAccordian)
+      tempData[index] = divChildAccordian.innerHTML;
+    }
+  }
   const eventOnNav = nav.querySelectorAll(".nav-band-1 li");
   eventOnNav.forEach((element) => {
     element.addEventListener("mouseover", (e, elementSub) => {
@@ -232,14 +300,29 @@ export default async function decorate(block) {
     })
   })
 
+
+  Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
+    element.addEventListener("click", (event) => {
+      Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
+        element.removeAttribute("open");
+      })
+      event.currentTarget.setAttribute("open")
+    })
+  })
+
+  // Array.from(nav.querySelector(".multiAccordain1").children).forEach((element) => {
+  //   element.addEventListener("click", (event) => {
+  //     Array.from(nav.querySelector(".multiAccordain1").children).forEach((element) => {
+  //       element.removeAttribute("open");
+  //     })
+  //     event.currentTarget.setAttribute("open")
+  //   })
+  // })
+
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
-
-  if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
-    navWrapper.append(await buildBreadcrumbs());
-  }
 
 }
 
@@ -308,3 +391,4 @@ async function buildBreadcrumbs() {
   breadcrumbs.append(ol);
   return breadcrumbs;
 }
+
