@@ -304,7 +304,7 @@ export default async function decorate(block) {
           nav.querySelector(".nav-band-class-3").style.display = "none";
           nav.querySelector(".nav-band-class-4").style.display = "none";
           nav.querySelector(".nav-band-class-2").style.display = "none";
-        }else{
+        } else {
           body.classList.remove("overlay-bg")
           nav.querySelector(".nav-band-class-2").style.display = "none";
           nav.querySelector(".nav-band-class-3").style.display = "none";
@@ -318,10 +318,37 @@ export default async function decorate(block) {
 
   Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
     element.addEventListener("click", (event) => {
-      Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
-        element.removeAttribute("open");
-      })
-      event.currentTarget.setAttribute("open")
+      event.preventDefault();
+      if (tempData[event.target.textContent.trim()] != undefined) {
+        tempData[event.target.textContent.trim()] = undefined;
+        return event.currentTarget.removeAttribute("open")
+      }
+      tempData[event.target.textContent.trim()] = event.target.textContent.trim();
+
+      const childAccoridonItrm = event.currentTarget.querySelectorAll(".accordion-item")
+      if (childAccoridonItrm.length != 0) {
+
+        Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
+          element.removeAttribute("open",'');
+        })
+        event.currentTarget.setAttribute("open",'')
+
+        Array.from(childAccoridonItrm).forEach((elem) => {
+          elem.addEventListener("click",(eventer)=>{
+            Array.from(childAccoridonItrm).forEach((elem) => {
+              elem.removeAttribute("open");
+            })
+            eventer.target.parentElement.setAttribute("open",'');
+          })
+        })
+      } else {
+        Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
+          element.removeAttribute("open");
+        })
+        event.currentTarget.setAttribute("open",'')
+      }
+
+
     })
   })
 

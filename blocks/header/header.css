@@ -21,7 +21,7 @@ header nav {
   max-width: 1248px;
   height: var(--nav-height);
   padding: 0 24px;
-  font-family:" Manrope-Regular";
+  font-family: " Manrope-Regular";
   flex-wrap: wrap;
 }
 
@@ -422,7 +422,7 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
   width: 32.5%;
   font-size: 14px;
   font-weight: 500;
-  font-family:"Manrope-Medium";
+  font-family: "Manrope-Medium";
   color: #8B8B8B;
   margin-bottom: 0.3rem;
 }
@@ -575,6 +575,7 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
   background: rgba(0, 0, 0, 0.7);
   z-index: 9;
 }
+
 .section.nav-sections .nav-band-class-1 ul li a {
   font-weight: 700;
   color: #222222;
@@ -616,6 +617,10 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
 
   header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 {
     display: none;
+  }
+
+  header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 li p a{
+    background: white;
   }
 
   .section.nav-sections .accordian-container {
