@@ -1,8 +1,8 @@
 import { div, input, button } from "../../scripts/dom-helpers.js";
 
 export default async function decorate(block) {
-    block.textContent = '';
-    debugger;
+    // block.textContent = '';
+    // debugger;
 
     // const formDiv = div(
     //     { class: "form-maindiv" },
@@ -11,7 +11,7 @@ export default async function decorate(block) {
     //     button({ class: "submit" }, "Submit")
     // );
     // block.append(formDiv)
-    console.log("getintouch")
+    console.log(block, "getintouch")
 
 }
 
