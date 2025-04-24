@@ -29,7 +29,7 @@
       "swiper",
       "banner-image",
       "banner-form",
-      "banner-list",
+      "scrolling-list",
       "footer-block",
       "footer-accordion",
       "breadcrums"
@@ -82,6 +82,12 @@
     "id": "banner-form",
     "components": [
       "banner-form-item"
+    ]
+  },
+  {
+    "id": "scrolling-list",
+    "components": [
+      "scrolling-list-item"
     ]
   },
   {

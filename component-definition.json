@@ -508,30 +508,30 @@
           }
         },
         {
-          "title": "Banner List",
-          "id": "banner-list",
+          "title": "Scrolling List",
+          "id": "scrolling-list",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Banner List",
-                  "filter": "banner-list"
+                  "name": "Scrolling List",
+                  "filter": "scrolling-list"
                 }
               }
             }
           }
         },
         {
-          "title": "Banner List Item",
-          "id": "banner-list-item",
+          "title": "Scrolling List Item",
+          "id": "scrolling-list-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Banner List Item",
-                  "model": "banner-list-item"
+                  "name": "Scrolling List Item",
+                  "model": "scrolling-list-item"
                 }
               }
             }

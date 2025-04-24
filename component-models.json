@@ -693,7 +693,7 @@
     ]
   },
   {
-    "id": "banner-list-item",
+    "id": "scrolling-list-item",
     "fields": [
       {
         "component": "richtext",
