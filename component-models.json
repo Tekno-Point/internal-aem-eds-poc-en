@@ -372,5 +372,26 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Banner Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "headline",
+        "label": "Headline"
+      },
+      {
+        "component": "richtext",
+        "name": "subtext",
+        "label": "Subtext"
+      }
+    ]
   }
 ]

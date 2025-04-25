@@ -272,6 +272,20 @@
               }
             }
           }
+        },
+        {
+          "title": "Banner",
+          "id": "banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/banner/v1/banner",
+                "template": {
+                  "model": "banner"
+                }
+              }
+            }
+          }
         }
       ]
     }
