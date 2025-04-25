@@ -25,7 +25,8 @@
       "banner",
       "blog-detail",
       "related-blogs",
-      "latest-blogs"
+      "latest-blogs",
+      "qa-section"
     ]
   },
   {
@@ -47,6 +48,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "qa-section",
+    "components": [
+      "qa-section-item"
     ]
   },
   {
