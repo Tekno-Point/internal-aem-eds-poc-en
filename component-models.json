@@ -380,17 +380,20 @@
         "component": "reference",
         "name": "image",
         "label": "Banner Image",
+        "valueType": "string",
         "multi": false
       },
       {
         "component": "text",
         "name": "headline",
-        "label": "Headline"
+        "label": "Headline",
+        "valueType": "string"
       },
       {
         "component": "richtext",
         "name": "subtext",
-        "label": "Subtext"
+        "label": "Subtext",
+        "valueType": "string"
       }
     ]
   }
