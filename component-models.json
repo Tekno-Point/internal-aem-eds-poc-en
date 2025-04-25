@@ -373,8 +373,8 @@
       },
       {
         "component": "richtext",
-        "name": "excerpt",
-        "label": "Excerpt",
+        "name": "description",
+        "label": "Description",
         "value": "",
         "valueType": "string"
       },

@@ -51,7 +51,7 @@
     ]
   },
   {
-    "id": "qa-section",
+    "id": "qa-section-item",
     "components": [
       "qa-section-item"
     ]
