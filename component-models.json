@@ -469,7 +469,7 @@
     "id": "qa-section-item",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "name": "question",
         "label": "Question",
         "valueType": "string"
