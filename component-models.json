@@ -294,10 +294,6 @@
     ]
   },
   {
-    "id": "tabs",
-    "fields": []
-  },
-  {
     "id": "blog-list",
     "fields": [
       {
@@ -481,5 +477,9 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "tabs",
+    "fields": []
   }
 ]

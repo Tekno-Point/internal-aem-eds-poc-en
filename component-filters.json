@@ -72,6 +72,6 @@
   },
   {
     "id": "tabs",
-    "components": ["tabs", "tab"]
+    "components": ["tab"]
   }
 ]
