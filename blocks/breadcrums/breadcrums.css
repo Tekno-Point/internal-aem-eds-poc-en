@@ -1,65 +1,106 @@
-.block.breadcrums>div>div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+main > .section.breadcrums-container {
+  max-width: 1243px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 45px;
 }
-
-.block.breadcrums>div>div ul:nth-child(1) li {
-    color: #262626;
-    font-family: "Gotham Book";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    /* 133.333% */
+main > .section.breadcrums-container .breadcrums-wrapper {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-
-.block.breadcrums>div>div ul:nth-child(1),
-ul:nth-child(2) {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums {
+  width: 100%;
 }
-
-
-.block.breadcrums>div>div ul:nth-child(2) select {
-    margin-top: 10px;
-    border-radius: 12px;
-    border: 0.6px solid #DEE0E5;
-    background: #FFF;
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.block.breadcrums>div>div ul:nth-child(2) .button-container a {
-    border-radius: 12px;
-    background: #001438;
-    color: #FFF;
-    font-family: var(--Typeface-Family-Body, Manrope);
-    font-size: var(--Typeface-Size-Caption, 12px);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-@media (max-width:768px) {
-    .block.breadcrums>div>div {
-        display: flex;
-        height: 100px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        flex-shrink: 0;
-    }
-
-    .block.breadcrums>div>div ul:nth-child(1) li {
-        display: none;
-    }
-
-    .block.breadcrums>div>div ul:nth-child(2) {
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  list-style: none;
 }
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li select {
+  display: flex;
+  padding: 8px 8px 8px 16px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 12px;
+  border: 0.6px solid var(--Neutrals-N40, #DEE0E5);
+  background: var(--Neutrals-N0, #FFF);
+  color: var(--Neutrals-N800, #0D2042);
+  font-family: var(--Typeface-Family-Body, Manrope);
+  font-size: var(--Typeface-Size-Caption, 12px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15.6px;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li select option {
+  display: flex;
+  width: 180px;
+  padding: 18px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: var(--Neutrals-N800, #0D2042);
+  font-family: var(--Typeface-Family-Body, Manrope);
+  font-size: var(--Typeface-Size-Caption, 12px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15.6px;
+  border-radius: 12px;
+  background: var(--Primary-Colors-White, #FFF);
+  box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.15);
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 .button-container {
+  margin: 0;
+  padding: 0;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 .button-container .button {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 32px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 12px;
+  background: #001438;
+  color: #FFF;
+  font-family: "Manrope-Regular";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.6px;
+  border: none;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 .button-container .button::after {
+  content: "";
+  background-image: url(/icons/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: flex;
+  width: 16px;
+  height: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 .breadlist3 {
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=breadcrums.css.map */

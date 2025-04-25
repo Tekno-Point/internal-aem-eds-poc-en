@@ -49,9 +49,27 @@ export default function decorate(block) {
         alreadyWrapped.remove();
       }
     });
+    // const tabsList = block.querySelector('.tabs-list');
+    // tabsList.addEventListener("click",function(e){
+
+    //   const isSelected = e.target.getAttribute('aria-selected') === 'true';
+    //   const button = e.target.parentElem.
+
+    //     if (isSelected) {
+    //       e.target.setAttribute('aria-selected', false);
+    //       button.setAttribute('aria-selected', true);
+    //     }
+    //     else{
+    //       e.target.setAttribute('aria-selected', true);
+    //     }
+    //     console.log(isSelected)
+      
+    // })
   }
 
   updateTabsForMobile();
+
+
 
   window.addEventListener('resize', updateTabsForMobile);
 
@@ -62,6 +80,11 @@ export default function decorate(block) {
       spaceBetween: 16,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 0,
+      // autoplay: {
+      //   delay: 5000, 
+      //   disableOnInteraction: false,
+      // }
     });
   }
 }
+

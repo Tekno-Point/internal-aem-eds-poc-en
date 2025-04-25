@@ -1,4 +1,14 @@
 export default function decorate(block) {
+    Array.from(block.children).forEach((row, rowIndex) => {
+        row.classList.add("breadcrums-container");
+        // row.classList.add(`sec-${rowIndex + 1}`);
+
+        Array.from(row.children).forEach((column, colIndex) => {
+            column.classList.add("breadcrums-container-column");
+            // column.classList.add(`sebtxt-${colIndex + 1}`);
+        });
+    });
+
     if (block.querySelectorAll("ul")) {
         const Preferenceul = block.querySelectorAll("ul");
         Preferenceul.forEach((element, index) => {

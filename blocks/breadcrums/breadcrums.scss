@@ -1,0 +1,122 @@
+main>.section.breadcrums-container {
+    max-width: 1243px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 45px;
+
+    .breadcrums-wrapper {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        .breadcrums {
+            width: 100%;
+
+            &-container {
+                &-column {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .breadlist1 {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+
+                    }
+
+                    .breadlist2 {
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 8px;
+                        list-style: none;
+
+                        li {
+                            select {
+                                display: flex;
+                                padding: 8px 8px 8px 16px;
+                                align-items: center;
+                                gap: 4px;
+                                border-radius: 12px;
+                                border: 0.6px solid var(--Neutrals-N40, #DEE0E5);
+                                background: var(--Neutrals-N0, #FFF);
+                                color: var(--Neutrals-N800, #0D2042);
+                                font-family: var(--Typeface-Family-Body, Manrope);
+                                font-size: var(--Typeface-Size-Caption, 12px);
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 15.6px;
+
+                                option {
+                                    display: flex;
+                                    width: 180px;
+                                    padding: 18px 8px;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 16px;
+                                    color: var(--Neutrals-N800, #0D2042);
+                                    font-family: var(--Typeface-Family-Body, Manrope);
+                                    font-size: var(--Typeface-Size-Caption, 12px);
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 15.6px;
+                                    border-radius: 12px;
+                                    background: var(--Primary-Colors-White, #FFF);
+                                    box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.15);
+                                }
+                            }
+                        }
+
+                        .button-container {
+                            margin: 0;
+                            padding: 0;
+
+                            .button {
+                                margin: 0;
+                                padding: 0;
+                                display: flex;
+                                height: 32px;
+                                padding: 8px 16px;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 4px;
+                                border-radius: 12px;
+                                background: #001438;
+                                color: #FFF;
+                                font-family: "Manrope-Regular";
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 15.6px;
+                                border: none;
+
+                                &::after {
+                                    content: "";
+                                    background-image: url(/icons/arrow-right.svg);
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: 100%;
+                                    display: flex;
+                                    width: 16px;
+                                    height: 16px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-shrink: 0;
+                                }
+                            }
+                        }
+
+                        .breadlist3 {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
