@@ -21,18 +21,18 @@ export default function decorate(block) {
     .querySelector(".banner-image-swiper-wrapper")
     .appendChild(paginationDiv);
 
-    new Swiper(".swiper", {
-        // Optional parameters
-        direction: "horizontal",
-        loop: true,
-        speed: 2000,
-        autoplay: {
-            delay: 2000,
-        },
+    new Swiper(block.closest('.swiper'), {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+      speed: 2000,
+      autoplay: {
+        delay: 2000,
+      },
 
-        pagination: {
-            el: ".swiper-pagination",
-        },
+      pagination: {
+        el: ".swiper-pagination",
+      },
     });
 
     //   Form creation
