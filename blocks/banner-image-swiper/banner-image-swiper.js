@@ -3,7 +3,8 @@ import Swiper from "../banner-image-swiper/swiper-min.js";
 
 export default function decorate(block) {
   console.log(block);
-  const bannerFormContainer = document.querySelector(".banner-form-container");
+//   const bannerFormContainer = document.querySelector(".banner-form-container");
+  const bannerFormContainer = block.closest(".banner-form-container");
   bannerFormContainer
     .querySelector(".banner-image-swiper-wrapper")
     .classList.add("swiper");
@@ -37,7 +38,9 @@ export default function decorate(block) {
   //   Form creation
   const mainForm = form({ class: "form-content" });
 
-  const formTitle = document.querySelector(".banner-form>div>div h3");
+  const formTitle = block
+    .closest(".banner-form-container")
+    .querySelector(".banner-form>div>div h3");
   formTitle.insertAdjacentElement("afterend", mainForm);
 
   //   Name Field
