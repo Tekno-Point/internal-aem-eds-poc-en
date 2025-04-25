@@ -1,0 +1,8 @@
+.blog-detail {
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.blog-detail h1 {
+    font-size: 2.5em;
+}

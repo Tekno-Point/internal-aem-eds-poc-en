@@ -396,5 +396,35 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "blog-detail",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "bannerImage",
+        "label": "Banner Image"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Blog Title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Blog Description"
+      },
+      {
+        "component": "text",
+        "name": "timeToRead",
+        "label": "Time to Read"
+      },
+      {
+        "component": "aem-content",
+        "name": "shareIcon",
+        "label": "Share Icon"
+      }
+    ]
   }
 ]
