@@ -676,6 +676,26 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
 
   .section.nav-sections .nav-band-class-1 .accordian-container .accordion-item-label {
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .section.nav-sections .nav-band-class-1 .accordian-container .accordion-item-label::after{
+    content: '';
+    background: url('../../icons/arrow-right-red.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    display: block;
+    transition: 0.3s all;
+  }
+  
+  .accordion-item[open] > .accordion-item-label::after {
+    transform: rotate(-90deg);
   }
 
   .nav-head .default-content-wrapper .navhead-1 .head1-inner2,
