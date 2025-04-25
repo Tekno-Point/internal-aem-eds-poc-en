@@ -1,0 +1,7 @@
+.form-input{
+    width: 170px;
+}
+.form-div{
+    display: flex;
+    flex-direction: column;
+}

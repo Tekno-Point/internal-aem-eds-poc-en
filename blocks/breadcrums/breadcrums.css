@@ -16,10 +16,11 @@
 
 
 .block.breadcrums>div>div ul:nth-child(1),
-ul:nth-child(2) {
+.block.breadcrums>div>div ul:nth-child(2) {
     display: flex;
     align-items: flex-start;
     gap: 8px;
+    font-family: "Manrope-Regular";
 }
 
 
@@ -28,17 +29,24 @@ ul:nth-child(2) {
     border-radius: 12px;
     border: 0.6px solid #DEE0E5;
     background: #FFF;
+    padding: 2px;
+    font-size: 1rem;
 }
 
 .block.breadcrums>div>div ul:nth-child(2) .button-container a {
     border-radius: 12px;
     background: #001438;
     color: #FFF;
-    font-family: var(--Typeface-Family-Body, Manrope);
+    /* font-family: var(--Typeface-Family-Body, Manrope); */
+    font-family: "Manrope-Regular";
     font-size: var(--Typeface-Size-Caption, 12px);
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+}
+
+ul li{
+    list-style: none;
 }
 
 @media (max-width:768px) {
