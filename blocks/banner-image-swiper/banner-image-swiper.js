@@ -93,7 +93,7 @@ export default function decorate(block) {
     pincodeField.appendChild(pinInpDiv);
 
     // Create Button
-    const bannerFormDiv = block.querySelector(".banner-form>div>div");
+    const bannerFormDiv = block.closest(".banner-form-container").querySelector(".banner-form>div>div");
     const formBtn = button({ class: 'form-btn' }, "Get Started");
     bannerFormDiv.appendChild(formBtn);
 }
