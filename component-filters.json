@@ -23,7 +23,8 @@
       "blog-list",
       "form",
       "banner",
-      "blog-detail"
+      "blog-detail",
+      "related-blogs"
     ]
   },
   {

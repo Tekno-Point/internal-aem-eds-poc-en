@@ -429,5 +429,16 @@
         "label": "Share Icon"
       }
     ]
+  },
+  {
+    "id": "related-blogs",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "relatedBlogLinks",
+        "label": "Related Blog Links",
+        "multi": true
+      }
+    ]
   }
 ]
