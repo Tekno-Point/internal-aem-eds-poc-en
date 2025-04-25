@@ -51,7 +51,7 @@
     ]
   },
   {
-    "id": "accordion",
+    "id": "accordion-item",
     "components": [
       "accordion-item"
     ]
