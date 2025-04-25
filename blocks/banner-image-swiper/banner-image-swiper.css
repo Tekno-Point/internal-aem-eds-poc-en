@@ -1,9 +1,9 @@
 @import url('../banner-image-swiper/swiper-min.css');
 
-body .header-wrapper,
+/* body .header-wrapper,
 .footer-wrapper {
     display: none;
-}
+} */
 
 .section.banner-form-container {
     /* background-color: lavender; */
