@@ -378,6 +378,13 @@
         "component": "aem-content",
         "name": "link",
         "label": "Read More Link"
+      },
+      {
+        "component": "richtext",
+        "name": "cta",
+        "label": "CTA",
+        "value": "",
+        "valueType": "string"
       }
     ]
   },
