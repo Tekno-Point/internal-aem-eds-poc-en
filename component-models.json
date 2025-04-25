@@ -466,7 +466,7 @@
     ]
   },
   {
-    "id": "qa-section-item",
+    "id": "accordion-item",
     "fields": [
       {
         "component": "richtext",

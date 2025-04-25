@@ -26,7 +26,7 @@
       "blog-detail",
       "related-blogs",
       "latest-blogs",
-      "qa-section"
+      "accordion"
     ]
   },
   {
@@ -51,9 +51,9 @@
     ]
   },
   {
-    "id": "qa-section-item",
+    "id": "accordion",
     "components": [
-      "qa-section-item"
+      "accordion-item"
     ]
   },
   {
