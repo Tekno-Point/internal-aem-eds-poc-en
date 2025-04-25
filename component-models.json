@@ -466,7 +466,7 @@
     ]
   },
   {
-    "id": "qa-section",
+    "id": "qa-section-item",
     "fields": [
       {
         "component": "text",
