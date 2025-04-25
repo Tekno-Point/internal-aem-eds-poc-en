@@ -440,5 +440,16 @@
         "multi": true
       }
     ]
+  },
+  {
+    "id": "latest-blogs",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "latestBlogsLinks",
+        "label": "Latest Blogs Links",
+        "multi": true
+      }
+    ]
   }
 ]
