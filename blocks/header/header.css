@@ -283,6 +283,7 @@ header nav .nav-tools {
   list-style: none;
   font-size: small;
   color: #ffffff;
+  font-family: "Manrope-Regular";
 }
 
 
@@ -326,6 +327,8 @@ header nav .nav-tools {
   padding: 20px 20px;
   width: 100%;
   justify-content: space-between;
+  font-family: "Manrope-Regular";
+
 }
 
 .nav-head ul:nth-child(1) li:nth-child(1) {
@@ -599,6 +602,7 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
     align-items: center;
     flex-shrink: 0;
     align-self: stretch;
+    font-family: "Manrope-Regular";
   }
 
   header nav .nav-hamburger {
@@ -631,6 +635,7 @@ header nav .nav-sections .default-content-wrapper .nav-band-class-1 .nav-band-1 
     padding: 1rem;
     border-radius: 4px;
     overflow: auto;
+    font-family: "Manrope-Regular";
   }
 
   .section.nav-sections .accordian-container .accordion-item .accordion-item-label {
