@@ -1,8 +1,14 @@
 main > .section.breadcrums-container {
-  max-width: 1243px;
-  width: 100%;
+  max-width: 100%;
+  width: 93%;
   margin: 0 auto;
   margin-top: 45px;
+  margin-bottom: 28px;
+}
+@media (max-width: 768px) {
+  main > .section.breadcrums-container {
+    display: none;
+  }
 }
 main > .section.breadcrums-container .breadcrums-wrapper {
   max-width: 100%;
@@ -23,6 +29,43 @@ main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-c
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist1 li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--Dark-200, #262626);
+  font-family: "Manrope-Regular";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist1 li::after {
+  content: "";
+  background-image: url(/icons/arrow-right-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: flex;
+  width: 10px;
+  height: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist1 li:last-child {
+  color: var(--Secondary-Dim-Grey, #646464);
+  font-family: "Manrope-Medium";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist1 li:last-child::after {
+  display: none;
 }
 main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 {
   margin: 0;
@@ -32,44 +75,65 @@ main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-c
   gap: 8px;
   list-style: none;
 }
-main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li select {
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li .dw-heading {
+  margin: 0;
+  padding: 0;
   display: flex;
   padding: 8px 8px 8px 16px;
   align-items: center;
   gap: 4px;
   border-radius: 12px;
-  border: 0.6px solid var(--Neutrals-N40, #DEE0E5);
-  background: var(--Neutrals-N0, #FFF);
-  color: var(--Neutrals-N800, #0D2042);
-  font-family: var(--Typeface-Family-Body, Manrope);
-  font-size: var(--Typeface-Size-Caption, 12px);
-  font-style: normal;
+  border: 0.6px solid #DEE0E5;
+  background: #FFF;
+  color: #0D2042;
+  font-family: "Manrope-Regular";
+  font-size: 12px;
   font-weight: 400;
   line-height: 15.6px;
 }
-main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li select option {
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li .dw-heading::after {
+  content: "";
+  background-image: url(/icons/arrow-down-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
   display: flex;
-  width: 180px;
-  padding: 18px 8px;
-  flex-direction: column;
+  width: 16px;
+  height: 16px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  color: var(--Neutrals-N800, #0D2042);
-  font-family: var(--Typeface-Family-Body, Manrope);
-  font-size: var(--Typeface-Size-Caption, 12px);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 15.6px;
-  border-radius: 12px;
-  background: var(--Primary-Colors-White, #FFF);
-  box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
 }
-main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 .button-container {
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li input {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 147px;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  outline: none;
+  color: #00205B;
+  font-family: "Manrope-regular";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.6px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E9E9E9;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .button-container {
   margin: 0;
   padding: 0;
 }
-main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 .button-container .button {
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .button-container .button {
   margin: 0;
   padding: 0;
   display: flex;
@@ -87,7 +151,7 @@ main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-c
   line-height: 15.6px;
   border: none;
 }
-main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 .button-container .button::after {
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .button-container .button::after {
   content: "";
   background-image: url(/icons/arrow-right.svg);
   background-repeat: no-repeat;
@@ -100,7 +164,49 @@ main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-c
   align-items: center;
   flex-shrink: 0;
 }
-main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 .breadlist3 {
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist3 {
   margin: 0;
   padding: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 38px;
+  right: 0;
+  list-style: none;
+  display: flex;
+  width: 180px;
+  padding: 18px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+  background: var(--Primary-Colors-White, #FFF);
+  box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.15);
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist3 .breadlist4 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  width: 130px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex-shrink: 0;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist3 .breadlist4 li {
+  display: flex;
+  height: 22px;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist3 .breadlist4 li a {
+  color: #2B4677;
+  font-family: "Manrope-Regular";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15.6px;
 }/*# sourceMappingURL=breadcrums.css.map */
