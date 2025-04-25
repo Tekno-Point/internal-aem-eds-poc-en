@@ -53,7 +53,7 @@ footer .footer>div {
   border-left: 2px solid #E7194F;
   color: #ffffff;
   font-size: 30px;
-  font-family: sans-serif;
+  font-family: "Manrope-Regular";
   font-weight: 400;
   line-height: 45px;
   outline: none;
@@ -74,7 +74,7 @@ footer .footer>div {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  font-family: sans-serif;
+  font-family: "Manrope-SemiBold";
   border-radius: 4px;
   border: none;
   border: 1px solid transparent;
@@ -132,7 +132,7 @@ footer .footer>div {
 .footer-middle-desk .footer-middle>div:nth-child(1) div>p:nth-of-type(2) a {
   text-decoration: none;
   color: #fff;
-  font-family: sans-serif;
+  font-family: "Manrope-Regular";
   font-weight: 400;
   font-size: 14px;
   line-height: 19.6px;
@@ -236,7 +236,7 @@ footer .footer>div {
 
 .footer-bottom>div>div ul,
 .footer-bottom>div:nth-child(2) div p {
-  font-family: sans-serif;
+  font-family: "Manrope-Regular";
   font-weight: 400;
   font-size: 12px;
   line-height: 16.3px;
@@ -301,7 +301,7 @@ footer .footer>div {
 
   .footer-middle-mobile .footer-middle p:nth-child(2) {
     font-size: 11px;
-    font-family: sans-serif;
+    font-family: "Manrope-Regular";
     font-weight: 400;
     line-height: 14.3px;
     color: #fff;
@@ -321,7 +321,7 @@ footer .footer>div {
     font-size: 12px;
     line-height: 16px;
     font-weight: 700;
-    font-family: sans-serif;
+    font-family: "Manrope-Bold";
     color: #fff;
   }
 
@@ -360,7 +360,7 @@ footer .footer>div {
     font-size: 11px;
     line-height: 14.3px;
     font-weight: 400;
-    font-family: sans-serif;
+    font-family: "Manrope-Regular";
     color: #fff;
   }
 
@@ -395,7 +395,7 @@ footer .footer>div {
     font-size: 12px;
     line-height: 16px;
     font-weight: 700;
-    font-family: sans-serif;
+    font-family: "Manrope-Bold";
     color: #fff;
     margin: 0;
   }
@@ -414,7 +414,7 @@ footer .footer>div {
   }
 
   .footer-accordion .accordion-item-body ul li a {
-    font-family: sans-serif;
+    font-family: "Manrope-Regular";
     font-weight: 400;
     font-size: 11px;
     line-height: 14.3px;
@@ -454,7 +454,7 @@ footer .footer>div {
   .footer-bottom>div>div ul li,
   .footer-bottom div:nth-child(2) p {
     font-size: 11px;
-    font-family: sans-serif;
+    font-family: "Manrope-Regular";
     font-weight: 400;
     line-height: 14.3px;
     color: #fff;
