@@ -1,6 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-import accordion from "../accordion/accordion.js"
+import footerAccordian from "../accordian/accordian.js"
 import { div, input, button} from "../../scripts/dom-helper.js";
 
 /**
@@ -23,7 +23,6 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   footer.append(maindiv);
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-  accordion(footer.querySelector(".footer-accordion"));
+  footerAccordian(footer.querySelector(".footer-accordion"));
   block.append(footer);
 }
-

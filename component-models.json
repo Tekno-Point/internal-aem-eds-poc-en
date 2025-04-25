@@ -693,6 +693,18 @@
     ]
   },
   {
+    "id": "scrolling-list-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "footer-block",
     "fields": [
       {

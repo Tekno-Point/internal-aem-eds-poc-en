@@ -2,23 +2,24 @@ import { div, form, label, input, button } from "../../scripts/dom-helper.js";
 import Swiper from "../banner-image-swiper/swiper-min.js";
 
 export default function decorate(block) {
-    console.log(block);
-    const bannerFormContainer = block.querySelector(".banner-form-container");
-    bannerFormContainer
-        .querySelector(".banner-image-swiper-wrapper")
-        .classList.add("swiper");
-    bannerFormContainer
-        .querySelector(".banner-image-swiper")
-        .classList.add("swiper-wrapper");
-    bannerFormContainer
-        .querySelectorAll(".banner-image-swiper>div")
-        .forEach((e) => {
-            e.classList.add("swiper-slide");
-        });
-    const paginationDiv = div({ class: "swiper-pagination" });
-    bannerFormContainer
-        .querySelector(".banner-image-swiper-wrapper")
-        .appendChild(paginationDiv);
+  console.log(block);
+//   const bannerFormContainer = document.querySelector(".banner-form-container");
+  const bannerFormContainer = block.closest(".banner-form-container");
+  bannerFormContainer
+    .querySelector(".banner-image-swiper-wrapper")
+    .classList.add("swiper");
+  bannerFormContainer
+    .querySelector(".banner-image-swiper")
+    .classList.add("swiper-wrapper");
+  bannerFormContainer
+    .querySelectorAll(".banner-image-swiper>div")
+    .forEach((e) => {
+      e.classList.add("swiper-slide");
+    });
+  const paginationDiv = div({ class: "swiper-pagination" });
+  bannerFormContainer
+    .querySelector(".banner-image-swiper-wrapper")
+    .appendChild(paginationDiv);
 
     new Swiper(".swiper", {
         // Optional parameters
@@ -37,8 +38,10 @@ export default function decorate(block) {
     //   Form creation
     const mainForm = form({ class: "form-content" });
 
-    const formTitle = block.querySelector(".banner-form>div>div h3");
-    formTitle.insertAdjacentElement("afterend", mainForm);
+  const formTitle = block
+    .closest(".banner-form-container")
+    .querySelector(".banner-form>div>div h3");
+  formTitle.insertAdjacentElement("afterend", mainForm);
 
     //   Name Field
     const nameField = div({ class: "form-field name-field" });
@@ -90,7 +93,8 @@ export default function decorate(block) {
     pincodeField.appendChild(pinInpDiv);
 
     // Create Button
-    const bannerFormDiv = block.querySelector(".banner-form>div>div");
+    const bannerFormDiv = block.closest(".banner-form-container").querySelector(".banner-form>div>div");
     const formBtn = button({ class: 'form-btn' }, "Get Started");
     bannerFormDiv.appendChild(formBtn);
 }
+
