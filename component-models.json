@@ -408,17 +408,20 @@
       {
         "component": "text",
         "name": "title",
-        "label": "Blog Title"
+        "label": "Blog Title",
+        "valueType": "string"
       },
       {
         "component": "richtext",
         "name": "description",
-        "label": "Blog Description"
+        "label": "Blog Description",
+        "valueType": "string"
       },
       {
         "component": "text",
         "name": "timeToRead",
-        "label": "Time to Read"
+        "label": "Time to Read",
+        "valueType": "string"
       },
       {
         "component": "aem-content",
