@@ -118,25 +118,6 @@
     ]
   },
   {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "columns",
     "fields": [
       {
@@ -370,6 +351,37 @@
         "value": "",
         "label": "API Url",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "thumbnail",
+        "label": "Thumbnail",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "excerpt",
+        "label": "Excerpt",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Read More Link"
       }
     ]
   },
