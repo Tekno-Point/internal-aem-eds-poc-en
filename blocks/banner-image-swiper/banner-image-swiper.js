@@ -97,3 +97,4 @@ const bannerFormDiv = document.querySelector(".banner-form>div>div");
   const formBtn = button({class:'form-btn'}, "Get Started");
   bannerFormDiv.appendChild(formBtn);
 }
+

@@ -26,4 +26,3 @@ export default async function decorate(block) {
   footerAccordian(footer.querySelector(".footer-accordion"));
   block.append(footer);
 }
-
