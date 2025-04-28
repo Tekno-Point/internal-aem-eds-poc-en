@@ -2,8 +2,6 @@ import Swiper from '../testimonial/swiper-bundle.min.js';
 
 export default function decorate(block) {
   const slides = Array.from(block.children);
-
-  // Create Swiper DOM structure regardless of slide count
   const swiperWrapper = document.createElement('div');
   const swiperPagination = document.createElement('div');
 
@@ -11,7 +9,6 @@ export default function decorate(block) {
   swiperPagination.classList.add('swiper-pagination');
   block.classList.add('swiper');
 
-  // Prepare and move slides into Swiper wrapper
   slides.forEach((slide, slideIndex) => {
     slide.classList.add('swiper-slide');
 
@@ -23,11 +20,9 @@ export default function decorate(block) {
     swiperWrapper.appendChild(slide);
   });
 
-  // Append Swiper structure to the block
   block.appendChild(swiperWrapper);
   block.appendChild(swiperPagination);
 
-  // Only initialize Swiper if more than 4 slides (desktop) or more than 1 (mobile)
   const isMobileView = window.matchMedia('(max-width: 768px)').matches;
   const shouldInitSwiper = slides.length > 4 || (isMobileView && slides.length > 1);
 
@@ -37,6 +32,11 @@ export default function decorate(block) {
       spaceBetween: 12,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 0,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: swiperPagination,
         clickable: true,

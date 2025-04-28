@@ -80,10 +80,10 @@ export default function decorate(block) {
       spaceBetween: 16,
       slidesOffsetBefore: 0,
       slidesOffsetAfter: 0,
-      // autoplay: {
-      //   delay: 5000, 
-      //   disableOnInteraction: false,
-      // }
+      autoplay: {
+        delay: 5000, 
+        disableOnInteraction: false,
+      }
     });
   }
 }

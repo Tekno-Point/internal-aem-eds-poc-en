@@ -1,5 +1,4 @@
 export default function decorate(block) {
-    // Loop through each row in the block
     Array.from(block.children).forEach((row, rowIndex) => {
       row.classList.add("favourite-corner-container");
       row.classList.add(`corner-${rowIndex + 1}`);

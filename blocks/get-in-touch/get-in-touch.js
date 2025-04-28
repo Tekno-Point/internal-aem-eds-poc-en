@@ -2,8 +2,6 @@ import { div, input, button, label, select, option, p, h2 } from "../../scripts/
 
 export default async function decorate(block) {
     block.textContent = '';
-    // debugger;
-
     const formDiv = div(
         { class: "form-maindiv" },
         div({ class: "heading" }, h2("Get in touch"), p("Drop your query and we will contact you")),

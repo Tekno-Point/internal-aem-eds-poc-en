@@ -31,11 +31,11 @@ export default function decorate(block) {
     spaceBetween: 20,
     slidesOffsetBefore: 0,
     slidesOffsetAfter: 0,
-    //   loop: true,
-    //   autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    //   },
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
     pagination: {
       el: swiperPagination,
       clickable: true,

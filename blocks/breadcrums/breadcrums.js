@@ -21,22 +21,15 @@ export default function decorate(block) {
     const dropdownMenu = block.querySelector(".breadlist4");
 
     if (dropdownTrigger && dropdownMenu) {
-        // Initially hide the dropdown
         dropdownMenu.style.display = "none";
 
-        // Add search input field
         const searchInput = document.createElement("input");
+        searchInput.classList.add("search-bar");
         searchInput.type = "text";
         searchInput.placeholder = "Search city...";
-        // searchInput.style.margin = "8px 0";
-        // searchInput.style.padding = "4px";
-        // searchInput.style.width = "100%";
-        // searchInput.style.boxSizing = "border-box";
 
-        // Insert search input before the city list
         dropdownMenu.parentNode.insertBefore(searchInput, dropdownMenu);
 
-        // Toggle dropdown visibility
         const dropdownTriggersec = block.querySelector(".breadlist2 > li > p");
         dropdownTriggersec.classList.add("dw-heading");
         dropdownTriggersec.addEventListener("click", () => {
@@ -46,7 +39,6 @@ export default function decorate(block) {
             searchInput.style.display = isVisible ? "none" : "flex";
         });
 
-        // Filter logic for city list
         searchInput.addEventListener("input", () => {
             const filter = searchInput.value.toLowerCase();
             const cities = dropdownMenu.querySelectorAll("li");
@@ -57,4 +49,3 @@ export default function decorate(block) {
         });
     }
 }
-  
