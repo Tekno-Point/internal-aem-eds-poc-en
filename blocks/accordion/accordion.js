@@ -8,7 +8,7 @@ export default function decorate(block) {
     });
     const heading = block.querySelector('.accordion-container > div');
     if (heading) {
-        heading.classList.add('new-class'); // No dot when using classList.add
+        heading.classList.add('new-class'); 
     }
 
     const accordionWrapper = block.querySelector('.accordion-wrapper');

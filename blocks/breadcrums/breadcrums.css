@@ -112,7 +112,7 @@ main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-c
   align-items: center;
   flex-shrink: 0;
 }
-main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li input {
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li .search-bar {
   margin: 0;
   padding: 0;
   display: flex;
@@ -126,8 +126,28 @@ main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-c
   font-size: 12px;
   font-weight: 400;
   line-height: 15.6px;
+  padding-top: 4px;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li .search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid #E9E9E9;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li .search-wrapper .dropdw-heading {
+  margin: 0;
+  padding: 0;
+  height: 19px;
+  flex-shrink: 0;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li .search-wrapper .dropdw-heading .icon {
+  width: 100%;
+  height: 100%;
+}
+main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .breadlist2 li .search-wrapper .dropdw-heading .icon img {
+  width: 16px;
+  height: 16px;
 }
 main > .section.breadcrums-container .breadcrums-wrapper .breadcrums-container-column .button-container {
   margin: 0;
