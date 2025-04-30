@@ -1,6 +1,4 @@
 @import url('../testimonial/swiper-bundle.min.css');
-@import "../common-themes/css/fluid-typography";
-@import "../common-themes/css/variables_mixins";
 
 main>.section.swiper-sec-container {
   margin: 0;
@@ -109,7 +107,7 @@ main>.section.swiper-sec-container {
             & p:first-child {
               color: #001438;
               font-family: "Manrope-Regular";
-              font-size: rem(14px);
+              font-size: 14px;
               font-weight: 400;
               line-height: 16px;
               margin: 0;
