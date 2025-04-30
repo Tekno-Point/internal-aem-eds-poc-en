@@ -79,11 +79,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
   const body = document.querySelector("body");
-  if (!expanded && !forceExpanded) {
-    body.classList.add("overlay-bg")
-  } else {
-    body.classList.remove("overlay-bg")
-  }
+
   // enable nav dropdown keyboard accessibility
   const navDrops = navSections.querySelectorAll('.nav-drop');
   if (isDesktop.matches) {
@@ -255,12 +251,12 @@ export default async function decorate(block) {
       if (element.querySelector("p") != undefined) {
         if (element.querySelector("p").textContent.trim() === "PAINTS") {
           element.querySelector("div").style.display = "block";
-          body.classList.add("overlay-bg")
+
           element.querySelector(".nav-band-class-2").style.display = "block";
 
           element.querySelector(".nav-band-class-2").addEventListener("mouseout", () => {
             element.querySelector(".nav-band-class-2").style.display = "none";
-            body.classList.remove("overlay-bg")
+
           })
 
           nav.querySelector(".nav-band-class-3").style.display = "none";
@@ -268,12 +264,12 @@ export default async function decorate(block) {
           nav.querySelector(".nav-band-class-5").style.display = "none";
         } else if (element.querySelector("p").textContent.trim() === "COLOURS") {
           element.querySelector("div").style.display = "block";
-          body.classList.add("overlay-bg")
+
           element.querySelector(".nav-band-class-3").style.display = "block";
 
           element.querySelector(".nav-band-class-3").addEventListener("mouseout", () => {
             element.querySelector(".nav-band-class-3").style.display = "none";
-            body.classList.remove("overlay-bg")
+
           })
           nav.querySelector(".nav-band-class-2").style.display = "none";
           nav.querySelector(".nav-band-class-4").style.display = "none";
@@ -281,12 +277,12 @@ export default async function decorate(block) {
 
         } else if (element.querySelector("p").textContent.trim() === "TOOLS") {
           element.querySelector("div").style.display = "block";
-          body.classList.add("overlay-bg")
+
           element.querySelector(".nav-band-class-4").style.display = "block"
 
           element.querySelector(".nav-band-class-4").addEventListener("mouseout", () => {
             element.querySelector(".nav-band-class-4").style.display = "none";
-            body.classList.remove("overlay-bg")
+
           })
           nav.querySelector(".nav-band-class-3").style.display = "none";
           nav.querySelector(".nav-band-class-2").style.display = "none";
@@ -294,18 +290,18 @@ export default async function decorate(block) {
 
         } else if (element.querySelector("p").textContent.trim() === "WARRANTY REGISTRATION") {
           element.querySelector("div").style.display = "block";
-          body.classList.add("overlay-bg")
+
           element.querySelector(".nav-band-class-5").style.display = "block";
 
           element.querySelector(".nav-band-class-5").addEventListener("mouseout", () => {
             element.querySelector(".nav-band-class-5").style.display = "none";
-            body.classList.remove("overlay-bg")
+
           })
           nav.querySelector(".nav-band-class-3").style.display = "none";
           nav.querySelector(".nav-band-class-4").style.display = "none";
           nav.querySelector(".nav-band-class-2").style.display = "none";
         } else {
-          body.classList.remove("overlay-bg")
+
           nav.querySelector(".nav-band-class-2").style.display = "none";
           nav.querySelector(".nav-band-class-3").style.display = "none";
           nav.querySelector(".nav-band-class-4").style.display = "none";
@@ -329,23 +325,23 @@ export default async function decorate(block) {
       if (childAccoridonItrm.length != 0) {
 
         Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
-          element.removeAttribute("open",'');
+          element.removeAttribute("open", '');
         })
-        event.currentTarget.setAttribute("open",'')
+        event.currentTarget.setAttribute("open", '')
 
         Array.from(childAccoridonItrm).forEach((elem) => {
-          elem.addEventListener("click",(eventer)=>{
+          elem.addEventListener("click", (eventer) => {
             Array.from(childAccoridonItrm).forEach((elem) => {
               elem.removeAttribute("open");
             })
-            eventer.target.parentElement.setAttribute("open",'');
+            eventer.target.parentElement.setAttribute("open", '');
           })
         })
       } else {
         Array.from(nav.querySelector(".accordian-container").children).forEach((element) => {
           element.removeAttribute("open");
         })
-        event.currentTarget.setAttribute("open",'')
+        event.currentTarget.setAttribute("open", '')
       }
 
 
