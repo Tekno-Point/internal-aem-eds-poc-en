@@ -90,4 +90,5 @@ body.modal-open {
 
 .modal dialog .section {
     padding: 0;
+    height: 100%;
 }

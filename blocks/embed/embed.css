@@ -1,11 +1,11 @@
 .embed-wrapper {
-  height: 100vh;
+  height: 100%;
 }
 
 .embed {
   width: 100%;
   text-align: center;
-  max-width: 952px;
+  max-width: 752px;
   height: 100%;
   margin: 0 auto;
   vertical-align: middle;
