@@ -591,7 +591,7 @@
       ]
     },
     {
-      "id": "categoriesSection",
+      "id": "categories-section",
       "fields": [
         {
           "component": "text",
@@ -662,6 +662,50 @@
               "description": "Link to the category page"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "promotion-banner",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "bannerText",
+          "label": "Banner Text",
+          "description": "Main promotional text for the banner"
+        },
+        {
+          "component": "select",
+          "name": "backgroundColor",
+          "label": "Background Color",
+          "description": "Background color for the promotion banner",
+          "options": [
+            {
+              "name": "Purple",
+              "value": "bg-purple"
+            },
+            {
+              "name": "Blue",
+              "value": "bg-blue"
+            },
+            {
+              "name": "Red",
+              "value": "bg-red"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "name": "ctaText",
+          "label": "CTA Button Text",
+          "description": "Text to display on the call-to-action button"
+        },
+        {
+          "component": "aem-content",
+          "name": "ctaLink",
+          "label": "CTA Button Link",
+          "description": "Link for the call-to-action button"
         }
       ]
     }
