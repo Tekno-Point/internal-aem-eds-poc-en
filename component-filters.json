@@ -60,5 +60,9 @@
   {
     "id": "tab",
     "components": ["tab"]
+  },
+  {
+    "id": "categories-section",
+    "components": []
   }
 ]
