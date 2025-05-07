@@ -633,7 +633,7 @@
             },
             {
               "component": "select",
-              "name": "classes",
+              "name": "badge",
               "label": "Badge",
               "description": "Optional badge to show on the category card",
               "options": [
