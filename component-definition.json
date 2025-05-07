@@ -371,6 +371,21 @@
           }
         },
         {
+          "title": "Collection",
+          "id": "collection",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Collection",
+                  "model": "collection"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Promotion Banner",
           "id": "promotion-banner",
           "plugins": {

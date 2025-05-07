@@ -64,6 +64,6 @@
   },
   {
     "id": "categories-section",
-    "components": []
+    "components": ["collection"]
   }
 ]
