@@ -605,6 +605,7 @@
           "name": "categories",
           "label": "Categories",
           "description": "Collection of product categories",
+          "id" : "collection",
           "fields": [
             {
               "component": "text",
