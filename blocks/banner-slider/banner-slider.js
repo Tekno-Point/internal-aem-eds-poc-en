@@ -1,4 +1,5 @@
 export default function decorate(block) {
+    if( !window.location.hostname.includes('author')){
     // Extract banner slider configuration from data attributes
     const autoplay = block.dataset.autoplay === 'true';
     const autoplaySpeed = parseInt(block.dataset.autoplaySpeed, 10) || 5000;
@@ -202,3 +203,4 @@ export default function decorate(block) {
       }
     });
   }
+}
