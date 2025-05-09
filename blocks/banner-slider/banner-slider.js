@@ -17,7 +17,7 @@ export default function decorate(block) {
     slidesWrapper.className = 'banner-slider-slides';
     
     // Process each slide
-    [...block.children].forEach((row, index) => {
+    [...block.children].slice(5).forEach((row, index) => {
       const slide = document.createElement('div');
       slide.className = 'banner-slide';
       slide.dataset.index = index;
@@ -202,5 +202,5 @@ export default function decorate(block) {
         startAutoplay();
       }
     });
-  }
+  } 
 }
