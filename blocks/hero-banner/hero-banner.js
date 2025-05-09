@@ -1,31 +1,33 @@
 export default function decorate(block) {
+
+    console.log(block)
     // Extract content from block
-    const blockContent = block.innerHTML;
-    block.innerHTML = '';
+    // const blockContent = block.innerHTML;
+    // block.innerHTML = '';
     
     // Create banner structure
     const bannerContainer = document.createElement('div');
     bannerContainer.className = 'hero-banner-container';
     
     // Add promo bar if specified
-    const promoBarData = block.dataset.showPromoBar;
-    if (promoBarData && promoBarData.toLowerCase() === 'true') {
-      const promoBar = document.createElement('div');
-      promoBar.className = 'hero-banner-promo';
+    // const promoBarData = block.dataset.showPromoBar;
+    // if (promoBarData && promoBarData.toLowerCase() === 'true') {
+    //   const promoBar = document.createElement('div');
+    //   promoBar.className = 'hero-banner-promo';
       
-      const promoTextSpan = document.createElement('span');
-      promoTextSpan.className = 'promo-text';
-      promoTextSpan.textContent = block.dataset.promoText || 'LIMITED PER';
-      promoBar.appendChild(promoTextSpan);
+    //   const promoTextSpan = document.createElement('span');
+    //   promoTextSpan.className = 'promo-text';
+    //   promoTextSpan.textContent = block.dataset.promoText || 'LIMITED PER';
+    //   promoBar.appendChild(promoTextSpan);
       
-      const promoButton = document.createElement('a');
-      promoButton.className = 'promo-button';
-      promoButton.textContent = block.dataset.promoButtonText || 'Plan now';
-      promoButton.href = '#';
-      promoBar.appendChild(promoButton);
+    //   const promoButton = document.createElement('a');
+    //   promoButton.className = 'promo-button';
+    //   promoButton.textContent = block.dataset.promoButtonText || 'Plan now';
+    //   promoButton.href = '#';
+    //   promoBar.appendChild(promoButton);
       
-      bannerContainer.appendChild(promoBar);
-    }
+    //   bannerContainer.appendChild(promoBar);
+    // }
     
     // Main banner content
     const bannerContent = document.createElement('div');

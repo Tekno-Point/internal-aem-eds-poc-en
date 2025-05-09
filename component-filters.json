@@ -27,7 +27,8 @@
       "related-blogs",
       "latest-blogs",
       "accordion",
-      "hero-banner"
+      "hero-banner",
+      "banner-slider"
     ]
   },
   {
@@ -64,5 +65,11 @@
   {
     "id": "hero-banner",
     "components": []
+  },
+  {
+    "id": "banner-slider",
+    "components": [
+      "banner-slide"
+    ]
   }
 ]
