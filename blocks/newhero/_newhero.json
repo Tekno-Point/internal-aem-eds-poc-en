@@ -40,6 +40,13 @@
             "value": "",
             "label": "Text",
             "valueType": "string"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "imageAltnew",
+            "label": "Alt",
+            "value": ""
           }
         ]
       }

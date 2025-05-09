@@ -15,9 +15,13 @@
       "hero",
       "cards",
       "columns",
-      "form",
-      "fragment",
-      "newhero"
+      "fragment"
+    ]
+  },
+  {
+    "id": "banner-slider",
+    "components": [
+      "banner-slide"
     ]
   },
   {
