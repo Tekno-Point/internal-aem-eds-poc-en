@@ -709,5 +709,128 @@
           "description": "Link for the call-to-action button"
         }
       ]
+    },
+    {
+      "id": "hero-banner",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "mainHeading",
+          "label": "Main Heading",
+          "description": "Main heading text displayed prominently in the banner"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "subHeading",
+          "label": "Sub Heading",
+          "description": "Secondary heading text displayed below the main heading"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "heroImage",
+          "label": "Hero Image",
+          "description": "Banner hero image (preferably with transparent background)",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "ctaButtonText",
+          "label": "CTA Button Text",
+          "description": "Text for the call-to-action button"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "ctaButtonLink",
+          "label": "CTA Button Link",
+          "description": "Link for the call-to-action button",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "taglineText",
+          "label": "Tagline Text",
+          "description": "Tagline or brand message text (optional)"
+        },
+        {
+          "component": "array",
+          "name": "statItems",
+          "label": "Stat Items",
+          "description": "Statistical highlights to display in the banner",
+          "min": 0,
+          "max": 4,
+          "fields": [
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "statValue",
+              "label": "Stat Value",
+              "description": "The statistical value to display"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "statDescription",
+              "label": "Stat Description",
+              "description": "Description of the statistical value"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "superscript",
+              "label": "Superscript",
+              "description": "Optional superscript to add to the stat value"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "backgroundColor",
+          "label": "Background Color",
+          "description": "Background color of the banner",
+          "options": [
+            {
+              "name": "Blue",
+              "value": "blue"
+            },
+            {
+              "name": "Red",
+              "value": "red"
+            },
+            {
+              "name": "White",
+              "value": "white"
+            }
+          ],
+          "defaultValue": "blue"
+        },
+        {
+          "component": "checkbox",
+          "valueType": "boolean",
+          "name": "showPromoBar",
+          "label": "Show Promo Bar",
+          "description": "Whether to show a promotional bar above the banner"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "promoText",
+          "label": "Promo Text",
+          "description": "Text for the promotional bar (if enabled)"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "promoButtonText",
+          "label": "Promo Button Text",
+          "description": "Text for the button in the promotional bar (if enabled)"
+        }
+      ]
     }
 ]
