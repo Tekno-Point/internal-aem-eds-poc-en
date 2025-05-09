@@ -65,5 +65,11 @@
   {
     "id": "hero-banner",
     "components": []
+  },
+  {
+    "id": "banner-slider",
+    "components": [
+      "banner-slide"
+    ]
   }
 ]
