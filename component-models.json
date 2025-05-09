@@ -758,6 +758,59 @@
           "description": "Tagline or brand message text (optional)"
         },
         {
+          "component": "array",
+          "name": "statItems",
+          "label": "Stat Items",
+          "description": "Statistical highlights to display in the banner",
+          "min": 0,
+          "max": 4,
+          "fields": [
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "statValue",
+              "label": "Stat Value",
+              "description": "The statistical value to display"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "statDescription",
+              "label": "Stat Description",
+              "description": "Description of the statistical value"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "superscript",
+              "label": "Superscript",
+              "description": "Optional superscript to add to the stat value"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "backgroundColor",
+          "label": "Background Color",
+          "description": "Background color of the banner",
+          "options": [
+            {
+              "name": "Blue",
+              "value": "blue"
+            },
+            {
+              "name": "Red",
+              "value": "red"
+            },
+            {
+              "name": "White",
+              "value": "white"
+            }
+          ],
+          "defaultValue": "blue"
+        },
+        {
           "component": "checkbox",
           "valueType": "boolean",
           "name": "showPromoBar",
