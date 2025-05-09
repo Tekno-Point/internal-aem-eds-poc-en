@@ -341,10 +341,11 @@
       },
       {
         "component": "text",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "description": "Alternative text for the background image",
-        "valueType": "string"
+        "name": "text",
+        "label": "Text",
+        "description": "text ",
+        "valueType": "string",
+        "multi": true
       },
       {
         "component": "select",
