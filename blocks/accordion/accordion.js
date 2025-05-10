@@ -15,7 +15,7 @@ export default function decorate(block) {
 
     // Add style class if specified
     if (config.style && config.style !== 'default') {
-        block.classList.add(config.style);
+        block.classList.add(config.style.trim());
     }
 
     // Add data attribute for multiple open behavior
