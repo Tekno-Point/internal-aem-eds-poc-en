@@ -16,7 +16,14 @@
       "cards",
       "columns",
       "fragment",
-      "blocktest"
+      "blocktest",
+      "accordion"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {
