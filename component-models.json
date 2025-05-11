@@ -536,5 +536,178 @@
         "description": "When checked, this item will be expanded by default"
       }
     ]
+  },
+  {
+    "id": "product-info",
+    "fields": [
+      {
+        "component": "text",
+        "name": "productTitle",
+        "label": "Product Title",
+        "description": "The name or title of the product"
+      },
+      {
+        "component": "multiline",
+        "name": "productDescription",
+        "label": "Product Description",
+        "description": "Detailed description of the product features and benefits"
+      },
+      {
+        "component": "reference",
+        "name": "productImage",
+        "label": "Product Image",
+        "description": "Primary image of the product",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "productPrice",
+        "label": "Product Price",
+        "description": "Current price of the product (e.g. $99.99)"
+      },
+      {
+        "component": "text",
+        "name": "productSku",
+        "label": "Product SKU",
+        "description": "Unique identifier for the product"
+      },
+      {
+        "component": "select",
+        "name": "productRating",
+        "label": "Product Rating",
+        "description": "Star rating for the product (1-5)",
+        "options": [
+          {
+            "name": "5 Stars",
+            "value": "5"
+          },
+          {
+            "name": "4.5 Stars",
+            "value": "4.5"
+          },
+          {
+            "name": "4 Stars",
+            "value": "4"
+          },
+          {
+            "name": "3.5 Stars",
+            "value": "3.5"
+          },
+          {
+            "name": "3 Stars",
+            "value": "3"
+          },
+          {
+            "name": "2.5 Stars",
+            "value": "2.5"
+          },
+          {
+            "name": "2 Stars",
+            "value": "2"
+          },
+          {
+            "name": "1.5 Stars",
+            "value": "1.5"
+          },
+          {
+            "name": "1 Star",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "productReviews",
+        "label": "Number of Reviews",
+        "description": "The number of customer reviews (will be displayed as '123 reviews')"
+      },
+      {
+        "component": "checkbox",
+        "name": "inStock",
+        "label": "In Stock",
+        "description": "Check if the product is currently in stock"
+      },
+      {
+        "component": "aem-content",
+        "name": "productCta",
+        "label": "Call-to-Action Button",
+        "description": "Link for the primary action button (e.g. 'Add to Cart')"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Button Text",
+        "description": "Text displayed on the call-to-action button"
+      },
+      {
+        "component": "multiselect",
+        "name": "productStyle",
+        "label": "Product Display Style",
+        "description": "Visual styling options for the product display",
+        "options": [
+          {
+            "name": "Layout",
+            "children": [
+              {
+                "name": "Standard",
+                "value": "layout-standard"
+              },
+              {
+                "name": "Compact",
+                "value": "layout-compact"
+              },
+              {
+                "name": "Expanded",
+                "value": "layout-expanded"
+              }
+            ]
+          },
+          {
+            "name": "Color Theme",
+            "children": [
+              {
+                "name": "Light",
+                "value": "theme-light"
+              },
+              {
+                "name": "Dark",
+                "value": "theme-dark"
+              },
+              {
+                "name": "Brand",
+                "value": "theme-brand"
+              }
+            ]
+          },
+          {
+            "name": "Features",
+            "children": [
+              {
+                "name": "Show Badges",
+                "value": "feature-badges"
+              },
+              {
+                "name": "Enable Quick View",
+                "value": "feature-quickview"
+              },
+              {
+                "name": "Show Compare",
+                "value": "feature-compare"
+              },
+              {
+                "name": "High Contrast",
+                "value": "feature-high-contrast"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "multiline",
+        "name": "additionalFeatures",
+        "label": "Additional Features",
+        "description": "Key product features (one per line, will be displayed as bullet points)"
+      }
+    ]
   }
 ]

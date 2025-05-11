@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "blocktest",
-      "accordion"
+      "accordion",
+      "product-info"
     ]
   },
   {
@@ -25,6 +26,10 @@
     "components": [
       "accordion-item"
     ]
+  },
+  {
+    "id": "product",
+    "components": ["product-info"]
   },
   {
     "id": "banner-slider",
