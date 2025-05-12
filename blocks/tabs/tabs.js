@@ -2,7 +2,8 @@ export default function decorate(block) {
 
     if (!window.location.hostname.includes('author')) {
         // Extract configuration fields from the first two divs
-        const tabsStyle = block.children[0]?.textContent.trim() || 'orange-active divider-lines';
+        let tabsStyle = block.children[0]?.textContent.trim() || 'orange-active divider-lines';
+        tabsStyle = tabsStyle.split(",").join(" ")
         const defaultActiveTab = parseInt(block.children[1]?.textContent.trim() || '1', 10);
 
         // Remove the configuration divs
@@ -49,6 +50,7 @@ export default function decorate(block) {
             tabPanel.id = tabId;
             tabPanel.setAttribute('role', 'tabpanel');
             tabPanel.setAttribute('aria-labelledby', `tab-button-${tabId}`);
+            
 
             if (isDefaultActive) {
                 tabPanel.classList.add('active');
@@ -60,7 +62,7 @@ export default function decorate(block) {
             const tabImage = tabItem.querySelector(':scope > div:nth-child(3)');
             const mainHeading = tabItem.querySelector(':scope > div:nth-child(4)')?.textContent.trim() || '';
             const headingEmphasis = tabItem.querySelector(':scope > div:nth-child(5)')?.textContent.trim() || '';
-            const description = tabItem.querySelector(':scope > div:nth-child(6)')?.textContent.trim() || '';
+            const description = tabItem.querySelector(':scope > div:nth-child(6)')|| '';
 
             // Create tab content structure
             const tabContentWrapper = document.createElement('div');
@@ -91,15 +93,15 @@ export default function decorate(block) {
                     heading.textContent = mainHeading;
                 }
 
-                contentArea.appendChild(heading);
+                tabPanel.appendChild(heading);
             }
 
             // Add description
             if (description) {
                 const descPara = document.createElement('p');
-                descPara.className = 'tab-description';
-                descPara.textContent = description;
-                contentArea.appendChild(descPara);
+                description.className = 'tab-description';
+                // description.textContent = description;
+                contentArea.appendChild(description);
             }
 
             // Extract feature cards from the remaining content

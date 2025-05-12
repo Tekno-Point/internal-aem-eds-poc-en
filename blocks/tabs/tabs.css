@@ -90,7 +90,7 @@
 
 .tab-content-wrapper {
     display: flex;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
     flex-direction: row;
@@ -98,6 +98,7 @@
 }
 
 .tab-image {
+    padding-top: 74px;
     flex: 1;
     min-width: 250px;
     max-width: 400px;
@@ -115,6 +116,7 @@
 }
 
 .tab-heading {
+    text-align: center;
     font-size: 36px;
     color: #333;
     margin-bottom: 20px;
@@ -130,6 +132,48 @@
     line-height: 1.5;
     color: #333;
     margin-bottom: 30px;
+}
+
+.tab-description ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.tab-description>p {
+    max-width: 570px;
+}
+
+.tab-description>ul>li {
+    width: 50%;
+    display: flex;
+    gap: 15px;
+}
+
+.tab-description>ul>li>p {
+    padding: unset;
+}
+
+.tab-description>ul>li>p>span {
+    width: 34px;
+    height: 32px;
+}
+
+.tab-description>ul>li>ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-description>ul>li>ul>li {
+    font-size: 16px;
+    color: #000;
+    max-width: 75%;
+}
+
+.tab-description>ul>li>ul>li>strong {
+    color: #e3530f;
+    font-weight: 500;
+    font-size: 20px;
 }
 
 /* Features Grid */
