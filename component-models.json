@@ -781,5 +781,94 @@
         ]
       }
     ]
+  },
+  {
+    "id": "product-categories",
+    "fields": [
+      {
+        "component": "text",
+        "name": "sectionTitle",
+        "label": "Section Title",
+        "description": "Main heading for the categories section"
+      },
+      {
+        "component": "select",
+        "name": "layout",
+        "label": "Layout Style",
+        "description": "How to display the category cards",
+        "options": [
+          {
+            "name": "Grid",
+            "value": "grid"
+          },
+          {
+            "name": "Carousel",
+            "value": "carousel"
+          }
+        ]
+      },
+      {
+        "component": "repeater",
+        "name": "categories",
+        "label": "Categories",
+        "description": "Add product categories to display",
+        "valueType": "object",
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Category Title",
+            "description": "Name of the product category"
+          },
+          {
+            "component": "text",
+            "name": "description",
+            "label": "Description",
+            "description": "Short description of the category product"
+          },
+          {
+            "component": "reference",
+            "name": "icon",
+            "label": "Category Icon",
+            "description": "Icon to represent the category",
+            "multi": false
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Category Link",
+            "description": "Link to the category page"
+          },
+          {
+            "component": "select",
+            "name": "badge",
+            "label": "Badge",
+            "description": "Badge to display on the category card",
+            "options": [
+              {
+                "name": "None",
+                "value": ""
+              },
+              {
+                "name": "Best Seller",
+                "value": "best-seller"
+              },
+              {
+                "name": "Trending",
+                "value": "trending"
+              },
+              {
+                "name": "Award Winning",
+                "value": "award-winning"
+              },
+              {
+                "name": "New",
+                "value": "new"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
