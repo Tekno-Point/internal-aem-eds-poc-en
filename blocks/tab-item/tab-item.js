@@ -2,7 +2,8 @@ export default function decorate(block) {
 
     if (!window.location.hostname.includes('author')) {
         // Extract configuration fields from the first two divs
-        const tabsStyle = block.children[0]?.textContent.trim() || 'orange-active divider-lines';
+        let tabsStyle = block.children[0]?.textContent.trim() || 'orange-active divider-lines';
+        tabsStyle = tabsStyle.split(",").join(" ");
         const defaultActiveTab = parseInt(block.children[1]?.textContent.trim() || '1', 10);
 
         // Remove the configuration divs
