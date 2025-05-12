@@ -1,7 +1,7 @@
 [
   {
     "id": "main",
-    "components": ["section"]
+    "components": ["section","tabs"]
   },
   {
     "id": "section",
@@ -57,5 +57,9 @@
   {
     "id": "tabs",
     "components": ["tab-item"]
+  },
+  {
+    "id": "tab-item",
+    "components": ["feature-card"]
   }
 ]

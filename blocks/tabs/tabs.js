@@ -3,7 +3,7 @@ export default function decorate(block) {
     if (!window.location.hostname.includes('author')) {
         // Extract configuration fields from the first two divs
         let tabsStyle = block.children[0]?.textContent.trim() || 'orange-active divider-lines';
-        tabsStyle = tabsStyle.split(",").join(" ")
+        tabsStyle = tabsStyle.split(",").join(" ");
         const defaultActiveTab = parseInt(block.children[1]?.textContent.trim() || '1', 10);
 
         // Remove the configuration divs
@@ -50,7 +50,6 @@ export default function decorate(block) {
             tabPanel.id = tabId;
             tabPanel.setAttribute('role', 'tabpanel');
             tabPanel.setAttribute('aria-labelledby', `tab-button-${tabId}`);
-            
 
             if (isDefaultActive) {
                 tabPanel.classList.add('active');
@@ -98,9 +97,9 @@ export default function decorate(block) {
 
             // Add description
             if (description) {
-                const descPara = document.createElement('p');
+                // const descPara = document.createElement('p');
                 description.className = 'tab-description';
-                // description.textContent = description;
+                // descPara.textContent = description;
                 contentArea.appendChild(description);
             }
 

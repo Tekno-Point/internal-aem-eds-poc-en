@@ -1076,5 +1076,60 @@
         "description": "Introductory text that appears below the heading"
       }
     ]
+  },
+  {
+    "id": "feature-card",
+    "fields": [
+      {
+        "component": "text",
+        "name": "featureTitle",
+        "label": "Feature Title",
+        "valueType": "string",
+        "description": "Title of the feature"
+      },
+      {
+        "component": "textarea",
+        "name": "featureDescription",
+        "label": "Feature Description",
+        "valueType": "string",
+        "description": "Description of the feature"
+      },
+      {
+        "component": "select",
+        "name": "iconType",
+        "label": "Icon Type",
+        "valueType": "string",
+        "description": "Icon to display with this feature",
+        "options": [
+          {
+            "name": "Chart",
+            "value": "chart"
+          },
+          {
+            "name": "Click",
+            "value": "click"
+          },
+          {
+            "name": "Trade",
+            "value": "trade"
+          },
+          {
+            "name": "Fund",
+            "value": "fund"
+          },
+          {
+            "name": "Custom",
+            "value": "custom"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "customIcon",
+        "label": "Custom Icon",
+        "valueType": "string",
+        "description": "Upload a custom icon (only used if Icon Type is set to 'Custom')"
+      }
+    ]
   }
 ]
