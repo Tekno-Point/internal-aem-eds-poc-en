@@ -974,5 +974,107 @@
         "model": "product-card"
       }
     ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "tabsStyle",
+        "label": "Tabs Style",
+        "valueType": "string",
+        "description": "Select styling options for the tabs component",
+        "options": [
+          {
+            "name": "Dark Background",
+            "value": "dark-bg"
+          },
+          {
+            "name": "Top Border Indicator",
+            "value": "top-border"
+          },
+          {
+            "name": "Divider Lines",
+            "value": "divider-lines"
+          },
+          {
+            "name": "Orange Active Tabs",
+            "value": "orange-active"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "defaultActiveTab",
+        "label": "Default Active Tab",
+        "description": "Select which tab should be active by default (1 is first tab)",
+        "valueType": "number",
+        "options": [
+          {
+            "name": "Tab 1",
+            "value": "1 "
+          },
+          {
+            "name": "Tab 2",
+            "value": "2"
+          },
+          {
+            "name": "Tab 3",
+            "value": "3"
+          },
+          {
+            "name": "Tab 4",
+            "value": "4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "tabLabel",
+        "label": "Tab Label",
+        "valueType": "string",
+        "description": "The text that will appear in the tab navigation"
+      },
+      {
+        "component": "text",
+        "name": "tabId",
+        "label": "Tab ID",
+        "valueType": "string",
+        "description": "Unique identifier for the tab (use kebab-case, e.g. 'new-investors')"
+      },
+      {
+        "component": "reference",
+        "name": "tabImage",
+        "label": "Tab Image",
+        "valueType": "string",
+        "description": "Optional side image for the tab content"
+      },
+      {
+        "component": "text",
+        "name": "mainHeading",
+        "label": "Main Heading",
+        "valueType": "string",
+        "description": "The main heading for this tab's content"
+      },
+      {
+        "component": "text",
+        "name": "headingEmphasis",
+        "label": "Heading Emphasis",
+        "valueType": "string",
+        "description": "Part of the heading to be emphasized or shown in bold"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Introductory text that appears below the heading"
+      }
+    ]
   }
 ]

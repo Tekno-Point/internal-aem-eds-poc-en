@@ -20,7 +20,8 @@
       "hero-banner",
       "stats-bar",
       "category-heading",
-      "product-cards-grid"
+      "product-cards-grid",
+      "tabs"
     ]
   },
   {
@@ -52,5 +53,9 @@
   {
     "id": "column",
     "components": ["text", "image", "button", "title"]
+  },
+  {
+    "id": "tabs",
+    "components": ["tab-item"]
   }
 ]
