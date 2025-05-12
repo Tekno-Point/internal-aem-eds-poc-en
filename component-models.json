@@ -808,64 +808,55 @@
         ]
       },
       {
-        "component": "repeater",
-        "name": "categories",
-        "label": "Categories",
-        "description": "Add product categories to display",
-        "valueType": "object",
-        "fields": [
+        "component": "text",
+        "name": "title",
+        "label": "Category Title",
+        "description": "Name of the product category"
+      },
+      {
+        "component": "text",
+        "name": "description",
+        "label": "Description",
+        "description": "Short description of the category product"
+      },
+      {
+        "component": "reference",
+        "name": "icon",
+        "label": "Category Icon",
+        "description": "Icon to represent the category",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Category Link",
+        "description": "Link to the category page"
+      },
+      {
+        "component": "select",
+        "name": "badge",
+        "label": "Badge",
+        "description": "Badge to display on the category card",
+        "options": [
           {
-            "component": "text",
-            "name": "title",
-            "label": "Category Title",
-            "description": "Name of the product category"
+            "name": "None",
+            "value": ""
           },
           {
-            "component": "text",
-            "name": "description",
-            "label": "Description",
-            "description": "Short description of the category product"
+            "name": "Best Seller",
+            "value": "best-seller"
           },
           {
-            "component": "reference",
-            "name": "icon",
-            "label": "Category Icon",
-            "description": "Icon to represent the category",
-            "multi": false
+            "name": "Trending",
+            "value": "trending"
           },
           {
-            "component": "aem-content",
-            "name": "link",
-            "label": "Category Link",
-            "description": "Link to the category page"
+            "name": "Award Winning",
+            "value": "award-winning"
           },
           {
-            "component": "select",
-            "name": "badge",
-            "label": "Badge",
-            "description": "Badge to display on the category card",
-            "options": [
-              {
-                "name": "None",
-                "value": ""
-              },
-              {
-                "name": "Best Seller",
-                "value": "best-seller"
-              },
-              {
-                "name": "Trending",
-                "value": "trending"
-              },
-              {
-                "name": "Award Winning",
-                "value": "award-winning"
-              },
-              {
-                "name": "New",
-                "value": "new"
-              }
-            ]
+            "name": "New",
+            "value": "new"
           }
         ]
       }
