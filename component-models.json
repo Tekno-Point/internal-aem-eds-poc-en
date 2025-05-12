@@ -751,9 +751,10 @@
         "description": "Branded tagline text to show on the hero banner"
       },
       {
-        "component": "multiline",
+        "component": "richtext",
         "name": "stats",
         "label": "Statistics",
+        "valueType": "string",
         "description": "Enter statistics separated by new lines (Format: Label|Value)"
       },
       {
