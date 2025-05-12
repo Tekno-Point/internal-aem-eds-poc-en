@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -20,44 +18,39 @@
       "accordion",
       "product-info",
       "hero-banner",
-      "product-categories"
+      "stats-bar",
+      "category-heading",
+      "product-cards-grid"
     ]
   },
   {
     "id": "accordion",
-    "components": [
-      "accordion-item"
-    ]
+    "components": ["accordion-item"]
   },
   {
     "id": "product",
     "components": ["product-info"]
   },
   {
-    "id": "banner-slider",
+    "id": "product-cards-grid",
     "components": [
-      "banner-slide"
+      "product-card"
     ]
+  },
+  {
+    "id": "banner-slider",
+    "components": ["banner-slide"]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   }
 ]

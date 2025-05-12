@@ -715,151 +715,263 @@
     "fields": [
       {
         "component": "text",
-        "name": "mainHeading",
-        "label": "Main Heading",
-        "description": "The main headline of the hero banner"
+        "name": "title",
+        "label": "Main Title",
+        "description": "The primary heading for the hero banner",
+        "valueType": "string"
       },
       {
         "component": "text",
-        "name": "subHeading",
-        "label": "Sub Heading",
-        "description": "The subheading text below the main heading"
+        "name": "subtitle",
+        "label": "Subtitle",
+        "description": "The secondary heading or tagline for the hero banner",
+        "valueType": "string"
       },
       {
         "component": "text",
         "name": "buttonText",
         "label": "Button Text",
-        "description": "Text to display on the call-to-action button"
+        "description": "Text displayed on the CTA button",
+        "valueType": "string"
       },
       {
         "component": "aem-content",
         "name": "buttonLink",
         "label": "Button Link",
-        "description": "Link for the call-to-action button"
+        "description": "Link destination for the CTA button",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "description": "Background image for the hero banner (optional)",
+        "valueType": "string",
+        "multi": false
       },
       {
         "component": "reference",
         "name": "heroImage",
         "label": "Hero Image",
-        "description": "Background or feature image for the hero section",
+        "description": "Main hero image that appears on the right side",
+        "valueType": "string",
         "multi": false
       },
       {
         "component": "text",
-        "name": "tagline",
-        "label": "Tagline",
-        "description": "Branded tagline text to show on the hero banner"
+        "name": "taglineImage",
+        "label": "Tagline Image",
+        "description": "URL for the tagline image (e.g. #HarWaqtKeLiye)",
+        "valueType": "string"
       },
       {
-        "component": "richtext",
+        "component": "text",
+        "name": "backgroundColor",
+        "label": "Background Color",
+        "description": "Background color (if no image is provided)",
+        "valueType": "string",
+        "value": "#0075BE"
+      }
+    ]
+  },
+  {
+    "id": "stats-bar",
+    "fields": [
+      {
+        "component": "text",
+        "name": "backgroundColor",
+        "label": "Background Color",
+        "description": "Background color for the stats bar",
+        "valueType": "string",
+        "value": "#0075BE"
+      },
+      {
+        "component": "text",
+        "name": "textColor",
+        "label": "Text Color",
+        "description": "Text color for the stats",
+        "valueType": "string",
+        "value": "#FFFFFF"
+      },
+      {
+        "component": "multifield",
         "name": "stats",
         "label": "Statistics",
-        "valueType": "string",
-        "description": "Enter statistics separated by new lines (Format: Label|Value)"
-      },
-      {
-        "component": "select",
-        "name": "colorScheme",
-        "label": "Color Scheme",
-        "description": "Visual style for the hero banner",
-        "options": [
+        "description": "Statistical data points to display",
+        "valueType": "array",
+        "fields": [
           {
-            "name": "Blue (Default)",
-            "value": "blue"
+            "component": "text",
+            "name": "figure",
+            "label": "Statistic Figure",
+            "description": "The main numerical or text value",
+            "valueType": "string"
           },
           {
-            "name": "Red",
-            "value": "red"
+            "component": "text",
+            "name": "description",
+            "label": "Description",
+            "description": "Short description of what the statistic represents",
+            "valueType": "string"
           },
           {
-            "name": "Green",
-            "value": "green"
-          },
-          {
-            "name": "Purple",
-            "value": "purple"
+            "component": "text",
+            "name": "superscript",
+            "label": "Superscript",
+            "description": "Optional superscript for reference/footnote",
+            "valueType": "string"
           }
         ]
       }
     ]
   },
   {
-    "id": "product-categories",
+    "id": "category-heading",
     "fields": [
       {
         "component": "text",
-        "name": "sectionTitle",
-        "label": "Section Title",
-        "description": "Main heading for the categories section"
+        "name": "headingText",
+        "label": "Heading Text",
+        "description": "Text to display as the section heading",
+        "valueType": "string"
       },
       {
         "component": "select",
-        "name": "layout",
-        "label": "Layout Style",
-        "description": "How to display the category cards",
+        "name": "headingSize",
+        "label": "Heading Size",
+        "description": "Size of the heading element",
+        "valueType": "string",
         "options": [
           {
-            "name": "Grid",
-            "value": "grid"
+            "name": "H1",
+            "value": "h1"
           },
           {
-            "name": "Carousel",
-            "value": "carousel"
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
           }
-        ]
+        ],
+        "value": "h2"
+      },
+      {
+        "component": "text",
+        "name": "textAlignment",
+        "label": "Text Alignment",
+        "description": "Alignment of the heading text",
+        "valueType": "string",
+        "value": "center"
+      }
+    ]
+  },
+  {
+    "id": "product-card",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "icon",
+        "label": "Product Icon",
+        "description": "Icon representing the product category",
+        "valueType": "string",
+        "multi": false
       },
       {
         "component": "text",
         "name": "title",
-        "label": "Category Title",
-        "description": "Name of the product category"
+        "label": "Product Title",
+        "description": "Title of the product or category",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Product Description",
+        "description": "Short description of the product features",
+        "valueType": "string"
       },
       {
         "component": "text",
-        "name": "description",
-        "label": "Description",
-        "description": "Short description of the category product"
+        "name": "badge",
+        "label": "Badge Text",
+        "description": "Optional badge text (e.g., 'BEST SELLER', 'TRENDING')",
+        "valueType": "string"
       },
       {
-        "component": "reference",
-        "name": "icon",
-        "label": "Category Icon",
-        "description": "Icon to represent the category",
-        "multi": false
+        "component": "text",
+        "name": "badgeColor",
+        "label": "Badge Color",
+        "description": "Background color for the badge",
+        "valueType": "string",
+        "value": "#E31837"
       },
       {
         "component": "aem-content",
         "name": "link",
-        "label": "Category Link",
-        "description": "Link to the category page"
+        "label": "Card Link",
+        "description": "Link destination when the card is clicked",
+        "valueType": "string"
       },
       {
+        "component": "text",
+        "name": "borderColor",
+        "label": "Border Color",
+        "description": "Color of the card border",
+        "valueType": "string",
+        "value": "#E5E5E5"
+      },
+      {
+        "component": "text",
+        "name": "backgroundColor",
+        "label": "Background Color",
+        "description": "Background color of the card",
+        "valueType": "string",
+        "value": "#FFFFFF"
+      }
+    ]
+  },
+  {
+    "id": "product-cards-grid",
+    "fields": [
+      {
         "component": "select",
-        "name": "badge",
-        "label": "Badge",
-        "description": "Badge to display on the category card",
+        "name": "layout",
+        "label": "Grid Layout",
+        "description": "Layout style for the product cards grid",
+        "valueType": "string",
         "options": [
           {
-            "name": "None",
-            "value": ""
+            "name": "3 Columns",
+            "value": "three-columns"
           },
           {
-            "name": "Best Seller",
-            "value": "best-seller"
+            "name": "4 Columns",
+            "value": "four-columns"
           },
           {
-            "name": "Trending",
-            "value": "trending"
-          },
-          {
-            "name": "Award Winning",
-            "value": "award-winning"
-          },
-          {
-            "name": "New",
-            "value": "new"
+            "name": "6 Columns",
+            "value": "six-columns"
           }
-        ]
+        ],
+        "value": "six-columns"
+      },
+      {
+        "component": "number",
+        "name": "gap",
+        "label": "Grid Gap",
+        "description": "Spacing between grid items in pixels",
+        "valueType": "number",
+        "value": 16
+      },
+      {
+        "component": "multifield",
+        "name": "productCards",
+        "label": "Product Cards",
+        "description": "Product cards to display in the grid",
+        "valueType": "array",
+        "model": "product-card"
       }
     ]
   }
