@@ -709,5 +709,77 @@
         "description": "Key product features (one per line, will be displayed as bullet points)"
       }
     ]
+  },
+  {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "text",
+        "name": "mainHeading",
+        "label": "Main Heading",
+        "description": "The main headline of the hero banner"
+      },
+      {
+        "component": "text",
+        "name": "subHeading",
+        "label": "Sub Heading",
+        "description": "The subheading text below the main heading"
+      },
+      {
+        "component": "text",
+        "name": "buttonText",
+        "label": "Button Text",
+        "description": "Text to display on the call-to-action button"
+      },
+      {
+        "component": "aem-content",
+        "name": "buttonLink",
+        "label": "Button Link",
+        "description": "Link for the call-to-action button"
+      },
+      {
+        "component": "reference",
+        "name": "heroImage",
+        "label": "Hero Image",
+        "description": "Background or feature image for the hero section",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "tagline",
+        "label": "Tagline",
+        "description": "Branded tagline text to show on the hero banner"
+      },
+      {
+        "component": "multiline",
+        "name": "stats",
+        "label": "Statistics",
+        "description": "Enter statistics separated by new lines (Format: Label|Value)"
+      },
+      {
+        "component": "select",
+        "name": "colorScheme",
+        "label": "Color Scheme",
+        "description": "Visual style for the hero banner",
+        "options": [
+          {
+            "name": "Blue (Default)",
+            "value": "blue"
+          },
+          {
+            "name": "Red",
+            "value": "red"
+          },
+          {
+            "name": "Green",
+            "value": "green"
+          },
+          {
+            "name": "Purple",
+            "value": "purple"
+          }
+        ]
+      }
+    ]
   }
 ]
