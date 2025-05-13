@@ -1,7 +1,7 @@
-// export default function decorate(block) {
+export default function decorate(block) {
 //     // Extract banner slider configuration from data attributes
 
-//     console.log(block);
+    console.log(block);
 //     const autoplay = block.dataset.autoplay === 'true';
 //     const autoplaySpeed = parseInt(block.dataset.autoplaySpeed, 10) || 5000;
 //     const showArrows = block.dataset.showArrows !== 'false';
@@ -9,30 +9,31 @@
 //     const height = parseInt(block.dataset.height, 10) || 500;
     
 //     // Create slider container
-//     const sliderContainer = document.crea    teElement('div');
-//     sliderContainer.className = 'banner-slider-container';
+    const sliderContainer = document.createElement('div');
+    sliderContainer.className = 'banner-slider-container';
 //     sliderContainer.style.height = `${height}px`;
     
 //     // Create slides wrapper
-//     const slidesWrapper = document.createElement('div');
-//     slidesWrapper.className = 'banner-slider-slides';
+    const slidesWrapper = document.createElement('div');
+    slidesWrapper.className = 'banner-slider-slides';
     
 //     // Process each slide
-//     [...block.children].forEach((row, index) => {
-//         console.log(block.children)
-//       const slide = document.createElement('div');
-//       slide.className = 'banner-slide';
-//       slide.dataset.index = index;
+    [...block.children].forEach((row, index) => {
+        console.log(block.children)
+      const slide = document.createElement('div');
+      slide.className = 'banner-slide';
+      slide.dataset.index = index;
       
-//       if (index === 0) {
-//         slide.classList.add('active');
-//       }
+      if (index === 0) {
+        slide.classList.add('active');
+      }
       
 //       // Extract slide content
-//       const imageContainer = row.querySelector('[class*="image"]');
-//       const headingContainer = row.querySelector('[class*="heading"]');
-//       const descriptionContainer = row.querySelector('[class*="description"]');
-//       const buttonContainer = row.querySelector('[class*="button"]');
+      const imageContainer = row.querySelector('[class*="image"]');
+      console.log(imageContainer)
+      const headingContainer = row.querySelector('[class*="heading"]');
+      const descriptionContainer = row.querySelector('[class*="description"]');
+      const buttonContainer = row.querySelector('[class*="button"]');
       
 //       // Create background image
 //       if (imageContainer) {
@@ -93,7 +94,7 @@
       
 //       slide.appendChild(contentContainer);
 //       slidesWrapper.appendChild(slide);
-//     });
+    });
     
     // sliderContainer.appendChild(slidesWrapper);
     
@@ -200,4 +201,4 @@
     //     startAutoplay();
     //   }
     // });
-  }
+}

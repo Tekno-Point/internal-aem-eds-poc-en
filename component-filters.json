@@ -26,7 +26,6 @@
       "blog-detail",
       "related-blogs",
       "latest-blogs",
-      "accordion",
       "hero-banner",
       "banner-slider"
     ]
@@ -50,12 +49,6 @@
       "image",
       "button",
       "title"
-    ]
-  },
-  {
-    "id": "accordion-item",
-    "components": [
-      "accordion-item"
     ]
   },
   {
