@@ -27,7 +27,6 @@
       "related-blogs",
       "latest-blogs",
       "hero-banner",
-      "banner-slider",
       "accordion"
     ]
   },
@@ -59,12 +58,6 @@
   {
     "id": "hero-banner",
     "components": []
-  },
-  {
-    "id": "banner-slider",
-    "components": [
-      "banner-slide"
-    ]
   },
   {
     "id": "accordion",
