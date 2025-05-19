@@ -349,7 +349,7 @@
                 "template": {
                   "name": "Accordion",
                   "model": "accordion",
-                  "filter": "accordion"
+                  "filter": "accordion-item"
                 }
               }
             }
