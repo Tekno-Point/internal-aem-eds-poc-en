@@ -112,6 +112,30 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+           {
+            "name": "hero-container",
+            "value": "hero-container"
+          },
+           {
+            "name": "image-section",
+            "value": "image-section"
+          },
+           {
+            "name": "columns-container",
+            "value": "columns-container"
+          },
+           {
+            "name": "hero-gallery-section",
+            "value": "hero-gallery-section"
+          },
+          {
+            "name": "cards-container",
+            "value": "cards-container"
+          },
+          {
+            "name": "news-section",
+            "value": "news-section"
           }
         ]
       }

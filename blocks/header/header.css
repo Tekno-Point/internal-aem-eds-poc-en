@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #fff;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -229,6 +229,14 @@ header nav .nav-sections ul > li > ul > li {
     position: relative;
   }
 
+  header nav .nav-sections .default-content-wrapper ul li a {
+    font-family: "Bebas Neue Bold", Sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #2f2f2f;
+    fill: #2f2f2f;
+  }  
+
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
     display: none;
     position: relative;
@@ -257,7 +265,7 @@ header nav .nav-sections ul > li > ul > li {
     border-bottom: 8px solid var(--light-color);
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li  {
     padding: 8px 0;
   }
 }
@@ -265,4 +273,20 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+header nav .nav-tools div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+header nav .nav-tools div ul li:last-child {
+  display: none;
+}
+
+header nav .nav-tools div ul li {
+  width: 24px;
+  height: 24px;
+  margin: 0px 3px 0px 0px;
 }
