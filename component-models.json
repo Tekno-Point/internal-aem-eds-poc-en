@@ -724,12 +724,6 @@
               "value": "minimal"
             }
           ]
-        },
-        {
-          "component": "checkbox",
-          "name": "allowMultiple",
-          "label": "Allow Multiple Open",
-          "description": "When checked, multiple accordion items can be open simultaneously"
         }
       ]
     },
@@ -747,12 +741,6 @@
           "name": "itemContent",
           "label": "Item Content",
           "description": "The content revealed when the accordion item is expanded"
-        },
-        {
-          "component": "checkbox",
-          "name": "expanded",
-          "label": "Initially Expanded",
-          "description": "When checked, this item will be expanded by default"
         }
       ]
     }
