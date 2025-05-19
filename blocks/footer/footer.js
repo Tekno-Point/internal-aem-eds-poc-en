@@ -18,12 +18,14 @@ export default async function decorate(block) {
 
   block.append(footer);
 
-  // Find the div with data-section-status="loaded" and add classes to its child divs using nth-child
+  // Find the div with data-section-status="loaded" and add classes to its child divs using :nth-of-type selector
   const sectionDiv = footer.querySelector('div[data-section-status="loaded"]');
   if (sectionDiv) {
-    const children = sectionDiv.children;
-    if (children[0]) children[0].classList.add('footer-menu'); // 1st child
-    if (children[1]) children[1].classList.add('footer-columns'); // 2nd child
-    if (children[2]) children[2].classList.add('footer-contact'); // 3rd child
+    const firstDiv = sectionDiv.querySelector(':scope > div:nth-of-type(1)');
+    if (firstDiv) firstDiv.classList.add('footer-menu');
+    const secondDiv = sectionDiv.querySelector(':scope > div:nth-of-type(2)');
+    if (secondDiv) secondDiv.classList.add('footer-columns');
+    const thirdDiv = sectionDiv.querySelector(':scope > div:nth-of-type(3)');
+    if (thirdDiv) thirdDiv.classList.add('footer-contact');
   }
 }
