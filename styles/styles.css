@@ -255,3 +255,98 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+.hero-container .hero-wrapper .block{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-container .hero-wrapper .block div div p{
+  text-align: center;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.hero-container .hero-wrapper .block div div p a{
+  background-color: #3197d3;
+  font-family: "Secular One", Sans-serif;
+  font-size: 14px;
+  fill: #fff;
+  color: #fff;
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: #FFFFFF;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.image-section{
+  background-color: #1A1A1A;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.columns-container .columns-wrapper .block div > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.columns-container .columns-wrapper .block div > div p{
+  font-family: "Gotham Medium", Sans-serif;
+  text-align: center;
+}
+
+.columns-container .columns-wrapper .block div > div p:nth-child(1) {
+  color: rgb(26, 26, 26);
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.columns-container .columns-wrapper .block div > div p:nth-child(2) {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(49, 151, 211);
+}
+
+.columns-container .columns-wrapper .block div > div p:nth-child(3) {
+  color: #1A1A1A;
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 30px; 
+  font-weight: 600;
+}
+
+.columns-container .columns-wrapper .block div > div p:nth-child(4) {
+  color: #1A1A1A;
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.columns-container .columns-wrapper .block div > div .button-container a{
+  background-color: #3197d3;
+  font-family: "Secular One", Sans-serif;
+  font-size: 14px;
+  fill: #fff;
+  color: #fff;
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: #FFFFFF;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.hero-gallery-section .hero-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 32px;
+}
+
+.hero-gallery-section .hero-wrapper > .hero.block:nth-child(n+10) {
+  grid-column: 2 / span 1;
+}
