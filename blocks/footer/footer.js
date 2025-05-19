@@ -28,4 +28,15 @@ export default async function decorate(block) {
     const thirdDiv = sectionDiv.querySelector(':scope > div:nth-of-type(3)');
     if (thirdDiv) thirdDiv.classList.add('footer-contact');
   }
+
+  // Add class names to columns inside the footer-columns wrapper
+  const columnsWrapper = footer.querySelector('.columns-wrapper.footer-columns');
+  if (columnsWrapper) {
+    const columnsBlock = columnsWrapper.querySelector('.columns.block.columns-2-cols');
+    if (columnsBlock) {
+      const colDivs = columnsBlock.querySelectorAll(':scope > div');
+      if (colDivs[0]) colDivs[0].classList.add('footer-col-left');
+      if (colDivs[1]) colDivs[1].classList.add('footer-col-right');
+    }
+  }
 }
