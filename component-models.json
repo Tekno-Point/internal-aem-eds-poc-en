@@ -216,10 +216,17 @@
     "id": "embed",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
+        "component": "text",
+        "name": "link",
         "value": "",
-        "label": "Text",
+        "label": "Link",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "youtubeVideoThumbnailDamPath",
+        "value": "",
+        "label": "youtubeVideoThumbnailDamPath",
         "valueType": "string"
       }
     ]
