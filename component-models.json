@@ -200,9 +200,27 @@
         "label": "Multi Select",
         "valueType": "string",
         "options": [
-          { "name": "h3", "value": "h4" },
-          { "name": "h4", "value": "h4" }
+          {
+            "name": "h3",
+            "value": "h4"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          }
         ]
+      }
+    ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
