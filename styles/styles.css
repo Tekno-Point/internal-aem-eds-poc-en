@@ -226,7 +226,7 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
 }
 
 main > .section > div {
@@ -253,20 +253,22 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-.hero-container .hero-wrapper .block{
+.banner-container .hero-wrapper .hero{
   align-items: center;
   display: flex;
   justify-content: center;
+  padding: 0;
+  min-height: 58vw;
 }
 
-.hero-container .hero-wrapper .block div div p{
+.banner-container .hero-wrapper .block div div p{
   text-align: center;
   display: flex;
   gap: 5px;
   justify-content: center;
 }
 
-.hero-container .hero-wrapper .block div div p a{
+.banner-container .hero-wrapper .block div div p a{
   background-color: #3197d3;
   font-family: "Secular One", Sans-serif;
   font-size: 14px;
@@ -295,6 +297,7 @@ main .section.highlight {
 .flex-column .columns-wrapper .columns-2-cols div > div p{
   font-family: "Gotham Medium", Sans-serif;
   text-align: center;
+  margin: 0;
 }
 
 .flex-column .columns-wrapper .columns-2-cols div > div p:nth-child(1) {
@@ -366,7 +369,7 @@ main .section.highlight {
   flex-direction: column;
   font-size: 16px;
   font-family: 'Heebo', sans-serif;
-  margin: 0 0 20px; 
+  margin: 40px 0 20px; 
   color: #2f2f2f;
 }
 

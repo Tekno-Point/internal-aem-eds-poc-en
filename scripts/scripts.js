@@ -141,6 +141,9 @@ function loadDelayed() {
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
+  document.querySelectorAll('.hero.block').forEach(el => {
+    el.classList.add('custom-hero-class');
+  });
   loadDelayed();
 }
 
