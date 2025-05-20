@@ -10,6 +10,29 @@
  * governing permissions and limitations under the License.
  */
 
+/* Add local font-face for Heebo, Bebas Neue Bold, and Secular One */
+@font-face {
+  font-family: 'Heebo';
+  src: url('../fonts/Heebo-Regular.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url('../fonts/Bebas-Neue-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Secular One';
+  src: url('../fonts/SecularOne-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* colors */
   --background-color: white;
@@ -354,6 +377,7 @@ main .section.highlight {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .hero-gallery-section .hero-wrapper:last-child {
@@ -366,6 +390,9 @@ main .section.highlight {
   background-color: #3197d3;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   padding: 12px 24px;
+  margin: 0;
+  font-family: "Heebo", Sans-serif;
+  font-size: 15px;
 }
 
 .card-section .cards-wrapper .block ul li{

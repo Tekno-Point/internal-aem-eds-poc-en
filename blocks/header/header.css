@@ -1,3 +1,12 @@
+/* Add local font-face for Bebas Neue Bold */
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url('../../fonts/Bebas-Neue-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* header and nav layout */
 header .nav-wrapper {
   background-color: #fff;
