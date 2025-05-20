@@ -340,13 +340,91 @@ main .section.highlight {
   border-radius: 2px 2px 2px 2px;
 }
 
-.hero-gallery-section .hero-wrapper {
+.hero-gallery-section{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
-  gap: 32px;
 }
 
-.hero-gallery-section .hero-wrapper > .hero.block:nth-child(n+10) {
-  grid-column: 2 / span 1;
+.hero-gallery-section .hero-wrapper{
+  width: 100%;
+}
+
+.hero-gallery-section .hero-wrapper:last-child {
+  grid-column: 1 / -1;
+}
+
+.hero-gallery-section .hero-wrapper .block div div p{
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  background-color: #3197d3;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  padding: 12px 24px;
+}
+
+.cards-container .cards-wrapper .block ul li{
+  border: none;  
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: 'Heebo', sans-serif;
+  margin: 0 0 20px; 
+  color: #2f2f2f;
+}
+
+.news-section .default-content-wrapper div h1{
+  font-size: 50px;
+  
+}
+
+.news-section .cards-wrapper .block ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-section .cards-wrapper .block ul li .cards-card-image picture img{
+  width: 375px;
+  height: 210px;
+}
+
+.news-section .cards-wrapper .block ul li .cards-card-body p{
+  margin: 0;
+  padding: 0;
+}
+
+.news-section .cards-wrapper .block ul li .cards-card-body > :first-child a{
+  font-size: 18px;
+  font-family: 'Secular One', sans-serif;
+  font-weight: 600;
+  color: #2c98d8;
+  box-shadow: none;
+  text-decoration: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.news-section .cards-wrapper .block ul li .cards-card-body > :nth-child(2) {
+  color: #adadad;
+  font-size: 12px;
+  line-height: 1.3em;
+  margin-bottom: 13px;
+  align-self: flex-start;
+  font-weight: 700;
+  margin: 0px 0px 13px;
+}
+
+.news-section .cards-wrapper .block ul li .cards-card-body > :nth-child(3) a{
+  font-size: 12px;
+  font-family: 'Secular One', sans-serif;
+  font-weight: 600;
+  color: #2c98d8;
+  box-shadow: none;
+  text-decoration: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 }

@@ -130,8 +130,8 @@
             "value": "hero-gallery-section"
           },
           {
-            "name": "cards-container",
-            "value": "cards-container"
+            "name": "card-section",
+            "value": "card-section"
           },
           {
             "name": "news-section",
