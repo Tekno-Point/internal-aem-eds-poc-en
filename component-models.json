@@ -122,8 +122,8 @@
             "value": "image-section"
           },
            {
-            "name": "columns-container",
-            "value": "columns-container"
+            "name": "flex-column",
+            "value": "flex-column"
           },
            {
             "name": "hero-gallery-section",
