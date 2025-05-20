@@ -22,10 +22,6 @@ header nav {
 }
 
 header nav[aria-expanded='true'] {
-  grid-template:
-    'hamburger brand' var(--nav-height)
-    'sections sections' 1fr
-    'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100dvh;
 }
@@ -157,12 +153,6 @@ header nav .nav-sections {
   visibility: hidden;
 }
 
-header nav[aria-expanded='true'] .nav-sections {
-  display: block;
-  visibility: visible;
-  align-self: start;
-}
-
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
@@ -267,6 +257,69 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li  {
     padding: 8px 0;
+  }
+}
+
+@media (max-width: 899px) {
+
+  header nav[aria-expanded='false'] {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header nav .nav-tools .default-content-wrapper ul li {
+    display: none;
+  }
+  header nav .nav-tools .default-content-wrapper ul li:last-child {
+    display: flex;
+  }
+
+  .mob-nav-active {
+    display: block;
+  }
+
+  header nav .nav-sections > .default-content-wrapper:not(.desk-dp-none) {
+    display: none !important;
+  }
+  
+  header nav[aria-expanded='true'] .nav-sections {
+  display: flex;
+  visibility: visible;
+  align-self: start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header nav[aria-expanded='true'] .nav-sections ul li{
+  padding: 10px 0;
+}
+
+.header nav[aria-expanded='true'] .nav-brand{
+  display: flex;
+  justify-content: center;
+}
+
+.header nav[aria-expanded='false'] .nav-brand{
+  display: flex;
+  justify-content: center;
+}
+
+.header nav[aria-expanded='true'] .nav-tools div ul{
+  margin: 0;
+  padding: 0;
+}
+
+.header nav[aria-expanded='false'] .nav-tools div ul{
+  margin: 0;
+  padding: 0;
+}
+}
+
+@media (min-width: 900px) {
+  .mob-nav {
+    display: none;
   }
 }
 

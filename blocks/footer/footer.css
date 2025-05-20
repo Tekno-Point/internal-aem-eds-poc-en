@@ -21,7 +21,7 @@ footer .footer p {
 
 .footer-menu ul{
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
   justify-content: center;
   padding: 0;
@@ -167,4 +167,42 @@ footer .footer p {
 .footer-contact p img{
   width: 17px;
   height: 14px
+}
+
+@media (max-width: 749px) {
+  .footer-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .footer-columns .columns-2-cols > div {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .footer-col-left, .footer-col-right {
+    width: 100% ;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-col-left {
+    margin-bottom: 20px;
+  }
+  .footer-col-right ul .li1 ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-col-right ul .li2 ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footer-contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  .footer-contact p {
+    justify-content: center;
+  }
 }

@@ -152,12 +152,47 @@ export default async function decorate(block) {
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+
+  let mobFragment = null;
+  hamburger.addEventListener('click', async () => {
+    if (!mobFragment) {
+      mobFragment = await loadFragment(getMetadata('mob-nav'));
+      const mobNav = mobFragment.querySelector('.default-content-wrapper');
+      mobNav.classList.add('desk-dp-none');
+      navSections.prepend(mobNav);
+      // navSections.prepend(mobFragment.lastElementChild.lastElementChild);
+      mobNav.querySelectorAll(':scope > ul > li').forEach((navSection) => {
+      });
+      mobNav.querySelectorAll('ul ul').forEach((el) => {
+        el.querySelectorAll('ul').forEach((ele) => {
+          ele.setAttribute('aria-expanded', 'false');
+          ele.parentElement.querySelector('p').addEventListener('click', () => {
+            const expanded = ele.getAttribute('aria-expanded') === 'true';
+            ele.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            ele.parentElement.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            ele.parentElement.querySelector('p').classList.toggle('navlist-dropdown');
+          });
+        });
+      });
+    }
+    toggleMenu(nav, navSections);
+  });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
-  isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+  isDesktop.addEventListener('change', () => {
+    toggleMenu(nav, navSections, isDesktop.matches);
+    // Hide mob-nav on desktop
+    const mobNav = navSections.querySelector('.desk-dp-none');
+    if (mobNav) {
+      if (isDesktop.matches) {
+        mobNav.style.display = 'none';
+      } else {
+        mobNav.style.display = 'block';
+      }
+    }
+  });
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
