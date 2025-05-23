@@ -39,7 +39,6 @@
             },
             {
               "component": "reference",
-              "valueType": "string",
               "name": "bgimage",
               "label": "Background Image",
               "description": "The modelvariantview Background image",
