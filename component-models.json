@@ -199,7 +199,6 @@
         "name": "classes",
         "label": "Style",
         "valueType": "string",
-        "required": true,
         "options": [
           {
             "name": "Type",
@@ -223,7 +222,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "modelvariantviewAlt",
+        "name": "imageAlt",
         "value": "",
         "label": "Image Description Alt"
       },
