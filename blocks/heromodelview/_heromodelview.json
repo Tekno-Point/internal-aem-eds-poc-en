@@ -60,6 +60,15 @@
               "label": "Model Title"
             },
             {
+                "component": "text",
+                "valueType": "string",
+                "name": "title",
+                "value": "",
+                "label": "Heading",
+                "description": "Sets the main title of the Model.",
+                "multi": true
+              },
+            {
               "component": "select",
               "valueType": "string",
               "name": "titleType",
