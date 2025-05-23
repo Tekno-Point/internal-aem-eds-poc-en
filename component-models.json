@@ -190,5 +190,89 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "heromodelview",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Type",
+            "children": [
+              {
+                "name": "Click Able",
+                "value": "click-able"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bgimage",
+        "label": "Background Image",
+        "description": "The modelvariantview Background image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgimage_Alt",
+        "value": "",
+        "label": "Image Description Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "modeltitle",
+        "value": "",
+        "label": "Model Title"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "titleType",
+        "value": "h3",
+        "label": "Heading Type",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          },
+          {
+            "name": "H5",
+            "value": "h5"
+          },
+          {
+            "name": "H6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "colortitle",
+        "value": "",
+        "label": "color title"
+      }
+    ]
   }
 ]
