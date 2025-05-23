@@ -2,7 +2,7 @@
   "definitions": [
     {
       "title": "Modelvariantview",
-      "id": "fragmmodelvariantviewent",
+      "id": "Modelvariantview",
       "plugins": {
         "xwalk": {
           "page": {
