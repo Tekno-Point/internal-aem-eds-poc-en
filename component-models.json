@@ -213,7 +213,8 @@
       },
       {
         "component": "reference",
-        "name": "bgimage",
+        "valueType": "string",
+        "name": "image_bg",
         "label": "Background Image",
         "description": "The modelvariantview Background image",
         "multi": false
@@ -221,7 +222,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "bgimage_Alt",
+        "name": "image_bgAlt",
         "value": "",
         "label": "Image Description Alt"
       },
