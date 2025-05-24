@@ -1,0 +1,44 @@
+
+.platform{
+    background-color: #fff;
+    border: .0625rem dashed rgba(0, 0, 0, .4);
+    border-radius: 231.75px / 46.51px;
+    height: 3.75rem;
+    margin-top: -4.6875rem;
+    position: relative;
+    width: 300px;
+    z-index: 1;
+    height: 5.8125rem;
+    margin-top: -9.5625rem;
+    width: 28.9375rem;
+    margin-top: -6.5625rem;
+}
+
+.image{
+    min-height: 13.125rem;
+    -o-object-fit: none;
+    object-fit: none;
+    position: relative;
+    width: 18.75rem;
+    z-index: 20;
+    min-height: 24.125rem;
+    scale: 1.2;
+    width: 31.25rem;
+}
+
+.colors{
+    display: flex;
+    gap: 15px;
+    margin-top: 38px;
+}
+
+.colors >div.active{
+    border: .75px solid #222;
+
+}
+
+.colors >div{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
