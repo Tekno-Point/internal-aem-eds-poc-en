@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -15,40 +13,22 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "citypricedropdown",
+      "heromodelview"
     ]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
-  },
-  {
-    "id": "Section",
-    "components": [
-      "citypricedropdown"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
-  },
-  {
-    "id": "Section",
-    "components": [
-      "heromodelview"
-    ]
+    "components": ["text", "image", "button", "title"]
   }
+  
 ]
