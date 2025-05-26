@@ -73,7 +73,7 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "includedTitle",
+          "name": "titleIncluded",
           "value": "",
           "label": "Included Heading",
           "description": "Sets the main title of the Whats Included?.",
@@ -82,7 +82,7 @@
         {
           "component": "select",
           "valueType": "string",
-          "name": "includedTitleType",
+          "name": "titleIncludedType",
           "value": "h2",
           "label": "Included Heading Type",
           "options": [

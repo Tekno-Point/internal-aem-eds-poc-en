@@ -1,4 +1,4 @@
-export default async function decorate(block) {
+export default function decorate(block) {
     const cityPrices = {
         "Amreli": 135000,
         "Adilabad": 132500,
@@ -23,5 +23,8 @@ export default async function decorate(block) {
         "Mumbai": 139000,
         "Delhi": 140000
     };
+
+    const props = Array.from(block.children).map((ele)=>ele)
+    // props
 
 }
