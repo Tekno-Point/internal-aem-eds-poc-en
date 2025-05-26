@@ -25,6 +25,12 @@
     ]
   },
   {
+    "id": "Section",
+    "components": [
+      "citypricedropdown"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
@@ -37,6 +43,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "Section",
+    "components": [
+      "heromodelview"
     ]
   }
 ]

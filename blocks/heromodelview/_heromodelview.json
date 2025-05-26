@@ -153,6 +153,13 @@
           ]
         }
     ],
-    "filters": []
+   "filters": [
+      {
+        "id": "Section",
+        "components":[
+          "heromodelview"
+        ]
+      }
+    ]
   }
   

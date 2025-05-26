@@ -1,0 +1,133 @@
+{
+  "definitions": [
+    {
+      "title": "Citypricedropdown",
+      "id": "citypricedropdown",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Citypricedropdown",
+              "model": "citypricedropdown"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "citypricedropdown",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "valueType": "string",
+          "options": [
+            {
+              "name": "Hide",
+              "children": [
+                {
+                  "name": "Hide Included Section",
+                  "value": "hide-included"
+                },
+                {
+                  "name": "Hide Button Section",
+                  "value": "hide-btn"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "cityText",
+          "label": "City Title",
+          "description": "Availabe Citiqes Title",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "citiesurl",
+          "value": "",
+          "label": "Cities API URL"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "modalUrl",
+          "value": "",
+          "label": "Description Modal URL"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "includedTitle",
+          "value": "",
+          "label": "Included Heading",
+          "description": "Sets the main title of the Whats Included?.",
+          "multi": false
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "includedTitle",
+          "value": "h2",
+          "label": "Included Heading Type",
+          "options": [
+            {
+              "name": "H1",
+              "value": "h1"
+            },
+            {
+              "name": "H2",
+              "value": "h2"
+            },
+            {
+              "name": "H3",
+              "value": "h3"
+            },
+            {
+              "name": "H4",
+              "value": "h4"
+            },
+            {
+              "name": "H5",
+              "value": "h5"
+            },
+            {
+              "name": "H6",
+              "value": "h6"
+            }
+          ]
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "included",
+          "value": "",
+          "label": "Long Description Included Section",
+          "description": "Points to add in whats Included Section the main title of the Model.",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "button",
+          "value": "",
+          "label": "Button Description"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "Section",
+      "components": ["citypricedropdown"]
+    }
+  ]
+}
