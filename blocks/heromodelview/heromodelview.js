@@ -5,12 +5,13 @@ let accumulated = 0;
 const pixelsPerDegree = 1.5;
 
 export default async function decorate(block) {
-
-
-    let props = Array.from(block.children).map((div) => div)
-    let imagesDetails = await renderDataFromAPI("/vida-v2-pro/model-images.json");
+    let props = Array.from(block.children).map((div) => div);
+    const imagesURL = props[1].textContent.trim();
+    let heading = props[2].querySelector("div").children[0];
+    let boldHeading = props[3].querySelector("div").children[0];
+    let imagesDetails = await renderDataFromAPI(imagesURL);
     const arrayImagesDet = imagesDetails.data;
-    let imgRotateUrls = arrayImagesDet.map((data) => data.img_rotate_urls)
+    let imgRotateUrls = arrayImagesDet.map((data) => data.img_rotate_urls);
     let modelWrapper = document.createElement("div");
     modelWrapper.classList.add("model-wrapper");
 
@@ -20,32 +21,43 @@ export default async function decorate(block) {
     const selectedScooterClr = (div, ind) => {
         div.classList.add("active");
         let selImage = modelWrapper.querySelector(".image");
-        selImage.src = arrayImagesDet[ind].img_url;
-    }
+        const isMobile = window.matchMedia("(max-width: 760px)").matches;
+        selImage.src = isMobile
+            ? arrayImagesDet[ind].mob_img_urls.split(",")[0]
+            : arrayImagesDet[ind].desk_img_urls.split(",")[0];
+    };
 
     arrayImagesDet.map((modelObj, ind) => {
         let div = document.createElement("div");
         div.style.backgroundColor = modelObj.color;
-        ind == 0 ? (div.classList.add("active", "color")) : (div.classList.add("color"));
+        ind == 0
+            ? div.classList.add("active", "color")
+            : div.classList.add("color");
         colors.appendChild(div);
-    })
+    });
+
+    const isMobile = window.matchMedia("(max-width: 760px)").matches;
+    const initialImgURL = isMobile
+        ? arrayImagesDet[0].mob_img_urls.split(",")[0]
+        : arrayImagesDet[0].desk_img_urls.split(",")[0];
 
     modelWrapper.innerHTML += `
-    <div class="images"><img class="image" alt= ''
-        title="Nexusblue VIDA V2 PRO Electric Scooter" draggable="false" loading="lazy"
-        src='${arrayImagesDet[0].img_url}'>
-    <div class="platform"></div>    
-       <div class="colors">
-        ${colors.innerHTML}
+    <div class="images">
+        <img class="image" alt=''
+            title="Nexusblue VIDA V2 PRO Electric Scooter" draggable="false" loading="lazy"
+            src="${initialImgURL}">
+        <div class="platform"></div>    
+        <div class="colors">
+            ${colors.innerHTML}
         </div>
-    <div class="visualizer-color-text-wrapper">
-        <div class="color-text">6 colours to choose from</div>
+        <div class="visualizer-color-text-wrapper">
+            <div class="color-text">${imgRotateUrls.length} colours to choose from</div>
+        </div>
     </div>
-</div>
     `;
 
     block.innerHTML = '';
-
+    modelWrapper.prepend(heading, boldHeading);
     let bgimgURL = props[0].querySelector("picture img").src;
     modelWrapper.style.backgroundImage = `url(${bgimgURL})`;
     let colorDiv = modelWrapper.querySelectorAll(".color");
@@ -53,17 +65,17 @@ export default async function decorate(block) {
 
     colorDiv.forEach((div, ind) => {
         div.addEventListener("click", () => {
-            changeActiveClr(colorDiv)
-            selectedScooterClr(div, ind)
+            changeActiveClr(colorDiv);
+            selectedScooterClr(div, ind);
             activeIndex = ind;
         });
-
     });
-    // let arrayImages = arrayImagesDet[activeIndex].img_rotate_urls.split(",")
+
     const mainImage = modelWrapper.querySelector(".image");
     mainImage.addEventListener("mousedown", (e) => {
         rotateImg(e, activeIndex, arrayImagesDet, mainImage);
     });
+
     block.appendChild(modelWrapper);
 }
 
@@ -71,11 +83,16 @@ const rotateImg = (event, activeIndex, arrayImagesDet, imgEl) => {
     isDragging = true;
     startX = event.clientX;
 
-    const imgRotateUrls = arrayImagesDet[activeIndex].img_rotate_urls.split(",");
+    const isMobile = window.matchMedia("(max-width: 760px)").matches;
+    const rotateUrlString = isMobile
+        ? arrayImagesDet[activeIndex].mob_img_urls
+        : arrayImagesDet[activeIndex].desk_img_urls;
+
+    const imgRotateUrls = rotateUrlString.split(",");
     const totalFrames = imgRotateUrls.length;
     const degreesPerFrame = 360 / totalFrames;
     const pixelsPerFrame = degreesPerFrame * pixelsPerDegree;
-    console.log(startX)
+
     const onMouseMove = (e) => {
         if (!isDragging) return;
 
@@ -102,15 +119,13 @@ const rotateImg = (event, activeIndex, arrayImagesDet, imgEl) => {
     window.addEventListener('mouseup', onMouseUp);
 };
 
-
-
 const changeActiveClr = (colorDiv) => {
     colorDiv.forEach((eachDiv) => {
         if (eachDiv.classList.contains("active")) {
-            eachDiv.classList.remove("active")
+            eachDiv.classList.remove("active");
         }
     });
-}
+};
 
 async function renderDataFromAPI(url) {
     const resp = await fetchAPI('GET', url);
@@ -134,10 +149,6 @@ export function fetchAPI(method, url, data) {
                 } else {
                     data.headerJson['Content-Type'] = data.headerJson['Content-Type'] ? data.headerJson['Content-Type'] : 'application/json';
                 }
-
-                /* Optimzie Code */
-                /* data.headerJson = data.headerJson || {};
-                data.headerJson["Content-Type"] = data.headerJson["Content-Type"] === 'remove' ? '' : data.headerJson["Content-Type"] || "application/json"; */
 
                 const request = new Request(url, {
                     method: 'POST',

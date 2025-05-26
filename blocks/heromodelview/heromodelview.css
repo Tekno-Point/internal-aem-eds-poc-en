@@ -1,5 +1,11 @@
+.section.heromodelview-container .heromodelview-wrapper .heromodelview .model-wrapper {
+    margin: 0 auto;
+    max-width: 90rem;
+    padding: 0 5.5rem 88px;
+}
 
-.platform{
+
+.platform {
     background-color: #fff;
     border: .0625rem dashed rgba(0, 0, 0, .4);
     border-radius: 231.75px / 46.51px;
@@ -14,7 +20,7 @@
     margin-top: -6.5625rem;
 }
 
-.image{
+.image {
     min-height: 13.125rem;
     -o-object-fit: none;
     object-fit: none;
@@ -26,18 +32,18 @@
     width: 31.25rem;
 }
 
-.colors{
+.colors {
     display: flex;
     gap: 15px;
     margin-top: 38px;
 }
 
-.colors >div.active{
+.colors>div.active {
     border: .75px solid #222;
 
 }
 
-.colors >div{
+.colors>div {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
