@@ -1,4 +1,12 @@
+let isDragging = false;
+let startX = 0;
+let currentFrame = 0;
+let accumulated = 0;
+const pixelsPerDegree = 1.5;
+
 export default async function decorate(block) {
+
+
     let props = Array.from(block.children).map((div) => div)
     let imagesDetails = await renderDataFromAPI("/vida-v2-pro/model-images.json");
     const arrayImagesDet = imagesDetails.data;
@@ -54,17 +62,10 @@ export default async function decorate(block) {
     // let arrayImages = arrayImagesDet[activeIndex].img_rotate_urls.split(",")
     const mainImage = modelWrapper.querySelector(".image");
     mainImage.addEventListener("mousedown", (e) => {
-        rotateImg(e, activeIndex, arrayImagesDet,mainImage);
+        rotateImg(e, activeIndex, arrayImagesDet, mainImage);
     });
     block.appendChild(modelWrapper);
 }
-
-let isDragging = false;
-let startX = 0;
-let currentFrame = 0;
-let accumulated = 0;
-
-const pixelsPerDegree = 1.5; // Adjust to control sensitivity
 
 const rotateImg = (event, activeIndex, arrayImagesDet, imgEl) => {
     isDragging = true;
@@ -74,7 +75,7 @@ const rotateImg = (event, activeIndex, arrayImagesDet, imgEl) => {
     const totalFrames = imgRotateUrls.length;
     const degreesPerFrame = 360 / totalFrames;
     const pixelsPerFrame = degreesPerFrame * pixelsPerDegree;
-
+    console.log(startX)
     const onMouseMove = (e) => {
         if (!isDragging) return;
 
@@ -83,10 +84,10 @@ const rotateImg = (event, activeIndex, arrayImagesDet, imgEl) => {
         startX = e.clientX;
 
         const frameShift = Math.floor(accumulated / pixelsPerFrame);
+
         if (frameShift !== 0) {
             accumulated -= frameShift * pixelsPerFrame;
             currentFrame = (currentFrame + frameShift + totalFrames) % totalFrames;
-
             imgEl.src = imgRotateUrls[currentFrame];
         }
     };
