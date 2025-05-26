@@ -185,6 +185,13 @@
       {
         "component": "text",
         "valueType": "string",
+        "name": "pricelable",
+        "value": "",
+        "label": "Price Lable title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
         "name": "includedTitle",
         "value": "",
         "label": "Included Heading",
