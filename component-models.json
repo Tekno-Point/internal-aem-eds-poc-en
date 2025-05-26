@@ -112,6 +112,18 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Footer Address Container",
+            "value": "footer-address-conatiner"
+          },
+          {
+            "name": "Terms Service Container",
+            "value": "terms-service-container"
+          },
+          {
+            "name": "Footer Accordian",
+            "value": "footer-accordian"
           }
         ]
       }
