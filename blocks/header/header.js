@@ -133,6 +133,17 @@ export default async function decorate(block) {
   }
 
   const navSections = nav.querySelector('.nav-sections');
+  const navContent = nav.querySelector('.nav-sections .default-content-wrapper');
+
+  const navContentWrapper = document.createElement('div');
+  navContentWrapper.classList.add('navcontent-wrapper');
+  const navsectionWrapper = document.createElement('div');
+  navsectionWrapper.classList.add('navsection-wrapper');
+
+  navSections.appendChild(navsectionWrapper);
+  navsectionWrapper.appendChild(navContentWrapper);
+  navContentWrapper.appendChild(navContent);
+
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
