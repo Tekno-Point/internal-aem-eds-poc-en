@@ -1,3 +1,5 @@
+// import { renderDataFromAPI } from "../../scripts/scripts";
+
 let isDragging = false;
 let startX = 0;
 let currentFrame = 0;
@@ -7,8 +9,8 @@ const pixelsPerDegree = 1.5;
 export default async function decorate(block) {
     let props = Array.from(block.children).map((div) => div);
     const imagesURL = props[1].textContent.trim();
-    let heading = props[2].querySelector("div").children[0];
-    let boldHeading = props[3].querySelector("div").children[0];
+    let heading = props[2].children[0].children[0];
+    let boldHeading = props[3].children[0].children[0];
     let imagesDetails = await renderDataFromAPI(imagesURL);
     const arrayImagesDet = imagesDetails.data;
     let imgRotateUrls = arrayImagesDet.map((data) => data.img_rotate_urls);
@@ -126,7 +128,6 @@ const changeActiveClr = (colorDiv) => {
         }
     });
 };
-
 async function renderDataFromAPI(url) {
     const resp = await fetchAPI('GET', url);
     const data = await resp.json();
