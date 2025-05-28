@@ -232,14 +232,14 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "carousel_mob-image",
+        "name": "mob_image",
         "label": "Mobile Image",
         "description": "The Mobile image"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "carousel_mob-imageAlt",
+        "name": "mob_imageAlt",
         "label": "The Mobile image alt",
         "value": ""
       },
