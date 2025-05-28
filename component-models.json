@@ -185,6 +185,12 @@
         "component": "reference",
         "name": "nextIcon",
         "label": "Next Icon"
+      },
+      {
+        "component": "text",
+        "name": "config",
+        "label": "Carousel Configuration",
+        "valueType": "string"
       }
     ]
   },
@@ -270,12 +276,6 @@
         "name": "text",
         "label": "Description",
         "raw": true
-      },
-      {
-        "component": "text",
-        "name": "config",
-        "label": "Carousel Configuration",
-        "valueType": "string"
       }
     ]
   },
