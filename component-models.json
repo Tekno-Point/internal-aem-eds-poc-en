@@ -202,5 +202,31 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "product-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Product Heading",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "desciption",
+        "value": "",
+        "label": "Product Description",
+        "valueType": "string"
+      }
+    ]
   }
 ]

@@ -92,15 +92,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 
   // enable menu collapse on escape keypress
-  if (!expanded || isDesktop.matches) {
-    // collapse menu on escape press
-    window.addEventListener('keydown', closeOnEscape);
-    // collapse menu on focus lost
-    nav.addEventListener('focusout', closeOnFocusLost);
-  } else {
-    window.removeEventListener('keydown', closeOnEscape);
-    nav.removeEventListener('focusout', closeOnFocusLost);
-  }
+
 }
 
 /**
@@ -135,14 +127,13 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   const navContent = nav.querySelector('.nav-sections .default-content-wrapper');
 
-  const navContentWrapper = document.createElement('div');
-  navContentWrapper.classList.add('navcontent-wrapper');
-  const navsectionWrapper = document.createElement('div');
-  navsectionWrapper.classList.add('navsection-wrapper');
-
-  navSections.appendChild(navsectionWrapper);
-  navsectionWrapper.appendChild(navContentWrapper);
-  navContentWrapper.appendChild(navContent);
+  navSections.innerHTML = `
+  <div class="navsection-wrapper">
+  <div class="navcontent-wrapper">
+    ${navContent.outerHTML}
+  </div>
+  </div>
+  `
 
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
