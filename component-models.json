@@ -207,6 +207,27 @@
     "id": "product-details",
     "fields": [
       {
+        "component": "select",
+        "name": "layout",
+        "label": "Grid Layout",
+        "valueType": "string",
+        "description": "Number of columns to display in desktop view",
+        "options": [
+          {
+            "name": "3 Columns",
+            "value": "3"
+          },
+          {
+            "name": "4 Columns",
+            "value": "4"
+          },
+          {
+            "name": "5 Columns",
+            "value": "5"
+          }
+        ]
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
@@ -224,9 +245,30 @@
     "fields": [
       {
         "component": "richtext",
+        "name": "title",
+        "label": "Product Title",
         "valueType": "string",
-        "name": "text",
-        "label": "Product Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Product Description",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "productValue",
+        "label": "Product Value",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "productUnit",
+        "label": "Product Unit",
+        "valueType": "string",
         "value": ""
       }
     ]
