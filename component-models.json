@@ -226,17 +226,6 @@
             "value": "5"
           }
         ]
-      },
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Product Specification",
-            "value": "product-specification"
-          }
-        ]
       }
     ]
   },
