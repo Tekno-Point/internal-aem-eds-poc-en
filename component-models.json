@@ -244,16 +244,16 @@
     "id": "product-item",
     "fields": [
       {
-        "component": "richtext",
-        "name": "title",
-        "label": "Product Title",
+        "component": "reference",
+        "name": "image",
+        "label": "Product Image",
         "valueType": "string",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "description",
-        "label": "Product Description",
+        "name": "heading",
+        "label": "Product Heading",
         "valueType": "string",
         "value": ""
       },
