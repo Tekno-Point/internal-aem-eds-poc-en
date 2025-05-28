@@ -204,28 +204,30 @@
     ]
   },
   {
+    "id": "product-details",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Product Specification",
+            "value": "product-specification"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "product-item",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
         "component": "richtext",
         "valueType": "string",
-        "name": "heading",
-        "label": "Product Heading",
+        "name": "text",
+        "label": "Product Text",
         "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "desciption",
-        "value": "",
-        "label": "Product Description",
-        "valueType": "string"
       }
     ]
   }
