@@ -137,6 +137,149 @@
     ]
   },
   {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "One Slide Only",
+                "value": "one-slide-only"
+              },
+              {
+                "name": "Two Slides Only",
+                "value": "two-slides-only"
+              },
+              {
+                "name": "Three Slides Only",
+                "value": "three-slides-only"
+              },
+              {
+                "name": "Reviews",
+                "value": "reviews"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "boolean",
+        "label": "Infinite",
+        "name": "infinite",
+        "value": "",
+        "valueType": "boolean"
+      },
+      {
+        "component": "reference",
+        "name": "prevIcon",
+        "label": "Prev Icon"
+      },
+      {
+        "component": "reference",
+        "name": "nextIcon",
+        "label": "Next Icon"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "carousel Style",
+        "options": [
+          {
+            "name": "Content Style",
+            "children": [
+              {
+                "name": "One Slide Only",
+                "value": "one-slide-only"
+              }
+            ]
+          }
+        ],
+        "valueType": "string[]"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "carousel_desk-image",
+        "label": "Desktop Image",
+        "description": "The Desktop image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "carousel_desk-imageAlt",
+        "label": "The Desktop image alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "carousel_mob-image",
+        "label": "Mobile Image",
+        "description": "The Mobile image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "carousel_mob-imageAlt",
+        "label": "The Mobile image alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "carousel Heading"
+      },
+      {
+        "component": "select",
+        "name": "headingType",
+        "label": "carousel Heading Type",
+        "options": [
+          {
+            "name": "H1",
+            "value": "h1"
+          },
+          {
+            "name": "H2",
+            "value": "h2"
+          },
+          {
+            "name": "H3",
+            "value": "h3"
+          },
+          {
+            "name": "H4",
+            "value": "h4"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Description",
+        "raw": true
+      },
+      {
+        "component": "text",
+        "name": "config",
+        "label": "Carousel Configuration",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "citypricedropdown",
     "fields": [
       {
