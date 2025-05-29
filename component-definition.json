@@ -217,6 +217,22 @@
               }
             }
           }
+        },
+        {
+          "title": "Heropricemodel",
+          "id": "heropricemodel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Heropricemodel",
+                  "model": "heropricemodel",
+                  "filter": "heropricemodel"
+                }
+              }
+            }
+          }
         }
       ]
     }

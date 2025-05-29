@@ -16,7 +16,8 @@
       "fragment",
       "citypricedropdown",
       "heromodelview",
-      "carousel"
+      "carousel",
+      "heropricemodel"
     ]
   },
   {
@@ -35,6 +36,12 @@
     "id": "carousel",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id":"heropricemodel",
+    "components": [
+      "heromodelview","citypricedropdown"
     ]
   }
   

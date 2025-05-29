@@ -195,6 +195,10 @@
     ]
   },
   {
+    "id":"heropricemodel",
+    "fields":[]
+  },
+  {
     "id": "carousel-item",
     "fields": [
       {
