@@ -128,6 +128,10 @@
           {
             "name": "Bottom Try Card Wrapper",
             "value": "bottom-try-card-wrapper"
+          },
+          {
+            "name": "FAQ Card",
+            "value": "faq-card"
           }
         ]
       }
