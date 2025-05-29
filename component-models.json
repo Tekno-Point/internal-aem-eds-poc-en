@@ -251,7 +251,7 @@
         "value": ""
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "productValue",
         "label": "Product Value",
         "valueType": "string",

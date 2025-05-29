@@ -199,10 +199,12 @@ header nav .nav-sections {
   background: #fff;
   top: 4rem;
   width: 70%;
+  height: calc(100vh - 6pc);
 }
 
 .navsection-wrapper {
   background: rgba(0, 0, 0, .6);
+  height: calc(100vh - 6pc);
 }
 
 .navcontent-wrapper {
@@ -210,6 +212,7 @@ header nav .nav-sections {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding: 2rem 1.25rem;
+  height: calc(100vh - 6pc);
 }
 
 header nav .nav-sections .default-content-wrapper {
@@ -219,6 +222,9 @@ header nav .nav-sections .default-content-wrapper {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding: 4rem 3rem 0 2.5rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  height: calc(100% - 8pc);  
 }
 
 header nav .nav-sections .default-content-wrapper ol {
@@ -309,6 +315,24 @@ header nav .nav-sections .default-content-wrapper ul li ul li a {
   cursor: pointer;
 }
 
+@media (width <= 768px) {
+  header nav .nav-sections {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  .navsection-wrapper {
+    height: 100vh;
+  }
+  .navcontent-wrapper {
+    height: 100vh;
+  }
+  header nav .nav-sections .default-content-wrapper ul {
+    flex-direction: column;
+  }
+}
+
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
@@ -344,4 +368,75 @@ header nav .nav-tools {
 .section.nav-tools ul li a span img {
   height: 100%;
   width: 100%;
+}
+
+@media (width <=768px) {
+  header nav .nav-tools {
+    display: none;
+  }
+}
+
+
+
+/* Bottom try card css */
+.section.bottom-try-card-wrapper {
+  display: none;
+}
+
+@media (width <=768px) {
+  .section.bottom-try-card-wrapper {
+    display: block;
+    backdrop-filter: blur(25px);
+    background: rgba(34, 34, 34, .5);
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    height: 5.5rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }
+  
+  .section.bottom-try-card-wrapper .default-content-wrapper {
+    padding: 0;
+    height: 100%;
+  }
+  
+  .section.bottom-try-card-wrapper ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  
+  .section.bottom-try-card-wrapper ul li {
+    border-right: 1px solid hsla(0, 0%, 100%, .2);
+    flex: 1;
+  }
+  
+  .section.bottom-try-card-wrapper ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1pc;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    height: 100%;
+  }
+  
+  .section.bottom-try-card-wrapper ul li a span {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+  }
+  
+  .section.bottom-try-card-wrapper ul li a span img {
+    width: 100%;
+    height: 100%;
+  }
 }

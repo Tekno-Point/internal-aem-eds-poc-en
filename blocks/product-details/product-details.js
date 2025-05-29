@@ -19,7 +19,9 @@ export default function decorate(block) {
         productItem.className = 'product-item';
 
         productItem.innerHTML = `
-           <img class="product-icon">${productIcon.outerHTML}</img>
+           <div class="product-image">
+           ${productIcon.outerHTML}
+           </div>
            <div class="product-content">
                <h3 class="product-title">${productTitle}</h3>
                <div class="value-container">
