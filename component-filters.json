@@ -43,5 +43,9 @@
   {
     "id": "product-details",
     "components": ["product-item"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
   }
 ]

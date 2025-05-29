@@ -25,3 +25,113 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+
+/* Variant Feature Focused View css */
+.section.variant-focused-view-container .cards-wrapper {
+  padding: 0;
+}
+
+.section.variant-focused-view-container .cards-wrapper {
+  background: linear-gradient(180deg, #fff, #222);
+  transition: 1 1.5s ease-out;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul {
+  display: flex;
+  flex-direction: column;
+  grid-gap: unset;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li .cards-card-body {
+  margin: 0;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li h3 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li p {
+  margin: 0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 32px;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:first-child .cards-card-body h3,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(2) .cards-card-body h3,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:first-child .cards-card-body p,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(2) .cards-card-body p {
+  color: #000;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(3) .cards-card-body h3,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(4) .cards-card-body h3,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(5) .cards-card-body h3,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(6) .cards-card-body h3 {
+  color: #fff;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(3) .cards-card-body p,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(4) .cards-card-body p,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(5) .cards-card-body p,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(6) .cards-card-body p {
+  color: #fff;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:first-child,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(3),
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(5) {
+  flex-direction: row-reverse;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:first-child,
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(3) {
+  gap: 5.4375rem;
+  padding: 0 0 0 5.5rem;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(2),
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(5),
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(6) {
+  padding: 0 5.5rem;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(4) {
+  padding: 0 5.5rem 0 0;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:first-child .cards-card-body {
+  padding: 64px 0;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:first-child .cards-card-image {
+  margin: 0 5.5rem 0 auto;
+  width: 308px;
+  height: 470px;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(2) .cards-card-image {
+  width: 674px;
+  height: 438px;
+}
+
+.section.variant-focused-view-container .cards-wrapper .cards.block ul li .cards-card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
