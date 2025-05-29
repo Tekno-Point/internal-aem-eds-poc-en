@@ -1,0 +1,52 @@
+.section.faq-card {
+    background: #e4eaf1;
+    margin: 0;
+    padding: 64px 0;
+}
+
+.section.faq-card .accordion-wrapper {
+    padding: 0;
+}
+
+.section.faq-card .accordion-container {
+    background: #fff;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.section.faq-card .accordion-container .accordion-item summary {
+    list-style: none;
+}
+
+.section.faq-card .accordion-container .accordion-item summary h2 {
+    margin: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #1d1b1b;
+}
+
+.section.faq-card .accordion-container p.button-container {
+    padding: 1.25rem 2.25rem;
+    margin: 0;
+}
+
+.section.faq-card .accordion-container p.button-container a {
+    background: unset;
+    color: #ff5310;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.section.faq-card .accordion-container p.button-container a:hover {
+    text-decoration: none;
+}
