@@ -195,10 +195,6 @@
     ]
   },
   {
-    "id":"heropricemodel",
-    "fields":[]
-  },
-  {
     "id": "carousel-item",
     "fields": [
       {
@@ -245,6 +241,13 @@
         "valueType": "string",
         "name": "mob_imageAlt",
         "label": "The Mobile image alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imglink",
+        "label": "image URL",
         "value": ""
       },
       {
