@@ -285,8 +285,8 @@
       },
       {
         "component": "richtext",
-        "name": "button",
-        "label": "Button",
+        "name": "knowmore",
+        "label": "Know More Button",
         "valueType": "string",
         "value": ""
       }
