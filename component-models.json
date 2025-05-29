@@ -132,6 +132,10 @@
           {
             "name": "FAQ Card",
             "value": "faq-card"
+          },
+          {
+            "name": "Offer Cards",
+            "value": "offer-cards"
           }
         ]
       }
