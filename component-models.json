@@ -110,8 +110,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Variant Focused View Container",
+            "value": "variant-focused-view-container"
           },
           {
             "name": "Footer Address Container",

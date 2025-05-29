@@ -16,6 +16,10 @@
     grid-template-columns: repeat(5, 1fr);
 }
 
+.section.product-details-container {
+    margin: 64px 0
+}
+
 .section.product-details-container .default-content-wrapper {
     padding: 0;
 }
@@ -39,12 +43,8 @@
 }
 
 .section.product-details-container .products-grid {
-    padding: 40px 88px 36px;
+    padding: 40px 0 36px 88px;
     row-gap: 36px;
-}
-
-.section.product-details-container .products-grid .product-item {
-    flex-basis: 20%;
 }
 
 .section.product-details-container .products-grid .product-item .product-image {
@@ -63,7 +63,13 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin: 8px 0 2px;
+    margin: 8px 0 2px;  
+}
+
+.section.product-details-container .products-grid .product-item .product-content .value-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .section.product-details-container .products-grid .product-item .product-content .value-container .product-value {
@@ -72,4 +78,55 @@
     font-weight: 400;
 }
 
-.section.product-details-container .products-grid .product-item .product-content .value-container .product-value 
+.section.product-details-container .products-grid .product-item .product-content .value-container .product-value.bold {
+    font-size: 28px;
+    line-height: normal;
+    font-weight: 600;
+}
+
+.section.product-details-container .products-grid .product-item .product-content .value-container .product-unit {
+    font-size: 12px;
+    line-height: normal;
+    font-weight: 400;
+}
+
+@media (width <= 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .products-grid[data-columns="3"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .products-grid[data-columns="4"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .products-grid[data-columns="5"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section.product-details-container {
+        margin: 40px 0
+    }
+
+    .section.product-details-container .products-grid {
+        padding: 24px 20px;
+        row-gap: 24px;
+    }
+
+    .section.product-details-container .products-grid .product-item .product-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .section.product-details-container .products-grid .product-item .product-content h3 {
+        font-size: 16px;
+        margin: 6px 0 2px;  
+    }
+
+    .section.product-details-container .products-grid .product-item .product-content .value-container .product-value.bold {
+        font-size: 20px;
+    }
+}
