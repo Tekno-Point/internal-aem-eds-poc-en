@@ -120,6 +120,10 @@
           {
             "name": "Mobile Carousel",
             "value": "mob-carousel"
+          },
+          {
+            "name": "Price City Container",
+            "value": "pc-container"
           }
         ]
       }
