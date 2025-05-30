@@ -28,7 +28,7 @@ header nav {
     'brand tools hamburger' var(--nav-height);
   grid-template-columns: 50% 45% 5%;
   overflow-y: auto;
-  min-height: 100dvh;
+  /* min-height: 100dvh; */
 }
 
 @media (width >=900px) {

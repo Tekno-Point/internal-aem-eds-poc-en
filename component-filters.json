@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "product-details",
-      "accordion"
+      "accordion",
+      "image-accordion"
     ]
   },
   {
@@ -48,5 +49,9 @@
   {
     "id": "accordion",
     "components": ["accordion-item"]
+  },
+  {
+    "id": "image-accordion",
+    "components": ["image-accordion-item"]
   }
 ]

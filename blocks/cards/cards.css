@@ -1,4 +1,4 @@
-.cards > ul {
+.cards>ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
   grid-gap: 24px;
 }
 
-.cards > ul > li {
+.cards>ul>li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
 }
@@ -20,7 +20,7 @@
   line-height: 0;
 }
 
-.cards > ul > li img {
+.cards>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -134,4 +134,113 @@
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+
+
+/* Offer Cards Css */
+.section.offer-cards .cards-wrapper {
+  padding: 0;
+}
+
+.section.offer-cards .cards-wrapper ul {
+  display: flex;
+  gap: 32px;
+}
+
+.section.offer-cards .cards-wrapper ul li {
+  border: none;
+  background-color: #fff;
+  border-radius: .75rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body {
+  margin: 0;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-partial_payment,
+.section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-grab {
+  height: 30px;
+  width: 30px;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-ltf-logo {
+  height: 140px;
+  width: 336px;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body span img {
+  height: 100%;
+  width: 1005;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  color: #222;
+  padding-bottom: 16px;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body h3 {
+  font-size: 28px;
+  line-height: normal;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body p.button-container {
+  padding: 10px 0 12px 0;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body p.button-container a {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #ff5310;
+  text-decoration: underline;
+  background: unset;
+  margin: 0;
+  padding: 0;
+  display: unset;
+}
+
+@media (width <=900px) {
+  .section.offer-cards {
+    padding: 0 16px;
+  }
+  .section.offer-cards .cards-wrapper ul {
+    overflow-x: scroll;
+  }
+  .section.offer-cards .cards-wrapper ul li {
+    padding: 1rem;
+    min-width: 240px;
+    margin: 2px;
+  }
+
+  .section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-partial_payment,
+  .section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-grab {
+    height: 20px;
+    width: 20px;
+  }
+  .section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-ltf-logo {
+    height: 88px;
+    width: 208px;
+  }
+  .section.offer-cards .cards-wrapper ul li .cards-card-body h3 {
+    font-size: 16px;
+  }
+  .section.offer-cards .cards-wrapper ul li .cards-card-body p.button-container a {
+    font-size: 16px;
+  }
+  .section.offer-cards .cards-wrapper ul li .cards-card-body p {
+    font-size: 16px;
+  }
 }

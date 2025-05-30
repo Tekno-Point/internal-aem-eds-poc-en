@@ -136,6 +136,10 @@
           {
             "name": "Offer Cards",
             "value": "offer-cards"
+          },
+          {
+            "name": "Vida Service Container",
+            "value": "vida-service-container"
           }
         ]
       }
@@ -295,6 +299,32 @@
         "component": "richtext",
         "name": "knowmore",
         "label": "Know More Button",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "image-accordion-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Accordion Image",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Accordion Title",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Accordion Description",
         "valueType": "string",
         "value": ""
       }
