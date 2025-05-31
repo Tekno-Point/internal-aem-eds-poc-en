@@ -1,0 +1,132 @@
+.section.vida-service-container .default-content-wrapper {
+    padding: 32px 88px 64px;
+}
+
+.section.vida-service-container .default-content-wrapper p {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #222;
+    margin: 0;
+}
+
+.section.vida-service-container .default-content-wrapper p strong {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #222;
+    padding-top: 5.4px;
+}
+
+.section.vida-service-container .image-accordion-wrapper {
+    padding: 0;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item {
+    padding: 4rem 1rem;
+    border-top: .0625rem solid #222;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item summary {
+    list-style: none;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item summary p {
+    margin: 0;
+    font-size: 28px;
+    line-height: normal;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item summary p::after {
+    content: url('/images/add-icon.svg');
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item.active summary p::after {
+    content: url('/images/minus-icon.svg');
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item summary p::after {}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body {
+    margin-top: 64px;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body img {
+    height: 28rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    color: #222;
+    cursor: pointer;
+    padding-top: .5rem;
+    margin: 0;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body p.button-container {
+    padding-top: 22px;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body p.button-container a {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    color: #ff5310;
+    text-decoration: underline;
+    background: unset;
+    padding: 0;
+    margin: 0;
+    display: unset;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body p.button-container a:hover {
+    text-decoration: unset;
+}
+
+.section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body p:hover {
+    color: #ff5310;
+}
+
+@media (width <=768px) {
+    .section.vida-service-container .default-content-wrapper {
+        padding: 32px 20px;
+    }
+    .section.vida-service-container .default-content-wrapper p {
+        font-size: 12px;
+    }
+    
+    .section.vida-service-container .default-content-wrapper p strong {
+        font-size: 24px;
+    }
+    .section.vida-service-container .image-accordion-wrapper {
+        margin: 0 48px;
+    }
+    .section.vida-service-container .image-accordion-wrapper .accordion-item {
+        padding: 32px 16px;
+    }
+    .section.vida-service-container .image-accordion-wrapper .accordion-item summary p {
+        font-size: 20px;
+    }
+    .section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body img {
+        height: 18rem;
+    }
+    .section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body {
+        margin-top: 24px;
+    }
+    .section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body p {
+        font-size: 16px;
+    }
+    .section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body p.button-container a {
+        font-size: 16px;
+    }
+}

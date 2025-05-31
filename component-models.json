@@ -140,6 +140,10 @@
           {
             "name": "Vida Service Container",
             "value": "vida-service-container"
+          },
+          {
+            "name": "Dealership Locator Card",
+            "value": "dealership-locator-card"
           }
         ]
       }
@@ -325,6 +329,25 @@
         "component": "richtext",
         "name": "description",
         "label": "Accordion Description",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "dealership-locator",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "button",
+        "label": "Button",
         "valueType": "string",
         "value": ""
       }
