@@ -365,11 +365,9 @@
     "id": "warranty-card",
     "fields": [
       {
-        "component": "richtext",
+        "component": "aem-content",
         "name": "button",
-        "label": "Button",
-        "valueType": "string",
-        "value": ""
+        "label": "Button"
       },
       {
         "component": "richtext",
