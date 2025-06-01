@@ -1,0 +1,41 @@
+.section.vida-warranty-card .warranty-card-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.section.vida-warranty-card .warranty-card.block {
+    background-color: #ff5310;
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 94% 100%, 0 100%);
+    border-radius: 1rem;
+    max-height: 10.75rem;
+    max-width: 38.875rem;
+}
+
+.section.vida-warranty-card .warranty-card.block .warranty-card-wrapper {
+    background: url('/images/card-bg-img-desktop.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 3.375rem 2.71875rem;
+}
+
+.section.vida-warranty-card .warranty-card.block .warranty-card-wrapper a {
+    margin: 0;
+    padding: 0;
+    background: unset;
+    display: inline;
+    border: unset;
+    text-align: unset;
+}
+
+.section.vida-warranty-card .warranty-card.block .warranty-card-wrapper a p {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
