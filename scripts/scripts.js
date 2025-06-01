@@ -17,6 +17,9 @@ import {
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
  */
+
+export const isMobile = window.matchMedia('(max-width: 900px)');
+
 export function moveAttributes(from, to, attributes) {
   if (!attributes) {
     // eslint-disable-next-line no-param-reassign
@@ -30,6 +33,42 @@ export function moveAttributes(from, to, attributes) {
     }
   });
 }
+
+
+// const whatsIncludedFun = (e) => {
+//   let includedContainer = document.querySelector(".whats-included-container");
+//   let parentContHeight = e.curretTarget.closest(".citypricedropdown-wrapper")
+// }
+
+export function createElement(tagName, options = {}) {
+  const { classes = [], props = {} } = options;
+  const elem = document.createElement(tagName);
+  const isString = typeof classes === 'string';
+  if (classes || (isString && classes !== '') || (!isString && classes.length > 0)) {
+    const classesArr = isString ? [classes] : classes;
+    elem.classList.add(...classesArr);
+  }
+  if (!isString && classes.length === 0) elem.removeAttribute('class');
+
+  if (props) {
+    Object.keys(props).forEach((propName) => {
+      const isBooleanAttribute = propName === 'allowfullscreen' || propName === 'autoplay' || propName === 'muted' || propName === 'controls';
+
+      // For boolean attributes, add the attribute without a value if it's truthy
+      if (isBooleanAttribute) {
+        if (props[propName]) {
+          elem.setAttribute(propName, '');
+        }
+      } else {
+        const value = props[propName];
+        elem.setAttribute(propName, value);
+      }
+    });
+  }
+
+  return elem;
+}
+
 
 /**
  * Move instrumentation attributes from a given element to another given element.
@@ -129,42 +168,42 @@ async function loadLazy(doc) {
 }
 
 export async function renderDataFromAPI(url) {
-    const resp = await fetchAPI('GET', url);
-    const data = await resp.json();
-    return data;
+  const resp = await fetchAPI('GET', url);
+  const data = await resp.json();
+  return data;
 }
 
 export function fetchAPI(method, url, data) {
-    return new Promise(async (resolve, reject) => {
-        try {
-            if (method === 'GET') {
-                const resp = await fetch(url);
-                resolve(resp);
-            } else if (method === 'POST') {
-                data.headerJson = data.headerJson || {
-                    'Content-Type': 'application/json',
-                };
+  return new Promise(async (resolve, reject) => {
+    try {
+      if (method === 'GET') {
+        const resp = await fetch(url);
+        resolve(resp);
+      } else if (method === 'POST') {
+        data.headerJson = data.headerJson || {
+          'Content-Type': 'application/json',
+        };
 
-                if (data.headerJson['Content-Type'] == 'remove') {
-                    data.headerJson['Content-Type'] = '';
-                } else {
-                    data.headerJson['Content-Type'] = data.headerJson['Content-Type'] ? data.headerJson['Content-Type'] : 'application/json';
-                }
-
-                const request = new Request(url, {
-                    method: 'POST',
-                    body: JSON.stringify(data.requestJson),
-                    headers: data.headerJson,
-                });
-                const response = await fetch(request);
-                const json = await response.json();
-                resolve({ responseJson: json });
-            }
-        } catch (error) {
-            console.warn(error);
-            reject(error);
+        if (data.headerJson['Content-Type'] == 'remove') {
+          data.headerJson['Content-Type'] = '';
+        } else {
+          data.headerJson['Content-Type'] = data.headerJson['Content-Type'] ? data.headerJson['Content-Type'] : 'application/json';
         }
-    });
+
+        const request = new Request(url, {
+          method: 'POST',
+          body: JSON.stringify(data.requestJson),
+          headers: data.headerJson,
+        });
+        const response = await fetch(request);
+        const json = await response.json();
+        resolve({ responseJson: json });
+      }
+    } catch (error) {
+      console.warn(error);
+      reject(error);
+    }
+  });
 }
 
 /**

@@ -5,10 +5,10 @@ export default async function decorate(block) {
     const props = Array.from(block.children).map((ele) => ele)
     // props
 
-    const [eleHeading, eleCityUrl, eleModalUrl, elePriceLabel, eleIncluded, eleIncDescription, eleBtn] = props;
+    const [eleHeading, eleCityUrl, eleModalText, elePriceLabel, eleIncluded, eleIncDescription, eleBtn] = props;
     const heading = eleHeading?.children[0]?.children[0];
     const cityUrl = eleCityUrl?.textContent.trim();
-    const modalUrl = eleModalUrl?.textContent.trim();
+    const popupText = eleModalText?.textContent.trim();
     const priceLabel = elePriceLabel?.textContent.trim();
     const included = eleIncluded?.textContent.trim();
     const incDescription = eleIncDescription?.children[0];
@@ -25,18 +25,31 @@ export default async function decorate(block) {
     });
 
 
+    incDescription ? incDescription.classList.add("whats-included-container", "dp-none") : "";
 
-    incDescription.classList.add("whats-included-container", "dp-none");
-    btn.classList.add("buy-btn");
+    if (btn) {
+        btn.classList.add("buy-btn");
+    }
+
 
 
     let dropdown = filteredCity
-        .map((city) => `<div class="city-option" data-effectiveprice=${city.effectivePrice} value=${city.city_state_id.split("~")[0]}>${city.city_state_id.split("~")[0]}</div>`).join("")
+        .map((city) => `<div class="city-option" data-effectiveprice=${Number(city.effectivePrice).toLocaleString('en-IN')} value=${city.city_state_id.split("~")[0]}>${city.city_state_id.split("~")[0]}</div>`).join("")
 
     block.innerHTML = '';
 
     let boxContainer = document.createElement("div")
     boxContainer.classList.add("box-container")
+    let city = 'new delhi';
+    const defaultCity = filteredCity.find(item =>
+        item.city_state_id.includes(city.toUpperCase())
+    );
+
+    let toolTipHTML = `<span class="global-tooltip">
+                    <img src="/icons/chevron-down.svg" data-tip="true" data-for="modelVariant"
+                    alt="modelVariant" currentitem="false">
+                </span>
+                <span class="popup">${popupText}</span>`
 
     boxContainer.innerHTML = `
     
@@ -44,9 +57,9 @@ export default async function decorate(block) {
         ${heading.outerHTML}
        <div class="input-search">
     <div class="arrow"><img class="arr-image rotated-image"
-            src="/content/dam/vida2-0/charging-page/community-charging/drop_down_icon.svg" alt="arrow">
+            src="/icons/chevron-down.svg" alt="arrow">
     </div>
-    <p class="input-city">New Delhi</p>
+    <p class="input-city">${defaultCity.city_state_id.split("~")[0]}</p>
      <div class="city-option-container dp-none">
            ${dropdown}
         </div>
@@ -54,22 +67,26 @@ export default async function decorate(block) {
     </div>
     <div class="right">
         <div class="price">
-            <p class="amount">₹1,35,000
-                <span class="global-tooltip">
-                    <img src="/content/dam/vida2-0/tooltip/tootip-icon.svg" data-tip="true" data-for="modelVariant"
-                    alt="modelVariant" currentitem="false">
-                </span>
-            </p>
-            <p class="price-text">${priceLabel}</p>
-        </div>
-        <div class="toolbar">${included}</div>
-    </div>
+            <p class="amount">₹${Number(defaultCity.effectivePrice).toLocaleString('en-IN')}
+                ${popupText ? toolTipHTML : ''}
+            </p >
+    <p class="price-text">${priceLabel}</p>
+        </div >
+    <div class="toolbar">${included}</div>
+    </div >
 
     `
+    let tooltip = boxContainer.querySelector(".global-tooltip");
+    let popup = boxContainer.querySelector(".popup");
+
+    if (tooltip) {
+        tooltip.addEventListener("mouseenter", (e) => showPopup(e, popup))
+        tooltip.addEventListener("mouseleave", (e) => popup.style.visibility = "hidden")
+    }
 
     let toolbar = boxContainer.querySelector(".toolbar");
     [toolbar, incDescription].forEach(el => {
-        el.addEventListener("click", () => hideShowIncluded(toolbar, incDescription));
+        el.addEventListener("click", () => hideShowIncluded(toolbar, incDescription,el));
     });
 
     let cityContainer = boxContainer.querySelector(".input-city");
@@ -82,20 +99,23 @@ export default async function decorate(block) {
     cityOptions.forEach((city) => {
         city.addEventListener("click", (e) => selectCity(e, cityContainer))
     })
-    block.appendChild(boxContainer);
-    block.appendChild(incDescription);
-    block.appendChild(btn);
+    boxContainer ? block.appendChild(boxContainer) : '';
+    incDescription ? block.appendChild(incDescription) : '';
+    btn ? block.appendChild(btn) : '';
 
 }
 
-const hideShowIncluded = (toolbar, incDescription) => {
+const hideShowIncluded = (toolbar, incDescription, el) => {
     if (incDescription.classList.contains("dp-none")) {
         incDescription.classList.remove("dp-none");
         toolbar.classList.add("dp-none");
+        let parentContHeight = el.closest(".citypricedropdown-wrapper").clientHeight; 
+
     }
     else {
         incDescription.classList.add("dp-none");
         toolbar.classList.remove("dp-none");
+        let parentContHeight = el.closest(".citypricedropdown-wrapper").clientHeight;
     }
 }
 
@@ -113,7 +133,25 @@ const selectCity = (e, cityContainer) => {
     const selectedCity = e.target.textContent.trim();
     const effectivePrice = e.target.dataset.effectiveprice;
     cityContainer.textContent = selectedCity;
-    let price = document.querySelector(".amount");
+    const block = e.target.closest(".box-container");
+    const price = block.querySelector(".amount");
+
     e.target.closest(".city-option-container").classList.add("dp-none");
-    price.firstChild.nodeValue = "₹"+effectivePrice;
+    price.firstChild.nodeValue = "₹" + effectivePrice;
 }
+
+const showPopup = (e, popup) => {
+    popup.style.visibility = "visible";
+}
+
+// const toolbar1 = document.querySelector(".toolbar");
+
+// if (isMobile && toolbar1) {
+
+//   const whatsIncludedFun = (e) => {
+// //   let includedContainer = document.querySelector(".whats-included-container");
+// //   let parentContHeight = e.currentTarget.closest(".citypricedropdown-wrapper")
+// }
+
+//   toolbar.addEventListener("click", (e) => { whatsIncludedFun(e); });
+// }

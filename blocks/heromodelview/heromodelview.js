@@ -1,10 +1,14 @@
 // import { renderDataFromAPI } from "../../scripts/scripts";
 
+
 let isDragging = false;
 let startX = 0;
 let currentFrame = 0;
 let accumulated = 0;
 const pixelsPerDegree = 1.5;
+
+const isMobile = window.matchMedia("(max-width: 760px)").matches;
+
 
 export default async function decorate(block) {
     let props = Array.from(block.children).map((div) => div);
@@ -23,7 +27,6 @@ export default async function decorate(block) {
     const selectedScooterClr = (div, ind) => {
         div.classList.add("active");
         let selImage = modelWrapper.querySelector(".image");
-        const isMobile = window.matchMedia("(max-width: 760px)").matches;
         selImage.src = isMobile
             ? arrayImagesDet[ind].mob_img_urls.split(",")[0]
             : arrayImagesDet[ind].desk_img_urls.split(",")[0];
@@ -38,7 +41,6 @@ export default async function decorate(block) {
         colors.appendChild(div);
     });
 
-    const isMobile = window.matchMedia("(max-width: 760px)").matches;
     const initialImgURL = isMobile
         ? arrayImagesDet[0].mob_img_urls.split(",")[0]
         : arrayImagesDet[0].desk_img_urls.split(",")[0];
@@ -75,17 +77,21 @@ export default async function decorate(block) {
 
     const mainImage = modelWrapper.querySelector(".image");
     mainImage.addEventListener("mousedown", (e) => {
-        rotateImg(e, activeIndex, arrayImagesDet, mainImage);
+        rotateImg(e, activeIndex, arrayImagesDet, mainImage, false);
     });
+
+    mainImage.addEventListener("touchstart", (e) => {
+        rotateImg(e.touches[0], activeIndex, arrayImagesDet, mainImage, true);
+    });
+
 
     block.appendChild(modelWrapper);
 }
 
-const rotateImg = (event, activeIndex, arrayImagesDet, imgEl) => {
+const rotateImg = (event, activeIndex, arrayImagesDet, imgEl, isTouch = false) => {
     isDragging = true;
     startX = event.clientX;
 
-    const isMobile = window.matchMedia("(max-width: 760px)").matches;
     const rotateUrlString = isMobile
         ? arrayImagesDet[activeIndex].mob_img_urls
         : arrayImagesDet[activeIndex].desk_img_urls;
@@ -95,15 +101,14 @@ const rotateImg = (event, activeIndex, arrayImagesDet, imgEl) => {
     const degreesPerFrame = 360 / totalFrames;
     const pixelsPerFrame = degreesPerFrame * pixelsPerDegree;
 
-    const onMouseMove = (e) => {
+    const onMove = (e) => {
         if (!isDragging) return;
-
-        const deltaX = e.clientX - startX;
+        const clientX = isTouch ? e.touches[0].clientX : e.clientX;
+        const deltaX = clientX - startX;
         accumulated += deltaX;
-        startX = e.clientX;
+        startX = clientX;
 
         const frameShift = Math.floor(accumulated / pixelsPerFrame);
-
         if (frameShift !== 0) {
             accumulated -= frameShift * pixelsPerFrame;
             currentFrame = (currentFrame + frameShift + totalFrames) % totalFrames;
@@ -111,15 +116,28 @@ const rotateImg = (event, activeIndex, arrayImagesDet, imgEl) => {
         }
     };
 
-    const onMouseUp = () => {
+    const onEnd = () => {
         isDragging = false;
-        window.removeEventListener('mousemove', onMouseMove);
-        window.removeEventListener('mouseup', onMouseUp);
+        window.removeEventListener(isTouch ? 'touchmove' : 'mousemove', onMove);
+        window.removeEventListener(isTouch ? 'touchend' : 'mouseup', onEnd);
     };
 
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mouseup', onMouseUp);
-};
+    window.addEventListener(isTouch ? 'touchmove' : 'mousemove', onMove);
+    window.addEventListener(isTouch ? 'touchend' : 'mouseup', onEnd);
+
+}
+
+const toolbar = document.querySelector(".toolbar");
+
+if (isMobile && toolbar) {
+
+  const whatsIncludedFun = (e) => {
+//   let includedContainer = document.querySelector(".whats-included-container");
+//   let parentContHeight = e.currentTarget.closest(".citypricedropdown-wrapper")
+}
+
+  toolbar.addEventListener("click", (e) => { whatsIncludedFun(e); });
+}
 
 const changeActiveClr = (colorDiv) => {
     colorDiv.forEach((eachDiv) => {
@@ -133,6 +151,7 @@ async function renderDataFromAPI(url) {
     const data = await resp.json();
     return data;
 }
+
 
 export function fetchAPI(method, url, data) {
     return new Promise(async (resolve, reject) => {

@@ -1,7 +1,15 @@
 .section.heromodelview-container .heromodelview-wrapper .heromodelview .model-wrapper {
     margin: 0 auto;
     max-width: 90rem;
-    padding: 0 5.5rem 88px;
+    padding: 0 2.5rem;
+    height: 850px;
+}
+
+
+
+.section.heromodelview-container .heromodelview-wrapper {
+    padding: unset;
+    height: 850px;
 }
 
 
@@ -14,10 +22,6 @@
     position: relative;
     width: 300px;
     z-index: 1;
-    height: 5.8125rem;
-    margin-top: -9.5625rem;
-    width: 28.9375rem;
-    margin-top: -6.5625rem;
 }
 
 .image {
@@ -27,15 +31,27 @@
     position: relative;
     width: 18.75rem;
     z-index: 20;
-    min-height: 24.125rem;
-    scale: 1.2;
-    width: 31.25rem;
 }
 
 .colors {
-    display: flex;
     gap: 15px;
     margin-top: 38px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visualizer-color-text-wrapper .color-text {
+    color: #222;
+    font-family: PP Neue Montreal;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1rem;
+    max-width: 500px;
+    text-align: center;
 }
 
 .colors>div.active {
@@ -47,4 +63,343 @@
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
+}
+
+.section.heromodelview-container.citypricedropdown-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section.heromodelview-container.citypricedropdown-container .model-wrapper>h1 {
+    color: #222;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 1.5rem;
+    /* padding-left: 1.5625rem; */
+    padding-top: 3.25rem;
+    margin: 0;
+}
+
+.section.heromodelview-container.citypricedropdown-container .model-wrapper>p {
+    color: #222;
+    font-family: PP Neue Montreal;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 68.125rem;
+    margin: 0;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown {
+    align-items: center;
+    backdrop-filter: blur(2.5px);
+    background: hsla(0, 0%, 100%, .5);
+    border-radius: 1pc;
+    bottom: 2.3125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2pc;
+    height: fit-content;
+    left: 52.3125rem;
+    margin-bottom: 2.3125rem;
+    padding: 2pc 1pc 1pc;
+    width: 20rem;
+}
+
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left {
+    color: #222;
+    font-family: PP Neue Montreal;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left p {
+    margin: 0;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search {
+    /* background-image: url("../../icons/chevron-down.svg"); */
+    /* align-items: center;
+    appearance: none;
+    background-position: right 5px center;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    border: .0625rem solid #85888c;
+    border-radius: .5rem;
+    cursor: pointer;
+    display: flex;
+    font-family: PP Neue Montreal;
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 400;
+    height: 2.25rem;
+    line-height: normal;
+    margin-top: .5rem;
+    padding: .5rem;
+    width: 9.375rem; */
+    background: #fff;
+    border: 1px solid #85888c;
+    border-radius: .5rem;
+    height: 2.25rem;
+    max-width: 9.375rem;
+    padding: .5rem;
+    position: relative;
+    margin-top: 8px;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow {
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .popup {
+    position: absolute;
+    right: 63px;
+    top: 14px;
+    background: #fff;
+    padding: 16px;
+    border: 1px solid;
+    border-radius: 15px;
+    box-shadow: 1px 3px 4px 0 rgba(0, 0, 0, .2901960784);
+    border: 1px solid #969696 !important;
+    border-radius: .75rem !important;
+    color: #1d1b1b;
+    font-size: 13px;
+    max-width: 289px;
+    z-index: 2;
+}
+
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .city-option-container {
+    position: absolute;
+    top: 64px;
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    left: 0;
+    width: 89%;
+    padding: 0 1rem 1rem;
+    overflow-y: scroll;
+    /* max-height: 100%; */
+    height: calc(89vh - 250px);
+    scrollbar-width: thin;
+    overflow-x: hidden;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .city-option-container .city-option {
+    padding: 4px 0;
+    text-transform: capitalize;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .input-city {
+    border-radius: 8px;
+    caret-color: transparent;
+    height: 1.0625rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .amount {
+    color: #222;
+    font-family: PP Neue Montreal;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 600;
+    margin: 0;
+
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .toolbar {
+    color: var(--Primary-Vida-Orange, #ff5310);
+    font-family: PP Neue Montreal;
+    font-size: 1pc;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+    padding-top: .5rem;
+    text-decoration: underline;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .price-text {
+    color: #222;
+    font-size: .75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: unset;
+}
+
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .buy-btn {
+    color: var(--Neutral-Dark-Grey, #222);
+    font-size: 1pc;
+    font-weight: 600;
+    align-items: center;
+    background: #ff5310;
+    border-radius: .5rem;
+    box-shadow: 0 .46875rem .9375rem 0 rgba(0, 0, 0, .1);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: PP Neue Montreal;
+    height: 3.25rem;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .buy-btn .button {
+    all: unset;
+}
+
+
+@media (width > 900px) {
+
+    .section.heromodelview-container .heromodelview-wrapper {
+        height: 780px;
+    }
+
+    .platform {
+        height: 5.8125rem;
+        margin-top: -6.5625rem;
+        width: 28.9375rem;
+    }
+
+    .image {
+        min-height: 24.125rem;
+        scale: 1.2;
+        width: 31.25rem;
+    }
+
+    .section.heromodelview-container .heromodelview-wrapper .heromodelview .model-wrapper {
+        padding: 0 5.5rem 43px;
+        height: 780px;
+    }
+
+    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper {
+        position: absolute;
+        right: 95px;
+        top: 37%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        max-width: max-content;
+        width: auto;
+        left: unset;
+        bottom: unset;
+        transform: unset;
+    }
+
+    .section.heromodelview-container.citypricedropdown-container .model-wrapper>p {
+        color: #222;
+        font-family: PP Neue Montreal;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 72px;
+        padding-bottom: 1rem;
+        padding-left: 0;
+    }
+
+    .visualizer-color-text-wrapper .color-text {
+        font-size: 1.125rem;
+    }
+
+
+    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown {
+        max-width: 28.1875rem;
+        min-width: 28.1875rem;
+        padding: 2rem;
+
+    }
+
+    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left {
+        font-size: 18px;
+    }
+
+    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search {
+        /* background-position: right 1rem center;
+        background-size: 1.875rem;
+        font-size: 20px;
+        font-weight: 500;
+        height: 3.5rem;
+        width: 14.25rem; */
+        border: none;
+        border-radius: unset;
+        height: 3.5rem;
+        height: auto;
+        max-width: unset;
+        padding: 0;
+    }
+
+    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .input-city {
+        color: #222;
+        font-family: PP Neue Montreal;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        background: #fff;
+        border: 1px solid #85888c;
+        /* height: 54px; */
+        padding: 17px 16px;
+        width: 11.25rem;
+    }
+
+    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .amount {
+        font-size: 2rem;
+    }
+
+    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .price-text {
+
+        font-size: 1rem;
+    }
+
+    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .toolbar {
+        font-size: 1.25rem;
+    }
+
+    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .buy-btn {
+        font-family: PP Neue Montreal;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border-radius: 1rem;
+        color: #fff;
+        height: 4.5rem;
+    }
+
 }

@@ -16,7 +16,7 @@ function sampleRUM(checkpoint, data) {
   const timeShift = () => (window.performance ? window.performance.now() : Date.now() - window.hlx.rum.firstReadTime);
   try {
     window.hlx = window.hlx || {};
-    sampleRUM.enhance = () => {};
+    sampleRUM.enhance = () => { };
     if (!window.hlx.rum) {
       const param = new URLSearchParams(window.location.search).get('rum');
       const weight = (window.SAMPLE_PAGEVIEWS_AT_RATE === 'high' && 10)
@@ -446,15 +446,29 @@ function decorateButtons(element) {
  * @param {string} [alt] alt text to be added to icon
  */
 function decorateIcon(span, prefix = '', alt = '') {
-  const iconName = Array.from(span.classList)
-    .find((c) => c.startsWith('icon-'))
-    .substring(5);
-  const img = document.createElement('img');
-  img.dataset.iconName = iconName;
-  img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
-  img.alt = alt;
-  img.loading = 'lazy';
-  span.append(img);
+  if (Array.from(span.classList)
+    .find((c) => c.includes('icon-images'))) {
+    const classes = (span.classList[1])?.split('-');
+    const path = `/${classes.slice(1, 2).join('/')}/${classes.slice(2, -1).join('-')}.${classes.slice(-1)}`;
+    const img = document.createElement('img');
+    img.dataset.iconName = path;
+    img.src = `${window.hlx.codeBasePath}${prefix + path}`;
+    img.alt = alt;
+    img.height = '24px';
+    img.width = '24px';
+    img.loading = 'lazy';
+    span.append(img);
+  } else {
+    const iconName = Array.from(span.classList)
+      .find((c) => c.startsWith('icon-'))
+      .substring(5);
+    const img = document.createElement('img');
+    img.dataset.iconName = iconName;
+    img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
+    img.alt = alt;
+    img.loading = 'lazy';
+    span.append(img);
+  }
 }
 
 /**
