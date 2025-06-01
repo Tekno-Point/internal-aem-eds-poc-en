@@ -214,15 +214,20 @@
 
 @media (width <=900px) {
   .section.offer-cards {
-    padding: 0 16px;
+    padding: 0 0 0 16px;
   }
   .section.offer-cards .cards-wrapper ul {
     overflow-x: scroll;
+    padding-bottom: 20px;
   }
   .section.offer-cards .cards-wrapper ul li {
     padding: 1rem;
-    min-width: 240px;
+    min-width: 210px;
     margin: 2px;
+  }
+
+  .section.offer-cards .cards-wrapper ul li:nth-child(2) {
+    margin-right: 16px;
   }
 
   .section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-partial_payment,

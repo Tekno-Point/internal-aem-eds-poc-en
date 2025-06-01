@@ -1,3 +1,7 @@
+.section.vida-service-container {
+    transition: 1 1.5s ease-out;
+}
+
 .section.vida-service-container .default-content-wrapper {
     padding: 32px 88px 64px;
 }
@@ -42,6 +46,10 @@
     justify-content: space-between;
 }
 
+.section.vida-service-container .image-accordion-wrapper .accordion-item.active summary p {
+    font-weight: 600;
+}
+
 .section.vida-service-container .image-accordion-wrapper .accordion-item summary p::after {
     content: url('/images/add-icon.svg');
 }
@@ -50,10 +58,24 @@
     content: url('/images/minus-icon.svg');
 }
 
-.section.vida-service-container .image-accordion-wrapper .accordion-item summary p::after {}
+@keyframes accordian-open {
+    0% {
+      max-height: 0;
+    }
+
+    80% {
+      max-height: 100vh;
+    }
+
+    100% {
+      max-height: 100vh;
+    }
+}
 
 .section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body {
     margin-top: 64px;
+    overflow: hidden;
+    animation: accordian-open 1s linear forwards;
 }
 
 .section.vida-service-container .image-accordion-wrapper .accordion-item .accordion-item-body img {

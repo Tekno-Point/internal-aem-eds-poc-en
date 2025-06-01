@@ -352,5 +352,24 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "warranty-card",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "button",
+        "label": "Button",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
   }
 ]

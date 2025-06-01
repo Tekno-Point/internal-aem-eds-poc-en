@@ -16,7 +16,7 @@ export default function decorate(block) {
         details.className = 'accordion-item';
         details.append(summary, body);
 
-        details.addEventListener('click', () => {
+        summary.addEventListener('click', () => {
             details.classList.toggle('active')
         })
 

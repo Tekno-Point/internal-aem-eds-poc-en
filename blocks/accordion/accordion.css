@@ -39,6 +39,8 @@
     position: absolute;
     top: 0;
     right: 0;
+    height: 32px;
+    width: 32px;
 }
 
 .section.faq-card .accordion-container .accordion-item.active summary p::after {
@@ -136,5 +138,13 @@
     }
     .section.faq-card .accordion-container .accordion-item-body p a{
         font-size: 14px;
+    }
+
+    .section.faq-card .accordion-container .accordion-item summary p::after {
+        top: -6px;
+    }
+
+    .section.faq-card .accordion-container .accordion-item.active summary p::after {
+        top: -6px;
     }
 }

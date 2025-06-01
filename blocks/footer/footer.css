@@ -268,26 +268,42 @@ footer .footer>div {
   }
 
   .section.footer-accordian ul li p::after {
-    content: '+';
-    font-size: 25px;
-    font-weight: 400;
+    content: url('/images/add-icon.svg');
+    height: 17px;
+    width: 17px;
   }
 
-  .section.footer-accordian ul li:has(ul.show) > p::after {
-    content: '-';
-    font-size: 25px;
-    font-weight: 400;
+  .section.footer-accordian ul li:has(ul.show)>p::after {
+    content: url('/images/minus-icon.svg');
+    height: 17px;
+    width: 17px;
+  }
+
+  @keyframes accordian-open {
+    0% {
+      max-height: 0;
+    }
+
+    80% {
+      max-height: 100vh;
+    }
+
+    100% {
+      max-height: 100vh;
+    }
   }
 
   .section.footer-accordian ul li ul {
     display: none;
+    overflow: hidden;
+    animation: accordian-open 5s linear forwards;
   }
 
   .section.footer-accordian ul li ul.show {
     display: block;
   }
 
-  .section.footer-accordian ul li ul li  {
+  .section.footer-accordian ul li ul li {
     border-bottom: unset;
     padding: 0;
     font-size: 14px;
