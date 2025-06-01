@@ -144,6 +144,14 @@
           {
             "name": "Dealership Locator Card",
             "value": "dealership-locator-card"
+          },
+          {
+            "name": "Vida Warranty Card",
+            "value": "vida-warranty-card"
+          },
+          {
+            "name": "Cost Calculator Card",
+            "value": "cost-calculator-card"
           }
         ]
       }
