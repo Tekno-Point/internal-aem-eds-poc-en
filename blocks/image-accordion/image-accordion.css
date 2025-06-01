@@ -28,6 +28,10 @@
     padding: 0;
 }
 
+.section.vida-service-container .image-accordion-wrapper .image-accordion.block {
+    padding: 0 88px;
+}
+
 .section.vida-service-container .image-accordion-wrapper .accordion-item {
     padding: 4rem 1rem;
     border-top: .0625rem solid #222;
@@ -132,6 +136,9 @@
     }
     .section.vida-service-container .image-accordion-wrapper {
         margin: 0 48px;
+    }
+    .section.vida-service-container .image-accordion-wrapper .image-accordion.block {
+        padding: 0;
     }
     .section.vida-service-container .image-accordion-wrapper .accordion-item {
         padding: 32px 16px;

@@ -45,6 +45,7 @@
 .section.product-details-container .products-grid {
     padding: 40px 0 36px 88px;
     row-gap: 36px;
+    column-gap: 20px;
 }
 
 .section.product-details-container .products-grid .product-item .product-image {
@@ -114,6 +115,7 @@
     .section.product-details-container .products-grid {
         padding: 24px 20px;
         row-gap: 24px;
+        column-gap: 30px;
     }
 
     .section.product-details-container .products-grid .product-item .product-image {
