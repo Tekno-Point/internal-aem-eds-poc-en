@@ -112,18 +112,6 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "Essential Carousel",
-            "value": "essential-carousel"
-          },
-          {
-            "name": "Mobile Carousel",
-            "value": "mob-carousel"
-          },
-          {
-            "name": "Price City Container",
-            "value": "pc-container"
           }
         ]
       }
@@ -253,13 +241,6 @@
         "valueType": "string",
         "name": "mob_imageAlt",
         "label": "The Mobile image alt",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imglink",
-        "label": "image URL",
         "value": ""
       },
       {

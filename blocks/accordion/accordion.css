@@ -1,0 +1,152 @@
+.section.faq-card {
+    background: #e4eaf1;
+    margin: 0;
+}
+
+.section.faq-card .accordion-wrapper {
+    padding: 64px 140px;
+}
+
+.section.faq-card .accordion-container {
+    background: #fff;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.section.faq-card .accordion-container .accordion-item summary {
+    list-style: none;
+}
+
+.section.faq-card .accordion-container .accordion-item summary p {
+    margin: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #1d1b1b;
+    display: flex;
+    gap: 18px;
+    position: relative;
+}
+
+.section.faq-card .accordion-container .accordion-item summary p::after {
+    content: url('/images/drop-down-icon.svg');
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 32px;
+    width: 32px;
+}
+
+.section.faq-card .accordion-container .accordion-item.active summary p::after {
+    transform: rotate(180deg);
+    top: -6px;
+}
+
+.section.faq-card .accordion-container .accordion-item summary p span {
+    width: 28px;
+    height: 32px;
+}
+
+.section.faq-card .accordion-container .accordion-item summary p span img{
+    width: 100%;
+    height: 100%;
+}
+
+.section.faq-card .accordion-container p.button-container {
+    padding: 1.25rem 2.25rem;
+    margin: 0;
+}
+
+.section.faq-card .accordion-container p.button-container a {
+    background: unset;
+    color: #ff5310;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    display: unset;
+}
+
+.section.faq-card .accordion-container p.button-container a:hover {
+    text-decoration: none;
+}
+
+.section.faq-card .accordion-container .accordion-item-body h3 {
+    border-top: .0625rem solid #222;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 600;
+    padding-top: 32px;
+    color: #222;
+}
+
+.section.faq-card .accordion-container .accordion-item-body p {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 400;
+    color: #222;
+    padding: 32px 0;
+    margin: 0;
+}
+
+.section.faq-card .accordion-container .accordion-item-body p a{
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 500;
+    color: #ff5310;
+    text-decoration: underline;
+}
+
+@media (width <= 768px) {
+    .section.faq-card {
+        padding: 32px 20px 0;
+    }
+    .section.faq-card .accordion-wrapper {
+        padding: 0;
+    }
+    .section.faq-card .accordion-container {
+        padding: 1rem 1.5rem;
+        gap: 0.5rem;
+        border-radius: 0.5rem;
+    }
+    .section.faq-card .accordion-container .accordion-item summary p {
+        font-size: 16px;
+    }
+    .section.faq-card .accordion-container .accordion-item summary p span {
+        width: 20px;
+        height: 20px;
+    }
+    .section.faq-card .accordion-container p.button-container {
+        padding: .625rem 2.25rem;
+    }
+    .section.faq-card .accordion-container p.button-container a {
+        font-size: 16px;
+    }    
+    .section.faq-card .accordion-container .accordion-item-body h3 {
+        font-size: 16px;
+        padding-top: 16px;
+    }
+    .section.faq-card .accordion-container .accordion-item-body p {
+        font-size: 14px;
+        padding: 16px 0;
+    }
+    .section.faq-card .accordion-container .accordion-item-body p a{
+        font-size: 14px;
+    }
+
+    .section.faq-card .accordion-container .accordion-item summary p::after {
+        top: -6px;
+    }
+
+    .section.faq-card .accordion-container .accordion-item.active summary p::after {
+        top: -6px;
+    }
+}

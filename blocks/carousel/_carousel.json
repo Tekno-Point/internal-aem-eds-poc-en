@@ -82,7 +82,13 @@
           "component": "reference",
           "name": "nextIcon",
           "label": "Next Icon"
-        }
+        },
+      {
+        "component": "text",
+        "name": "config",
+        "label": "Carousel Configuration",
+        "valueType": "string"
+      }
       ]
     },
     {
@@ -121,19 +127,19 @@
           "value": ""
         },
         {
-          "component": "reference",
-          "valueType": "string",
-          "name": "carousel_mob-image",
-          "label": "Mobile Image",
-          "description": "The Mobile image"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "carousel_mob-imageAlt",
-          "label": "The Mobile image alt",
-          "value": ""
-        },
+        "component": "reference",
+        "valueType": "string",
+        "name": "mob_image",
+        "label": "Mobile Image",
+        "description": "The Mobile image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mob_imageAlt",
+        "label": "The Mobile image alt",
+        "value": ""
+      },
         {
           "component": "text",
           "name": "heading",
@@ -167,12 +173,6 @@
           "name": "text",
           "label": "Description",
           "raw": true
-        },
-        {
-          "component": "text",
-          "name": "config",
-          "label": "Carousel Configuration",
-          "valueType": "string"
         }
       ]
     }

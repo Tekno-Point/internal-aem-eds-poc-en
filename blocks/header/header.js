@@ -71,7 +71,7 @@ function toggleAllNavSections(sections, expanded = false) {
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
-  document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
+  document.body.style.overflowY = (expanded) ? 'hidden' : '';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
@@ -92,15 +92,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 
   // enable menu collapse on escape keypress
-  if (!expanded || isDesktop.matches) {
-    // collapse menu on escape press
-    window.addEventListener('keydown', closeOnEscape);
-    // collapse menu on focus lost
-    nav.addEventListener('focusout', closeOnFocusLost);
-  } else {
-    window.removeEventListener('keydown', closeOnEscape);
-    nav.removeEventListener('focusout', closeOnFocusLost);
-  }
+
 }
 
 /**
@@ -133,6 +125,16 @@ export default async function decorate(block) {
   }
 
   const navSections = nav.querySelector('.nav-sections');
+  const navContent = nav.querySelector('.nav-sections .default-content-wrapper');
+
+  navSections.innerHTML = `
+  <div class="navsection-wrapper">
+  <div class="navcontent-wrapper">
+    ${navContent.outerHTML}
+  </div>
+  </div>
+  `
+
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
@@ -152,7 +154,9 @@ export default async function decorate(block) {
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', () =>
+    toggleMenu(nav, navSections)
+  );
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize

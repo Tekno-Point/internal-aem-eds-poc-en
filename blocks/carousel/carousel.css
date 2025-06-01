@@ -1,4 +1,5 @@
 @import url("../carousel/swiper.min.css");
+@import url("mobile-carousel.css");
 
 .swiper {
     padding-bottom: 30px;
@@ -75,44 +76,240 @@
     }
 }
 
-.section.newcarousel-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.section.essential-carousel.carousel-container {}
+
+.section.essential-carousel.carousel-container .default-content-wrapper>p {
+    color: #222;
+    font-family: PP Neue Montreal;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: unset;
 }
 
-.section.newcarousel-container .newcarousel-wrapper .newcarousel .swiper-wrapper .swiper-slide {
+.section.essential-carousel.carousel-container .default-content-wrapper>h2 {
+    color: #222;
+    font-family: PP Neue Montreal;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: .375rem;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide {
     display: flex;
     gap: 10px;
     height: 200px;
     border: 1px solid rgb(230, 229, 229);
 }
 
-.section.newcarousel-container .newcarousel-wrapper .newcarousel .swiper-wrapper .swiper-slide .image-desktop picture,
-.section.newcarousel-container .newcarousel-wrapper .newcarousel .swiper-wrapper .swiper-slide .image-mobile picture {
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-desktop picture,
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile picture {
     width: 50%;
 }
 
-.section.newcarousel-container .newcarousel-wrapper .newcarousel .swiper-wrapper .swiper-slide .image-desktop img,
-.section.newcarousel-container .newcarousel-wrapper .newcarousel .swiper-wrapper .swiper-slide .image-mobile img {
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-desktop img,
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile img {
     width: 100%;
     height: 100%;
 }
 
-.section.newcarousel-container .newcarousel-wrapper .newcarousel .swiper-wrapper .swiper-slide .image-con p:last-child {
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-con p:last-child {
     display: none;
 }
 
-.section.newcarousel-container .newcarousel-wrapper .newcarousel .swiper-wrapper .swiper-slide .embed {
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .embed {
     width: 53%;
     height: 200px;
     display: block;
 }
 
-.section.newcarousel-container .newcarousel-wrapper .newcarousel .swiper-wrapper .swiper-slide .embed>div {
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .embed>div {
     height: 100% !important;
 }
 
-.section.newcarousel-container .newcarousel-wrapper .newcarousel .swiper-wrapper .swiper-slide>.embed>div iframe {
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide>.embed>div iframe {
     height: 200px;
     max-height: 200px;
+}
+
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: unset;
+    margin-right: 10px;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile {
+    display: none;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>a:hover .image-desktop {
+    display: none;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>a:hover .image-mobile {
+    display: block;
+}
+
+/* .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile,
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-desktop, */
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-desktop picture,
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-desktop picture img,
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile picture,
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile picture img {
+    height: 131px;
+    border-radius: .75rem;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide .text-wrapper>div>h2 {
+    color: var(--Neutral-Dark-Grey, #222);
+    font-family: PP Neue Montreal;
+    font-size: 1pc;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: .5rem 0;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>div:has(.button-container) {
+    vertical-align: middle;
+    align-content: center;
+    height: 100%;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>div>p {
+    margin: unset;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>div>p>a {
+    all: unset;
+    color: var(--Primary-Vida-Orange, #ff5310);
+    font-family: PP Neue Montreal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-underline-offset: .25rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-pagination .swiper-pagination-bullet {
+    border-radius: unset;
+    width: 100%;
+    margin: unset;
+    height: 2px;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ff5310;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel {
+    margin: 1.5rem 0;
+}
+
+
+.section.essential-carousel.carousel-container .default-content-wrapper:last-child>p>a {
+    all: unset;
+    font-family: "PP Neue Montreal";
+    font-size: 1pc;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    -webkit-box-align: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.3125rem 0.625rem 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    height: 3rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: fit-content;
+    background: rgb(255, 83, 16);
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+
+@media (width > 900px) {
+
+    .section.essential-carousel.carousel-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 5.5rem;
+    }
+
+    .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide .text-wrapper>div>h2 {
+        color: var(--Vida-Black, #222);
+        font-family: PP Neue Montreal;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 1rem 0;
+    }
+
+    /* .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>a {
+        height: 278px;
+    } */
+
+    .section.essential-carousel.carousel-container .default-content-wrapper>p {
+        color: #222;
+        font-family: PP Neue Montreal;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    /* .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile,
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-desktop, */
+    .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-desktop picture,
+    .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-desktop picture img,
+    .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile picture,
+    .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile picture img {
+        height: 278px;
+        border-radius: .75rem;
+    }
+
+    .section.essential-carousel.carousel-container .default-content-wrapper>h2 {
+        color: #222;
+        font-family: PP Neue Montreal;
+        font-size: 3pc;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: .5rem;
+    }
+
+    .section.essential-carousel.carousel-container .carousel-wrapper .carousel {
+        margin: 2.5rem 0;
+    }
+
+    .section.essential-carousel.carousel-container .default-content-wrapper:last-child>p>a {
+        font-family: "PP Neue Montreal";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0.46875rem 0.9375rem 0px;
+        color: rgb(255, 255, 255);
+        height: 3.5rem;
+        min-width: 9.75rem;
+    }
+
 }

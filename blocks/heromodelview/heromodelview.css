@@ -289,6 +289,7 @@
 
     .section.heromodelview-container .heromodelview-wrapper {
         height: 780px;
+        max-width: 1440px;
     }
 
     .platform {
