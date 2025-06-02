@@ -11,11 +11,9 @@
     "/content/internal-aem-eds-poc/metadata:/metadata.json",
     "/content/internal-aem-eds-poc/api/test:/api/test.json",
     "/content/internal-aem-eds-poc/dept-best-practice/form/contact-form:/dept-best-practice/form/contact-form.json",
-    "/content/internal-aem-eds-poc/vida-v2-pro/model-images:/vida-v2-pro/model-images.json"
-<<<<<<< HEAD
-=======
+    "/content/internal-aem-eds-poc/vida-v2-pro/model-images:/vida-v2-pro/model-images.json",
+    "/content/internal-aem-eds-poc/vida-v2-pro/api/citymodelprice:/vida-v2-pro/api/citymodelprice.json"
     
->>>>>>> d6f2a19fce82b5b5b6b6babdfeda04d173a09a61
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
