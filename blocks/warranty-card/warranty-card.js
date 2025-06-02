@@ -1,22 +1,25 @@
 export default function decorate(block) {
-    const title = block.children[0];
-    title.classList.add('warranty-card-title');
+    const linkContainer = block.children[0];
+    const title = block.children[1];
+    const images = block.children[2];
+  
+    const anchor = linkContainer.querySelector('a');
+    if (!anchor) return;
+  
+    anchor.classList.add('warranty-card-link');
+    anchor.innerText = ""
 
-    const images = block.children[1];
+    title.classList.add('warranty-card-title');
     images.classList.add('warranty-card-images');
+
+    anchor.appendChild(title);
+    anchor.appendChild(images);
   
     const wrapper = document.createElement('div');
     wrapper.className = 'warranty-card';
-  
-    const link = document.createElement('a');
-    link.href = '#';
-    link.className = 'warranty-card-link'; 
-  
-    if (title) link.appendChild(title);
-    if (images) link.appendChild(images);
-  
-    wrapper.appendChild(link);
-  
+    wrapper.appendChild(anchor);
+
     block.innerHTML = '';
     block.appendChild(wrapper);
   }
+  

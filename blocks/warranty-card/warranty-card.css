@@ -1,3 +1,4 @@
+/* warranty card css */
 .section.vida-warranty-card .warranty-card-wrapper {
     display: flex;
     align-items: center;
@@ -20,10 +21,14 @@
 
 .section.vida-warranty-card .warranty-card.block .warranty-card a {
     padding: 3.375rem 2.71875rem;
+    background: unset;
     display: flex;
     align-items: center;
     text-decoration: none;
     gap: 64px;
+    margin: 0;
+    max-height: 10.75rem;
+    max-width: 38.875rem;
 }
 
 .section.vida-warranty-card .warranty-card.block .warranty-card a  .warranty-card-title p {
@@ -64,4 +69,158 @@
 
 .section.vida-warranty-card .warranty-card.block .warranty-card a .warranty-card-images:hover p:last-child {
     display: block;
+}
+
+@media (width <= 768px) {
+    .section.vida-warranty-card .warranty-card.block {
+        border-radius: 0.5rem;
+    }
+
+    .section.vida-warranty-card .warranty-card.block .warranty-card a {
+        padding: 1.125rem;
+        gap: 16px;
+    }
+
+    .section.vida-warranty-card .warranty-card.block .warranty-card a  .warranty-card-title p {
+        font-size: 20px;
+    }
+
+    .section.vida-warranty-card .warranty-card.block .warranty-card a .warranty-card-images span {
+        height: 44px;
+        width: 44px;
+    }
+}
+
+
+/* Cost calculator Card css */
+.section.cost-calculator-card .warranty-card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section.cost-calculator-card .warranty-card.block {
+    background-color: #00edff;
+    box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, .1);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 95% 100%, 0 100%);
+    border-radius: 1rem;
+    height: 10.75rem;
+    width: 36.5rem;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a {
+    background: unset;
+    padding: 0.5em 1.2em;
+    margin: 0;
+    border-radius: unset;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    height: 10.75rem;
+    width: 36.5rem;
+    white-space: unset;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title p{
+    margin: 0;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div {
+    display: flex;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div p:last-child {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: normal;
+    width: 21.01rem;        
+    color: #000;
+    margin: 0;
+    text-align: left;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div span {
+    display: inline-block;
+    width: 97px;
+    height: 49px;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div span img {
+    width: 100%;
+    height: 100%;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-images p {
+    margin: 0;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-images span {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-images span img{
+    width: 100%;
+    height: 100%;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-images p:first-child {
+    display: block;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-images p:last-child {
+    display: none;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-images:hover p:first-child {
+    display: none;
+}
+
+.section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-images:hover p:last-child {
+    display: block;
+}
+
+@media (width <= 768px) {
+    .section.cost-calculator-card .warranty-card.block .warranty-card {
+        background: url('/images/cost_calculator_mob.svg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-images span {
+        height: 44px;
+        width: 44px;
+        margin-top: 60px;
+    }
+
+    .section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div p:last-child {
+        font-size: 20px;
+        width: unset;
+        text-align: left;
+    }
+
+    .section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div {
+        flex-direction: column;
+        gap: 0;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .section.cost-calculator-card .warranty-card.block {
+        height: 10.75rem;
+        width: 20rem;
+    }
+
+    .section.cost-calculator-card .warranty-card.block .warranty-card a {
+        height: 10.75rem;
+        width: 20rem;
+    }
+
+    .section.cost-calculator-card .warranty-card.block .warranty-card a  {
+        padding: 1rem;
+    }
 }
