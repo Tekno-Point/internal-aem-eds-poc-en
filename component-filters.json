@@ -33,12 +33,29 @@
     "components": ["column"]
   },
   {
-    "id": "column",
-    "components": ["text", "image", "button", "title"]
-  },
-  {
     "id": "carousel",
     "components": ["carousel-item"]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "product-details",
+    "components": ["product-item"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
+  },
+  {
+    "id": "image-accordion",
+    "components": ["image-accordion-item"]
   }
 ]
 
