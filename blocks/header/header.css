@@ -81,6 +81,7 @@ header nav .nav-hamburger button {
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
+  z-index: 4;
 }
 
 header nav .nav-hamburger-icon,
@@ -356,7 +357,7 @@ header nav .nav-sections .default-content-wrapper ul li ul li a {
 
 header nav .nav-sections .default-content-wrapper ol:last-child {
   display: flex;
-  gap: 25px; 
+  gap: 25px;
 }
 
 header nav .nav-sections .default-content-wrapper ol li a {
