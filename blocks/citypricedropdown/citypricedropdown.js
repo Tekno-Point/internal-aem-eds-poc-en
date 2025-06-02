@@ -16,7 +16,7 @@ export default async function decorate(block) {
 
     const cityPrices = await renderDataFromAPI(cityUrl);
 
-    const filteredCity = cityPrices.filter((city) => city.variant_sf_id == 'a24OX000000WsenYAC');
+    const filteredCity = cityPrices.data.filter((city) => city.variant_sf_id == 'a24OX000000WsenYAC');
 
     filteredCity.sort((a, b) => {
         const cityA = a.city_state_id.split("~")[0].toUpperCase();
@@ -104,7 +104,7 @@ export default async function decorate(block) {
     btn ? block.appendChild(btn) : '';
 
 }
-
+ 
 const hideShowIncluded = (toolbar, incDescription, el) => {
     if (incDescription.classList.contains("dp-none")) {
         incDescription.classList.remove("dp-none");
