@@ -780,13 +780,20 @@
     "fields": [
       {
         "component": "aem-content",
-        "name": "button",
-        "label": "Button"
+        "name": "link",
+        "label": "Link"
       },
       {
         "component": "richtext",
         "name": "text",
         "label": "Text",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "image",
+        "label": "Image",
         "valueType": "string",
         "value": ""
       }
