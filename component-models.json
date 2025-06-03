@@ -830,7 +830,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "station",
+        "name": "img_station",
         "value": "",
         "label": "station Image"
       },
@@ -851,7 +851,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "cities",
+        "name": "image_station",
         "value": "",
         "label": "Cities Image"
       },
