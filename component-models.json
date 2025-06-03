@@ -425,5 +425,24 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id":"form",
+    "fields":[
+      {
+        "component": "text",
+        "name": "text",
+        "label": "JSON",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "url",
+        "label": "URL ",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
   }
 ]
