@@ -888,24 +888,6 @@
         "multi": false
       },
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "accordion_img_plus",
-        "value": "",
-        "label": "Accordion Image Plus",
-        "description": "Accordion Image Plus",
-        "multi": false
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "accordion_img_minus",
-        "value": "",
-        "label": "Accordion Image Plus",
-        "description": "Accordion Image Plus",
-        "multi": false
-      },
-      {
         "component": "text",
         "valueType": "string",
         "name": "chargingstationurl",
