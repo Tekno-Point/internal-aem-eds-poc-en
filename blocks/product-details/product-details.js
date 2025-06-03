@@ -1,5 +1,5 @@
 export default function decorate(block) {
-    if(location.href.includes("author")){
+    if(!location.href.includes("author")){
     const configRow = block.children[0];
     if (!configRow) return;
 
