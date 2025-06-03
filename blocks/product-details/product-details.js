@@ -18,7 +18,7 @@ export default function decorate(block) {
         const productUnit = productRow.children[3]?.textContent.trim() || '';
 
         const productItem = document.createElement('div');
-        productItem.className = 'product-item';
+        productItem.className = 'product-item'; 
 
         productItem.innerHTML = `
            <div class="product-image">
