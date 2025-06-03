@@ -78,6 +78,7 @@ async function handleSubmit(form) {
 }
 
 export default async function decorate(block) {
+  console.log(block)
   const links = [...block.querySelectorAll('a')].map((a) => a.href);
   const formLink = links.find((link) => link.startsWith(window.location.origin) && link.endsWith('.json'));
   const submitLink = links.find((link) => link !== formLink);
@@ -85,6 +86,10 @@ export default async function decorate(block) {
 
   const form = await createForm(formLink, submitLink);
   block.replaceChildren(form);
+
+  const cityWrapper = document.createElement('div');
+  cityWrapper.classList.add('city-wrapper')
+  form.append(cityWrapper);
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
