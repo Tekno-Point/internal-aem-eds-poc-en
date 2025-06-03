@@ -16,10 +16,6 @@
     grid-template-columns: repeat(5, 1fr);
 }
 
-.section.product-details-container {
-    margin: 64px 0
-}
-
 .section.product-details-container .default-content-wrapper {
     padding: 0;
 }

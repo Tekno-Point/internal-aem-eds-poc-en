@@ -176,6 +176,14 @@
               {
                 "name": "mb-64",
                 "value": "mb-64"
+              },
+              {
+                "name": "mob-mt-40",
+                "value": "mob-mt-40"
+              },
+              {
+                "name": "mob-mb-40",
+                "value": "mob-mb-40"
               }
             ]
           }
