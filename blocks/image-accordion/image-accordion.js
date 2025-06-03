@@ -1,4 +1,5 @@
 export default function decorate(block) {
+    if(location.href.includes("author")){
     [...block.children].forEach((row) => {
         const label = row.children[1];
         const summary = document.createElement('summary');
@@ -22,4 +23,5 @@ export default function decorate(block) {
 
         row.replaceWith(details);
     })
+}
 }

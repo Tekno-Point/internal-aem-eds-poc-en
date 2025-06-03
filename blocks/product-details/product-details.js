@@ -1,4 +1,5 @@
 export default function decorate(block) {
+    if(location.href.includes("author")){
     const configRow = block.children[0];
     if (!configRow) return;
 
@@ -35,4 +36,5 @@ export default function decorate(block) {
     })
     block.innerHTML = '';
     block.appendChild(productsGrid)
+}
 }
