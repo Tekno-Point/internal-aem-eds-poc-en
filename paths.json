@@ -12,8 +12,9 @@
     "/content/internal-aem-eds-poc/api/test:/api/test.json",
     "/content/internal-aem-eds-poc/dept-best-practice/form/contact-form:/dept-best-practice/form/contact-form.json",
     "/content/internal-aem-eds-poc/vida-v2-pro/model-images:/vida-v2-pro/model-images.json",
-    "/content/internal-aem-eds-poc/vida-v2-pro/api/citymodelprice:/vida-v2-pro/api/citymodelprice.json"
-    
+    "/content/internal-aem-eds-poc/vida-v2-pro/api/citymodelprice:/vida-v2-pro/api/citymodelprice.json",
+    "/content/internal-aem-eds-poc/vida-v2-pro/forms/contact-form:/vida-v2-pro/forms/contact-form.json",
+    "/content/internal-aem-eds-poc/vida-v2-pro/forms/verify-otp:/vida-v2-pro/forms/verify-otp.json"
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
