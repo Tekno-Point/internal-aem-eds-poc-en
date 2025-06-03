@@ -106,16 +106,22 @@ export default async function decorate(block) {
 }
  
 const hideShowIncluded = (toolbar, incDescription, el) => {
+        let befparentContHeight = el.closest(".citypricedropdown-wrapper").clientHeight;
+        let heromodelviewWrapper =  el.closest(".section").querySelector(".heromodelview-wrapper")
     if (incDescription.classList.contains("dp-none")) {
         incDescription.classList.remove("dp-none");
         toolbar.classList.add("dp-none");
-        let parentContHeight = el.closest(".citypricedropdown-wrapper").clientHeight; 
-
+        let parentContHeight = el.closest(".citypricedropdown-wrapper").clientHeight;
+        // let wrapper =  el.closest(".section").querySelector(".heromodelview-wrapper").clientHeight;
+        heromodelviewWrapper.style.height = heromodelviewWrapper.clientHeight + (parentContHeight - befparentContHeight) + "px";
     }
     else {
         incDescription.classList.add("dp-none");
         toolbar.classList.remove("dp-none");
         let parentContHeight = el.closest(".citypricedropdown-wrapper").clientHeight;
+        // let wrapper =  el.closest(".section").querySelector(".heromodelview-wrapper").clientHeight;
+        heromodelviewWrapper.style.height = heromodelviewWrapper.clientHeight - ( -parentContHeight + befparentContHeight) + "px";
+
     }
 }
 

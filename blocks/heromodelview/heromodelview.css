@@ -2,9 +2,12 @@
     margin: 0 auto;
     max-width: 90rem;
     padding: 0 2.5rem;
-    height: 850px;
+    height: 100%;
 }
 
+.section.heromodelview-container .heromodelview-wrapper .heromodelview.block{
+    height: 100%;
+}
 
 
 .section.heromodelview-container .heromodelview-wrapper {

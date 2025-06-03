@@ -1,7 +1,9 @@
 [
   {
     "id": "main",
-    "components": ["section"]
+    "components": [
+      "section"
+    ]
   },
   {
     "id": "section",
@@ -13,28 +15,32 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "citypricedropdown",
-      "heromodelview",
-      "carousel",
-      "product-details",
-      "accordion",
-      "image-accordion",
-      "dealership-locator",
-      "warranty-card"
+      "fragment"
     ]
   },
   {
     "id": "cards",
-    "components": ["card"]
-  },
-  {
-    "id": "columns",
-    "components": ["column"]
+    "components": [
+      "card"
+    ]
   },
   {
     "id": "carousel",
-    "components": ["carousel-item"]
+    "components": [
+      "carousel-item"
+    ]
+  },
+  {
+    "id": "Section",
+    "components": [
+      "citypricedropdown"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
   },
   {
     "id": "column",
@@ -46,16 +52,9 @@
     ]
   },
   {
-    "id": "product-details",
-    "components": ["product-item"]
-  },
-  {
-    "id": "accordion",
-    "components": ["accordion-item"]
-  },
-  {
-    "id": "image-accordion",
-    "components": ["image-accordion-item"]
+    "id": "Section",
+    "components": [
+      "heromodelview"
+    ]
   }
 ]
-
