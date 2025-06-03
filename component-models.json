@@ -430,6 +430,21 @@
     "id":"form",
     "fields":[
       {
+        "component": "select",
+        "name": "formType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "Contact Form",
+            "value": "contact-form"
+          },
+          {
+            "name": "Valid OTP Form",
+            "value": "valid-otp-form"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "text",
         "label": "JSON",
