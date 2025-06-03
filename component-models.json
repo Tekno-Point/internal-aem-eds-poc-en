@@ -430,9 +430,9 @@
     "id":"form",
     "fields":[
       {
-        "component": "select",
-        "name": "formType",
-        "label": "Type",
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
         "options": [
           {
             "name": "Contact Form",
