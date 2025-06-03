@@ -64,7 +64,9 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin: 8px 0 2px;  
+    margin: 8px 0 2px; 
+    max-width: 90px;
+    word-break: break-word;  
 }
 
 .section.product-details-container .products-grid .product-item .product-content .value-container {

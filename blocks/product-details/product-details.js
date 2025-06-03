@@ -1,5 +1,4 @@
 export default function decorate(block) {
-    // console.log(block.children)
     const configRow = block.children[0];
     if (!configRow) return;
 

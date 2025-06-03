@@ -256,6 +256,23 @@ main .section.highlight {
   padding: 40px 0;
 }
 
+/* margin classes */
+.mt-48 {
+  margin-top: 48px;
+}
+
+.mb-48 {
+  margin-top: 48px;
+}
+
+.mb-64 {
+  margin-top: 64px;
+}
+
+.mb-64 {
+  margin-top: 64px;
+}
+
 /* Bottom try card css */
 .section.bottom-try-card-wrapper {
   display: none;

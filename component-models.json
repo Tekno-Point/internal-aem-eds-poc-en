@@ -276,6 +276,13 @@
       },
       {
         "component": "richtext",
+        "name": "heading2",
+        "label": "Product Second Heading",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
         "name": "productValue",
         "label": "Product Value",
         "valueType": "string",
