@@ -254,7 +254,7 @@ main .section.highlight {
 }
 
 .mb-48 {
-  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 .mt-64 {
@@ -262,16 +262,16 @@ main .section.highlight {
 }
 
 .mb-64 {
-  margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 @media (width <=900px) {
   .mob-mt-40 {
-    margin-top: 64px;
+    margin-top: 40px;
   }
   
   .mob-mb-40 {
-    margin-top: 64px;
+    margin-bottom: 40px;
   }
 }
 
