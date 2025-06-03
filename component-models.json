@@ -110,48 +110,74 @@
         "label": "Style",
         "options": [
           {
-            "name": "Variant Focused View Container",
-            "value": "variant-focused-view-container"
+            "name": "Theme",
+            "children": [
+              {
+                "name": "Variant Focused View Container",
+                "value": "variant-focused-view-container"
+              },
+              {
+                "name": "Footer Address Container",
+                "value": "footer-address-conatiner"
+              },
+              {
+                "name": "Terms Service Container",
+                "value": "terms-service-container"
+              },
+              {
+                "name": "Footer Accordian",
+                "value": "footer-accordian"
+              },
+              {
+                "name": "Bottom Try Card Wrapper",
+                "value": "bottom-try-card-wrapper"
+              },
+              {
+                "name": "FAQ Card",
+                "value": "faq-card"
+              },
+              {
+                "name": "Offer Cards",
+                "value": "offer-cards"
+              },
+              {
+                "name": "Vida Service Container",
+                "value": "vida-service-container"
+              },
+              {
+                "name": "Dealership Locator Card",
+                "value": "dealership-locator-card"
+              },
+              {
+                "name": "Vida Warranty Card",
+                "value": "vida-warranty-card"
+              },
+              {
+                "name": "Cost Calculator Card",
+                "value": "cost-calculator-card"
+              }
+            ]
           },
           {
-            "name": "Footer Address Container",
-            "value": "footer-address-conatiner"
-          },
-          {
-            "name": "Terms Service Container",
-            "value": "terms-service-container"
-          },
-          {
-            "name": "Footer Accordian",
-            "value": "footer-accordian"
-          },
-          {
-            "name": "Bottom Try Card Wrapper",
-            "value": "bottom-try-card-wrapper"
-          },
-          {
-            "name": "FAQ Card",
-            "value": "faq-card"
-          },
-          {
-            "name": "Offer Cards",
-            "value": "offer-cards"
-          },
-          {
-            "name": "Vida Service Container",
-            "value": "vida-service-container"
-          },
-          {
-            "name": "Dealership Locator Card",
-            "value": "dealership-locator-card"
-          },
-          {
-            "name": "Vida Warranty Card",
-            "value": "vida-warranty-card"
-          },
-          {
-            "name": "Cost Calculator Card",
-            "value": "cost-calculator-card"
+            "name": "Margin Classes",
+            "children": [
+              {
+                "name": "mt-48",
+                "value": "mt-48"
+              },
+              {
+                "name": "mb-48",
+                "value": "mb-48"
+              },
+              {
+                "name": "mt-64",
+                "value": "mt-64"
+              },
+              {
+                "name": "mb-64",
+                "value": "mb-64"
+              }
+            ]
           }
         ]
       }
