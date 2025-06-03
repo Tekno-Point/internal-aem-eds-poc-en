@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -15,32 +13,29 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "citypricedropdown",
+      "heromodelview",
+      "carousel",
+      "product-details",
+      "accordion",
+      "image-accordion",
+      "dealership-locator",
+      "warranty-card",
+      "chargingstations"
     ]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
-  },
-  {
-    "id": "carousel",
-    "components": [
-      "carousel-item"
-    ]
-  },
-  {
-    "id": "Section",
-    "components": [
-      "citypricedropdown"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
+  },
+  {
+    "id": "carousel",
+    "components": ["carousel-item"]
   },
   {
     "id": "column",
@@ -52,9 +47,15 @@
     ]
   },
   {
-    "id": "Section",
-    "components": [
-      "heromodelview"
-    ]
+    "id": "product-details",
+    "components": ["product-item"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
+  },
+  {
+    "id": "image-accordion",
+    "components": ["image-accordion-item"]
   }
 ]
