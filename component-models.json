@@ -276,7 +276,7 @@
       },
       {
         "component": "richtext",
-        "name": "heading2",
+        "name": "headingtwo",
         "label": "Product Second Heading",
         "valueType": "string",
         "value": ""
