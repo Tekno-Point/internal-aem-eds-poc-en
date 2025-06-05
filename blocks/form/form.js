@@ -1,4 +1,6 @@
 import createField from './form-fields.js';
+import { cityDropdown, inputValue, validateForm } from './contact-form.js';
+import { inputContainer } from './verify-otp-form.js';
 
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
@@ -78,7 +80,6 @@ async function handleSubmit(form) {
 }
 
 export default async function decorate(block) {
-  console.log(block)
   const links = [...block.querySelectorAll('a')].map((a) => a.href);
   const formLink = links.find((link) => link.startsWith(window.location.origin) && link.endsWith('.json'));
   const submitLink = links.find((link) => link !== formLink);
@@ -86,13 +87,26 @@ export default async function decorate(block) {
 
   const form = await createForm(formLink, submitLink);
   block.replaceChildren(form);
+  // console.log(block)
 
-  const cityWrapper = document.createElement('div');
-  cityWrapper.classList.add('city-wrapper')
-  form.append(cityWrapper);
+  const contactForm = block.classList.contains("contact-form");
+  const loginOtpForm = block.classList.contains("valid-otp-form");
+
+  if (contactForm) {
+    const checkbox = block.querySelector('input[type ="checkbox"]');
+    checkbox.checked = true;
+    inputValue(block, form);
+  }
+  else if (loginOtpForm){
+    inputContainer(form);
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (contactForm) {
+      startOtpTimer();
+    }
+    validateForm(form);
     const valid = form.checkValidity();
     if (valid) {
       handleSubmit(form);
