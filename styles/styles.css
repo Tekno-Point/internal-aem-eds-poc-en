@@ -292,6 +292,7 @@ main .section.highlight {
     height: 5.5rem;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
+    z-index: 1;
   }
 
   .section.bottom-try-card-wrapper .default-content-wrapper {
