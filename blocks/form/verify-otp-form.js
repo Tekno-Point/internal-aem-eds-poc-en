@@ -52,7 +52,6 @@ export function inputContainer(form) {
     }
 
     inputs.forEach((input, index) => {
-        console.log(input)
         input.setAttribute('maxlength', '1');
         input.addEventListener('keydown', (e) => handleOtpKeydown(e, input, index));
         input.addEventListener("input",()=> handleOtpLoginForm(input, index));

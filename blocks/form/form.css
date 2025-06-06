@@ -186,9 +186,10 @@
   top: 0;
   left: 0;
   z-index: 10;
+  display:none;
 }
 
-.section.form-container .form-wrapper:has(.form.contact-form) {
+.section.form-container .form-wrapper:has(.form.contact-form).hidden {
   display: none;
 }
 
@@ -353,6 +354,10 @@
 
 .section.form-container .form-wrapper:has(.form.valid-otp-form) {
   display: none;
+}
+
+.section.form-container .form-wrapper:has(.form.valid-otp-form).show {
+  display: block;
 }
 
 .form.valid-otp-form form>div h2 {

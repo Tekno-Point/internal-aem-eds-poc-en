@@ -52,23 +52,23 @@ export function inputValue(block, form) {
     })
 }
 
-export function validateForm(form) {
-    const name = form.querySelector('input[name="name"]').value.trim();
-    const email = form.querySelector('input[name="email"]').value.trim();
-    const mobileNumber = form.querySelector('input[name="mobileNumber"]');
+// export function validateForm(form) {
+//     const name = form.querySelector('input[name="name"]').value.trim();
+//     const email = form.querySelector('input[name="email"]').value.trim();
+//     const mobileNumber = form.querySelector('input[name="mobileNumber"]');
 
-    // const nameRegex = /^[A-Za-z]+\s+[A-Za-z]+(\s*[A-Za-z]*)*$/;
-    // if (!nameRegex.test(name)) {
-    //     alert('Please enter a valid full name with first name and surname, containing only letters.');
-    //     return false;
-    // }
+//     const nameRegex = /^[A-Za-z]+\s+[A-Za-z]+(\s*[A-Za-z]*)*$/;
+//     if (!nameRegex.test(name)) {
+//         alert('Please enter a valid full name with first name and surname, containing only letters.');
+//         return false;
+//     }
 
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // if (!emailRegex.test(email)) {
-    //     alert('Please enter a valid email address.');
-    //     return false;
-    // }
-}
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     if (!emailRegex.test(email)) {
+//         alert('Please enter a valid email address.');
+//         return false;
+//     }
+// }
 
 export async function renderDataFromAPI(url) {
     const resp = await fetchAPI('GET', url);

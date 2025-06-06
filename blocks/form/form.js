@@ -1,5 +1,5 @@
 import createField from './form-fields.js';
-import { cityDropdown, inputValue, validateForm } from './contact-form.js';
+import { cityDropdown, inputValue } from './contact-form.js';
 import { inputContainer } from './verify-otp-form.js';
 
 async function createForm(formHref, submitHref) {
@@ -90,9 +90,11 @@ export default async function decorate(block) {
   // console.log(block)
 
   const contactForm = block.classList.contains("contact-form");
+  console.log(contactForm)
   const loginOtpForm = block.classList.contains("valid-otp-form");
 
   if (contactForm) {
+    // console.log(contactForm)
     const checkbox = block.querySelector('input[type ="checkbox"]');
     checkbox.checked = true;
     inputValue(block, form);
@@ -101,12 +103,21 @@ export default async function decorate(block) {
     inputContainer(form);
   }
 
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.append(contactForm);
+  })
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (contactForm) {
-      startOtpTimer();
+    //   // console.log(contactForm)
+    //   // startOtpTimer();
+    //   validateForm();
+      contactForm.classList.add('hidden');
+      loginOtpForm.classList.add('show');
     }
-    validateForm(form);
+
+    // validateForm(form);
     const valid = form.checkValidity();
     if (valid) {
       handleSubmit(form);
