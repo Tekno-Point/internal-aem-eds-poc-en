@@ -1,4 +1,8 @@
 /* warranty card css */
+.section.vida-warranty-card {
+    margin: 0;
+}
+
 .section.vida-warranty-card .warranty-card-wrapper {
     display: flex;
     align-items: center;

@@ -28,6 +28,10 @@
 
 
 /* Variant Feature Focused View css */
+.section.variant-focused-view-container {
+  margin: 0;
+}
+
 .section.variant-focused-view-container .cards-wrapper {
   padding: 0;
   max-width: 1400px;
