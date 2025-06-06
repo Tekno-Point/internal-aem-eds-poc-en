@@ -1,4 +1,5 @@
 export default function decorate(block) {
+  if(!location.href.includes("author")){
   [...block.children].forEach((row) => {
     const wrapper = document.createElement('div');
     wrapper.className = 'accordion-container';
@@ -27,3 +28,4 @@ export default function decorate(block) {
     row.replaceWith(wrapper);
   });
 } 
+}
