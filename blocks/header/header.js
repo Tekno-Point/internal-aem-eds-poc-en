@@ -155,12 +155,12 @@ export default async function decorate(block) {
       <span class="nav-hamburger-icon"></span>
     </button>`;
 
-  let isExpanded = false;
+  // let isExpanded = false;
   hamburger.addEventListener('click', () => {
     toggleMenu(nav, navSections);
 
-    isExpanded = !isExpanded;
-    document.body.style.overflowY = (isExpanded) ? 'hidden' : '';
+    // isExpanded = !isExpanded;
+    document.body.style.overflowY = "hidden";
   });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
@@ -173,6 +173,7 @@ export default async function decorate(block) {
   const isMobileWidth = window.innerWidth < 900;
   closeIcon.addEventListener('click', () => {
     nav.setAttribute('aria-expanded', `${isMobileWidth? false : true}`);
+    document.body.style.overflowY = "";
   })
 
   const navWrapper = document.createElement('div');
