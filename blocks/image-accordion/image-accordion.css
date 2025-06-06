@@ -1,5 +1,6 @@
 .section.vida-service-container {
     transition: 1 1.5s ease-out;
+    margin: 0;
 }
 
 .section.vida-service-container .default-content-wrapper {
