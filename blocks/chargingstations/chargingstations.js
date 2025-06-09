@@ -7,10 +7,12 @@ export default async function decorate(block) {
 
     let data = await renderDataFromAPI("/vida/api/map.json");
 
-    const styles = document.createElement("link");
-    styles.href = 'https://apis.mapmyindia.com/advancedmaps/api/885a6ed1-0258-460b-af0e-32aee53f2127/map_load?v=1.5';
-    styles.rel = "stylesheet";
-    document.head.append(styles);
+    if (!document.querySelector('link[href*="mapmyindia.com/advancedmaps/api/"]')) {
+        const styles = document.createElement("link");
+        styles.href = 'https://apis.mapmyindia.com/advancedmaps/api/885a6ed1-0258-460b-af0e-32aee53f2127/map_load?v=1.5';
+        styles.rel = "stylesheet";
+        document.head.append(styles);
+    }
 
     const props = Array.from(block.children);
     const [headingDiv, chargingImgDiv, chargingTextDiv, citiesImgDiv, citiesTextDiv, accordionDiv, urlDiv] = props;
@@ -103,12 +105,14 @@ export default async function decorate(block) {
     block.innerHTML = html;
 
     const mapContainer = document.getElementById('map');
-    let mapLoaded = false;
+    // let mapLoaded = false;
 
     const loadMapScript = () => {
         const mapScript = document.createElement("script");
         mapScript.src = 'https://apis.mapmyindia.com/advancedmaps/api/j35ow2h8ltbgcmbzcv8o2q9r9lwukkef/map_load?v=1.5';
         mapScript.onload = () => {
+            if (window.mapmyindiaLoaded) return;
+            window.mapmyindiaLoaded = true;
             const block = document.body;
             const mapDiv = block.querySelector("#map");
             const searchInput = block.querySelector(".search");
@@ -116,14 +120,14 @@ export default async function decorate(block) {
             const cityChargerCount = block.querySelector("#charging-stations-city-count");
             const nearYouChargerCount = block.querySelector("#charging-stations-near-you-count");
 
-            if (!mapDiv || !searchInput) {
+            if (!mapDiv) {
                 console.error("Map or search input element not found.");
                 return;
             }
 
             const map = new MapmyIndia.Map(mapDiv, {
                 center: [19.0760, 72.8777],
-                zoom: 6,
+                zoom: 4,
                 traffic: true,
                 scrollWheelZoom: true,
             });
@@ -145,18 +149,13 @@ export default async function decorate(block) {
                 return distance;
             }
 
-            /**
-             * Adds markers for the given city's charging stations to the map.
-             * Markers are added to `currentMarkersLayer` and previous markers are NOT removed.
-             *The city data object containing charging stations.
-             */
             const displayCityMarkers = (cityObject) => {
                 const allStations = [
                     ...(cityObject.chargingStations || []),
                     ...(cityObject.atherChargingStations || [])
                 ];
 
-                const validLatLngs = []; // To collect valid LatLngs for bounds calculation
+                const validLatLngs = [];
 
                 allStations.forEach(station => {
                     const lat = parseFloat(station.latitude);
@@ -279,7 +278,7 @@ export default async function decorate(block) {
                     navigator.geolocation.getCurrentPosition(pos => {
                         const { latitude, longitude } = pos.coords;
 
-                        currentMarkersLayer.clearLayers();
+                        // currentMarkersLayer.clearLayers();
 
                         const userLocationMarker = new L.Marker([latitude, longitude], {
                             icon: L.icon({
@@ -288,7 +287,7 @@ export default async function decorate(block) {
                                 iconAnchor: [12, 41],
                                 popupAnchor: [1, -34],
                             }),
-                        }).addTo(map).bindPopup("You are here").openPopup();
+                        }).addTo(map);
 
                         let closestCity = null;
                         let minDistance = Infinity;
@@ -351,6 +350,7 @@ export default async function decorate(block) {
             const ahmedabadData = allCityData.find(city => city.cityName === "Ahmedabad");
             if (ahmedabadData) {
                 displayCityMarkers(ahmedabadData);
+                searchInput.value = ahmedabadData?.cityName;
                 updateChargerCounts(ahmedabadData.cityName);
                 const lat = parseFloat(ahmedabadData.latitde);
                 const lng = parseFloat(ahmedabadData.longitude);
@@ -407,7 +407,7 @@ export default async function decorate(block) {
             }
         })
     }, {
-        threshold: 0.3 
+        threshold: 0.3
     })
     observer.observe(mapContainer);
 }
