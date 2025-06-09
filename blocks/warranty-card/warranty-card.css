@@ -1,8 +1,13 @@
 /* warranty card css */
+.section.vida-warranty-card {
+    margin: 0;
+}
+
 .section.vida-warranty-card .warranty-card-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 64px 32px;
  }
 
 .section.vida-warranty-card .warranty-card.block {
@@ -72,6 +77,10 @@
 }
 
 @media (width <= 768px) {
+    .section.vida-warranty-card .warranty-card-wrapper {
+        padding: 32px 20px 16px;
+    }
+
     .section.vida-warranty-card .warranty-card.block {
         border-radius: 0.5rem;
     }
@@ -79,12 +88,16 @@
     .section.vida-warranty-card .warranty-card.block .warranty-card a {
         padding: 1.125rem;
         gap: 16px;
+        white-space: wrap;
     }
 
     .section.vida-warranty-card .warranty-card.block .warranty-card a  .warranty-card-title p {
         font-size: 20px;
+        font-weight: 500;
+        text-align: left;
     }
 
+    .section.vida-warranty-card .warranty-card.block .warranty-card a .warranty-card-images,
     .section.vida-warranty-card .warranty-card.block .warranty-card a .warranty-card-images span {
         height: 44px;
         width: 44px;
@@ -97,6 +110,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 64px 32px;
 }
 
 .section.cost-calculator-card .warranty-card.block {
@@ -129,7 +143,7 @@
 .section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div {
     display: flex;
     align-items: center;
-    gap: 3.125rem;
+    gap: 2.5rem;
 }
 
 .section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div p:last-child {
@@ -185,6 +199,10 @@
 }
 
 @media (width <= 768px) {
+    .section.cost-calculator-card .warranty-card-wrapper {
+        padding: 32px;
+    }
+
     .section.cost-calculator-card .warranty-card.block .warranty-card {
         background: url('/images/cost_calculator_mob.svg');
         background-size: 100% 100%;
@@ -194,7 +212,7 @@
     .section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-images span {
         height: 44px;
         width: 44px;
-        margin-top: 60px;
+        margin-top: 80px;
     }
 
     .section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div p:last-child {
@@ -207,7 +225,7 @@
         flex-direction: column;
         gap: 0;
         align-items: start;
-        gap: 1rem;
+        gap: 8px;
     }
 
     .section.cost-calculator-card .warranty-card.block {
@@ -221,6 +239,6 @@
     }
 
     .section.cost-calculator-card .warranty-card.block .warranty-card a  {
-        padding: 1rem;
+        padding: 16px 16px 20px;
     }
 }

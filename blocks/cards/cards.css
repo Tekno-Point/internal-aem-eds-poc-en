@@ -28,6 +28,10 @@
 
 
 /* Variant Feature Focused View css */
+.section.variant-focused-view-container {
+  margin: 0;
+}
+
 .section.variant-focused-view-container .cards-wrapper {
   padding: 0;
   max-width: 1400px;
@@ -317,7 +321,7 @@
 
 /* Offer Cards Css */
 .section.offer-cards .cards-wrapper {
-  padding: 0;
+  padding: 10px 88px;
 }
 
 .section.offer-cards .cards-wrapper ul {
@@ -351,7 +355,8 @@
 
 .section.offer-cards .cards-wrapper ul li .cards-card-body span img {
   height: 100%;
-  width: 1005;
+  width: 100%;
+  border-radius: 0.5rem;
 }
 
 .section.offer-cards .cards-wrapper ul li .cards-card-body p {
@@ -390,8 +395,8 @@
 }
 
 @media (width <=900px) {
-  .section.offer-cards {
-    padding: 0 0 0 16px;
+  .section.offer-cards .cards-wrapper {
+    padding: 10px 0 10px 20px;
   }
 
   .section.offer-cards .cards-wrapper ul {

@@ -1,9 +1,5 @@
-.section.dealership-locator-card {
-    margin: 32px 0 16px;
-}
-
 .section.dealership-locator-card .default-content-wrapper {
-    padding: 0;
+    padding: 0 88px;
 }
 
 .section.dealership-locator-card .default-content-wrapper p {
@@ -23,7 +19,7 @@
 }
 
 .section.dealership-locator-card .dealership-locator-wrapper {
-    padding: 0;
+    padding: 0 88px;
 }
 
 .section.dealership-locator-card .dealership-locator.block {
@@ -90,9 +86,9 @@
     margin: 0;
 }
 
-@media (width <= 768px) {
-    .section.dealership-locator-card {
-        margin: 32px 20px 16px;
+@media (width <= 1025px) {
+    .section.dealership-locator-card .default-content-wrapper {
+        padding: 0 20px;
     }
 
     .section.dealership-locator-card .default-content-wrapper p {
@@ -102,6 +98,10 @@
     .section.dealership-locator-card .default-content-wrapper p strong {
         font-size: 24px;
         padding-top: 5px;
+    }
+
+    .section.dealership-locator-card .dealership-locator-wrapper {
+        padding: 0 20px;
     }
 
     .section.dealership-locator-card .dealership-locator.block {

@@ -1,0 +1,522 @@
+.form .field-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+  align-items: center;
+}
+
+.form fieldset {
+  display: grid;
+  grid-auto-flow: row;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.form form>.field-wrapper+.field-wrapper,
+.form form fieldset .field-wrapper+.field-wrapper {
+  margin-top: 0px;
+}
+
+.form form>.selection-wrapper+.selection-wrapper,
+.form form fieldset .selection-wrapper+.selection-wrapper {
+  margin-top: 0.25em;
+}
+
+@media (width >=600px) {
+  .form fieldset {
+    grid-template-columns: repeat(2, auto);
+    gap: 0.25em 24px;
+  }
+
+  .form form>.selection-wrapper+.selection-wrapper,
+  .form form fieldset .field-wrapper+.field-wrapper,
+  .form form fieldset .selection-wrapper+.selection-wrapper {
+    margin-top: 0;
+  }
+}
+
+@media (width >=900px) {
+  .form fieldset {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+.form label,
+.form fieldset>legend {
+  margin-bottom: 0.25em;
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+}
+
+.form .selection-wrapper label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.form input,
+.form select,
+.form textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid var(--dark-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: var(--body-font-size-s);
+  transition: border-color 0.2s;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.form input:hover,
+.form select:hover,
+.form textarea:hover {
+  border: 1px solid var(--text-color);
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.form .selection-wrapper input {
+  width: max-content;
+}
+
+@media (width >=600px) {
+
+  .form input,
+  .form select,
+  .form textarea {
+    max-width: 50vw;
+  }
+
+  .form .button {
+    max-width: max-content;
+  }
+}
+
+@media (width >=900px) {
+
+  .form input,
+  .form select,
+  .form textarea {
+    max-width: 33vw;
+  }
+}
+
+.form .field-wrapper.selection-wrapper {
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 1ch;
+}
+
+.form label[data-required]::after {
+  content: '*';
+  color: firebrick;
+  margin-inline-start: 1ch;
+}
+
+.form .toggle-wrapper .switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.form .toggle-wrapper input {
+  opacity: 0;
+  width: 52px;
+  height: 28px;
+}
+
+.form .toggle-wrapper .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border-radius: 28px;
+  background-color: var(--dark-color);
+  transition: background-color 0.2s;
+}
+
+.form .toggle-wrapper .slider::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  transition: transform 0.2s;
+}
+
+.form .toggle-wrapper input:checked+.slider {
+  background-color: var(--link-color);
+}
+
+.form .toggle-wrapper input:focus+.slider {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.form .toggle-wrapper input:checked+.slider::before {
+  transform: translateX(24px);
+}
+
+
+
+/* contact form css */
+.section.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .7);
+  max-width: unset;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display:none;
+}
+
+.section.form-container .form-wrapper:has(.form.contact-form).hidden {
+  display: none;
+}
+
+.form.contact-form form {
+  background: #f1f5f8;
+  border-radius: .5rem;
+  padding: 2rem;
+  width: 27.25rem;
+  position: relative;
+}
+
+.form.contact-form form .city-wrapper {
+  display: none;
+  background: #fff;
+  border-radius: .5rem;
+  margin: .125rem 0 0;
+  max-height: 15rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  position: absolute;
+  top: 298px;
+  left: 0;
+  width: 88%;
+  z-index: 1;
+  margin: 0 32px;
+}
+
+.form.contact-form form .city-wrapper .city-option {
+  border-bottom: 1px solid #e4eaf1;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 16px;
+  color: #222;
+}
+
+.form.contact-form form>div.field-wrapper {
+  margin: 0 0 16px;
+}
+
+.form.contact-form form>div h2 {
+  color: #222;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+  line-height: 2.125rem;
+  margin: 0 0 16px 0;
+}
+
+.form.contact-form form>div label {
+  display: none;
+}
+
+.form.contact-form form>div input {
+  color: #222;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 3.5rem;
+  border: 1px solid #85888c;
+  border-radius: .5rem;
+  max-width: 100%;
+}
+
+.form.contact-form form>div input:focus {
+  outline: none;
+}
+
+.form.contact-form form>div button {
+  margin: 0;
+  background-color: #85888c;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: .5rem;
+  padding: 16px 32px;
+  color: #fff;
+  min-width: 17.1875rem;
+  width: 100%;
+  max-width: unset;
+}
+
+.form.contact-form form>div.field-wrapper.checkbox-wrapper.selection-wrapper {
+  margin: 24px 0 32px;
+}
+
+.form.contact-form form>div.field-wrapper.checkbox-wrapper.selection-wrapper label {
+  display: block;
+  color: #222;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form.contact-form form>div.field-wrapper.checkbox-wrapper.selection-wrapper input[type="checkbox"] {
+  accent-color: #ff5310;
+  height: 18px;
+  width: 18px;
+  border-radius: unset;
+}
+
+
+@media (width <=1025px) {
+  .section.form-container .form-wrapper:has(.form.contact-form) {
+    width: 90%;
+  }
+
+  .form.contact-form form {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .form.contact-form form .city-wrapper {
+    top: 226px;
+    width: 93%;
+    margin: 0 16px;
+    max-height: 10rem;
+  }
+
+  .form.contact-form form .city-wrapper .city-option {
+    padding: .75rem 1rem;
+    font-size: 12px;
+  }
+
+  .form.contact-form form>div h2 {
+    font-size: 20px;
+    margin: 0 0 8px 0;
+  }
+
+  .form.contact-form form>div input {
+    font-size: 16px;
+    height: 2.5rem;
+  }
+
+  .form.contact-form form>div button {
+    font-size: 16px;
+  }
+
+  .form.contact-form form>div button {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+
+  .form.contact-form form>div.field-wrapper.checkbox-wrapper.selection-wrapper label {
+    font-size: 16px;
+  }
+
+  .form.contact-form form>div.field-wrapper.checkbox-wrapper.selection-wrapper {
+    margin: 24px 0 24px;
+  }
+}
+
+
+
+/* Verify OTP form css */
+.form.valid-otp-form form {
+  background: #f1f5f8;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.section.form-container .form-wrapper:has(.form.valid-otp-form) {
+  display: none;
+}
+
+.section.form-container .form-wrapper:has(.form.valid-otp-form).show {
+  display: block;
+}
+
+.form.valid-otp-form form>div h2 {
+  color: #222;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+  line-height: 34px;
+  margin: 0 0 32px;
+}
+
+.form.valid-otp-form form .field-wrapper {
+  margin: 0;
+}
+
+.form.valid-otp-form form .field-wrapper.fieldset-wrapper:has(fieldset#form-fieldset1) {
+  display: flex;
+}
+
+.form.valid-otp-form form .field-wrapper.fieldset-wrapper fieldset#form-fieldset1 {
+  display: flex;
+  gap: 18px;
+}
+
+.form.valid-otp-form form fieldset#form-fieldset1 .field-wrapper.tel-wrapper {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+
+.form.valid-otp-form form>div fieldset#form-fieldset1 input[type="tel"] {
+  border: 1px solid #85888c;
+  border-radius: 4px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  outline: unset;
+}
+
+.form.valid-otp-form form>div fieldset#form-fieldset1 input[type="tel"]:focus {
+  border: 1px solid #ff5310;
+}
+
+.form.valid-otp-form form>div label {
+  display: none;
+}
+
+.form.valid-otp-form>div.field-wrapper.submit-wrapper {
+  padding-top: 24px;
+  height: 3.5rem;
+}
+
+.form.valid-otp-form form>div.field-wrapper.fieldset-wrapper:has(fieldset#form-fieldset2) {
+  display: flex;
+  justify-content: end;
+  margin: 32px 0 24px;
+}
+
+.form.valid-otp-form form>div.field-wrapper.fieldset-wrapper fieldset#form-fieldset2 {
+  display: flex;
+  gap: 10px;
+}
+
+.form.valid-otp-form form>div.field-wrapper.fieldset-wrapper fieldset#form-fieldset2 .field-wrapper.button-wrapper {
+  max-width: 15vw;
+}
+
+.form.valid-otp-form form>div.field-wrapper.fieldset-wrapper fieldset#form-fieldset2 .field-wrapper.button-wrapper input[type="button"] {
+  border: none;
+  background-color: unset;
+  padding: 0;
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 500;
+  color: #c9c9c9;
+  pointer-events: none;
+  cursor: pointer;
+  max-width: 15vw;
+}
+
+.form.valid-otp-form form>div.field-wrapper.fieldset-wrapper fieldset#form-fieldset2 .field-wrapper.button-wrapper input[type="button"].enable-pointer {
+  pointer-events: auto;
+  color: #ff5310;
+}
+
+.form.valid-otp-form form>div.field-wrapper.fieldset-wrapper fieldset#form-fieldset2 .field-wrapper.plaintext-wrapper {
+  max-width: 8vw;
+  margin: 0;
+}
+
+.form.valid-otp-form form>div.field-wrapper.fieldset-wrapper fieldset#form-fieldset2 .field-wrapper.plaintext-wrapper p {
+  margin: 0;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+}
+
+.form.valid-otp-form form>div button {
+  background: #c9c9c9;
+  border-radius: 8px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0;
+  height: 3.25rem;
+  text-align: center;
+  width: 100%;
+  max-width: unset;
+}
+
+.form.valid-otp-form form .city-wrapper {
+  display: none;
+}
+
+@media (width <=1025px) {
+  .section.form-container .form-wrapper:has(.form.valid-otp-form) {
+    width: 90%;
+  }
+
+  .form.valid-otp-form form {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .form.valid-otp-form form>div h2 {
+    font-size: 20px;
+    margin: 0 0 16px;
+  }
+
+  .form.valid-otp-form form .field-wrapper.fieldset-wrapper fieldset#form-fieldset1 {
+    gap: 32px;
+  }
+
+  .form.valid-otp-form form fieldset#form-fieldset1 .field-wrapper.tel-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form.valid-otp-form form>div fieldset#form-fieldset1 input[type="tel"] {
+    height: 40px;
+    width: 40px;
+  }
+
+  .form.valid-otp-form form>div.field-wrapper.fieldset-wrapper:has(fieldset#form-fieldset2) {
+    margin: 24px 0 24px;
+  }
+
+  .form.valid-otp-form form>div.field-wrapper.fieldset-wrapper fieldset#form-fieldset2 .field-wrapper.button-wrapper {
+    max-width: 30vw;
+  }
+
+  .form.valid-otp-form form>div.field-wrapper.fieldset-wrapper fieldset#form-fieldset2 .field-wrapper.button-wrapper input[type="button"] {
+    font-size: 20px;
+    max-width: 30vw;
+  }
+}
+
+@media (width <=768px) {
+  .form.valid-otp-form form .field-wrapper.fieldset-wrapper fieldset#form-fieldset1 {
+    gap: 10px;
+  }
+}

@@ -388,4 +388,8 @@ footer .footer>div {
     padding: 24px 0;
     text-align: center;
   }
+
+  .section.footer-address-conatiner .columns.block>div>div p {
+    max-width: 230px;
+  }
 }

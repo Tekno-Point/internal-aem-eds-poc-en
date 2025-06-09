@@ -155,18 +155,26 @@ export default async function decorate(block) {
       <span class="nav-hamburger-icon"></span>
     </button>`;
 
-  let isExpanded = false;
+  // let isExpanded = false;
   hamburger.addEventListener('click', () => {
     toggleMenu(nav, navSections);
 
-    isExpanded = !isExpanded;
-    document.body.style.overflowY = (isExpanded) ? 'hidden' : '';
+    // isExpanded = !isExpanded;
+    document.body.style.overflowY = "hidden";
   });
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
+
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+
+  const closeIcon = navSections.querySelector('.icon-close_icon img');
+  const isMobileWidth = window.innerWidth < 900;
+  closeIcon.addEventListener('click', () => {
+    nav.setAttribute('aria-expanded', `${isMobileWidth? false : true}`);
+    document.body.style.overflowY = "";
+  })
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';

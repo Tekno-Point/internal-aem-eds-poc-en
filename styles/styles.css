@@ -159,9 +159,9 @@ pre {
   white-space: pre;
 }
 
-main>div {
+/* main>div {
   margin: 40px 16px;
-}
+} */
 
 input,
 textarea,
@@ -245,12 +245,11 @@ main img {
 }
 
 /* sections */
-main>.section {
+/* main>.section {
   margin: 40px 0;
-}
+} */
 
-main>.section>div {
-  max-width: 1440px;
+main > .section > div {
   max-width: 1256px;
   margin: auto;
   padding: 0 24px;
@@ -260,11 +259,11 @@ main>.section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >=900px) {
+/* @media (width >=900px) {
   main>.section>div {
     padding: 0 32px;
   }
-}
+} */
 
 /* section metadata */
 main .section.light,
@@ -277,6 +276,34 @@ main .section.highlight {
 .dp-none{
   display: none;
 }
+
+/* margin classes */
+.mt-48 {
+  margin-top: 48px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mt-64 {
+  margin-top: 64px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+@media (width <=900px) {
+  .mob-mt-40 {
+    margin-top: 40px;
+  }
+  
+  .mob-mb-40 {
+    margin-bottom: 40px;
+  }
+}
+
 /* Bottom try card css */
 .section.bottom-try-card-wrapper {
   display: none;
@@ -294,6 +321,7 @@ main .section.highlight {
     height: 5.5rem;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
+    z-index: 1;
   }
 
   .section.bottom-try-card-wrapper .default-content-wrapper {
