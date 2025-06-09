@@ -7,10 +7,12 @@ export default async function decorate(block) {
 
     let data = await renderDataFromAPI("/vida/api/map.json");
 
-    const styles = document.createElement("link");
-    styles.href = 'https://apis.mapmyindia.com/advancedmaps/api/885a6ed1-0258-460b-af0e-32aee53f2127/map_load?v=1.5';
-    styles.rel = "stylesheet";
-    document.head.append(styles);
+    if (!document.querySelector('link[href*="mapmyindia.com/advancedmaps/api/"]')) {
+        const styles = document.createElement("link");
+        styles.href = 'https://apis.mapmyindia.com/advancedmaps/api/885a6ed1-0258-460b-af0e-32aee53f2127/map_load?v=1.5';
+        styles.rel = "stylesheet";
+        document.head.append(styles);
+    }
 
     const props = Array.from(block.children);
     const [headingDiv, chargingImgDiv, chargingTextDiv, citiesImgDiv, citiesTextDiv, accordionDiv, urlDiv] = props;
@@ -65,6 +67,7 @@ export default async function decorate(block) {
             <div class="charging-accordian-title">
                 <p class="charging-accordian-title-text">${accordionText}</p>
             </div>
+            <button class="accordion-toggle-button">+</button>
         </div>
         
         
@@ -74,7 +77,7 @@ export default async function decorate(block) {
             <div class="search-icon"></div>
             <input type="text" class="search" placeholder="Search city...">
             <button id="current-location-button" class="current-location-icon"></button>
-            <button class="accordion-toggle-button">-</button>
+            
         </div>
         <div class="charger-counts">
             <div class="count-item">
@@ -101,86 +104,94 @@ export default async function decorate(block) {
 
     block.innerHTML = html;
 
-    const mapScript = document.createElement("script");
-    mapScript.src = 'https://apis.mapmyindia.com/advancedmaps/api/j35ow2h8ltbgcmbzcv8o2q9r9lwukkef/map_load?v=1.5';
-    mapScript.onload = () => {
-        const block = document.body;
-        const mapDiv = block.querySelector("#map");
-        const searchInput = block.querySelector(".search");
-        const currentLocationButton = block.querySelector("#current-location-button");
-        const cityChargerCount = block.querySelector("#charging-stations-city-count");
-        const nearYouChargerCount = block.querySelector("#charging-stations-near-you-count");
+    const mapContainer = document.getElementById('map');
+    // let mapLoaded = false;
 
-        if (!mapDiv || !searchInput) {
-            console.error("Map or search input element not found.");
-            return;
-        }
+    const loadMapScript = () => {
+        const mapScript = document.createElement("script");
+        mapScript.src = 'https://apis.mapmyindia.com/advancedmaps/api/j35ow2h8ltbgcmbzcv8o2q9r9lwukkef/map_load?v=1.5';
+        mapScript.onload = () => {
+            if (window.mapmyindiaLoaded) return;
+            window.mapmyindiaLoaded = true;
+            const block = document.body;
+            const mapDiv = block.querySelector("#map");
+            const searchInput = block.querySelector(".search");
+            const currentLocationButton = block.querySelector("#current-location-button");
+            const cityChargerCount = block.querySelector("#charging-stations-city-count");
+            const nearYouChargerCount = block.querySelector("#charging-stations-near-you-count");
 
-        const map = new MapmyIndia.Map(mapDiv, {
-            center: [19.0760, 72.8777],
-            zoom: 6,
-            traffic: true,
-            scrollWheelZoom: true,
-        });
+            if (!mapDiv) {
+                console.error("Map or search input element not found.");
+                return;
+            }
 
-        let currentMarkersLayer = L.layerGroup().addTo(map);
-
-        const allCityData = data;
-
-        function haversineDistance(lat1, lon1, lat2, lon2) {
-            const R = 6371;
-            const dLat = (lat2 - lat1) * Math.PI / 180;
-            const dLon = (lon2 - lon1) * Math.PI / 180;
-            const a =
-                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-                Math.sin(dLon / 2) * Math.sin(dLon / 2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            const distance = R * c;
-            return distance;
-        }
-
-        /**
-         * Adds markers for the given city's charging stations to the map.
-         * Markers are added to `currentMarkersLayer` and previous markers are NOT removed.
-         *The city data object containing charging stations.
-         */
-        const displayCityMarkers = (cityObject) => {
-            const allStations = [
-                ...(cityObject.chargingStations || []),
-                ...(cityObject.atherChargingStations || [])
-            ];
-
-            const validLatLngs = []; // To collect valid LatLngs for bounds calculation
-
-            allStations.forEach(station => {
-                const lat = parseFloat(station.latitude);
-                const lng = parseFloat(station.longitude);
-
-                if (!isNaN(lat) && !isNaN(lng)) {
-                    const marker = new L.Marker([lat, lng], {
-                        icon: L.icon({
-                            iconUrl: "https://maps.mapmyindia.com/images/2.png",
-                            iconSize: [25, 41],
-                            iconAnchor: [12, 41],
-                            popupAnchor: [1, -34],
-                        }),
-                    }).addTo(currentMarkersLayer);
-
-                    let popupContent = `<b>${station.stationName || station.experienceCenterName || 'Unknown Station'}</b><br>`;
-                    popupContent += station.chargingStationAddress || station.address || 'Address not available';
-                    marker.bindPopup(popupContent);
-
-                    validLatLngs.push(L.latLng(lat, lng));
-                } else {
-                    console.warn(`Invalid coordinates for station: ${station.stationName || station.experienceCenterName || 'Unknown Station'} (${station.latitude}, ${station.longitude})`);
-                }
+            const map = new MapmyIndia.Map(mapDiv, {
+                center: [19.0760, 72.8777],
+                zoom: 4,
+                traffic: true,
+                scrollWheelZoom: true,
             });
 
-            if (validLatLngs.length > 0) {
-                const combinedBounds = L.latLngBounds(validLatLngs);
-                if (combinedBounds.isValid()) {
-                    map.fitBounds(combinedBounds, { padding: [50, 50] });
+            let currentMarkersLayer = L.layerGroup().addTo(map);
+
+            const allCityData = data;
+
+            function haversineDistance(lat1, lon1, lat2, lon2) {
+                const R = 6371;
+                const dLat = (lat2 - lat1) * Math.PI / 180;
+                const dLon = (lon2 - lon1) * Math.PI / 180;
+                const a =
+                    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+                const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+                const distance = R * c;
+                return distance;
+            }
+
+            const displayCityMarkers = (cityObject) => {
+                const allStations = [
+                    ...(cityObject.chargingStations || []),
+                    ...(cityObject.atherChargingStations || [])
+                ];
+
+                const validLatLngs = [];
+
+                allStations.forEach(station => {
+                    const lat = parseFloat(station.latitude);
+                    const lng = parseFloat(station.longitude);
+
+                    if (!isNaN(lat) && !isNaN(lng)) {
+                        const marker = new L.Marker([lat, lng], {
+                            icon: L.icon({
+                                iconUrl: "https://maps.mapmyindia.com/images/2.png",
+                                iconSize: [25, 41],
+                                iconAnchor: [12, 41],
+                                popupAnchor: [1, -34],
+                            }),
+                        }).addTo(currentMarkersLayer);
+
+                        let popupContent = `<b>${station.stationName || station.experienceCenterName || 'Unknown Station'}</b><br>`;
+                        popupContent += station.chargingStationAddress || station.address || 'Address not available';
+                        marker.bindPopup(popupContent);
+
+                        validLatLngs.push(L.latLng(lat, lng));
+                    } else {
+                        console.warn(`Invalid coordinates for station: ${station.stationName || station.experienceCenterName || 'Unknown Station'} (${station.latitude}, ${station.longitude})`);
+                    }
+                });
+
+                if (validLatLngs.length > 0) {
+                    const combinedBounds = L.latLngBounds(validLatLngs);
+                    if (combinedBounds.isValid()) {
+                        map.fitBounds(combinedBounds, { padding: [50, 50] });
+                    } else {
+                        const cityLat = parseFloat(cityObject.latitde);
+                        const cityLng = parseFloat(cityObject.longitude);
+                        if (!isNaN(cityLat) && !isNaN(cityLng)) {
+                            map.setView([cityLat, cityLng], 12);
+                        }
+                    }
                 } else {
                     const cityLat = parseFloat(cityObject.latitde);
                     const cityLng = parseFloat(cityObject.longitude);
@@ -188,201 +199,215 @@ export default async function decorate(block) {
                         map.setView([cityLat, cityLng], 12);
                     }
                 }
-            } else {
-                const cityLat = parseFloat(cityObject.latitde);
-                const cityLng = parseFloat(cityObject.longitude);
-                if (!isNaN(cityLat) && !isNaN(cityLng)) {
-                    map.setView([cityLat, cityLng], 12);
+            };
+
+            const updateChargerCounts = (cityName) => {
+                const cityData = allCityData.find(loc => loc.cityName.toLowerCase() === cityName.toLowerCase());
+
+                if (cityData) {
+                    const totalChargers = (cityData.chargingStations ? cityData.chargingStations.length : 0) +
+                        (cityData.atherChargingStations ? cityData.atherChargingStations.length : 0);
+                    cityChargerCount.textContent = totalChargers;
+                    nearYouChargerCount.textContent = totalChargers;
+                } else {
+                    cityChargerCount.textContent = 'N/A';
+                    nearYouChargerCount.textContent = 'N/A';
                 }
-            }
-        };
+            };
 
-        const updateChargerCounts = (cityName) => {
-            const cityData = allCityData.find(loc => loc.cityName.toLowerCase() === cityName.toLowerCase());
+            let suggestionList = document.createElement('ul');
+            suggestionList.className = 'custom-autosuggest-list';
+            searchInput.parentNode.appendChild(suggestionList);
 
-            if (cityData) {
-                const totalChargers = (cityData.chargingStations ? cityData.chargingStations.length : 0) +
-                    (cityData.atherChargingStations ? cityData.atherChargingStations.length : 0);
-                cityChargerCount.textContent = totalChargers;
-                nearYouChargerCount.textContent = totalChargers;
-            } else {
-                cityChargerCount.textContent = 'N/A';
-                nearYouChargerCount.textContent = 'N/A';
-            }
-        };
-
-        let suggestionList = document.createElement('ul');
-        suggestionList.className = 'custom-autosuggest-list';
-        searchInput.parentNode.appendChild(suggestionList);
-
-        searchInput.addEventListener('input', function () {
-            const query = searchInput.value.toLowerCase();
-            suggestionList.innerHTML = '';
-
-            if (query.length === 0) {
-                suggestionList.style.display = 'none';
-                return;
-            }
-
-            const filteredCities = allCityData.filter(city =>
-                city.cityName.toLowerCase().startsWith(query)
-            );
-
-            if (filteredCities.length > 0) {
-                filteredCities.forEach(city => {
-                    let listItem = document.createElement('li');
-                    listItem.textContent = city.cityName;
-                    listItem.addEventListener('click', () => {
-                        searchInput.value = city.cityName;
-                        displayCityMarkers(city);
-                        updateChargerCounts(city.cityName);
-                        suggestionList.style.display = 'none';
-                    });
-                    suggestionList.appendChild(listItem);
-                });
-                suggestionList.style.display = 'block';
-            } else {
-                suggestionList.style.display = 'none';
-            }
-        });
-
-        searchInput.addEventListener('keydown', function (event) {
-            if (event.key === 'Enter') {
+            searchInput.addEventListener('input', function () {
                 const query = searchInput.value.toLowerCase();
-                const matchedCity = allCityData.find(city =>
-                    city.cityName.toLowerCase() === query
+                suggestionList.innerHTML = '';
+
+                if (query.length === 0) {
+                    suggestionList.style.display = 'none';
+                    return;
+                }
+
+                const filteredCities = allCityData.filter(city =>
+                    city.cityName.toLowerCase().startsWith(query)
                 );
 
-                if (matchedCity) {
-                    displayCityMarkers(matchedCity);
-                    updateChargerCounts(matchedCity.cityName);
-                    suggestionList.style.display = 'none';
-                } else {
-                    alert("City not found in your data. Please select from suggestions.");
-                }
-            }
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!searchInput.contains(event.target) && !suggestionList.contains(event.target)) {
-                suggestionList.style.display = 'none';
-            }
-        });
-
-        currentLocationButton.addEventListener('click', () => {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(pos => {
-                    const { latitude, longitude } = pos.coords;
-
-                    currentMarkersLayer.clearLayers();
-
-                    const userLocationMarker = new L.Marker([latitude, longitude], {
-                        icon: L.icon({
-                            iconUrl: "https://maps.mapmyindia.com/images/blue_marker.png",
-                            iconSize: [25, 41],
-                            iconAnchor: [12, 41],
-                            popupAnchor: [1, -34],
-                        }),
-                    }).addTo(map).bindPopup("You are here").openPopup();
-
-                    let closestCity = null;
-                    let minDistance = Infinity;
-
-                    allCityData.forEach(city => {
-                        const cityLat = parseFloat(city.latitde);
-                        const cityLng = parseFloat(city.longitude);
-
-                        if (!isNaN(cityLat) && !isNaN(cityLng)) {
-                            const distance = haversineDistance(latitude, longitude, cityLat, cityLng);
-                            if (distance < minDistance) {
-                                minDistance = distance;
-                                closestCity = city;
-                            }
-                        }
+                if (filteredCities.length > 0) {
+                    filteredCities.forEach(city => {
+                        let listItem = document.createElement('li');
+                        listItem.textContent = city.cityName;
+                        listItem.addEventListener('click', () => {
+                            searchInput.value = city.cityName;
+                            displayCityMarkers(city);
+                            updateChargerCounts(city.cityName);
+                            suggestionList.style.display = 'none';
+                        });
+                        suggestionList.appendChild(listItem);
                     });
+                    suggestionList.style.display = 'block';
+                } else {
+                    suggestionList.style.display = 'none';
+                }
+            });
 
-                    if (closestCity) {
-                        displayCityMarkers(closestCity);
-                        updateChargerCounts(closestCity.cityName);
-                        searchInput.value = closestCity.cityName;
+            searchInput.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter') {
+                    const query = searchInput.value.toLowerCase();
+                    const matchedCity = allCityData.find(city =>
+                        city.cityName.toLowerCase() === query
+                    );
 
-                        const combinedBounds = L.latLngBounds([]);
-                        combinedBounds.extend(userLocationMarker.getLatLng());
+                    if (matchedCity) {
+                        displayCityMarkers(matchedCity);
+                        updateChargerCounts(matchedCity.cityName);
+                        suggestionList.style.display = 'none';
+                    } else {
+                        alert("City not found in your data. Please select from suggestions.");
+                    }
+                }
+            });
 
-                        const closestCityStations = [
-                            ...(closestCity.chargingStations || []),
-                            ...(closestCity.atherChargingStations || [])
-                        ];
-                        closestCityStations.forEach(station => {
-                            const lat = parseFloat(station.latitude);
-                            const lng = parseFloat(station.longitude);
-                            if (!isNaN(lat) && !isNaN(lng)) {
-                                combinedBounds.extend([lat, lng]);
+            document.addEventListener('click', (event) => {
+                if (!searchInput.contains(event.target) && !suggestionList.contains(event.target)) {
+                    suggestionList.style.display = 'none';
+                }
+            });
+
+            currentLocationButton.addEventListener('click', () => {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(pos => {
+                        const { latitude, longitude } = pos.coords;
+
+                        // currentMarkersLayer.clearLayers();
+
+                        const userLocationMarker = new L.Marker([latitude, longitude], {
+                            icon: L.icon({
+                                iconUrl: "https://maps.mapmyindia.com/images/2.png",
+                                iconSize: [25, 41],
+                                iconAnchor: [12, 41],
+                                popupAnchor: [1, -34],
+                            }),
+                        }).addTo(map);
+
+                        let closestCity = null;
+                        let minDistance = Infinity;
+
+                        allCityData.forEach(city => {
+                            const cityLat = parseFloat(city.latitde);
+                            const cityLng = parseFloat(city.longitude);
+
+                            if (!isNaN(cityLat) && !isNaN(cityLng)) {
+                                const distance = haversineDistance(latitude, longitude, cityLat, cityLng);
+                                if (distance < minDistance) {
+                                    minDistance = distance;
+                                    closestCity = city;
+                                }
                             }
                         });
 
-                        if (combinedBounds.isValid()) {
-                            map.fitBounds(combinedBounds, { padding: [50, 50] });
+                        if (closestCity) {
+                            displayCityMarkers(closestCity);
+                            updateChargerCounts(closestCity.cityName);
+                            searchInput.value = closestCity.cityName;
+
+                            const combinedBounds = L.latLngBounds([]);
+                            combinedBounds.extend(userLocationMarker.getLatLng());
+
+                            const closestCityStations = [
+                                ...(closestCity.chargingStations || []),
+                                ...(closestCity.atherChargingStations || [])
+                            ];
+                            closestCityStations.forEach(station => {
+                                const lat = parseFloat(station.latitude);
+                                const lng = parseFloat(station.longitude);
+                                if (!isNaN(lat) && !isNaN(lng)) {
+                                    combinedBounds.extend([lat, lng]);
+                                }
+                            });
+
+                            if (combinedBounds.isValid()) {
+                                map.fitBounds(combinedBounds, { padding: [50, 50] });
+                            } else {
+                                map.setView([latitude, longitude], 12);
+                            }
+
                         } else {
+                            cityChargerCount.textContent = '??';
+                            nearYouChargerCount.textContent = '??';
                             map.setView([latitude, longitude], 12);
+                            alert("Could not find a matching city in your data for your current location. Displaying general info.");
                         }
 
-                    } else {
-                        cityChargerCount.textContent = '??';
-                        nearYouChargerCount.textContent = '??';
-                        map.setView([latitude, longitude], 12);
-                        alert("Could not find a matching city in your data for your current location. Displaying general info.");
-                    }
+                    }, (error) => {
+                        console.error("Geolocation error:", error);
+                        alert("Could not retrieve your location. Please ensure location services are enabled.");
+                    });
+                } else {
+                    alert("Geolocation is not supported by your browser.");
+                }
+            });
 
-                }, (error) => {
-                    console.error("Geolocation error:", error);
-                    alert("Could not retrieve your location. Please ensure location services are enabled.");
-                });
-            } else {
-                alert("Geolocation is not supported by your browser.");
+            const ahmedabadData = allCityData.find(city => city.cityName === "Ahmedabad");
+            if (ahmedabadData) {
+                displayCityMarkers(ahmedabadData);
+                searchInput.value = ahmedabadData?.cityName;
+                updateChargerCounts(ahmedabadData.cityName);
+                const lat = parseFloat(ahmedabadData.latitde);
+                const lng = parseFloat(ahmedabadData.longitude);
+                if (!isNaN(lat) && !isNaN(lng)) {
+                    map.setView([lat, lng], 12);
+                }
             }
-        });
 
-        const ahmedabadData = allCityData.find(city => city.cityName === "Ahmedabad");
-        if (ahmedabadData) {
-            displayCityMarkers(ahmedabadData);
-            updateChargerCounts(ahmedabadData.cityName);
-            const lat = parseFloat(ahmedabadData.latitde);
-            const lng = parseFloat(ahmedabadData.longitude);
-            if (!isNaN(lat) && !isNaN(lng)) {
-                map.setView([lat, lng], 12);
+            const accordionHeader = block.querySelector(".charging-accordian-header");
+            const accordionContent = block.querySelector(".charging-accordian-content");
+            const mapContainer = block.querySelector(".map-container");
+            const toggleButton = block.querySelector(".accordion-toggle-button");
+
+            // accordionHeader.addEventListener('click', (event) => {
+            //     if (event.target.closest('.search-input-container') || event.target.closest('.accordion-toggle-button')) {
+            //         return;
+            //     }
+            //     accordionContent.classList.toggle('collapsed');
+            //     toggleButton.textContent = accordionContent.classList.contains('collapsed') ? '+' : '-';
+            //     if (!accordionContent.classList.contains('collapsed')) {
+            //         setTimeout(() => {
+            //             map.invalidateSize();
+            //         }, 300);
+            //     }
+            // });
+            mapContainer.style.height = "0px";
+            toggleButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                mapContainer.classList.toggle('collapsed');
+                toggleButton.textContent = mapContainer.classList.contains('collapsed') ? '-' : '+';
+                if (!mapContainer.classList.contains('collapsed')) {
+                    setTimeout(() => {
+                        // map.invalidateSize();
+                        mapContainer.style.height = "0px"
+                    }, 300);
+                }
+                else {
+                    setTimeout(() => {
+                        // map.invalidateSize();
+                        mapContainer.style.height = "auto"
+                    }, 300);
+                }
+            });
+        };
+        document.body.appendChild(mapScript);
+    }
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                loadMapScript();
+                observer.unobserve(entry.target);
+                mapLoaded = true
             }
-        }
-
-        const accordionHeader = block.querySelector(".charging-accordian-header");
-        const accordionContent = block.querySelector(".charging-accordian-content");
-        const toggleButton = block.querySelector(".accordion-toggle-button");
-
-        accordionHeader.addEventListener('click', (event) => {
-            if (event.target.closest('.search-input-container') || event.target.closest('.accordion-toggle-button')) {
-                return;
-            }
-            accordionContent.classList.toggle('collapsed');
-            toggleButton.textContent = accordionContent.classList.contains('collapsed') ? '+' : '-';
-            if (!accordionContent.classList.contains('collapsed')) {
-                setTimeout(() => {
-                    map.invalidateSize();
-                }, 300);
-            }
-        });
-
-        toggleButton.addEventListener('click', (event) => {
-            event.stopPropagation();
-            accordionContent.classList.toggle('collapsed');
-            toggleButton.textContent = accordionContent.classList.contains('collapsed') ? '+' : '-';
-            if (!accordionContent.classList.contains('collapsed')) {
-                setTimeout(() => {
-                    map.invalidateSize();
-                }, 300);
-            }
-        });
-    };
-    document.body.appendChild(mapScript);
-
-
+        })
+    }, {
+        threshold: 0.3
+    })
+    observer.observe(mapContainer);
 }

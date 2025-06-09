@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charging Station Locator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- https://apis.mapmyindia.com/advancedmaps/api/885a6ed1-0258-460b-af0e-32aee53f2127/map_load?v=1.5 -->
+
+    <link href="https://apis.mapmyindia.com/advancedmaps/api/885a6ed1-0258-460b-af0e-32aee53f2127/map_load?v=1.5" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for station list */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Ensure map container has a defined height */
+        #map-area {
+            height: 400px; /* Or use Tailwind's h-80/h-96 classes */
+            width: 100%;
+            border-radius: 0.75rem; /* rounded-xl */
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 flex flex-col items-center p-4 antialiased">
+
+    <div class="w-full max-w-4xl bg-white shadow-xl rounded-xl p-6 md:p-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-center">
+            Locate Your Nearest Charger
+        </h1>
+
+        <form id="search-form" class="flex flex-col md:flex-row gap-3 mb-6">
+            <div class="relative flex-grow">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Enter your location or search for a station..."
+                    class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+            </div>
+            <button
+                type="submit"
+                class="flex items-center justify-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200"
+            >
+                Search
+            </button>
+            <button
+                type="button"
+                id="locate-nearest-btn"
+                class="flex items-center justify-center px-6 py-2 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Locate Nearest
+            </button>
+        </form>
+
+        <div
+            id="map-area"
+            class="relative w-full h-80 md:h-96 bg-gray-200 rounded-xl overflow-hidden shadow-inner mb-6 border border-gray-300"
+        >
+            </div>
+
+        <div class="bg-gray-50 p-4 rounded-xl shadow-inner border border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Available Charging Stations</h2>
+            <div id="station-list" class="max-h-60 overflow-y-auto custom-scrollbar">
+                </div>
+        </div>
+    </div>
+
+    <script src="https://apis.mapmyindia.com/advancedmaps/api/j35ow2h8ltbgcmbzcv8o2q9r9lwukkef/map_load?v=1.5&callback=initMap"></script>
+
+    <script>
+        // IMPORTANT: Replace <YOUR_MAPMYINDIA_API_KEY> with your actual API key from MapmyIndia.
+        // You can get one from: https://www.mapmyindia.com/api/
+        // If you don't replace it, the map will not load.
+
+        // Charging station data (mock data)
+        const chargingStationsData = [
+            { "id": "1", "name": "EV Charge Point A", "address": "123 Main St, City A", "lat": 34.0522, "lng": -118.2437 },
+            { "id": "2", "name": "Power Up Station B", "address": "456 Oak Ave, City B", "lat": 34.0600, "lng": -118.2500 },
+            { "id": "3", "name": "Green Charge Hub C", "address": "789 Pine Ln, City C", "lat": 34.0450, "lng": -118.2350 },
+            { "id": "4", "name": "Quick Charge D", "address": "101 Elm Blvd, City D", "lat": 34.0550, "lng": -118.2600 },
+            { "id": "5", "name": "Eco-Charge E", "address": "202 Maple Dr, City E", "lat": 34.0480, "lng": -118.2400 }
+        ];
+
+        // MapmyIndia map instance
+        let map;
+        let currentLocMarker;
+        let stationMarkers = [];
+
+        // DOM Elements
+        const searchInput = document.getElementById('search-input');
+        const searchForm = document.getElementById('search-form');
+        const locateNearestBtn = document.getElementById('locate-nearest-btn');
+        const stationListDiv = document.getElementById('station-list');
+
+        let currentLocation = { lat: 34.0500, lng: -118.2450 }; // Simulated default current location
+        let nearestStation = null;
+        let filteredStations = [...chargingStationsData]; // Start with all stations
+
+        // Helper function to calculate distance (simplified Haversine for small distances)
+        function calculateDistance(lat1, lng1, lat2, lng2) {
+            const R = 6371; // Radius of Earth in kilometers
+            const dLat = (lat2 - lat1) * (Math.PI / 180);
+            const dLng = (lng2 - lng1) * (Math.PI / 180);
+            const a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+                Math.sin(dLng / 2) * Math.sin(dLng / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c; // Distance in kilometers
+        }
+
+        // Function to initialize the MapmyIndia map
+        // This function is called as a callback when the MapmyIndia library is fully loaded.
+        function initMap() {
+            // Check if map already exists to prevent re-initialization
+            if (map) {
+                map.remove(); // Remove existing map instance
+            }
+
+            // Initialize the map with a default center and zoom
+            map = new MapmyIndia.Map('map-area', {
+                center: [currentLocation.lat, currentLocation.lng], // Use simulated current location as center
+                zoom: 12,
+                zoomControl: true,
+                hybrid: true
+            });
+
+            // Now that the map and L (Leaflet) are defined, render markers and list
+            renderMapMarkers();
+            renderStationList();
+
+            // Attach event listeners ONLY after the map is initialized
+            searchForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const searchTerm = searchInput.value.toLowerCase();
+
+                if (searchTerm) {
+                    filteredStations = chargingStationsData.filter(station =>
+                        station.name.toLowerCase().includes(searchTerm) ||
+                        station.address.toLowerCase().includes(searchTerm)
+                    );
+                } else {
+                    filteredStations = [...chargingStationsData];
+                }
+
+                // Simulate updating current location based on search (very basic)
+                const matchedStation = chargingStationsData.find(station =>
+                    station.address.toLowerCase().includes(searchTerm)
+                );
+                if (matchedStation) {
+                    currentLocation = { lat: matchedStation.lat + 0.001, lng: matchedStation.lng + 0.001 };
+                } else {
+                    currentLocation = { lat: 34.0500, lng: -118.2450 }; // Reset to default if no match
+                }
+
+                nearestStation = null; // Reset nearest when search/location changes
+                renderMapMarkers(); // Update map markers
+                renderStationList(); // Update list
+            });
+
+            locateNearestBtn.addEventListener('click', locateNearestCharger);
+        }
+
+        // Function to render map markers (MapmyIndia specific)
+        function renderMapMarkers() {
+            // Ensure map is initialized before trying to use L
+            if (!map) {
+                console.error("Map is not initialized yet. Cannot render markers.");
+                return;
+            }
+
+            // Clear existing station markers
+            stationMarkers.forEach(marker => marker.remove());
+            stationMarkers = [];
+
+            // Add current location marker
+            if (currentLocMarker) {
+                currentLocMarker.remove(); // Remove previous current location marker
+            }
+            currentLocMarker = L.marker([currentLocation.lat, currentLocation.lng], {
+                icon: L.divIcon({
+                    className: 'current-location-marker',
+                    html: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="#ef4444" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>`,
+                    iconSize: [36, 36],
+                    iconAnchor: [18, 36] // Anchor at the bottom center of the icon
+                })
+            }).addTo(map);
+
+            // Add station markers
+            filteredStations.forEach(station => {
+                let markerHtml = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#4b5563" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>`;
+                let iconSize = [28, 28];
+                let iconAnchor = [14, 28];
+
+                if (nearestStation && nearestStation.id === station.id) {
+                    markerHtml = `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#2563eb" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>`;
+                    iconSize = [40, 40];
+                    iconAnchor = [20, 40];
+                }
+
+                const stationMarker = L.marker([station.lat, station.lng], {
+                    title: station.name,
+                    icon: L.divIcon({
+                        className: 'station-marker',
+                        html: markerHtml,
+                        iconSize: iconSize,
+                        iconAnchor: iconAnchor
+                    })
+                }).addTo(map);
+                stationMarkers.push(stationMarker);
+
+                // Add a popup to the marker
+                stationMarker.bindPopup(`<b>${station.name}</b><br>${station.address}`).openPopup();
+            });
+
+            // Adjust map view to fit all markers if needed
+            if (filteredStations.length > 0) {
+                const bounds = L.latLngBounds(filteredStations.map(s => [s.lat, s.lng]));
+                bounds.extend([currentLocation.lat, currentLocation.lng]);
+                map.fitBounds(bounds.pad(0.2)); // Add some padding
+            } else {
+                map.setView([currentLocation.lat, currentLocation.lng], 12); // Reset view if no stations
+            }
+        }
+
+        // Function to render the list of stations
+        function renderStationList() {
+            stationListDiv.innerHTML = ''; // Clear existing list items
+
+            if (filteredStations.length === 0) {
+                stationListDiv.innerHTML = '<p class="text-gray-500 text-center py-4">No stations found matching your search.</p>';
+                return;
+            }
+
+            filteredStations.forEach(station => {
+                const stationItem = document.createElement('div');
+                let itemClass = `flex items-center p-3 mb-2 rounded-lg transition duration-200 border border-gray-200`;
+                if (nearestStation && nearestStation.id === station.id) {
+                    itemClass = `flex items-center p-3 mb-2 rounded-lg transition duration-200 bg-blue-100 border-l-4 border-blue-500 shadow-md`;
+                }
+                stationItem.className = itemClass;
+
+                const distance = currentLocation ? calculateDistance(currentLocation.lat, currentLocation.lng, station.lat, station.lng).toFixed(2) : 'N/A';
+
+                stationItem.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 ${nearestStation && nearestStation.id === station.id ? 'text-blue-600' : 'text-gray-500'}">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <div>
+                        <h3 class="font-medium text-gray-800">${station.name}</h3>
+                        <p class="text-sm text-gray-600">${station.address}</p>
+                        <p class="text-xs text-gray-500">Distance: ${distance} km</p>
+                    </div>
+                `;
+                stationListDiv.appendChild(stationItem);
+            });
+        }
+
+        // Function to find the nearest charger
+        function locateNearestCharger() {
+            if (!map) {
+                console.error("Map is not initialized yet. Cannot locate nearest charger.");
+                return;
+            }
+            if (!currentLocation) {
+                console.log('Please enable location services or enter a location.');
+                return;
+            }
+
+            let closestStation = null;
+            let minDistance = Infinity;
+
+            filteredStations.forEach(station => {
+                const distance = calculateDistance(
+                    currentLocation.lat,
+                    currentLocation.lng,
+                    station.lat,
+                    station.lng
+                );
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestStation = station;
+                }
+            });
+            nearestStation = closestStation;
+            renderMapMarkers(); // Update map markers
+            renderStationList(); // Update list
+        }
+
+        // No need for window.onload here, as initMap is called as a callback
+        // and handles initial rendering and event listener setup.
+    </script>
+</body>
+</html>
