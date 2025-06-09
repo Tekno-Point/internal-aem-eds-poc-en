@@ -65,6 +65,7 @@ export default async function decorate(block) {
             <div class="charging-accordian-title">
                 <p class="charging-accordian-title-text">${accordionText}</p>
             </div>
+            <button class="accordion-toggle-button">+</button>
         </div>
         
         
@@ -74,7 +75,7 @@ export default async function decorate(block) {
             <div class="search-icon"></div>
             <input type="text" class="search" placeholder="Search city...">
             <button id="current-location-button" class="current-location-icon"></button>
-            <button class="accordion-toggle-button">-</button>
+            
         </div>
         <div class="charger-counts">
             <div class="count-item">
@@ -278,7 +279,7 @@ export default async function decorate(block) {
 
                     const userLocationMarker = new L.Marker([latitude, longitude], {
                         icon: L.icon({
-                            iconUrl: "https://maps.mapmyindia.com/images/blue_marker.png",
+                            iconUrl: "https://maps.mapmyindia.com/images/2.png",
                             iconSize: [25, 41],
                             iconAnchor: [12, 41],
                             popupAnchor: [1, -34],
@@ -356,28 +357,36 @@ export default async function decorate(block) {
 
         const accordionHeader = block.querySelector(".charging-accordian-header");
         const accordionContent = block.querySelector(".charging-accordian-content");
+        const mapContainer = block.querySelector(".map-container");
         const toggleButton = block.querySelector(".accordion-toggle-button");
 
-        accordionHeader.addEventListener('click', (event) => {
-            if (event.target.closest('.search-input-container') || event.target.closest('.accordion-toggle-button')) {
-                return;
-            }
-            accordionContent.classList.toggle('collapsed');
-            toggleButton.textContent = accordionContent.classList.contains('collapsed') ? '+' : '-';
-            if (!accordionContent.classList.contains('collapsed')) {
-                setTimeout(() => {
-                    map.invalidateSize();
-                }, 300);
-            }
-        });
-
+        // accordionHeader.addEventListener('click', (event) => {
+        //     if (event.target.closest('.search-input-container') || event.target.closest('.accordion-toggle-button')) {
+        //         return;
+        //     }
+        //     accordionContent.classList.toggle('collapsed');
+        //     toggleButton.textContent = accordionContent.classList.contains('collapsed') ? '+' : '-';
+        //     if (!accordionContent.classList.contains('collapsed')) {
+        //         setTimeout(() => {
+        //             map.invalidateSize();
+        //         }, 300);
+        //     }
+        // });
+        mapContainer.style.height = "0px";
         toggleButton.addEventListener('click', (event) => {
             event.stopPropagation();
-            accordionContent.classList.toggle('collapsed');
-            toggleButton.textContent = accordionContent.classList.contains('collapsed') ? '+' : '-';
-            if (!accordionContent.classList.contains('collapsed')) {
+            mapContainer.classList.toggle('collapsed');
+            toggleButton.textContent = mapContainer.classList.contains('collapsed') ? '-' : '+';
+            if (!mapContainer.classList.contains('collapsed')) {
                 setTimeout(() => {
-                    map.invalidateSize();
+                    // map.invalidateSize();
+                    mapContainer.style.height = "0px"
+                }, 300);
+            }
+            else {
+                setTimeout(() => {
+                    // map.invalidateSize();
+                    mapContainer.style.height = "auto"
                 }, 300);
             }
         });
