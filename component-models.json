@@ -211,7 +211,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "image_oneAlt",
         "label": "Alt",
         "value": ""
       },
@@ -225,7 +225,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
+        "name": "image_twoAlt",
         "label": "Alt",
         "value": ""
       }
