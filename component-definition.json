@@ -149,8 +149,8 @@
       "id": "hero-banner",
       "components": [
         {
-          "title": "Cards",
-          "id": "cards",
+          "title": "Hero-Banner",
+          "id": "hero-banner",
           "plugins": {
             "xwalk": {
               "page": {
