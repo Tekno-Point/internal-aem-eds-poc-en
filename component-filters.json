@@ -39,5 +39,11 @@
       "button",
       "title"
     ]
+  },
+   {
+    "id": "hero-carousel-block",
+    "components": [
+     "hero-carousel-item"
+    ]
   }
 ]
