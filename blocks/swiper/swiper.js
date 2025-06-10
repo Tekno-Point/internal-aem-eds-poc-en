@@ -1,14 +1,17 @@
 import SwiperText from "../swiper/swiper.min.js"
 export default function decorate(block) {
-  const paginationTexts = ['Brakes', 'i3S Technology', 'Rear Suspension', 'Seat','Side Stand Indicator','xSENS FI Technology','Tyer','Warranty'];
+//   const paginationTexts = ['Brakes', 'i3S Technology', 'Rear Suspension', 'Seat','Side Stand Indicator','xSENS FI Technology','Tyer','Warranty'];
+  const paginationTexts = [];
   console.log(block);
   block.classList.add("swiper");
   const swapperWapper = document.createElement("div");
   swapperWapper.classList.add("swiper-wrapper")
   Array.from(block.children).forEach((element) => {
+    paginationTexts.push(element?.firstElementChild?.firstElementChild);
     element.classList.add("swiper-slide")
     swapperWapper.append(element);
   })
+  debugger;
   block.append(swapperWapper)
   // swiper-pagination
   
@@ -40,7 +43,7 @@ export default function decorate(block) {
       clickable: true,
       renderBullet: function (index, className) {
         // Use your text for each bullet based on index
-        return '<span class="' + className + '">' + paginationTexts[index] + '</span>';
+        return paginationTexts[index];
       }
     },
     freeMode: true,           // free scrolling mode

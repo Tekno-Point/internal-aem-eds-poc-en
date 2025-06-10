@@ -6,7 +6,5 @@ export default function decorate(block) {
       element.classList.add("inner-innerSub-" + (indjx+1))
     })
   });
-
-
   SwiperBlock(block)
 }

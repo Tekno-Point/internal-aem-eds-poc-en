@@ -195,7 +195,7 @@
     "id": "hero-carousel-item",
     "fields": [
       {
-        "component": "richtext",
+        "component": "text",
         "name": "content_head",
         "value": "",
         "label": "head",
