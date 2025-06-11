@@ -118,6 +118,22 @@
     ]
   },
   {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Cards Style",
+        "options": [
+          {
+            "name": "Health Insurance Cards",
+            "value": "health-insurance-cards"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
