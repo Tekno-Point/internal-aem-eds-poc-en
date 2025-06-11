@@ -270,12 +270,6 @@
         "valueType": "string",
         "name": "column2text",
         "label": "Column 2"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "column3text",
-        "label": "Column 3"
       }
     ]
   },
