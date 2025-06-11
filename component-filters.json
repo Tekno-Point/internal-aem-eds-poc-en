@@ -16,9 +16,7 @@
       "cards",
       "columns",
       "kyc-documents-table",
-      "kyc-docs-row",
       "table",
-      "table-row",
       "fragment"
     ]
   },
@@ -26,6 +24,19 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "kyc-documents-table",
+    "components": [
+      "kyc-docs-row"
+    ]
+  },
+  {
+    "id": "table",
+    "components": [
+      "table-row",
+      "table-row-2"
     ]
   },
   {
