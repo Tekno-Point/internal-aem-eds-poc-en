@@ -196,14 +196,14 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "text",
+        "name": "text_col1",
         "value": "",
         "label": "Text",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "text_col2",
         "value": "",
         "label": "Text",
         "valueType": "string"
