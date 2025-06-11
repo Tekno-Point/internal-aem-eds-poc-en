@@ -192,8 +192,15 @@
     ]
   },
   {
-    "id": "hero-banner",
+    "id": "hero-banner-item",
     "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
       {
         "component": "richtext",
         "name": "text",
