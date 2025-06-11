@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "hero-carousel-block"
+      "hero-carousel-block",
+      "block-card"
     ]
   },
   {
@@ -44,6 +45,12 @@
     "id": "hero-carousel-block",
     "components": [
      "hero-carousel-item"
+    ]
+  },
+  {
+    "id": "block-card",
+    "components": [
+     "block-card-item"
     ]
   }
 ]
