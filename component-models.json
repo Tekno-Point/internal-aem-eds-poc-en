@@ -112,6 +112,10 @@
           {
             "name": "Health Insurance Cards",
             "value": "health-insurance-cards"
+          },
+          {
+            "name": "Teaser Highlight",
+            "value": "teaser-highlight"
           }
         ]
       }
