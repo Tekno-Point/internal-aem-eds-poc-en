@@ -36,6 +36,7 @@
     "id": "table",
     "components": [
       "table-row",
+      "table-row-1",
       "table-row-2"
     ]
   },
