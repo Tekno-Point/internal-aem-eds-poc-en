@@ -116,6 +116,18 @@
           {
             "name": "Teaser Highlight",
             "value": "teaser-highlight"
+          },
+          {
+            "name": "Individual Insurance Teaser",
+            "value": "individual-insurance-teaser"
+          },
+          {
+            "name": "Service Teaser",
+            "value": "service-teaser"
+          },
+          {
+            "name": "Current Teaser",
+            "value": "current-teaser"
           }
         ]
       }
@@ -185,6 +197,25 @@
         "name": "imageAlt",
         "label": "Alt",
         "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "teaser-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
       },
       {
         "component": "richtext",
