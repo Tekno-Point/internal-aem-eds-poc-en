@@ -32,6 +32,10 @@
 .inner-innerSub-2 {
     display: flex;
 }
+.inner-innerSub-2>p>picture>img{
+    max-width: 300px;
+    width: 100%;
+}
 
 .btnWrapper {
     max-width: 1265px;
@@ -94,6 +98,10 @@
 
 .swiper-pagination-bullet-active{
     color: red;
+}
+
+.default-content-wrapper{
+    text-align: center;
 }
 
 @media (max-width: 600px) {

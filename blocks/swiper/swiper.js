@@ -43,14 +43,20 @@ export default function decorate(block) {
       clickable: true,
       renderBullet: function (index, className) {
         // Use your text for each bullet based on index
-        return paginationTexts[index];
+        const el = paginationTexts[index];
+        console.log(paginationTexts[index]);
+        el?.remove();
+        el.classList.add('swiper-pagination-bullet');
+        debugger;
+        return paginationTexts[index].outerHTML;
       }
     },
     freeMode: true,           // free scrolling mode
-    scrollbar: {
-      el: divPagination,
-      draggable: true,
-    },
+    // scrollbar: {
+    //   el: divPagination,
+    //   draggable: true,
+    //   clickable: true,
+    // },
     scrollOnFocus : true
   })
 }
