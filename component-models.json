@@ -274,6 +274,17 @@
     ]
   },
   {
+    "id": "table-row-1",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column 1"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
