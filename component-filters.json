@@ -15,7 +15,8 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "splendor-spec-tab"
     ]
   },
   {
@@ -38,5 +39,12 @@
       "button",
       "title"
     ]
+  },
+   {
+    "id": "splendor-spec-tab",
+    "components": [
+      "splendor-spec-tab-item"
+    ]
   }
 ]
+
