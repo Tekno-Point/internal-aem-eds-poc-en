@@ -31,6 +31,7 @@
 .section.health-insurance-cards {
   background-color: #eef2f5;
   padding: 55px 0 50px;
+  margin: 0;
 }
 
 .section.health-insurance-cards .default-content-wrapper {
@@ -144,3 +145,82 @@
 
 
 /* Teaser Highlight CSS */
+.section.teaser-highlight {
+  margin: 0;
+}
+
+.section.teaser-highlight .cards-wrapper {
+  max-width: unset;
+  padding: 0 8px;
+}
+
+.section.teaser-highlight .cards.block ul {
+  display: unset;
+}
+
+.section.teaser-highlight .cards.block ul li {
+  display: flex;
+  border: none;
+  background-color: #eef2f5;
+}
+
+.section.teaser-highlight .cards.block ul li > div {
+  flex: 1;
+}
+
+.section.teaser-highlight .cards.block ul li .cards-card-image {
+  padding: 0;
+  width: 752px;
+  height: 485px;
+}
+
+.section.teaser-highlight .cards.block ul li .cards-card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.section.teaser-highlight .cards.block ul li .cards-card-body {
+  margin: 0;
+  padding: 70px 0;
+}
+
+.section.teaser-highlight .cards.block ul li .cards-card-body h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #4d6e82;
+  margin: 0 0 13px;
+  padding: 0 70px;
+}
+
+.section.teaser-highlight .cards.block ul li .cards-card-body p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #849dab;
+  margin-bottom: 25px;
+  padding: 0 70px;
+}
+
+.section.teaser-highlight .cards.block ul li .cards-card-body p.button-container {
+  margin: 0;
+}
+
+.section.teaser-highlight .cards.block ul li .cards-card-body p.button-container a {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: #4d6e82;
+  padding: 15px 26px;
+  border-radius: 100px;
+}
+
+.section.teaser-highlight .cards.block ul li .cards-card-body p.button-container a::after {
+  
+}
+
+.section.teaser-highlight .cards.block ul li .cards-card-body p.button-container a:hover {
+
+}
