@@ -5,4 +5,5 @@ export default function decorate(block) {
             elemSub.classList.add("innerSub" + (index + 1))
         })
     })
+    document.querySelector('.hero-banner-container').previousElementSibling.classList.add('banner-image')  
 }
