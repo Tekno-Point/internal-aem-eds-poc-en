@@ -128,6 +128,22 @@
           {
             "name": "Current Teaser",
             "value": "current-teaser"
+          },
+          {
+            "name": "Footer Links",
+            "value": "footer-links"
+          },
+          {
+            "name": "Footer Contact",
+            "value": "footer-contact"
+          },
+          {
+            "name": "Footer Images",
+            "value": "footer-images"
+          },
+          {
+            "name": "Footer Socials",
+            "value": "footer-socials"
           }
         ]
       }

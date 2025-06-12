@@ -6,12 +6,12 @@
 
 .section.individual-insurance-teaser .default-content-wrapper {
     text-align: center;
-    margin-bottom: 33px;
 }
 
 .section.individual-insurance-teaser .teaser.block {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 33px;
 }
 
 .section.individual-insurance-teaser .teaser.block a {
@@ -25,7 +25,7 @@
     border-radius: 5px;
 }
 
-.section.individual-insurance-teaser .teaser.block a > div {
+.section.individual-insurance-teaser .teaser.block a>div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +35,8 @@
     width: 220px;
     height: 220px;
     transition: all .25s ease-in-out;
+    transform: translate3d(0, 0, 0);
+    transform-origin: center center;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -53,6 +55,14 @@
     transition: all .25s ease-in-out;
 }
 
+.section.individual-insurance-teaser .teaser.block a:hover .teaser-image {
+    transform: scale(1.1) translate3d(0, 0, 0);
+}
+/* .section.individual-insurance-teaser .teaser.block a:hover .teaser-image img{
+    transform: scale(0.8);
+} */
+
+
 .section.individual-insurance-teaser .teaser.block a .teaser-image img {
     width: 100%;
     height: 100%;
@@ -60,6 +70,9 @@
 
 .section.individual-insurance-teaser .teaser.block .teaser-content {
     text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section.individual-insurance-teaser .teaser.block .teaser-content h4 {
@@ -67,7 +80,7 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 1.35;
-    margin: 21px 0 3px;   
+    margin: 21px 0 3px;
 }
 
 .section.individual-insurance-teaser .teaser.block .teaser-content p {
@@ -83,16 +96,18 @@
 
 .section.individual-insurance-teaser .teaser.block .teaser-content p.button-container a {
     margin: 0;
-    background-color: rgb(77, 110, 130);
-    color: #fff;
     padding: 15px 26px;
     position: relative;
     border-radius: 100px;
+    color: #4d6e82;
+    background-color: #eef2f5;
 }
 
 .section.individual-insurance-teaser .teaser.block a:hover .teaser-content p.button-container a {
     padding-right: 40px;
     transition: all 0.25s ease-in-out;
+    background-color: rgb(77, 110, 130);
+    color: #fff;
 }
 
 .section.individual-insurance-teaser .teaser.block .teaser-content p.button-container a::after {
@@ -108,7 +123,7 @@
     opacity: 1;
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
     .section.individual-insurance-teaser {
         padding: 40px 0;
     }
@@ -122,10 +137,8 @@
         border-bottom: 2px solid #dae1e6;
     }
 
-    .section.individual-insurance-teaser .teaser.block .teaser-content {
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+    .section.individual-insurance-teaser .teaser.block a:last-child {
+        border-bottom: unset;
     }
 
     .section.individual-insurance-teaser .teaser.block .teaser-content p.button-container a {
@@ -134,3 +147,154 @@
 }
 
 
+
+
+/* Service teaser CSS */
+.section.individual-insurance-teaser.service-teaser .teaser.block {
+    justify-content: center;
+}
+
+.section.individual-insurance-teaser.service-teaser .teaser.block a{
+    flex: unset;
+    flex-basis: 33.33%;
+}
+
+.section.individual-insurance-teaser.service-teaser .teaser.block .teaser-content p.button-container{
+    margin: auto auto 0;
+}
+
+@media (width <= 768px) {
+    .section.individual-insurance-teaser.service-teaser .teaser.block {
+        justify-content: center;
+    }
+    
+    .section.individual-insurance-teaser.service-teaser .teaser.block a{
+        flex: 1;
+        flex-basis: unset;
+    }
+}
+
+
+
+
+/* Current Teaser CSS */
+.section.current-teaser {
+    background-color: #eef2f5;
+    margin: 0;
+}
+
+.section.current-teaser .default-content-wrapper {
+    text-align: center;
+}
+
+.section.current-teaser .teaser.block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 33px;
+}
+
+.section.current-teaser .teaser.block a {
+    flex-basis: 33.3333%;
+    background: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.section.current-teaser .teaser.block a .teaser-image{
+    width: 490px;
+    height: 150px;
+}
+
+.section.current-teaser .teaser.block a .teaser-image img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.section.current-teaser .teaser.block a .teaser-content {
+    border-radius: 5px;
+    padding-bottom: 30px;
+}
+
+.section.current-teaser .teaser.block a .teaser-content h4,
+.section.current-teaser .teaser.block a .teaser-content p  {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section.current-teaser .teaser.block a .teaser-content h4 {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #4d6e82;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.section.current-teaser .teaser.block a .teaser-content p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #849dab;
+    font-weight: 500;
+}
+
+.section.current-teaser .teaser.block a .teaser-content p.button-container a {
+    background-color: #eef2f5;
+    color: #4d6e82;
+    padding: 15px 26px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 100px;
+    transition: all .25s ease-in-out;
+    position: relative;
+    margin: 0;
+}
+
+.section.current-teaser .teaser.block a .teaser-content p.button-container {
+    margin-bottom: 0;
+}
+
+.section.current-teaser .teaser.block a:hover .teaser-content p.button-container a {
+    padding-right: 40px;
+    transition: all 0.25s ease-in-out;
+    background-color: rgb(77, 110, 130);
+    color: #fff;
+}
+
+.section.current-teaser .teaser.block a .teaser-content p.button-container a::after {
+    content: url('/images/arrow-icon.svg');
+    position: absolute;
+    right: 21px;
+    width: 8px;
+    height: 10px;
+    opacity: 0;
+}
+
+.section.current-teaser .teaser.block a:hover .teaser-content p.button-container a::after {
+    opacity: 1;
+}
+
+@media (width <= 1025px) {
+    .section.current-teaser .teaser.block a .teaser-image{
+        width: 100%;
+        height: 115px;
+    }
+    .section.current-teaser .teaser.block a {
+        flex: 1;
+    }
+}
+
+@media (width <= 600px) {
+    .section.current-teaser .teaser.block a .teaser-image{
+        width: 100%;
+        height: auto;
+    }
+
+    .section.current-teaser .teaser.block {
+        flex-direction: column;
+    }
+}
