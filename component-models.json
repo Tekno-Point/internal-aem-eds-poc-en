@@ -192,34 +192,57 @@
     ]
   },
   {
-  "id": "compare-item",
-  "label": "Rich Text with Image Grid",
-  "fields": [
-    {
-      "component": "richtext",
-      "name": "rt1",
-      "label": "Rich Text Column 1"
-    },
-    {
-      "component": "image",
-      "name": "img1",
-      "label": "Image Column 1"
-    },
-    {
-      "component": "richtext",
-      "name": "rt2",
-      "label": "Rich Text Column 2"
-    },
-    {
-      "component": "image",
-      "name": "img2",
-      "label": "Image Column 2"
-    },
-    {
-      "component": "richtext",
-      "name": "rtFull",
-      "label": "Full Width Rich Text"
-    }
-  ]
-}
+    "id": "compare-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "RtText",
+        "valueType": "string"
+      }
+    ]
+  }
 ]
