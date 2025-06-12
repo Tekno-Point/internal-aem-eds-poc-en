@@ -213,7 +213,8 @@
       {
         "component": "multiselect",
         "name": "classes",
-        "label": "Teaser Style",
+        "label": "Style",
+        "valueType": "string",
         "options": [
           {
             "name": "Individual Insurance Teaser",
