@@ -192,7 +192,7 @@
     ]
   },
    {
-    "id": "compare",
+    "id": "compare-item",
     "fields": [
       {
         "component": "richtext",
