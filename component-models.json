@@ -235,10 +235,15 @@
         "name": "col2_imageAlt",
         "label": "Alt",
         "value": ""
-      },
+      }
+    ]
+  },
+  {
+    "id": "compare-item2",
+    "fields": [
       {
         "component": "richtext",
-        "name": "text",
+        "name": "col1_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
