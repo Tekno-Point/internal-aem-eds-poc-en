@@ -229,7 +229,7 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "col1_text",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -237,23 +237,16 @@
        {
         "component": "reference",
         "valueType": "string",
-        "name": "col2_image",
+        "name": "image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2_imageAlt",
+        "name": "imageAlt",
         "label": "Alt",
         "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "col2_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   }
