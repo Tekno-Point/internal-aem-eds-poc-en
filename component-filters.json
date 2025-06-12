@@ -43,8 +43,7 @@
   {
     "id": "compare",
     "components": [
-      "compare-item",
-      "compare-item2"
+      "compare-item"
     ]
   }
 ]
