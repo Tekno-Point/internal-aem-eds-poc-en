@@ -208,6 +208,30 @@
     ]
   },
   {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Teaser Style",
+        "options": [
+          {
+            "name": "Individual Insurance Teaser",
+            "value": "individual-insurance-teaser"
+          },
+          {
+            "name": "Service Teaser",
+            "value": "service-teaser"
+          },
+          {
+            "name": "Current Teaser",
+            "value": "current-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "teaser-item",
     "fields": [
       {
