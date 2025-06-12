@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "splendor-spec-tab"
+      "splendor-spec-tab",
+      "splendor-tab"
     ]
   },
   {
@@ -45,6 +46,11 @@
     "components": [
       "splendor-spec-tab-item"
     ]
+  },
+  {
+    "id": "splendor-tab",
+    "components": [
+      "splendor-tab-item"
+    ]
   }
 ]
-
