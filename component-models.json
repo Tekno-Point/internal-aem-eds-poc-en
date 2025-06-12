@@ -238,7 +238,7 @@
       },
       {
         "component": "richtext",
-        "name": "text_row2",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
