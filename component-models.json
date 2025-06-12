@@ -196,7 +196,7 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "text_col1",
+        "name": "col1_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -204,20 +204,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image_col1",
+        "name": "col1_image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt_col1",
+        "name": "col1_imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "text_col2",
+        "name": "col2_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -225,20 +225,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image_col2",
+        "name": "col2_image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt_col2",
+        "name": "col2_imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "pre_text",
+        "name": "text_row2",
         "value": "",
         "label": "Text",
         "valueType": "string"
