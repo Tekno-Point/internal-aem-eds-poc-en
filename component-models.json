@@ -238,7 +238,7 @@
       },
       {
         "component": "richtext",
-        "name": "text_col3",
+        "name": "pre_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
