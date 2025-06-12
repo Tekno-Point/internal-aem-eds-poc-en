@@ -1,61 +1,142 @@
-
 @import url("../tab/tab.css");
-/*
-.splendor-tab.tabs-list {
-  display: flex;
-  gap: 0.5ch;
-  max-width: 100%;
-  font-size: var(--body-font-size-xs);
-  overflow-x: auto;
+
+main > .section > div {
+    /* max-width: 1560px; */
+    padding: 0px;
+}
+.tabs-list > .tabs-tab {
+    background-color: #fef8f2;
+    transform: skewX(-16deg);
+    width: 8.125rem;
+    height: 6.625rem;
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 900;
 }
 
-@media (width >= 600px) {
-  .splendor-tab .tabs-list {
-    font-size: var(--body-font-size-s);
-  }
+.tabs-list > .tabs-tab:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+.tabs-list > .tabs-tab > ul {
+    padding: 0px;
+    list-style: none;
+    width: 100px;
 }
 
-@media (width >= 900px) {
-  .splendor-tab .tabs-list {
-    font-size: var(--body-font-size-m);
-  }
+.tabs-list > .tabs-tab > ul > li > ul {
+    list-style: none;
+    padding: 0px;
 }
 
-.splendor-tab .tabs-list button {
-  flex: 0 0 max-content;
-  margin: 0;
-  border: 1px solid #dadada;
-  border-radius: 0;
-  padding: 0.5em;
-  background-color: var(--light-color);
-  color: initial;
-  font-weight: bold;
-  line-height: unset;
-  text-align: initial;
-  text-overflow: unset;
-  overflow: unset;
-  white-space: unset;
-  transition: background-color 0.2s;
+.tabs-tab > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.splendor-tab.tabs-list button p {
-  margin: 0;
+.splendor-tab {
+    position: relative;
 }
 
-
-.splendor-tab .tabs-list button[aria-selected='true'] {
-  border-bottom: 1px solid var(--background-color);
-  background-color: var(--background-color);
-  cursor: initial;
+.tabs-list {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: -50px;
+    left: 165px;
 }
 
-.splendor-tab .tabs-panel {
-  margin-top: -1px;
-  padding: 24px;
-  border: 1px solid #dadada;
-  overflow: auto;
+.tabs-panel {
+    /* max-width: 1560px;
+    width: 100%; */
+
+    
+    margin-top: 70px;        /* its for check   */    
+    background-color: #ededed;
+    padding: 100px 40px;
+    border-radius: 10px;
+    position: relative;
 }
 
-.splendor-tab .tabs-panel[aria-hidden='true'] {
-  display: none;
-} */
+.tabs-panel > .tab-slide {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    background-image: url("/icons/background-image.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.tab-slide > ul {
+    padding: 0px;
+    max-width: 635px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.tab-slide > ul > li {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tab-slide > ul > li:last-child {
+    position: absolute;
+    top: 87px;
+    right: -22px;
+}
+
+.tab-slide > ul > li > p {
+    font-weight: 900;
+}
+.tab-slide > ul > li > ul {
+    padding: 0px;
+    list-style: none;
+}
+.tab-slide > ul > li > ul>li{
+    font-family: TSTAR-PRO-Medium;
+}
+
+.tab-slide > p > picture > img {
+    max-width: 300px;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .tabs-list > .tabs-tab {
+        max-width: 8.125rem;
+        width: 100%;
+        height: 6.625rem;
+    }
+    .tabs-list {
+        overflow: scroll;
+        left: 30px;
+    }
+
+    .tab-slide > ul > li:last-child {
+        position: static;
+    }
+    .tab-slide > ul {
+        flex-direction: column-reverse;
+    }
+    .tabs-panel > .tab-slide {
+        background-image: none;
+    }
+    .tabs-panel > .tab-slide {
+        justify-content: center;
+    }
+   
+}
