@@ -243,7 +243,7 @@
     "fields": [
       {
         "component": "richtext",
-        "name": "col1_text",
+        "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
