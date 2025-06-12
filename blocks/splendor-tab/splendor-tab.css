@@ -1,5 +1,7 @@
-/* @import url("../tab/tab.css"); */
-.tabs .tabs-list {
+
+@import url("../tab/tab.css");
+/*
+.splendor-tab.tabs-list {
   display: flex;
   gap: 0.5ch;
   max-width: 100%;
@@ -8,18 +10,18 @@
 }
 
 @media (width >= 600px) {
-  .tabs .tabs-list {
+  .splendor-tab .tabs-list {
     font-size: var(--body-font-size-s);
   }
 }
 
 @media (width >= 900px) {
-  .tabs .tabs-list {
+  .splendor-tab .tabs-list {
     font-size: var(--body-font-size-m);
   }
 }
 
-.tabs .tabs-list button {
+.splendor-tab .tabs-list button {
   flex: 0 0 max-content;
   margin: 0;
   border: 1px solid #dadada;
@@ -36,24 +38,24 @@
   transition: background-color 0.2s;
 }
 
-.tabs .tabs-list button p {
+.splendor-tab.tabs-list button p {
   margin: 0;
 }
 
 
-.tabs .tabs-list button[aria-selected='true'] {
+.splendor-tab .tabs-list button[aria-selected='true'] {
   border-bottom: 1px solid var(--background-color);
   background-color: var(--background-color);
   cursor: initial;
 }
 
-.tabs .tabs-panel {
+.splendor-tab .tabs-panel {
   margin-top: -1px;
   padding: 24px;
   border: 1px solid #dadada;
   overflow: auto;
 }
 
-.tabs .tabs-panel[aria-hidden='true'] {
+.splendor-tab .tabs-panel[aria-hidden='true'] {
   display: none;
-}
+} */
