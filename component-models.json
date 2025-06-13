@@ -203,7 +203,7 @@
       },
       {
         "component": "richtext",
-        "name": "col1_text",
+        "name": "col1_titletext",
         "value": "",
         "label": "Enter Card Title",
         "valueType": "string"
@@ -221,13 +221,13 @@
       },
       {
         "component": "reference",
-        "name": "col2_image",
+        "name": "col2_secimage",
         "label": "Enter Background Right Image",
         "multi": false
       },
       {
         "component": "text",
-        "name": "col2_imageAlt",
+        "name": "col2_secimageAlt",
         "label": "Enter Background Right Image Alt Text"
       }
     ]
