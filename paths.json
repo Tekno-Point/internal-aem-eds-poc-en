@@ -14,7 +14,9 @@
     "/content/internal-aem-eds-poc/vida-v2-pro/model-images:/vida-v2-pro/model-images.json",
     "/content/internal-aem-eds-poc/vida-v2-pro/api/citymodelprice:/vida-v2-pro/api/citymodelprice.json",
     "/content/internal-aem-eds-poc/vida-v2-pro/forms/contact-form:/vida-v2-pro/forms/contact-form.json",
-    "/content/internal-aem-eds-poc/vida-v2-pro/forms/verify-otp:/vida-v2-pro/forms/verify-otp.json"
+    "/content/internal-aem-eds-poc/vida-v2-pro/forms/verify-otp:/vida-v2-pro/forms/verify-otp.json",
+    "/content/internal-aem-eds-poc/concordia/forms/rate-calculator:/concordia/forms/rate-calculator.json",
+    "/content/internal-aem-eds-poc/concordia/forms/agency-search:/concordia/forms/agency-search.json"
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
