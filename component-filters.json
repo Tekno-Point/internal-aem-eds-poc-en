@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "why-choose-us",
-      "embed"
+      "embed",
+      "carousel"
     ]
   },
   {
@@ -39,6 +40,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
     ]
   }
 ]
