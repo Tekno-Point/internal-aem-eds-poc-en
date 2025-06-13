@@ -126,6 +126,11 @@ footer .footer p {
   padding: 0;
 }
 
+.section.footer-images .default-content-wrapper ul li a span.icon {
+  height: unset;
+  width: unset;
+}
+
 .section.footer-images .default-content-wrapper ul li a img {
   height: 100px;
   width: auto;
