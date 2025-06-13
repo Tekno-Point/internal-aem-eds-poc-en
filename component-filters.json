@@ -15,6 +15,7 @@
       "hero",
       "cards",
       "columns",
+      "compare-product",
       "fragment"
     ]
   },
@@ -22,6 +23,13 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "compare-product",
+    "components": [
+      "compare-product-item",
+      "compare-product-item-2"
     ]
   },
   {
