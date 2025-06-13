@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "teaser"
+      "teaser",
+      "carousel"
     ]
   },
   {
@@ -44,6 +45,12 @@
     "id": "teaser",
     "components": [
       "teaser-item"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
     ]
   }
 ]
