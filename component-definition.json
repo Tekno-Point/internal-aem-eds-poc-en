@@ -172,36 +172,6 @@
               }
             }
           }
-        },
-        {
-          "title": "Compare Item",
-          "id": "compare-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Card Item",
-                  "model": "compare-item"
-                }
-              }
-            }
-          }
-        },
-         {
-          "title": "Compare Item 2",
-          "id": "compare-item2",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Card Item 2",
-                  "model": "compare-item2"
-                }
-              }
-            }
-          }
         }
       ]
     }
