@@ -1,0 +1,38 @@
+.compare {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;;
+}
+
+.compare-child-1 {
+    display: flex;
+    justify-content: center;
+}
+.compare-child-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.compare-child-2-inner-1 > ul {
+    padding: 0px;
+    list-style: none;
+}
+
+.compare-child-2-inner-1 > ul > li > ul {
+    display: flex;
+    gap: 40px;
+    padding: 0px;
+    list-style: none;
+}
+
+.compare-child-2-inner-1 > ul > li > ul>li{
+    width: 300px;
+    text-align: center;
+}
+.compare-child-2-inner-1 > ul > li > ul > li:nth-child(2) {
+  /* Your styles here */
+  color: #303030;
+}

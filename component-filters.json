@@ -44,7 +44,8 @@
     "id": "compare",
     "components": [
       "compare-item1",
-      "compare-item2"
+      "compare-item2",
+      "title"
     ]
   }
 ]
