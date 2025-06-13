@@ -192,10 +192,10 @@
     ]
   },
   {
-    "id": "compare",
+    "id": "compare-item1",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "name": "img1_text",
         "value": "",
         "label": "Text",
@@ -216,7 +216,7 @@
         "value": ""
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "col2_text",
         "value": "",
         "label": "Text",
@@ -235,7 +235,12 @@
         "name": "col2_imageAlt",
         "label": "Alt",
         "value": ""
-      },
+      }
+    ]
+  },
+   {
+    "id": "compare-item2",
+    "fields": [
       {
         "component": "richtext",
         "name": "text",
@@ -243,7 +248,6 @@
         "label": "Text",
         "valueType": "string"
       }
-
     ]
   }
 ]

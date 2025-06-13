@@ -172,6 +172,36 @@
               }
             }
           }
+        },
+        {
+          "title": "Compare Item 1",
+          "id": "compare-item1",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Compare Item",
+                  "model": "compare-item1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Compare Item 2",
+          "id": "compare-item2",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Compare Item 2",
+                  "model": "compare-item2"
+                }
+              }
+            }
+          }
         }
       ]
     }
