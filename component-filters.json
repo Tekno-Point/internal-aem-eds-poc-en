@@ -15,7 +15,14 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "carousel-ash-block-item"
+    ]
+  },
+  {
+    "id": "carousel-ash-block",
+    "components": [
+      "carousel-ash-block-item"
     ]
   },
   {

@@ -190,5 +190,46 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"carousel-ash-block-item",
+    "fields":[
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Enter Head Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Enter Card Title",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_image",
+        "label": "Enter Center Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col2_imageAlt",
+        "label": "Enter Center Image Alt Text"
+      },
+      {
+        "component": "reference",
+        "name": "col2_image",
+        "label": "Enter Background Right Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col2_imageAlt",
+        "label": "Enter Background Right Image Alt Text"
+      }
+    ]
   }
 ]
