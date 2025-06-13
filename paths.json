@@ -15,11 +15,11 @@
     "/content/internal-aem-eds-poc/vida-v2-pro/api/citymodelprice:/vida-v2-pro/api/citymodelprice.json",
     "/content/internal-aem-eds-poc/vida-v2-pro/forms/contact-form:/vida-v2-pro/forms/contact-form.json",
     "/content/internal-aem-eds-poc/vida-v2-pro/forms/verify-otp:/vida-v2-pro/forms/verify-otp.json",
-    "/content/internal-aem-eds-poc/concordia/forms/rate-calculator:/concordia/forms/rate-calculator.json",
-    "/content/internal-aem-eds-poc/concordia/forms/agency-search:/concordia/forms/agency-search.json",
     "/content/internal-aem-eds-poc/hero-splinder-page/form/test-ride-form:/hero-splinder-page/form/test-ride-form.json",
     "/content/internal-aem-eds-poc/hero-splinder-page/form/state:/hero-splinder-page/form/state.json",
-    "/content/internal-aem-eds-poc/hero-splinder-page/form/city:/hero-splinder-page/form/city.json"
+    "/content/internal-aem-eds-poc/hero-splinder-page/form/city:/hero-splinder-page/form/city.json",
+    "/content/internal-aem-eds-poc/concordia/forms/rate-calculator:/concordia/forms/rate-calculator.json",
+    "/content/internal-aem-eds-poc/concordia/forms/agency-search:/concordia/forms/agency-search.json",
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
