@@ -82,7 +82,7 @@ main > .section > div {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 4px;
     list-style: none;
 }
 
@@ -115,15 +115,17 @@ main > .section > div {
     width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .tabs-list > .tabs-tab {
         max-width: 8.125rem;
         width: 100%;
         height: 6.625rem;
     }
     .tabs-list {
+        max-width: 1200px;
+        width: 100%;
         overflow: scroll;
-        left: 30px;
+        left: 0px;
     }
 
     .tab-slide > ul > li:last-child {
