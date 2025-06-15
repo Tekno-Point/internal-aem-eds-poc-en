@@ -825,5 +825,17 @@
         ]
       }
     ]
+  },
+  {
+    "id": "hero-slider-tab-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Slider Tab List",
+        "valueType": "string"
+      }
+    ]
   }
 ]

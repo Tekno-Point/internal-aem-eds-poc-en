@@ -34,7 +34,8 @@
       "footer-accordion",
       "breadcrums",
       "getintouch",
-      "hero-carousel-title"
+      "hero-carousel-title",
+      "hero-slider-tab"
     ]
   },
   {
@@ -111,6 +112,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "hero-slider-tab",
+    "components": [
+      "hero-slider-tab-item"
     ]
   }
 ]
