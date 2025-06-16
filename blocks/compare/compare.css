@@ -77,7 +77,7 @@
 
 @media (max-width: 1000px) {
     .compare-container > .default-content-wrapper > h2 { 
-        font-size: 35px;      /* check this */
+        font-size: 35px;                                          /* check this */
     }
     .compare-child-1-inner-1 > p {
         position: static;
@@ -94,6 +94,9 @@
 }
 
 @media (max-width: 465px) {
+    .compare-container > .default-content-wrapper > h2 { 
+        font-size: 25px;                                                    /* check this */
+    }
     .compare-child-1-inner-1 > h3 {
         font-size: 20px;
     }
