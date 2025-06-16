@@ -167,7 +167,7 @@
                 "template": {
                   "name": "Buy Card",
                   "model": "buy-card",
-                  "filter":"Buy Card"
+                  "filter":"buy-card"
                 }
               }
             }
