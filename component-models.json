@@ -195,13 +195,6 @@
     "id": "form",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
         "component": "text",
         "valueType": "string",
         "name": "form-url",
@@ -214,6 +207,18 @@
         "name": "api-url",
         "label": "api-url",
         "value": ""
+      }
+    ]
+  },
+  {
+    "id": "form-item,",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
