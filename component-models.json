@@ -211,7 +211,7 @@
     ]
   },
   {
-    "id": "form-item,",
+    "id": "form-item",
     "fields": [
       {
         "component": "richtext",
