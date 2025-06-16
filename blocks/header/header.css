@@ -194,7 +194,7 @@ header nav .nav-sections ul li p:hover {
   color: #ff8a00;
 } */
 
-header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='false']>ul {
+/* header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='false']>ul {
   display: block;
   position: absolute;
   left: -24px;
@@ -210,7 +210,7 @@ header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='false']>u
   display: flex;
   flex-wrap: wrap;
   
-}
+} */
 
 @media (width >=900px) {
   header nav .nav-sections {
