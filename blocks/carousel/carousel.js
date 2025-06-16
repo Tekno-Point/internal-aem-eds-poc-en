@@ -10,6 +10,13 @@ export default function decorate(block) {
     swiperPagination.classList.add('swiper-pagination');
 
     rows.forEach((row) => {
+        const contentWrapper = document.createElement('div');
+        const content = row.children[1];
+        contentWrapper.classList.add('content-wrapper');
+
+        contentWrapper.append(content)
+        row.append(contentWrapper)
+
         row.classList.add('swiper-slide')
         swiperWrapper.append(row);
     })
@@ -21,9 +28,15 @@ export default function decorate(block) {
 
 function swiperInit() {
     new Swiper('.carousel.block', {
+        effect: "fade", 
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+
         pagination: {
             el: '.swiper-pagination',
-            clickable : true,
+            clickable: true,
         },
     })
 }

@@ -1,1 +1,147 @@
 @import url('../carousel/swiper.min.css');
+
+.section.carousel-container {
+    margin: 0;
+}
+
+.section.carousel-container .carousel-wrapper {
+    padding: 0;
+    margin: 0;
+    max-width: unset;
+    overflow: hidden;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block {
+    position: relative;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide {
+    position: relative;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper {
+    width: 365px;
+    height: 365px;
+    position: absolute;
+    top: calc(50% - 365px / 2);
+    left: 10%;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper::after {
+    content: "";
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: block;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div {
+    position: absolute;
+    vertical-align: middle;
+    top: 30%;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div p {
+    font-size: 13px;
+    color: #849dab;
+    font-weight: 700;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div p strong {
+    color: #4d6e82;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div p.button-container {
+    margin-top: 60px;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div p.button-container a {
+    color: #fff;
+    background-color: #4d6e82;
+    padding: 15px 26px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all .25s ease-in-out;
+    position: relative;
+    margin: 0;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div p.button-container a::after {
+    content: url('/images/arrow-icon.svg');
+    position: absolute;
+    right: 21px;
+    width: 8px;
+    height: 10px;
+    opacity: 0;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div p.button-container a:hover {
+    padding-right: 40px;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div p.button-container a:hover::after {
+    opacity: 1;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-pagination {
+    top: calc(50% - 365px / 2);
+    left: 10%;
+    width: 365px;
+    padding-top: 30px;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid rgba(77, 110, 130, .5);
+    margin: 0 5px;
+    opacity: 1;
+}
+
+.section.carousel-container .carousel-wrapper .carousel.block .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ff8a00;
+    width: 12px;
+    height: 12px;
+    border: 0;
+}
+
+
+@media (width <= 1025px) {
+    .section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper {
+        width: unset;
+        height: unset;
+        position: unset;
+        padding: 60px 0 40px;
+        border-bottom: 2px solid #eef2f5;
+    }
+
+    .section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div {
+        position: unset;
+    }
+
+    .section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper::after {
+        content: unset;
+    }
+
+    .section.carousel-container .carousel-wrapper .carousel.block .swiper-wrapper .swiper-slide .content-wrapper div p.button-container {
+        margin-top: 20px;
+    }
+
+    /* .section.carousel-container .carousel-wrapper .carousel.block .swiper-pagination {
+        top: 170px;
+        left: unset;
+        width: 100%;
+    } */
+}
