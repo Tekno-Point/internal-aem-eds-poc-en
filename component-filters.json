@@ -15,7 +15,8 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "how-to-buy-card"
     ]
   },
   {
@@ -37,6 +38,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+   {
+    "id": "how-to-buy-card",
+    "components": [
+      "buy-item"
     ]
   }
 ]
