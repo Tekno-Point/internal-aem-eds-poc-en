@@ -217,7 +217,7 @@
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "richtext",
         "value": "",
         "label": "Text",
         "valueType": "string"
