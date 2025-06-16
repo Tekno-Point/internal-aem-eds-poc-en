@@ -130,6 +130,10 @@
             "value": "current-teaser"
           },
           {
+            "name": "Hero Carousel",
+            "value": "hero-carousel"
+          },
+          {
             "name": "Footer Links",
             "value": "footer-links"
           },
