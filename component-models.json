@@ -215,7 +215,7 @@
         "label": "Alt",
         "value": ""
       },
-     {
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
