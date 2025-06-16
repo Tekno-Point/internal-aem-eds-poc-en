@@ -42,7 +42,7 @@
     font-weight: 900;
     font-size: 8rem;
     position: absolute;
-    top: 59px;
+    top: 45px;
 }
 
 .block-child1-child1 {
@@ -56,5 +56,13 @@
     font-kerning: auto;
     letter-spacing: normal;
     line-height: 2rem;
-    
+    font-family: "TSTAR-PRO-Bold";
+    font-weight: 700;
+}
+
+
+.block-child1-child2 >p{
+    font-family: "TSTAR-PRO-Medium";
+    font-weight: 400;
+    color: #303030;
 }

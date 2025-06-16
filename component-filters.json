@@ -43,7 +43,8 @@
   {
     "id": "buy-card",
     "components": [
-      "buy-item"
+      "buy-item",
+      "text"
     ]
   }
 ]
