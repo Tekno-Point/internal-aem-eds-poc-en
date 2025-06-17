@@ -16,6 +16,7 @@ header nav {
   height: 80px;
   padding: 0 30px;
   font-family: var(--body-font-family);
+  border-bottom: 2px solid rgb(238, 242, 245);
 }
 
 header nav[aria-expanded='true'] {
@@ -194,7 +195,7 @@ header nav .nav-sections ul li p:hover {
   color: #ff8a00;
 } */
 
-/* header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='false']>ul {
+header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='false']>ul {
   display: block;
   position: absolute;
   left: -24px;
@@ -210,7 +211,7 @@ header nav .nav-sections ul li p:hover {
   display: flex;
   flex-wrap: wrap;
   
-} */
+}
 
 @media (width >=900px) {
   header nav .nav-sections {
@@ -280,9 +281,10 @@ header nav .nav-sections ul li p:hover {
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
-    padding: 8px 0;
     display: flex;
     flex-direction: column;
+    border-left: 2px solid rgb(238, 242, 245);
+    padding-left: 17px;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul>li:first-child {
@@ -292,7 +294,52 @@ header nav .nav-sections ul li p:hover {
   header nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li p.button-container a{
+    margin: 0;
+    background: unset;
+    font-size: 15px;
+    line-height: 1.125;
+    font-weight: 700;
+    color: rgb(77, 110, 130);
+    padding: 0;
+    margin: 0;
+    overflow: unset;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul>li {
+    padding-top: 25px;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li a,
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul>li>p.button-container a,
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul>li>p.button-container {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    color: rgb(132, 157, 171);
+    text-decoration: none;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li,
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul>li {
+    line-height: 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul>li>p.button-container a {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* header nav .nav-sections .default-content-wrapper>ul>li>ul>li>ul>li>ul>li  a{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    color: rgb(132, 157, 171);
+    text-decoration: none;
+  } */
 }
 
 /* tools */

@@ -28,11 +28,11 @@ export default function decorate(block) {
 
 function swiperInit() {
     new Swiper('.carousel.block', {
-        effect: "fade", 
-        loop: true,
-        autoplay: {
-            delay: 3000,
-        },
+        // effect: "fade", 
+        // loop: true,
+        // autoplay: {
+        //     delay: 3000,
+        // },
 
         pagination: {
             el: '.swiper-pagination',
