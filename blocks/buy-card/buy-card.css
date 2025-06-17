@@ -95,6 +95,9 @@ main > .section > div {
     font-family: "TSTAR-PRO-Bold";
     font-weight: 700;
 }
+.cards-card-body > h4 > span {
+    clip-path: polygon(8% 1%, 53% 22%, 54% 100%, 8% 72%);
+}
 .cards-card-body > h6 {
     font-family: "TSTAR-PRO-Medium";
     font-weight: 400;
@@ -122,8 +125,7 @@ main > .section > div {
 .buy-card > ul > li:nth-child(4) > .cards-card-body > p:nth-child(3) {
     display: none;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 426px) {
     .buy-card > ul > li:nth-child(2) > .cards-card-body > p:first-child,
     .buy-card > ul > li:nth-child(4) > .cards-card-body > p:first-child {
         top: -207px;
@@ -132,9 +134,6 @@ main > .section > div {
     .buy-card > ul > li:nth-child(4) {
         padding-top: 0px;
     }
-}
-
-@media (max-width: 320px) {
     .cards-card-body > p:nth-child(3) {
         border-right: dashed 1px silver;
         position: absolute;
