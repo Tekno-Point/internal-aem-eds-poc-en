@@ -172,22 +172,6 @@
               }
             }
           }
-        },
-        {
-          "title": "Form-item",
-          "id": "form-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "form-item",
-                  "model": "form-item",
-                  "filter": "form-item" 
-                }
-              }
-            }
-          }
         }
       ]
     }

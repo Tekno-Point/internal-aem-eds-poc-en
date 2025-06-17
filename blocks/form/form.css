@@ -2,6 +2,7 @@
   display: grid;
   grid-auto-flow: row;
   align-items: center;
+
 }
 
 .form fieldset {
@@ -168,3 +169,45 @@
 .form .toggle-wrapper input:checked + .slider::before {
   transform: translateX(24px);
 }
+.form form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.form>form>.field-wrapper>input,.fieldset-wrapper>fieldset>.field-wrapper>input{
+outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-radius: 0;
+  background-color: #ee2326;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ee2326;
+  color: white;
+  padding: 20px 0 20px 0 ;
+}
+
+.form-container>.default-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ee2326;
+  color: white;
+  padding: 0;
+}
+
+input::placeholder {
+    color: white;
+    opacity: 1;
+}
+.form-wrapper input {
+    color: white;
+} 
