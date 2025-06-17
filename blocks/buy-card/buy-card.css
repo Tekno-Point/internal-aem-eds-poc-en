@@ -1,3 +1,6 @@
+
+@import url("../cards/cards.css");
+
 @font-face {
     font-family: "TSTAR-PRO-Normal";
     src: url("/fonts/TSTAR-PRO-Regular.ttf") format("truetype");
@@ -31,6 +34,85 @@ main > .section > div {   /*  this line for check*/
     width: 100%;
 }
 
+@import url("../cards/cards.css");
+
+.buy-card-wrapper{
+    max-width: 1560px;
+    width: 100%;
+}
+
+.buy-card > ul > li {
+    max-width: 490px;
+    width: 100%;
+    position: relative;
+}
+.buy-card > ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+.buy-card> ul > li > .cards-card-body {
+    position: absolute;
+    top: 16px;
+    left: 35px;
+    color: white;
+    padding: 4px 24px;
+    background: black;
+    border-radius: 114px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-card-body > p {
+    margin: 0px 0px 0px 0px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.buy-card-image {
+    max-width: 490px;
+    height: 307px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* clip-path: polygon(7% 0, 100% 0%, 93% 100%, 0% 100%); */
+    -webkit-transform: skewX(-10deg);
+}
+
+.buy-card-image > picture > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.buy-card-image > picture > img:hover {
+    transform: scale(1.2); /* Zoom in 1.2x */
+}
+
+@media (max-width: 600px) {
+    .buy-card > ul {
+        flex-direction: column;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .buy-card-image {
+        -webkit-transform: skewX(0deg);
+    }
+    .buy-card-image > picture > img:hover {
+        transform: none /* Zoom in 1.2x */
+    }
+
+    .buy-card> ul > li > .cards-card-body {
+        left: 5px;
+    }
+}
+
+
+
+/*
 
 .buy-card-container > div > p {
     text-align: center;
@@ -39,7 +121,7 @@ main > .section > div {   /*  this line for check*/
     font-weight: 500;
 }
 .buy-card {
-    margin-top: 67px; /*  this line for check*/
+    margin-top: 67px; 
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -50,8 +132,7 @@ main > .section > div {   /*  this line for check*/
 .buy-card>.block-child0,.block-child1 ,.block-child2,.block-child3{
     width: 300px;
      position: relative;
-     /* z-index: 2; */
-    /* border: 1px solid red; */
+    
 }
 .block-child1-child1>picture>img{
     position: relative;
@@ -66,13 +147,6 @@ main > .section > div {   /*  this line for check*/
     top: -228px;
 }
 
-/* .block-child1-child1 {
-    position: relative;
-} */
-
-/* .block-child{
-    position: relative;
-} */
 
 
 .block-child1-child2 > h4 {
@@ -91,3 +165,4 @@ main > .section > div {   /*  this line for check*/
     font-weight: 400;
     color: #303030;
 }
+*/
