@@ -12,6 +12,16 @@ footer .footer p {
   background-color: #4d6e82;
   padding: 20px 52px 34px;
   border-bottom: 2px solid rgba(132, 157, 171, .5);
+  display: flex;
+  gap: 170px;
+}
+
+.section.footer-links .default-content-wrapper {
+  flex: 5;
+}
+
+.section.footer-links .form-wrapper {
+  flex: 2;
 }
 
 .section.footer-links .default-content-wrapper ul {
@@ -46,6 +56,98 @@ footer .footer p {
   color: #fff;
 }
 
+.section.footer-links .form-wrapper .form.block .field-wrapper.heading-wrapper h2 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper.plaintext-wrapper {
+  margin: 0;
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper.plaintext-wrapper p {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: rgba(218, 225, 230, .7);
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper.fieldset-wrapper fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper label {
+  display: none;
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper input {
+  font-size: 15px;
+  color: #4d6e82;
+  font-weight: 700;
+  background-color: #eef2f5;
+  border-radius: 5px;
+  border: 2px solid rgba(77, 110, 130, .5);
+  padding: 11px 12px 10px;
+  transition: all .25s ease-in-out;
+  /* margin: 10px 0; */
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper input::placeholder {
+  color: rgba(77, 110, 130, .5);
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper input:focus {
+  outline: unset;
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper.submit-wrapper button {
+  margin: 0;
+  color: #4d6e82;
+  background-color: #eef2f5;
+  padding: 7px 18px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper.submit-wrapper button:hover {
+  background: #274659;
+  color: #fff;
+}
+
+
+@media (width <= 1025px) {
+  .section.footer-links {
+    flex-direction: column;
+    gap: unset;
+    padding: 0;
+  }
+
+  .section.footer-links .default-content-wrapper ul {
+    flex-direction: column;
+  }
+
+  .section.footer-links .default-content-wrapper ul li ul {
+    display: none;
+  }
+
+  .section.footer-links .default-content-wrapper ul li p {
+    padding: 18px 44px 18px 20px;
+  }
+
+  .section.footer-links .form-wrapper .form.block .field-wrapper input {
+    padding: 7px 12px;
+  }
+
+  .section.footer-links .form-wrapper .form.block .field-wrapper.fieldset-wrapper fieldset {
+    flex-direction: row;
+  }
+}
 
 
 /* Footer contact CSS */
@@ -66,7 +168,7 @@ footer .footer p {
   height: 50px;
 }
 
-.section.footer-contact .default-content-wrapper p{
+.section.footer-contact .default-content-wrapper p {
   margin-right: 15px;
 }
 
@@ -75,7 +177,7 @@ footer .footer p {
   height: 100%;
 }
 
-.section.footer-contact .default-content-wrapper ul{
+.section.footer-contact .default-content-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -108,6 +210,28 @@ footer .footer p {
   color: rgb(255, 138, 0);
 }
 
+@media (width <= 1025px) {
+  .section.footer-contact {
+    padding: 25px 20px;
+  }
+
+  .section.footer-contact .default-content-wrapper ul{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .section.footer-contact .default-content-wrapper ul li:first-child {
+    font-size: 15px;
+  }
+
+  .section.footer-contact .default-content-wrapper ul li:first-child a {
+    font-size: 15px;
+  }
+
+  .section.footer-contact .default-content-wrapper ul li:last-child a {
+    text-decoration: underline;
+  }
+}
 
 
 /* Footer images CSS */
@@ -182,6 +306,3 @@ footer .footer p {
 .section.footer-socials .default-content-wrapper ul li a:hover {
   color: #ff8a00;
 }
-
-
-

@@ -17,4 +17,8 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+
+  //accordion
+  // const header = document.querySelectorAll(".section.footer-links ul > li > p");
+  // console.log(header)
 }
