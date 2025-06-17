@@ -216,8 +216,8 @@
         "value": ""
       },
       {
-        "component": "Border text",
-        "name": "cols1_text",
+        "component": "text",
+        "name": "cols1_Bordertext",
         "value": "",
         "label": "Boder Text",
         "valueType": "string"
