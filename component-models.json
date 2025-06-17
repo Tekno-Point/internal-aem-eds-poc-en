@@ -216,6 +216,13 @@
         "value": ""
       },
       {
+        "component": "text",
+        "name": "cols1_text",
+        "value": "",
+        "label": "Boder Text",
+        "valueType": "string"
+      },
+      {
         "component": "richtext",
         "name": "cols2_richtext",
         "value": "",
