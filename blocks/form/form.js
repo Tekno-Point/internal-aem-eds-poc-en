@@ -1,6 +1,7 @@
 import createField from './form-fields.js';
 
 async function createForm(formHref, submitHref) {
+  debugger;
   const { pathname } = new URL(formHref);
   const resp = await fetch(pathname);
   const json = await resp.json();
@@ -14,6 +15,7 @@ async function createForm(formHref, submitHref) {
       form.append(field);
     }
   });
+
 
   // group fields into fieldsets
   const fieldsets = form.querySelectorAll('fieldset');
@@ -100,3 +102,34 @@ export default async function decorate(block) {
     }
   });
 }
+document.addEventListener('DOMContentLoaded', function () {
+  const mobileInput = document.querySelector('.form-wrapper input[name="mobile"]');
+  if (!mobileInput) return;
+
+  // Create the OTP button (but don't add it yet)
+  const otpBtn = document.createElement('button');
+  otpBtn.type = 'button';
+  otpBtn.textContent = 'Get OTP';
+  otpBtn.className = 'send-otp-btn';
+  otpBtn.style.marginLeft = '8px';
+
+  // Show/hide the button based on input
+  mobileInput.addEventListener('input', function () {
+    if (/^\d{10}$/.test(mobileInput.value)) {
+      if (!mobileInput.parentNode.contains(otpBtn)) {
+        mobileInput.parentNode.appendChild(otpBtn);
+      }
+    } else {
+      if (mobileInput.parentNode.contains(otpBtn)) {
+        otpBtn.remove();
+      }
+    }
+  });
+
+  // Also check on page load (in case value is pre-filled)
+  if (/^\d{10}$/.test(mobileInput.value)) {
+    if (!mobileInput.parentNode.contains(otpBtn)) {
+      mobileInput.parentNode.appendChild(otpBtn);
+    }
+  }
+});

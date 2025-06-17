@@ -12,12 +12,10 @@
   border: none;
   padding: 0;
 }
-
 /* .form form > .field-wrapper + .field-wrapper,
 .form form fieldset .field-wrapper + .field-wrapper {
   margin-top: 24px;
 } */
-
 .form form > .selection-wrapper + .selection-wrapper,
 .form form fieldset .selection-wrapper + .selection-wrapper {
   margin-top: 0.25em;
@@ -221,4 +219,30 @@ main > .section > div {
     max-width: 1565px;
     padding: 0;
     margin: 0;
+}
+.section .default-content-wrapper .button-container strong a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1.125rem;
+    padding-left: 1.125rem;
+    padding: 12px 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    background: #fff;
+    color: #b50000 ;
+}
+.send-otp-btn {
+  background: #b50000;
+  color: #fff ;
+  border-bottom: 1px solid #fff;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-weight: 700;
+  margin-left: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
