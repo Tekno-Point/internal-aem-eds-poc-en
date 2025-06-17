@@ -26,15 +26,36 @@
     font-style: normal;
 }
 
-.buy-card {
-    margin-top: 200px; /*  this like for check*/
-}
-
-.block-child-1 {
-    max-width: 25%;
+main > .section > div {   /*  this line for check*/
+    max-width: 1560px;
     width: 100%;
 }
 
+
+.buy-card-container > div > p {
+    text-align: center;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 500;
+}
+.buy-card {
+    margin-top: 67px; /*  this line for check*/
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 90px; 
+}
+
+.buy-card>.block-child0,.block-child1 ,.block-child2,.block-child3{
+    width: 300px;
+     position: relative;
+     /* z-index: 2; */
+    /* border: 1px solid red; */
+}
+.block-child1-child1>picture>img{
+    position: relative;
+}
 .block-child1-child0 > p {
     opacity: 0.2;
     font-style: italic;
@@ -42,12 +63,17 @@
     font-weight: 900;
     font-size: 8rem;
     position: absolute;
-    top: 45px;
+    top: -228px;
 }
 
-.block-child1-child1 {
+/* .block-child1-child1 {
     position: relative;
-}
+} */
+
+/* .block-child{
+    position: relative;
+} */
+
 
 .block-child1-child2 > h4 {
     display: flex;
@@ -60,8 +86,7 @@
     font-weight: 700;
 }
 
-
-.block-child1-child2 >p{
+.block-child1-child2 > p {
     font-family: "TSTAR-PRO-Medium";
     font-weight: 400;
     color: #303030;
