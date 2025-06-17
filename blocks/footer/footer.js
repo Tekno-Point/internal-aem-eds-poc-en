@@ -18,7 +18,12 @@ export default async function decorate(block) {
 
   block.append(footer);
 
-  //accordion
-  // const header = document.querySelectorAll(".section.footer-links ul > li > p");
-  // console.log(header)
+  // Footer Accordion
+  let title = document.querySelectorAll('.section.footer-links ul li p');
+  title.forEach(elem => {
+    elem.addEventListener('click', ()=> {
+      let summary = elem.nextElementSibling;
+      summary.classList.toggle("show");
+    })
+  })
 }

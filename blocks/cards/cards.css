@@ -131,9 +131,21 @@
     padding: 45px 0 50px;
   }
 
+  .section.health-insurance-cards .default-content-wrapper {
+    padding: 0 50px;
+  }
+
+  .section.health-insurance-cards .cards-wrapper {
+    padding: 40px 20px 60px;
+  }
+
   .section.health-insurance-cards .default-content-wrapper p {
     font-size: 16px;
     margin: 15px 0 25px;
+  }
+
+  .section.health-insurance-cards .cards-wrapper ul li .cards-card-body p {
+    margin: 10px 40px 0;
   }
 
   .section.health-insurance-cards .cards-wrapper ul {
@@ -238,6 +250,10 @@
 }
 
 @media (width <=768px) {
+  .section.teaser-highlight {
+    padding: 40px 0;
+  }
+
   .section.teaser-highlight .cards-wrapper {
     padding: 0 20px;
   }
@@ -246,7 +262,7 @@
     flex-direction: column;
   }
 
-  .section.teaser-highlight .cards.block ul li > div {
+  .section.teaser-highlight .cards.block ul li>div {
     flex: unset;
   }
 
