@@ -196,7 +196,7 @@
     "fields": [
       {
         "component": "text",
-        "name": "col1_text",
+        "name": "cols1_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
@@ -204,20 +204,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_image",
+        "name": "cols1_image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col1_imageAlt",
+        "name": "cols1_imageAlt",
         "label": "Alt",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "col2_richtext",
+        "name": "cols2_richtext",
         "value": "",
         "label": "Text",
         "valueType": "string"
