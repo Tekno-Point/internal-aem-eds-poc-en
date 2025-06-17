@@ -40,6 +40,8 @@ main > .section > div {
     max-width: 1440px;
     width: 100%;
     margin-top: 100px;
+    display: flex;
+    justify-content: center;
 }
 .buy-card-container > div > p {
     text-align: center;
@@ -59,6 +61,7 @@ main > .section > div {
     align-items: center; */
     flex-wrap: wrap;
     gap: 60px;
+    position: relative;
 }
 .buy-card > ul > li:nth-child(2),
 .buy-card > ul > li:nth-child(4) {
@@ -80,6 +83,7 @@ main > .section > div {
 }
 .cards-card-body > p:nth-child(2) {
     position: relative;
+    z-index: 2;
 }
 .cards-card-body > h4 {
     display: flex;
@@ -97,6 +101,28 @@ main > .section > div {
     color: #303030;
 }
 
+.cards-card-body > p:nth-child(3) {
+    border-bottom: dashed 2px silver;
+    position: absolute;
+    top: 36px;
+    left: 213px;
+    width: 204px;
+    height: 154px;
+    transform: rotate(8deg);
+    border-radius: 58%;
+    color: transparent; /* Hides the text but keeps layout */
+}
+.buy-card > ul > li:nth-child(2) > .cards-card-body > p:nth-child(3) {
+    border-bottom: none;
+    border-top: dashed 2px silver;
+    left: 178px;
+    top: 82px;
+}
+
+.buy-card > ul > li:nth-child(4) > .cards-card-body > p:nth-child(3) {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .buy-card > ul > li:nth-child(2) > .cards-card-body > p:first-child,
     .buy-card > ul > li:nth-child(4) > .cards-card-body > p:first-child {
@@ -106,4 +132,28 @@ main > .section > div {
     .buy-card > ul > li:nth-child(4) {
         padding-top: 0px;
     }
+}
+
+@media (max-width: 768px) {
+.cards-card-body > p:nth-child(3) {
+       border-right: dashed 2px silver;
+    position: absolute;
+    top: 36px;
+    left: 94px;
+    width: 231px;
+    height: 528px;
+    transform: rotate(0deg);
+    border-radius: 88%;
+    color: transparent;
+}
+.buy-card > ul > li:nth-child(2) >.cards-card-body > p:nth-child(3) {
+        border-right: none;
+        border-left: dashed 2px silver;
+        left: 5px;
+        top: 82px;
+}
+
+.buy-card>ul>li:nth-child(2),.buy-card>ul>li:nth-child(4){
+    padding-left: 60px;
+}
 }
