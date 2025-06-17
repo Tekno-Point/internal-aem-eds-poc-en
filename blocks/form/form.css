@@ -13,10 +13,10 @@
   padding: 0;
 }
 
-.form form > .field-wrapper + .field-wrapper,
+/* .form form > .field-wrapper + .field-wrapper,
 .form form fieldset .field-wrapper + .field-wrapper {
   margin-top: 24px;
-}
+} */
 
 .form form > .selection-wrapper + .selection-wrapper,
 .form form fieldset .selection-wrapper + .selection-wrapper {
@@ -174,7 +174,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 40px 16px;
+}
+.form .field-wrapper{
+  min-width: 296px;
 }
 
 .form>form>.field-wrapper>input,.fieldset-wrapper>fieldset>.field-wrapper>input{
@@ -208,6 +211,14 @@ input::placeholder {
     color: white;
     opacity: 1;
 }
-.form-wrapper input {
-    color: white;
+.form-wrapper input{
+  color: white;
+}
+.form-wrapper label {
+    display: none;
 } 
+main > .section > div {
+    max-width: 1565px;
+    padding: 0;
+    margin: 0;
+}
