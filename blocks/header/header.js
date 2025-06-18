@@ -189,6 +189,7 @@ export default async function decorate(block) {
 
       contentWrapper.addEventListener('click', (e) => {
         mobileNav(e, p);
+        mobNavAccordion(e);
       })
     }
 
@@ -241,4 +242,22 @@ function mobileNav(e, mobcategory) {
     navList.style.display = 'block';
     mobcategory.innerHTML = `${e.target.textContent}`;
   }
+}
+
+function mobNavAccordion(e) {
+  // console.log(e.target)
+  const navElement = e.target.parentElement;
+  if (navElement.classList.contains('button-container')){
+    let summary = navElement.nextElementSibling;
+        summary.classList.toggle("show");
+        console.log(navElement)
+  }
+  // let title = document.querySelectorAll('.section.nav-sections .nav-drop > ul > li > p');
+  // console.log(title)
+  // title.forEach(elem => {
+  //   elem.addEventListener('click', ()=> {
+  //     let summary = elem.nextElementSibling;
+  //     summary.classList.toggle("show");
+  //   })
+  // })
 }

@@ -364,6 +364,11 @@ header nav .nav-sections .default-content-wrapper p span.icon-close-icon {
     display: none;
   }
 
+  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>ul.show,
+  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>ol>li>ol.show {
+    display: block;
+  }
+
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>p,
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>ol>li>p {
     padding: 15px 0;
