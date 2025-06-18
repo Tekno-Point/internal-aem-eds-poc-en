@@ -17,7 +17,9 @@
       "buy-card",
       "compare",
       "splendor-spec-tab",
-      "splendor-tab"
+      "splendor-tab",
+      "hero-carousel-block",
+      "block-card"
     ]
   },
   {
@@ -42,14 +44,18 @@
   },
   {
     "id": "splendor-spec-tab",
-    "components": [
-      "splendor-spec-tab-item"
-    ]
+    "components": ["splendor-spec-tab-item"]
   },
   {
     "id": "splendor-tab",
-    "components": [
-      "splendor-tab-item"
-    ]
+    "components": ["splendor-tab-item"]
+  },
+  {
+    "id": "hero-carousel-block",
+    "components": ["hero-carousel-item"]
+  },
+  {
+    "id": "block-card",
+    "components": ["block-card-item"]
   }
 ]
