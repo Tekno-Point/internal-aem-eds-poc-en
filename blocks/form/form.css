@@ -1,3 +1,32 @@
+@font-face {
+    font-family: "TSTAR-PRO-Normal";
+    src: url("/fonts/TSTAR-PRO-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "TSTAR-PRO-Medium";
+    src: url("/fonts/TSTAR-PRO-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "TSTAR-PRO-Bold";
+    src: url("/fonts/TSTAR-PRO-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "TSTAR-PRO-Heavy";
+    src: url("/fonts/TSTAR-PRO-Heavy.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+.form-container{
+  font-family: "TSTAR-PRO-Medium";
+}
+
 .form .field-wrapper {
   display: grid;
   grid-auto-flow: row;
@@ -12,10 +41,7 @@
   border: none;
   padding: 0;
 }
-/* .form form > .field-wrapper + .field-wrapper,
-.form form fieldset .field-wrapper + .field-wrapper {
-  margin-top: 24px;
-} */
+
 .form form > .selection-wrapper + .selection-wrapper,
 .form form fieldset .selection-wrapper + .selection-wrapper {
   margin-top: 0.25em;
@@ -172,18 +198,29 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px 16px;
+  gap: 20px 16px;
 }
 .form .field-wrapper{
   min-width: 296px;
 }
 
 .form>form>.field-wrapper>input,.fieldset-wrapper>fieldset>.field-wrapper>input{
-outline: none;
+  outline: none;
   border: none;
   border-bottom: 2px solid rgb(255, 255, 255);
   border-radius: 0;
   background-color: #ee2326;
+}
+.form input:-webkit-autofill {
+  background-color: #ee2326 !important;
+  -webkit-box-shadow: 0 0 0 1000px #ee2326 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+  border: none;
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
+  outline: none;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .form{
@@ -204,10 +241,17 @@ outline: none;
   color: white;
   padding: 0;
 }
+.form-container>.default-content-wrapper>#book-a-test-ride-now{
+  margin-bottom: 0;
+}
+.form-container>.default-content-wrapper>p{
+  margin: 0;
+}
 
 input::placeholder {
     color: white;
     opacity: 1;
+    font-size: 700;
 }
 .form-wrapper input{
   color: white;
@@ -221,7 +265,7 @@ main > .section > div {
     margin: 0;
 }
 .section .default-content-wrapper .button-container strong a{
-    display: inline-flex;
+  display: inline-flex;
     align-items: center;
     justify-content: center;
     padding-right: 1.125rem;
@@ -232,7 +276,23 @@ main > .section > div {
     border-radius: 0.25rem;
     font-size: 1rem;
     background: #fff;
-    color: #b50000 ;
+    color: #b50000;
+}
+.form > form > .field-wrapper.select-wrapper > select{
+  border-top: 0;
+    /* border-bottom: #ee2326; */
+    background: #ee2326;
+    outline: none;
+    color: white;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+/* this is for the drop-down menu */
+.form > form > .field-wrapper.select-wrapper > select option { 
+  background: #fff;
+  color: #000;
 }
 .send-otp-btn {
   background: #b50000;
@@ -248,7 +308,7 @@ main > .section > div {
 }
 .input-helper {
   display: block;
-  min-height: .8em;   /* Reserve space for the message */
+  min-height: .5em;   /* Reserve space for the message */
   color: #fff;
   font-size: 0.75em;
   margin-top: 4px;
@@ -256,4 +316,7 @@ main > .section > div {
 }
 .input-helper.visible {
   visibility: visible;
+}
+.form #form-f1{
+  display: none;
 }

@@ -26,34 +26,24 @@ fields.forEach((field) => {
     form.append(field);
   }
 });
-  
 
-  // Add "Get OTP" button next to mobile input when 10 digits are entered
+  // Disable OTP field until 10 digits are entered in mobile
   const mobileInput = form.querySelector('input[name="mobile"]');
-  if (mobileInput) {
-    const otpBtn = document.createElement('button');
-    otpBtn.type = 'button';
-    otpBtn.textContent = 'Get OTP';
-    otpBtn.className = 'send-otp-btn';
-    otpBtn.style.marginLeft = '8px';
-
+  const otpInput = form.querySelector('input[name="otp"]');
+  if (mobileInput && otpInput) {
+    otpInput.disabled = true;
     mobileInput.addEventListener('input', function () {
       if (/^\d{10}$/.test(mobileInput.value)) {
-        if (!mobileInput.parentNode.contains(otpBtn)) {
-          mobileInput.parentNode.appendChild(otpBtn);
-        }
+        otpInput.disabled = false;
       } else {
-        if (mobileInput.parentNode.contains(otpBtn)) {
-          otpBtn.remove();
-        }
+        otpInput.disabled = true;
       }
     });
-
     // Also check on page load (in case value is pre-filled)
     if (/^\d{10}$/.test(mobileInput.value)) {
-      if (!mobileInput.parentNode.contains(otpBtn)) {
-        mobileInput.parentNode.appendChild(otpBtn);
-      }
+      otpInput.disabled = false;
+    } else {
+      otpInput.disabled = true;
     }
   }
 
@@ -146,3 +136,11 @@ export default async function decorate(block) {
     });
   }
 }
+//this adds a span tag to target the "SUBMIT" button
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.button.primary').forEach(btn => {
+    if (!btn.querySelector('.gradient-text')) {
+      btn.innerHTML = '<span class="gradient-text">' + btn.textContent + '</span>';
+    }
+  });
+});
