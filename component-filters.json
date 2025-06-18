@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -16,35 +14,28 @@
       "cards",
       "columns",
       "fragment",
-      "buy-card"
+      "buy-card",
+      "compare"
     ]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   },
   {
     "id": "buy-card",
-    "components": [
-      "buy-item",
-      "title"
-    ]
+    "components": ["buy-item", "title"]
+  },
+  {
+    "id": "compare",
+    "components": ["compare-item1", "compare-item2"]
   }
 ]
