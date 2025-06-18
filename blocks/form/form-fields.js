@@ -169,10 +169,8 @@ const createFieldset = (fd) => {
     field.append(legend);
   }
 
-  const fieldWrapper = createFieldWrapper(fd);
-  fieldWrapper.append(field);
-
-  return { field, fieldWrapper };
+  // Do NOT wrap in a field-wrapper!
+  return { field, fieldWrapper: field };
 };
 
 const createToggle = (fd) => {
