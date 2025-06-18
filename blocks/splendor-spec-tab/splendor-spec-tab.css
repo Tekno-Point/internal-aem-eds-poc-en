@@ -1,0 +1,81 @@
+.splendor-spec-tab {
+    max-width: 1560px;
+    width: 100%;
+    background-color: #ededed;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.tab-content0 {
+    padding: 20px;
+    position: relative;
+    background-image: url("/icons/background-image.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.tab-list-1 {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    top: -64px;
+    left: 98px;
+}
+
+.tab-list-1 > ul > li > ul {
+    list-style: none;
+    padding: 0px 0px 0px 0px;
+}
+.tab-list-1 > ul {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-list-1 > ul > li {
+    background: #fef8f2;
+    transform: skewX(-16deg);
+    min-width: 8.125rem;
+    min-height: 6.625rem;
+    z-index: 99;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 900;
+}
+
+.tab-list-1 > ul > li:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.tab-list-2 {
+    display: flex;
+}
+.tab-list-2 > ul {
+    display: flex;
+    list-style: none;
+}
+.tab-list-2 > ul > li:last-child {
+    position: absolute;
+    top: 103px;
+    right: -69px;
+}
+.tab-list-2 > ul > li {
+    max-width: 300px;
+    width: 100%;
+}
+.tab-list-2 > ul > li > p {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.tab-list-2 > ul > li > ul {
+    list-style: none;
+    padding: 0px;
+}
+
