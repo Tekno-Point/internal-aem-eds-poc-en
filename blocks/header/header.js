@@ -173,11 +173,9 @@ export default async function decorate(block) {
           elem.parentElement.querySelector('ul').style.display = "none";
           mobcategory.innerHTML = ` `;
         })
+        document.body.style.overflow = "";
       }
     })
-
-
-
 
     if (!isDesktop.matches) {
       const mobCategoryTitle = document.createElement('div');
@@ -196,7 +194,7 @@ export default async function decorate(block) {
 
 
     const backArrow = navSections.querySelector('.mob-category-title span img');
-    backArrow.addEventListener('click', () => {
+    backArrow?.addEventListener('click', () => {
       const navElementList = document.querySelectorAll('.nav-drop > p');
       const mobcategory = navSections.querySelector(".mob-category-title p")
       navElementList.forEach(elem => {
