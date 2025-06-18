@@ -70,8 +70,7 @@
               "page": {
                 "resourceType": "core/franklin/components/section/v1/section",
                 "template": {
-                  "model": "section",
-                  "filter":"section"
+                  "model": "section"
                 }
               }
             }
@@ -234,147 +233,147 @@
               }
             }
           }
+        },
+        {
+          "title": "Splendor Spec Tab",
+          "id": "splendor-spec-tab",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Splendor Spec Tab",
+                  "filter": "splendor-spec-tab",
+                  "model": "splendor-spec-tab"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Splendor Spec Tab Item",
+          "id": "splendor-spec-tab-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Splendor Spec Tab Item",
+                  "model": "splendor-spec-tab-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Splendor Tab",
+          "id": "splendor-tab",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Splendor Tab",
+                  "filter": "splendor-tab",
+                  "model": "splendor-tab"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Splendor Tab Item",
+          "id": "splendor-tab-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Splendor Tab Item",
+                  "model": "splendor-tab-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Hero Carousel Block",
+          "id": "hero-carousel-block",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Hero Carousel Block",
+                  "filter": "hero-carousel-block",
+                  "model": "hero-carousel-block"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Hero Carousel Item",
+          "id": "hero-carousel-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Hero Carousel Item",
+                  "model": "hero-carousel-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Block Card",
+          "id": "block-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Block Card",
+                  "filter": "block-card",
+                  "model": "block-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Block Card Item",
+          "id": "block-card-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Block Card Item",
+                  "model": "block-card-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Blogs Swiper",
+          "id": "blogs-swiper",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Blogs Swiper",
+                  "model": "blogs-swiper"
+                }
+              }
+            }
+          }
         }
       ]
-    },
-    {
-      "title": "Splendor Spec Tab",
-      "id": "splendor-spec-tab",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Splendor Spec Tab",
-              "filter": "splendor-spec-tab",
-              "model": "splendor-spec-tab"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Splendor Spec Tab Item",
-      "id": "splendor-spec-tab-item",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Splendor Spec Tab Item",
-              "model": "splendor-spec-tab-item"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Splendor Tab",
-      "id": "splendor-tab",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Splendor Tab",
-              "filter": "splendor-tab",
-              "model": "splendor-tab"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Splendor Tab Item",
-      "id": "splendor-tab-item",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Splendor Tab Item",
-              "model": "splendor-tab-item"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Hero Carousel Block",
-      "id": "hero-carousel-block",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Hero Carousel Block",
-              "filter": "hero-carousel-block",
-              "model": "hero-carousel-block"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Hero Carousel Item",
-      "id": "hero-carousel-item",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Hero Carousel Item",
-              "model": "hero-carousel-item"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Block Card",
-      "id": "block-card",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Block Card",
-              "filter": "block-card",
-              "model": "block-card"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Block Card Item",
-      "id": "block-card-item",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Block Card Item",
-              "model": "block-card-item"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Blogs Swiper",
-      "id": "blogs-swiper",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Blogs Swiper",
-              "model": "blogs-swiper"
-            }
-          }
-        }
-      }
     }
   ]
 }
