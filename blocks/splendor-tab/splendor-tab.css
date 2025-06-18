@@ -89,7 +89,7 @@ main > .section > div {
 .tab-slide > ul > li {
     max-width: 300px;
     width: 100%;
-    display: flex;
+    display: flex;  
     flex-direction: column;
     justify-content: center;
 }
@@ -107,7 +107,7 @@ main > .section > div {
     list-style: none;
 }
 .tab-slide > ul > li > ul>li{
-    font-family: TSTAR-PRO-Medium;
+    font-family: "TSTAR-PRO-Medium";
 }
 
 .tab-slide > p > picture > img {
