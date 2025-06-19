@@ -9,9 +9,12 @@ async function createForm(formHref, submitHref) {
   form.dataset.action = submitHref;
   const formWrapper = document.createElement('div');
 
+  form.append(formWrapper);
   const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
   fields.forEach((field) => {
     if (field.dataset.fieldset != 'submitfs') {
+      formWrapper.append(field);
+    }else{
       form.append(field);
     }
   });
@@ -21,6 +24,9 @@ async function createForm(formHref, submitHref) {
   fieldsets.forEach((fieldset) => {
     form.querySelectorAll(`[data-fieldset="${fieldset.name}"`).forEach((field) => {
       fieldset.append(field);
+      if(fieldset.name == 'submitfs'){
+        form.append(fieldset);
+      }
     });
   });
 
