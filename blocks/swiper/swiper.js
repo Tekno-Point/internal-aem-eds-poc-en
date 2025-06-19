@@ -47,7 +47,6 @@ export default function decorate(block) {
         console.log(paginationTexts[index]);
         el?.remove();
         el.classList.add('swiper-pagination-bullet');
-        debugger;
         return paginationTexts[index].outerHTML;
       }
     },

@@ -41,18 +41,20 @@ main > .section > div {
 .blogs-swiper {
     max-width: 1440px;
     width: 100%;
+    overflow: hidden;
     padding: 40px 10px 40px 10px;
 }
 
 .swiper-wrapper {
+    overflow: hidden;
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
 }
 
-.swiper-wrapper > .swiper-slide {
-    width: 471px !important;
+.blogs-swiper>.cards-container>.swiper-wrapper >.swiper-slide {
+    width: 471px;
     border-radius: 10px;
     background-color: #fff;
 }
