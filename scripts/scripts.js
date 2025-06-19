@@ -1,8 +1,16 @@
+const geoPromise = (async () => {
+  // Replace with your actual geo service endpoint
+  const resp = await fetch('https://geo.example.com/lookup');
+  return resp.json();
+})();
+
 const experimentationConfig = {
   prodHost: 'www.my-site.com',
   audiences: {
     mobile: () => window.innerWidth < 600,
     desktop: () => window.innerWidth >= 600,
+    us: async () => (await geoPromise).region === 'us',
+    eu: async () => (await geoPromise).region === 'eu',
     // define your custom audiences here as needed
   }
 };
