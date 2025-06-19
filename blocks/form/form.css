@@ -283,7 +283,7 @@
   font-size: 15px;
   border-radius: 5px;
   border: 2px solid rgba(77, 110, 130, 0.5);
-  min-width: 180px;
+  min-width: 200px;
   min-height: 20px;
   width: 100%;
   height: 40px;
@@ -291,6 +291,16 @@
 
 .section.rate-calculator .form.block .field-wrapper.text-wrapper input::placeholder {
   font-size: 13px;
+}
+
+.section.rate-calculator .form.block .field-wrapper.date-wrapper input[type="date"]:focus,
+.section.rate-calculator .form.block .field-wrapper.text-wrapper input:focus {
+  outline: unset;
+}
+
+.section.rate-calculator .form.block .field-wrapper.date-wrapper input[type="date"]:hover,
+.section.rate-calculator .form.block .field-wrapper.text-wrapper input:hover {
+  border-color: rgb(77, 110, 130);
 }
 
 .section.rate-calculator .form.block .field-wrapper button {
