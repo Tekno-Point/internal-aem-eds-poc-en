@@ -1,3 +1,31 @@
+const geoPromise = (async () => {
+  // Replace with your actual geo service endpoint
+  const resp = await fetch('https://geo.example.com/lookup');
+  return resp.json();
+})();
+
+const experimentationConfig = {
+  prodHost: 'www.my-site.com',
+  audiences: {
+    mobile: () => window.innerWidth < 600,
+    desktop: () => window.innerWidth >= 600,
+    us: async () => (await geoPromise).region === 'us',
+    eu: async () => (await geoPromise).region === 'eu',
+    // define your custom audiences here as needed
+  }
+};
+
+let runExperimentation;
+let showExperimentationOverlay;
+const isExperimentationEnabled = document.head.querySelector('[name^="experiment"],[name^="campaign-"],[name^="audience-"],[property^="campaign:"],[property^="audience:"]')
+    || [...document.querySelectorAll('.section-metadata div')].some((d) => d.textContent.match(/Experiment|Campaign|Audience/i));
+if (isExperimentationEnabled) {
+  ({
+    loadEager: runExperimentation,
+    loadLazy: showExperimentationOverlay,
+  } = await import('../plugins/experimentation/src/index.js'));
+}
+
 import {
   loadHeader,
   loadFooter,
@@ -11,6 +39,29 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+
+const AUDIENCES = {
+  mobile: () => window.innerWidth < 600,
+  desktop: () => window.innerWidth >= 600,
+  // define your custom audiences here as needed
+};
+
+/**
+ * Gets all the metadata elements that are in the given scope.
+ * @param {String} scope The scope/prefix for the metadata
+ * @returns an array of HTMLElement nodes that match the given scope
+ */
+export function getAllMetadata(scope) {
+  return [...document.head.querySelectorAll(`meta[property^="${scope}:"],meta[name^="${scope}-"]`)]
+    .reduce((res, meta) => {
+      const id = toClassName(meta.name
+        ? meta.name.substring(scope.length + 1)
+        : meta.getAttribute('property').split(':')[1]);
+      res[id] = meta.getAttribute('content');
+      return res;
+    }, {});
+}
+
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -91,6 +142,10 @@ export function decorateMain(main) {
  */
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
+  // Add below snippet early in the eager phase
+  if (runExperimentation) {
+    await runExperimentation(document, experimentationConfig);
+  }
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
@@ -126,6 +181,11 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+
+  // Add below snippet at the end of the lazy phase
+  if (showExperimentationOverlay) {
+    await showExperimentationOverlay(document, experimentationConfig);
+  }
 }
 
 /**
