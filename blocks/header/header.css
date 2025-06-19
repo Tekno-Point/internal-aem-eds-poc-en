@@ -329,6 +329,13 @@ header nav .nav-sections .default-content-wrapper p span.icon-close-icon {
     border-top: 2px solid rgb(238, 242, 245);
     margin: 0;
     padding-top: 15px;
+    height: 70vh;
+    overflow: scroll;
+    padding: 0 40px 0 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li {
+    height: unset;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li {
