@@ -172,6 +172,10 @@
           {
             "name": "Footer Socials",
             "value": "footer-socials"
+          },
+          {
+            "name": "Rate Calculator",
+            "value": "rate-calculator"
           }
         ]
       }
