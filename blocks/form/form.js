@@ -7,10 +7,11 @@ async function createForm(formHref, submitHref) {
 
   const form = document.createElement('form');
   form.dataset.action = submitHref;
+  const formWrapper = document.createElement('div');
 
   const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
   fields.forEach((field) => {
-    if (field) {
+    if (field.dataset.fieldset != 'submitfs') {
       form.append(field);
     }
   });
