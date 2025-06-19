@@ -284,6 +284,11 @@ header nav .nav-sections .default-content-wrapper p span.icon-close-icon {
   right: 4%;
   height: 30px;
   width: 32px;
+  display: none;
+}
+
+header nav .nav-sections.active .default-content-wrapper p span.icon-close-icon {
+  display: block;
 }
 
 @media (width <=1025px) {
@@ -306,6 +311,11 @@ header nav .nav-sections .default-content-wrapper p span.icon-close-icon {
     top: 14px;
     left: 17px;
     position: absolute;
+    display: none;
+  }
+
+  header nav .nav-sections .mob-category-title.active-ul span {
+    display: block;
   }
 
   header nav .nav-sections .mob-category-title span img {
