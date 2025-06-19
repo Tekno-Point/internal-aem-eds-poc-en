@@ -56,7 +56,7 @@ footer .footer p {
   color: #fff;
 }
 
-.section.footer-links .field-wrapper + .field-wrapper{
+.section.footer-links .field-wrapper+.field-wrapper {
   display: unset;
   margin: 0;
 }
@@ -132,7 +132,7 @@ footer .footer p {
 }
 
 
-@media (width <= 1025px) {
+@media (width <=1025px) {
   .section.footer-links {
     flex-direction: column;
     gap: unset;
@@ -256,12 +256,12 @@ footer .footer p {
   color: rgb(255, 138, 0);
 }
 
-@media (width <= 1025px) {
+@media (width <=1025px) {
   .section.footer-contact {
     padding: 25px 20px;
   }
 
-  .section.footer-contact .default-content-wrapper ul{
+  .section.footer-contact .default-content-wrapper ul {
     flex-direction: column;
     align-items: start;
   }
@@ -306,10 +306,10 @@ footer .footer p {
   width: auto;
 }
 
-@media (width <= 1025px) {
+@media (width <=1025px) {
   .section.footer-images {
     padding: 70px 52px 38px;
-  } 
+  }
 
   .section.footer-images .default-content-wrapper ul {
     justify-content: center;
@@ -328,6 +328,7 @@ footer .footer p {
 .section.footer-socials .default-content-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .section.footer-socials .default-content-wrapper ul,
@@ -366,8 +367,38 @@ footer .footer p {
   color: #ff8a00;
 }
 
-@media (width <= 1025px) {
+.section.footer-socials .default-content-wrapper ol {
+  display: flex;
+  gap: 10px;
+}
+
+.section.footer-socials .default-content-wrapper ol li a span {
+  background-color: rgb(77, 110, 130);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.section.footer-socials .default-content-wrapper ol li a span:hover {
+  background-color: rgb(39, 70, 89);
+}
+
+.section.footer-socials .default-content-wrapper ol li a span img {
+  height: 20px;
+  width: 20px;
+}
+
+@media (width <=1025px) {
   .section.footer-socials {
     padding: 20px;
+  }
+
+  .section.footer-socials .default-content-wrapper {
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 10px;
   }
 }
