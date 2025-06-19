@@ -1,3 +1,17 @@
+import {
+  loadHeader,
+  loadFooter,
+  decorateButtons,
+  decorateIcons,
+  decorateSections,
+  decorateBlocks,
+  decorateTemplateAndTheme,
+  waitForFirstImage,
+  loadSection,
+  loadSections,
+  loadCSS,
+} from './aem.js';
+
 const geoPromise = (async () => {
   // Replace with your actual geo service endpoint
   const resp = await fetch('https://geo.example.com/lookup');
@@ -25,20 +39,6 @@ if (isExperimentationEnabled) {
     loadLazy: showExperimentationOverlay,
   } = await import('../plugins/experimentation/src/index.js'));
 }
-
-import {
-  loadHeader,
-  loadFooter,
-  decorateButtons,
-  decorateIcons,
-  decorateSections,
-  decorateBlocks,
-  decorateTemplateAndTheme,
-  waitForFirstImage,
-  loadSection,
-  loadSections,
-  loadCSS,
-} from './aem.js';
 
 const AUDIENCES = {
   mobile: () => window.innerWidth < 600,
