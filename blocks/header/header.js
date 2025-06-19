@@ -154,7 +154,10 @@ export default async function decorate(block) {
       });
     });
 
-
+    const langSelector = nav.querySelector('.nav-tools .default-content-wrapper > ul');
+    langSelector.addEventListener('click', ()=> {
+      langSelector.querySelector('ul').classList.toggle('show');
+    })
 
     // const isMobile = window.innerWidth < 1025;
 
