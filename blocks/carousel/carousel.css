@@ -123,7 +123,7 @@
         width: unset;
         height: unset;
         position: unset;
-        padding: 60px 0 40px;
+        padding: 60px 20px 40px;
         border-bottom: 2px solid #eef2f5;
         background-color: rgba(255, 255, 255, .9);
     }
@@ -140,9 +140,11 @@
         margin-top: 20px;
     }
 
-    /* .section.carousel-container .carousel-wrapper .carousel.block .swiper-pagination {
-        top: 170px;
-        left: unset;
-        width: 100%;
-    } */
+    .section.carousel-container .carousel-wrapper .carousel.block .swiper-pagination {
+        height: 40px;
+        padding-top: calc(28.76% + 20px);
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
 }
