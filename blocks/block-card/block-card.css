@@ -1,9 +1,10 @@
 @import url("../cards/cards.css");
-
-.block-card-wrapper{
-    max-width: 1560px;
+main > .section > div {    
+    max-width: 1440px;     
     width: 100%;
+    overflow: hidden;
 }
+
 
 .block-card > ul > li {
     max-width: 490px;
@@ -15,7 +16,7 @@
     display: flex;
     gap: 8px;
 }
-.block-card > ul > li > .cards-card-body {
+.block-card > ul > li >.cards-card-body>p{
     position: absolute;
     top: 16px;
     left: 35px;
@@ -26,6 +27,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
+    opacity: 1;
 }
 
 .cards-card-body > p {

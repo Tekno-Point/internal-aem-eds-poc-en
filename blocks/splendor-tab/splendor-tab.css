@@ -1,8 +1,10 @@
 @import url("../tab/tab.css");
 
-main > .section > div {
-    /* max-width: 1560px; */
-    padding: 0px;
+
+.splendor-tab {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 .tabs-list > .tabs-tab {
     background-color: #fef8f2;
@@ -58,8 +60,7 @@ main > .section > div {
     /* max-width: 1560px;
     width: 100%; */
 
-    
-    margin-top: 70px;        /* its for check   */    
+    margin-top: 70px; /* its for check   */
     background-color: #ededed;
     padding: 100px 40px;
     border-radius: 10px;
@@ -89,7 +90,7 @@ main > .section > div {
 .tab-slide > ul > li {
     max-width: 300px;
     width: 100%;
-    display: flex;  
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -106,7 +107,7 @@ main > .section > div {
     padding: 0px;
     list-style: none;
 }
-.tab-slide > ul > li > ul>li{
+.tab-slide > ul > li > ul > li {
     font-family: "TSTAR-PRO-Medium";
 }
 
@@ -131,14 +132,20 @@ main > .section > div {
     .tab-slide > ul > li:last-child {
         position: static;
     }
-    .tab-slide > ul {
-        flex-direction: column-reverse;
-    }
     .tabs-panel > .tab-slide {
         background-image: none;
     }
     .tabs-panel > .tab-slide {
         justify-content: center;
     }
-   
+
+    .tabs-list > .tabs-tab > ul > li > ul {
+        font-size: 18px;
+    }
+    .tab-slide > ul > li > p {
+        font-size: 18px;
+    }
+    .tab-slide > ul > li > ul > li {
+        font-size: 18px;
+    }
 }

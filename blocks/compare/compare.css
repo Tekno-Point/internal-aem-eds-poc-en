@@ -30,6 +30,7 @@
     /* check this */
     background-color: #ededed;
     padding: 40px 20px;
+    margin: 0px auto;
 }
 .compare {
     display: flex;
