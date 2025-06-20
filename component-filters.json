@@ -19,7 +19,9 @@
       "splendor-spec-tab",
       "splendor-tab",
       "hero-carousel-block",
-      "block-card"
+      "block-card",
+      "blogs-swiper",
+      "hero-header"
     ]
   },
   {
@@ -57,5 +59,9 @@
   {
     "id": "block-card",
     "components": ["block-card-item"]
+  },
+  {
+    "id": "hero-header",
+    "components": ["hero-header-item"]
   }
 ]
