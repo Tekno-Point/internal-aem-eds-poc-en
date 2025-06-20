@@ -256,4 +256,15 @@ main .section.highlight {
   padding: 40px 0;
 }
 
+/* business css */
+
+.businessloan>.default-content-wrapper>p{
+          font-size: 16px;
+}
+.businessloan>.default-content-wrapper>h1{
+  margin: 0px;
+          font-size: 36px;
+        line-height: 1.2;
+        width: 676px;
+}
 
