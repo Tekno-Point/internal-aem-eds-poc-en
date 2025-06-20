@@ -336,5 +336,17 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "article",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "form-url",
+        "label": "form path",
+        "value": ""
+      }
+    ]
   }
 ]
