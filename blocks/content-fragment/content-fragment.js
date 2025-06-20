@@ -1,5 +1,5 @@
 export default async function decorate(block) {
-    const formHref = block.querySelector('a')?.href;
+    const formHref = new URL(block.querySelector('a')?.href).pathname;
     const url = `/graphql/execute.json/internal-aem-eds-poc/get-article;path=${formHref}`
     const response = await fetch((url), {
         method: "GET",
