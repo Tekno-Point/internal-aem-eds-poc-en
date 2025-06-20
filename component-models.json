@@ -166,6 +166,16 @@
     ]
   },
   {
+    "id": "cf-fragment",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "CF Reference"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
