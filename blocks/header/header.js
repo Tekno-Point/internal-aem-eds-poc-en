@@ -113,6 +113,7 @@ export default async function decorate(block) {
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
+  console.log(fragment)
 
   // decorate nav DOM
   block.textContent = '';
@@ -141,13 +142,6 @@ export default async function decorate(block) {
       navSection.addEventListener('click', () => {
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          // const checkClose = closeIcon.style.display === 'block';
-          // if (checkClose) {
-          //   closeIcon.style.display = 'none';
-          // }
-          // else {
-          //   closeIcon.style.display = 'block';
-          // }
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
           navSections.classList.add('active');
@@ -172,13 +166,7 @@ export default async function decorate(block) {
       else {
         const expanded = nav.getAttribute('aria-expanded') === 'true';
         nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        const navElementList = document.querySelectorAll('.nav-drop > p');
         const mobcategory = navSections.querySelector(".mob-category-title p")
-        navElementList.forEach(elem => {
-          elem.style.display = 'block';
-          elem.parentElement.querySelector('ul').style.display = "none";
-          mobcategory.innerHTML = ` `;
-        })
         mobcategory.parentElement.classList.remove('active-ul');
         document.body.style.overflowY = "";
       }
@@ -254,19 +242,9 @@ function mobileNav(e, mobcategory) {
 }
 
 function mobNavAccordion(e) {
-  // console.log(e.target)
   const navElement = e.target.parentElement;
   if (navElement.classList.contains('button-container')){
     let summary = navElement.nextElementSibling;
         summary.classList.toggle("show");
-        console.log(navElement)
   }
-  // let title = document.querySelectorAll('.section.nav-sections .nav-drop > ul > li > p');
-  // console.log(title)
-  // title.forEach(elem => {
-  //   elem.addEventListener('click', ()=> {
-  //     let summary = elem.nextElementSibling;
-  //     summary.classList.toggle("show");
-  //   })
-  // })
 }

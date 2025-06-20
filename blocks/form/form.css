@@ -334,9 +334,18 @@
     max-width: unset;
   }
 
+  .section.rate-calculator .form.block form>div {
+    flex-direction: column;
+  }
+
   .section.rate-calculator {
     margin: 0;
     padding: 40px 20px 60px;
+  }
+
+  .section.rate-calculator .form.block form > fieldset {
+    justify-content: start;
+    margin-top: 0;
   }
 
   .section.rate-calculator .form.block .field-wrapper.fieldset-wrapper fieldset {
@@ -350,7 +359,6 @@
 
   .section.rate-calculator .form.block .field-wrapper.submit-wrapper {
     display: unset;
-    margin-top: 10px;
   }
 
   .section.rate-calculator .form.block .field-wrapper.date-wrapper input[type="date"],
