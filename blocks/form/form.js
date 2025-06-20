@@ -94,10 +94,15 @@ export default async function decorate(block) {
   const form = await createForm(formLink, submitLink);
   block.replaceChildren(form);
 
-  const formCanton = form.querySelector('select#form-canton');
-  if(formCanton) {
-    data.cantons.forEach((canton) => {
-      // const option = document.createElement
+  const formSelect = form.querySelectorAll('select');
+  if(formSelect.length) {
+    formSelect.forEach((elem) => {
+        if(elem.id === 'form-canton') {
+            renderOptions(data.cantons,elem);
+        }
+        else {
+            renderOptions(data.languages,elem);
+        }
     })
   }
 
@@ -115,3 +120,13 @@ export default async function decorate(block) {
     }
   });
 }
+
+function renderOptions (data,elem){
+    data.forEach((item) => {
+        const option = document.createElement('option')
+        option.value = item.value;
+        option.textContent = item.label;
+        elem.appendChild(option);
+      })
+}
+

@@ -89,7 +89,8 @@ footer .footer p {
   display: none;
 }
 
-.section.footer-links .form-wrapper .form.block .field-wrapper input {
+.section.footer-links .form-wrapper .form.block .field-wrapper input,
+.section.footer-links .form-wrapper .form.block .field-wrapper select {
   font-size: 15px;
   color: #4d6e82;
   font-weight: 700;
@@ -101,11 +102,16 @@ footer .footer p {
   margin-top: 28px;
 }
 
-.section.footer-links .form-wrapper .form.block .field-wrapper input::placeholder {
+.section.footer-links .form-wrapper .form.block .field-wrapper select {
   color: rgba(77, 110, 130, .5);
 }
 
-.section.footer-links .form-wrapper .form.block .field-wrapper input:focus {
+.section.footer-links .form-wrapper .form.block .field-wrapper input::placeholder{
+  color: rgba(77, 110, 130, .5);
+}
+
+.section.footer-links .form-wrapper .form.block .field-wrapper input:focus,
+.section.footer-links .form-wrapper .form.block .field-wrapper select:focus {
   outline: unset;
 }
 
