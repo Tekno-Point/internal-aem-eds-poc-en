@@ -176,6 +176,10 @@
           {
             "name": "Rate Calculator",
             "value": "rate-calculator"
+          },
+          {
+            "name": "Concordia Search Modal",
+            "value": "concordia-search-modal"
           }
         ]
       }
