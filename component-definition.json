@@ -212,7 +212,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Compare Item",
+                  "name": "Compare Item 1",
                   "model": "compare-item1"
                 }
               }
