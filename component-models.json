@@ -169,8 +169,9 @@
     "id": "cf-fragment",
     "fields": [
       {
-        "component": "aem-content",
+        "component": "aem-content-fragment",
         "name": "reference",
+        "variationName": "contentFragmentVariation",
         "label": "CF Reference"
       }
     ]
