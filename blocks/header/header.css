@@ -184,6 +184,12 @@ header nav .nav-brand p.button-container a {
   overflow: unset;
 }
 
+@media (width >=1025px) {
+  header .nav-brand {
+    flex: 2;
+  }
+}
+
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
@@ -462,20 +468,6 @@ header nav .nav-sections.active .default-content-wrapper p span.icon-close-icon 
     cursor: pointer;
   }
 
-  /* header nav .nav-sections .nav-drop::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0.5em;
-    right: 2px;
-    transform: rotate(135deg);
-    width: 6px;
-    height: 6px;
-    border: 2px solid currentcolor;
-    border-radius: 0 1px 0 0;
-    border-width: 2px 2px 0 0;
-  } */
-
   header nav .nav-sections .nav-drop[aria-expanded='true']::after {
     top: unset;
     bottom: 0.5em;
@@ -484,7 +476,6 @@ header nav .nav-sections.active .default-content-wrapper p span.icon-close-icon 
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
     margin: 0;
   }
 
@@ -517,8 +508,13 @@ header nav .nav-sections.active .default-content-wrapper p span.icon-close-icon 
     display: flex;
   }
 
-  header nav .nav-sections ul li.nav-drop[aria-expanded='true'] p {
+  header nav .nav-sections ul > li.nav-drop > p {
+    padding: 31px 16px 31px 16px;
+  }
+
+  header nav .nav-sections ul > li.nav-drop[aria-expanded='true'] > p {
     color: #ff8a00;
+    border-bottom: 2px solid #ff8a00;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>ol>li {
@@ -552,6 +548,10 @@ header nav .nav-tools .default-content-wrapper .button-container a {
   padding: 0;
 }
 
+header nav .nav-tools .default-content-wrapper .button-container a:hover{
+  color: #ff8a00;
+}
+
 header nav .nav-tools .default-content-wrapper .button-container a span {
   display: inline-block;
   height: 25px;
@@ -559,7 +559,7 @@ header nav .nav-tools .default-content-wrapper .button-container a span {
   margin-right: 5px;
 }
 
-header nav .nav-tools .default-content-wrapper .button-container a span:hover {
+header nav .nav-tools .default-content-wrapper .button-container a:hover span {
   filter: invert(64%) sepia(95%) saturate(1000%) hue-rotate(2deg) brightness(102%) contrast(101%);
 }
 
