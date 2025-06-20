@@ -14,8 +14,8 @@ import {
 
 const geoPromise = (async () => {
   // Replace with your actual geo service endpoint
-  const resp = await fetch('https://geo.example.com/lookup');
-  return resp.json();
+  // const resp = await fetch('https://geo.example.com/lookup');
+  // return resp.json();
 })();
 
 const experimentationConfig = {

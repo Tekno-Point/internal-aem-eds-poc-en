@@ -1,4 +1,4 @@
-.form .field-wrapper {
+/* .form .field-wrapper {
     display: grid;
     grid-auto-flow: row;
     align-items: center;
@@ -167,4 +167,4 @@
   
   .form .toggle-wrapper input:checked + .slider::before {
     transform: translateX(24px);
-  }
+  } */

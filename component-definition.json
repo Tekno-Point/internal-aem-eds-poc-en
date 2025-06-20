@@ -234,7 +234,7 @@
           }
         },
         {
-          "title": "article",
+          "title": "Article",
           "id": "article",
           "plugins": {
             "xwalk": {
