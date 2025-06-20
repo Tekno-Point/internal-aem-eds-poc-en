@@ -105,6 +105,11 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "text",
+        "name": "id",
+        "label": "Id"
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
@@ -174,13 +179,19 @@
         "label": "Select Class For Show/Hide",
         "valueType": "string",
         "options": [
-          { "name": "rightBlock", "value": "Right-block" },
-          { "name": "leftBlock", "value": "Left-block" }
+          {
+            "name": "rightBlock",
+            "value": "Right-block"
+          },
+          {
+            "name": "leftBlock",
+            "value": "Left-block"
+          }
         ]
       }
     ]
   },
-   {
+  {
     "id": "poonawallaFincorpTeamItem",
     "fields": [
       {
@@ -204,10 +215,9 @@
         "label": "Alt",
         "value": ""
       }
-      
     ]
   },
-   {
+  {
     "id": "poonawallaFincorpTeamItem2",
     "fields": [
       {
@@ -216,7 +226,7 @@
         "value": "",
         "label": "Text1",
         "valueType": "string"
-      }  
+      }
     ]
   },
   {
