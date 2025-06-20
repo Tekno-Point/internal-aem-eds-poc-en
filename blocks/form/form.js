@@ -1,4 +1,5 @@
 import createField from './form-fields.js';
+import {data} from './form-data.js';
 
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
@@ -92,6 +93,13 @@ export default async function decorate(block) {
 
   const form = await createForm(formLink, submitLink);
   block.replaceChildren(form);
+
+  const formCanton = form.querySelector('select#form-canton');
+  if(formCanton) {
+    data.cantons.forEach((canton) => {
+      // const option = document.createElement
+    })
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
