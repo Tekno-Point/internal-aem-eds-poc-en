@@ -15,7 +15,15 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "poonawallaFincorpTeam"
+    ]
+  },
+  {
+    "id": "poonawallaFincorpTeam",
+    "components": [
+      "poonawallaFincorpTeamItem",
+      "poonawallaFincorpTeamItem2"
     ]
   },
   {
