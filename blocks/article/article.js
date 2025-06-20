@@ -160,6 +160,7 @@ export default async function decorate(block) {
     if (!formLink || !submitLink) return;
 
     const form = await createForm(formLink, submitLink);
+    console.log(form)
     block.replaceChildren(form);
 
     form.addEventListener('submit', (e) => {
