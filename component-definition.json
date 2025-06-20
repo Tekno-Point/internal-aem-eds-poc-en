@@ -159,7 +159,7 @@
                 "editable": true,
                 "path": {
                   "type": "string",
-                  "default": "/content/dam/internal-aem-eds-poc/cf"
+                  "default": "/content/dam/internal-aem-eds-poc/cf/vacation"
                 },
                 "fragmentModel": "article"
               }
