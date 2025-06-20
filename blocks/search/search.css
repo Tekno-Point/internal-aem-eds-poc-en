@@ -135,3 +135,28 @@
     width: 24px;
     border-radius: 50%;
   }
+
+
+  /* Header search modal css */
+  .modal.block dialog:has(.section.concordia-search-modal) {
+    width: 100%;
+    max-width: 100%;
+    border: unset;
+    background: #eef2f5;
+    margin-top: 80px;
+    overflow: hidden;
+  }
+
+  .modal.block dialog:has(.section.concordia-search-modal) .modal-content {
+    padding: 50px 0;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+
+  .modal.block dialog:has(.section.concordia-search-modal) .close-button {
+    display: none;
+  }
+
+  .modal dialog:has(.section.concordia-search-modal)::backdrop {
+    background: unset;
+  }

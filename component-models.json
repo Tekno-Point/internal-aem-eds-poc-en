@@ -357,11 +357,11 @@
     "id": "search",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "component": "text",
+        "valueType": "string",
+        "name": "url",
+        "label": "path",
+        "value": ""
       }
     ]
   }

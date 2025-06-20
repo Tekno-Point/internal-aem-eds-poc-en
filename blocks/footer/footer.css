@@ -192,6 +192,11 @@ footer .footer p {
     max-width: 100%;
   }
 
+  .section.footer-links .form-wrapper .form.block .field-wrapper select {
+    max-width: 100%;
+    width: 100%;
+  }
+
   .section.footer-links .form-wrapper .form.block .field-wrapper.fieldset-wrapper fieldset {
     flex-direction: row;
   }
