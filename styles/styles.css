@@ -271,7 +271,7 @@ main{
 #NeedforDaycareBusinessIndia{
   grid-column: 2;
 }
-#StepsStartDaycarBusiness{
+#StepsStartDaycarBusinessedit{
 grid-column: 2;
 }
 #StepstoApplyBusinessLoan{
@@ -281,5 +281,8 @@ grid-column: 2;
 grid-column: 2;
 }
 #AbouttheAuthor{
+grid-column: 2;
+}
+#toConclude{
 grid-column: 2;
 }
