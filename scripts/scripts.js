@@ -128,6 +128,67 @@ async function loadLazy(doc) {
   loadFonts();
 }
 
+//////
+// document.addEventListener("DOMContentLoaded", function () {
+//   const section = document.querySelector('.section[data-id="tableofcontent"]');
+//    if (section) {
+//     const links = section.querySelectorAll("li a");
+
+//     // Define your custom mapping here
+//     const scrollMap = {
+//       "whatisDaycare":"whatisDaycare",
+//       "NeedforDaycareBusinessIndia": "NeedforDaycareBusinessIndia",
+//       "StepsStartDaycarBusinessedit": "StepsStartDaycarBusinessedit",
+//       "StepstoApplyBusinessLoan": "StepstoApplyBusinessLoan",
+//       "AbouttheAuthor": "toConclude",
+//       "FrequentlyAskedQuestions": "FrequentlyAskedQuestions"
+//     };
+
+//     links.forEach((link) => {
+//       link.addEventListener("click", function (e) {
+//         e.preventDefault();
+
+//         const sourceHref = link.getAttribute("href");
+//         const targetId = scrollMap[sourceHref]; 
+
+//         if (targetId) {
+//           const targetSection = document.querySelector(`.section[data-id="${targetId}"]`);
+//           if (targetSection) {
+//             targetSection.scrollIntoView({
+//               behavior: "smooth",
+//               block: "start"
+//             });
+//           }
+//         } 
+//       });
+//     });
+//   }
+  
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+ const scrollMap = {
+      "whatisDaycare":"whatisDaycare",
+      "NeedforDaycareBusinessIndia": "NeedforDaycareBusinessIndia",
+      "StepsStartDaycarBusinessedit": "StepsStartDaycarBusinessedit",
+      "StepstoApplyBusinessLoan": "StepstoApplyBusinessLoan",
+      "AbouttheAuthor": "toConclude",
+      "FrequentlyAskedQuestions": "FrequentlyAskedQuestions"
+    };
+
+  document.querySelectorAll('.section[data-id="tableofcontent"] li a').forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = scrollMap[link.getAttribute("href")];
+      const target = document.querySelector(`.section[data-id="${targetId}"]`);
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+});
+
+
+///////
+
 /**
  * Loads everything that happens a lot later,
  * without impacting the user experience.
