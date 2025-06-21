@@ -50,3 +50,26 @@
 header .breadcrumbs {
   display: none !important;
 }
+
+.breadcrumb>.container-fluid>ul{
+    padding: 0px;
+    display: flex;
+    gap: 25px;
+    
+}
+.breadcrumb>.container-fluid>ul>li>a{
+color: #034ea2;
+}
+.breadcrumb>.container-fluid>ul>li{
+    color: #034ea2;
+    font-family:"Montserrat-Regular" ;
+}
+.breadcrumb>.container-fluid>ul>li:nth-child(1){
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+ .breadcrumb{
+    display: none;
+ }
+}

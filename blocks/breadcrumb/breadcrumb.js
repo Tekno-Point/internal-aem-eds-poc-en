@@ -6,71 +6,44 @@ import { fetchPlaceholders } from '../../scripts/placeholders.js';
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-  // load navigation as fragment
-  const navigationMeta = getMetadata('nav');
-  const navigationPath = navigationMeta ? new URL(navigationMeta, window.location).pathname : '/nav';
-  const fragment = await loadFragment(navigationPath);
+  // Clear block
+  block.innerHTML = '';
 
-  // decorate navigation DOM
-  block.textContent = '';
-  const navigation = document.createElement('nav');
-  navigation.id = 'main-navigation';
-  while (fragment.firstElementChild) navigation.append(fragment.firstElementChild);
+  // Build breadcrumb structure
+  const container = document.createElement('div');
+  container.className = 'container-fluid';
 
-  const sectionNames = ['brand', 'sections', 'tools'];
-  sectionNames.forEach((name, i) => {
-    const section = navigation.children[i];
-    if (section) section.classList.add(`${name}-section`);
+  const ul = document.createElement('ul');
+  ul.className = 'breadcrumb mob-hide artBredcrumb';
+
+  // Example: statically define your breadcrumb items
+  // You can make this dynamic if needed
+  const crumbs = [
+    { label: 'Home', href: '/' },
+    { label: 'Blog', href: '/blogs/all-blogs' },
+    { label: 'Business Loan', href: '/blogs/business-loan', id: 'prevLink' },
+    { label: 'How to Start a Daycare Business in India: A Step-by-Step Guide', active: true, id: 'curr-link' },
+  ];
+
+  crumbs.forEach((crumb, idx) => {
+    const li = document.createElement('li');
+    li.className = 'breadcrumb-item' + (crumb.active ? ' active' : '');
+    if (crumb.id) li.id = crumb.id;
+    if (crumb.active) li.setAttribute('aria-current', 'page');
+    if (crumb.href && !crumb.active) {
+      const a = document.createElement('a');
+      a.href = crumb.href;
+      a.textContent = crumb.label;
+      li.append(a);
+    } else {
+      li.textContent = crumb.label;
+    }
+    ul.append(li);
   });
 
-  const brandSection = navigation.querySelector('.brand-section');
-  const brandLink = brandSection ? brandSection.querySelector('.button') : null;
-  if (brandLink) {
-    brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
-  }
-
-  const sectionsSection = navigation.querySelector('.sections-section');
-  if (sectionsSection) {
-    sectionsSection.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((sectionItem) => {
-      if (sectionItem.querySelector('ul')) sectionItem.classList.add('dropdown-section');
-      sectionItem.addEventListener('click', () => {
-        if (isDesktop.matches) {
-          const expanded = sectionItem.getAttribute('aria-expanded') === 'true';
-          toggleAllSections(sectionsSection);
-          sectionItem.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        }
-      });
-    });
-  }
-
-  const toolsSection = navigation.querySelector('.tools-section');
-  if (toolsSection) {
-    const search = toolsSection.querySelector('a[href*="search"]');
-    if (search && search.textContent === '') {
-      search.setAttribute('aria-label', 'Search');
-    }
-  }
-
-  // hamburger for mobile
-  const hamburgerContainer = document.createElement('div');
-  hamburgerContainer.classList.add('hamburger-container');
-  hamburgerContainer.innerHTML = `<button type="button" aria-controls="main-navigation" aria-label="Open navigation">
-      <span class="hamburger-icon"></span>
-    </button>`;
-  hamburgerContainer.addEventListener('click', () => toggleMenu(navigation, sectionsSection));
-  navigation.prepend(hamburgerContainer);
-  navigation.setAttribute('aria-expanded', 'false');
-  // prevent mobile nav behavior on window resize
-  toggleMenu(navigation, sectionsSection, isDesktop.matches);
-  isDesktop.addEventListener('change', () => toggleMenu(navigation, sectionsSection, isDesktop.matches));
-
-  const navigationWrapper = document.createElement('div');
-  navigationWrapper.className = 'navigation-wrapper';
-  navigationWrapper.append(navigation);
-  block.append(navigationWrapper);
-
-  // Breadcrumbs are NOT loaded here!
+  container.append(ul);
+  block.append(container);
+  
 }
 
 // --- Breadcrumbs logic below ---
