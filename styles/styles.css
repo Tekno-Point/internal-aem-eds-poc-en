@@ -255,3 +255,31 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Left and right columns */
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#tableofcontent{
+  grid-column: 1;
+  grid-row: 1 / span 5;
+}
+#NeedforDaycareBusinessIndia{
+  grid-column: 2;
+}
+#StepsStartDaycarBusiness{
+grid-column: 2;
+}
+#StepstoApplyBusinessLoan{
+grid-column: 2;
+}
+#FrequentlyAskedQuestions{
+grid-column: 2;
+}
+#AbouttheAuthor{
+grid-column: 2;
+}
