@@ -16,8 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "embed",
-      "poona-fincorp-blogs"
+      "embed"
     ]
   },
   {
@@ -40,9 +39,5 @@
       "button",
       "title"
     ]
-  },
-  {
-    "id": "poona-fincorp-blogs",
-    "components": ["poona-fincorp-blogs-item"]
   }
 ]
