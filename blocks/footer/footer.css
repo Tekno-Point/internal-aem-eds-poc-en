@@ -1,4 +1,4 @@
-/* footer {
+footer {
   background-color: var(--light-color);
   font-size: var(--body-font-size-xs);
 }
@@ -24,10 +24,10 @@ body main {
 
 main > .section.footer-container {
   display: block !important;
-}
-main > .section.footer-container .footer-wrapper {
   background: #253a71;
   color: #fff;
+}
+main > .section.footer-container .footer-wrapper {
   z-index: 1;
   margin: 0;
   padding: 0;
@@ -88,6 +88,11 @@ main > .section.footer-container .footer-wrapper .footer .accordion-item .accord
   margin: 0;
   padding: 0;
 }
+@media (max-width: 900px) {
+  main > .section.footer-container .footer-wrapper .footer .accordion-item .accordion-item-body ul {
+    flex-direction: column;
+  }
+}
 main > .section.footer-container .footer-wrapper .footer .accordion-item .accordion-item-body ul li {
   width: 25%;
 }
@@ -103,7 +108,7 @@ main > .section.footer-container .footer-wrapper .footer .accordion-item .accord
   flex-direction: column;
 }
 main > .section.footer-container .footer-wrapper .footer .accordion-item .accordion-item-body ul li ul li {
-  width: 100%;
+  width: 300px;
 }
 main > .section.footer-container .footer-wrapper .footer .accordion-item .accordion-item-body ul li ul li a {
   font-size: 12px;
@@ -114,4 +119,62 @@ main > .section.footer-container .footer-wrapper .footer .accordion-item .accord
 }
 main > .section.footer-container .footer-wrapper .footer .accordion-item.active .accordion-item-label p::after {
   background: url(/icons/icon-minus.svg);
-}# sourceMappingURL=footer.css.map */
+}
+main > .section.footer-container .columns-wrapper {
+  max-width: inherit;
+}
+main > .section.footer-container .columns-wrapper .columns > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: self-start;
+}
+main > .section.footer-container .columns-wrapper .columns > div > div {
+  font-family: Montserrat-Regular, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+}
+main > .section.footer-container .columns-wrapper .columns > div > div p {
+  font-family: Montserrat-Regular, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+}
+main > .section.footer-container .columns-wrapper .columns > div > div .button-container a {
+  background-color: unset;
+  margin: 0;
+  padding: 0;
+}
+main > .section.footer-container .columns-wrapper .columns > div .footer-sub1-bottom4 h2 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.46px;
+  text-transform: uppercase;
+}
+main > .section.footer-container .columns-wrapper .columns > div .footer-sub1-bottom4 h3 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.46px;
+  text-transform: uppercase;
+}
+main > .section.footer-container .columns-wrapper .columns .footer-bottom2 {
+  padding-bottom: 50px;
+}
+main > .section.footer-container .columns-wrapper .columns .footer-bottom2 .footer-sub2-bottom1 h5 {
+  font-weight: 400;
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+}
+main > .section.footer-container .columns-wrapper .columns .footer-bottom2 .footer-sub2-bottom1 p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+main > .section.footer-container .columns-wrapper .columns .footer-bottom2 .footer-sub2-bottom1 p a {
+  color: white;
+}
+main > .section.footer-container .columns-wrapper .columns .footer-bottom2 .footer-content-ul li {
+  width: 200px;
+}/*# sourceMappingURL=footer.css.map */

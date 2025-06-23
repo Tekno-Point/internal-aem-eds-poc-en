@@ -27,10 +27,12 @@ body {
 
 main>.section.footer-container {
   display: block !important;
+  background: #253a71;
+  color: #fff;
 
   .footer-wrapper {
-    background: #253a71;
-    color: #fff;
+    // background: #253a71;
+    // color: #fff;
     z-index: 1;
     margin: 0;
     padding: 0;
@@ -94,6 +96,10 @@ main>.section.footer-container {
             margin: 0;
             padding: 0;
 
+            @media (max-width:900px) {
+              flex-direction: column;
+            }
+
             li {
               width: 25%;
 
@@ -110,11 +116,14 @@ main>.section.footer-container {
                 flex-direction: column;
 
                 li {
-                  width: 100%;
-                  a{
+                  width: 300px;
+
+
+
+                  a {
                     font-size: 12px;
-                    line-height: 14px; 
-                    color: #fff ;
+                    line-height: 14px;
+                    color: #fff;
                     cursor: pointer;
                     font-weight: 400;
                   }
@@ -132,6 +141,91 @@ main>.section.footer-container {
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  .columns-wrapper {
+    max-width: inherit;
+
+    .columns {
+      &>div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: self-start;
+
+        >div {
+          font-family: Montserrat-Regular, sans-serif;
+          font-size: 12px;
+          text-transform: uppercase;
+          color: #fff;
+
+          p {
+            font-family: Montserrat-Regular, sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #fff;
+          }
+
+          .button-container {
+            a {
+              background-color: unset;
+              margin: 0;
+              padding: 0;
+            }
+
+          }
+        }
+
+        .footer-sub1-bottom4 {
+          h2 {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14.46px;
+            text-transform: uppercase;
+          }
+
+          h3 {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14.46px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .footer-bottom2 {
+        padding-bottom: 50px;
+
+        .footer-sub2-bottom1 {
+          h5 {
+            font-weight: 400;
+            display: block;
+            margin-top: 5px;
+            font-size: 12px;
+
+          }
+
+          p {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+
+            a {
+              color: white;
+            }
+          }
+        }
+
+        .footer-content-ul {
+          li {
+            width: 200px;
+          }
+
+
+
         }
       }
     }
