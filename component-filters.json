@@ -21,7 +21,9 @@
       "fincorp",
       "form",
       "embed",
-      "poona-fincorp-blogs"
+      "poona-fincorp-blogs",
+      "poonawallaFincorpTeam",
+      "footer"
     ]
   },
   {
@@ -49,6 +51,12 @@
     "id": "poona-fincorp-blogs",
     "components": [
       "poona-fincorp-blogs-item"
+    ]
+  },
+  {
+    "id": "footer",
+    "components": [
+      "footer-item"
     ]
   }
 ]

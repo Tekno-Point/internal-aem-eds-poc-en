@@ -375,12 +375,57 @@ grid-column: 2;
   outline: 2px solid #004aad;
   transition: outline 0.3s ease;
 }
+/* business css */
+
+.businessloan>.default-content-wrapper>p{
+          font-size: 16px;
+}
+.businessloan>.default-content-wrapper>h1{
+        font-family: "Montserrat-Bold";
+  margin: 0px;
+          font-size: 36px;
+        line-height: 1.2;
+        max-width: 828px;
+        width: 100%;
+
+}
+.businessloan>.default-content-wrapper>ul{
+  list-style: none;
+  padding: 0px;
+}
+
+.businessloan>.default-content-wrapper>ul>li>ul{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0px;
+}
+.businessloan>.default-content-wrapper>ul>li>ul>li>ul{
+  list-style: none;
+  padding: 0px;
+}
+.businessloan>.default-content-wrapper>ul>li>ul>li>ul>li:nth-child(1){
+      font-family: "Montserrat-SemiBold";
+    line-height: normal;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.businessloan>.default-content-wrapper>ul>li>ul>li>ul>li:nth-child(2){
+      font-family:"Montserrat-Regular";
+    line-height: normal;
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-weight: 400px;
+}
+
 @media screen and (max-width: 768px) {
   .table-wrapper .section[data-id="tableofcontent"]{
     display: none;
   }
-  main{
-    grid-template-columns: 1fr; 
+
+  main {
+    grid-template-columns: 1fr;
   }
 
    .table-wrapper .section[data-id="tableofcontent"] {
