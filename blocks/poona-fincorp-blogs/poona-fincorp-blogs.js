@@ -1,4 +1,4 @@
-import SwiperBlock from "../swiper/swiper.js"
+// import SwiperBlock from "../swiper/swiper.js"
 
 export default function decorate(block) {
     Array.from(block.children).forEach((el=>{
@@ -7,7 +7,7 @@ export default function decorate(block) {
             el.classList.add(`blog-item-${i+1}`)
         })
     }))
-    if (window.innerWidth < 768) {
-        SwiperBlock(block)
-    }
+    // if (window.innerWidth < 768) {
+    //     SwiperBlock(block)
+    // }
 }
