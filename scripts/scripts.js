@@ -128,6 +128,30 @@ async function loadLazy(doc) {
   loadFonts();
 }
 
+//////
+document.addEventListener("DOMContentLoaded", () => {
+ const scrollMap = {
+      "whatisDaycare":"whatisDaycare",
+      "NeedforDaycareBusinessIndia": "NeedforDaycareBusinessIndia",
+      "StepsStartDaycarBusinessedit": "StepsStartDaycarBusinessedit",
+      "StepstoApplyBusinessLoan": "StepstoApplyBusinessLoan",
+      "AbouttheAuthor": "toConclude",
+      "FrequentlyAskedQuestions": "FrequentlyAskedQuestions"
+    };
+
+  document.querySelectorAll('.section[data-id="tableofcontent"] li a').forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = scrollMap[link.getAttribute("href")];
+      const target = document.querySelector(`.section[data-id="${targetId}"]`);
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+});
+
+
+///////
+
 /**
  * Loads everything that happens a lot later,
  * without impacting the user experience.
