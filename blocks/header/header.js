@@ -59,7 +59,7 @@ function focusNavSection() {
 function toggleAllNavSections(sections, expanded = false) {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li, .nav-tools .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
-    section?.querySelector("ul").classList.add("inner-ul");
+    section?.querySelector("ul")?.classList.add("inner-ul");
     section?.querySelectorAll("ul >li")?.forEach((subLi, ind) => {
       subLi.setAttribute('aria-expanded', ind == 0 ? 'true' : expanded);
     })
@@ -151,7 +151,22 @@ export default async function decorate(block) {
   }
 
   const navSections = nav.querySelector('.nav-sections');
+  const navSectionsImg = nav.querySelector(".section.highlight");
+  if (navSectionsImg) {
+    let imgDefaultCon = navSectionsImg.querySelector(".default-content-wrapper")
+    navSections?.querySelectorAll('.default-content-wrapper > ul > li >ul').forEach((section => {
+      section.querySelectorAll("li").forEach((li) => {
+        const imgClone = imgDefaultCon.cloneNode(true);
+        li.appendChild(imgClone);
+      })
+      // subLiSection.appendChild(imgDefaultCon);
+    }))
+  }
+
+  navSectionsImg.remove();
+
   if (navSections) {
+
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', (e) => {
