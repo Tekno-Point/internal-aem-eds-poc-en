@@ -434,6 +434,32 @@
     ]
   },
   {
+    "id": "search",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "apollo search",
+            "children": [
+              {
+                "name": "Search Block",
+                "value": "apollo-search"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "query Index",
+        "label": "url"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
