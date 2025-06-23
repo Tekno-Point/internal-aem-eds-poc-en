@@ -142,7 +142,7 @@
             }
           }
         },
-         {
+        {
           "title": "poonawallaFincorpTeam",
           "id": "poonawallaFincorpTeam",
           "plugins": {
@@ -158,7 +158,7 @@
             }
           }
         },
-         {
+        {
           "title": "poonawallaFincorpTeam",
           "id": "poonawallaFincorpTeamItem",
           "plugins": {
@@ -198,6 +198,38 @@
                 "template": {
                   "name": "Embed",
                   "model": "embed"
+                }
+              }
+            }
+          }
+        },
+
+        {
+          "title": "Poona Fincorp Blogs",
+          "id": "poona-fincorp-blogs",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Poona Fincorp Blogs",
+                  "filter": "poona-fincorp-blogs",
+                  "model": "poona-fincorp-blogs"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Poona Fincorp Blogs Item",
+          "id": "poona-fincorp-blogs-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Poona Fincorp Blogs Item",
+                  "model": "poona-fincorp-blogs-item"
                 }
               }
             }
