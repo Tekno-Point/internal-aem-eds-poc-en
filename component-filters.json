@@ -23,7 +23,9 @@
     "id": "poonawallaFincorpTeam",
     "components": [
       "poonawallaFincorpTeamItem",
-      "poonawallaFincorpTeamItem2"
+      "poonawallaFincorpTeamItem2",
+      "breadcrumb",
+      "fincorp"
     ]
   },
   {
