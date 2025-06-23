@@ -1,4 +1,4 @@
-footer {
+/* footer {
   background-color: var(--light-color);
   font-size: var(--body-font-size-xs);
 }
@@ -114,4 +114,4 @@ main > .section.footer-container .footer-wrapper .footer .accordion-item .accord
 }
 main > .section.footer-container .footer-wrapper .footer .accordion-item.active .accordion-item-label p::after {
   background: url(/icons/icon-minus.svg);
-}/*# sourceMappingURL=footer.css.map */
+}# sourceMappingURL=footer.css.map */
