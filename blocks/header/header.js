@@ -153,8 +153,6 @@ export default async function decorate(block) {
       langSelector.querySelector('ul').classList.toggle('show');
     })
 
-    // const isMobile = window.innerWidth < 1025;
-
     closeIcon.addEventListener('click', () => {
       if (isDesktop.matches) {
         navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
@@ -163,18 +161,15 @@ export default async function decorate(block) {
         })
       }
       else {
-        const expanded = nav.getAttribute('aria-expanded') === 'true';
-        nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        const mobcategory = navSections.querySelector(".mob-category-title p")
-        mobcategory.parentElement.classList.remove('active-ul');
-        document.body.style.overflowY = "";
+        nav.setAttribute('aria-expanded', 'false');
+        document.body.style.overflowY = "";``
       }
     })
 
     if (!isDesktop.matches) {
       const mobCategoryTitle = document.createElement('div');
       mobCategoryTitle.classList.add('mob-category-title');
-      mobCategoryTitle.innerHTML = `<span><img src=../../images/back-arrow.svg /></span>`
+      mobCategoryTitle.innerHTML = `<span><img src=/images/back-arrow.svg /></span>`
       const p =  document.createElement('p');
       mobCategoryTitle.appendChild(p);
 
@@ -245,5 +240,9 @@ function mobNavAccordion(e) {
   if (navElement.classList.contains('button-container')){
     let summary = navElement.nextElementSibling;
         summary.classList.toggle("show");
+  }
+  else if(e.target.tagName === 'A' && e.target.parentElement.tagName === 'LI') {
+    let summary = e.target.nextElementSibling;
+        summary?.classList.toggle("show");
   }
 }
