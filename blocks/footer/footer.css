@@ -46,7 +46,7 @@ main > .section.footer-container .footer-wrapper .footer ul {
 main > .section.footer-container .footer-wrapper .footer .footer-content {
   padding: 0 60px;
 }
-main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .footer-content-column.sebtxt-1 {
+main > .section.footer-container .footer-wrapper .footer .footer-content .footer-content-column:first-child {
   display: block;
   margin-bottom: -0.0625rem;
   background-color: rgba(255, 255, 255, 0);
@@ -54,7 +54,7 @@ main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .
   border-bottom: 1px solid #fff;
   position: relative;
 }
-main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .footer-content-column.sebtxt-1 p {
+main > .section.footer-container .footer-wrapper .footer .footer-content .footer-content-column:first-child p {
   font-family: "Montserrat-Medium", sans-serif;
   font-size: 18px;
   color: #fff;
@@ -70,15 +70,30 @@ main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .
      -moz-user-select: none;
           user-select: none;
   vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }
-main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .footer-content-column.sebtxt-2 > ul {
+main > .section.footer-container .footer-wrapper .footer .footer-content .footer-content-column:first-child p::after {
+  content: "";
+  background: url(/icons/icon-plus.svg);
+  width: 24px;
+  height: 24px;
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-size: cover;
+}
+main > .section.footer-container .footer-wrapper .footer .footer-content .footer-content-column:first-child:nth-child(2) > ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .footer-content-column.sebtxt-2 > ul li ul {
+main > .section.footer-container .footer-wrapper .footer .footer-content .footer-content-column:first-child:nth-child(2) > ul li ul {
   margin: 0;
   padding: 0;
 }/*# sourceMappingURL=footer.css.map */

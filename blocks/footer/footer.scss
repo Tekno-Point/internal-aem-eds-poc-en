@@ -50,34 +50,49 @@ main>.section.footer-container {
       .footer-content {
         padding: 0 60px;
 
-        &.sec-1 {
-          .footer-content-column {
-            &.sebtxt-1 {
-              display: block;
-              margin-bottom: -0.0625rem;
-              background-color: #fff0;
-              border-top: 1px solid #fff;
-              border-bottom: 1px solid #fff;
-              position: relative;
 
-              p {
-                font-family: "Montserrat-Medium", sans-serif;
-                font-size: 18px;
-                color: #fff;
-                width: 99%;
-                padding: 1rem 0;
-                font-weight: 400;
-                text-align: left;
-                text-decoration: none;
-                line-height: 1.5;
-                text-transform: none;
-                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-                user-select: none;
-                vertical-align: middle;
+        .footer-content-column {
+          &:first-child {
+            display: block;
+            margin-bottom: -0.0625rem;
+            background-color: #fff0;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            position: relative;
+
+            p {
+              font-family: "Montserrat-Medium", sans-serif;
+              font-size: 18px;
+              color: #fff;
+              width: 99%;
+              padding: 1rem 0;
+              font-weight: 400;
+              text-align: left;
+              text-decoration: none;
+              line-height: 1.5;
+              text-transform: none;
+              transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+              user-select: none;
+              vertical-align: middle;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              cursor: pointer;
+
+              &::after {
+                content: '';
+                background: url(/icons/icon-plus.svg);
+                width: 24px;
+                height: 24px;
+                position: relative;
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                background-size: cover;
               }
             }
 
-            &.sebtxt-2 {
+            &:nth-child(2) {
               >ul {
                 display: flex;
                 flex-wrap: wrap;
@@ -97,6 +112,7 @@ main>.section.footer-container {
               }
             }
           }
+
         }
       }
     }
