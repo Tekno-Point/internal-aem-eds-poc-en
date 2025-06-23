@@ -96,7 +96,8 @@ main > .section.footer-container .footer-wrapper .footer .accordion-item .accord
 main > .section.footer-container .footer-wrapper .footer .accordion-item .accordion-item-body ul li {
   width: 25%;
 }
-main > .section.footer-container .footer-wrapper .footer .accordion-item .accordion-item-body ul li p {
+main > .section.footer-container .footer-wrapper .footer .accordion-item .accordion-item-body ul li a {
+  color: white !important;
   font-weight: 600;
   margin-bottom: 10px;
   font-family: Montserrat-Regular, sans-serif;
@@ -117,6 +118,12 @@ main > .section.footer-container .footer-wrapper .footer .accordion-item .accord
   cursor: pointer;
   font-weight: 400;
 }
+main > .section.footer-container .footer-wrapper .footer .accordion-item .accordion-item-body .footer-content-ul li {
+  width: 200px;
+}
+main > .section.footer-container .footer-wrapper .footer .accordion-item .accordion-item-body .footer-content-ul li a {
+  color: white !important;
+}
 main > .section.footer-container .footer-wrapper .footer .accordion-item.active .accordion-item-label p::after {
   background: url(/icons/icon-minus.svg);
 }
@@ -127,7 +134,7 @@ main > .section.footer-container .columns-wrapper .columns > div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: self-start;
+  align-items: anchor-center;
 }
 main > .section.footer-container .columns-wrapper .columns > div > div {
   font-family: Montserrat-Regular, sans-serif;
@@ -158,6 +165,19 @@ main > .section.footer-container .columns-wrapper .columns > div .footer-sub1-bo
   line-height: 14.46px;
   text-transform: uppercase;
 }
+main > .section.footer-container .columns-wrapper .columns .footer-bottom1 .footer-sub1-bottom1 p .icon {
+  max-width: 200px !important;
+  width: 100%;
+  height: 100px;
+}
+@media (max-width: 900px) {
+  main > .section.footer-container .columns-wrapper .columns .footer-bottom1 .footer-sub1-bottom1 p .icon {
+    max-width: 300px !important;
+  }
+}
+main > .section.footer-container .columns-wrapper .columns .footer-bottom1 .footer-sub1-bottom1 p .icon img {
+  max-width: 100% !important;
+}
 main > .section.footer-container .columns-wrapper .columns .footer-bottom2 {
   padding-bottom: 50px;
 }
@@ -174,7 +194,4 @@ main > .section.footer-container .columns-wrapper .columns .footer-bottom2 .foot
 }
 main > .section.footer-container .columns-wrapper .columns .footer-bottom2 .footer-sub2-bottom1 p a {
   color: white;
-}
-main > .section.footer-container .columns-wrapper .columns .footer-bottom2 .footer-content-ul li {
-  width: 200px;
 }/*# sourceMappingURL=footer.css.map */

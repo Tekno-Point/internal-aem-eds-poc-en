@@ -3,7 +3,7 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer>div {
+footer .footer > div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
@@ -14,7 +14,7 @@ footer .footer p {
 }
 
 @media (width >=900px) {
-  footer .footer>div {
+  footer .footer > div {
     padding: 40px 32px 24px;
   }
 }
@@ -25,7 +25,7 @@ body {
   }
 }
 
-main>.section.footer-container {
+main > .section.footer-container {
   display: block !important;
   background: #253a71;
   color: #fff;
@@ -65,7 +65,9 @@ main>.section.footer-container {
           text-decoration: none;
           line-height: 1.5;
           text-transform: none;
-          transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          transition: color 0.15s ease-in-out,
+            background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+            box-shadow 0.15s ease-in-out;
           user-select: none;
           vertical-align: middle;
           display: flex;
@@ -74,7 +76,7 @@ main>.section.footer-container {
           cursor: pointer;
 
           &::after {
-            content: '';
+            content: "";
             background: url(/icons/icon-plus.svg);
             width: 24px;
             height: 24px;
@@ -96,21 +98,19 @@ main>.section.footer-container {
             margin: 0;
             padding: 0;
 
-            @media (max-width:900px) {
+            @media (max-width: 900px) {
               flex-direction: column;
             }
 
             li {
               width: 25%;
 
-              p {
+              a {
+                color: white !important;
                 font-weight: 600;
                 margin-bottom: 10px;
                 font-family: Montserrat-Regular, sans-serif;
                 font-size: 16px;
-                a{
-                  color: white;
-                }
               }
 
               ul {
@@ -121,8 +121,6 @@ main>.section.footer-container {
                 li {
                   width: 300px;
 
-
-
                   a {
                     font-size: 12px;
                     line-height: 14px;
@@ -131,6 +129,14 @@ main>.section.footer-container {
                     font-weight: 400;
                   }
                 }
+              }
+            }
+          }
+          .footer-content-ul {
+            li {
+              width: 200px;
+              a {
+                color: white !important;
               }
             }
           }
@@ -153,13 +159,13 @@ main>.section.footer-container {
     max-width: inherit;
 
     .columns {
-      &>div {
+      & > div {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: self-start;
+        align-items: anchor-center;
 
-        >div {
+        > div {
           font-family: Montserrat-Regular, sans-serif;
           font-size: 12px;
           text-transform: uppercase;
@@ -178,7 +184,6 @@ main>.section.footer-container {
               margin: 0;
               padding: 0;
             }
-
           }
         }
 
@@ -199,6 +204,26 @@ main>.section.footer-container {
         }
       }
 
+      .footer-bottom1 {
+        .footer-sub1-bottom1 {
+          p {
+            .icon {
+              max-width: 200px !important;
+              width: 100%;
+              height: 100px;
+
+              @media (max-width : 900px) {
+                 max-width: 300px !important;
+              }
+              img {
+                max-width: 100% !important;
+                // object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+
       .footer-bottom2 {
         padding-bottom: 50px;
 
@@ -208,7 +233,6 @@ main>.section.footer-container {
             display: block;
             margin-top: 5px;
             font-size: 12px;
-
           }
 
           p {
@@ -220,18 +244,6 @@ main>.section.footer-container {
               color: white;
             }
           }
-        }
-
-        .footer-content-ul {
-          li {
-            width: 200px;
-            a{
-              color: white;
-            }
-          }
-
-
-
         }
       }
     }
