@@ -1,3 +1,14 @@
+.form-wrapper{
+    background: radial-gradient(70.85% 111.74% at 56.94% 100%,#6abcff 0,#fff0 100%);
+}
+
+.form{
+    position: relative;
+    max-width: 890px;
+    margin: 0 auto;
+    padding: 0;
+}
+
 .form .field-wrapper {
     display: grid;
     grid-auto-flow: row;
@@ -152,11 +163,11 @@
 .form {
     /* max-width: 1440px;
     width: 100%; */
-    background: radial-gradient(
+    /* background: radial-gradient(
         70.85% 111.74% at 56.94% 100%,
         #6abcff 0,
         #fff0 100%
-    );
+    ); */
     min-height: 460px;
     display: flex;
     justify-content: center;
@@ -172,10 +183,11 @@
     color: rgb(35 31 32 / 0.9);
     height: auto;
     outline: none;
+    max-width: 90%;
 }
 .form{
   position: relative;
-  padding: 30px;
+  /* padding: 30px; */
 }
 .form > form {
     max-width: 890px;
@@ -194,9 +206,10 @@
 
 .form >picture>img{
   position: absolute;
-  top: 20px;
-      top: 56%;
-    right: 17%;
+  /* top: 20px; */
+      top: 57%;
+      /* transform: translateY(-50%); */
+    right: 10px;
     cursor: pointer;
 }
 
@@ -204,8 +217,11 @@
   color: red;
   font-size: 14px;
 }
-/* .form-container{
-  max-width: 1390px;
-  width: 100%;
-  margin: 0 auto !important; 
-} */
+
+.section > div.form-container{
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto !important; 
+    padding:0;
+}

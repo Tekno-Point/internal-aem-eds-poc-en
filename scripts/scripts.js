@@ -188,7 +188,7 @@ function appendNextElements(container, nextElement) {
   container.append(nextElement);
 }
 export default function decorateWrapper(main) {
-  debugger;
+  // debugger;
   main.querySelectorAll('.wrapper').forEach((block) => {
     // wrapper.classList.remove('wrapper');
     console.log('Decorating wrapper', block);

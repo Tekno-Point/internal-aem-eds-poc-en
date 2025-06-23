@@ -28,7 +28,10 @@
 
 
 
-
+.section> div.hero-container{
+  padding: 0;
+  max-width: 100%;
+}
 
 .hero-container .hero-wrapper {
     max-width: unset;
@@ -73,6 +76,7 @@ width: 100%;
     top: 0;
     left: 0;
     height: -webkit-fill-available;
+    box-sizing: border-box;
 }
 .hero > .hero-2 >div{
   max-width: 578px;

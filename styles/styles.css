@@ -419,6 +419,10 @@ grid-column: 2;
     font-weight: 400px;
 }
 
+.section[data-id="FrequentlyAskedQuestions"]{
+  padding-bottom: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .table-wrapper .section[data-id="tableofcontent"]{
     display: none;
