@@ -175,7 +175,7 @@
 }
 
 .form > form > .field-wrapper > input {
-    padding: 20px 35px;
+    padding: 20px 50px 20px 35px;
     font-size: 18px;
     border-radius: 8px;
     background: #eef1f8;
@@ -183,11 +183,11 @@
     color: rgb(35 31 32 / 0.9);
     height: auto;
     outline: none;
-    max-width: 90%;
+    max-width: 100%;
 }
 .form{
   position: relative;
-  /* padding: 30px; */
+  margin-bottom: 50px;
 }
 .form > form {
     max-width: 890px;
@@ -216,6 +216,9 @@
 .errorEmail{
   color: red;
   font-size: 14px;
+  /* position: absolute;
+  bottom: -25px;
+  margin: 0; */
 }
 
 .section > div.form-container{
@@ -224,4 +227,16 @@
     width: 100%;
     margin: 0 auto !important; 
     padding:0;
+}
+
+@media screen and (max-width: 768px) {
+    .form{
+        padding: 60px 15px 10px;
+        margin-bottom: 30px;
+    }
+
+    .form >picture>img{
+        right: 25px;
+        top: 61% !important;
+    }
 }

@@ -96,6 +96,11 @@
         padding: 0 15px;
     }
 
+    .poona-fincorp-blogs-container h2{
+        font-size: 32px;
+        line-height: 41px;
+    }
+
     .poona-fincorp-blogs .blogs-content {
         flex-direction: column;
         gap: 15px;

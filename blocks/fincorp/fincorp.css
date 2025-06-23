@@ -1,3 +1,8 @@
+.section >div.fincorp-wrapper{
+    padding: 0 80px;
+    max-width: 100%;
+}
+
 .fincorp {
     display: flex;
     align-items: center;
@@ -38,4 +43,10 @@
 .businessloan > .default-content-wrapper > ul {
     list-style: none;
     padding: 0px;
+}
+
+@media screen and (max-width:768px) {
+    .section >div.fincorp-wrapper{
+    padding: 0 15px;
+}
 }

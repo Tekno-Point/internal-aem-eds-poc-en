@@ -195,3 +195,23 @@ main > .section.footer-container .columns-wrapper .columns .footer-bottom2 .foot
 main > .section.footer-container .columns-wrapper .columns .footer-bottom2 .footer-sub2-bottom1 p a {
   color: white;
 }/*# sourceMappingURL=footer.css.map */
+
+
+
+.footer {
+    background-color: #253A71;
+    color: #fff;
+}
+.footer h5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-items: center;
+    gap: 2px;
+}
+.footer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+}

@@ -10,6 +10,39 @@
  * governing permissions and limitations under the License.
  */
 
+ /* Fonts  */
+ @font-face {
+  font-family: 'Montserrat-Bold'; /* Name you want to use in CSS */
+  src: url('/fonts/Montserrat-Bold.ttf') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium'; /* Name you want to use in CSS */
+  src: url('/fonts/Montserrat-Medium.ttf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular'; /* Name you want to use in CSS */
+  src: url('/fonts/Montserrat-Regular.ttf') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold'; /* Name you want to use in CSS */
+  src: url('/fonts/Montserrat-SemiBold.ttf') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Montserrat-Regular'; /* Name you want to use in CSS */
+}
+
 :root {
   /* colors */
   --background-color: white;
@@ -277,11 +310,12 @@ main .section.highlight {
 
 .table-wrapper{
   display: grid;
-  grid-template-columns: 280px 1fr; 
+  grid-template-columns: 392px 1fr; 
   font-family: "Open Sans", sans-serif;
   background-color: #fff;
   position: relative;
-  gap: 3%;
+  gap: 0 2%;
+  padding: 0 80px;
 }
 /* #tableofcontent{
   grid-column: 1;
@@ -311,9 +345,11 @@ grid-column: 2;
     top: 70px;
     padding: 0 15px;
     margin-top: 0px;
+    padding: 0;
   }
   .table-wrapper .section:not([data-id="tableofcontent"]) {
     grid-column: 2;
+    padding: 0;
   }
   
 * Left sidebar section */
@@ -336,11 +372,14 @@ grid-column: 2;
   list-style: none;
   margin: 0;
   padding: 0;
+  max-height: 435px;
+  overflow: auto;
 }
 
 /* List items */
 .table-wrapper .section[data-id="tableofcontent"] li {
-  padding: 14px 0;
+  /* padding: 14px 0; */
+  padding: 30px 82px 30px 0;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -376,6 +415,11 @@ grid-column: 2;
   transition: outline 0.3s ease;
 }
 /* business css */
+
+.businessloan>.default-content-wrapper{
+  padding: 0 80px;
+  max-width: 100%;
+}
 
 .businessloan>.default-content-wrapper>p{
           font-size: 16px;
@@ -424,6 +468,15 @@ grid-column: 2;
 }
 
 @media screen and (max-width: 768px) {
+  .table-wrapper{
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  .businessloan>.default-content-wrapper{
+    padding: 0 15px;
+  }
+
   .table-wrapper .section[data-id="tableofcontent"]{
     display: none;
   }
@@ -438,4 +491,10 @@ grid-column: 2;
   .table-wrapper .section:not([data-id="tableofcontent"]) {
     grid-column: 1;
   }
+
+  .table-wrapper .section[data-id="FrequentlyAskedQuestions"]{
+  padding-bottom: 0;
 }
+}
+
+

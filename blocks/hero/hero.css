@@ -160,6 +160,6 @@ width: 100%;
   display: none;
 }
 .hero > .hero-2 {
-  padding: 0px;
+  padding: 0px 15px;
 }
 }
