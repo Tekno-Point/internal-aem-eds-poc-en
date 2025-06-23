@@ -61,7 +61,7 @@ function toggleAllNavSections(sections, expanded = false) {
     section.setAttribute('aria-expanded', expanded);
     section?.querySelector("ul")?.classList.add("inner-ul");
     section?.querySelectorAll("ul >li")?.forEach((subLi, ind) => {
-      subLi.setAttribute('aria-expanded', ind == 0 ? 'true' : expanded);
+      isDesktop.matches ? (subLi.setAttribute('aria-expanded', ind == 0 ? 'true' : expanded)) : subLi.setAttribute('aria-expanded', expanded);
     })
   });
 }
@@ -89,7 +89,8 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   const button = nav.querySelector('.nav-hamburger button');
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-  toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
+  // toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
+  toggleAllNavSections(navSections, expanded||isDesktop.matches ? 'false' : 'true');
   // toggleAllNavTools(navTools);
   // toggleAllNavSubSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
@@ -128,7 +129,14 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  let navPath;
+  if (isDesktop.matches) {
+    navPath = navMeta ? new URL(navMeta, window.location).pathname : '/poonawallafincorp/nav';
+  }
+  else {
+    navPath = getMetadata('mob-nav') || '/poonawallafincorp/mobile-nav';
+  }
+
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM
@@ -163,16 +171,17 @@ export default async function decorate(block) {
     }))
   }
 
-  navSectionsImg.remove();
+  navSectionsImg?.remove();
 
   if (navSections) {
 
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', (e) => {
-        e.stopPropagation()
+        e.stopPropagation();
 
-        if (isDesktop.matches && !e.target.closest(".inner-ul")) {
+        // if (isDesktop.matches && !e.target.closest(".inner-ul")) {
+        if (!e.target.closest(".inner-ul")) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
@@ -190,6 +199,14 @@ export default async function decorate(block) {
             });
             li.setAttribute('aria-expanded', 'true');
           }
+          else if (!isDesktop.matches) {
+            navSections.querySelectorAll('.default-content-wrapper > ul > li').forEach((section) => {
+              section.querySelectorAll("ul >li").forEach((subLi, ind) => {
+                subLi.setAttribute('aria-expanded', 'false');
+              })
+            });
+            li.setAttribute('aria-expanded', 'false');
+          }
         })
       })
     });
@@ -201,13 +218,13 @@ export default async function decorate(block) {
     navTools.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navTool) => {
       if (navTool.querySelector('ul')) navTool.classList.add('nav-drop');
       navTool.addEventListener('click', (e) => {
-        e.stopPropagation()
+        // e.stopPropagation()
 
-        if (isDesktop.matches) {
-          const expanded = navTool.getAttribute('aria-expanded') === 'true';
-          toggleAllNavTools(navTools);
-          navTool.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        }
+        // if (isDesktop.matches) {
+        const expanded = navTool.getAttribute('aria-expanded') === 'true';
+        toggleAllNavTools(navTools);
+        navTool.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        // }
       });
     })
 
@@ -217,12 +234,16 @@ export default async function decorate(block) {
     hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-    hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+    hamburger.addEventListener('click', () => {
+      toggleMenu(nav, navSections)
+      toggleAllNavSections(navSections, 'false');
+    }
+    );
     nav.prepend(hamburger);
     nav.setAttribute('aria-expanded', 'false');
     // prevent mobile nav behavior on window resize
+    // toggleMenu(nav, navSections);
     toggleMenu(nav, navSections, isDesktop.matches);
-    // toggleMenu(nav, navSections, isDesktop.matches);
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
     const navWrapper = document.createElement('div');
