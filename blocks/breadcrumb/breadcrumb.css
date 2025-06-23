@@ -47,6 +47,11 @@
 }
 
 /* Hide old header breadcrumbs if present */
+.section>div.breadcrumb-wrapper{
+  padding: 0 80px;
+  max-width: 100%;
+}
+
 header .breadcrumbs {
   display: none !important;
 }
@@ -56,6 +61,10 @@ header .breadcrumbs {
     display: flex;
     gap: 25px;
     
+}
+
+.breadcrumb>.container-fluid>ul>li{
+  text-transform: uppercase;
 }
 .breadcrumb>.container-fluid>ul>li>a{
 color: #034ea2;
