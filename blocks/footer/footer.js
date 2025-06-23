@@ -6,7 +6,7 @@ import accoridanBlock from '../accordion/accordion.js';
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
-  debugger;
+  // debugger;
   Array.from(block.children).forEach((row, rowIndex) => {
     row.classList.add("footer-content");
     row.classList.add(`sec-${rowIndex + 1}`);
