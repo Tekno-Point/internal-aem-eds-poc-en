@@ -16,17 +16,10 @@
       "cards",
       "columns",
       "fragment",
+      "embed",
+      "poona-fincorp-blogs",
       "poonawallaFincorpTeam",
       "footer"
-    ]
-  },
-  {
-    "id": "poonawallaFincorpTeam",
-    "components": [
-      "poonawallaFincorpTeamItem",
-      "poonawallaFincorpTeamItem2",
-      "breadcrumb",
-      "fincorp"
     ]
   },
   {
@@ -51,9 +44,11 @@
     ]
   },
   {
+    "id": "poona-fincorp-blogs",
+    "components": ["poona-fincorp-blogs-item"]
+  },
+  {
     "id": "footer",
-    "components": [
-      "footer-item"
-    ]
+    "components": ["footer-item"]
   }
 ]
