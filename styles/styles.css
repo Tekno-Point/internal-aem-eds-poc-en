@@ -256,6 +256,25 @@ main .section.highlight {
   padding: 40px 0;
 }
 
+/* business css */
+
+/* .businessloan>.default-content-wrapper>p{
+          font-size: 16px;
+}
+.businessloan>.default-content-wrapper>h1{
+        font-family: "Montserrat-Bold";
+  margin: 0px;
+          font-size: 36px;
+        line-height: 1.2;
+        max-width: 828px;
+        width: 100%;
+
+}
+.businessloan>.default-content-wrapper>ul{
+  list-style: none;
+  padding: 0px;
+} */
+
 main{
   display: grid;
   grid-template-columns: 280px 1fr; 
