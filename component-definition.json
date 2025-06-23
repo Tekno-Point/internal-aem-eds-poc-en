@@ -120,8 +120,8 @@
               "page": {
                 "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "columns": "5",
-                  "rows": "2"
+                  "columns": "2",
+                  "rows": "1"
                 }
               }
             }
