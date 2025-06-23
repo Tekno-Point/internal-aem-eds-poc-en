@@ -8,6 +8,8 @@
     align-items: center;
     gap: 10px;
     margin-top: 14px;
+    border-bottom: 1px solid #231F2066;
+    padding-bottom: 30px;
 }
 
 .fincorp-0 > div > picture > img {
@@ -46,6 +48,9 @@
 }
 
 @media screen and (max-width:768px) {
+    .fincorp{
+        padding-bottom: 20px;
+    }
     .section >div.fincorp-wrapper{
     padding: 0 15px;
 }
