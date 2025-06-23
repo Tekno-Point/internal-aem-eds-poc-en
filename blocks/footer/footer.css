@@ -29,4 +29,56 @@ main > .section.footer-container .footer-wrapper {
   background: #253a71;
   color: #fff;
   z-index: 1;
+  margin: 0;
+  padding: 0;
+  max-width: inherit;
+}
+main > .section.footer-container .footer-wrapper .footer {
+  height: auto;
+  min-height: 400px;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+main > .section.footer-container .footer-wrapper .footer ul {
+  list-style: none;
+}
+main > .section.footer-container .footer-wrapper .footer .footer-content {
+  padding: 0 60px;
+}
+main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .footer-content-column.sebtxt-1 {
+  display: block;
+  margin-bottom: -0.0625rem;
+  background-color: rgba(255, 255, 255, 0);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  position: relative;
+}
+main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .footer-content-column.sebtxt-1 p {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  width: 99%;
+  padding: 1rem 0;
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+  line-height: 1.5;
+  text-transform: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+}
+main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .footer-content-column.sebtxt-2 > ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main > .section.footer-container .footer-wrapper .footer .footer-content.sec-1 .footer-content-column.sebtxt-2 > ul li ul {
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=footer.css.map */
