@@ -28,6 +28,30 @@ export default async function decorate(block) {
       elSub.classList.add("footer-sub"+(index+1) +"-bottom"+(Jindex+1))
     })
   })
+
+  // const divWrapper = document.createElement("div");
+  // divWrapper.classList.add("download")
+  // const diviconwrapper = document.createElement("div");
+  // diviconwrapper.classList.add("download-iconwrapper")
+  // diviconwrapper.append(document.querySelector("#download-app").nextElementSibling)
+  // diviconwrapper.append(document.querySelector("#download-app").nextElementSibling.nextElementSibling)
+  // divWrapper.append(diviconwrapper)
+
+  // const divtwoWrapper = document.createElement("div");
+  // divtwoWrapper.classList.add("follow-us")
+  // const divicontwowrapper = document.createElement("div");
+  // divicontwowrapper.classList.add("follow-iconwrapper")
+  // divicontwowrapper.append(document.querySelector("#follow-us-on").nextElementSibling)
+  // divicontwowrapper.append(document.querySelector("#follow-us-on").nextElementSibling.nextElementSibling)
+  // divicontwowrapper.append(document.querySelector("#follow-us-on").nextElementSibling.nextElementSibling.nextElementSibling)
+  // divicontwowrapper.append(document.querySelector("#follow-us-on").nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling)
+  // divicontwowrapper.append(document.querySelector("#follow-us-on").nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling)
+  // divtwoWrapper.append(divicontwowrapper)
+
+  // document.querySelector(".footer-sub1-bottom4").innerHTML = "";
+  // document.querySelector(".footer-sub1-bottom4").innerHTML+=divWrapper;
+  // document.querySelector(".footer-sub1-bottom4").innerHTML+=divtwoWrapper
+
   const footerMeta = getMetadata('footer');
   const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
   const fragment = await loadFragment(footerPath);
