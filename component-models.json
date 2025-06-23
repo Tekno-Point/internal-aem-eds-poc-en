@@ -105,6 +105,11 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "text",
+        "name": "id",
+        "label": "Id"
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
@@ -162,6 +167,65 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "poonawallaFincorpTeam",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Select Class For Show/Hide",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "rightBlock",
+            "value": "Right-block"
+          },
+          {
+            "name": "leftBlock",
+            "value": "Left-block"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "poonawallaFincorpTeamItem",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col_1text",
+        "value": "",
+        "label": "Text1",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "poonawallaFincorpTeamItem2",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col_1text",
+        "value": "",
+        "label": "Text1",
+        "valueType": "string"
       }
     ]
   },

@@ -255,3 +255,113 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+main{
+  display: grid;
+  grid-template-columns: 280px 1fr; 
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff;
+}
+/* #tableofcontent{
+  grid-column: 1;
+  grid-row: 1 / span 5;
+  }
+  #NeedforDaycareBusinessIndia{
+    grid-column: 2;
+    }
+    #StepsStartDaycarBusinessedit{
+      grid-column: 2;
+      }
+      #StepstoApplyBusinessLoan{
+        grid-column: 2;
+        }
+        #FrequentlyAskedQuestions{
+          grid-column: 2;
+}
+#AbouttheAuthor{
+grid-column: 2;
+}
+#toConclude{
+  grid-column: 2;
+  } */
+  .section[data-id="tableofcontent"] {
+    grid-column: 1;
+  }
+  .section:not([data-id="tableofcontent"]) {
+    grid-column: 2;
+  }
+  
+* Left sidebar section */
+.section[data-id="tableofcontent"] {
+  padding-top: 20px;
+  padding-right: 24px;
+  border-right: 1px solid #e0e0e0;
+}
+
+/* Title */
+.section[data-id="tableofcontent"] .default-content-wrapper > p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 24px;
+}
+
+/* List container */
+.section[data-id="tableofcontent"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* List items */
+.section[data-id="tableofcontent"] li {
+  padding: 14px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Links */
+.section[data-id="tableofcontent"] li a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1d1d1f;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: font-weight 0.3s ease;
+  position: relative;
+}
+
+/* Arrow on hover */
+.section[data-id="tableofcontent"] li a:hover::after {
+  content: "›";
+  font-size: 18px;
+  color: #1d1d1f;
+  position: absolute;
+  right: 0;
+}
+
+/* Bold text on hover */
+.section[data-id="tableofcontent"] li a:hover {
+  font-weight: 600;
+}
+
+.highlight {
+  outline: 2px solid #004aad;
+  transition: outline 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .section[data-id="tableofcontent"]{
+    display: none;
+  }
+  main{
+    grid-template-columns: 1fr; 
+  }
+
+   .section[data-id="tableofcontent"] {
+    grid-column: unset;
+  }
+  .section:not([data-id="tableofcontent"]) {
+    grid-column: 1;
+  }
+}
