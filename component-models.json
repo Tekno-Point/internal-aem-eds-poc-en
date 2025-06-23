@@ -119,6 +119,10 @@
             "value": "wrapper"
           },
           {
+            "name": "Table Style",
+            "value": "table-wrapper"
+          },
+          {
             "name": "Businessloan",
             "value": "Businessloan"
           },

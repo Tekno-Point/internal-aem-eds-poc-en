@@ -144,14 +144,14 @@ async function loadLazy(doc) {
 
 //////
 document.addEventListener("DOMContentLoaded", () => {
- const scrollMap = {
-      "whatisDaycare":"whatisDaycare",
-      "NeedforDaycareBusinessIndia": "NeedforDaycareBusinessIndia",
-      "StepsStartDaycarBusinessedit": "StepsStartDaycarBusinessedit",
-      "StepstoApplyBusinessLoan": "StepstoApplyBusinessLoan",
-      "AbouttheAuthor": "toConclude",
-      "FrequentlyAskedQuestions": "FrequentlyAskedQuestions"
-    };
+  const scrollMap = {
+    "whatisDaycare": "whatisDaycare",
+    "NeedforDaycareBusinessIndia": "NeedforDaycareBusinessIndia",
+    "StepsStartDaycarBusinessedit": "StepsStartDaycarBusinessedit",
+    "StepstoApplyBusinessLoan": "StepstoApplyBusinessLoan",
+    "AbouttheAuthor": "toConclude",
+    "FrequentlyAskedQuestions": "FrequentlyAskedQuestions"
+  };
 
   document.querySelectorAll('.section[data-id="tableofcontent"] li a').forEach(link => {
     link.addEventListener("click", (e) => {
@@ -180,6 +180,25 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  decorateWrapper(document.querySelector('main'));
 }
 
 loadPage();
+function appendNextElements(container, nextElement) {
+  container.append(nextElement);
+}
+export default function decorateWrapper(main) {
+  debugger;
+  main.querySelectorAll('.wrapper').forEach((block) => {
+    // wrapper.classList.remove('wrapper');
+    console.log('Decorating wrapper', block);
+
+    const blockWrapper = block;
+    let nextElement = blockWrapper.nextElementSibling;
+    while (nextElement && (!nextElement.classList.contains('wrapper'))) {
+      appendNextElements(block, nextElement);
+      nextElement = blockWrapper.nextElementSibling;
+    }
+  });
+  // block.innerHTML = '';
+}
