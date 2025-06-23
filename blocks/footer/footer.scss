@@ -3,7 +3,7 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer > div {
+footer .footer>div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
@@ -13,16 +13,18 @@ footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
+@media (width >=900px) {
+  footer .footer>div {
     padding: 40px 32px 24px;
   }
 }
-main > .section.footer-container {
+
+main>.section.footer-container {
   display: block !important;
+
+  .footer-wrapper {
+    background: #253a71;
+    color: #fff;
+    z-index: 1
+  }
 }
-main > .section.footer-container .footer-wrapper {
-  background: #253a71;
-  color: #fff;
-  z-index: 1;
-}/*# sourceMappingURL=footer.css.map */

@@ -256,7 +256,6 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-<<<<<<< HEAD
 main{
   display: grid;
   grid-template-columns: 280px 1fr; 
@@ -351,7 +350,6 @@ grid-column: 2;
   outline: 2px solid #004aad;
   transition: outline 0.3s ease;
 }
-=======
 /* business css */
 
 .businessloan>.default-content-wrapper>p{
@@ -395,4 +393,3 @@ grid-column: 2;
     margin-bottom: 8px;
     font-weight: 400px;
 }
->>>>>>> 4ececdf40555ebcd5ba10f125c131f241afb9faa
