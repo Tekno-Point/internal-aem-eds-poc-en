@@ -265,32 +265,32 @@ main{
 /* #tableofcontent{
   grid-column: 1;
   grid-row: 1 / span 5;
-}
-#NeedforDaycareBusinessIndia{
-  grid-column: 2;
-}
-#StepsStartDaycarBusinessedit{
-grid-column: 2;
-}
-#StepstoApplyBusinessLoan{
-grid-column: 2;
-}
-#FrequentlyAskedQuestions{
-grid-column: 2;
+  }
+  #NeedforDaycareBusinessIndia{
+    grid-column: 2;
+    }
+    #StepsStartDaycarBusinessedit{
+      grid-column: 2;
+      }
+      #StepstoApplyBusinessLoan{
+        grid-column: 2;
+        }
+        #FrequentlyAskedQuestions{
+          grid-column: 2;
 }
 #AbouttheAuthor{
 grid-column: 2;
 }
 #toConclude{
-grid-column: 2;
-} */
-.section[data-id="tableofcontent"] {
-  grid-column: 1;
-}
-.section:not([data-id="tableofcontent"]) {
   grid-column: 2;
-}
-
+  } */
+  .section[data-id="tableofcontent"] {
+    grid-column: 1;
+  }
+  .section:not([data-id="tableofcontent"]) {
+    grid-column: 2;
+  }
+  
 * Left sidebar section */
 .section[data-id="tableofcontent"] {
   padding-top: 20px;
@@ -349,4 +349,19 @@ grid-column: 2;
 .highlight {
   outline: 2px solid #004aad;
   transition: outline 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .section[data-id="tableofcontent"]{
+    display: none;
+  }
+  main{
+    grid-template-columns: 1fr; 
+  }
+
+   .section[data-id="tableofcontent"] {
+    grid-column: unset;
+  }
+  .section:not([data-id="tableofcontent"]) {
+    grid-column: 1;
+  }
 }
