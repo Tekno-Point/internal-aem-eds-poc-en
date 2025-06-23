@@ -1,5 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
+import accoridanBlock from "../accordion/accordion.js"
 
 /**
  * loads and decorates the footer
@@ -19,7 +20,7 @@ export default async function decorate(block) {
   listBlocks.forEach((ul, index) => {
     ul.classList.add('footer-content-ul');
   });
-
+  accoridanBlock(block)
   // load footer as fragment
   const footerMeta = getMetadata('footer');
   const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
@@ -30,5 +31,6 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  
   block.append(footer);
 }
