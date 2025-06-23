@@ -1,4 +1,4 @@
-// import createField from '../form/form-fields';
+import createField from './form-fields.js';
 
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
@@ -8,7 +8,7 @@ async function createForm(formHref, submitHref) {
   const form = document.createElement('form');
   form.dataset.action = submitHref;
 
-//   const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
+  const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
   fields.forEach((field) => {
     if (field) {
       form.append(field);
@@ -78,27 +78,25 @@ async function handleSubmit(form) {
 }
 
 export default async function decorate(block) {
-    console.log(block);
-    
   const links = [...block.querySelectorAll('a')].map((a) => a.href);
   const formLink = links.find((link) => link.startsWith(window.location.origin) && link.endsWith('.json'));
   const submitLink = links.find((link) => link !== formLink);
-//    if (!formLink || !submitLink) return;
+  if (!formLink || !submitLink) return;
 
   const form = await createForm(formLink, submitLink);
-//   block.replaceChildren(form);
+  block.replaceChildren(form);
 
-//   form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const valid = form.checkValidity();
-//     if (valid) {
-//       handleSubmit(form);
-//     } else {
-//       const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
-//       if (firstInvalidEl) {
-//         firstInvalidEl.focus();
-//         firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
-//       }
-//     }
-//   });
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const valid = form.checkValidity();
+    if (valid) {
+      handleSubmit(form);
+    } else {
+      const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
+      if (firstInvalidEl) {
+        firstInvalidEl.focus();
+        firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
 }
