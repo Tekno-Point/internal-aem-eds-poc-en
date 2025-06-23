@@ -7,6 +7,7 @@
     "/content/internal-aem-eds-poc/apollo-tyers/form/latest-form:/apollo-tyers/form/latest-form.json",
     "/content/internal-aem-eds-poc/apollo-tyers/form/location-form:/apollo-tyers/form/location-form.json",
     "/content/internal-aem-eds-poc/alalameyams/email-form:/alalameyams/email-form.json",
+    "/content/internal-aem-eds-poc/config:/config.json",
     "/content/internal-aem-eds-poc/configuration:/.helix/config.json",
     "/content/internal-aem-eds-poc/redirects:/redirects.json",
     "/content/internal-aem-eds-poc/metadata:/metadata.json",
