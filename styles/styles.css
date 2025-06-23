@@ -280,6 +280,8 @@ main .section.highlight {
   grid-template-columns: 280px 1fr; 
   font-family: "Open Sans", sans-serif;
   background-color: #fff;
+  position: relative;
+  gap: 3%;
 }
 /* #tableofcontent{
   grid-column: 1;
@@ -303,22 +305,26 @@ grid-column: 2;
 #toConclude{
   grid-column: 2;
   } */
-  .section[data-id="tableofcontent"] {
+  .table-wrapper .section[data-id="tableofcontent"] {
     grid-column: 1;
+    position: sticky;
+    top: 70px;
+    padding: 0 15px;
+    margin-top: 0px;
   }
-  .section:not([data-id="tableofcontent"]) {
+  .table-wrapper .section:not([data-id="tableofcontent"]) {
     grid-column: 2;
   }
   
 * Left sidebar section */
-.section[data-id="tableofcontent"] {
+.table-wrapper .section[data-id="tableofcontent"] {
   padding-top: 20px;
   padding-right: 24px;
   border-right: 1px solid #e0e0e0;
 }
 
 /* Title */
-.section[data-id="tableofcontent"] .default-content-wrapper > p {
+.table-wrapper .section[data-id="tableofcontent"] .default-content-wrapper > p {
   font-size: 24px;
   font-weight: 700;
   color: #1d1d1f;
@@ -326,20 +332,20 @@ grid-column: 2;
 }
 
 /* List container */
-.section[data-id="tableofcontent"] ul {
+.table-wrapper .section[data-id="tableofcontent"] ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 /* List items */
-.section[data-id="tableofcontent"] li {
+.table-wrapper .section[data-id="tableofcontent"] li {
   padding: 14px 0;
   border-bottom: 1px solid #e0e0e0;
 }
 
 /* Links */
-.section[data-id="tableofcontent"] li a {
+.table-wrapper .section[data-id="tableofcontent"] li a {
   font-size: 16px;
   font-weight: 400;
   color: #1d1d1f;
@@ -352,7 +358,7 @@ grid-column: 2;
 }
 
 /* Arrow on hover */
-.section[data-id="tableofcontent"] li a:hover::after {
+.table-wrapper .section[data-id="tableofcontent"] li a:hover::after {
   content: "›";
   font-size: 18px;
   color: #1d1d1f;
@@ -361,7 +367,7 @@ grid-column: 2;
 }
 
 /* Bold text on hover */
-.section[data-id="tableofcontent"] li a:hover {
+.table-wrapper .section[data-id="tableofcontent"] li a:hover {
   font-weight: 600;
 }
 
@@ -370,17 +376,17 @@ grid-column: 2;
   transition: outline 0.3s ease;
 }
 @media screen and (max-width: 768px) {
-  .section[data-id="tableofcontent"]{
+  .table-wrapper .section[data-id="tableofcontent"]{
     display: none;
   }
   main{
     grid-template-columns: 1fr; 
   }
 
-   .section[data-id="tableofcontent"] {
+   .table-wrapper .section[data-id="tableofcontent"] {
     grid-column: unset;
   }
-  .section:not([data-id="tableofcontent"]) {
+  .table-wrapper .section:not([data-id="tableofcontent"]) {
     grid-column: 1;
   }
 }
