@@ -226,8 +226,7 @@ const FIELD_CREATOR_FUNCTIONS = {
   radio: createRadio,
 };
 
-export default async function createField(fd, form) {
-    debugger
+export async function createField(fd, form) {
   fd.Id = fd.Id || generateFieldId(fd);
   const type = fd.Type.toLowerCase();
   const createFieldFunc = FIELD_CREATOR_FUNCTIONS[type] || createInput;

@@ -1,4 +1,4 @@
-import createField from '../form/form-fields';
+// import createField from '../form/form-fields';
 
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
@@ -8,7 +8,7 @@ async function createForm(formHref, submitHref) {
   const form = document.createElement('form');
   form.dataset.action = submitHref;
 
-  const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
+//   const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
   fields.forEach((field) => {
     if (field) {
       form.append(field);
@@ -86,19 +86,19 @@ export default async function decorate(block) {
 //    if (!formLink || !submitLink) return;
 
   const form = await createForm(formLink, submitLink);
-  block.replaceChildren(form);
+//   block.replaceChildren(form);
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const valid = form.checkValidity();
-    if (valid) {
-      handleSubmit(form);
-    } else {
-      const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
-      if (firstInvalidEl) {
-        firstInvalidEl.focus();
-        firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
+//   form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const valid = form.checkValidity();
+//     if (valid) {
+//       handleSubmit(form);
+//     } else {
+//       const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
+//       if (firstInvalidEl) {
+//         firstInvalidEl.focus();
+//         firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
+//       }
+//     }
+//   });
 }
