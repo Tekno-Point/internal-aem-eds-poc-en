@@ -275,7 +275,7 @@ main .section.highlight {
   padding: 0px;
 } */
 
-main{
+.table-wrapper{
   display: grid;
   grid-template-columns: 280px 1fr; 
   font-family: "Open Sans", sans-serif;
