@@ -186,6 +186,23 @@
     ]
   },
   {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Card",
+            "value": "card"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -237,11 +254,27 @@
     "id": "cf-fragment",
     "fields": [
       {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment-item",
+    "fields": [
+      {
         "component": "aem-content-fragment",
         "name": "reference",
         "variationName": "contentFragmentVariation",
-        "label": "CF Reference",
-        "multi": true
+        "label": "CF Reference"
       }
     ]
   },

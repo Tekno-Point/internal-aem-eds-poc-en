@@ -25,6 +25,12 @@
     ]
   },
   {
+    "id": "cf-fragment",
+    "components": [
+      "cf-fragment-item"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
