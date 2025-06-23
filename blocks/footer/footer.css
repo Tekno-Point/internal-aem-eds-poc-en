@@ -18,6 +18,10 @@ footer .footer p {
     padding: 40px 32px 24px;
   }
 }
+body main {
+  display: block;
+}
+
 main > .section.footer-container {
   display: block !important;
 }
