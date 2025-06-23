@@ -240,7 +240,8 @@
         "component": "aem-content-fragment",
         "name": "reference",
         "variationName": "contentFragmentVariation",
-        "label": "CF Reference"
+        "label": "CF Reference",
+        "multi": true
       }
     ]
   },
