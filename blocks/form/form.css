@@ -150,8 +150,8 @@
 }
 
 .form {
-    max-width: 1440px;
-    width: 100%;
+    /* max-width: 1440px;
+    width: 100%; */
     background: radial-gradient(
         70.85% 111.74% at 56.94% 100%,
         #6abcff 0,
@@ -204,8 +204,8 @@
   color: red;
   font-size: 14px;
 }
-.form-container{
+/* .form-container{
   max-width: 1390px;
   width: 100%;
   margin: 0 auto !important; 
-}
+} */
