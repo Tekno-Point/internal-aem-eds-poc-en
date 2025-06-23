@@ -143,6 +143,30 @@
           }
         },
         {
+          "title": "Content Fragment",
+          "id": "cf-fragment",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Content Fragment",
+                  "model": "cf-fragment"
+                }
+              },
+              "cf": {
+                "type": "reference",
+                "editable": true,
+                "path": {
+                  "type": "string",
+                  "default": "/content/dam/internal-aem-eds-poc/cf/vacation"
+                },
+                "fragmentModel": "article"
+              }
+            }
+          }
+        },
+        {
           "title": "Hero",
           "id": "hero",
           "plugins": {
