@@ -121,7 +121,7 @@
                 "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
                   "columns": "4",
-                  "rows": "2"
+                  "rows": "1"
                 }
               }
             }
