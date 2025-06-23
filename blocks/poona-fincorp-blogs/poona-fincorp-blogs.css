@@ -1,6 +1,7 @@
 /* @import url('../swiper/swiper.css'); */
 .poona-fincorp-blogs-container {
-    padding: 0 10px 0 102px;
+    /* padding: 0 10px 0 102px; */
+    padding: 0 10px;
 }
 
 .poona-fincorp-blogs-container .default-content-wrapper,
@@ -39,7 +40,7 @@
 
 .blogs-content .blog-item-1 {
     max-width: 350px;
-    height: 210px;
+    min-height: 210px;
     width: 100%;
 }
 
@@ -97,17 +98,37 @@
 
     .poona-fincorp-blogs .blogs-content {
         flex-direction: column;
-        border-bottom: none;
-        padding-bottom: 0;
+        gap: 15px;
     }
 
     .blogs-content .blog-item-1 {
         max-width: 100%;
-        height: auto;
+        min-height: unset;
+        height: 100%;
         width: 100%;
     }
 
     .poona-fincorp-blogs .blogs-content .blog-item-2 {
         max-width: 100%;
+        min-height: 111px;
+    }
+
+    .blogs-content .blog-item-2 p:nth-child(1) {
+        font-size: 12px;
+    }
+
+    .blogs-content .blog-item-2 p:nth-child(2).button-container {
+        margin: 10px 0 0;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .blogs-content .blog-item-2 p:nth-child(2).button-container .button {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .blogs-content .blog-item-2 p:nth-child(3) {
+        font-size: 10px;
     }
 }
