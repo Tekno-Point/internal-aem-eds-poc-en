@@ -17,7 +17,7 @@ export default async function decorate(block) {
   });
   const listBlocks = block.querySelectorAll(".footer-content-column ul");
   listBlocks.forEach((ul, index) => {
-    ul.classList.add(`footer-content-ul-${index + 1}`);
+    ul.classList.add('footer-content-ul');
   });
 
   // load footer as fragment
