@@ -21,13 +21,13 @@
       "form",
       "article",
       "search",
-      "cf-fragment"
+      "content-fragment"
     ]
   },
   {
-    "id": "cf-fragment",
+    "id": "content-fragment",
     "components": [
-      "cf-fragment-item"
+      "content-fragment-item"
     ]
   },
   {

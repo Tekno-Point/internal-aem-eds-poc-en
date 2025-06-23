@@ -251,7 +251,7 @@
     ]
   },
   {
-    "id": "cf-fragment",
+    "id": "content-fragment",
     "fields": [
       {
         "component": "multiselect",
@@ -268,7 +268,7 @@
     ]
   },
   {
-    "id": "cf-fragment-item",
+    "id": "content-fragment-item",
     "fields": [
       {
         "component": "aem-content-fragment",
