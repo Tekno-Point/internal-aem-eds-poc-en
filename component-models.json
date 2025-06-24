@@ -1,8 +1,6 @@
-[
-  {
+[{
     "id": "image",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "name": "image",
         "label": "Image",
@@ -17,8 +15,7 @@
   },
   {
     "id": "title",
-    "fields": [
-      {
+    "fields": [{
         "component": "text",
         "name": "title",
         "label": "Title"
@@ -27,8 +24,7 @@
         "component": "select",
         "name": "titleType",
         "label": "Title Type",
-        "options": [
-          {
+        "options": [{
             "name": "h1",
             "value": "h1"
           },
@@ -58,8 +54,7 @@
   },
   {
     "id": "button",
-    "fields": [
-      {
+    "fields": [{
         "component": "aem-content",
         "name": "link",
         "label": "Link"
@@ -78,8 +73,7 @@
         "component": "select",
         "name": "linkType",
         "label": "Type",
-        "options": [
-          {
+        "options": [{
             "name": "default",
             "value": ""
           },
@@ -97,8 +91,7 @@
   },
   {
     "id": "section",
-    "fields": [
-      {
+    "fields": [{
         "component": "text",
         "name": "name",
         "label": "Section Name",
@@ -108,19 +101,16 @@
         "component": "multiselect",
         "name": "style",
         "label": "Style",
-        "options": [
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          }
-        ]
+        "options": [{
+          "name": "Highlight",
+          "value": "highlight"
+        }]
       }
     ]
   },
   {
     "id": "card",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -138,8 +128,7 @@
   },
   {
     "id": "columns",
-    "fields": [
-      {
+    "fields": [{
         "component": "text",
         "valueType": "number",
         "name": "columns",
@@ -157,18 +146,15 @@
   },
   {
     "id": "fragment",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Reference"
-      }
-    ]
+    "fields": [{
+      "component": "aem-content",
+      "name": "reference",
+      "label": "Reference"
+    }]
   },
   {
     "id": "hero",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -192,59 +178,57 @@
     ]
   },
   {
-    "id":"banner-container",
+    "id": "banner-container",
     "fields": [{
       "component": "multiselect",
       "name": "classes",
       "label": "Multiselect field",
       "valueType": "string",
       "required": true,
-      "options": [
-            {
-            "name": "Mobile Auto Scroll",
-            "value": "mobile-auto-scroll"
-            },
-            {
-              "name": "Mobile 1.5 View",
-              "value": "mobile-one-point-five-view"
-            },
-            {
-              "name": "Mobile 2.5 View",
-              "value": "two-point-five-view"
-            },
-            {
-              "name": "Mobile 3.5 View",
-              "value": "three-point-five-view"
-            },
-            {
-              "name": "Mobile Center View",
-              "value": "center-view"
-            },
-            {
-              "name": "Pagination",
-              "value": "desk-pagination"
-            },
-            {
-              "name": "Action Button",
-              "value": "left-right-navigation-btn"
-            },
-            {
-              "name": "3 View",
-              "value": "three-point-view"
-            },
-            {
-              "name": "1.5 View",
-              "value": "one-point-five-view"
-            }
-        ]
+      "options": [{
+          "name": "Mobile Auto Scroll",
+          "value": "mobile-auto-scroll"
+        },
+        {
+          "name": "Mobile 1.5 View",
+          "value": "mobile-one-point-five-view"
+        },
+        {
+          "name": "Mobile 2.5 View",
+          "value": "two-point-five-view"
+        },
+        {
+          "name": "Mobile 3.5 View",
+          "value": "three-point-five-view"
+        },
+        {
+          "name": "Mobile Center View",
+          "value": "center-view"
+        },
+        {
+          "name": "Pagination",
+          "value": "desk-pagination"
+        },
+        {
+          "name": "Action Button",
+          "value": "left-right-navigation-btn"
+        },
+        {
+          "name": "3 View",
+          "value": "three-point-view"
+        },
+        {
+          "name": "1.5 View",
+          "value": "one-point-five-view"
+        }
+      ]
     }]
   },
   {
-    "id":"banner-container-item",
-    "fields":[
-      {
+    "id": "banner-container-item",
+    "fields": [{
         "component": "richtext",
-        "name": "col_text",
+        "name": "text",
         "value": "",
         "label": "Round Text",
         "valueType": "string"
