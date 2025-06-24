@@ -7,8 +7,9 @@ export default async function decorate(block) {
 
     block.innerHTML = "";
 
-    for (const item of formHref) { 
-        const formurl =  new URL(item.href).pathname
+    for (let i = 0; i < formHref.length; i++) {
+        const item = formHref[i];
+        const formurl = new URL(item.href).pathname
         const url = `${config.data[0].value}/graphql/execute.json/internal-aem-eds-poc/get-article;path=${formurl}`
         const response = await fetch((url), {
             method: "GET",
@@ -17,16 +18,17 @@ export default async function decorate(block) {
         const respData = await response.json();
         // block.innerHTML = JSON.stringify(respData.data.articleByPath.item);
         // respData.data.forEach(data => {
-            
+
         // });
         console.log("response :: ", respData);
 
-        createCard(respData, block)
+        createCard(respData, block,i)
     }
 }
 
+const imagedata = ["/images/cross-teaser4.webp", "/images/cross-teaser5.webp"]
 
-function createCard (data, block) {
+function createCard(data, block,i) {
     const path = data.data.articleByPath.item;
     const teaser = document.createElement('div');
     teaser.classList.add('teaser');
@@ -34,12 +36,12 @@ function createCard (data, block) {
     teaser.innerHTML = `
         <a href=${path.ctaUrl._publishUrl}>
             <div class="teaser-image">
-                <img loading="lazy" alt="" src=${path.image._publishUrl}/>
+                <img loading="lazy" alt="" src=${path.image._publishUrl?path.image._publishUrl: imagedata[i]} />
             </div>
             <div class="teaser-content">
               <h4 id="basic-health-insurance">${path.title}</h4>
               <p>${path.description}</p>
-              <p class="button-container">${path.ctaText}</p>
+              <p class="button-container"><span>${path.ctaText}</span></p>
             </div>
        </a>
     `
