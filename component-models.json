@@ -1242,5 +1242,45 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "tabproduct-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bgimage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgimageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Tab Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "arrowimage",
+        "label": "Arrow Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "arrowimageAlt",
+        "label": "Alt",
+        "value": ""
+      }
+    ]
   }
 ]
