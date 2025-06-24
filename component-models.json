@@ -1306,9 +1306,9 @@
       },
       {
         "component": "richtext",
-        "name": "col_1text",
+        "name": "col1_text",
         "value": "",
-        "label": "Round Text",
+        "label": "Text Image",
         "valueType": "string"
       }
     ]
