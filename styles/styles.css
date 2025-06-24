@@ -30,6 +30,7 @@
   src: url('/fonts/Montserrat-Regular.ttf') format('woff2');
   font-weight: 500;
   font-style: normal;
+  font-size: 20px;
 }
 
 @font-face {
@@ -495,6 +496,17 @@ grid-column: 2;
   .table-wrapper .section[data-id="FrequentlyAskedQuestions"]{
   padding-bottom: 0;
 }
+}
+
+
+.table-wrapper>.section>.default-content-wrapper>h2{
+  font-family:"Montserrat-Medium" ;
+  font-size: 44px;
+
+}
+
+.table-wrapper>.section>.default-content-wrapper>p{
+  font-size: 18px;
 }
 
 
