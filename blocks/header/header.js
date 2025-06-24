@@ -163,4 +163,35 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+
+ 
+  // changes  for header 
+
+
+  window.addEventListener('scroll', function () {
+  const header = block.querySelector('.nav-wrapper'); // or .header
+  if (window.scrollY > 50) {
+    header.style.transform = 'translateY(-100%)';
+  } else {
+    header.style.transform = 'translateY(0)';
+  }
+});
+
+
+const navWrapper2 = block.querySelector('.nav-wrapper');
+  const heroSection = block.querySelector('.compare-container');
+
+  window.addEventListener('scroll', () => {
+    const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+    if (heroBottom <= 0) {
+      navWrapper2.style.transform = 'translateY(-100%)';
+    } else {
+      navWrapper2.style.transform = 'translateY(0)';
+    }
+  });
+
+
+  
 }
