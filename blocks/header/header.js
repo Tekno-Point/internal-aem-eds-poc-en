@@ -90,7 +90,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   // toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
-  toggleAllNavSections(navSections, expanded||isDesktop.matches ? 'false' : 'true');
+  toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   // toggleAllNavTools(navTools);
   // toggleAllNavSubSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
@@ -185,6 +185,7 @@ export default async function decorate(block) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          if (isDesktop.matches) document.body.style.overflow = !expanded ? 'hidden' : 'auto';
         }
       });
       navSection.querySelectorAll("ul >li").forEach((subLi, ind) => {
