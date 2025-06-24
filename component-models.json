@@ -200,13 +200,13 @@
       "valueType": "string",
       "required": true,
       "options": [
-          {
-              "name": "Mobile Auto Scroll",
-              "value": "mobile-auto-scroll"
+            {
+            "name": "Mobile Auto Scroll",
+            "value": "mobile-auto-scroll"
             },
             {
               "name": "Mobile 1.5 View",
-              "value": "one-point-five-view"
+              "value": "mobile-one-point-five-view"
             },
             {
               "name": "Mobile 2.5 View",
