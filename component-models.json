@@ -192,7 +192,7 @@
     ]
   },
   {
-    "id": "footer",
+    "id": "footer-hdfc",
     "fields": [
       {
         "component": "richtext",
