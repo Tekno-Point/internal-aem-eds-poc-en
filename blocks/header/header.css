@@ -47,7 +47,7 @@ header nav[aria-expanded='true'] {
     grid-template: 'brand tools hamburger';
     grid-template-columns: 20fr 1fr 1fr;
     padding: 0 20px;
-    gap: 0;
+    gap: 12px;
   }
 
   header nav[aria-expanded='true'] {
@@ -660,7 +660,7 @@ header nav .nav-tools .default-content-wrapper ul li:has(p:hover) ul li {
     height: 100%;
   }
 
-  header nav[aria-expanded='true'] .nav-tools .default-content-wrapper .button-container a .icon.icon-search-icon {
+  header nav[aria-expanded='true'] .nav-tools p span.icon.icon-search-icon {
     display: none;
   }
 

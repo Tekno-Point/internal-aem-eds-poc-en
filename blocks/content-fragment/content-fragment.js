@@ -46,5 +46,4 @@ function createCard(data, block,i) {
        </a>
     `
     block.appendChild(teaser);
-    // console.log(teaser)
 }
