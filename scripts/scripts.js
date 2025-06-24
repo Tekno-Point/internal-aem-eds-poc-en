@@ -138,6 +138,23 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+function appendNextElements(container, nextElement) {
+  container.append(nextElement);
+}
+export default function decorateWrapper(main) {
+  // debugger;
+  main.querySelectorAll('.wrapperLeft').forEach((block) => {
+    // wrapper.classList.remove('wrapper');
+    console.log('Decorating wrapper', block);
+    const blockWrapper = block;
+    let nextElement = blockWrapper.nextElementSibling;
+    while (nextElement && (!nextElement.classList.contains('wrapperLeft'))) {
+      appendNextElements(block, nextElement);
+      nextElement = blockWrapper.nextElementSibling;
+    }
+  });
+  // block.innerHTML = '';
+}
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
