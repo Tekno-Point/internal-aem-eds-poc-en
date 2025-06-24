@@ -170,7 +170,7 @@ export default async function decorate(block) {
 
 
   window.addEventListener('scroll', function () {
-  const header = block.querySelector('.nav-wrapper'); // or .header
+  const header = document.querySelector('.nav-wrapper'); // or .header
   if (window.scrollY > 50) {
     header.style.transform = 'translateY(-100%)';
   } else {
@@ -179,8 +179,8 @@ export default async function decorate(block) {
 });
 
 
-const navWrapper2 = block.querySelector('.nav-wrapper');
-  const heroSection = block.querySelector('.compare-container');
+const navWrapper2 = document.querySelector('.nav-wrapper');
+  const heroSection = document.querySelector('.compare-container');
 
   window.addEventListener('scroll', () => {
     const heroBottom = heroSection.getBoundingClientRect().bottom;
