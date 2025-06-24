@@ -105,13 +105,22 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "text",
+        "name": "id",
+        "label": "Id"
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Wrapper left",
+            "value": "wrapper"
+          },
+          {
+            "name": "Wrapper right",
+            "value": "wrapper"
           }
         ]
       }
