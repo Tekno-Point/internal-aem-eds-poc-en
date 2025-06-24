@@ -116,11 +116,11 @@
         "options": [
           {
             "name": "Wrapper left",
-            "value": "wrapper"
+            "value": "wrapperLeft"
           },
           {
             "name": "Wrapper right",
-            "value": "wrapper"
+            "value": "wrapperRight"
           }
         ]
       }
