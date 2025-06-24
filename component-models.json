@@ -202,7 +202,8 @@
       "options": [
         {
           "name": "Mobile Setting",
-          "children": [{
+          "children": [
+            {
               "name": "Auto Scroll",
               "value": "mobile-auto-scroll"
             },
@@ -226,7 +227,8 @@
         },
         {
           "name": "Desktop Setting",
-          "children": [{
+          "children": [
+            {
               "name": "Pagination",
               "value": "desk-pagination"
             },
