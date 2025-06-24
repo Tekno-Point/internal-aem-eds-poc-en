@@ -22,7 +22,7 @@ export default function decorate(block) {
         objConfig["loop"] = true
         objConfig["autoplay"] = true
       }
-      if (blockClassList.indexOf("one-point-five-view") != -1) {
+      if (blockClassList.indexOf("mobile-one-point-five-view") != -1) {
         objConfig['slidesPerView'] = 1.5;
         objConfig['spaceBetween'] = 10;
       }

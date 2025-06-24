@@ -1,5 +1,4 @@
-[
-  {
+[{
     "id": "main",
     "components": [
       "section"
@@ -41,8 +40,8 @@
     ]
   },
   {
-    "id":"banner-container",
-    "components":[
+    "id": "banner-container",
+    "components": [
       "banner-container-item"
     ]
   }
