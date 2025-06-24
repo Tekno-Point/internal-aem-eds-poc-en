@@ -237,6 +237,10 @@
 
 .section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content p.button-container {
     margin: 0;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content p.button-container span {
+    margin: 0;
     padding: 15px 26px;
     position: relative;
     border-radius: 100px;
@@ -244,14 +248,14 @@
     background-color: #eef2f5;
 }
 
-.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a:hover .teaser-content p.button-container {
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a:hover .teaser-content p.button-container span {
     padding-right: 40px;
     transition: all 0.25s ease-in-out;
     background-color: rgb(77, 110, 130);
     color: #fff;
 }
 
-.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content p.button-container::after {
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content p.button-container span::after {
     content: url('/images/arrow-icon.svg');
     position: absolute;
     right: 21px;
@@ -260,7 +264,7 @@
     opacity: 0;
 }
 
-.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a:hover .teaser-content p.button-container::after {
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a:hover .teaser-content p.button-container span::after {
     opacity: 1;
 }
 
