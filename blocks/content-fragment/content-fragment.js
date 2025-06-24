@@ -1,7 +1,7 @@
 const exclude = ['author-p48457-e1275402.adobeaemcloud.com'];
 export default async function decorate(block) {
     
-    if(!exclude.includes(window.location.host)){
+    if(exclude.includes(window.location.host)){
         return block;
     }
     // const formHref = new URL(block.querySelectorAll('a')?.href).pathname;
