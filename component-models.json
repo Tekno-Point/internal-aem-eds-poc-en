@@ -190,5 +190,91 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"banner-container",
+    "fields": [{
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Multiselect field",
+      "valueType": "string",
+      "required": true,
+      "options": [
+        {
+          "name": "Mobile Setting",
+          "children": [{
+              "name": "Auto Scroll",
+              "value": "mobile-auto-scroll"
+            },
+            {
+              "name": "1.5 View",
+              "value": "one-point-five-view"
+            },
+            {
+              "name": "2.5 View",
+              "value": "two-point-five-view"
+            },
+            {
+              "name": "3.5 View",
+              "value": "three-point-five-view"
+            },
+            {
+              "name": "Center View",
+              "value": "center-view"
+            }
+          ]
+        },
+        {
+          "name": "Desktop Setting",
+          "children": [{
+              "name": "Pagination",
+              "value": "desk-pagination"
+            },
+            {
+              "name": "Action Button",
+              "value": "left-right-navigation-btn"
+            },
+            {
+              "name": "3 View",
+              "value": "three-point-view"
+            },
+            {
+              "name": "1.5 View",
+              "value": "one-point-five-view"
+            }
+          ]
+        }
+      ]
+    }]
+  },
+  {
+    "id":"banner-container-item",
+    "fields":[
+      {
+        "component": "richtext",
+        "name": "col_text",
+        "value": "",
+        "label": "Round Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col_text",
+        "value": "",
+        "label": "Banner Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
