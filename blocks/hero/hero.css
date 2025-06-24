@@ -28,7 +28,10 @@
 
 
 
-
+.section> div.hero-container{
+  padding: 0;
+  max-width: 100%;
+}
 
 .hero-container .hero-wrapper {
     max-width: unset;
@@ -36,13 +39,13 @@
 }
 
 .hero {
-  max-width: 1440px;
-  width: 100%;
+  /* max-width: 1440px;
+  width: 100%; */
   margin: 0 auto;
     position: relative;
     padding: 40px 24px;
     min-height: 300px;
-    background: linear-gradient(85.18deg, #034ea2 12.31%, #fff0 88.08%);
+    /* background: linear-gradient(85.18deg, #034ea2 12.31%, #fff0 88.08%); */
 }
 
 .hero h1 {
@@ -66,9 +69,18 @@
     height: 100%;
 }
 .hero > .hero-2 {
-    max-width: 578px;
-    width: 100%;
+width: 100%;
     padding: 20px 40px;
+    position: absolute;
+    background: linear-gradient(85.18deg, #034EA2 12.31%, #fff0 88.08%);
+    top: 0;
+    left: 0;
+    height: -webkit-fill-available;
+    box-sizing: border-box;
+}
+.hero > .hero-2 >div{
+  max-width: 578px;
+  width: 100%;
 }
 .hero > .hero-2 > div > h3 {
     font-size: 32px;
@@ -123,8 +135,13 @@
     align-items: center;
     font-family: "Montserrat-Bold";
 }
-
-
+.hero>.hero-0>div>picture{
+      position: absolute;
+    z-index: 0;
+    inset: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+}
 .hero>.hero-1{
   display: none;
 }
@@ -143,6 +160,6 @@
   display: none;
 }
 .hero > .hero-2 {
-  padding: 0px;
+  padding: 0px 15px;
 }
 }

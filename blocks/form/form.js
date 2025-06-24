@@ -118,20 +118,22 @@ export default async function decorate(block) {
     block.querySelector(".errorEmail").style.display = "none";
   }
 
-  block.querySelector("picture img").addEventListener("click", () => {
-    if (block.querySelector("[type='email']").value == "") {
-      block.querySelector(".errorEmail").style.display = "block";
-      block.querySelector("picture img").style.top = "53%"
-    }
-  });
+  // block.querySelector("picture img").addEventListener("click", () => {
+  //   if (block.querySelector("[type='email']").value == "") {
+  //     block.querySelector(".errorEmail").style.display = "block";
+  //     // block.querySelector("picture img").style.top = "53%"
+  //   }
+  // });
 
-  block.querySelector("[type=email]").addEventListener("keyup", (event) => {
-    if (event.target.value != "") {
-      block.querySelector(".errorEmail").style.display = "none";
-        block.querySelector("picture img").style.top = "56%"
-    } else {
-      block.querySelector(".errorEmail").style.display = "block";
-      block.querySelector(".errorEmail").style.color = "red";
-    }
-  });
+  // block.querySelector("[type=email]").addEventListener("keyup", (event) => {
+  //   if (event.target.value != "") {
+  //     block.querySelector(".errorEmail").style.display = "none";
+  //     block.querySelector("picture img").style.top = "57%"
+  //   } else {
+  //     block.querySelector(".errorEmail").style.display = "block";
+  //     block.querySelector(".errorEmail").style.color = "red";
+  //     block.querySelector("picture img").style.top = "53%"
+
+  //   }
+  // });
 }

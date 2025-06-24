@@ -1,8 +1,15 @@
+.section >div.fincorp-wrapper{
+    padding: 0 80px;
+    max-width: 100%;
+}
+
 .fincorp {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 14px;
+    border-bottom: 1px solid #231F2066;
+    padding-bottom: 30px;
 }
 
 .fincorp-0 > div > picture > img {
@@ -25,10 +32,10 @@
 
 .businessloan > .default-content-wrapper > p {
     font-size: 16px;
-     font-family: "Montserrat-Regular";
+     font-family: "Montserrat-SemiBold";
 }
 .businessloan > .default-content-wrapper > h1 {
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat-SemiBold";
     margin: 0px;
     font-size: 36px;
     line-height: 1.2;
@@ -38,4 +45,13 @@
 .businessloan > .default-content-wrapper > ul {
     list-style: none;
     padding: 0px;
+}
+
+@media screen and (max-width:768px) {
+    .fincorp{
+        padding-bottom: 20px;
+    }
+    .section >div.fincorp-wrapper{
+    padding: 0 15px;
+}
 }
