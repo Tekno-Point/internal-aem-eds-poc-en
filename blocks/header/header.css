@@ -425,8 +425,7 @@ header nav .nav-sections.active .default-content-wrapper p span.icon-close-icon 
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>p>a::after,
-  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>ol>li>p>a::after,
-  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>ol>li>a::after {
+  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>ol>li>p>a::after {
     content: url('/icons/down-arrow.svg');
     display: inline-block;
     height: 11px;
