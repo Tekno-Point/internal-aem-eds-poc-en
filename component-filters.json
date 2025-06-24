@@ -24,7 +24,8 @@
       "poona-fincorp-blogs",
       "poonawallaFincorpTeam",
       "footer",
-      "tabproduct"
+      "tabproduct",
+      "banner-carousel"
     ]
   },
   {
@@ -64,6 +65,12 @@
     "id": "tabproduct",
     "components": [
       "tabproduct-item"
+    ]
+  },
+  {
+    "id": "banner-carousel",
+    "components": [
+      "banner-carousel-item"
     ]
   }
 ]

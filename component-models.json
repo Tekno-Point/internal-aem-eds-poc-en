@@ -1282,5 +1282,35 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id":"banner-carousel-item",
+    "fields":[
+      {
+        "component": "richtext",
+        "name": "col_1text",
+        "value": "",
+        "label": "Round Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col_1image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col_1imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col_1text",
+        "value": "",
+        "label": "Round Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
