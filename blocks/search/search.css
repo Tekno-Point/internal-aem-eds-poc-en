@@ -139,7 +139,8 @@
 
 @media (max-width:786px) {
     .search.block {
-        padding: 0 16px;
+        /* padding: 0 16px; */
+        padding-top: 20px;
     }
 
     .search.block .search-box {
