@@ -200,34 +200,26 @@
       "valueType": "string",
       "required": true,
       "options": [
-        {
-          "name": "Mobile Setting",
-          "children": [
-            {
-              "name": "Auto Scroll",
+          {
+              "name": "Mobile Auto Scroll",
               "value": "mobile-auto-scroll"
             },
             {
-              "name": "1.5 View",
+              "name": "Mobile 1.5 View",
               "value": "one-point-five-view"
             },
             {
-              "name": "2.5 View",
+              "name": "Mobile 2.5 View",
               "value": "two-point-five-view"
             },
             {
-              "name": "3.5 View",
+              "name": "Mobile 3.5 View",
               "value": "three-point-five-view"
             },
             {
-              "name": "Center View",
+              "name": "Mobile Center View",
               "value": "center-view"
-            }
-          ]
-        },
-        {
-          "name": "Desktop Setting",
-          "children": [
+            },
             {
               "name": "Pagination",
               "value": "desk-pagination"
@@ -244,9 +236,7 @@
               "name": "1.5 View",
               "value": "one-point-five-view"
             }
-          ]
-        }
-      ]
+        ]
     }]
   },
   {
