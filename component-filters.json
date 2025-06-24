@@ -15,7 +15,7 @@
       "cards",
       "columns",
       "fragment",
-      "banner-container"
+      "banner-carousel"
     ]
   },
   {
@@ -40,9 +40,9 @@
     ]
   },
   {
-    "id": "banner-container",
+    "id": "banner-carousel",
     "components": [
-      "banner-container-item"
+      "banner-carousel-item"
     ]
   }
 ]

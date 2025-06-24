@@ -178,7 +178,54 @@
     ]
   },
   {
-    "id": "banner-container-item",
+    "id": "banner-carousel",
+    "fields": [{
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Multiselect field",
+      "valueType": "string",
+      "required": true,
+      "options": [{
+          "name": "Mobile Auto Scroll",
+          "value": "mobile-auto-scroll"
+        },
+        {
+          "name": "Mobile 1.5 View",
+          "value": "mobile-one-point-five-view"
+        },
+        {
+          "name": "Mobile 2.5 View",
+          "value": "two-point-five-view"
+        },
+        {
+          "name": "Mobile 3.5 View",
+          "value": "three-point-five-view"
+        },
+        {
+          "name": "Mobile Center View",
+          "value": "center-view"
+        },
+        {
+          "name": "Pagination",
+          "value": "desk-pagination"
+        },
+        {
+          "name": "Action Button",
+          "value": "left-right-navigation-btn"
+        },
+        {
+          "name": "3 View",
+          "value": "three-point-view"
+        },
+        {
+          "name": "1.5 View",
+          "value": "one-point-five-view"
+        }
+      ]
+    }]
+  },
+  {
+    "id": "banner-carousel-item",
     "fields": [{
         "component": "richtext",
         "name": "text",
