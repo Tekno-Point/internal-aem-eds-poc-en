@@ -19,7 +19,8 @@
       "embed",
       "poona-fincorp-blogs",
       "poonawallaFincorpTeam",
-      "footer"
+      "footer",
+      "accordion"
     ]
   },
   {
@@ -40,8 +41,7 @@
       "text",
       "image",
       "button",
-      "title",
-      "accordion"
+      "title"
     ]
   },
   {
