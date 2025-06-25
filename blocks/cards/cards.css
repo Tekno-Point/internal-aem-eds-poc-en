@@ -185,7 +185,7 @@
   margin-bottom: 25px;
 }
 
-.section.teaser-highlight.columns-container > .columns-wrapper > .columns > div > p.button-container > a{
+.section.teaser-highlight.columns-container > .columns-wrapper > .columns > p.button-container > a{
   margin: 0;
   color: #fff;
   font-size: 15px;
