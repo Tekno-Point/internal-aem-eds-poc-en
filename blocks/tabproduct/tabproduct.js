@@ -34,7 +34,7 @@ export default function decorate(block) {
             tab.addEventListener("mouseover", (e) => {
                 let cureentId = e.currentTarget.id;
                 bgTabwrapper.style.backgroundImage = `url('${bgImg[cureentId - 1]?.imgSrc || ''}')`
-                console.log(e.currentTarget)
+                // console.log(e.currentTarget)
             })
         });
     }

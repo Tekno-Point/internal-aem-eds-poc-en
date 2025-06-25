@@ -1255,6 +1255,18 @@
       }
     ]
   },
+   {
+    "id": "cf-fragment",
+    "fields": [
+      {
+        "component": "text",
+        "name": "url",
+        "value": "",
+        "label": "url",
+        "valueType": "string"
+      }
+    ]
+  },
   {
     "id": "documentation-item",
     "fields": [
