@@ -18,3 +18,18 @@ footer .footer p {
     padding: 40px 32px 24px;
   }
 }
+
+
+.columns-container{
+  background-color: #1f2a37;
+  color: #fff;
+}
+
+.columns-2-cols>div{
+  display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
