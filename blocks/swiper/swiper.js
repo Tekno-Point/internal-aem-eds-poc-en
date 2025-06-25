@@ -39,7 +39,7 @@ export default function decorate(block) {
         objConfig['spaceBetween'] = 10;
       }
       if (blockClassList.indexOf("center-view") != -1) {
-        objConfig['slidesPerView'] = auto;
+        objConfig['slidesPerView'] = "auto";
         objConfig['centeredSlides'] = true;
         objConfig['spaceBetween'] = 30;
       }
