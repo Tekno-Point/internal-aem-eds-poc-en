@@ -1,4 +1,4 @@
-/* .accordion details {
+.accordion details {
   border: 1px solid #dadada;
 }
 
@@ -57,4 +57,4 @@
 .accordion details[open] .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
-} */
+}
