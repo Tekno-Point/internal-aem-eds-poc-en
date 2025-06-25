@@ -1,3 +1,4 @@
+import SwiperBlock from '../swiper/swiper.js'
 export default function decorate(block){
     console.log(block);
     Array.from(block.children).forEach((element,index)=>{
@@ -18,4 +19,13 @@ export default function decorate(block){
             block.querySelectorAll(".subBannerpart ul")[index].append(divel)
         })
     })
+    Array.from(block.querySelectorAll(".subBannerpart")).forEach((el,index)=>{
+        const divwrapper = document.createElement('div');
+        divwrapper.classList.add("sub-title-text");
+        divwrapper.append(Array.from(el.children).at(-2))
+        divwrapper.append(Array.from(el.children).at(-1))
+        block.querySelectorAll(".subBannerpart")[index].append(divwrapper)
+    })
+
+    SwiperBlock(block)
 }
