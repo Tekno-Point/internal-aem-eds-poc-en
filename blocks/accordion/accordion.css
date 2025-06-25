@@ -1,11 +1,4 @@
-/* .accordion details {
-  border: 1px solid #dadada;
-} */
-
-/* .accordion details+details {
-  margin-top: 24px;
-} */
-.accordion-container .accordion-wrapper {
+/* .accordion-container .accordion-wrapper {
   margin-bottom: 50px;
   padding-top: 18px
 }
@@ -13,7 +6,6 @@
 .accordion a {
   color: #fff;
 }
-
 .accordion a:hover {
   text-decoration: none;
 }
@@ -23,7 +15,6 @@
 }
 
 .accordion details p {
-  /* margin-bottom: 0.8em; */
   margin: 0;
 }
 
@@ -50,13 +41,11 @@
 
 .accordion details summary {
   position: relative;
-  /* padding: 0 16px; */
   padding-right: 46px;
   cursor: pointer;
   list-style: none;
   overflow: auto;
   transition: background-color 0.2s;
-  /* padding: 24px 0; */
   border-bottom: 1px solid #FFFFFF;
 }
 
@@ -89,17 +78,6 @@
   background-size: cover;
 }
 
-/* &::after {
-  content: "";
-  background: url(/icons/icon-plus.svg);
-  width: 24px;
-  height: 24px;
-  position: relative;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background-size: cover;
-} */
 
 .accordion details[open] summary::after {
   background: url(/icons/icon-minus.svg);
@@ -151,11 +129,4 @@
 
 .accordion details[open] .accordion-item-label {
   border-bottom: none;
-}
-
-
-/* .accordion details[open] .accordion-item-body {
-  border-top: 1px solid #dadada; 
-   color: rgb(255, 255, 255);
-  background: rgb(37, 58, 113);
 } */
