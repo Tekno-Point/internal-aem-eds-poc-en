@@ -13,7 +13,7 @@ export default async function decorate(block) {
     const formHrefs = block.querySelectorAll('a');
 
 
-    block.innerHTML = "";
+    // block.innerHTML = "";
 
     formHrefs.forEach(async (item,i ) => {
         // const item = formHref[i];
