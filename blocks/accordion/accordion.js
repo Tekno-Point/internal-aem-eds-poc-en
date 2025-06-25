@@ -20,4 +20,16 @@ export default function decorate(block) {
     details.append(summary, body);
     row.replaceWith(details);
   });
+
+  Array.from(block.querySelectorAll(".accordion-item-body p")).forEach((el) => {
+    el.style.visibility = el.textContent.includes("-") ? 'hidden' : ""
+  })
+  Array.from(block.querySelectorAll(".accordion-item")).forEach((element) => {
+    element.addEventListener("click", (event) => {
+      Array.from(block.querySelectorAll(".accordion-item")).forEach((elem) => {
+        elem.removeAttribute("open");
+      })
+      event.target.setAttribute('open', '')
+    })
+  })
 }
