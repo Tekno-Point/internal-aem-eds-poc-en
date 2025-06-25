@@ -1,6 +1,6 @@
 import SwipperText from "../swiper/swiper-bundle.min.js"
 export default function decorate(block) {
-  
+
   block.classList.add("swiper");
   const swipperwrapper = document.createElement("div");
   swipperwrapper.classList.add("swiper-wrapper");
@@ -77,6 +77,10 @@ export default function decorate(block) {
         objConfig['slidesPerView'] = 1.5;
         objConfig['spaceBetween'] = 10;
       }
+      if (blockClassList.indexOf("auto-scroll") != -1) {
+        objConfig["loop"] = true
+        objConfig["autoplay"] = true
+      }
     }
     SwipperText(block, objConfig);
     // JSON.stringify(objConfig) !== "{}"? SwipperText(block, objConfig) : ""
@@ -88,5 +92,5 @@ export default function decorate(block) {
   // Also call it on resize
   window.addEventListener('resize', handleResolution)
 
-  
+
 }
