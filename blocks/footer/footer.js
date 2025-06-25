@@ -54,23 +54,6 @@ export default async function decorate(block) {
   // document.querySelector(".footer-sub1-bottom4").innerHTML+=divtwoWrapper
 
 
-  const columns = document.querySelector('.columns-2-cols');
-
-  if (columns) {
-    const childDivs = columns.querySelectorAll(':scope > div');
-
-    childDivs.forEach((child, index) => {
-      // Add class to direct child divs of .columns-2-cols
-      child.classList.add(`column-child-${index + 1}`);
-
-      // Add class to the children of each child div
-      const innerDivs = child.querySelectorAll(':scope > div');
-      innerDivs.forEach((inner, innerIndex) => {
-        inner.classList.add(`inner-child-${index + 1}-${innerIndex + 1}`);
-      });
-    });
-  }
-
   const footerMeta = getMetadata('footer');
   const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
   const fragment = await loadFragment(footerPath);
