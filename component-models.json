@@ -1205,49 +1205,49 @@
     ]
   },
   {
-    "id":"banner-carousel",
-    "fields":[{
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Multi Select",
-        "options": [{
-              "name": "Mobile Auto Scroll",
-              "value": "mobile-auto-scroll"
-            },
-            {
-              "name": "Mobile 1.5 View",
-              "value": "mobile-one-point-five-view"
-            },
-            {
-              "name": "Mobile 2.5 View",
-              "value": "two-point-five-view"
-            },
-            {
-              "name": "Mobile 3.5 View",
-              "value": "three-point-five-view"
-            },
-            {
-              "name": "Mobile Center View",
-              "value": "center-view"
-            },
-            {
-              "name": "Pagination",
-              "value": "desk-pagination"
-            },
-            {
-              "name": "Action Button",
-              "value": "left-right-navigation-btn"
-            },
-            {
-              "name": "3 View",
-              "value": "three-point-view"
-            },
-            {
-              "name": "1.5 View",
-              "value": "one-point-five-view"
-            }
-        ]
-      }]
+    "id": "banner-carousel",
+    "fields": [{
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Multi Select",
+      "options": [{
+          "name": "Mobile Auto Scroll",
+          "value": "mobile-auto-scroll"
+        },
+        {
+          "name": "Mobile 1.5 View",
+          "value": "mobile-one-point-five-view"
+        },
+        {
+          "name": "Mobile 2.5 View",
+          "value": "two-point-five-view"
+        },
+        {
+          "name": "Mobile 3.5 View",
+          "value": "three-point-five-view"
+        },
+        {
+          "name": "Mobile Center View",
+          "value": "center-view"
+        },
+        {
+          "name": "Pagination",
+          "value": "desk-pagination"
+        },
+        {
+          "name": "Action Button",
+          "value": "left-right-navigation-btn"
+        },
+        {
+          "name": "3 View",
+          "value": "three-point-view"
+        },
+        {
+          "name": "1.5 View",
+          "value": "one-point-five-view"
+        }
+      ]
+    }]
   },
   {
     "id": "banner-carousel-item",
@@ -1287,5 +1287,114 @@
       "label": "Text",
       "valueType": "string"
     }]
+  },
+  {
+    "id": "blogs-carousel-item",
+    "fields": [{
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "blogs-carousel-two-item",
+    "fields": [{
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col2_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "blogs-carousel-two-item",
+    "fields": [{
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col3_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col3_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col3_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]

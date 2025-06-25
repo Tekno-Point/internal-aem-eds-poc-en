@@ -2,7 +2,8 @@
   "groups": [{
       "title": "Default Content",
       "id": "default",
-      "components": [{
+      "components": [
+        {
           "title": "Text",
           "id": "text",
           "plugins": {
@@ -193,6 +194,67 @@
                 "template": {
                   "name": "Banner Carousel Item",
                   "model": "banner-carousel-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Blogs Carousel",
+          "id": "blogs-carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Blogs Carousel",
+                  "filter": "blogs-carousel",
+                  "model": "blogs-carousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Blogs Carousel Item",
+          "id": "blogs-carousel-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "blogs Carousel Item",
+                  "model": "blogs-carousel-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Blogs Carousel Two Item",
+          "id": "blogs-carousel-two-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "blogs Carousel Two Item",
+                  "model": "blogs-carousel-two-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Blogs Carousel Three Item",
+          "id": "blogs-carousel-three-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "blogs Carousel Three Item",
+                  "model": "blogs-carousel-three-item"
                 }
               }
             }
