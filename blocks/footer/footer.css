@@ -1,35 +1,208 @@
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url('../fonts/OpenSans-ExtraBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-SamiBold';
+  src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+    background-color: var(--light-color);
+    font-size: var(--body-font-size-xs);
 }
 
 footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+    margin: auto;
+    max-width: 1200px;
+    padding: 40px 24px 24px;
 }
 
 footer .footer p {
-  margin: 0;
+    margin: 0;
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+    footer .footer > div {
+        padding: 40px 32px 24px;
+    }
 }
 
-
-.columns-container{
-  background-color: #1f2a37;
-  color: #fff;
+.columns-container {
+    background-color: #1f2a37;
+    color: #fff;
 }
 
-.columns-2-cols>div{
-  display: flex
-;
+.columns-2-cols > div {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.footer {
+    background-color: rgb(31, 42, 55);
+    color: white;
+}
+.footer > div > ul {
+    list-style: none;
+}
+
+.footer.default-content-wrapper{
+  max-width: 100%;
+}
+.footer {
+  padding: 40px 0px;
+}
+.footer-sec1 > .default-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 17px 20px 17px;
+}
+
+.footer-sec1 > .default-content-wrapper>ul{
+  display: flex;
+  gap: 20px;
+  padding: 0px;
+}
+.footer-sec1 > .default-content-wrapper>p{
+  font-family: "OpenSans-Bold";
+  font-size: 2.25rem;
+}
+.footer-sec1 > .default-content-wrapper>ul>li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3px;
+  padding: 5px 35px;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.footer-sec1 > .default-content-wrapper>ul>li:hover{
+  background-color: #1a4c81;
+  transition: all .5s ease;
+
+}
+
+.footer-sec2>.default-content-wrapper{
+  display: flex;
+
+}
+.footer-sec2>.default-content-wrapper>ul>li>p{
+  color: #fff;
+  font-family:"OpenSans-Bold" ;
+}
+
+.footer-sec2>.default-content-wrapper>ul>li>ul{
+  list-style: none;
+  padding: 0px;
+}
+.footer-sec2>.default-content-wrapper>ul>li>ul>li>a{
+  color: #f9fafb;;
+  font-family:"OpenSans-Regular" ;
+  font-size: .875rem;
+    line-height: 150%;
+    opacity: .6;
+}
+
+@media (max-width: 768px) {
+ .footer-sec2>.default-content-wrapper {
+  flex-direction: column;
+ }
+ .footer-sec1 > .default-content-wrapper>ul>li{
+  padding: 5px;
+  font-size: 15px;
+ }
+ .footer-sec1 > .default-content-wrapper>ul{
+  gap: 12px;
+ }
+
+ 
+}
+
+.footer-sec3>.default-content-wrapper>ul{
+  padding: 0px;
+
+}
+.footer-sec3>.default-content-wrapper>ul>li{
+  display: flex;
+  gap: 32px;
+  align-items: start;
+
+}
+.footer-sec3>.default-content-wrapper>ul>li>ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+}
+
+.footer-sec3>.default-content-wrapper>ul>li>p{
+  color: #fff;
+  font-family:"OpenSans-Bold" ;
+  max-width: 15%;
+  width: 100%;
+  font-size: .875rem;
+  line-height: 16px;
+
+}
+.footer-sec3>.default-content-wrapper>ul>li>ul{
+  list-style: none;
+  padding: 0px;
+      margin: 0;
+}
+.footer-sec3>.default-content-wrapper>ul>li>ul>li{
+  padding-right: 14px;
+    border-right: 2px solid rgba(249, 250, 251, 0.5); 
+  font-size: .875rem;
+    line-height: 150%;
+}
+.footer-sec3>.default-content-wrapper>ul>li>ul>li:last-of-type{
+  border: none;
+}
+
+
+.footer-sec3>.default-content-wrapper>ul>li>ul>li>a{
+  color: #f9fafb;
+  font-family:"OpenSans-Regular" ;
+    opacity: .6;
+}
+
+
+@media (max-width: 768px) {
+ .footer-sec3>.default-content-wrapper>ul>li{
+  flex-direction: column;
+ }
+ .footer-sec3>.default-content-wrapper>ul>li>ul{
+  flex-direction: column;
+}
+.footer-sec3>.default-content-wrapper>ul>li>p{
+  max-width: 40%;
+}
 
 }
