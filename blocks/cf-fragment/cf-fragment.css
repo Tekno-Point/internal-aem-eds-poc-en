@@ -1,6 +1,7 @@
 /* Service teaser CSS */
 .section.service-teaser {
     padding-top: 55px;
+    margin: 0;
 }
 
 .section.service-teaser .cf-fragment-wrapper .cf-fragment.block {
@@ -9,9 +10,12 @@
     padding-top: 30px;
 }
 
+.section.service-teaser .cf-fragment-wrapper .cf-fragment.block > div {
+    flex-basis: 33.33%;
+}
+
 .section.service-teaser .cf-fragment-wrapper .cf-fragment.block .teaser {
     flex: unset;
-    flex-basis: 33.33%;
 }
 
 .section.service-teaser .cf-fragment-wrapper .cf-fragment.block .teaser:hover {
