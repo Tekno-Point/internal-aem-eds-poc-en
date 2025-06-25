@@ -161,6 +161,42 @@
   margin: 0;
 }
 
+.section.teaser-highlight.columns-container {
+  background-color: #eef2f5;
+  padding: 70px 0;
+}
+
+.section.teaser-highlight.columns-container > .columns-wrapper > .columns > div{
+  gap: 70px;
+}
+
+.section.teaser-highlight.columns-container > .columns-wrapper > .columns > div > h4{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #4d6e82;
+  margin: 0 0 13px;
+}
+
+.section.teaser-highlight.columns-container > .columns-wrapper > .columns > div > p{
+  font-size: 16px;
+  line-height: 1.5;
+  color: #849dab;
+  margin-bottom: 25px;
+}
+
+.section.teaser-highlight.columns-container > .columns-wrapper > .columns > div > p.button-container > a{
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: #4d6e82;
+  padding: 15px 26px;
+  border-radius: 100px;
+  position: relative;
+}
+
 .section.teaser-highlight .cards-wrapper {
   max-width: unset;
   padding: 0 8px;
