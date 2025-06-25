@@ -24,12 +24,14 @@ export default function decorate(block) {
     })
 
     let imgDom = imgRow.map((row, ind) => {
+        let imgsrc = row.querySelector("img");
+        imgsrc.classList.add("main-gl-img");
         return `
-            ${row.querySelector("img").outerHTML}     
+            ${imgsrc.outerHTML}     
         `
     })
 
-    let applyBtn = block.children[0].children[0].querySelector(".button-container");
+    let applyBtn = block.children[0].children[0].querySelector(".button-container a");
     block.children[0].children[0].querySelector(".button-container").remove();
     const heading = block.children[0].children[0];
     block.innerHTML =
@@ -55,5 +57,37 @@ export default function decorate(block) {
     </div>
 </div>
     `
+    let btns = block.querySelectorAll(".button-container");
+    let mainImgs = block.querySelectorAll(".main-gl-img");
 
+    function animateBtnAndImg() {
+
+        btns.forEach((btn, ind) => {
+            btn.style.opacity = 0;
+            setTimeout(() => { btn.style.opacity = 1 }, ((ind) * 2500))
+        });
+
+        mainImgs.forEach((img, ind) => {
+            img.style.opacity = 0;
+            setTimeout(() => {
+                mainImgs.forEach(img => img.style.opacity = 0)
+                img.style.opacity = 1;
+            }, ((ind) * 2500))
+        });
+
+        setTimeout(() => {
+            btns.forEach(btn => {
+                btn.style.opacity = 0;
+            });
+        }, 6000);
+
+        setTimeout(() => {
+            mainImgs.forEach(img => {
+                img.style.opacity = 0;
+            });
+        }, 6000);
+    }
+
+    animateBtnAndImg()
+    setInterval(animateBtnAndImg, 7000);
 }
