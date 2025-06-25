@@ -10,12 +10,18 @@ export default async function decorate(block) {
         origin = 'https://author-p48457-e1275402.adobeaemcloud.com';
     }
     // const formHref = new URL(block.querySelectorAll('a')?.href).pathname;
-    const formHrefs = block.querySelectorAll('a');
 
+    // if(!window.location.href.includes('author')){
+    //     block.innerHTML = "";
+    // }
+    // else{
+    //     Array.from(formHrefs).forEach(item => {
+    //         item.innerHTML = "";
+    //     })
+    // }
 
-    block.innerHTML = "";
-
-    formHrefs.forEach(async (item,i ) => {
+    Array.from(block.children).forEach(async (row,i ) => {
+        const item = row.querySelector('a');
         // const item = formHref[i];
         const formurl = new URL(item.href)?.pathname.replace('.html','');
         const url = `${origin}/graphql/execute.json/internal-aem-eds-poc/get-article;path=${formurl}`
@@ -28,9 +34,9 @@ export default async function decorate(block) {
         // respData.data.forEach(data => {
     
         // });
-        console.log("response :: ", respData);
+        // console.log("response :: ", respData);
     
-        createCard(respData, block,i)
+        block.appendChild(createCard(respData, row,i));
     });
     // for (let i = 0; i < formHref.length; i++) {
     // }
@@ -40,10 +46,11 @@ const imagedata = ["/images/cross-teaser4.webp", "/images/cross-teaser5.webp"]
 
 function createCard(data, block,i) {
     const path = data.data.articleByPath.item;
-    const teaser = document.createElement('div');
-    teaser.classList.add('teaser');
+    // const teaser = document.createElement('div');
+    // teaser.classList.add('teaser');
 
-    teaser.innerHTML = `
+    block.innerHTML = `
+    <div class="teaser">
         <a href=${path.ctaUrl._publishUrl}>
             <div class="teaser-image">
                 <img loading="lazy" alt="" src=${path.image._publishUrl?path.image._publishUrl: imagedata[i]} />
@@ -54,6 +61,8 @@ function createCard(data, block,i) {
               <p class="button-container"><span>${path.ctaText}</span></p>
             </div>
        </a>
+    </div>
     `;
-    block.appendChild(teaser);
+
+    return block;
 }
