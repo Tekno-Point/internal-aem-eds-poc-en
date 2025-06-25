@@ -15,6 +15,11 @@ export default async function decorate(block) {
     if(!window.location.href.includes('author')){
         block.innerHTML = "";
     }
+    else{
+        formHrefs.forEach(item => {
+            item.innerHTML = "";
+        })
+    }
 
     formHrefs.forEach(async (item,i ) => {
         // const item = formHref[i];
