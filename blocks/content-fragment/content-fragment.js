@@ -14,7 +14,7 @@ export default async function decorate(block) {
 
     formHrefs.forEach(async (item,i ) => {
         // const item = formHref[i];
-        const formurl = new URL(item.href)?.pathname
+        const formurl = new URL(item.href)?.pathname.replace('.html','');
         const url = `${origin}/graphql/execute.json/internal-aem-eds-poc/get-article;path=${formurl}`
         const response = await fetch((url), {
             method: "GET"
