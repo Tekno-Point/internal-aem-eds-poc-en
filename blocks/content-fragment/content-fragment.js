@@ -1,21 +1,21 @@
 const exclude = ['author-p48457-e1275402.adobeaemcloud.com'];
 export default async function decorate(block) {
-    
+    const configResp = await fetch('/config.json');
+    const config = await configResp.json();
+    let origin = config.data[0].value
     if(exclude.includes(window.location.host)){
-        return block;
+        origin = exclude[0];
     }
     // const formHref = new URL(block.querySelectorAll('a')?.href).pathname;
     const formHrefs = block.querySelectorAll('a');
 
-    const configResp = await fetch('/config.json');
-    const config = await configResp.json();
 
     block.innerHTML = "";
 
     formHrefs.forEach(async (item,i ) => {
         // const item = formHref[i];
         const formurl = new URL(item.href)?.pathname
-        const url = `${config.data[0].value}/graphql/execute.json/internal-aem-eds-poc/get-article;path=${formurl}`
+        const url = `${origin}/graphql/execute.json/internal-aem-eds-poc/get-article;path=${formurl}`
         const response = await fetch((url), {
             method: "GET"
             // credentials: "include", // Include credentials such as cookies
