@@ -409,23 +409,6 @@
     ]
   },
   {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "head",
-        "value": "",
-        "label": "Head"
-      },
-      {
-        "component": "richtext",
-        "name": "body",
-        "value": "",
-        "label": "Body"
-      }
-    ]
-  },
-  {
     "id": "footer-item",
     "fields": [
       {
@@ -441,6 +424,25 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "head",
+        "value": "",
+        "label": "Head",
+         "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Body",
+         "valueType": "string"
       }
     ]
   }
