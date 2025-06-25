@@ -1351,7 +1351,7 @@
     ]
   },
   {
-    "id": "blogs-carousel-two-item",
+    "id": "blogs-carousel-three-item",
     "fields": [{
         "component": "reference",
         "name": "col1_image",
