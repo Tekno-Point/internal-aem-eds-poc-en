@@ -1329,6 +1329,10 @@
         {
           "name": "1.5 View",
           "value": "one-point-five-view"
+        },
+        {
+          "name": "Auto Scroll",
+          "value": "auto-scroll"
         }
       ]
     }]
