@@ -4,7 +4,7 @@ export default async function decorate(block) {
     const config = await configResp.json();
     let origin = config.data[0].value
     if(exclude.includes(window.location.host)){
-        origin = exclude[0];
+        origin = 'https://author-p48457-e1275402.adobeaemcloud.com';
     }
     // const formHref = new URL(block.querySelectorAll('a')?.href).pathname;
     const formHrefs = block.querySelectorAll('a');
