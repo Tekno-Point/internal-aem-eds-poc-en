@@ -46,10 +46,11 @@ const imagedata = ["/images/cross-teaser4.webp", "/images/cross-teaser5.webp"]
 
 function createCard(data, block,i) {
     const path = data.data.articleByPath.item;
-    const teaser = document.createElement('div');
-    teaser.classList.add('teaser');
+    // const teaser = document.createElement('div');
+    // teaser.classList.add('teaser');
 
-    teaser.innerHTML = `
+    block.innerHTML = `
+    <div class="teaser">
         <a href=${path.ctaUrl._publishUrl}>
             <div class="teaser-image">
                 <img loading="lazy" alt="" src=${path.image._publishUrl?path.image._publishUrl: imagedata[i]} />
@@ -60,8 +61,8 @@ function createCard(data, block,i) {
               <p class="button-container"><span>${path.ctaText}</span></p>
             </div>
        </a>
+    </div>
     `;
 
-    block.appendChild(teaser);
     return block;
 }
