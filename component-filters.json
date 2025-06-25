@@ -40,7 +40,8 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "accordion"
     ]
   },
   {
@@ -50,5 +51,9 @@
   {
     "id": "footer",
     "components": ["footer-item"]
+  },
+  {
+    "id": "accordion",
+    "components": [ "accordion-item"]
   }
 ]

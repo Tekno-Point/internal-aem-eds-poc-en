@@ -12,6 +12,8 @@ import {
   loadCSS,
 } from './aem.js';
 
+import decorateForm from '../blocks/form/form.js';
+
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
@@ -69,6 +71,15 @@ function buildAutoBlocks() {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
   }
+}
+
+export function autolinkForm(element) {
+  element.querySelectorAll('a').forEach(async function (origin) {
+    console.log(origin.href);
+      if (origin && origin.href && origin.href.includes('email-form')) {
+        decorateForm(origin.closest('ul'))
+      }
+    });
 }
 
 /**
