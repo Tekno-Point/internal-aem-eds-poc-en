@@ -1,0 +1,38 @@
+.section .blogs-carousel-wrapper{
+    max-width: 100%;
+    padding: 0px;
+}
+.section .blogs-carousel-wrapper .blogs-carousel{
+    display: flex;
+    gap: 5px;
+}
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog1{
+    position: relative;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog1 .subBlog1-bloginner2{
+    position: absolute;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1{
+    position: relative;
+    width: 100%;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 #check-your-cibil-score-for-free{
+    position: absolute;
+    bottom: 0;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 {
+    width: 50%;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3{
+    width: 50%;
+}
