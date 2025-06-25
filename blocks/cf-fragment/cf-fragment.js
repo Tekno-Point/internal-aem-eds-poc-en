@@ -12,8 +12,9 @@ export default async function decorate(block) {
     // const formHref = new URL(block.querySelectorAll('a')?.href).pathname;
     const formHrefs = block.querySelectorAll('a');
 
-
-    // block.innerHTML = "";
+    if(!window.location.href.includes('author')){
+        block.innerHTML = "";
+    }
 
     formHrefs.forEach(async (item,i ) => {
         // const item = formHref[i];
@@ -28,7 +29,7 @@ export default async function decorate(block) {
         // respData.data.forEach(data => {
     
         // });
-        console.log("response :: ", respData);
+        // console.log("response :: ", respData);
     
         createCard(respData, block,i)
     });
@@ -55,5 +56,6 @@ function createCard(data, block,i) {
             </div>
        </a>
     `;
+
     block.appendChild(teaser);
 }
