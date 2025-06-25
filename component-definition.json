@@ -154,15 +154,6 @@
                   "name": "Content Fragment Item",
                   "model": "content-fragment-item"
                 }
-              },
-              "cf": {
-                "type": "reference",
-                "editable": true,
-                "path": {
-                  "type": "string",
-                  "default": "/content/dam/internal-aem-eds-poc/cf/vacation"
-                },
-                "fragmentModel": "article"
               }
             }
           }
