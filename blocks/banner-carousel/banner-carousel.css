@@ -1,0 +1,36 @@
+.section.banner-text-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section .block .bannerCarousel ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+
+.section .block .bannerCarousel ul .roundrestat{
+    top: 20%;
+    background: linear-gradient(118deg, rgb(31 76 156 / .8) 12.21%, rgb(223 241 239 / .8) 115.47%);
+    backdrop-filter: blur(8.40000057220459px);
+    width: 136px;
+    height: 136px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 100%;
+    align-items: center;
+    display: block;
+    transition: 3s;
+}
+
+.section .block .bannerCarousel ul .roundrestat li{
+    padding-top: 40px;
+}
+
+.section .block .bannerCarousel p img {
+    width: 200px;
+    height: 350px;
+    border-radius: 10px;
+}
