@@ -1295,18 +1295,18 @@
       },
       {
         "component": "reference",
-        "name": "col_1image",
+        "name": "col_2image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
-        "name": "col_1imageAlt",
+        "name": "col_2imageAlt",
         "label": "Alt Text"
       },
       {
         "component": "richtext",
-        "name": "col1_text",
+        "name": "col_2text",
         "value": "",
         "label": "Text Image",
         "valueType": "string"
