@@ -1,5 +1,8 @@
 const exclude = ['author-p48457-e1275402.adobeaemcloud.com'];
 export default async function decorate(block) {
+    if(!block.textContent.trim()){
+        return block;
+    }
     const configResp = await fetch('/config.json');
     const config = await configResp.json();
     let origin = config.data[0].value
