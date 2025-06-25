@@ -36,7 +36,7 @@ export default async function decorate(block) {
         // });
         // console.log("response :: ", respData);
     
-        createCard(respData, block,i)
+        block.appendChild(createCard(respData, item,i));
     });
     // for (let i = 0; i < formHref.length; i++) {
     // }
@@ -63,4 +63,5 @@ function createCard(data, block,i) {
     `;
 
     block.appendChild(teaser);
+    return block;
 }
