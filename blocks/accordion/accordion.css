@@ -1,4 +1,4 @@
-/* .accordion-container .accordion-wrapper {
+.accordion-container .accordion-wrapper {
   margin-bottom: 50px;
   padding-top: 18px
 }
@@ -129,4 +129,4 @@
 
 .accordion details[open] .accordion-item-label {
   border-bottom: none;
-} */
+}
