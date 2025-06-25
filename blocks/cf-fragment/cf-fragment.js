@@ -10,18 +10,18 @@ export default async function decorate(block) {
         origin = 'https://author-p48457-e1275402.adobeaemcloud.com';
     }
     // const formHref = new URL(block.querySelectorAll('a')?.href).pathname;
-    const formHrefs = block.querySelectorAll('a');
 
-    if(!window.location.href.includes('author')){
-        block.innerHTML = "";
-    }
-    else{
-        formHrefs.forEach(item => {
-            item.innerHTML = "";
-        })
-    }
+    // if(!window.location.href.includes('author')){
+    //     block.innerHTML = "";
+    // }
+    // else{
+    //     Array.from(formHrefs).forEach(item => {
+    //         item.innerHTML = "";
+    //     })
+    // }
 
-    formHrefs.forEach(async (item,i ) => {
+    Array.from(block.children).forEach(async (row,i ) => {
+        const item = row.querySelector('a');
         // const item = formHref[i];
         const formurl = new URL(item.href)?.pathname.replace('.html','');
         const url = `${origin}/graphql/execute.json/internal-aem-eds-poc/get-article;path=${formurl}`
@@ -36,7 +36,7 @@ export default async function decorate(block) {
         // });
         // console.log("response :: ", respData);
     
-        block.appendChild(createCard(respData, item,i));
+        block.appendChild(createCard(respData, row,i));
     });
     // for (let i = 0; i < formHref.length; i++) {
     // }
