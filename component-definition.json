@@ -259,6 +259,37 @@
               }
             }
           }
+        },
+        {
+          "title": "Customer Carousel",
+          "id": "customer-carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Customer Carousel",
+                  "filter": "customer-carousel",
+                  "model": "customer-carousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Customer Carousel Item",
+          "id": "customer-carousel-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Customer Carousel Item",
+                  "model": "customer-carousel-item"
+                }
+              }
+            }
+          }
         }
       ]
     }

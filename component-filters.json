@@ -81,5 +81,11 @@
         "blogs-carousel-two-item",
         "blogs-carousel-three-item"   
     ]
+  },
+  {
+    "id": "customer-carousel",
+    "components": [
+      "customer-carousel-item"
+    ]
   }
 ]

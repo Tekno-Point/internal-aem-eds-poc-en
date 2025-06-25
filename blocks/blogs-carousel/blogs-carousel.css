@@ -14,6 +14,10 @@
     width: 100%;
 }
 
+.section .blogs-carousel-wrapper .blogs-carousel .swiper-slide{
+    background: #fff;
+}
+
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog1 .subBlog1-bloginner1 img {
     height: 100%;
     border-radius: 8px;

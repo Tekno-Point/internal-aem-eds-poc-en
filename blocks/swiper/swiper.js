@@ -80,6 +80,8 @@ export default function decorate(block) {
       if (blockClassList.indexOf("auto-scroll") != -1) {
         objConfig["loop"] = true
         objConfig["autoplay"] = true
+        objConfig['slidesPerView'] = 3.2;
+        objConfig['spaceBetween'] = 10;
       }
     }
     SwipperText(block, objConfig);
