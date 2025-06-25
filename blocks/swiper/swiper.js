@@ -34,6 +34,15 @@ export default function decorate(block) {
         objConfig['slidesPerView'] = 3.5;
         objConfig['spaceBetween'] = 30;
       }
+      if (blockClassList.indexOf("mobile-one-point-five-view") != -1) {
+        objConfig['slidesPerView'] = 1.5;
+        objConfig['spaceBetween'] = 10;
+      }
+      if (blockClassList.indexOf("center-view") != -1) {
+        objConfig['slidesPerView'] = auto;
+        objConfig['centeredSlides'] = true;
+        objConfig['spaceBetween'] = 30;
+      }
     } else {
       //DeskTop
       if (blockClassList.indexOf("desk-pagination") != -1) {
@@ -63,6 +72,10 @@ export default function decorate(block) {
       if (blockClassList.indexOf("three-point-view") != -1) {
         objConfig['slidesPerView'] = 3;
         objConfig['spaceBetween'] = 30;
+      }
+      if (blockClassList.indexOf("one-point-five-view") != -1) {
+        objConfig['slidesPerView'] = 1.5;
+        objConfig['spaceBetween'] = 10;
       }
     }
     SwipperText(block, objConfig);
