@@ -1372,25 +1372,25 @@
       },
       {
         "component": "richtext",
-        "name": "col2_text",
+        "name": "col2one_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
       },
       {
         "component": "reference",
-        "name": "col3_image",
+        "name": "col2two_image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
-        "name": "col3_imageAlt",
+        "name": "col2two_imageAlt",
         "label": "Alt Text"
       },
       {
         "component": "richtext",
-        "name": "col3_text",
+        "name": "col2two_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
