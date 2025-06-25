@@ -415,15 +415,13 @@
         "component": "richtext",
         "name": "head",
         "value": "",
-        "label": "Head",
-        "row": true
+        "label": "Head"
       },
       {
         "component": "richtext",
         "name": "body",
         "value": "",
-        "label": "Body",
-        "row": true
+        "label": "Body"
       }
     ]
   },
@@ -447,4 +445,3 @@
     ]
   }
 ]
-
