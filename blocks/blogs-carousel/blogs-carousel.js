@@ -1,3 +1,4 @@
+import SwiperBlock from '../swiper/swiper.js'
 export default function decorate(block){
     Array.from(block.children).forEach((el,ind)=>{
         el.classList.add("subBlog"+(ind+1))
@@ -5,4 +6,5 @@ export default function decorate(block){
             elem.classList.add("subBlog"+(ind+1)+"-bloginner"+(index+1))
         })
     })
+    SwiperBlock(block)
 }
