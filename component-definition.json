@@ -1,10 +1,8 @@
 {
-  "groups": [
-    {
+  "groups": [{
       "title": "Default Content",
       "id": "default",
-      "components": [
-        {
+      "components": [{
           "title": "Text",
           "id": "text",
           "plugins": {
@@ -61,28 +59,25 @@
     {
       "title": "Sections",
       "id": "sections",
-      "components": [
-        {
-          "title": "Section",
-          "id": "section",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/section/v1/section",
-                "template": {
-                  "model": "section"
-                }
+      "components": [{
+        "title": "Section",
+        "id": "section",
+        "plugins": {
+          "xwalk": {
+            "page": {
+              "resourceType": "core/franklin/components/section/v1/section",
+              "template": {
+                "model": "section"
               }
             }
           }
         }
-      ]
+      }]
     },
     {
       "title": "Blocks",
       "id": "blocks",
-      "components": [
-        {
+      "components": [{
           "title": "Cards",
           "id": "cards",
           "plugins": {
@@ -120,7 +115,7 @@
               "page": {
                 "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "columns": "4",
+                  "columns": "2",
                   "rows": "1"
                 }
               }
@@ -143,52 +138,6 @@
           }
         },
         {
-          "title": "Search",
-          "id": "search",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Search",
-                  "model": "search"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "poonawallaFincorpTeam",
-          "id": "poonawallaFincorpTeam",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "poonawallaFincorpTeam",
-                  "filter": "poonawallaFincorpTeam",
-                  "model": "poonawallaFincorpTeam"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "poonawallaFincorpTeam",
-          "id": "poonawallaFincorpTeamItem",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "poonawallaFincorpTeamItem",
-                  "model": "poonawallaFincorpTeamItem"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Hero",
           "id": "hero",
           "plugins": {
@@ -198,265 +147,6 @@
                 "template": {
                   "name": "Hero",
                   "model": "hero"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Breadcrumb",
-          "id": "breadcrumb",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Breadcrumb",
-                  "model": "breadcrumb"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Fincorp",
-          "id": "fincorp",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Fincorp",
-                  "model": "fincorp"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Form",
-          "id": "form",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Form",
-                  "model": "form"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Embed",
-          "id": "embed",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Embed",
-                  "model": "embed"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Poona Fincorp Blogs",
-          "id": "poona-fincorp-blogs",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Poona Fincorp Blogs",
-                  "filter": "poona-fincorp-blogs",
-                  "model": "poona-fincorp-blogs"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Poona Fincorp Blogs Item",
-          "id": "poona-fincorp-blogs-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Poona Fincorp Blogs Item",
-                  "model": "poona-fincorp-blogs-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "poonawallaFincorpTeam",
-          "id": "poonawallaFincorpTeam",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "poonawallaFincorpTeam",
-                  "filter": "poonawallaFincorpTeam",
-                  "model": "poonawallaFincorpTeam"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "poonawallaFincorpTeam",
-          "id": "poonawallaFincorpTeamItem",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "poonawallaFincorpTeamItem",
-                  "model": "poonawallaFincorpTeamItem"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Breadcrumb",
-          "id": "breadcrumb",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Breadcrumb",
-                  "model": "breadcrumb"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Fincorp",
-          "id": "fincorp",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Fincorp",
-                  "model": "fincorp"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Footer",
-          "id": "footer",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Footer",
-                  "filter": "footer"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Footer Item",
-          "id": "footer-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Footer Item",
-                  "model": "footer-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Tab Product",
-          "id": "tabproduct",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "tabproduct",
-                  "filter": "tabproduct",
-                  "model": "tabproduct"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Tabproduct Item",
-          "id": "tabproduct-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Tabproduct Item",
-                  "model": "tabproduct-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Banner Text",
-          "id": "banner-text",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Banner Text",
-                  "model": "banner-text"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Banner Carousel",
-          "id": "banner-carousel",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Banner Carousel",
-                  "filter": "banner-carousel",
-                  "model": "banner-carousel"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Banner Carousel Item",
-          "id": "banner-carousel-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Banner Carousel Item",
-                  "model": "banner-carousel-item"
                 }
               }
             }

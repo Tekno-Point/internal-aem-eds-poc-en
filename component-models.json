@@ -1,8 +1,6 @@
-[
-  {
+[{
     "id": "image",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "name": "image",
         "label": "Image",
@@ -17,8 +15,7 @@
   },
   {
     "id": "title",
-    "fields": [
-      {
+    "fields": [{
         "component": "text",
         "name": "title",
         "label": "Title"
@@ -27,8 +24,7 @@
         "component": "select",
         "name": "titleType",
         "label": "Title Type",
-        "options": [
-          {
+        "options": [{
             "name": "h1",
             "value": "h1"
           },
@@ -58,8 +54,7 @@
   },
   {
     "id": "button",
-    "fields": [
-      {
+    "fields": [{
         "component": "aem-content",
         "name": "link",
         "label": "Link"
@@ -78,8 +73,7 @@
         "component": "select",
         "name": "linkType",
         "label": "Type",
-        "options": [
-          {
+        "options": [{
             "name": "default",
             "value": ""
           },
@@ -97,8 +91,7 @@
   },
   {
     "id": "section",
-    "fields": [
-      {
+    "fields": [{
         "component": "text",
         "name": "name",
         "label": "Section Name",
@@ -113,8 +106,7 @@
         "component": "multiselect",
         "name": "style",
         "label": "Style",
-        "options": [
-          {
+        "options": [{
             "name": "Wrapper Style",
             "value": "wrapper"
           },
@@ -128,12 +120,10 @@
           },
           {
             "name": "Margin Classes",
-            "children": [
-              {
-                "name": "Header's Menu Img Right",
-                "value": "menu-img"
-              }
-            ]
+            "children": [{
+              "name": "Header's Menu Img Right",
+              "value": "menu-img"
+            }]
           }
         ]
       }
@@ -141,8 +131,7 @@
   },
   {
     "id": "card",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -160,35 +149,31 @@
   },
   {
     "id": "carousel",
-    "fields": [
-      {
+    "fields": [{
         "component": "multiselect",
         "name": "classes",
         "value": "",
         "label": "Carousel Style",
-        "options": [
-          {
-            "name": "Content Style",
-            "children": [
-              {
-                "name": "One Slide Only",
-                "value": "one-slide-only"
-              },
-              {
-                "name": "Two Slides Only",
-                "value": "two-slides-only"
-              },
-              {
-                "name": "Three Slides Only",
-                "value": "three-slides-only"
-              },
-              {
-                "name": "Reviews",
-                "value": "reviews"
-              }
-            ]
-          }
-        ],
+        "options": [{
+          "name": "Content Style",
+          "children": [{
+              "name": "One Slide Only",
+              "value": "one-slide-only"
+            },
+            {
+              "name": "Two Slides Only",
+              "value": "two-slides-only"
+            },
+            {
+              "name": "Three Slides Only",
+              "value": "three-slides-only"
+            },
+            {
+              "name": "Reviews",
+              "value": "reviews"
+            }
+          ]
+        }],
         "valueType": "string[]"
       },
       {
@@ -218,23 +203,18 @@
   },
   {
     "id": "carousel-item",
-    "fields": [
-      {
+    "fields": [{
         "component": "multiselect",
         "name": "classes",
         "value": "",
         "label": "carousel Style",
-        "options": [
-          {
-            "name": "Content Style",
-            "children": [
-              {
-                "name": "One Slide Only",
-                "value": "one-slide-only"
-              }
-            ]
-          }
-        ],
+        "options": [{
+          "name": "Content Style",
+          "children": [{
+            "name": "One Slide Only",
+            "value": "one-slide-only"
+          }]
+        }],
         "valueType": "string[]"
       },
       {
@@ -281,8 +261,7 @@
         "component": "select",
         "name": "headingType",
         "label": "carousel Heading Type",
-        "options": [
-          {
+        "options": [{
             "name": "H1",
             "value": "h1"
           },
@@ -310,27 +289,23 @@
   },
   {
     "id": "citypricedropdown",
-    "fields": [
-      {
+    "fields": [{
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
         "valueType": "string",
-        "options": [
-          {
-            "name": "Hide",
-            "children": [
-              {
-                "name": "Hide Included Section",
-                "value": "hide-included"
-              },
-              {
-                "name": "Hide Button Section",
-                "value": "hide-btn"
-              }
-            ]
-          }
-        ]
+        "options": [{
+          "name": "Hide",
+          "children": [{
+              "name": "Hide Included Section",
+              "value": "hide-included"
+            },
+            {
+              "name": "Hide Button Section",
+              "value": "hide-btn"
+            }
+          ]
+        }]
       },
       {
         "component": "text",
@@ -376,8 +351,7 @@
         "name": "titleIncludedType",
         "value": "h2",
         "label": "Included Heading Type",
-        "options": [
-          {
+        "options": [{
             "name": "H1",
             "value": "h1"
           },
@@ -423,8 +397,7 @@
   },
   {
     "id": "columns",
-    "fields": [
-      {
+    "fields": [{
         "component": "text",
         "valueType": "number",
         "name": "columns",
@@ -442,32 +415,25 @@
   },
   {
     "id": "fragment",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "Reference"
-      }
-    ]
+    "fields": [{
+      "component": "aem-content",
+      "name": "reference",
+      "label": "Reference"
+    }]
   },
   {
     "id": "search",
-    "fields": [
-      {
+    "fields": [{
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
-        "options": [
-          {
-            "name": "apollo search",
-            "children": [
-              {
-                "name": "Search Block",
-                "value": "apollo-search"
-              }
-            ]
-          }
-        ]
+        "options": [{
+          "name": "apollo search",
+          "children": [{
+            "name": "Search Block",
+            "value": "apollo-search"
+          }]
+        }]
       },
       {
         "component": "text",
@@ -478,8 +444,7 @@
   },
   {
     "id": "hero",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -518,20 +483,17 @@
   },
   {
     "id": "breadcrumb",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "number",
-        "name": "breadcrumb",
-        "value": "",
-        "label": "breadcrumb"
-      }
-    ]
+    "fields": [{
+      "component": "richtext",
+      "valueType": "number",
+      "name": "breadcrumb",
+      "value": "",
+      "label": "breadcrumb"
+    }]
   },
   {
     "id": "fincorp",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -556,8 +518,7 @@
   },
   {
     "id": "embed",
-    "fields": [
-      {
+    "fields": [{
         "component": "text",
         "name": "link",
         "value": "",
@@ -575,60 +536,54 @@
   },
   {
     "id": "poona-fincorp-blogs",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Multiselect field",
-        "valueType": "string",
-        "required": true,
-        "options": [
-          {
-            "name": "Mobile Setting",
-            "children": [
-              {
-                "name": "Auto Scroll",
-                "value": "mobile-auto-scroll"
-              },
-              {
-                "name": "1.5 View",
-                "value": "one-point-five-view"
-              },
-              {
-                "name": "2.5 View",
-                "value": "two-point-five-view"
-              },
-              {
-                "name": "3.5 View",
-                "value": "three-point-five-view"
-              }
-            ]
-          },
-          {
-            "name": "Desktop Setting",
-            "children": [
-              {
-                "name": "Pagination",
-                "value": "desk-pagination"
-              },
-              {
-                "name": "Action Button",
-                "value": "left-right-navigation-btn"
-              },
-              {
-                "name": "3 View",
-                "value": "three-point-view"
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    "fields": [{
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Multiselect field",
+      "valueType": "string",
+      "required": true,
+      "options": [{
+          "name": "Mobile Setting",
+          "children": [{
+              "name": "Auto Scroll",
+              "value": "mobile-auto-scroll"
+            },
+            {
+              "name": "1.5 View",
+              "value": "one-point-five-view"
+            },
+            {
+              "name": "2.5 View",
+              "value": "two-point-five-view"
+            },
+            {
+              "name": "3.5 View",
+              "value": "three-point-five-view"
+            }
+          ]
+        },
+        {
+          "name": "Desktop Setting",
+          "children": [{
+              "name": "Pagination",
+              "value": "desk-pagination"
+            },
+            {
+              "name": "Action Button",
+              "value": "left-right-navigation-btn"
+            },
+            {
+              "name": "3 View",
+              "value": "three-point-view"
+            }
+          ]
+        }
+      ]
+    }]
   },
   {
     "id": "poona-fincorp-blogs-item",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "name": "col1_imagepath",
         "value": "",
@@ -653,8 +608,7 @@
   },
   {
     "id": "footer-item",
-    "fields": [
-      {
+    "fields": [{
         "component": "richtext",
         "name": "text",
         "value": "",
@@ -672,20 +626,17 @@
   },
   {
     "id": "breadcrumb",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "number",
-        "name": "breadcrumb",
-        "value": "",
-        "label": "breadcrumb"
-      }
-    ]
+    "fields": [{
+      "component": "richtext",
+      "valueType": "number",
+      "name": "breadcrumb",
+      "value": "",
+      "label": "breadcrumb"
+    }]
   },
   {
     "id": "fincorp",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "valueType": "string",
         "name": "image",
@@ -710,8 +661,7 @@
   },
   {
     "id": "form",
-    "fields": [
-      {
+    "fields": [{
         "component": "text",
         "valueType": "string",
         "name": "form-url",
@@ -743,23 +693,18 @@
   },
   {
     "id": "heromodelview",
-    "fields": [
-      {
+    "fields": [{
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
         "valueType": "string",
-        "options": [
-          {
-            "name": "Type",
-            "children": [
-              {
-                "name": "Click Able",
-                "value": "click-able"
-              }
-            ]
-          }
-        ]
+        "options": [{
+          "name": "Type",
+          "children": [{
+            "name": "Click Able",
+            "value": "click-able"
+          }]
+        }]
       },
       {
         "component": "reference",
@@ -798,8 +743,7 @@
         "name": "titleType",
         "value": "h1",
         "label": "Heading Type",
-        "options": [
-          {
+        "options": [{
             "name": "H1",
             "value": "h1"
           },
@@ -840,8 +784,7 @@
         "name": "boldtitleType",
         "value": "h2",
         "label": "Bold Heading Type",
-        "options": [
-          {
+        "options": [{
             "name": "H1",
             "value": "h1"
           },
@@ -878,34 +821,30 @@
   },
   {
     "id": "product-details",
-    "fields": [
-      {
-        "component": "select",
-        "name": "layout",
-        "label": "Grid Layout",
-        "valueType": "string",
-        "description": "Number of columns to display in desktop view",
-        "options": [
-          {
-            "name": "3 Columns",
-            "value": "3"
-          },
-          {
-            "name": "4 Columns",
-            "value": "4"
-          },
-          {
-            "name": "5 Columns",
-            "value": "5"
-          }
-        ]
-      }
-    ]
+    "fields": [{
+      "component": "select",
+      "name": "layout",
+      "label": "Grid Layout",
+      "valueType": "string",
+      "description": "Number of columns to display in desktop view",
+      "options": [{
+          "name": "3 Columns",
+          "value": "3"
+        },
+        {
+          "name": "4 Columns",
+          "value": "4"
+        },
+        {
+          "name": "5 Columns",
+          "value": "5"
+        }
+      ]
+    }]
   },
   {
     "id": "product-item",
-    "fields": [
-      {
+    "fields": [{
         "component": "text",
         "name": "image",
         "label": "Product Image",
@@ -944,8 +883,7 @@
   },
   {
     "id": "accordion-item",
-    "fields": [
-      {
+    "fields": [{
         "component": "richtext",
         "name": "heading",
         "label": "Accordion Heading",
@@ -970,8 +908,7 @@
   },
   {
     "id": "image-accordion-item",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "name": "image",
         "label": "Accordion Image",
@@ -996,8 +933,7 @@
   },
   {
     "id": "dealership-locator",
-    "fields": [
-      {
+    "fields": [{
         "component": "richtext",
         "name": "text",
         "label": "Text",
@@ -1015,8 +951,7 @@
   },
   {
     "id": "warranty-card",
-    "fields": [
-      {
+    "fields": [{
         "component": "aem-content",
         "name": "link",
         "label": "Link"
@@ -1039,23 +974,18 @@
   },
   {
     "id": "chargingstations",
-    "fields": [
-      {
+    "fields": [{
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
         "valueType": "string",
-        "options": [
-          {
-            "name": "Hide",
-            "children": [
-              {
-                "name": "Hide Included Section",
-                "value": "hide-included"
-              }
-            ]
-          }
-        ]
+        "options": [{
+          "name": "Hide",
+          "children": [{
+            "name": "Hide Included Section",
+            "value": "hide-included"
+          }]
+        }]
       },
       {
         "component": "text",
@@ -1152,13 +1082,11 @@
   },
   {
     "id": "form",
-    "fields": [
-      {
+    "fields": [{
         "component": "multiselect",
         "name": "classes",
         "label": "Style",
-        "options": [
-          {
+        "options": [{
             "name": "Contact Form",
             "value": "contact-form"
           },
@@ -1186,29 +1114,25 @@
   },
   {
     "id": "poonawallaFincorpTeam",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Select Class For Show/Hide",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "rightBlock",
-            "value": "Right-block"
-          },
-          {
-            "name": "leftBlock",
-            "value": "Left-block"
-          }
-        ]
-      }
-    ]
+    "fields": [{
+      "component": "multiselect",
+      "name": "classes",
+      "label": "Select Class For Show/Hide",
+      "valueType": "string",
+      "options": [{
+          "name": "rightBlock",
+          "value": "Right-block"
+        },
+        {
+          "name": "leftBlock",
+          "value": "Left-block"
+        }
+      ]
+    }]
   },
   {
     "id": "poonawallaFincorpTeamItem",
-    "fields": [
-      {
+    "fields": [{
         "component": "richtext",
         "name": "col_1text",
         "value": "",
@@ -1233,20 +1157,17 @@
   },
   {
     "id": "poonawallaFincorpTeamItem2",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "col_1text",
-        "value": "",
-        "label": "Text1",
-        "valueType": "string"
-      }
-    ]
+    "fields": [{
+      "component": "richtext",
+      "name": "col_1text",
+      "value": "",
+      "label": "Text1",
+      "valueType": "string"
+    }]
   },
   {
     "id": "tabproduct-item",
-    "fields": [
-      {
+    "fields": [{
         "component": "reference",
         "valueType": "string",
         "name": "bgimage",
@@ -1284,9 +1205,8 @@
     ]
   },
   {
-    "id":"banner-carousel-item",
-    "fields":[
-      {
+    "id": "banner-carousel-item",
+    "fields": [{
         "component": "richtext",
         "name": "col_1text",
         "value": "",
@@ -1314,15 +1234,13 @@
     ]
   },
   {
-    "id":"banner-text",
-    "fields":[
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
+    "id": "banner-text",
+    "fields": [{
+      "component": "richtext",
+      "name": "text",
+      "value": "",
+      "label": "Text",
+      "valueType": "string"
+    }]
   }
 ]
