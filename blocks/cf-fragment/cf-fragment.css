@@ -16,6 +16,7 @@
 
 .section.service-teaser .cf-fragment-wrapper .cf-fragment.block .teaser {
     flex: unset;
+    height: 100%;
 }
 
 .section.service-teaser .cf-fragment-wrapper .cf-fragment.block .teaser:hover {
