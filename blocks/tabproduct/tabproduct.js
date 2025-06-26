@@ -18,6 +18,7 @@ export default function decorate(block) {
             </div>
         `
     })
+    block.innerHTML = '';
 
     block.innerHTML = `
         <div class="bgTabwrapper" ${isMobile ? '' : `style="background-image: url('${bgImg[0]?.imgSrc}')"`}>
