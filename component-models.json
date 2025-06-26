@@ -121,6 +121,10 @@
           {
             "name": "Businessloan",
             "value": "Businessloan"
+          },
+          {
+            "name": "Portlet-Journal",
+            "value": "Portlet-Journal"
           }
         ]
       }
