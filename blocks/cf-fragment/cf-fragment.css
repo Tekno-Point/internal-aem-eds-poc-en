@@ -1,84 +1,74 @@
-/* emi-calculator.css */
-
-/* Basic container styling */
 .emi-calculator-container {
     background: #242831;
-    /* Dark background as per diagram */
     color: #ecf0f1;
-    /* Light text for contrast */
-    padding: 30px;
+    padding: 0 80px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     /* max-width: 900px; */
-    /* Adjusted for overall component width */
     margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* Spacing between header and content */
 }
 
-/* Header styling */
 .emi-header {
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 20px;
 }
 
 .emi-title {
-    font-size: 16px;
+    font-size: 24px;
     color: #bdc3c7;
-    /* Lighter grey for subtitle */
-    margin-bottom: 5px;
+    margin: 0;
 }
 
 .emi-heading {
-    font-size: 32px;
+    font-size: 44px;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.2;
+    margin: 0;
 }
 
-/* Main content area (summary and controls) */
 .emi-content {
     display: flex;
-    flex-wrap: wrap;
-    /* Allow wrapping on smaller screens */
     justify-content: center;
-    gap: 40px;
-    /* Space between summary and controls */
+    padding: 40px 0;
+}
+
+.sec-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* EMI Summary / Circle Chart Section */
 .emi-summary {
-    flex: 1;
-    /* Allows it to grow and shrink */
-    min-width: 300px;
-    /* Minimum width for the summary block */
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     gap: 30px;
-    padding: 20px;
+    padding: 0 15px;
     /* background-color: #34495e; */
-    /* Slightly lighter dark background */
     border-radius: 10px;
 }
 
 .circle-chart-container {
-    width: 250px;
-    height: 250px;
-    background-color: #4a657c;
-    /* Inner circle background */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
     border: 5px solid #2980b9;
-    /* Border to mimic ring */
-    /* For actual circle fill, you'd use SVG or Canvas here */
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(137deg, rgb(255 152 199 / .5) 30.44%, rgb(3 78 162 / .5) 84.33%);
+    backdrop-filter: blur(24px);
+    box-shadow: inset 0 0 0 14px #242831;
+    border-width: 10px;
+    border-style: solid;
 }
 
 .circle-chart {
@@ -106,52 +96,55 @@
 .legend-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-size: 14px;
+}
+
+.value-wrapper {
+    display: flex;
     flex-direction: column;
 }
 
 .legend-color {
-    width: 15px;
-    height: 15px;
-    border-radius: 3px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    filter: drop-shadow(4px 4px 20px rgb(239 239 239 / .25));
 }
 
 .legend-color.principal {
-    background-color: #9b59b6;
-    /* Purple color for principal */
+    background: rgb(255 152 199 / 60%);
 }
 
 .legend-color.interest {
-    background-color: #e67e22;
-    /* Orange color for interest */
+    background-color: #034EA2;
 }
 
-/* EMI Controls Section */
+.legend-value {
+    font-size: 22px;
+}
+
 .emi-controls {
-    flex: 1.5;
-    /* Allows it to take more space */
-    min-width: 350px;
-    /* Minimum width for controls block */
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 20px;
+    padding: 0 15px;
     /* background-color: #34495e; */
-    border-radius: 10px;
 }
 
 .control-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    /* gap: 8px; */
 }
 
 .control-group label {
-    font-size: 14px;
-    color: #bdc3c7;
+    font-size: 16px;
+    color: #fff;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
+    margin-bottom: 19px;
 }
 
 .input-display-wrapper {
@@ -290,20 +283,19 @@ input[type="range"]::-ms-track {
 }
 
 .custom-select {
-    width: 100%;
-    padding: 10px 15px;
-    border-radius: 6px;
-    border: 1px solid #4a657c;
-    background-color: #4a657c;
-    color: #ffffff;
     font-size: 16px;
     appearance: none;
-    /* Remove default arrow */
     background-image: url('data:image/svg+xml;utf8,<svg fill="%23ecf0f1" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
     background-repeat: no-repeat;
     background-position: right 10px center;
     cursor: pointer;
     outline: none;
+    background: rgb(255 255 255 / .1);
+    width: 100%;
+    color: #fff;
+    border-radius: 8px;
+    border: unset;
+    padding: 12px 24px;
 }
 
 .apply-button {

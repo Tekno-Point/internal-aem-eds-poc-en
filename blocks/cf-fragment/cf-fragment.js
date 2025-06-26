@@ -1,5 +1,5 @@
 // emi-calculator.js
-if (window.location.href.includes("author-p48457-e1275402.adobeaemcloud.com")) return block;
+
 
 const exclude = ['author-p48457-e1275402.adobeaemcloud.com'];
 
@@ -28,6 +28,8 @@ function updateRangeSliderFill(rangeInput) {
 
 
 export default async function decorate(block) {
+
+    if (window.location.href.includes("author-p48457-e1275402.adobeaemcloud.com")) return block;
     if (!block.textContent.trim()) {
         return block;
     }
@@ -107,13 +109,14 @@ export default async function decorate(block) {
 
     block.innerHTML = `
         <div class="emi-calculator-container">
-            <div class="emi-header">
-                <p class="emi-title">${title}</p>
-                <h1 class="emi-heading">${heading}</h1>
-            </div>
 
             <div class="emi-content">
                 <div class="emi-summary">
+                <div class="emi-header">
+                <p class="emi-title">${title}</p>
+                <h1 class="emi-heading">${heading}</h1>
+            </div>
+            <div class="sec-wrapper">
                     <div class="circle-chart-container">
                         <div class="circle-chart">
                             <div class="circle-text-label">${circletext}</div>
@@ -123,17 +126,21 @@ export default async function decorate(block) {
                     <div class="legend">
                         <div class="legend-item">
                             <span class="legend-color principal"></span>
+                            <div class = "value-wrapper">
                             <span class="legend-label">PRINCIPAL AMOUNT</span>
                             <span class="legend-value" id="principal-amount-display">₹ 0</span>
+                            </div>
                         </div>
                         <div class="legend-item">
                             <span class="legend-color interest"></span>
+                            <div class = "value-wrapper">
                             <span class="legend-label">INTEREST PAYABLE</span>
                             <span class="legend-value" id="interest-payable-display">₹ 0</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-
+                </div>
                 <div class="emi-controls">
                     <div class="control-group loan-type">
                         <label for="loanType">${loanTypeTittle}</label>
