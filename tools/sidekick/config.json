@@ -1,6 +1,6 @@
 {
   "project": "AEM XWalk Boilerplate",
-  "editUrlLabel": "AEM Editor",
+  "editUrlLabel": "AEM  Editor",
   "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open",
   "contentSourceUrl": "https://author-p48457-e1275402.adobeaemcloud.com/bin/franklin.delivery/Tekno-Point/internal-aem-eds-poc-en/concordia-poc",
   "plugins": [
