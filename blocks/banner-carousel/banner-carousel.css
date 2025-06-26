@@ -3,6 +3,119 @@
 .section.banner-text-container {
     display: flex;
     flex-wrap: nowrap;
+    /* padding-left: 80px; */
+    margin: 12px 0 0;
+    padding: 0 0 30px 60px;
+}
+
+.section.banner-text-container>div {
+    padding: 0;
+}
+
+.section[data-id="banner"] {
+    background: radial-gradient(71.46% 92.32% at 98.58% 106.38%, #6abcff 0, #fff0 100%);
+    background-position: 350px 50%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.section[data-id="banner"] .banner-text-wrapper {
+    width: 60%;
+    margin: 0;
+    padding: 0 15px;
+}
+
+.section[data-id="banner"] .banner-text,
+.section[data-id="banner"] .banner-text>div,
+.section[data-id="banner"] .banner-text>div>div {
+    height: 100%;
+}
+
+.section[data-id="banner"] .banner-text>div>div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.section[data-id="banner"] .banner-text p:first-of-type {
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 52.8px;
+    margin: 24px 0 0;
+    color: rgb(35, 31, 32);
+}
+
+.section[data-id="banner"] .banner-text h1 {
+    font-size: 64px;
+    line-height: 72.96px;
+    font-weight: 400;
+    color: rgb(35, 31, 32);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.section[data-id="banner"] .banner-text .button-container {
+    margin: 0 0 24px;
+    max-width: 175px;
+    width: 100%;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+.section[data-id="banner"] .banner-text .button-container .button {
+    background-color: #034ea2;
+    padding: 10px 32px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    width: initial;
+    display: block;
+    text-align: center;
+}
+
+.section[data-id="banner"] .banner-carousel-wrapper {
+    margin: 5px 3px;
+    background: transparent;
+    display: block;
+    border-radius: 30px;
+    width: 40%;
+    padding: 0 15px;
+    margin: 0;
+}
+
+.section[data-id="banner"] .block {
+    padding-bottom: 25px;
+}
+
+.section[data-id="banner"] .block .bannerCarousel {
+    position: relative;
+}
+
+.section[data-id="banner"] .block .bannerCarousel.swiper-slide {
+    background: transparent;
+    width: 352px;
+}
+
+.section[data-id="banner"] .block .subBannerpart {
+    position: relative;
+}
+
+.section[data-id="banner"] .block .bannerCarousel.swiper-slide-active .subBannerpart {
+    margin-top: 44px;
+}
+
+.section[data-id="banner"] .block .bannerCarousel.swiper-slide .subBannerpart::before {
+    content: '';
+    background: linear-gradient(180deg, #fff0 41.03%, #213a72 100%);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 10px 10px;
 }
 
 .section[data-id="banner"] .block .bannerCarousel ul {
@@ -10,69 +123,123 @@
     flex-wrap: wrap;
     list-style: none;
     gap: 20px;
-    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    top: 15%;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+    opacity: 0;
 }
 
+.section[data-id="banner"] .block .bannerCarousel.swiper-slide.swiper-slide-active ul {
+    animation: moveDown 0.7s ease-in-out 0.1s forwards;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    opacity: 1;
+}
+
+@keyframes moveDown {
+    from {
+        top: 15%;
+    }
+
+    to {
+        top: 50%;
+    }
+}
+
+
 .section[data-id="banner"] .block .bannerCarousel ul .roundrestat {
-    top: 20%;
     background: linear-gradient(118deg, rgb(31 76 156 / .8) 12.21%, rgb(223 241 239 / .8) 115.47%);
     backdrop-filter: blur(8.40000057220459px);
-    width: 136px;
-    height: 136px;
+    width: 100px;
+    height: 100px;
     text-align: center;
     justify-content: center;
     color: #fff;
     border-radius: 100%;
     align-items: center;
-    display: block;
-    transition: 3s;
+    display: flex;
+    transition: 0.1s;
     position: absolute;
-    top: 0;
-    left: calc(50% - 20px);
-    animation: moveDown 2s ease-in-out forwards;
+    /* top: 0; */
+    /* left: calc(50% - -40px); */
+    bottom: 72px;
+    right: -50px;
+
 }
 
-@keyframes moveDown {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(60px);
-    }
+.section[data-id="banner"] .block .bannerCarousel ul .roundrestat:first-of-type {
+    left: -50px;
+    right: unset;
+    bottom: 0;
 }
 
 .section[data-id="banner"] .block .bannerCarousel ul .roundrestat li {
-    padding-top: 40px;
+    font-size: 16px;
 }
 
-.section[data-id="banner"] .block .bannerCarousel p img {
-    width: 200px;
+.section[data-id="banner"] .block .subBannerpart p picture {
+    line-height: 0;
+    height: 100%;
+    display: block;
+}
+
+.section[data-id="banner"] .block .subBannerpart p img {
+    width: 220px;
     height: 350px;
     border-radius: 10px;
 }
 
-.section[data-id="banner"] .banner-text-wrapper {
-    width: 60%;
+.section[data-id="banner"] .block .subBannerpart .sub-title-text {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: none;
 }
 
-.section[data-id="banner"] .banner-carousel-wrapper {
-    width: 40%;
+.section[data-id="banner"] .block .bannerCarousel.swiper-slide.swiper-slide-active .subBannerpart .sub-title-text {
+    display: block;
 }
 
-.section[data-id="banner"] .banner-carousel-wrapper .banner-carousel .swiper-pagination {
+.section[data-id="banner"] .block .subBannerpart .sub-title-text h3 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #fff;
+    margin: 0 0 4px;
+}
+
+.section[data-id="banner"] .block .subBannerpart .sub-title-text p {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+}
+
+.section[data-id="banner"] .block .swiper-pagination {
+    margin: 15px 0 0 45px;
     display: flex;
     justify-content: center;
+    top: unset;
+    bottom: 3px;
 }
 
-.section[data-id="banner"] .banner-carousel-wrapper {
+.section[data-id="banner"] .block .swiper-pagination .swiper-pagination-bullet {
+    width: 54px;
+    height: 3px;
     margin: 5px 3px;
-    background: #fff;
-    display: block;
+    background-color: #fff;
     border-radius: 30px;
+    opacity: unset;
 }
 
-.section[data-id="banner"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet-active {
+.section[data-id="banner"] .block .swiper-pagination .swiper-pagination-bullet-active {
     background: linear-gradient(118deg, rgb(31 76 156 / .8) 12.21%, rgb(223 241 239 / .8) 115.47%);
 }
 
@@ -96,15 +263,15 @@
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet {
-    height: 4px ;
-     width: 251.275px;
+    height: 4px;
+    width: 251.275px;
     margin: 0px;
     float: left;
     display: block;
     border-radius: unset;
 }
 
-.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active{
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
     border-top: 2px solid #034EA2;
     margin-top: -2px;
 }
