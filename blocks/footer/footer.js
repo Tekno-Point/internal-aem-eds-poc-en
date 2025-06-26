@@ -51,7 +51,7 @@ export default async function decorate(block) {
       if (i === 4) {
         paragraphs[i].appendChild(header);
       }
-       wrapperDiv.appendChild(paragraphs[i]);
+      wrapperDiv.appendChild(paragraphs[i]);
     }
 
     // Insert the wrapper before the first original <p>
@@ -60,4 +60,25 @@ export default async function decorate(block) {
 
   // Call it when DOM is ready
   decorateFooterImages();
+
+
+  function footerShowHide() {
+    document
+      .querySelector(".footer-sec3 div")
+      .childNodes.forEach(function (item, index) {
+        console.log(item);
+        item.classList.add(`sec3-${index}`);
+        if (index < 2) {
+          item.classList.add(`sec3-ul-show`);
+        } else {
+          item.classList.add(`sec3-ul-hide`);
+        }
+      });
+  }
+
+  footerShowHide()
+    const button = document.createElement("button");
+  button.textContent = "View More";
+  button.className = "view-more-btn";
+  document.querySelector(".footer-sec3 div").appendChild(button);
 }
