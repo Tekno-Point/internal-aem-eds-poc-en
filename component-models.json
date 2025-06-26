@@ -138,7 +138,7 @@
           {
             "name": "Portlet-Journal",
             "value": "Portlet-Journal"
-          }          
+          }
         ]
       }
     ]
@@ -1248,6 +1248,461 @@
     ]
   },
   {
+    "id": "documentation",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "documentation-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Steps Content",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bgimage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgimageAlt",
+        "label": "Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "tabproduct-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "bgimage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "bgimageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Tab Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "arrowimage",
+        "label": "Arrow Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "arrowimageAlt",
+        "label": "Alt",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "banner-carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Multi Select",
+        "options": [
+          {
+            "name": "Mobile Auto Scroll",
+            "value": "mobile-auto-scroll"
+          },
+          {
+            "name": "Mobile 1.5 View",
+            "value": "mobile-one-point-five-view"
+          },
+          {
+            "name": "Mobile 2.5 View",
+            "value": "two-point-five-view"
+          },
+          {
+            "name": "Mobile 3.5 View",
+            "value": "three-point-five-view"
+          },
+          {
+            "name": "Mobile Center View",
+            "value": "center-view"
+          },
+          {
+            "name": "Mobile Pagination",
+            "value": "mobile-pagination"
+          },
+          {
+            "name": "Mobile Loop",
+            "value": "mobile-loop"
+          },
+          {
+            "name": "Pagination",
+            "value": "desk-pagination"
+          },
+          {
+            "name": "Action Button",
+            "value": "left-right-navigation-btn"
+          },
+          {
+            "name": "3 View",
+            "value": "three-point-view"
+          },
+          {
+            "name": "1.5 View",
+            "value": "one-point-five-view"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banner-carousel-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col_1text",
+        "value": "",
+        "label": "Round Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col_2image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col_2imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col_2text",
+        "value": "",
+        "label": "Text Image",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "banner-text",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "blogs-carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Multi Select",
+        "options": [
+          {
+            "name": "Mobile Auto Scroll",
+            "value": "mobile-auto-scroll"
+          },
+          {
+            "name": "Mobile 1.5 View",
+            "value": "mobile-one-point-five-view"
+          },
+          {
+            "name": "Mobile 2.5 View",
+            "value": "two-point-five-view"
+          },
+          {
+            "name": "Mobile 3.5 View",
+            "value": "three-point-five-view"
+          },
+          {
+            "name": "Mobile Center View",
+            "value": "center-view"
+          },
+          {
+            "name": "Pagination",
+            "value": "desk-pagination"
+          },
+          {
+            "name": "Action Button",
+            "value": "left-right-navigation-btn"
+          },
+          {
+            "name": "3 View",
+            "value": "three-point-view"
+          },
+          {
+            "name": "1.5 View",
+            "value": "one-point-five-view"
+          },
+          {
+            "name": "Auto Scroll",
+            "value": "auto-scroll"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blogs-carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "blogs-carousel-two-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col2_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "blogs-carousel-three-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2one_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col2_imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "customer-carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Multi Select",
+        "options": [
+          {
+            "name": "Mobile Auto Scroll",
+            "value": "mobile-auto-scroll"
+          },
+          {
+            "name": "Mobile 1.5 View",
+            "value": "mobile-one-point-five-view"
+          },
+          {
+            "name": "Mobile 2.5 View",
+            "value": "two-point-five-view"
+          },
+          {
+            "name": "Mobile 3.5 View",
+            "value": "three-point-five-view"
+          },
+          {
+            "name": "Mobile Center View",
+            "value": "center-view"
+          },
+          {
+            "name": "Mobile Pagination",
+            "value": "mobile-pagination"
+          },
+          {
+            "name": "Mobile Loop",
+            "value": "mobile-loop"
+          },
+          {
+            "name": "Pagination",
+            "value": "desk-pagination"
+          },
+          {
+            "name": "Action Button",
+            "value": "left-right-navigation-btn"
+          },
+          {
+            "name": "Loop",
+            "value": "loop"
+          },
+          {
+            "name": "3 View",
+            "value": "three-point-view"
+          },
+          {
+            "name": "1.5 View",
+            "value": "one-point-five-view"
+          },
+          {
+            "name": "Auto Scroll",
+            "value": "auto-scroll"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "customer-carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
+      }
+    ]
+  },
+  {
     "id": "accordion-item",
     "fields": [
       {
@@ -1255,14 +1710,14 @@
         "name": "head",
         "value": "",
         "label": "Head",
-         "valueType": "string"
+        "valueType": "string"
       },
       {
         "component": "richtext",
         "name": "body",
         "value": "",
         "label": "Body",
-         "valueType": "string"
+        "valueType": "string"
       }
     ]
   }

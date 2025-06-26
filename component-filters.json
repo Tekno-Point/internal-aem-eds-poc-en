@@ -1,9 +1,6 @@
-[
-  {
+[{
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -24,40 +21,69 @@
       "poona-fincorp-blogs",
       "poonawallaFincorpTeam",
       "footer",
-      "accordion"
+      "accordion",
+      "tabproduct",
+      "documentation",
+      "cf-fragment",
+      "banner-carousel",
+      "banner-text",
+      "blogs-carousel",
+      "customer-carousel"
     ]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   },
   {
     "id": "poona-fincorp-blogs",
-    "components": [
-      "poona-fincorp-blogs-item"
-    ]
+    "components": ["poona-fincorp-blogs-item"]
   },
   {
     "id": "footer",
+    "components": ["footer-item"]
+  },
+  {
+    "id": "tabproduct",
     "components": [
-      "footer-item"
+      "tabproduct-item"
+    ]
+  },
+  {
+    "id": "documentation",
+    "components": ["documentation-item"]
+  },
+
+  {
+    "id": "cf-fragment",
+    "components": ["cf-fragment-item"]
+  },
+  {
+    "id": "banner-carousel",
+    "components": [
+      "banner-carousel-item"
+    ]
+  },
+  {
+    "id":"blogs-carousel",
+    "components":[
+        "blogs-carousel-item",
+        "blogs-carousel-two-item",
+        "blogs-carousel-three-item"   
+    ]
+  },
+  {
+    "id": "customer-carousel",
+    "components": [
+      "customer-carousel-item"
     ]
   },
   {
