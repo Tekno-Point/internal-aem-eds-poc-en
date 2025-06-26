@@ -1,0 +1,26 @@
+.section.customer-carousel-container {
+    background: radial-gradient(83.24% 156.41% at -6.25% 158.56%, #65baff 0, #ebf3ff 100%);
+    backdrop-filter: blur(90px);
+    padding: 80px 0 72px;
+    padding-left: 40px;
+   
+}
+.section.customer-carousel-container .swiper-slide {
+    background: unset;
+}
+
+.custCaro2  {
+        text-align: left;
+}
+.custCaro1 img {
+    width: 335px;
+    min-width: 335px;
+    height: 480px;
+    border-radius: 250px;
+     margin-right: 55px;
+}
+.custCaro2 .title {
+            font-size: 34px;
+                font-weight: 700;
+                        font-family: var(--font-family-med);
+}
