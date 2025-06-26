@@ -23,7 +23,8 @@
       "embed",
       "poona-fincorp-blogs",
       "poonawallaFincorpTeam",
-      "footer"
+      "footer",
+      "accordion"
     ]
   },
   {
@@ -58,5 +59,9 @@
     "components": [
       "footer-item"
     ]
+  },
+  {
+    "id": "accordion",
+    "components": [ "accordion-item"]
   }
 ]
