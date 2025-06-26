@@ -52,6 +52,9 @@ export default function decorate(block) {
           clickable: true,
         }
       }
+      if (blockClassList.indexOf("mobile-loop") != -1) {
+        objConfig["loop"] = true
+      }
     } else {
       //DeskTop
       if (blockClassList.indexOf("desk-pagination") != -1) {
