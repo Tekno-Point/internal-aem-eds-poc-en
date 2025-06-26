@@ -1,7 +1,5 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-import accoridanBlock from "../accordion/accordion.js"
-import { autolinkForm } from '../../scripts/scripts.js';
 
 /**
  * loads and decorates the footer

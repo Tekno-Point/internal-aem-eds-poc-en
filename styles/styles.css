@@ -10,6 +10,40 @@
  * governing permissions and limitations under the License.
  */
 
+ /* Fonts  */
+ @font-face {
+  font-family: 'Montserrat-Bold'; /* Name you want to use in CSS */
+  src: url('/fonts/Montserrat-Bold.ttf') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium'; /* Name you want to use in CSS */
+  src: url('/fonts/Montserrat-Medium.ttf') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular'; /* Name you want to use in CSS */
+  src: url('/fonts/Montserrat-Regular.ttf') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold'; /* Name you want to use in CSS */
+  src: url('/fonts/Montserrat-SemiBold.ttf') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Montserrat-Regular'; /* Name you want to use in CSS */
+}
+
 :root {
   /* colors */
   --background-color: white;
@@ -273,11 +307,33 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-main {
+/* business css */
+
+/* .businessloan>.default-content-wrapper>p{
+          font-size: 16px;
+}
+.businessloan>.default-content-wrapper>h1{
+        font-family: "Montserrat-Bold";
+  margin: 0px;
+          font-size: 36px;
+        line-height: 1.2;
+        max-width: 828px;
+        width: 100%;
+
+}
+.businessloan>.default-content-wrapper>ul{
+  list-style: none;
+  padding: 0px;
+} */
+
+.table-wrapper{
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 392px 1fr; 
   font-family: "Open Sans", sans-serif;
   background-color: #fff;
+  position: relative;
+  gap: 0 2%;
+  padding: 0 80px;
 }
 
 /* #tableofcontent{
@@ -302,22 +358,28 @@ grid-column: 2;
 #toConclude{
   grid-column: 2;
   } */
-.section[data-id="tableofcontent"] {
-  grid-column: 1;
-}
-
-.section:not([data-id="tableofcontent"]) {
-  grid-column: 2;
-}
-
-* Left sidebar section */ .section[data-id="tableofcontent"] {
+  .table-wrapper .section[data-id="tableofcontent"] {
+    grid-column: 1;
+    position: sticky;
+    top: 70px;
+    padding: 0 15px;
+    margin-top: 0px;
+    padding: 0;
+  }
+  .table-wrapper .section:not([data-id="tableofcontent"]) {
+    grid-column: 2;
+    padding: 0;
+  }
+  
+* Left sidebar section */
+.table-wrapper .section[data-id="tableofcontent"] {
   padding-top: 20px;
   padding-right: 24px;
   border-right: 1px solid #e0e0e0;
 }
 
 /* Title */
-.section[data-id="tableofcontent"] .default-content-wrapper>p {
+.table-wrapper .section[data-id="tableofcontent"] .default-content-wrapper > p {
   font-size: 24px;
   font-weight: 700;
   color: #1d1d1f;
@@ -325,20 +387,23 @@ grid-column: 2;
 }
 
 /* List container */
-.section[data-id="tableofcontent"] ul {
+.table-wrapper .section[data-id="tableofcontent"] ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  max-height: 435px;
+  overflow: auto;
 }
 
 /* List items */
-.section[data-id="tableofcontent"] li {
-  padding: 14px 0;
+.table-wrapper .section[data-id="tableofcontent"] li {
+  /* padding: 14px 0; */
+  padding: 30px 82px 30px 0;
   border-bottom: 1px solid #e0e0e0;
 }
 
 /* Links */
-.section[data-id="tableofcontent"] li a {
+.table-wrapper .section[data-id="tableofcontent"] li a {
   font-size: 16px;
   font-weight: 400;
   color: #1d1d1f;
@@ -351,7 +416,7 @@ grid-column: 2;
 }
 
 /* Arrow on hover */
-.section[data-id="tableofcontent"] li a:hover::after {
+.table-wrapper .section[data-id="tableofcontent"] li a:hover::after {
   content: "›";
   font-size: 18px;
   color: #1d1d1f;
@@ -360,7 +425,7 @@ grid-column: 2;
 }
 
 /* Bold text on hover */
-.section[data-id="tableofcontent"] li a:hover {
+.table-wrapper .section[data-id="tableofcontent"] li a:hover {
   font-weight: 600;
 }
 
@@ -371,8 +436,13 @@ grid-column: 2;
 
 /* business css */
 
-.businessloan>.default-content-wrapper>p {
-  font-size: 16px;
+.businessloan>.default-content-wrapper{
+  padding: 0 80px;
+  max-width: 100%;
+}
+
+.businessloan>.default-content-wrapper>p{
+          font-size: 16px;
 }
 
 .businessloan>.default-content-wrapper>h1 {
@@ -418,8 +488,21 @@ grid-column: 2;
   font-weight: 400px;
 }
 
+.section[data-id="FrequentlyAskedQuestions"]{
+  padding-bottom: 100%;
+}
+
 @media screen and (max-width: 768px) {
-  .section[data-id="tableofcontent"] {
+  .table-wrapper{
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  .businessloan>.default-content-wrapper{
+    padding: 0 15px;
+  }
+
+  .table-wrapper .section[data-id="tableofcontent"]{
     display: none;
   }
 
@@ -427,19 +510,27 @@ grid-column: 2;
     grid-template-columns: 1fr;
   }
 
-  .section[data-id="tableofcontent"] {
+   .table-wrapper .section[data-id="tableofcontent"] {
     grid-column: unset;
   }
-
-  .section:not([data-id="tableofcontent"]) {
+  .table-wrapper .section:not([data-id="tableofcontent"]) {
     grid-column: 1;
   }
+
+  .table-wrapper .section[data-id="FrequentlyAskedQuestions"]{
+  padding-bottom: 0;
+}
 }
 
-.section.portlet-journal.columns-container {
-  width: 100%;
+
+.table-wrapper>.section>.default-content-wrapper>h2{
+  font-family:"Montserrat-Medium" ;
+  font-size: 44px;
+
 }
 
-.portlet-journal .columns-wrapper {
-  padding: 0 80px;
+.table-wrapper>.section>.default-content-wrapper>p{
+  font-size: 18px;
 }
+
+

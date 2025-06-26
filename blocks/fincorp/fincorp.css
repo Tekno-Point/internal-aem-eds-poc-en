@@ -1,0 +1,57 @@
+.section >div.fincorp-wrapper{
+    padding: 0 80px;
+    max-width: 100%;
+}
+
+.fincorp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    border-bottom: 1px solid #231F2066;
+    padding-bottom: 30px;
+}
+
+.fincorp-0 > div > picture > img {
+    width: 70px;
+    height: 70px;
+}
+
+.fincorp-1 > div > h2 {
+    font-family: "Montserrat-SemiBold";
+    line-height: normal;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.fincorp-1 > div > p {
+    font-family: "Montserrat-Regular";
+    line-height: normal;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.businessloan > .default-content-wrapper > p {
+    font-size: 16px;
+     font-family: "Montserrat-SemiBold";
+}
+.businessloan > .default-content-wrapper > h1 {
+    font-family: "Montserrat-SemiBold";
+    margin: 0px;
+    font-size: 36px;
+    line-height: 1.2;
+    max-width: 828px;
+    width: 100%;
+}
+.businessloan > .default-content-wrapper > ul {
+    list-style: none;
+    padding: 0px;
+}
+
+@media screen and (max-width:768px) {
+    .fincorp{
+        padding-bottom: 20px;
+    }
+    .section >div.fincorp-wrapper{
+    padding: 0 15px;
+}
+}

@@ -16,6 +16,10 @@
       "cards",
       "columns",
       "fragment",
+      "search",
+      "breadcrumb",
+      "fincorp",
+      "form",
       "embed",
       "poona-fincorp-blogs",
       "poonawallaFincorpTeam",
@@ -46,11 +50,15 @@
   },
   {
     "id": "poona-fincorp-blogs",
-    "components": ["poona-fincorp-blogs-item"]
+    "components": [
+      "poona-fincorp-blogs-item"
+    ]
   },
   {
     "id": "footer",
-    "components": ["footer-item"]
+    "components": [
+      "footer-item"
+    ]
   },
   {
     "id": "accordion",
