@@ -30,36 +30,36 @@ export default async function decorate(block) {
 
   // changes for class
 
-  function decorateFooterImages() {
-    const section = document.querySelector(".footer-sec4");
-    if (!section) return;
+  // function decorateFooterImages() {
+  //   const section = document.querySelector(".footer-sec4");
+  //   if (!section) return;
 
-    const container = section.querySelector(".default-content-wrapper");
-    if (!container) return;
+  //   const container = section.querySelector(".default-content-wrapper");
+  //   if (!container) return;
 
-    const paragraphs = container.querySelectorAll("p");
-    if (paragraphs.length < 6) return;
+  //   const paragraphs = container.querySelectorAll("p");
+  //   if (paragraphs.length < 6) return;
 
-    const header = container.querySelector("h3");
+  //   const header = container.querySelector("h3");
 
-    // Create the wrapper div
-    const wrapperDiv = document.createElement("div");
-    wrapperDiv.classList.add("wrapper");
+  //   // Create the wrapper div
+  //   const wrapperDiv = document.createElement("div");
+  //   wrapperDiv.classList.add("wrapper");
 
-    // Move the first 4 <p> tags into the wrapper
-    for (let i = 0; i < 5; i++) {
-      if (i === 4) {
-        paragraphs[i].appendChild(header);
-      }
-      wrapperDiv.appendChild(paragraphs[i]);
-    }
+  //   // Move the first 4 <p> tags into the wrapper
+  //   for (let i = 0; i < 5; i++) {
+  //     if (i === 4) {
+  //       paragraphs[i].appendChild(header);
+  //     }
+  //     wrapperDiv.appendChild(paragraphs[i]);
+  //   }
 
-    // Insert the wrapper before the first original <p>
-    container.insertBefore(wrapperDiv, container.firstChild);
-  }
+  //   // Insert the wrapper before the first original <p>
+  //   container.insertBefore(wrapperDiv, container.firstChild);
+  // }
 
-  // Call it when DOM is ready
-  decorateFooterImages();
+  // // Call it when DOM is ready
+  // decorateFooterImages();
 
 
   function footerShowHide() {
