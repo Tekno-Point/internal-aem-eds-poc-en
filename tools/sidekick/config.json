@@ -1,5 +1,17 @@
 {
   "project": "AEM XWalk Boilerplate",
   "editUrlLabel": "AEM Editor",
-  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
+  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open",
+"plugins": [
+  {
+    "containerId": "tools",
+    "id": "seo-check",
+    "title": "SEO Check",
+    "palette": true,
+    "environments": ["edit", "dev", "preview", "live", "prod"],
+    "url": "data:text/html,<script>location.href='https://web.dev/measure/?url=' + encodeURIComponent(location.href);</script>",
+    "passReferrer": false,
+    "passConfig": false
+  }
+]
 }
