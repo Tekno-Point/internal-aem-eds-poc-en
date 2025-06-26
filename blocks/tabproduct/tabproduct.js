@@ -4,7 +4,7 @@ export default function decorate(block) {
     const bgImg = [];
     const props = [...block.children];
 
-    block.innerHTML = '';
+    block = '';
 
     let itemsDom = props.map((row, ind) => {
         let imgSrc = row?.children[0]?.querySelector("img")?.src;
@@ -23,7 +23,7 @@ export default function decorate(block) {
         `
     })
 
-    block.innerHTML += `
+    block.innerHTML = `
         <div class="bgTabwrapper" ${isMobile ? '' : `style="background-image: url('${bgImg[0]?.imgSrc}')"`}>
             <div class="bgTab-container">
                 ${itemsDom?.join("") || ''}

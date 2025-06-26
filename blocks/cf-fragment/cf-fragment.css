@@ -1,0 +1,451 @@
+/* emi-calculator.css */
+
+/* Basic container styling */
+.emi-calculator-container {
+    background: #242831;
+    /* Dark background as per diagram */
+    color: #ecf0f1;
+    /* Light text for contrast */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* max-width: 900px; */
+    /* Adjusted for overall component width */
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Spacing between header and content */
+}
+
+/* Header styling */
+.emi-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.emi-title {
+    font-size: 16px;
+    color: #bdc3c7;
+    /* Lighter grey for subtitle */
+    margin-bottom: 5px;
+}
+
+.emi-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+/* Main content area (summary and controls) */
+.emi-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    justify-content: center;
+    gap: 40px;
+    /* Space between summary and controls */
+}
+
+/* EMI Summary / Circle Chart Section */
+.emi-summary {
+    flex: 1;
+    /* Allows it to grow and shrink */
+    min-width: 300px;
+    /* Minimum width for the summary block */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    /* background-color: #34495e; */
+    /* Slightly lighter dark background */
+    border-radius: 10px;
+}
+
+.circle-chart-container {
+    width: 250px;
+    height: 250px;
+    background-color: #4a657c;
+    /* Inner circle background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid #2980b9;
+    /* Border to mimic ring */
+    /* For actual circle fill, you'd use SVG or Canvas here */
+}
+
+.circle-chart {
+    text-align: center;
+    color: #ecf0f1;
+}
+
+.circle-text-label {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 5px;
+}
+
+.circle-value {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.legend {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    flex-direction: column;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+.legend-color.principal {
+    background-color: #9b59b6;
+    /* Purple color for principal */
+}
+
+.legend-color.interest {
+    background-color: #e67e22;
+    /* Orange color for interest */
+}
+
+/* EMI Controls Section */
+.emi-controls {
+    flex: 1.5;
+    /* Allows it to take more space */
+    min-width: 350px;
+    /* Minimum width for controls block */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    /* background-color: #34495e; */
+    border-radius: 10px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-group label {
+    font-size: 14px;
+    color: #bdc3c7;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.input-display-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #4a657c;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.value-display {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    /* Align text to the left */
+    width: auto;
+    /* Allow input to size naturally */
+    min-width: 50px;
+    /* Ensure it doesn't get too small */
+}
+
+/* Hide arrow buttons for number input */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.currency-symbol,
+.percentage-symbol,
+.unit-label {
+    color: #bdc3c7;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.currency-symbol {
+    margin-right: 5px;
+}
+
+/* Range Slider Styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    /* Override default look */
+    width: 100%;
+    height: 8px;
+    /* Height of the track */
+    border-radius: 5px;
+    background: #ccc;
+    /* Default track color */
+    outline: none;
+    padding: 0;
+    margin: 10px 0;
+    transition: background 0.2s ease-in-out;
+    /* Smooth transition for fill */
+}
+
+/* Thumb styling (circular) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FF6600;
+    /* Orange thumb */
+    cursor: pointer;
+    margin-top: -6px;
+    /* Adjust thumb vertical position */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FF6600;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FF6600;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Track styling */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+    /* Default track color */
+    border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+    border-radius: 5px;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+    border-radius: 5px;
+    border-color: transparent;
+    /* Remove default border */
+    color: transparent;
+    /* Remove default fill */
+}
+
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #bdc3c7;
+    margin-top: -5px;
+    /* Adjust spacing */
+}
+
+.custom-select {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #4a657c;
+    background-color: #4a657c;
+    color: #ffffff;
+    font-size: 16px;
+    appearance: none;
+    /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ecf0f1" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    outline: none;
+}
+
+.apply-button {
+    background-color: #FF6600;
+    /* Orange button */
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.4);
+}
+
+.apply-button:hover {
+    background-color: #e67e22;
+    /* Slightly darker orange on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .emi-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .emi-summary,
+    .emi-controls {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .emi-calculator-container {
+        padding: 20px;
+    }
+
+    .emi-heading {
+        font-size: 28px;
+    }
+
+    .circle-chart-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle-value {
+        font-size: 26px;
+    }
+}
+
+/* emi-calculator.css additions/modifications */
+
+/* Range Slider Thumb Styling */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default appearance */
+    width: 24px;
+    /* Width of the square thumb */
+    height: 24px;
+    /* Height of the square thumb */
+    background: #ffffff;
+    /* White background as seen in the image */
+    border: 1px solid #7f8c8d;
+    /* Subtle gray border for definition */
+    border-radius: 4px;
+    /* Rounded corners for the square before rotation */
+    transform: rotate(45deg);
+    /* Rotate the square by 45 degrees to make it a diamond */
+    cursor: grab;
+    /* Cursor indicates it's draggable */
+    margin-top: -8px;
+    /* Adjust vertical position to center it on the track */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+
+    /* Add SVG as background for the three vertical lines with counter-rotation */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20" fill="none"><g transform="rotate(-45 5 10)"><rect x="0" y="2" width="1" height="16" fill="%232c3e50"/><rect x="4" y="2" width="1" height="16" fill="%232c3e50"/><rect x="8" y="2" width="1" height="16" fill="%232c3e50"/></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Center the SVG within the thumb */
+    background-size: 10px 16px;
+    /* Adjust size to fit nicely within the 24x24 diamond */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 1px solid #7f8c8d;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    cursor: grab;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Add SVG as background for the three vertical lines with counter-rotation */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20" fill="none"><g transform="rotate(-45 5 10)"><rect x="0" y="2" width="1" height="16" fill="%232c3e50"/><rect x="4" y="2" width="1" height="16" fill="%232c3e50"/><rect x="8" y="2" width="1" height="16" fill="%232c3e50"/></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 16px;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 1px solid #7f8c8d;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    cursor: grab;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Add SVG as background for the three vertical lines with counter-rotation */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20" fill="none"><g transform="rotate(-45 5 10)"><rect x="0" y="2" width="1" height="16" fill="%232c3e50"/><rect x="4" y="2" width="1" height="16" fill="%232c3e50"/><rect x="8" y="2" width="1" height="16" fill="%232c3e50"/></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 16px;
+}
+
+/* Optional: Improve active state if needed */
+input[type="range"]:active::-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb {
+    cursor: grabbing;
+    /* box-shadow: 0 0 8px rgba(255, 102, 0, 0.6); */
+    /* Orange glow on active/focus */
+}
+
+/* input[type="range"]:active::-moz-range-thumb,
+input[type="range"]:focus::-moz-range-thumb {
+    cursor: grabbing;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+}
+
+input[type="range"]:active::-ms-thumb,
+input[type="range"]:focus::-ms-thumb {
+    cursor: grabbing;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+} */
+
+/* No changes to the track styling, which is handled by JS linear-gradient */
+/* input[type="range"]::-webkit-slider-runnable-track { ... } */
+/* input[type="range"]::-moz-range-track { ... } */
+/* input[type="range"]::-ms-track { ... } */
