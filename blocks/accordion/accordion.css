@@ -6,6 +6,7 @@
 .accordion a {
   color: #fff;
 }
+
 .accordion a:hover {
   text-decoration: none;
 }
@@ -125,6 +126,11 @@
   line-height: 14px;
   font-weight: 400;
   color: #fff;
+}
+
+.accordion-item[open] {
+  padding: 0px 0 18px 0;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .accordion details[open] .accordion-item-label {
