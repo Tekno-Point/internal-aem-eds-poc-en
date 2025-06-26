@@ -8,7 +8,7 @@
     "id": "seo-check",
     "title": "SEO Check",
     "palette": true,
-    "environments": ["edit", "dev", "preview", "live", "prod"],
+    "environments": ["*"],
     "url": "data:text/html,<script>location.href='https://web.dev/measure/?url=' + encodeURIComponent(location.href);</script>",
     "passReferrer": false,
     "passConfig": false
