@@ -1,9 +1,12 @@
 @import url('../swiper/swiper.css');
 
-.section.banner-text-container {
+.section[data-id="banner"] {
+    background: radial-gradient(71.46% 92.32% at 98.58% 106.38%, #6abcff 0, #fff0 100%);
+    background-position: 350px 50%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
     display: flex;
     flex-wrap: nowrap;
-    /* padding-left: 80px; */
     margin: 12px 0 0;
     padding: 0 0 30px 60px;
 }
@@ -12,12 +15,6 @@
     padding: 0;
 }
 
-.section[data-id="banner"] {
-    background: radial-gradient(71.46% 92.32% at 98.58% 106.38%, #6abcff 0, #fff0 100%);
-    background-position: 350px 50%;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-}
 
 .section[data-id="banner"] .banner-text-wrapper {
     width: 60%;
@@ -54,7 +51,8 @@
     text-transform: uppercase;
 }
 
-.section[data-id="banner"] .banner-text .button-container {
+.section[data-id="banner"] .banner-text .button-container,
+.section[data-id="banner"] .default-content-wrapper .button-container {
     margin: 0 0 24px;
     max-width: 175px;
     width: 100%;
@@ -62,7 +60,8 @@
     cursor: pointer;
 }
 
-.section[data-id="banner"] .banner-text .button-container .button {
+.section[data-id="banner"] .banner-text .button-container .button,
+.section[data-id="banner"] .default-content-wrapper .button-container .button {
     background-color: #034ea2;
     padding: 10px 32px;
     border-radius: 8px;
@@ -70,9 +69,14 @@
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
+    font-style: normal;
     width: initial;
     display: block;
     text-align: center;
+}
+
+.section[data-id="banner"] .default-content-wrapper .button-container .button {
+    display: none;
 }
 
 .section[data-id="banner"] .banner-carousel-wrapper {
@@ -181,6 +185,10 @@
     font-size: 16px;
 }
 
+.section[data-id="banner"] .block .bannerCarousel p {
+    margin: 0;
+}
+
 .section[data-id="banner"] .block .subBannerpart p picture {
     line-height: 0;
     height: 100%;
@@ -211,6 +219,7 @@
     font-family: sans-serif;
     color: #fff;
     margin: 0 0 4px;
+    text-align: left;
 }
 
 .section[data-id="banner"] .block .subBannerpart .sub-title-text p {
@@ -220,6 +229,7 @@
     font-weight: 400;
     color: #fff;
     margin: 0;
+    text-align: left;
 }
 
 .section[data-id="banner"] .block .swiper-pagination {
@@ -243,23 +253,188 @@
     background: linear-gradient(118deg, rgb(31 76 156 / .8) 12.21%, rgb(223 241 239 / .8) 115.47%);
 }
 
+@media screen and (max-width: 768px) {
+    .section[data-id="banner"] {
+        padding: 24px 0 15px;
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 20px;
+        background-position: bottom center !important;
+        background-size: 200% 100% !important;
+        border-radius: 8px;
+        background: radial-gradient(79.39% 105.29% at 98.58% 106.38%, #6abcff 0, #fff0 100%);
+    }
+
+    .section[data-id="banner"] .block {
+        padding-bottom: 10px;
+    }
+
+    .section[data-id="banner"] .block .swiper-wrapper {
+        padding-bottom: 50px;
+    }
+
+    .section[data-id="banner"] .banner-text p:first-of-type {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .section[data-id="banner"] .banner-text h1 {
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .section[data-id="banner"] .banner-text h1:first-of-type {
+        margin-bottom: 10px;
+    }
+
+    .section[data-id="banner"] .banner-text .button-container {
+        display: none;
+    }
+
+    .section[data-id="banner"] .default-content-wrapper .button-container .button {
+        display: block;
+    }
+
+    .section[data-id="banner"] .banner-carousel-wrapper {
+        padding: 0;
+        width: 100%;
+    }
+
+    .section[data-id="banner"] .block .bannerCarousel.swiper-slide {
+        margin-right: 24px !important;
+        width: 280px !important;
+        padding-left: 16px;
+    }
+
+    .section[data-id="banner"] .block .bannerCarousel ul .roundrestat {
+        right: -15px;
+    }
+
+    .section[data-id="banner"] .block .bannerCarousel ul .roundrestat:first-of-type {
+        left: -15px;
+    }
+
+    .section[data-id="banner"] .block .subBannerpart p img {
+        width: 270px;
+    }
+
+    .section[data-id="banner"] .block .subBannerpart .sub-title-text {
+        left: 41px;
+        width: calc(100% - 50px);
+    }
+
+    .section[data-id="banner"] .block .subBannerpart .sub-title-text h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .section[data-id="banner"] .block .subBannerpart .sub-title-text p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .section[data-id="banner"]>div.default-content-wrapper {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .section[data-id="banner"]>div.default-content-wrapper .button-container {
+        margin: 10px 0 30px;
+    }
+
+        .section[data-id="banner"] .block .swiper-pagination{
+            margin: 15px 0 0 ;
+        }
+}
+
+.section[data-id="awardSection"] {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    padding: 0 64px;
+}
 
 .section[data-id="awardSection"] .banner-text-wrapper {
-    width: 20%;
+    width: 23%;
+    margin: 0;
+}
+
+
+.section[data-id="awardSection"] .block h3 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 38px;
+    color: #323232;
+}
+
+.section[data-id="awardSection"] .block .button-container {
+    margin: 24px 0 0;
+}
+
+.section[data-id="awardSection"] .block .button-container .button {
+    padding: 8px 24px;
+    color: #034EA2;
+    font-size: 12px;
+    line-height: 18px;
+    border: 1px solid rgb(3, 78, 162);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section[data-id="awardSection"] .block .button-container .button:hover {
+    background-color: #034EA2;
+    color: #fff;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper {
-    width: 80%;
+    width: 70%;
+    margin: 0;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel {
+    background-color: red;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart {
     display: flex;
+    gap: 98px;
+    /* max-width: 385px; */
     width: 100%;
-    height: 75vh;
+    /* height: 75vh; */
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart p {
+    margin: 0;
+    max-width: 112px;
+    height: 150px;
+
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart p picture {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text {
-    padding: 140px;
+    max-width: 633px;
+    width: 100%;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text h2 {
+    color: rgb(35, 31, 32);
+    font-size: 44px;
+    line-height: 53px;
+    margin: 28px 0 9px;
+    text-align: left;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text p {
+    color: rgb(35, 31, 32);
+    font-size: 36px;
+    line-height: 45px;
+    margin: 28px 0 9px;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet {
