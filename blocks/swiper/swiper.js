@@ -43,6 +43,18 @@ export default function decorate(block) {
         objConfig['centeredSlides'] = true;
         objConfig['spaceBetween'] = 30;
       }
+      if (blockClassList.indexOf("mobile-pagination") != -1) {
+        let paginationDots = document.createElement('div');
+        paginationDots.classList.add('swiper-pagination');
+        block.append(paginationDots);
+        objConfig['pagination'] = {
+          el: paginationDots,
+          clickable: true,
+        }
+      }
+      if (blockClassList.indexOf("mobile-loop") != -1) {
+        objConfig["loop"] = true
+      }
     } else {
       //DeskTop
       if (blockClassList.indexOf("desk-pagination") != -1) {

@@ -1231,6 +1231,14 @@
           "value": "center-view"
         },
         {
+          "name": "Mobile Pagination",
+          "value": "mobile-pagination"
+        },
+        {
+          "name": "Mobile Loop",
+          "value": "mobile-loop"
+        },
+        {
           "name": "Pagination",
           "value": "desk-pagination"
         },
@@ -1471,6 +1479,14 @@
         {
           "name": "Mobile Center View",
           "value": "center-view"
+        },
+        {
+          "name": "Mobile Pagination",
+          "value": "mobile-pagination"
+        },
+        {
+          "name": "Mobile Loop",
+          "value": "mobile-loop"
         },
         {
           "name": "Pagination",
