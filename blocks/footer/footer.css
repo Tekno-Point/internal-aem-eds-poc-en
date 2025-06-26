@@ -105,7 +105,8 @@ body main {
   background-position: center;
   background-repeat: no-repeat; */
 }
-.footer .section .columns .column-row .column-col-2 ol:nth-child(2) li>span{
+
+.footer .section .columns .column-row .column-col-2 ol:nth-child(2) li>span {
   width: 100%;
   height: 100%;
 }
@@ -153,6 +154,8 @@ body main {
 
 .footer .section .columns .column-row .column-col-2:nth-child(2)>ol:nth-child(4)>li .icon img {
   height: 20px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .footer .section .columns .column-row .column-col-2 ul:nth-child(3)>li {
@@ -376,7 +379,7 @@ body main {
 
 @media screen and (max-width: 768px) {
   .footer-wrapper .footer>div {
-    width: 95%;
+    width: 93%;
   }
 
   .footer .section .columns>div {

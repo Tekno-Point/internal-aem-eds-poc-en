@@ -136,3 +136,24 @@
 .accordion details[open] .accordion-item-label {
   border-bottom: none;
 }
+
+@media screen and (max-width: 768px) {
+  .accordion-item .accordion-item-label p {
+    font-size: 14px;
+    padding: 16px 0;
+  }
+
+  .accordion details summary::after {
+    width: 24px;
+    height: 24px;
+  }
+
+  .accordion-item .accordion-item-body>ul>li ul li p {
+    font-size: 14px;
+  }
+
+  .accordion-item .accordion-item-body>ul>li ul li ul li a {
+    font-size: 13px;
+    line-height: 14px;
+  }
+}
