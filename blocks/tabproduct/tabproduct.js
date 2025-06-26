@@ -3,7 +3,7 @@ export default function decorate(block) {
 
     const bgImg = [];
     const props = [...block.children];
-
+    
     block.innerHTML = '';
 
     let itemsDom = props.map((row, ind) => {

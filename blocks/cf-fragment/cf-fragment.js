@@ -1,4 +1,5 @@
 // emi-calculator.js
+if (window.location.href.includes("author-p48457-e1275402.adobeaemcloud.com")) return block;
 
 const exclude = ['author-p48457-e1275402.adobeaemcloud.com'];
 

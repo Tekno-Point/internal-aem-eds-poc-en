@@ -1,6 +1,9 @@
 
 export default function decorate(block) {
 
+    if (window.location.href.includes("author-p48457-e1275402.adobeaemcloud.com")) return block;
+
+
     let textRow = [...block.children].slice(1).map((row, ind) => {
         return row.firstElementChild;
     })
