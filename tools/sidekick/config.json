@@ -2,16 +2,17 @@
   "project": "AEM XWalk Boilerplate",
   "editUrlLabel": "AEM Editor",
   "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open",
-"plugins": [
-  {
-    "containerId": "tools",
-    "id": "seo-check",
-    "title": "SEO Check",
-    "palette": true,
-    "environments": ["*"],
-    "url": "data:text/html,<script>location.href='https://web.dev/measure/?url=' + encodeURIComponent(location.href);</script>",
-    "passReferrer": false,
-    "passConfig": false
-  }
-]
+  "contentSourceUrl": "https://author-p48457-e1275402.adobeaemcloud.com/bin/franklin.delivery/Tekno-Point/internal-aem-eds-poc-en/concordia-poc",
+  "plugins": [
+    {
+      "containerId": "tools",
+      "id": "seo-check",
+      "title": "SEO Check",
+      "palette": true,
+      "environments": ["*"],
+      "url": "data:text/html,<script>location.href='https://web.dev/measure/?url=' + encodeURIComponent(location.href);</script>",
+      "passReferrer": false,
+      "passConfig": false
+    }
+  ]
 }
