@@ -54,5 +54,10 @@
   {
     "id": "documentation",
     "components": ["documentation-item"]
+  },
+
+  {
+    "id": "cf-fragment",
+    "components": ["cf-fragment-item"]
   }
 ]

@@ -1255,18 +1255,6 @@
       }
     ]
   },
-   {
-    "id": "cf-fragment",
-    "fields": [
-      {
-        "component": "text",
-        "name": "url",
-        "value": "",
-        "label": "url",
-        "valueType": "string"
-      }
-    ]
-  },
   {
     "id": "documentation-item",
     "fields": [
@@ -1330,6 +1318,34 @@
         "name": "arrowimageAlt",
         "label": "Alt",
         "value": ""
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
       }
     ]
   }
