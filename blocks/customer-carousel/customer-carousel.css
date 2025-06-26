@@ -3,24 +3,32 @@
     backdrop-filter: blur(90px);
     padding: 80px 0 72px;
     padding-left: 40px;
-   
+
 }
+
 .section.customer-carousel-container .swiper-slide {
     background: unset;
 }
 
-.custCaro2  {
-        text-align: left;
+.custCaro2 {
+    text-align: left;
 }
+
 .custCaro1 img {
     width: 335px;
     min-width: 335px;
     height: 480px;
     border-radius: 250px;
-     margin-right: 55px;
+    margin-right: 55px;
 }
+
 .custCaro2 .title {
-            font-size: 34px;
-                font-weight: 700;
-                        font-family: var(--font-family-med);
+    font-size: 34px;
+    font-weight: 700;
+    font-family: var(--font-family-med);
+}
+.swipperActionBtn {
+        position: absolute;
+    right: 64%;
+    bottom: 26px;
 }
