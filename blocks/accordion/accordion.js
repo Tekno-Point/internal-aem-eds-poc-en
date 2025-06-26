@@ -18,7 +18,7 @@ export default function decorate(block) {
     const details = document.createElement('details');
     details.classList.add('accordion-item');
     details.append(summary, body);
-    row.replaceWith(details);
+    row.append(details);
   });
 
   // Hide paragraphs containing just hyphens
