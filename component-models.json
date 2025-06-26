@@ -1,5 +1,29 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "keywords",
+        "multi": true,
+        "label": "Keywords"
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
@@ -110,8 +134,69 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Health Insurance Cards",
+            "value": "health-insurance-cards"
+          },
+          {
+            "name": "Teaser Highlight",
+            "value": "teaser-highlight"
+          },
+          {
+            "name": "Individual Insurance Teaser",
+            "value": "individual-insurance-teaser"
+          },
+          {
+            "name": "Service Teaser",
+            "value": "service-teaser"
+          },
+          {
+            "name": "Current Teaser",
+            "value": "current-teaser"
+          },
+          {
+            "name": "Hero Carousel",
+            "value": "hero-carousel"
+          },
+          {
+            "name": "Footer Links",
+            "value": "footer-links"
+          },
+          {
+            "name": "Footer Contact",
+            "value": "footer-contact"
+          },
+          {
+            "name": "Footer Images",
+            "value": "footer-images"
+          },
+          {
+            "name": "Footer Socials",
+            "value": "footer-socials"
+          },
+          {
+            "name": "Rate Calculator",
+            "value": "rate-calculator"
+          },
+          {
+            "name": "Concordia Search Modal",
+            "value": "concordia-search-modal"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Card",
+            "value": "card"
           }
         ]
       }
@@ -166,6 +251,62 @@
     ]
   },
   {
+    "id": "content-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "content-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
@@ -188,6 +329,112 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Individual Insurance Teaser",
+            "value": "individual-insurance-teaser"
+          },
+          {
+            "name": "Service Teaser",
+            "value": "service-teaser"
+          },
+          {
+            "name": "Current Teaser",
+            "value": "current-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "teaser-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "form-url",
+        "label": "form path",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "api-url",
+        "label": "api-url",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "article",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "form-url",
+        "label": "form path",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "url",
+        "label": "path",
+        "value": ""
       }
     ]
   }

@@ -17,4 +17,13 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+
+  // Footer Accordion
+  let title = document.querySelectorAll('.section.footer-links ul li p');
+  title.forEach(elem => {
+    elem.addEventListener('click', ()=> {
+      let summary = elem.nextElementSibling;
+      summary.classList.toggle("show");
+    })
+  })
 }

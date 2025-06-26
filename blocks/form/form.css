@@ -1,0 +1,368 @@
+.form .field-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+  align-items: center;
+}
+
+.form fieldset {
+  display: grid;
+  grid-auto-flow: row;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.form form>.field-wrapper+.field-wrapper,
+.form form fieldset .field-wrapper+.field-wrapper {
+  margin-top: 24px;
+}
+
+.form form>.selection-wrapper+.selection-wrapper,
+.form form fieldset .selection-wrapper+.selection-wrapper {
+  margin-top: 0.25em;
+}
+
+@media (width >=600px) {
+  .form fieldset {
+    grid-template-columns: repeat(2, auto);
+    gap: 0.25em 24px;
+  }
+
+  .form form>.selection-wrapper+.selection-wrapper,
+  .form form fieldset .field-wrapper+.field-wrapper,
+  .form form fieldset .selection-wrapper+.selection-wrapper {
+    margin-top: 0;
+  }
+}
+
+@media (width >=900px) {
+  .form fieldset {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+.form label,
+.form fieldset>legend {
+  margin-bottom: 0.25em;
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+}
+
+.form .selection-wrapper label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.form input,
+.form select,
+.form textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid var(--dark-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: var(--body-font-size-s);
+  transition: border-color 0.2s;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.form input:hover,
+.form select:hover,
+.form textarea:hover {
+  border: 1px solid var(--text-color);
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.form .selection-wrapper input {
+  width: max-content;
+}
+
+@media (width >=600px) {
+
+  .form input,
+  .form select,
+  .form textarea {
+    max-width: 50vw;
+  }
+
+  .form .button {
+    max-width: max-content;
+  }
+}
+
+@media (width >=900px) {
+
+  .form input,
+  .form select,
+  .form textarea {
+    max-width: 33vw;
+  }
+}
+
+.form .field-wrapper.selection-wrapper {
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: 1ch;
+}
+
+.form label[data-required]::after {
+  content: '*';
+  color: firebrick;
+  margin-inline-start: 1ch;
+}
+
+.form .toggle-wrapper .switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.form .toggle-wrapper input {
+  opacity: 0;
+  width: 52px;
+  height: 28px;
+}
+
+.form .toggle-wrapper .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border-radius: 28px;
+  background-color: var(--dark-color);
+  transition: background-color 0.2s;
+}
+
+.form .toggle-wrapper .slider::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  transition: transform 0.2s;
+}
+
+.form .toggle-wrapper input:checked+.slider {
+  background-color: var(--link-color);
+}
+
+.form .toggle-wrapper input:focus+.slider {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.form .toggle-wrapper input:checked+.slider::before {
+  transform: translateX(24px);
+}
+
+
+/* rate calculator css */
+.section.rate-calculator {
+  margin: 0;
+  padding: 40px 0 60px;
+}
+
+.section.rate-calculator>div {
+  max-width: 66.67%;
+  margin: 0 auto;
+}
+
+.form label[data-required]::after {
+  content: unset;
+}
+
+.section.rate-calculator .form.block form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section.rate-calculator .form.block form>div {
+  display: flex;
+  gap: 15px;
+}
+
+.section.rate-calculator .default-content-wrapper h2 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+
+.section.rate-calculator .default-content-wrapper p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgb(132, 157, 171);
+  text-align: center;
+  padding-top: 40px;
+}
+
+.section.rate-calculator .default-content-wrapper p a {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgb(132, 157, 171);
+  text-decoration: underline;
+}
+
+.section.rate-calculator .form.block .field-wrapper {
+  margin: 0;
+}
+
+.section.rate-calculator .form.block .field-wrapper.fieldset-wrapper {
+  display: flex;
+  margin: 0;
+}
+
+.section.rate-calculator .form.block .field-wrapper.fieldset-wrapper fieldset {
+  display: flex;
+  gap: 0;
+}
+
+.section.rate-calculator .form.block .field-wrapper.fieldset-wrapper legend,
+.section.rate-calculator .form.block .field-wrapper label {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(77, 110, 130);
+}
+
+.section.rate-calculator .form.block .field-wrapper.fieldset-wrapper fieldset div:nth-child(2) {
+  background-color: rgb(77, 110, 130);
+  color: rgb(255, 255, 255);
+  height: 36px;
+  padding: 0px 16px;
+  border: 2px solid rgba(77, 110, 130, 0.5);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.rate-calculator .form.block .field-wrapper.fieldset-wrapper fieldset input[type='radio'] {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.section.rate-calculator .form.block .field-wrapper.fieldset-wrapper fieldset div:nth-child(2) label {
+  color: #fff;
+}
+
+.section.rate-calculator .form.block .field-wrapper.fieldset-wrapper fieldset div:last-child {
+  border-radius: 0px 5px 5px 0px;
+  background-color: rgb(247, 248, 250);
+  height: 36px;
+  padding: 0px 16px;
+  border: 2px solid rgba(77, 110, 130, 0.5);
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.rate-calculator .form.block .field-wrapper.date-wrapper input[type="date"],
+.section.rate-calculator .form.block .field-wrapper.text-wrapper input {
+  padding: 11px 12px 10px;
+  color: rgb(77, 110, 130);
+  background-color: rgb(238, 242, 245);
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 2px solid rgba(77, 110, 130, 0.5);
+  min-width: 225px;
+  min-height: 20px;
+  width: 100%;
+  height: 40px;
+}
+
+.section.rate-calculator .form.block .field-wrapper.text-wrapper input::placeholder {
+  font-size: 13px;
+}
+
+.section.rate-calculator .form.block .field-wrapper.date-wrapper input[type="date"]:focus,
+.section.rate-calculator .form.block .field-wrapper.text-wrapper input:focus {
+  outline: unset;
+}
+
+.section.rate-calculator .form.block .field-wrapper.date-wrapper input[type="date"]:hover,
+.section.rate-calculator .form.block .field-wrapper.text-wrapper input:hover {
+  border-color: rgb(77, 110, 130);
+}
+
+.section.rate-calculator .form.block form > fieldset {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+.section.rate-calculator .form.block .field-wrapper button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(77, 110, 130);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 26px;
+  margin: 0;
+}
+
+@media (width <=1025px) {
+  .section.rate-calculator .form.block form {
+    flex-direction: column;
+  }
+
+  .section.rate-calculator>div {
+    max-width: unset;
+  }
+
+  .section.rate-calculator .form.block form>div {
+    flex-direction: column;
+  }
+
+  .section.rate-calculator {
+    margin: 0;
+    padding: 40px 20px 60px;
+  }
+
+  .section.rate-calculator .form.block form > fieldset {
+    justify-content: start;
+    margin-top: 0;
+  }
+
+  .section.rate-calculator .form.block .field-wrapper.fieldset-wrapper fieldset {
+    width: 100%;
+  }
+
+  .section.rate-calculator .form.block .field-wrapper.fieldset-wrapper fieldset div:nth-child(2),
+  .section.rate-calculator .form.block .field-wrapper.fieldset-wrapper fieldset div:last-child {
+    width: 100%;
+  }
+
+  .section.rate-calculator .form.block .field-wrapper.submit-wrapper {
+    display: unset;
+  }
+
+  .section.rate-calculator .form.block .field-wrapper.date-wrapper input[type="date"],
+  .section.rate-calculator .form.block .field-wrapper.text-wrapper input {
+    max-width: unset;
+  }
+}

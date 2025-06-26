@@ -1,0 +1,417 @@
+/* Individual insurance Teaser CSS */
+.section.individual-insurance-teaser {
+    margin: 0;
+    padding-top: 15px;
+}
+
+.section.individual-insurance-teaser .default-content-wrapper {
+    text-align: center;
+}
+
+.section.individual-insurance-teaser .teaser.block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 33px;
+}
+
+.section.individual-insurance-teaser .teaser.block a {
+    flex: 1;
+    text-decoration: none;
+    padding: 35px 8px;
+}
+
+.section.individual-insurance-teaser .teaser.block a:hover {
+    background-color: rgb(238, 242, 245);
+    border-radius: 5px;
+}
+
+.section.individual-insurance-teaser .teaser.block a>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section.individual-insurance-teaser .teaser.block a .teaser-image {
+    width: 220px;
+    height: 220px;
+    transition: all .25s ease-in-out;
+    transform: translate3d(0, 0, 0);
+    transform-origin: center center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.section.individual-insurance-teaser .teaser.block a .teaser-image::before {
+    content: "";
+    border-radius: 100%;
+    box-shadow: 0 0 0 32px #fff;
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    transform: translate3d(0, 0, 0);
+    transition: all .25s ease-in-out;
+}
+
+.section.individual-insurance-teaser .teaser.block a:hover .teaser-image {
+    transform: scale(1.1) translate3d(0, 0, 0);
+}
+
+.section.individual-insurance-teaser .teaser.block a .teaser-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.section.individual-insurance-teaser .teaser.block .teaser-content {
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section.individual-insurance-teaser .teaser.block .teaser-content h4 {
+    color: rgb(77, 110, 130);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 21px 0 3px;
+}
+
+.section.individual-insurance-teaser .teaser.block .teaser-content p {
+    margin: 3px 0 27px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(132, 157, 171);
+}
+
+.section.individual-insurance-teaser .teaser.block .teaser-content p.button-container {
+    margin: 0;
+}
+
+.section.individual-insurance-teaser .teaser.block .teaser-content p.button-container a {
+    margin: 0;
+    padding: 15px 26px;
+    position: relative;
+    border-radius: 100px;
+    color: #4d6e82;
+    background-color: #eef2f5;
+}
+
+.section.individual-insurance-teaser .teaser.block a:hover .teaser-content p.button-container a {
+    padding-right: 40px;
+    transition: all 0.25s ease-in-out;
+    background-color: rgb(77, 110, 130);
+    color: #fff;
+}
+
+.section.individual-insurance-teaser .teaser.block .teaser-content p.button-container a::after {
+    content: url('/images/arrow-icon.svg');
+    position: absolute;
+    right: 21px;
+    width: 8px;
+    height: 10px;
+    opacity: 0;
+}
+
+.section.individual-insurance-teaser .teaser.block a:hover .teaser-content p.button-container a::after {
+    opacity: 1;
+}
+
+@media (width <=768px) {
+    .section.individual-insurance-teaser {
+        padding: 55px 0 40px;
+    }
+
+    .section.individual-insurance-teaser .teaser-wrapper {
+        padding: 0;
+    }
+
+    .section.individual-insurance-teaser .teaser.block {
+        flex-direction: column;
+    }
+
+    .section.individual-insurance-teaser .teaser.block a {
+        padding: 35px 0;
+        border-bottom: 2px solid #dae1e6;
+    }
+
+    .section.individual-insurance-teaser .teaser.block a:last-child {
+        border-bottom: unset;
+    }
+
+    .section.individual-insurance-teaser .teaser.block .teaser-content p.button-container a {
+        border-bottom: none;
+    }
+}
+
+
+
+
+/* Service teaser CSS */
+.section.service-teaser {
+    padding-top: 55px;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser {
+    flex: unset;
+    flex-basis: 33.33%;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser:hover {
+    background-color: rgb(238, 242, 245);
+    border-radius: 5px;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a {
+    text-decoration: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 8px;  
+    width: 100%;
+    height: 100%;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-image {
+    width: 220px;
+    height: 220px;
+    transition: all .25s ease-in-out;
+    transform: translate3d(0, 0, 0);
+    transform-origin: center center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-image::before {
+    content: "";
+    border-radius: 100%;
+    box-shadow: 0 0 0 32px #fff;
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    transform: translate3d(0, 0, 0);
+    transition: all .25s ease-in-out;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a:hover .teaser-image{
+    transform: scale(1.1) translate3d(0, 0, 0);
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content {
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content h4 {
+    color: rgb(77, 110, 130);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 21px 0 3px;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content p {
+    margin: 3px 0 27px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(132, 157, 171);
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content p.button-container {
+    margin: 0;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content p.button-container span {
+    margin: 0;
+    padding: 15px 26px;
+    position: relative;
+    border-radius: 100px;
+    color: #4d6e82;
+    background-color: #eef2f5;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a:hover .teaser-content p.button-container span {
+    padding-right: 40px;
+    transition: all 0.25s ease-in-out;
+    background-color: rgb(77, 110, 130);
+    color: #fff;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a .teaser-content p.button-container span::after {
+    content: url('/images/arrow-icon.svg');
+    position: absolute;
+    right: 21px;
+    width: 8px;
+    height: 10px;
+    opacity: 0;
+}
+
+.section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser a:hover .teaser-content p.button-container span::after {
+    opacity: 1;
+}
+
+@media (width <=768px) {
+    .section.service-teaser {
+        padding-top: 45px;
+    }
+
+    .section.service-teaser .content-fragment-wrapper .content-fragment.block {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .section.service-teaser .content-fragment-wrapper .content-fragment.block .teaser {
+        flex: 1;
+        flex-basis: unset;
+    }
+}
+
+
+
+
+/* Current Teaser CSS */
+.section.current-teaser {
+    background-color: #eef2f5;
+    margin: 0;
+    padding: 70px 0;
+}
+
+.section.current-teaser .default-content-wrapper {
+    text-align: center;
+}
+
+.section.current-teaser .teaser.block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 33px;
+}
+
+.section.current-teaser .teaser.block a {
+    flex-basis: 33.3333%;
+    background: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.section.current-teaser .teaser.block a .teaser-image {
+    width: 490px;
+    height: 150px;
+}
+
+.section.current-teaser .teaser.block a .teaser-image img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.section.current-teaser .teaser.block a .teaser-content {
+    border-radius: 5px;
+    padding-bottom: 30px;
+}
+
+.section.current-teaser .teaser.block a .teaser-content h4,
+.section.current-teaser .teaser.block a .teaser-content p {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section.current-teaser .teaser.block a .teaser-content h4 {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #4d6e82;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.section.current-teaser .teaser.block a .teaser-content p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #849dab;
+    font-weight: 500;
+}
+
+.section.current-teaser .teaser.block a .teaser-content p.button-container a {
+    background-color: #eef2f5;
+    color: #4d6e82;
+    padding: 15px 26px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 100px;
+    transition: all .25s ease-in-out;
+    position: relative;
+    margin: 0;
+}
+
+.section.current-teaser .teaser.block a .teaser-content p.button-container {
+    margin-bottom: 0;
+}
+
+.section.current-teaser .teaser.block a:hover .teaser-content p.button-container a {
+    padding-right: 40px;
+    transition: all 0.25s ease-in-out;
+    background-color: rgb(77, 110, 130);
+    color: #fff;
+}
+
+.section.current-teaser .teaser.block a .teaser-content p.button-container a::after {
+    content: url('/images/arrow-icon.svg');
+    position: absolute;
+    right: 21px;
+    width: 8px;
+    height: 10px;
+    opacity: 0;
+}
+
+.section.current-teaser .teaser.block a:hover .teaser-content p.button-container a::after {
+    opacity: 1;
+}
+
+@media (width <=1025px) {
+    .section.current-teaser {
+        padding: 55px 0;
+    }
+
+    .section.current-teaser .teaser.block a .teaser-image {
+        width: 100%;
+        height: 115px;
+    }
+
+    .section.current-teaser .teaser.block a {
+        flex: 1;
+    }
+}
+
+@media (width <=600px) {
+    .section.current-teaser .teaser.block a .teaser-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .section.current-teaser .teaser.block {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}

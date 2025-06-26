@@ -15,7 +15,26 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "teaser",
+      "carousel",
+      "form",
+      "article",
+      "search",
+      "content-fragment",
+      "cf-fragment"
+    ]
+  },
+  {
+    "id": "content-fragment",
+    "components": [
+      "content-fragment-item"
+    ]
+  },
+  {
+    "id": "cf-fragment",
+    "components": [
+      "cf-fragment-item"
     ]
   },
   {
@@ -37,6 +56,18 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "teaser",
+    "components": [
+      "teaser-item"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
     ]
   }
 ]
