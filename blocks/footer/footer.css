@@ -174,9 +174,9 @@ footer .footer p {
     }
 }
 
-.footer-sec3{
-  border-bottom: 1px solid #f9fafb;
-  padding-bottom: 20px;
+.footer-sec3 {
+    border-bottom: 1px solid #f9fafb;
+    padding-bottom: 20px;
 }
 
 .footer-sec3 > .default-content-wrapper > ul {
@@ -232,4 +232,90 @@ footer .footer p {
     .footer-sec3 > .default-content-wrapper > ul > li > p {
         max-width: 100%;
     }
+}
+
+.footer-white {
+    background-color: white;
+}
+.section > .footer-sec4 {
+    margin: 0px;
+}
+.footer-sec4 {
+    border-bottom: 1px solid #a5a8aa;
+}
+
+.footer-sec4 > .default-content-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+}
+
+.footer-sec4 > .default-content-wrapper > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 786px) {
+  .footer-sec4 > .default-content-wrapper > .wrapper {
+    gap: 6px;
+  }
+}
+
+.footer-sec4 > .default-content-wrapper > .wrapper > .button-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.footer-sec4 > .default-content-wrapper > .wrapper > p > picture > img {
+    width: 50px;
+    height: 50px;
+}
+.footer-sec4 > .default-content-wrapper > .wrapper > p > a {
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    color: #292929;
+    font-family: "OpenSans-Regular";
+    font-size: 0.875rem;
+}
+.footer-sec4 > .default-content-wrapper > .wrapper > .button-container>h3{
+   margin: 0px;
+    padding: 0px;
+    background: none;
+    color: #292929;
+    font-family: "OpenSans-Bold";
+    font-size: 0.875rem;
+}
+
+.footer-sec5 > .default-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-sec5 > .default-content-wrapper > ul > li > p {
+    color: #535353;
+    font-family: "OpenSans-Regular";
+    font-size: 0.875rem;
+    line-height: normal;
+    vertical-align: top;
+}
+.footer-sec5 > .default-content-wrapper > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px;
+    list-style: none;
+}
+.footer-sec5 > .default-content-wrapper > ul > li > p > a {
+    margin: 0px;
+    padding: 0px;
+    background: none;
+    color: #535353;
+    font-family: "OpenSans-Regular";
 }
