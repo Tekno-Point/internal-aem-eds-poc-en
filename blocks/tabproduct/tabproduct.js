@@ -4,7 +4,7 @@ export default function decorate(block) {
     const bgImg = [];
     const props = [...block.children];
 
-    block = '';
+    block.innerHTML = '';
 
     let itemsDom = props.map((row, ind) => {
         let imgSrc = row?.children[0]?.querySelector("img")?.src;
