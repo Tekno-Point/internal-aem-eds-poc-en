@@ -1,6 +1,6 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
-import { accordionBlock } from '../footer/accordion.js';
+import { getMetadata } from "../../scripts/aem.js";
+import { loadFragment } from "../fragment/fragment.js";
+import accordionBlock from "../accordion/accordion.js";
 
 /**
  * loads and decorates the footer
@@ -8,17 +8,22 @@ import { accordionBlock } from '../footer/accordion.js';
  */
 export default async function decorate(block) {
   // load footer as fragment
-  const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
+  const footerMeta = getMetadata("footer");
+  const footerPath = footerMeta
+    ? new URL(footerMeta, window.location).pathname
+    : "/footer";
   const fragment = await loadFragment(footerPath);
 
   // decorate footer DOM
-  block.textContent = '';
-  const footer = document.createElement('div');
+  block.textContent = "";
+  const footer = document.createElement("div");
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
   block.append(footer);
-  document.querySelector(".footer-sec2 .default-content-wrapper").forEach((element) => {
-    accordionBlock(element.querySelector("li"))  
-  });//.children[0].querySelector("li")
-  
+  if (window.innerWidth < 786) {
+    Array.from(
+      document.querySelector(".footer-sec2 .default-content-wrapper").children
+    ).forEach((element) => {
+      accordionBlock(element);
+    });
+  }
 }
