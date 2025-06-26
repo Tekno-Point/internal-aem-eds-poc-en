@@ -222,5 +222,17 @@
         "description": "Custom plain text block for content display"
       }
     ]
+  },
+  {
+    "id": "term-insurance-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]

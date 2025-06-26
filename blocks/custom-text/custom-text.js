@@ -1,3 +1,3 @@
-export default decorate(){
-    console.log("One - Custom text block")
+export default function decorate() {
+    // console.log("One - Custom text block")
 }
