@@ -56,10 +56,12 @@ function focusNavSection() {
  * @param {Element} sections The container element
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
-function toggleAllNavSections(sections, expanded = false) {
-  sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
+function toggleAllNavSections(sections, expanded = false, sectionClass='.nav-sections') {
+  sections.querySelectorAll(`${sectionClass} .default-content-wrapper > ul > li`).forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
+    console.log(section);
   });
+  
 }
 
 /**
@@ -68,12 +70,13 @@ function toggleAllNavSections(sections, expanded = false) {
  * @param {Element} navSections The nav sections within the container element
  * @param {*} forceExpanded Optional param to force nav expand behavior when not null
  */
-function toggleMenu(nav, navSections, forceExpanded = null) {
+function toggleMenu(nav, navSections, forceExpanded = null, navNavigations) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
+  toggleAllNavSections(navNavigations, expanded || isDesktop.matches ? 'false' : 'true', '.nav-navigation');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
   // enable nav dropdown keyboard accessibility
   const navDrops = navSections.querySelectorAll('.nav-drop');
@@ -119,7 +122,7 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
+  const classes = ['brand', 'sections', 'tools', 'navigation'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
@@ -133,6 +136,7 @@ export default async function decorate(block) {
   }
 
   const navSections = nav.querySelector('.nav-sections');
+  console.log(navSections)
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
@@ -146,18 +150,32 @@ export default async function decorate(block) {
     });
   }
 
+  const navNavigations = nav.querySelector('.nav-navigation');
+  if (navNavigations) {
+    navNavigations.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navNavigation) => {
+      if (navNavigation.querySelector('ul')) navNavigation.classList.add('nav-drop');
+      navNavigation.addEventListener('click', ()=> {
+        if(isDesktop.matches) {
+          const expanded = navNavigation.getAttribute('aria-expanded') === 'true';
+          toggleAllNavSections(navNavigations, '.nav-navigation');
+          navNavigation.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        }
+      })
+    })
+  }
+
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
-  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  hamburger.addEventListener('click', () => toggleMenu(nav, navSections, navNavigations));
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
-  toggleMenu(nav, navSections, isDesktop.matches);
-  isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+  toggleMenu(nav, navSections, isDesktop.matches, navNavigations);
+  isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches, navNavigations));
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
