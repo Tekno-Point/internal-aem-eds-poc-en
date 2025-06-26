@@ -2,7 +2,11 @@ export default function decorate(block) {
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
     const bgImg = [];
-    let itemsDom = [...block.children].map((row, ind) => {
+    const props = [...block.children];
+
+    block.innerHTML = '';
+
+    let itemsDom = props.map((row, ind) => {
         let imgSrc = row?.children[0]?.querySelector("img")?.src;
         bgImg.push({ imgSrc })
         return `
@@ -18,27 +22,26 @@ export default function decorate(block) {
             </div>
         `
     })
-    // block.innerHTML = '';
 
-    // block.innerHTML = `
-    //     <div class="bgTabwrapper" ${isMobile ? '' : `style="background-image: url('${bgImg[0]?.imgSrc}')"`}>
-    //         <div class="bgTab-container">
-    //             ${itemsDom?.join("") || ''}
-    //         </div>
-    //     </div>
-    // `;
+    block.innerHTML = `
+        <div class="bgTabwrapper" ${isMobile ? '' : `style="background-image: url('${bgImg[0]?.imgSrc}')"`}>
+            <div class="bgTab-container">
+                ${itemsDom?.join("") || ''}
+            </div>
+        </div>
+    `;
 
-    // let bgTabwrapper = block.querySelector(".bgTabwrapper");
-    // const bgTabs = block.querySelectorAll(".bgTab");
-    // if (!isMobile) {
-    //     bgTabs.forEach(tab => {
-    //         tab.addEventListener("mouseover", (e) => {
-    //             let cureentId = e.currentTarget.id;
-    //             bgTabwrapper.style.backgroundImage = `url('${bgImg[cureentId - 1]?.imgSrc || ''}')`
-    //             // console.log(e.currentTarget)
-    //         })
-    //     });
-    // }
-    // // block.append(bgTabContainer)
+    let bgTabwrapper = block.querySelector(".bgTabwrapper");
+    const bgTabs = block.querySelectorAll(".bgTab");
+    if (!isMobile) {
+        bgTabs.forEach(tab => {
+            tab.addEventListener("mouseover", (e) => {
+                let cureentId = e.currentTarget.id;
+                bgTabwrapper.style.backgroundImage = `url('${bgImg[cureentId - 1]?.imgSrc || ''}')`
+                // console.log(e.currentTarget)
+            })
+        });
+    }
+    // block.append(bgTabContainer)
 
 }
