@@ -1481,6 +1481,10 @@
           "value": "left-right-navigation-btn"
         },
         {
+          "name": "Loop",
+          "value": "loop"
+        },
+        {
           "name": "3 View",
           "value": "three-point-view"
         },

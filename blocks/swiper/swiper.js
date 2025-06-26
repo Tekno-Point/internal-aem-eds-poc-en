@@ -83,6 +83,9 @@ export default function decorate(block) {
         objConfig['slidesPerView'] = 3.2;
         objConfig['spaceBetween'] = 10;
       }
+      if (blockClassList.indexOf("loop") != -1) {
+        objConfig["loop"] = true
+      }
     }
     SwipperText(block, objConfig);
     // JSON.stringify(objConfig) !== "{}"? SwipperText(block, objConfig) : ""
