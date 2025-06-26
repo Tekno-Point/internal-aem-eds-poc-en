@@ -209,5 +209,18 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "custom-text",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "value": "",
+        "label": "Custom Text",
+        "valueType": "string",
+        "description": "Custom plain text block for content display"
+      }
+    ]
   }
 ]
