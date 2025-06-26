@@ -215,7 +215,7 @@
     "fields": [
       {
         "component": "text",
-        "name": "name",
+        "name": "text",
         "value": "",
         "label": "Custom Text",
         "valueType": "string",
