@@ -342,9 +342,9 @@
         margin: 10px 0 30px;
     }
 
-        .section[data-id="banner"] .block .swiper-pagination{
-            margin: 15px 0 0 ;
-        }
+    .section[data-id="banner"] .block .swiper-pagination {
+        margin: 15px 0 0;
+    }
 }
 
 .section[data-id="awardSection"] {
@@ -371,7 +371,8 @@
     margin: 24px 0 0;
 }
 
-.section[data-id="awardSection"] .block .button-container .button {
+.section[data-id="awardSection"] .block .button-container .button,
+.section[data-id="awardSection"] .default-content-wrapper .button-container {
     padding: 8px 24px;
     color: #034EA2;
     font-size: 12px;
@@ -382,7 +383,8 @@
     transition: all 0.3s ease;
 }
 
-.section[data-id="awardSection"] .block .button-container .button:hover {
+.section[data-id="awardSection"] .block .button-container .button:hover,
+.section[data-id="awardSection"] .default-content-wrapper .button-container:hover {
     background-color: #034EA2;
     color: #fff;
 }
@@ -393,7 +395,7 @@
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel {
-    background-color: red;
+    background-color: transparent;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart {
@@ -404,11 +406,10 @@
     /* height: 75vh; */
 }
 
-.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart p {
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart>p {
     margin: 0;
-    max-width: 112px;
-    height: 150px;
-
+    max-width: 149px;
+    height: 200px;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart p picture {
@@ -426,27 +427,180 @@
     color: rgb(35, 31, 32);
     font-size: 44px;
     line-height: 53px;
-    margin: 28px 0 9px;
+    margin: 0 0 30px;
     text-align: left;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text p {
     color: rgb(35, 31, 32);
-    font-size: 36px;
-    line-height: 45px;
-    margin: 28px 0 9px;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev {
+    max-width: 48px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #034EA2;
+    border-radius: 50%;
+    right: 0;
+    bottom: 41px;
+    top: unset;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev {
+    left: unset;
+    right: 60px;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next.swiper-button-disabled,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev.swiper-button-disabled {
+    display: none;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next::after,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev::after {
+    content: '';
+    background-image: url('../../icons/next.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    width: 20px;
+    height: 16px;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev::after {
+    transform: rotate(180deg);
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next:hover,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev:hover {
+    background-color: #034EA2;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next:hover::after,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev:hover::after {
+    filter: brightness(0) invert(1);
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination {
+    width: 100%;
+    height: 2px;
+    background-color: #cfcfcf;
+    display: flex;
+    top: unset;
+    bottom: 0;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet {
-    height: 4px;
-    width: 251.275px;
-    margin: 0px;
-    float: left;
-    display: block;
+    height: 2px;
+    /* width: 251.275px; */
+    width: 50%;
+    margin: 0;
     border-radius: unset;
 }
 
-.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
-    border-top: 2px solid #034EA2;
-    margin-top: -2px;
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    height: 2px;
+    background-color: #034EA2;
+}
+
+.section[data-id="awardSection"] .default-content-wrapper {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .section[data-id="awardSection"] {
+        padding: 0 15px;
+        flex-direction: column;
+        gap: unset;
+    }
+
+    .section[data-id="awardSection"] .banner-text-wrapper {
+        width: 100%;
+    }
+
+    .section[data-id="awardSection"] .banner-text h3 {
+        font-family: sans-serif;
+        font-size: 23px;
+        line-height: 28px;
+        color: #323232;
+        margin-bottom: 25px;
+        display: inline-block;
+    }
+
+    .section[data-id="awardSection"] .banner-text .button-container {
+        display: none;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper {
+        width: 100%;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper {
+        padding-bottom: 20px;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart>p {
+        max-width: 168px;
+        height: 225px;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text {
+        max-width: 100%;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text h2 {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 500;
+        color: rgb(35, 31, 32);
+        margin-bottom: 16px;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text p {
+        font-size: 17px;
+        line-height: 25px;
+        color: rgb(35, 31, 32);
+        margin-bottom: 0;
+    }
+
+    .section[data-id="awardSection"] .default-content-wrapper {
+        margin-top: 60px;
+        max-width: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    .section[data-id="awardSection"] .default-content-wrapper .button-container {
+        margin: 0;
+        padding: 10px 24px;
+        text-align: center;
+    }
+
+    .section[data-id="awardSection"] .default-content-wrapper .button-container .button {
+        font-style: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: rgb(3, 78, 162);
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next,
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev {
+        display: none;
+    }
+
+    .section[data-id="awardSection"] .swipperActionBtn {
+        display: none;
+    }
+
 }
