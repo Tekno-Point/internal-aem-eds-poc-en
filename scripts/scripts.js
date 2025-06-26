@@ -157,6 +157,15 @@ export default function decorateWrapper(main) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  let scrollBar = document.querySelector('[data-id="scroll-progress-bar"]');
+  window.addEventListener('scroll', () => {
+    
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+    scrollBar.style.width = scrollPercent + '%';
+  });
+
   const scrollMap = {
     "overview": "overview",
     "mastertheStockMarketEasySteps": "mastertheStockMarketEasySteps",
@@ -181,3 +190,4 @@ async function loadPage() {
 }
 
 loadPage();
+

@@ -21,7 +21,8 @@
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --heading-font-family: roboto-condensed, roboto-condensed-fallback,
+    sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -44,16 +45,16 @@
 @font-face {
   font-family: roboto-condensed-fallback;
   size-adjust: 88.82%;
-  src: local('Arial');
+  src: local("Arial");
 }
 
 @font-face {
   font-family: roboto-fallback;
   size-adjust: 99.529%;
-  src: local('Arial');
+  src: local("Arial");
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -112,12 +113,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -142,7 +160,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -228,22 +246,22 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+/* main > .section:first-of-type {
   margin-top: 0;
-}
+} */
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }
@@ -307,36 +325,53 @@ main .section.highlight {
 
 /* === 2. PAGE-LEVEL GRID (article + sidebar) ===================== */
 .wrapperleft {
-   display: grid;
+  display: grid;
   grid-template-columns: 1fr 500px;
   gap: 5px;
   margin: 0 auto;
   padding: 40px 20px;
+   font-size: 16px;
+    h2{
+      font-size: 1rem;
+    }
+    h1{
+      font-size: 1.7rem;
+    }
+}
+#overview{
+  font-size: 1.75rem;
 }
 
 /* make sure every inner .section stays in its intended column */
-.wrapperleft > .section:not([data-id="tableofcontent"]) { grid-column: 1; }
-.wrapperleft > .section[data-id="tableofcontent"]       { grid-column: 2; grid-row: 1; }
+.wrapperleft>.section:not([data-id="tableofcontent"]) {
+  grid-column: 1;
+}
 
-.wrapperleft > .section{
+.wrapperleft>.section[data-id="tableofcontent"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.wrapperleft>.section {
   text-align: left;
-  max-width:100%;
+  max-width: 100%;
   width: 80%;
   margin: 0 auto;
 }
+
 /* === 3. TABLE-OF-CONTENT CARD =================================== */
 [data-id="tableofcontent"] .default-content-wrapper {
   background: #f2f8fd;
   border-radius: 8px;
   /* padding: 24px; */
   padding: 1.5rem 1.5rem 1.5rem 1.875rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   font-size: 16px;
   margin-top: 1px;
   position: fixed;
-    top: 85px;
-    right: 100px;
-    width: max-content;
+  top: 85px;
+  right: 100px;
+  width: max-content;
 }
 
 [data-id="tableofcontent"] h3 {
@@ -344,61 +379,172 @@ main .section.highlight {
   font-size: 18px;
 }
 
-[data-id="tableofcontent"] ul   { list-style:none; margin:0; padding:0; }
-[data-id="tableofcontent"] li   {
+[data-id="tableofcontent"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[data-id="tableofcontent"] li {
   margin-bottom: 14px;
   padding-left: 12px;
   border-left: 3px solid transparent;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 [data-id="tableofcontent"] li a {
   text-decoration: none;
   color: #003366;
   font-weight: 500;
-  transition: color .25s;
+  transition: color 0.25s;
 }
 
 /* hover-state */
-[data-id="tableofcontent"] li:hover   { border-left-color:#005bbb; }
-[data-id="tableofcontent"] li:hover a { color:#005bbb; text-decoration:underline; }
+[data-id="tableofcontent"] li:hover {
+  border-left-color: #005bbb;
+}
+
+[data-id="tableofcontent"] li:hover a {
+  color: #005bbb;
+  text-decoration: underline;
+}
 
 /* active-state helper class you can toggle with JS if desired */
-[data-id="tableofcontent"] li.active        { border-left-color:#005bbb; }
-[data-id="tableofcontent"] li.active a      { color:#005bbb; }
+[data-id="tableofcontent"] li.active {
+  border-left-color: #005bbb;
+}
+
+[data-id="tableofcontent"] li.active a {
+  color: #005bbb;
+}
 
 /* === 4. SYNOPSIS CALLOUT BOX ==================================== */
 [data-id="synopsis"] .default-content-wrapper {
-  background:#fff5f5;
+  background: #fff5f5;
   border-radius: 6px;
   padding: 24px;
   margin-bottom: 40px;
 }
 
-[data-id="synopsis"] h2 { margin-top: 0; }
+[data-id="synopsis"] h2 {
+  margin-top: 0;
+}
 
 /* === 5. BULLET LISTS ============================================ */
 .section ul li {
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .section ul li::marker {
-  color: #005bbb;      /* blue bullet like the brand */
+  color: #005bbb;
+  /* blue bullet like the brand */
 }
+
 /* === 7. RESPONSIVE (SIDEBAR DROPS BELOW) ======================== */
-@media (max-width: 768px) {
-  .wrapperleft {
-    grid-template-columns: 1fr;     /* one column */
-  }
-  .wrapperleft > .section[data-id="tableofcontent"] {
-    grid-column: 1;
-    order: 100;                     /* push TOC underneath article */
-    margin-top: 48px;
-  }
-}
-#how-to-learn-about-the-stock-market-in-nine-easy-steps{
+
+#how-to-learn-about-the-stock-market-in-nine-easy-steps {
   padding-bottom: 30px;
+  font-size: 1.75rem;
+}
+#master-the-stock-market-in-9-easy-steps{
+  font-size: 1.75rem;
+}
+#open-a-demat-and-trading-account-with-hdfc-bank{
+  font-size: 1.75rem;
 }
 [data-id="howtolernaboutstock"] p {
-padding-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+[data-id="accountsharebtn"] div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 16px 0;
+}
+
+[data-id="accountsharebtn"] div>p:nth-child(1) {
+  background-color: #e8f2fc;
+  /* light blue */
+  color: #004785;
+  /* HDFC dark blue */
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+[data-id="accountsharebtn"] div>p:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #004785;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.icon-iconshare {
+  width: 16px;
+  height: 16px;
+}
+
+[data-id="scroll-progress-bar"] {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #004785;
+  z-index: 9999;
+  transition: width 0.25s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+   .wrapperleft >.section {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    }
+  .wrapperleft {
+    
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+   
+    [data-id="accountsharebtn"] {
+      order: 1;
+    }
+
+    [data-id="tableofcontent"] {
+      order: 4;
+    }
+
+    [data-id="howtolernaboutstock"] {
+      order: 2;
+    }
+
+    [data-id="synopsis"] {
+      order: 3;
+    }
+
+    [data-id="overview"] {
+      order: 5;
+    }
+
+    [data-id="mastertheStockMarketEasySteps"] {
+      order: 6;
+    }
+
+    [data-id="openaDematandTradingAccount"] {
+      order: 7;
+    }
+  }
+
+  [data-id="tableofcontent"] .default-content-wrapper {
+    position: unset;
+  }
 }
