@@ -6,5 +6,5 @@ export default function decorate(block){
             elem.classList.add("subBlog"+(ind+1)+"-bloginner"+(index+1))
         })
     })
-    // SwiperBlock(block)
+    SwiperBlock(block)
 }

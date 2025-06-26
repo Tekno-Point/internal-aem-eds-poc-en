@@ -93,11 +93,11 @@
     width: 100%;
 }
 
-.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 p{
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 p {
     margin: 0;
 }
 
-.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 p picture{
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 p picture {
     line-height: 0;
     height: 100%;
     display: block;
@@ -118,43 +118,115 @@
 
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 {
     width: 47%;
-    max-height: 250px;
+    max-height: 226px;
     background: #D2DCEB;
     border-radius: 8px;
     margin: 10px;
 }
-.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p{
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p {
     margin: 0;
 }
-.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(1){
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(1) {
     font-size: 16px;
     padding: 10px;
 }
 
-.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(2){
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(2) {
     display: block;
     font-size: 24px;
     padding: 10px;
 }
 
-.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(3){
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(3) {
     font-size: 12px;
-    padding: 10px;
-    position: relative;
+    padding: 6px;
 }
-
-
-
 
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3 {
     width: 47%;
     margin: 0;
+    position: relative;
+
 }
 
-.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3 img{
-    height: 240px;
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3 img {
+    height: 220px;
+    border-radius: 8px;
 }
 
-.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3 p:nth-child(2){
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3 p:nth-child(2) {
     position: absolute;
+    padding: 5px;
+    left: 12px;
+    right: 24px;
+    width: 80%;
+    bottom: 40px;
+    border: 1px solid;
+    color: #034EA2;
+    border-color: #034EA2;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog4.swiper-slide {
+    /* display: inline !important; */
+    flex-direction: column;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog4 .subBlog4-bloginner1 {
+    position: relative;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog4 .subBlog4-bloginner1 img {
+    width: 85rem;
+    height: 150px;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog4 .subBlog4-bloginner1 p:nth-child(2) {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    border: 1px solid;
+    color: #034EA2;
+    border-color: #034EA2;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog4 .subBlog4-bloginner2 {
+    position: relative;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog4 .subBlog4-bloginner2 img {
+    width: 85rem;
+    height: 200px;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog4 .subBlog4-bloginner2 #instant-loan-with-no-hidden-charges {
+    position: absolute;
+    font-size: 1.35rem;
+    top: 13%;
+    left: 8%;
+    max-width: 195px;
+    color: #fff;
+}
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog4 .subBlog4-bloginner2 .button-container{
+    position: absolute;
+    top: 66%;
+    left: 10%;
+    border: 1px solid;
+    color: #034EA2;
+    border-color: #034EA2;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 20px;
 }
