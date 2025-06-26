@@ -85,6 +85,7 @@
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog3 {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 {
@@ -120,7 +121,7 @@
     max-height: 250px;
     background: #D2DCEB;
     border-radius: 8px;
-    margin: 0px 10px;
+    margin: 10px;
 }
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p{
     margin: 0;
@@ -139,6 +140,7 @@
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(3){
     font-size: 12px;
     padding: 10px;
+    position: relative;
 }
 
 
@@ -147,4 +149,12 @@
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3 {
     width: 47%;
     margin: 0;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3 img{
+    height: 240px;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3 p:nth-child(2){
+    position: absolute;
 }
