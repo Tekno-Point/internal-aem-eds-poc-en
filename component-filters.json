@@ -1,5 +1,4 @@
-[
-  {
+[{
     "id": "main",
     "components": ["section"]
   },
@@ -24,7 +23,11 @@
       "footer",
       "tabproduct",
       "documentation",
-      "cf-fragment"
+      "cf-fragment",
+      "banner-carousel",
+      "banner-text",
+      "blogs-carousel",
+      "customer-carousel"
     ]
   },
   {
@@ -49,7 +52,9 @@
   },
   {
     "id": "tabproduct",
-    "components": ["tabproduct-item"]
+    "components": [
+      "tabproduct-item"
+    ]
   },
   {
     "id": "documentation",
@@ -59,5 +64,25 @@
   {
     "id": "cf-fragment",
     "components": ["cf-fragment-item"]
+  },
+  {
+    "id": "banner-carousel",
+    "components": [
+      "banner-carousel-item"
+    ]
+  },
+  {
+    "id":"blogs-carousel",
+    "components":[
+        "blogs-carousel-item",
+        "blogs-carousel-two-item",
+        "blogs-carousel-three-item"   
+    ]
+  },
+  {
+    "id": "customer-carousel",
+    "components": [
+      "customer-carousel-item"
+    ]
   }
 ]
