@@ -57,8 +57,8 @@ function focusNavSection() {
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
 function toggleAllNavSections(sections, expanded = false, sectionClass='.nav-sections') {
-  sections.querySelectorAll(`${sectionClass} .default-content-wrapper > ul > li`).forEach((section) => {
-    section.setAttribute('aria-expanded', expanded);
+  sections?.querySelectorAll(`${sectionClass} .default-content-wrapper > ul > li`).forEach((section) => {
+    section?.setAttribute('aria-expanded', expanded);
     console.log(section);
   });
   
@@ -112,14 +112,19 @@ function toggleMenu(nav, navSections, forceExpanded = null, navNavigations) {
  */
 export default async function decorate(block) {
   // load nav as fragment
-  const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  // const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  const navMeta = isDesktop.matches? getMetadata('nav') : getMetadata('mob-nav');
+  const navUrl = isDesktop.matches? '/hdfc-life/nav' : '/hdfc-life/mobile-nav';
+
+  const navPath = navMeta ? new URL(navMeta, window.location).pathname : navUrl;
+
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
+
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
   const classes = ['brand', 'sections', 'tools', 'navigation'];
@@ -157,7 +162,7 @@ export default async function decorate(block) {
       navNavigation.addEventListener('click', ()=> {
         if(isDesktop.matches) {
           const expanded = navNavigation.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navNavigations, '.nav-navigation');
+          toggleAllNavSections(navNavigations, false, '.nav-navigation');
           navNavigation.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         }
       })
