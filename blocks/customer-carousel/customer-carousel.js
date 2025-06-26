@@ -1,3 +1,4 @@
+import SwiperBlock from "../swiper/swiper.js"
 export default function decorate(block){
     console.log(block);
     Array.from(block.children).forEach((el)=>{
@@ -16,5 +17,10 @@ export default function decorate(block){
             }
         })
     })
-
+    SwiperBlock(block) 
+    const swipperAction = document.createElement("div");
+    swipperAction.classList.add("swipperActionBtn")
+    swipperAction.append(block.querySelector(".swiper-button-next"))
+    swipperAction.append(block.querySelector(".swiper-button-prev"))
+    block.append(swipperAction)
 }

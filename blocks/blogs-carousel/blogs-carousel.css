@@ -14,7 +14,7 @@
     width: 100%;
 }
 
-.section .blogs-carousel-wrapper .blogs-carousel .swiper-slide{
+.section .blogs-carousel-wrapper .blogs-carousel .swiper-slide {
     background: #fff;
 }
 
@@ -91,7 +91,18 @@
     position: relative;
     width: 100%;
 }
-.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 img{
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 p{
+    margin: 0;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 p picture{
+    line-height: 0;
+    height: 100%;
+    display: block;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner1 img {
     border-radius: 8px;
 }
 
@@ -105,9 +116,35 @@
 }
 
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 {
-    width: 50%;
+    width: 47%;
+    max-height: 250px;
+    background: #D2DCEB;
+    border-radius: 8px;
+    margin: 0px 10px;
+}
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p{
+    margin: 0;
+}
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(1){
+    font-size: 16px;
+    padding: 10px;
 }
 
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(2){
+    display: block;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner2 p:nth-child(3){
+    font-size: 12px;
+    padding: 10px;
+}
+
+
+
+
 .section .blogs-carousel-wrapper .blogs-carousel .subBlog3 .subBlog3-bloginner3 {
-    width: 50%;
+    width: 47%;
+    margin: 0;
 }

@@ -1428,18 +1428,18 @@
       },
       {
         "component": "reference",
-        "name": "col2two_image",
+        "name": "col2_image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "text",
-        "name": "col2two_imageAlt",
+        "name": "col2_imageAlt",
         "label": "Alt Text"
       },
       {
         "component": "richtext",
-        "name": "col2two_text",
+        "name": "col2_text",
         "value": "",
         "label": "Text",
         "valueType": "string"
