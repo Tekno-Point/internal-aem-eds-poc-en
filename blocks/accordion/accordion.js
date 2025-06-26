@@ -21,15 +21,19 @@ export default function decorate(block) {
     row.replaceWith(details);
   });
 
+  // Hide paragraphs containing just hyphens
   Array.from(block.querySelectorAll(".accordion-item-body p")).forEach((el) => {
-    el.style.visibility = el.textContent.includes("-") ? 'hidden' : ""
-  })
-  Array.from(block.querySelectorAll(".accordion-item")).forEach((element) => {
-    element.addEventListener("click", (event) => {
-      Array.from(block.querySelectorAll(".accordion-item")).forEach((elem) => {
-        elem.removeAttribute("open");
-      })
-      event.target.setAttribute('open', '')
-    })
-  })
+    el.style.visibility = el.textContent.includes("-") ? 'hidden' : "";
+  });
+
+  // Ensure only one accordion is open at a time
+  block.querySelectorAll(".accordion-item").forEach((item) => {
+    item.addEventListener("toggle", () => {
+      if (item.open) {
+        block.querySelectorAll(".accordion-item").forEach((otherItem) => {
+          if (otherItem !== item) otherItem.removeAttribute("open");
+        });
+      }
+    });
+  });
 }
