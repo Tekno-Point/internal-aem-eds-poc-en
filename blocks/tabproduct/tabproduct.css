@@ -3,6 +3,7 @@
     position: relative;
     background-size: cover;
     transition: .5s;
+    margin-top: 11px;
 }
 
 .bgTabwrapper .bgTab-container {
@@ -25,19 +26,80 @@
     display: none;
 }
 
+
 .bgTabwrapper .bgTab-container>.bgTab {
+    position: relative;
+    padding: 45px 0 0 80px;
     border-right: 1.5px solid rgb(255 255 255 / 40%);
     line-height: 1.1;
+    font-family: "Montserrat-Regular";
     font-size: 20px;
+    font-weight: 400;
     box-sizing: border-box;
     transition: 1s;
     width: 100%;
     height: 100%;
     cursor: pointer;
-    border-top: 5px solid #fff0;
+    /* margin-top: 6px; */
+    /* border-top: 5px solid #fff0; */
+}
+
+.bgTabwrapper .bgTab-container>.bgTab .progresLine {
+    position: absolute;
+    z-index: 1;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 6px;
+    left: 0;
+    top: 0;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+        background-color: rgb(240, 238, 243);
+    }
+
+    100% {
+        width: 100%;
+        background-color: rgb(240, 238, 243);
+    }
+}
+
+.bgTabwrapper .bgTab-container>.bgTab:hover .progresLine {
+    animation: 6s linear load infinite;
+}
+
+/* .bgTabwrapper .bgTab-container>.bgTab .tab {
+    max-width: 98px;
+    width: 100% !important;
+    word-break: break-word;
+} */
+
+.bgTabwrapper .bgTab-container>.bgTab:hover .tab {
+    font-family: "Montserrat-medium";
+    font-size: 25px;
+    font-weight: 500;
+    transition: font-size 0.9s ease 0.2s;
+}
+
+.bgTabwrapper .bgTab-container .bgTab {
+    border: none;
+    background-size: cover;
+    font-size: 24px;
+    border-bottom: 1px solid #fff;
+    height: 200px;
+    position: relative;
+    background-size: cover;
+    background-position: 100% 100%;
+    padding: 0;
 }
 
 @media (max-width:767px) {
+    .tabproduct-container .tabproduct-wrapper {
+        padding: 0;
+    }
+
     .bgTabwrapper .bgTab-container {
         max-height: inherit;
         display: block;
@@ -48,19 +110,13 @@
 
     .mob-show {
         display: block;
+        padding-left: 26px;
     }
 
 
 
     .bgTabwrapper .bgTab-container .bgTab {
-        border: none;
-        background-size: cover;
-        font-size: 24px;
-        border-bottom: 1px solid #fff;
-        height: 200px;
-        position: relative;
-        background-size: cover;
-        background-position: 100% 100%;
+        font-size: 20px;
     }
 
     .bgTab .tab {
@@ -79,6 +135,14 @@
         left: 0;
         position: absolute;
         z-index: -1;
+    }
+
+    .bgTabwrapper .bgTab-container>.bgTab .progresLine {
+        display: none;
+    }
+
+    .bgTabwrapper .bgTab-container>.bgTab:hover .tab {
+        font-size: 21px;
     }
 
 }
