@@ -106,7 +106,15 @@
 
 
     .bgTabwrapper .bgTab-container .bgTab {
-        font-size: 20px;
+        border: none;
+        background-size: cover;
+        font-size: 24px;
+        border-bottom: 1px solid #fff;
+        height: 200px;
+        position: relative;
+        background-size: cover;
+        background-position: 100% 100%;
+        padding: 0;
     }
 
     .bgTab .tab {
@@ -132,7 +140,10 @@
     }
 
     .bgTabwrapper .bgTab-container>.bgTab:hover .tab {
-        font-size: 21px;
+        font-family: "Montserrat-medium";
+        font-size: 25px;
+        font-weight: 500;
+        transition: font-size 0.9s ease 0.2s;
     }
 
     .bgTabwrapper .bgTab-container .bgTab {

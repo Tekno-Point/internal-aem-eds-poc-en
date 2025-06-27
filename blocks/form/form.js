@@ -91,7 +91,7 @@ export default async function decorate(block) {
     (link) => link.startsWith(window.location.origin) && link.endsWith(".json")
   );
   const submitLink = links.find((link) => link !== formLink);
-  if (!formLink || !submitLink) return;
+  if (!formLink ) return;
 
   const img = block.querySelector("picture");
   const form = await createForm(formLink, submitLink);

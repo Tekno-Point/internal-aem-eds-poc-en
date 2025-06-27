@@ -88,11 +88,11 @@ function buildAutoBlocks() {
 
 export function autolinkForm(element) {
   element.querySelectorAll('a').forEach(async function (origin) {
-    console.log(origin.href);
-      if (origin && origin.href && origin.href.includes('email-form')) {
-        decorateForm(origin.closest('ul'))
-      }
-    });
+    origin.href;
+    if (origin && origin.href && origin.href.includes('/form-email')) {
+      decorateForm(origin.closest('ul'))
+    }
+  });
 }
 
 /**
