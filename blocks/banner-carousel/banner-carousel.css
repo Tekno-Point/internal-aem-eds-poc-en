@@ -1,9 +1,12 @@
 @import url('../swiper/swiper.css');
 
-.section.banner-text-container {
+.section[data-id="banner"] {
+    background: radial-gradient(71.46% 92.32% at 98.58% 106.38%, #6abcff 0, #fff0 100%);
+    background-position: 350px 50%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
     display: flex;
     flex-wrap: nowrap;
-    /* padding-left: 80px; */
     margin: 12px 0 0;
     padding: 0 0 30px 60px;
 }
@@ -12,12 +15,6 @@
     padding: 0;
 }
 
-.section[data-id="banner"] {
-    background: radial-gradient(71.46% 92.32% at 98.58% 106.38%, #6abcff 0, #fff0 100%);
-    background-position: 350px 50%;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-}
 
 .section[data-id="banner"] .banner-text-wrapper {
     width: 60%;
@@ -49,12 +46,14 @@
     font-size: 64px;
     line-height: 72.96px;
     font-weight: 400;
+    font-family: unset;
     color: rgb(35, 31, 32);
     margin: 0;
     text-transform: uppercase;
 }
 
-.section[data-id="banner"] .banner-text .button-container {
+.section[data-id="banner"] .banner-text .button-container,
+.section[data-id="banner"] .default-content-wrapper .button-container {
     margin: 0 0 24px;
     max-width: 175px;
     width: 100%;
@@ -62,7 +61,8 @@
     cursor: pointer;
 }
 
-.section[data-id="banner"] .banner-text .button-container .button {
+.section[data-id="banner"] .banner-text .button-container .button,
+.section[data-id="banner"] .default-content-wrapper .button-container .button {
     background-color: #034ea2;
     padding: 10px 32px;
     border-radius: 8px;
@@ -70,9 +70,14 @@
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
+    font-style: normal;
     width: initial;
     display: block;
     text-align: center;
+}
+
+.section[data-id="banner"] .default-content-wrapper .button-container .button {
+    display: none;
 }
 
 .section[data-id="banner"] .banner-carousel-wrapper {
@@ -95,7 +100,7 @@
 
 .section[data-id="banner"] .block .bannerCarousel.swiper-slide {
     background: transparent;
-    width: 352px;
+    /* width: 352px; */
 }
 
 .section[data-id="banner"] .block .subBannerpart {
@@ -136,7 +141,6 @@
 
 .section[data-id="banner"] .block .bannerCarousel.swiper-slide.swiper-slide-active ul {
     animation: moveDown 0.7s ease-in-out 0.1s forwards;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
     opacity: 1;
 }
 
@@ -181,6 +185,10 @@
     font-size: 16px;
 }
 
+.section[data-id="banner"] .block .bannerCarousel p {
+    margin: 0;
+}
+
 .section[data-id="banner"] .block .subBannerpart p picture {
     line-height: 0;
     height: 100%;
@@ -189,7 +197,8 @@
 
 .section[data-id="banner"] .block .subBannerpart p img {
     width: 220px;
-    height: 350px;
+    /* height: 350px; */
+    height: 454px;
     border-radius: 10px;
 }
 
@@ -208,18 +217,20 @@
     font-size: 20px;
     line-height: 24px;
     font-weight: 400;
-    font-family: sans-serif;
+    font-family: unset;
     color: #fff;
     margin: 0 0 4px;
+    text-align: left;
 }
 
 .section[data-id="banner"] .block .subBannerpart .sub-title-text p {
     font-size: 12px;
     line-height: 18px;
-    font-family: sans-serif;
+    font-family: unset;
     font-weight: 400;
     color: #fff;
     margin: 0;
+    text-align: left;
 }
 
 .section[data-id="banner"] .block .swiper-pagination {
@@ -243,35 +254,362 @@
     background: linear-gradient(118deg, rgb(31 76 156 / .8) 12.21%, rgb(223 241 239 / .8) 115.47%);
 }
 
+@media screen and (max-width: 768px) {
+    .section[data-id="banner"] {
+        padding: 24px 0 15px;
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 20px;
+        background-position: bottom center !important;
+        background-size: 200% 100% !important;
+        border-radius: 8px;
+        background: radial-gradient(79.39% 105.29% at 98.58% 106.38%, #6abcff 0, #fff0 100%);
+    }
+
+    .section[data-id="banner"] .block {
+        padding-bottom: 10px;
+    }
+
+    .section[data-id="banner"] .block .swiper-wrapper {
+        padding-bottom: 50px;
+    }
+
+    .section[data-id="banner"] .banner-text p:first-of-type {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .section[data-id="banner"] .banner-text h1 {
+        font-size: 22px;
+        line-height: 25px;
+        font-family: unset;
+    }
+
+    .section[data-id="banner"] .banner-text h1:first-of-type {
+        margin-bottom: 10px;
+    }
+
+    .section[data-id="banner"] .banner-text .button-container {
+        display: none;
+    }
+
+    .section[data-id="banner"] .default-content-wrapper .button-container .button {
+        display: block;
+    }
+
+    .section[data-id="banner"] .banner-carousel-wrapper {
+        padding: 0;
+        width: 100%;
+    }
+
+    .section[data-id="banner"] .block .bannerCarousel.swiper-slide {
+        margin-right: 24px !important;
+        /* width: 280px !important; */
+        /* padding-left: 16px; */
+    }
+
+    .section[data-id="banner"] .block .bannerCarousel ul .roundrestat {
+        right: -15px;
+    }
+
+    .section[data-id="banner"] .block .bannerCarousel ul .roundrestat:first-of-type {
+        left: -15px;
+    }
+
+    .section[data-id="banner"] .block .subBannerpart p img {
+        width: 270px;
+    }
+
+    .section[data-id="banner"] .block .subBannerpart .sub-title-text {
+        left: 41px;
+        width: calc(100% - 50px);
+    }
+
+    .section[data-id="banner"] .block .subBannerpart .sub-title-text h3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .section[data-id="banner"] .block .subBannerpart .sub-title-text p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .section[data-id="banner"]>div.default-content-wrapper {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .section[data-id="banner"]>div.default-content-wrapper .button-container {
+        margin: 10px 0 30px;
+    }
+
+    .section[data-id="banner"] .block .swiper-pagination {
+        margin: 15px 0 0;
+    }
+}
+
+.section[data-id="awardSection"] {
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    padding: 0 64px;
+}
 
 .section[data-id="awardSection"] .banner-text-wrapper {
-    width: 20%;
+    width: 23%;
+    margin: 0;
+}
+
+
+.section[data-id="awardSection"] .block h3 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 38px;
+    font-family: unset;
+    color: #323232;
+}
+
+.section[data-id="awardSection"] .block .button-container {
+    margin: 24px 0 0;
+}
+
+.section[data-id="awardSection"] .block .button-container .button,
+.section[data-id="awardSection"] .default-content-wrapper .button-container {
+    padding: 8px 24px;
+    color: #034EA2;
+    font-size: 12px;
+    line-height: 18px;
+    border: 1px solid rgb(3, 78, 162);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section[data-id="awardSection"] .block .button-container .button:hover,
+.section[data-id="awardSection"] .default-content-wrapper .button-container:hover {
+    background-color: #034EA2;
+    color: #fff;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper {
-    width: 80%;
+    width: 70%;
+    margin: 0;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel {
+    background-color: transparent;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart {
     display: flex;
+    gap: 98px;
+    /* max-width: 385px; */
     width: 100%;
-    height: 75vh;
+    /* height: 75vh; */
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart>p {
+    margin: 0;
+    max-width: 149px;
+    height: 200px;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart p picture {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text {
-    padding: 140px;
+    max-width: 633px;
+    width: 100%;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text h2 {
+    color: rgb(35, 31, 32);
+    font-size: 44px;
+    line-height: 53px;
+    font-family: unset;
+    margin: 0 0 30px;
+    text-align: left;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text p {
+    color: rgb(35, 31, 32);
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 24px;
+    text-align: left;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev {
+    max-width: 48px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #034EA2;
+    border-radius: 50%;
+    right: 0;
+    bottom: 41px;
+    top: unset;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev {
+    left: unset;
+    right: 60px;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next.swiper-button-disabled,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev.swiper-button-disabled {
+    display: none;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next::after,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev::after {
+    content: '';
+    background-image: url('../../icons/next.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    width: 20px;
+    height: 16px;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev::after {
+    transform: rotate(180deg);
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next:hover,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev:hover {
+    background-color: #034EA2;
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next:hover::after,
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev:hover::after {
+    filter: brightness(0) invert(1);
+}
+
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination {
+    width: 100%;
+    height: 2px;
+    background-color: #cfcfcf;
+    display: flex;
+    top: unset;
+    bottom: 0;
 }
 
 .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet {
-    height: 4px;
-    width: 251.275px;
-    margin: 0px;
-    float: left;
-    display: block;
+    height: 2px;
+    /* width: 251.275px; */
+    width: 50%;
+    margin: 0;
     border-radius: unset;
 }
 
-.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet .swiper-pagination-bullet-active {
-    border-top: 2px solid #034EA2;
-    margin-top: -2px;
+.section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    height: 2px;
+    background-color: #034EA2;
+}
+
+.section[data-id="awardSection"] .default-content-wrapper {
+    display: none;
+}
+
+.section[data-id="awardSection"] .swipperActionBtn {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .section[data-id="awardSection"] {
+        padding: 0 15px;
+        flex-direction: column;
+        gap: unset;
+    }
+
+    .section[data-id="awardSection"] .banner-text-wrapper {
+        width: 100%;
+    }
+
+    .section[data-id="awardSection"] .banner-text h3 {
+        font-family: unset;
+        font-size: 23px;
+        line-height: 28px;
+        color: #323232;
+        margin-bottom: 25px;
+        display: inline-block;
+    }
+
+    .section[data-id="awardSection"] .banner-text .button-container {
+        display: none;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper {
+        width: 100%;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper {
+        padding-bottom: 20px;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart>p {
+        max-width: 168px;
+        height: 225px;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text {
+        max-width: 100%;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text h2 {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 500;
+        font-family: unset;
+        color: rgb(35, 31, 32);
+        margin-bottom: 16px;
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-wrapper .bannerCarousel .subBannerpart .sub-title-text p {
+        font-size: 17px;
+        line-height: 25px;
+        color: rgb(35, 31, 32);
+        margin-bottom: 0;
+    }
+
+    .section[data-id="awardSection"] .default-content-wrapper {
+        margin-top: 60px;
+        max-width: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    .section[data-id="awardSection"] .default-content-wrapper .button-container {
+        margin: 0;
+        padding: 10px 24px;
+        text-align: center;
+    }
+
+    .section[data-id="awardSection"] .default-content-wrapper .button-container .button {
+        font-style: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: rgb(3, 78, 162);
+    }
+
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-next,
+    .section[data-id="awardSection"] .banner-carousel-wrapper .banner-carousel .swiper-button-prev {
+        display: none;
+    }
+
+    .section[data-id="awardSection"] .swipperActionBtn {
+        display: none;
+    }
+
 }

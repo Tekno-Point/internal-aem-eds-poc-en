@@ -31,11 +31,15 @@ export default function decorate(block) {
 
 
   SwiperBlock(block)
-  if (!block.closest("[data-id='banner']")) {
-    const swipperAction = document.createElement("div");
-    swipperAction.classList.add("swipperActionBtn")
-    swipperAction.append(block.querySelector(".swiper-button-next"))
-    swipperAction.append(block.querySelector(".swiper-button-prev"))
-    block.append(swipperAction)
-  }
+  // let arry = ["[data-id='banner']", "[data-id='awardSection']"];
+  // arry.forEach((el)=>{
+  //   if (!block.closest(el)) {
+  //     const swipperAction = document.createElement("div");
+  //     swipperAction.classList.add("swipperActionBtn");
+  //     swipperAction.append(block.querySelector(".swiper-button-next"));
+  //     swipperAction.append(block.querySelector(".swiper-button-prev"));
+  //     block.append(swipperAction);
+  //   }
+  // })
+  
 }

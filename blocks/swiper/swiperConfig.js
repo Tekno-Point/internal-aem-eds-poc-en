@@ -1,40 +1,40 @@
 let objClassSwipper = {
-  "default": {
+  default: {
     loop: true,
-    autoplay: true
+    autoplay: true,
   },
-  "navigation": {
+  navigation: {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-    }
+    },
   },
-  "pagination": {
+  pagination: {
     loop: true,
     autoplay: true,
     pagination: {
       el: ".swiper-pagination",
-      clickable: true
+      clickable: true,
     },
   },
-  "slidepreview": {
+  slidepreview: {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 30,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-    }
+    },
   },
-  "slidepreviewauto": {
+  slidepreviewauto: {
     slidesPerView: "auto",
     spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    }
+    },
   },
-  "breakpointswipper": {
+  breakpointswipper: {
     slidesPerView: 1.5,
     spaceBetween: 10,
     breakpoints: {
@@ -42,7 +42,7 @@ let objClassSwipper = {
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-        }
+        },
       },
       640: {
         slidesPerView: 1.5,
@@ -50,7 +50,7 @@ let objClassSwipper = {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-        }
+        },
       },
       768: {
         slidesPerView: 2,
@@ -58,7 +58,7 @@ let objClassSwipper = {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-        }
+        },
       },
       1024: {
         slidesPerView: 3,
@@ -66,10 +66,10 @@ let objClassSwipper = {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
-        }
+        },
       },
     },
-  }
-}
+  },
+};
 
 export default objClassSwipper;

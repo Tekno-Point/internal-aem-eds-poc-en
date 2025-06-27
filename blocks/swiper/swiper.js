@@ -15,15 +15,16 @@ export default function decorate(block) {
 
 
   function handleResolution() {
-    var objConfig = {}
-    if (window.innerWidth < 768) {
+    var objConfig = {};
+if (window.innerWidth < 768) {   
+    
       //Mobile
       if (blockClassList.indexOf("mobile-auto-scroll") != -1) {
-        objConfig["loop"] = true
-        objConfig["autoplay"] = true
+        objConfig["loop"] = true;
+        objConfig["autoplay"] = true;
       }
       if (blockClassList.indexOf("one-point-five-view") != -1) {
-        objConfig['slidesPerView'] = 1.5;
+        objConfig['slidesPerView'] = 1.2;
         objConfig['spaceBetween'] = 10;
       }
       if (blockClassList.indexOf("two-point-five-view") != -1) {
@@ -39,9 +40,9 @@ export default function decorate(block) {
         objConfig['spaceBetween'] = 10;
       }
       if (blockClassList.indexOf("center-view") != -1) {
-        objConfig['slidesPerView'] = "auto";
+        objConfig['slidesPerView'] = 1.4;
         objConfig['centeredSlides'] = true;
-        objConfig['spaceBetween'] = 30;
+        // objConfig['spaceBetween'] = 30;
       }
       if (blockClassList.indexOf("mobile-pagination") != -1) {
         let paginationDots = document.createElement('div');

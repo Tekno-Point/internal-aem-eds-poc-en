@@ -1,0 +1,199 @@
+.section.customer-carousel-container {
+    background: radial-gradient(83.24% 156.41% at -6.25% 158.56%, #65baff 0, #ebf3ff 100%);
+    backdrop-filter: blur(90px);
+    /* padding: 80px 0 72px; */
+    padding-left: 40px;
+    padding: 48px 0 48px 80px;
+
+}
+
+.section.customer-carousel-container .swiper-slide {
+    background: unset;
+}
+
+.custCaro1 img {
+    width: 335px;
+    min-width: 335px;
+    height: 480px;
+    border-radius: 250px;
+    margin-right: 55px;
+}
+
+.swipperActionBtn {
+    /* position: absolute;
+    right: 64%;
+    bottom: 26px; */
+    /* display: none; */
+}
+
+.section.customer-carousel-container .default-content-wrapper,
+.section.customer-carousel-container .customer-carousel-wrapper {
+    max-width: 100%;
+    padding: 0;
+}
+
+.section.customer-carousel-container .default-content-wrapper h2 {
+    font-size: 44px;
+    line-height: 52px;
+    font-family: unset;
+    font-weight: 500;
+    color: rgb(35, 31, 32);
+    margin: 0 0 48px;
+}
+
+.section.customer-carousel-container .customer-carousel .swiper-wrapper {
+    padding-bottom: 60px;
+}
+
+.section.customer-carousel-container .customer-carousel .swiper-wrapper .custcarousel.swiper-slide {
+    justify-content: start;
+}
+
+.section.customer-carousel-container .block .custcarousel .custCaro2 {
+    max-width: 510px;
+    width: 100%;
+    text-align: left;
+}
+
+.section.customer-carousel-container .block .custcarousel .custCaro2 p.title {
+    margin: 0;
+    font-size: 34px;
+    line-height: 51px;
+}
+
+.section.customer-carousel-container .block .custcarousel .custCaro2 p.design {
+    margin: 0 0 15px;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.section.customer-carousel-container .block .custcarousel .custCaro2 p:last-of-type {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 16px;
+}
+
+.section.customer-carousel-container .customer-carousel .swiper-button-next,
+.section.customer-carousel-container .customer-carousel .swiper-button-prev {
+    position: absolute;
+    bottom: 0;
+    top: unset;
+    right: unset;
+    left: 31%;
+    max-width: 48px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #034EA2;
+    border-radius: 50%;
+}
+
+.section.customer-carousel-container .customer-carousel .swiper-button-prev {
+    left: 27%;
+    right: unset;
+}
+
+.section.customer-carousel-container .customer-carousel .swiper-button-next::after,
+.section.customer-carousel-container .customer-carousel .swiper-button-prev::after {
+    content: '';
+    background-image: url('../../icons/next.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    width: 20px;
+    height: 16px;
+}
+
+.section.customer-carousel-container .customer-carousel .swiper-button-prev::after {
+    transform: rotate(180deg);
+}
+
+.section.customer-carousel-container .customer-carousel .swiper-button-next:hover,
+.section.customer-carousel-container .customer-carousel .swiper-button-prev:hover {
+    background-color: #034EA2;
+}
+
+.section.customer-carousel-container .customer-carousel .swiper-button-next:hover::after,
+.section.customer-carousel-container .customer-carousel .swiper-button-prev:hover::after {
+    filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: 768px) {
+    .section.customer-carousel-container {
+        padding: 50px 0 25px 30px;
+    }
+
+    .section.customer-carousel-container .default-content-wrapper {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .section.customer-carousel-container .default-content-wrapper h2 {
+        margin: 0 0 60px;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .section.customer-carousel-container .customer-carousel-wrapper {
+        padding: 0;
+    }
+
+    .section.customer-carousel-container .customer-carousel-wrapper .block .custcarousel {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .section.customer-carousel-container .block .custcarousel .custCaro1 {
+        max-width: 300px;
+        width: 100%;
+        height: 400px;
+    }
+
+    .section.customer-carousel-container .block .custcarousel .custCaro1 picture {
+        line-height: 0;
+        height: 100%;
+        display: block;
+    }
+
+    .section.customer-carousel-container .block .custcarousel .custCaro1 img {
+        width: 100%;
+        min-width: unset;
+        height: 100%;
+    }
+
+    .section.customer-carousel-container .block .custcarousel .custCaro2 {
+        margin: 30px 0 0;
+    }
+
+    .section.customer-carousel-container .block .custcarousel .custCaro2 p {
+        margin: 0;
+    }
+
+    .section.customer-carousel-container .block .custcarousel .custCaro2 p.title {
+        font-size: 22px;
+        line-height: 33px;
+        font-weight: 700;
+        /* font-family: sans-serif; */
+    }
+
+    .section.customer-carousel-container .block .custcarousel .custCaro2 p.design {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400;
+        /* font-family: sans-serif; */
+    }
+
+    .section.customer-carousel-container .block .custcarousel .custCaro2 p:last-of-type {
+        margin: 15px 0 0;
+        max-width: 310px;
+        width: 100%;
+        font-size: 13px;
+        line-height: 19px;
+        /* font-family: sans-serif; */
+        font-weight: 400;
+    }
+
+    .section.customer-carousel-container .customer-carousel .swipperActionBtn {
+        display: none;
+    }
+}
