@@ -33,7 +33,7 @@ footer .footer p {
     align-items: center;
 }
 
-.section.footer {
+.footer.block > div .section.footer {
     background-color: rgb(31, 42, 55);
     color: white;
     margin: 0px 0px;
