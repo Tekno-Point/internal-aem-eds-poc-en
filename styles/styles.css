@@ -291,6 +291,10 @@ main .section.highlight {
     display: none;
   }
 
+  .image2 > div.default-content-wrapper > p:nth-child(2) , .image3 > div.default-content-wrapper > p:nth-child(2){
+    display: none;
+  }
+
   
 .custom-richtextblock {
   display: flex;
@@ -314,6 +318,19 @@ main .section.highlight {
   }
   .content3 .custom-richtextblock > div {
     max-width: 100%;
+  }
+  .image2 > div.default-content-wrapper > p:nth-child(1){
+    display: none;
+  }
+  .image2 > div.default-content-wrapper > p:nth-child(2){
+    display: block;
+  }
+
+  .image3 > div.default-content-wrapper > p:nth-child(1){
+    display: none;
+  }
+  .image3 > div.default-content-wrapper > p:nth-child(2){
+    display: block;
   }
 
 }
