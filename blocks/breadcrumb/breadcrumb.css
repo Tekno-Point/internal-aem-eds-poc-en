@@ -1,0 +1,71 @@
+/* breadcrumbs in body */
+.breadcrumbs-container {
+  margin: auto;
+  max-width: 1248px;
+  padding: 0 24px;
+  font-size: var(--body-font-size-xs);
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.breadcrumbs-container .breadcrumbs {
+  display: block;
+  width: 100%;
+  height: var(--breadcrumbs-height);
+  overflow: hidden;
+}
+.breadcrumbs-container .breadcrumbs ol {
+  display: flex;
+  flex-flow: wrap;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  gap: 1ch;
+}
+.breadcrumbs-container .breadcrumbs ol li {
+  padding: 0;
+  color: var(--dark-color);
+}
+.breadcrumbs-container .breadcrumbs ol li:not(:last-child)::after {
+  content: '/';
+  padding-left: 1ch;
+}
+.breadcrumbs-container .breadcrumbs ol li[aria-current] {
+  color: var(--text-color);
+}
+@media (width >= 900px) {
+  .breadcrumbs-container {
+    max-width: 1264px;
+    padding: 0 32px;
+  }
+}
+/* Hide old header breadcrumbs if present */
+header .breadcrumbs {
+  display: none !important;
+}
+.breadcrumb>.container-fluid>ul{
+    padding: 0px;
+    display: flex;
+    gap: 25px;
+}
+.breadcrumb>.container-fluid>ul>li>a{
+color: #034EA2;
+}
+.breadcrumb>.container-fluid>ul>li{
+    color: #034EA2;
+    font-family:"Montserrat-Regular" ;
+}
+.breadcrumb>.container-fluid>ul>li>a{
+   text-decoration: none;
+}
+.breadcrumb>.container-fluid>ul>li::marker{
+     font-size: 10px
+}
+.breadcrumb>.container-fluid>ul>li:nth-child(1){
+    list-style: none;
+}
+@media (max-width: 768px) {
+ .breadcrumb{
+    display: none;
+ }
+}

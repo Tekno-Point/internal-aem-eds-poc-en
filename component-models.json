@@ -218,5 +218,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "number",
+        "name": "breadcrumb",
+        "value": "",
+        "label": "breadcrumb"
+      }
+    ]
   }
 ]
