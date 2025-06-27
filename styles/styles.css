@@ -37,7 +37,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 55px;
 }
 
 /* fallback fonts */
@@ -254,4 +254,12 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+.dp-none {
+  display: none;
+}
+
+.dp-show {
+  display: block !important;
 }
