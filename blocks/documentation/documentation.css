@@ -154,7 +154,7 @@
 #getFundwrap .animation-area{width: 400px;height: 856px;border-radius: 40px;top: 188px;margin-left: -198px;}
 }  
 
-.cntnr  .button-container {
+.cntnr .button-container{
     transition: all 1s ease-out;
 }
 
@@ -184,3 +184,13 @@ main > .section > div.documentation-wrapper{
     position: relative;
 }
 
+
+@media (max-width:767px) {
+    .getFundwrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .getFundwrapper .leftBox{
+        padding: unset;
+    }
+}

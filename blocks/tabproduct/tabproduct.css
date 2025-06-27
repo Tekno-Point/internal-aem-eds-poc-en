@@ -83,6 +83,8 @@
     transition: font-size 0.9s ease 0.2s;
 }
 
+
+
 @media (max-width:767px) {
     .tabproduct-container .tabproduct-wrapper {
         padding: 0;
@@ -142,6 +144,18 @@
         font-size: 25px;
         font-weight: 500;
         transition: font-size 0.9s ease 0.2s;
+    }
+
+    .bgTabwrapper .bgTab-container .bgTab {
+        border: none;
+        background-size: cover;
+        font-size: 24px;
+        border-bottom: 1px solid #fff;
+        height: 200px;
+        position: relative;
+        background-size: cover;
+        background-position: 100% 100%;
+        padding: 0;
     }
 
 }
