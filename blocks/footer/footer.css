@@ -572,6 +572,7 @@ footer .footer-sec6-1 > .OpstionContainer > div > .inp > Option.active {
       justify-content: center;
       align-items: center;
     }
+
 }
 
 footer .footer-sec1 > .default-content-wrapper {
@@ -590,3 +591,41 @@ footer .footer-sec1 > .default-content-wrapper {
 footer .section.footer-sec2 > .default-content-wrapper {
   padding: 0px;
 }
+
+
+footer .section.footer-sec3 > .default-content-wrapper > .view-more-btn {
+    background: none;
+    font-family: "OpenSans-Bold";
+    font-size: 0.875rem;
+    position: relative;
+    width: 146px;
+    text-align: center;
+    margin-left: 50%;
+}
+footer .section.footer-sec3 > .default-content-wrapper > .view-more-btn::after {
+   content: '';
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        transform: rotate(135deg);
+        width: 6px;
+        height: 6px;
+        border: 2px solid currentcolor;
+        border-radius: 0 1px 0 0;
+        border-width: 3px 3px 0 0;
+        color: #fff;
+}
+footer .section.footer-sec3 > .default-content-wrapper > .view-more-btn.sec3-ul-show::after {
+    transform: rotate(321deg);
+    top: 14px;
+}
+
+
+@media (max-width: 768px) {
+
+ footer .section.footer-sec3 > .default-content-wrapper > .view-more-btn {
+       margin-left: 25%;
+    }
+
+  }
