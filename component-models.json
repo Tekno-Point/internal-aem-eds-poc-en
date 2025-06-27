@@ -245,6 +245,19 @@
     ]
   },
   {
+    "id": "custom-richtext-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Custom Richtext",
+        "valueType": "string",
+        "description": "Custom rich text item for content display"
+      }
+    ]
+  },
+  {
     "id": "term-insurance-item",
     "fields": [
       {

@@ -19,6 +19,7 @@
       "embed",
       "custom-text",
       "custom-richtext",
+      "custom-richtextblock",
       "term-insurance"
     ]
   },
@@ -47,6 +48,12 @@
     "id": "term-insurance",
     "components": [
       "term-insurance-item"
+    ]
+  },
+  {
+    "id": "custom-richtextblock",
+    "components": [
+      "custom-richtext-item"
     ]
   }
 ]
