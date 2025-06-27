@@ -10,7 +10,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
-} from './aem.js';
+} from "./aem.js";
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -42,7 +42,10 @@ export function moveInstrumentation(from, to) {
     to,
     [...from.attributes]
       .map(({ nodeName }) => nodeName)
-      .filter((attr) => attr.startsWith('data-aue-') || attr.startsWith('data-richtext-')),
+      .filter(
+        (attr) =>
+          attr.startsWith("data-aue-") || attr.startsWith("data-richtext-")
+      )
   );
 }
 
@@ -52,7 +55,8 @@ export function moveInstrumentation(from, to) {
 async function loadFonts() {
   await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
   try {
-    if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
+    if (!window.location.hostname.includes("localhost"))
+      sessionStorage.setItem("fonts-loaded", "true");
   } catch (e) {
     // do nothing
   }
@@ -67,7 +71,7 @@ function buildAutoBlocks() {
     // TODO: add auto block, if needed
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('Auto Blocking failed', error);
+    console.error("Auto Blocking failed", error);
   }
 }
 
@@ -90,18 +94,18 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  document.documentElement.lang = "en";
   decorateTemplateAndTheme();
-  const main = doc.querySelector('main');
+  const main = doc.querySelector("main");
   if (main) {
     decorateMain(main);
-    document.body.classList.add('appear');
-    await loadSection(main.querySelector('.section'), waitForFirstImage);
+    document.body.classList.add("appear");
+    await loadSection(main.querySelector(".section"), waitForFirstImage);
   }
 
   try {
     /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
-    if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
+    if (window.innerWidth >= 900 || sessionStorage.getItem("fonts-loaded")) {
       loadFonts();
     }
   } catch (e) {
@@ -114,15 +118,15 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
-  const main = doc.querySelector('main');
+  const main = doc.querySelector("main");
   await loadSections(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  loadHeader(doc.querySelector("header"));
+  loadFooter(doc.querySelector("footer"));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
@@ -134,7 +138,7 @@ async function loadLazy(doc) {
  */
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+  window.setTimeout(() => import("./delayed.js"), 3000);
   // load anything that can be postponed to the latest here
 }
 
@@ -143,12 +147,12 @@ function appendNextElements(container, nextElement) {
 }
 export default function decorateWrapper(main) {
   // debugger;
-  main.querySelectorAll('.wrapperleft').forEach((block) => {
+  main.querySelectorAll(".wrapperleft").forEach((block) => {
     // wrapper.classList.remove('wrapper');
-    console.log('Decorating wrapper', block);
+    console.log("Decorating wrapper", block);
     const blockWrapper = block;
     let nextElement = blockWrapper.nextElementSibling;
-    while (nextElement && (!nextElement.classList.contains('wrapperleft'))) {
+    while (nextElement && !nextElement.classList.contains("wrapperleft")) {
       appendNextElements(block, nextElement);
       nextElement = blockWrapper.nextElementSibling;
     }
@@ -158,36 +162,40 @@ export default function decorateWrapper(main) {
 
 document.addEventListener("DOMContentLoaded", () => {
   let scrollBar = document.querySelector('[data-id="scroll-progress-bar"]');
-  window.addEventListener('scroll', () => {
-    
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  window.addEventListener("scroll", () => {
+    const scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
     const scrollPercent = (scrollTop / scrollHeight) * 100;
-    scrollBar.style.width = scrollPercent + '%';
+    scrollBar.style.width = scrollPercent + "%";
   });
 
   const scrollMap = {
-    "overview": "overview",
-    "mastertheStockMarketEasySteps": "mastertheStockMarketEasySteps",
-    "openaDematandTradingAccount": "openaDematandTradingAccount"
+    overview: "overview",
+    mastertheStockMarketEasySteps: "mastertheStockMarketEasySteps",
+    openaDematandTradingAccount: "openaDematandTradingAccount",
   };
 
-  document.querySelectorAll('.section[data-id="tableofcontent"] li a').forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = scrollMap[link.getAttribute("href")];
-      const target = document.querySelector(`.section[data-id="${targetId}"]`);
-      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+  document
+    .querySelectorAll('.section[data-id="tableofcontent"] li a')
+    .forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = scrollMap[link.getAttribute("href")];
+        const target = document.querySelector(
+          `.section[data-id="${targetId}"]`
+        );
+        target?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
     });
-  });
 });
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  decorateWrapper(document.querySelector("main"))
-
+  decorateWrapper(document.querySelector("main"));
 }
 
 loadPage();
-

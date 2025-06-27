@@ -450,8 +450,12 @@ main .section.highlight {
   background-color: #004785;
   z-index: 9999;
   transition: width 0.25s ease-out;
+  position: sticky;
 }
-
+.footer-wrapper{
+  position: relative;
+    z-index: 1;
+}
 @media screen and (max-width: 768px) {
    .wrapperright >.section {
     max-width: 100%;
@@ -497,5 +501,6 @@ main .section.highlight {
 
   [data-id="tableofcontent"] .default-content-wrapper {
     position: unset;
+    width: auto;
   }
 }
