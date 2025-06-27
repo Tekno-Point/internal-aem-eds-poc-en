@@ -28,7 +28,8 @@
       "banner-text",
       "blogs-carousel",
       "customer-carousel",
-      "tabs"
+      "tabs",
+      "fragment-tab-blogs"
     ]
   },
   {
@@ -94,6 +95,12 @@
     "id": "tabs",
     "components": [
       "tab-blogs-item"
+    ]
+  },
+  {
+    "id": "fragment-tab-blogs",
+    "components": [
+      "fragment-tab-blogs-item"
     ]
   }
 ]
