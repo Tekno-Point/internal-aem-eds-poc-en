@@ -37,6 +37,7 @@ export default function decorate(block) {
     let applyBtn = block.children[0].children[0].querySelector(".button-container a");
     block.children[0].children[0].querySelector(".button-container").remove();
     const heading = block.children[0].children[0];
+    heading.classList.add("heading")
     block.innerHTML =
         `
         <div id="getFundwrap">

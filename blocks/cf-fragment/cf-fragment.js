@@ -77,6 +77,7 @@ export default async function decorate(block) {
         "loanTenureMax": "84",
         "button": null
     }
+
     const {
         title = '',
         heading = '',
@@ -164,9 +165,11 @@ export default async function decorate(block) {
 
                     <div class="control-group interest-rate">
                         <label for="interestRateRange">${interestRateText}</label>
+                        <div class="value-txt-wrapper">
                         <div class="input-display-wrapper">
                             <input type="text" id="interestRateDisplay" class="value-display" value="${currentInterestRate}">
                             <span class="percentage-symbol">%</span>
+                        </div>
                         </div>
                         <input type="range" id="interestRateRange" min="${parsedInterestRateMin}" max="${parsedInterestRateMax}" step="0.01" value="${currentInterestRate}">
                         <div class="range-labels">

@@ -17,144 +17,637 @@
     }
 }
 
-.getFundwrapper{position: relative;overflow: hidden;}
-.getFundwrapper{background: radial-gradient(57.07% 50.06% at 69.1% 100%, rgba(106, 188, 255, 0.6) 0%, rgba(233, 242, 255, 0.6) 100%);}
-.mask-1{width: 100%;height: 100%;position: absolute;right: 0;top: 0;background-color: transparent;transition: width 1s ease;} 
-.mask.close{width: 0%;}
-.mask-button{position: absolute;top: 10px;left: 10px;z-index: 1;}
-.circle{border: 1px solid #6b94a6;border-radius: 50%;position: absolute;z-index: 1;}
-.cntnr{width: 100%;min-height: 938px;height: auto;background: transparent;overflow: hidden;position: absolute;bottom: 0;}
-.cntnr  .button-container {position: absolute;z-index: 1;opacity: 0;transition: top 1s ease, opacity 1s ease;}
-.cntnr  .button-container  .button{background: linear-gradient(145.27deg, #dff1ef 12.3%, #1f4c9c 87.21%);color: #fff;display: flex;justify-content: center;align-items: center;border-radius: 50%;}
-.getFundwrapper .leftBox .cntnr  .button-container  h2 span{display: inline-block}
-.btc-1,.btc-2,.btc-3{transition: all 0.3s;}
-.rightBox{background: url('/images/rightBGfund.jpg');background-size: cover;background-position: 50%;background-repeat: no-repeat;width: 100%;height: 938px}
-.getFundwrapper .rightBox .btnBox .btn{width: auto!important;}
-#getFundwrap .animation-area{position: absolute;left: 50%;display: block;overflow: hidden;z-index: 1;border: 1px solid rgb(0 0 0 / 0.9);box-shadow: 0px 0px 16px rgb(0 0 0 / 0.9);background: linear-gradient(to bottom,  #e9f2ff 0%,#c1e1fe 100%);}
-.main-gl-img{position: absolute;opacity: 0;transition: all 1s ease-out;}
-.getFundwrapper .rightBox .main-gl-img{width: 100% !important;height: 100%;left: 0;top: 0!important;}
-@media screen and (min-width: 320px) and (max-width: 991px){
-.circle{display: none}
-.cntnr{position: static;height: auto;min-height: auto;display: flex;flex-direction: column;align-items: center;}
-.getFundwrapper .leftBox{min-height: auto;padding-bottom: 48px!important;display: flex;flex-direction: column;align-items: center;}
-.cntnr  .button-container {position: static;width: 260px;height: auto;display: flex;margin: 24px 0}
-.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 18px !important;}
-.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 12px !important;}
-.cntnr  .button-container  .button{width: 48px;height: 48px;font-size: 24px;min-width: 48px;margin-right: 8px;}
-.rightBox{background: url('/images/rightBGfund.jpg');background-size: cover;background-position: 50% 0px;background-repeat: no-repeat;width: 100%;height: 736px;margin-top: -40px;}
-#getFundwrap .animation-area{width: 264px;height: 566px;border-radius: 24px;top: 10px;margin-left: -132px}
-.getFundwrapper .rightBox .btnBox{bottom: 36px;}
-.getFundwrapper .rightBox .btnBox .btn{width: 276px!important;}
+.getFundwrapper {
+    position: relative;
+    overflow: hidden;
 }
-@media (min-width: 320px) and (max-width: 576px){
-#getFundwrap .animation-area{width: 266px;height: 566px;margin-left: -133px;}
-.getFundwrapper .rightBox .btnBox .btn{width: 220px!important;}
-}
-@media (min-width: 577px) and (max-width: 767px){
-#getFundwrap .animation-area{width: 280px;height: 610px;margin-left: -140px;}
-.getFundwrapper .rightBox .btnBox{bottom:32px!important}
-}
-@media (min-width: 768px) and (max-width: 991px){
-#getFundwrap .animation-area{width: 284px;height: 612px;margin-left: -142px;}
-.getFundwrapper .rightBox .btnBox{bottom:32px!important}
-}
-@media screen and (min-width: 992px) and (max-width: 1440px){
-.circle{width: 150%;height: 300%;top: 22%;left: -11%;}
-.cntnr  .button-container {width: 240px;}
-.cntnr  .button-container  .button{width: 79px;height: 79px;font-size: 40px;}
-.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 18px !important;margin-top: 8px}
-.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 14px !important;margin-top: 8px;}
-.btc-1{left: 64px;top: 122px;} 
-.btc-2{left: 246px;top: 273px;} 
-.btc-3{left: 464px;top: 388px;} 
-.rightBox{height: 745px;}
-}
-@media (min-width: 992px) and (max-width: 1024px){
-.circle{width: 154%;left: -10%;}
-.cntnr{min-height: 875px;}
-.getFundwrapper h2{font-size: 32px !important;}
-.getFundwrapper h2 div{font-size: 24px !important;}
-.cntnr  .button-container {width: 192px;}
-.btc-2{left: 182px;top: 273px;} 
-.btc-3{left: 310px;top: 388px;} 
-.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 18px !important;margin-top: 8px}
-.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 12px !important;margin-top: 8px;}
-#getFundwrap .animation-area{width: 224px;height: 482px;margin-left: -112px;top: 108px;border-radius: 16px;}
-.getFundwrapper .rightBox .btnBox .btn{width: 210px!important;}
-}
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
-.circle {width: 2780px;height: 3300px;top: 80px;left: -428px;}
-.getFundwrapper .leftBox{padding: 70px 30px 0 80px!important;}
-.cntnr{min-height: 875px;}
-.cntnr  .button-container {width: 240px;}
-.cntnr  .button-container  .button{width: 79px;height: 79px;font-size: 40px;}
-.btc-1{left: 8px;top: 684px !important;}
-.btc-2{left: 200px !important;top: 544px !important;}
-.btc-3{left: 410px !important;top: 440px !important;}
-.rightBox{height: 560px}
-#getFundwrap .animation-area{width: 200px !important;height: 428px !important;top: 44px !important;margin-left: -100px;border-radius: 16px;}
-.getFundwrapper .rightBox .btnBox{bottom: 34px!important;}
-.getFundwrapper .rightBox .btnBox .btn{width: 182px!important;font-size: 12px;}
-}
-@media screen and (min-width: 1281px) and (max-width: 1366px) {
-.circle{top: 23%;}
-#getFundwrap .animation-area{width: 228px !important;height: 490px !important;top: 102px !important;margin-left: -114px;border-radius: 24px;}
-.getFundwrapper .rightBox .btnBox .btn{width: 210px!important;}
-}
-@media screen and (min-width: 1367px) and (max-width: 1440px) {
-.circle{top: 19%;}
-#getFundwrap .animation-area{width: 224px;height: 480px;border-radius: 16px;top: 108px;margin-left: -112px;}
-}
-@media screen and (min-width: 1441px) and (max-width: 1600px) {
-.circle {width: 2900px;height: 3300px;top: 142px;left: -331px;}
-.getFundwrapper .leftBox{padding: 70px 30px 0 80px!important;}
-.cntnr  .button-container {width: 240px;}
-.rightBox{height: 745px}
-#getFundwrap .animation-area {width: 234px !important;height: 508px !important;top: 92px !important;border-radius: 20px;margin-left: -117px;}
-.cntnr  .button-container  .button{width: 79px;height: 79px;font-size: 40px;}
-.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 18px !important;margin-top: 8px}
-.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 14px !important;margin-top: 8px;}
-.btc-1{left: 64px;top: 684px !important;}
-.btc-2{left: 290px !important;top: 510px !important;}
-.btc-3{left: 532px !important;top: 382px !important;}
-.getFundwrapper .rightBox .btnBox{bottom: 48px;}
-.getFundwrapper .rightBox .btnBox .btn{width: 218px!important;}
-}
-@media screen and (min-width: 1601px) and (max-width: 1920px){
-.cntnr{min-height: 875px;}
-.rightBox{height: 875px}
-.circle{width: 3355px;height: 3355px;top: 180px;left: -331px;}
-.cntnr  .button-container {width: 324px;}
-.cntnr  .button-container  .button{width: 116px;height: 116px;font-size: 40px;}
-.getFundwrapper .leftBox .cntnr  .button-container  h2{margin-top: 24px;font-size: 32px !important;} 
-.getFundwrapper .leftBox .cntnr  .button-container  h2 span{margin-top: 16px;font-size: 20px !important;} 
-.btc-1{left: 64px;top: 570px;}
-.btc-2{left: 337px;top: 351px;}
-.btc-3{left: 660px;top: 188px;}
-#getFundwrap .animation-area{width: 296px;height: 636px;border-radius: 24px;top: 88px;margin-left: -147px;}        
-.getFundwrapper .rightBox .btnBox .btn{width: 276px!important;}
-}
-@media screen and (min-width: 1601px) and (max-width: 1800px){
-.cntnr  .button-container {width: 286px;}
-.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 28px !important;}
-.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 18px !important;}
-#getFundwrap .animation-area{width: 278px;height: 594px;top: 110px;margin-left: -139px;}
-.getFundwrapper .rightBox .btnBox .btn{width: 256px!important;}
-}
-@media screen and (min-width: 1921px) and (max-width: 2560px){
-.rightBox{height: 1320px}
-.circle{width: 4800px;height: 4000px;top: 408px;left: -480px;}
-.cntnr  .button-container {width: 324px;}
-.cntnr  .button-container  .button{width: 116px;height: 116px;font-size: 40px;}
-.getFundwrapper .leftBox .cntnr  .button-container  h2{margin-top: 24px;font-size: 32px !important;} 
-.getFundwrapper .leftBox .cntnr  .button-container  h2 span{margin-top: 16px;font-size: 20px !important;} 
-.btc-1{left: 64px;top: 570px;}
-.btc-2{left: 337px;top: 351px;}
-.btc-3{left: 660px;top: 188px;}
-#getFundwrap .animation-area{width: 400px;height: 856px;border-radius: 40px;top: 188px;margin-left: -198px;}
-}  
 
-.cntnr .button-container{
+.getFundwrapper {
+    background: radial-gradient(57.07% 50.06% at 69.1% 100%, rgba(106, 188, 255, 0.6) 0%, rgba(233, 242, 255, 0.6) 100%);
+}
+
+.mask-1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    transition: width 1s ease;
+}
+
+.mask.close {
+    width: 0%;
+}
+
+.mask-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.circle {
+    border: 1px solid #6b94a6;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.cntnr {
+    width: 100%;
+    min-height: 938px;
+    height: auto;
+    background: transparent;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+}
+
+.cntnr .button-container {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: top 1s ease, opacity 1s ease;
+}
+
+.cntnr .button-container .button {
+    background: linear-gradient(145.27deg, #dff1ef 12.3%, #1f4c9c 87.21%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.getFundwrapper .leftBox .cntnr .button-container h2 span {
+    display: inline-block
+}
+
+.btc-1,
+.btc-2,
+.btc-3 {
+    transition: all 0.3s;
+}
+
+.rightBox {
+    background: url('/images/rightBGfund.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 938px
+}
+
+.getFundwrapper .rightBox .btnBox .btn {
+    width: auto !important;
+}
+
+#getFundwrap .animation-area {
+    position: absolute;
+    left: 50%;
+    display: block;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgb(0 0 0 / 0.9);
+    box-shadow: 0px 0px 16px rgb(0 0 0 / 0.9);
+    background: linear-gradient(to bottom, #e9f2ff 0%, #c1e1fe 100%);
+}
+
+.main-gl-img {
+    position: absolute;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.getFundwrapper .rightBox .main-gl-img {
+    width: 100% !important;
+    height: 100%;
+    left: 0;
+    top: 0 !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 991px) {
+    .circle {
+        display: none
+    }
+
+    .cntnr {
+        position: static;
+        height: auto;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .getFundwrapper .leftBox {
+        min-height: auto;
+        padding-bottom: 48px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cntnr .button-container {
+        position: static;
+        width: 260px;
+        height: auto;
+        display: flex;
+        margin: 24px 0
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 {
+        font-size: 18px !important;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 span {
+        font-size: 12px !important;
+    }
+
+    .cntnr .button-container .button {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        min-width: 48px;
+        margin-right: 8px;
+    }
+
+    .rightBox {
+        background: url('/images/rightBGfund.jpg');
+        background-size: cover;
+        background-position: 50% 0px;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 736px;
+        margin-top: -40px;
+    }
+
+    #getFundwrap .animation-area {
+        width: 264px;
+        height: 566px;
+        border-radius: 24px;
+        top: 10px;
+        margin-left: -132px
+    }
+
+    .getFundwrapper .rightBox .btnBox {
+        bottom: 36px;
+    }
+
+    .getFundwrapper .rightBox .btnBox .btn {
+        width: 276px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    #getFundwrap .animation-area {
+        width: 266px;
+        height: 566px;
+        margin-left: -133px;
+    }
+
+    .getFundwrapper .rightBox .btnBox .btn {
+        width: 220px !important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+    #getFundwrap .animation-area {
+        width: 280px;
+        height: 610px;
+        margin-left: -140px;
+    }
+
+    .getFundwrapper .rightBox .btnBox {
+        bottom: 32px !important
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #getFundwrap .animation-area {
+        width: 284px;
+        height: 612px;
+        margin-left: -142px;
+    }
+
+    .getFundwrapper .rightBox .btnBox {
+        bottom: 32px !important
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+    .circle {
+        width: 150%;
+        height: 300%;
+        top: 22%;
+        left: -11%;
+    }
+
+    .cntnr .button-container {
+        width: 240px;
+    }
+
+    .cntnr .button-container .button {
+        width: 79px;
+        height: 79px;
+        font-size: 40px;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 {
+        font-size: 18px !important;
+        margin-top: 8px
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 span {
+        font-size: 14px !important;
+        margin-top: 8px;
+    }
+
+    .btc-1 {
+        left: 64px;
+        top: 122px;
+    }
+
+    .btc-2 {
+        left: 246px;
+        top: 273px;
+    }
+
+    .btc-3 {
+        left: 464px;
+        top: 388px;
+    }
+
+    .rightBox {
+        height: 745px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .circle {
+        width: 154%;
+        left: -10%;
+    }
+
+    .cntnr {
+        min-height: 875px;
+    }
+
+    .getFundwrapper h2 {
+        font-size: 32px !important;
+    }
+
+    .getFundwrapper h2 div {
+        font-size: 24px !important;
+    }
+
+    .cntnr .button-container {
+        width: 192px;
+    }
+
+    .btc-2 {
+        left: 182px;
+        top: 273px;
+    }
+
+    .btc-3 {
+        left: 310px;
+        top: 388px;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 {
+        font-size: 18px !important;
+        margin-top: 8px
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 span {
+        font-size: 12px !important;
+        margin-top: 8px;
+    }
+
+    #getFundwrap .animation-area {
+        width: 224px;
+        height: 482px;
+        margin-left: -112px;
+        top: 108px;
+        border-radius: 16px;
+    }
+
+    .getFundwrapper .rightBox .btnBox .btn {
+        width: 210px !important;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .circle {
+        width: 2780px;
+        height: 3300px;
+        top: 80px;
+        left: -428px;
+    }
+
+    .getFundwrapper .leftBox {
+        padding: 70px 30px 0 80px !important;
+    }
+
+    .cntnr {
+        min-height: 875px;
+    }
+
+    .cntnr .button-container {
+        width: 240px;
+    }
+
+    .cntnr .button-container .button {
+        width: 79px;
+        height: 79px;
+        font-size: 40px;
+    }
+
+    .btc-1 {
+        left: 8px;
+        top: 684px !important;
+    }
+
+    .btc-2 {
+        left: 200px !important;
+        top: 544px !important;
+    }
+
+    .btc-3 {
+        left: 410px !important;
+        top: 440px !important;
+    }
+
+    .rightBox {
+        height: 560px
+    }
+
+    #getFundwrap .animation-area {
+        width: 200px !important;
+        height: 428px !important;
+        top: 44px !important;
+        margin-left: -100px;
+        border-radius: 16px;
+    }
+
+    .getFundwrapper .rightBox .btnBox {
+        bottom: 34px !important;
+    }
+
+    .getFundwrapper .rightBox .btnBox .btn {
+        width: 182px !important;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1366px) {
+    .circle {
+        top: 23%;
+    }
+
+    #getFundwrap .animation-area {
+        width: 228px !important;
+        height: 490px !important;
+        top: 102px !important;
+        margin-left: -114px;
+        border-radius: 24px;
+    }
+
+    .getFundwrapper .rightBox .btnBox .btn {
+        width: 210px !important;
+    }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1440px) {
+    .circle {
+        top: 19%;
+    }
+
+    #getFundwrap .animation-area {
+        width: 224px;
+        height: 480px;
+        border-radius: 16px;
+        top: 108px;
+        margin-left: -112px;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+    .circle {
+        width: 2900px;
+        height: 3300px;
+        top: 142px;
+        left: -331px;
+    }
+
+    .getFundwrapper .leftBox {
+        padding: 70px 30px 0 80px !important;
+    }
+
+    .cntnr .button-container {
+        width: 240px;
+    }
+
+    .rightBox {
+        height: 745px
+    }
+
+    #getFundwrap .animation-area {
+        width: 234px !important;
+        height: 508px !important;
+        top: 92px !important;
+        border-radius: 20px;
+        margin-left: -117px;
+    }
+
+    .cntnr .button-container .button {
+        width: 79px;
+        height: 79px;
+        font-size: 40px;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 {
+        font-size: 18px !important;
+        margin-top: 8px
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 span {
+        font-size: 14px !important;
+        margin-top: 8px;
+    }
+
+    .btc-1 {
+        left: 64px;
+        top: 684px !important;
+    }
+
+    .btc-2 {
+        left: 290px !important;
+        top: 510px !important;
+    }
+
+    .btc-3 {
+        left: 532px !important;
+        top: 382px !important;
+    }
+
+    .getFundwrapper .rightBox .btnBox {
+        bottom: 48px;
+    }
+
+    .getFundwrapper .rightBox .btnBox .btn {
+        width: 218px !important;
+    }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
+    .cntnr {
+        min-height: 875px;
+    }
+
+    .rightBox {
+        height: 875px
+    }
+
+    .circle {
+        width: 3355px;
+        height: 3355px;
+        top: 180px;
+        left: -331px;
+    }
+
+    .cntnr .button-container {
+        width: 324px;
+    }
+
+    .cntnr .button-container .button {
+        width: 116px;
+        height: 116px;
+        font-size: 40px;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 {
+        margin-top: 24px;
+        font-size: 32px !important;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 span {
+        margin-top: 16px;
+        font-size: 20px !important;
+    }
+
+    .btc-1 {
+        left: 64px;
+        top: 570px;
+    }
+
+    .btc-2 {
+        left: 337px;
+        top: 351px;
+    }
+
+    .btc-3 {
+        left: 660px;
+        top: 188px;
+    }
+
+    #getFundwrap .animation-area {
+        width: 296px;
+        height: 636px;
+        border-radius: 24px;
+        top: 88px;
+        margin-left: -147px;
+    }
+
+    .getFundwrapper .rightBox .btnBox .btn {
+        width: 276px !important;
+    }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1800px) {
+    .cntnr .button-container {
+        width: 286px;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 {
+        font-size: 28px !important;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 span {
+        font-size: 18px !important;
+    }
+
+    #getFundwrap .animation-area {
+        width: 278px;
+        height: 594px;
+        top: 110px;
+        margin-left: -139px;
+    }
+
+    .getFundwrapper .rightBox .btnBox .btn {
+        width: 256px !important;
+    }
+}
+
+@media screen and (min-width: 1921px) and (max-width: 2560px) {
+    .rightBox {
+        height: 1320px
+    }
+
+    .circle {
+        width: 4800px;
+        height: 4000px;
+        top: 408px;
+        left: -480px;
+    }
+
+    .cntnr .button-container {
+        width: 324px;
+    }
+
+    .cntnr .button-container .button {
+        width: 116px;
+        height: 116px;
+        font-size: 40px;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 {
+        margin-top: 24px;
+        font-size: 32px !important;
+    }
+
+    .getFundwrapper .leftBox .cntnr .button-container h2 span {
+        margin-top: 16px;
+        font-size: 20px !important;
+    }
+
+    .btc-1 {
+        left: 64px;
+        top: 570px;
+    }
+
+    .btc-2 {
+        left: 337px;
+        top: 351px;
+    }
+
+    .btc-3 {
+        left: 660px;
+        top: 188px;
+    }
+
+    #getFundwrap .animation-area {
+        width: 400px;
+        height: 856px;
+        border-radius: 40px;
+        top: 188px;
+        margin-left: -198px;
+    }
+}
+
+.cntnr .button-container {
     transition: all 1s ease-out;
 }
 
@@ -171,26 +664,105 @@
     top: 0;
 }
 
+
+.getFundwrapper .leftBox>.heading {
+    width: 50%;
+}
+
+
+.getFundwrapper .leftBox>.heading>p {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Montserrat-Regular', sans-serif;
+}
+
+.getFundwrapper .leftBox>.heading>h2 {
+    margin: 0;
+    font-size: 44px;
+    font-weight: 500;
+    font-family: 'Montserrat-Regular', sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat-Regular', sans-serif;
+
+}
+
 /* .op-1{
     opacity: 1;
 } */
 
-main > .section > div.documentation-wrapper{
+main>.section>div.documentation-wrapper {
     padding: unset;
     max-width: 100%;
 }
 
-.position-relative{
+.position-relative {
     position: relative;
 }
 
+.getFundwrapper .rightBox .btnBox {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.getFundwrapper .rightBox .btnBox a {
+    font-size: 14px;
+    background: #034EA2;
+    border-color: #034EA2;
+    ;
+    border-radius: 8px;
+    padding: 15.34px 32px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Montserrat-Regular', sans-serif;
+    padding: 12px 32px;
+    cursor: pointer;
+}
+
+.getFundwrapper .leftBox .cntnr .button-container h2 {
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 500;
+}
 
 @media (max-width:767px) {
-    .getFundwrapper{
+    .getFundwrapper {
         grid-template-columns: 1fr;
     }
 
-    .getFundwrapper .leftBox{
+    .getFundwrapper .leftBox {
         padding: unset;
+    }
+
+    .getFundwrapper .leftBox>.heading {
+        width: 100%;
+        text-align: center;
+        padding-top: 100px;
+
+    }
+
+    .getFundwrapper .leftBox>.heading>p {
+        font-size: 20px;
+    }
+
+    .getFundwrapper .leftBox>.heading>h2 {
+        font-size: 32px;
+    }
+
+    .getFundwrapper .rightBox .btnBox {
+        bottom: 60px;
+    }
+
+    .getFundwrapper .rightBox .btnBox a {
+        font-size: 18px;
+        padding: 15.34px 32px;
     }
 }
