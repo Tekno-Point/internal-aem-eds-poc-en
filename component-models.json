@@ -112,6 +112,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Content2",
+            "value": "content2"
           }
         ]
       }
