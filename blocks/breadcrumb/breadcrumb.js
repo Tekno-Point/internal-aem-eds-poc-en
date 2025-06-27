@@ -15,10 +15,10 @@ export default async function decorate(block) {
   // Example: statically define your breadcrumb items
   // You can make this dynamic if needed
   const crumbs = [
-    { label: 'Home', href: '/' },
-    { label: 'Blog', href: '/blogs/all-blogs' },
-    { label: 'Business Loan', href: '/blogs/business-loan', id: 'prevLink' },
-    { label: 'How to Start a Daycare Business in India: A Step-by-Step Guide', active: true, id: 'curr-link' },
+    { label: 'Home >', href: 'https://pws-hdfcsites-sit.adobecqms.net/?icid=website_organic_breadcrumb:link:home' },
+    { label: 'Blogs >', href: 'https://pws-hdfcsites-sit.adobecqms.net/blogs?icid=website_organic_breadcrumb:link:blogs' },
+    { label: 'Demat Account >', href: 'https://pws-hdfcsites-sit.adobecqms.net/blogs/demat-account?icid=website_organic_breadcrumb:link:demataccount', id: 'prevLink' },
+    { label: 'How to Learn Stock Market', active: true, id: 'curr-link' },
   ];
   crumbs.forEach((crumb, idx) => {
     const li = document.createElement('li');
