@@ -452,27 +452,6 @@ main .section.highlight {
   transition: width 0.25s ease-out;
 }
 
-[data-id="breadcrumsection"] ul{
-   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  color: #666;
-}
-[data-id="breadcrumsection"] li{
-  font-size: 14px;
-  color: #0071c5;
-  text-transform: capitalize;
-}
-[data-id="breadcrumsection"] li::after{
-  content: ">";
-  margin: 0 0.5rem;
-  color: #666;
-}
-
 @media screen and (max-width: 768px) {
    .wrapperright >.section {
     max-width: 100%;
