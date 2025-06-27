@@ -353,7 +353,7 @@
     display: flex;
     align-items: start;
     gap: 30px;
-    padding: 0 64px;
+    padding: 80px 64px;
 }
 
 .section[data-id="awardSection"] .banner-text-wrapper {
@@ -523,7 +523,7 @@
 
 @media screen and (max-width: 768px) {
     .section[data-id="awardSection"] {
-        padding: 0 15px;
+        padding: 50px 15px;
         flex-direction: column;
         gap: unset;
     }
