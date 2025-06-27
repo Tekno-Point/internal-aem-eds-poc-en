@@ -15,8 +15,8 @@ export default function decorate(block) {
 
 
   function handleResolution() {
-    var objConfig = {}
-    if (window.innerWidth < 768) {
+if (window.innerWidth < 768) {    var objConfig = {}
+    
       //Mobile
       if (blockClassList.indexOf("mobile-auto-scroll") != -1) {
         objConfig["loop"] = true
