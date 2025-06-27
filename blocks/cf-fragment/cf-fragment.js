@@ -152,9 +152,11 @@ export default async function decorate(block) {
 
                     <div class="control-group loan-amount">
                         <label for="loanAmountRange">${loanAmountText}</label>
+                        <div class="value-txt-wrapper">
+                        <div class="amount-words"></div>
                         <div class="input-display-wrapper">
-                            <span class="currency-symbol">₹</span>
-                            <input type="text" id="loanAmountDisplay" class="value-display" value="${Number(currentLoanAmount).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}">
+                            <input type="text" id="loanAmountDisplay" class="value-display" value="₹ ${Number(currentLoanAmount).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}">
+                        </div>
                         </div>
                         <input type="range" id="loanAmountRange" min="${parsedLoanAmountMin}" max="${parsedLoanAmountMax}" value="${currentLoanAmount}">
                         <div class="range-labels">
@@ -164,13 +166,12 @@ export default async function decorate(block) {
                     </div>
 
                     <div class="control-group interest-rate">
+                    <div class="value-txt-wrapper">
                         <label for="interestRateRange">${interestRateText}</label>
-                        <div class="value-txt-wrapper">
                         <div class="input-display-wrapper">
-                            <input type="text" id="interestRateDisplay" class="value-display" value="${currentInterestRate}">
-                            <span class="percentage-symbol">%</span>
+                            <input type="text" id="interestRateDisplay" class="value-display" value="${currentInterestRate} %">
                         </div>
-                        </div>
+                    </div>
                         <input type="range" id="interestRateRange" min="${parsedInterestRateMin}" max="${parsedInterestRateMax}" step="0.01" value="${currentInterestRate}">
                         <div class="range-labels">
                             <span>${parsedInterestRateMin}%</span>
@@ -179,11 +180,12 @@ export default async function decorate(block) {
                     </div>
 
                     <div class="control-group loan-tenure">
+                    <div class="value-txt-wrapper">
                         <label for="loanTenureRange">LOAN TENURE</label>
                         <div class="input-display-wrapper">
-                            <input type="text" id="loanTenureDisplay" class="value-display" value="${currentLoanTenure}">
-                            <span class="unit-label">Months</span>
+                            <input type="text" id="loanTenureDisplay" class="value-display" value="${currentLoanTenure} Months">
                         </div>
+                    </div>
                         <input type="range" id="loanTenureRange" min="${parsedLoanTenureMin}" max="${parsedLoanTenureMax}" value="${currentLoanTenure}">
                         <div class="range-labels">
                             <span>${parsedLoanTenureMin} Months</span>
@@ -229,15 +231,15 @@ export default async function decorate(block) {
     };
 
     loanAmountRange.addEventListener('input', () => {
-        loanAmountDisplay.value = Number(parseFloat(loanAmountRange.value)).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        loanAmountDisplay.value = "₹ " + Number(parseFloat(loanAmountRange.value)).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
         updateCalculator();
     });
     interestRateRange.addEventListener('input', () => {
-        interestRateDisplay.value = parseFloat(interestRateRange.value);
+        interestRateDisplay.value = parseFloat(interestRateRange.value) + " %";
         updateCalculator();
     });
     loanTenureRange.addEventListener('input', () => {
-        loanTenureDisplay.value = parseFloat(loanTenureRange.value);
+        loanTenureDisplay.value = parseFloat(loanTenureRange.value) + " Months";
         updateCalculator();
     });
 
@@ -246,7 +248,7 @@ export default async function decorate(block) {
         if (isNaN(val) || val < parseFloat(loanAmountRange.min)) val = parseFloat(loanAmountRange.min);
         if (val > parseFloat(loanAmountRange.max)) val = parseFloat(loanAmountRange.max);
         loanAmountRange.value = val;
-        loanAmountDisplay.value = Number(val).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        loanAmountDisplay.value = "₹ " + Number(val).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
         updateCalculator();
     });
 
