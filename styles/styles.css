@@ -283,3 +283,17 @@ main .section.highlight {
   top: 7px;
   left: 0;
 }
+
+/* my css */
+.content2 > div.default-content-wrapper > p:nth-child(2){
+    display: none;
+  }
+
+@media screen and (max-width: 768px) {
+  .content2 > div.default-content-wrapper > p:nth-child(1){
+    display: none;
+  }
+  .content2 > div.default-content-wrapper > p:nth-child(2){
+    display: block;
+  }
+}
