@@ -482,15 +482,16 @@ main .section.highlight {
 
 [data-id="scroll-progress-bar"] {
   position: sticky;
-  top: 144px;
-  left: 0;
+  top: 116px;
+  left: 115px;
   right: 28px;
   width: 0%;
   height: 5px;
   background-color: #004785;
-  z-index: 9999;
+  z-index:1;
   transition: width 0.25s ease-out;
   position: sticky;
+  border-radius: 10px;
 }
 .footer-wrapper{
   position: relative;
