@@ -114,8 +114,8 @@
             "value": "highlight"
           },
           {
-            "name": "footer",
-            "value": "footer"
+            "name": "footers",
+            "value": "footers"
           },
           {
             "name": "footer-sec1",

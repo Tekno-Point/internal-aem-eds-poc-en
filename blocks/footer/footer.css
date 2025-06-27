@@ -38,15 +38,16 @@ footer .footer p {
     color: white;
     margin: 0px 0px;
 }
-.footer > div > ul {
+
+.footers > div > ul {
     list-style: none;
 }
 /*changes for mobile*/
-.footer > div > ul > .accordion-item > ul {
+.footers > div > ul > .accordion-item > ul {
     padding: 0px;
     list-style: none;
 }
-.footer > div > ul > .accordion-item > ul > li {
+.footers > div > ul > .accordion-item > ul > li {
     padding: 0px;
     list-style: none;
     font-family: "OpenSans-Regular";
@@ -68,14 +69,14 @@ footer .footer p {
     border-bottom: 1px solid white;
     padding-bottom: 10px;
 }
-.footer > div > ul > .accordion-item > ul > li > a {
+.footers > div > ul > .accordion-item > ul > li > a {
     color: #f9fafb;
 }
 
-.footer.default-content-wrapper {
+.footers.default-content-wrapper {
     max-width: 100%;
 }
-.footer {
+.footers {
     padding: 10px 0px;
 }
 .footer-sec1 > .default-content-wrapper {
