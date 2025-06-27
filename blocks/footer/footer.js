@@ -1,6 +1,7 @@
 import { getMetadata } from "../../scripts/aem.js";
 import { loadFragment } from "../fragment/fragment.js";
 import accordionBlock from "../accordion/accordion.js";
+import {select , option , div , p ,a,input} from "../../scripts/dom-helpers.js";
 
 /**
  * loads and decorates the footer
@@ -106,4 +107,14 @@ export default async function decorate(block) {
     }
     console.log("out")
 })
+
+// dom 
+const optionPart = ({
+  div({class:"maindiv" },
+    div({class : "option1"})
+  )
+
+})
+
+
 }
