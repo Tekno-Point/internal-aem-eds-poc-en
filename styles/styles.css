@@ -314,12 +314,15 @@ main .section.highlight {
   display: block !important;
 }
 /* === 2. PAGE-LEVEL GRID (article + sidebar) ===================== */
+.section.wrapperright {
+  margin: 0;
+}
 .wrapperright {
   display: grid;
   grid-template-columns: 1fr 500px;
   gap: 5px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  margin: 0;
+  padding: 0 20px;
    font-size: 16px;
     h2{
       font-size: 1rem;
@@ -544,4 +547,19 @@ main .section.highlight {
     position: unset;
     width: auto;
   }
+}
+
+.overlay {
+  background: rgba(0, 0, 0, .5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all .5s ease-in-out;
+  width: 100%;
+  z-index: 4;
+}
+
+header nav {
+  height: var(--nav-height);
 }
