@@ -22,18 +22,18 @@ function closeOnEscape(e) {
 }
 
 function closeOnFocusLost(e) {
-  const nav = e.currentTarget;
-  if (!nav.contains(e.relatedTarget)) {
-    const navSections = nav.querySelector('.nav-sections');
-    const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
-    if (navSectionExpanded && isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
-      toggleAllNavSections(navSections, false);
-    } else if (!isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
-      toggleMenu(nav, navSections, false);
-    }
-  }
+  // const nav = e.currentTarget;
+  // if (!nav.contains(e.relatedTarget)) {
+  //   const navSections = nav.querySelector('.nav-sections');
+  //   const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
+  //   if (navSectionExpanded && isDesktop.matches) {
+  //     // eslint-disable-next-line no-use-before-define
+  //     toggleAllNavSections(navSections, false);
+  //   } else if (!isDesktop.matches) {
+  //     // eslint-disable-next-line no-use-before-define
+  //     toggleMenu(nav, navSections, false);
+  //   }
+  // }
 }
 
 function openOnKeydown(e) {
@@ -142,7 +142,7 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
-    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
+    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection, i) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
         if (isDesktop.matches) {
@@ -152,11 +152,17 @@ export default async function decorate(block) {
         }
       });
       if(!isDesktop.matches) {
+        if(i<1){
+          navSection.classList.add('active');
+        }
         navSection.querySelector('p').addEventListener('click', (e)=> {
           navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((li) => {
             li.classList.remove('active');
           })
           e.currentTarget.parentElement.classList.add('active');
+        })
+        navSections.querySelector('.default-content-wrapper > ol > li').addEventListener('click', (e)=> {
+          e.currentTarget.querySelector('ol').classList.toggle('dp-show');
         })
       }
     });
