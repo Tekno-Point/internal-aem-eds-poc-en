@@ -482,8 +482,9 @@ main .section.highlight {
 
 [data-id="scroll-progress-bar"] {
   position: sticky;
-  top: 0;
+  top: 144px;
   left: 0;
+  right: 28px;
   width: 0%;
   height: 5px;
   background-color: #004785;

@@ -4,11 +4,10 @@
     max-width: 1248px;
     padding: 0 24px;
     font-size: var(--body-font-size-xs);
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin: 0;
 }
 .breadcrumbs-container >.breadcrumb-wrapper{
-    margin-top: 30px;
+    padding-top: 60px;
 }
 .breadcrumbs-container .breadcrumbs {
     display: block;
