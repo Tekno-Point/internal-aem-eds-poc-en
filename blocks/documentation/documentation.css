@@ -24,9 +24,9 @@
 .mask-button{position: absolute;top: 10px;left: 10px;z-index: 1;}
 .circle{border: 1px solid #6b94a6;border-radius: 50%;position: absolute;z-index: 1;}
 .cntnr{width: 100%;min-height: 938px;height: auto;background: transparent;overflow: hidden;position: absolute;bottom: 0;}
-.cntnr .button-container{position: absolute;z-index: 1;opacity: 0;transition: top 1s ease, opacity 1s ease;}
-.cntnr .button-container .button{background: linear-gradient(145.27deg, #dff1ef 12.3%, #1f4c9c 87.21%);color: #fff;display: flex;justify-content: center;align-items: center;border-radius: 50%;}
-.getFundwrapper .leftBox .cntnr .button-container h2 span{display: inline-block}
+.cntnr  .button-container {position: absolute;z-index: 1;opacity: 0;transition: top 1s ease, opacity 1s ease;}
+.cntnr  .button-container  .button{background: linear-gradient(145.27deg, #dff1ef 12.3%, #1f4c9c 87.21%);color: #fff;display: flex;justify-content: center;align-items: center;border-radius: 50%;}
+.getFundwrapper .leftBox .cntnr  .button-container  h2 span{display: inline-block}
 .btc-1,.btc-2,.btc-3{transition: all 0.3s;}
 .rightBox{background: url('/images/rightBGfund.jpg');background-size: cover;background-position: 50%;background-repeat: no-repeat;width: 100%;height: 938px}
 .getFundwrapper .rightBox .btnBox .btn{width: auto!important;}
@@ -37,10 +37,10 @@
 .circle{display: none}
 .cntnr{position: static;height: auto;min-height: auto;display: flex;flex-direction: column;align-items: center;}
 .getFundwrapper .leftBox{min-height: auto;padding-bottom: 48px!important;display: flex;flex-direction: column;align-items: center;}
-.cntnr .button-container{position: static;width: 260px;height: auto;display: flex;margin: 24px 0}
-.getFundwrapper .leftBox .cntnr .button-container h2{font-size: 18px !important;}
-.getFundwrapper .leftBox .cntnr .button-container h2 span{font-size: 12px !important;}
-.cntnr .button-container .button{width: 48px;height: 48px;font-size: 24px;min-width: 48px;margin-right: 8px;}
+.cntnr  .button-container {position: static;width: 260px;height: auto;display: flex;margin: 24px 0}
+.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 18px !important;}
+.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 12px !important;}
+.cntnr  .button-container  .button{width: 48px;height: 48px;font-size: 24px;min-width: 48px;margin-right: 8px;}
 .rightBox{background: url('/images/rightBGfund.jpg');background-size: cover;background-position: 50% 0px;background-repeat: no-repeat;width: 100%;height: 736px;margin-top: -40px;}
 #getFundwrap .animation-area{width: 264px;height: 566px;border-radius: 24px;top: 10px;margin-left: -132px}
 .getFundwrapper .rightBox .btnBox{bottom: 36px;}
@@ -60,10 +60,10 @@
 }
 @media screen and (min-width: 992px) and (max-width: 1440px){
 .circle{width: 150%;height: 300%;top: 22%;left: -11%;}
-.cntnr .button-container{width: 240px;}
-.cntnr .button-container .button{width: 79px;height: 79px;font-size: 40px;}
-.getFundwrapper .leftBox .cntnr .button-container h2{font-size: 18px !important;margin-top: 8px}
-.getFundwrapper .leftBox .cntnr .button-container h2 span{font-size: 14px !important;margin-top: 8px;}
+.cntnr  .button-container {width: 240px;}
+.cntnr  .button-container  .button{width: 79px;height: 79px;font-size: 40px;}
+.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 18px !important;margin-top: 8px}
+.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 14px !important;margin-top: 8px;}
 .btc-1{left: 64px;top: 122px;} 
 .btc-2{left: 246px;top: 273px;} 
 .btc-3{left: 464px;top: 388px;} 
@@ -74,11 +74,11 @@
 .cntnr{min-height: 875px;}
 .getFundwrapper h2{font-size: 32px !important;}
 .getFundwrapper h2 div{font-size: 24px !important;}
-.cntnr .button-container{width: 192px;}
+.cntnr  .button-container {width: 192px;}
 .btc-2{left: 182px;top: 273px;} 
 .btc-3{left: 310px;top: 388px;} 
-.getFundwrapper .leftBox .cntnr .button-container h2{font-size: 18px !important;margin-top: 8px}
-.getFundwrapper .leftBox .cntnr .button-container h2 span{font-size: 12px !important;margin-top: 8px;}
+.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 18px !important;margin-top: 8px}
+.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 12px !important;margin-top: 8px;}
 #getFundwrap .animation-area{width: 224px;height: 482px;margin-left: -112px;top: 108px;border-radius: 16px;}
 .getFundwrapper .rightBox .btnBox .btn{width: 210px!important;}
 }
@@ -86,8 +86,8 @@
 .circle {width: 2780px;height: 3300px;top: 80px;left: -428px;}
 .getFundwrapper .leftBox{padding: 70px 30px 0 80px!important;}
 .cntnr{min-height: 875px;}
-.cntnr .button-container{width: 240px;}
-.cntnr .button-container .button{width: 79px;height: 79px;font-size: 40px;}
+.cntnr  .button-container {width: 240px;}
+.cntnr  .button-container  .button{width: 79px;height: 79px;font-size: 40px;}
 .btc-1{left: 8px;top: 684px !important;}
 .btc-2{left: 200px !important;top: 544px !important;}
 .btc-3{left: 410px !important;top: 440px !important;}
@@ -108,12 +108,12 @@
 @media screen and (min-width: 1441px) and (max-width: 1600px) {
 .circle {width: 2900px;height: 3300px;top: 142px;left: -331px;}
 .getFundwrapper .leftBox{padding: 70px 30px 0 80px!important;}
-.cntnr .button-container{width: 240px;}
+.cntnr  .button-container {width: 240px;}
 .rightBox{height: 745px}
 #getFundwrap .animation-area {width: 234px !important;height: 508px !important;top: 92px !important;border-radius: 20px;margin-left: -117px;}
-.cntnr .button-container .button{width: 79px;height: 79px;font-size: 40px;}
-.getFundwrapper .leftBox .cntnr .button-container h2{font-size: 18px !important;margin-top: 8px}
-.getFundwrapper .leftBox .cntnr .button-container h2 span{font-size: 14px !important;margin-top: 8px;}
+.cntnr  .button-container  .button{width: 79px;height: 79px;font-size: 40px;}
+.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 18px !important;margin-top: 8px}
+.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 14px !important;margin-top: 8px;}
 .btc-1{left: 64px;top: 684px !important;}
 .btc-2{left: 290px !important;top: 510px !important;}
 .btc-3{left: 532px !important;top: 382px !important;}
@@ -124,10 +124,10 @@
 .cntnr{min-height: 875px;}
 .rightBox{height: 875px}
 .circle{width: 3355px;height: 3355px;top: 180px;left: -331px;}
-.cntnr .button-container{width: 324px;}
-.cntnr .button-container .button{width: 116px;height: 116px;font-size: 40px;}
-.getFundwrapper .leftBox .cntnr .button-container h2{margin-top: 24px;font-size: 32px !important;} 
-.getFundwrapper .leftBox .cntnr .button-container h2 span{margin-top: 16px;font-size: 20px !important;} 
+.cntnr  .button-container {width: 324px;}
+.cntnr  .button-container  .button{width: 116px;height: 116px;font-size: 40px;}
+.getFundwrapper .leftBox .cntnr  .button-container  h2{margin-top: 24px;font-size: 32px !important;} 
+.getFundwrapper .leftBox .cntnr  .button-container  h2 span{margin-top: 16px;font-size: 20px !important;} 
 .btc-1{left: 64px;top: 570px;}
 .btc-2{left: 337px;top: 351px;}
 .btc-3{left: 660px;top: 188px;}
@@ -135,19 +135,19 @@
 .getFundwrapper .rightBox .btnBox .btn{width: 276px!important;}
 }
 @media screen and (min-width: 1601px) and (max-width: 1800px){
-.cntnr .button-container{width: 286px;}
-.getFundwrapper .leftBox .cntnr .button-container h2{font-size: 28px !important;}
-.getFundwrapper .leftBox .cntnr .button-container h2 span{font-size: 18px !important;}
+.cntnr  .button-container {width: 286px;}
+.getFundwrapper .leftBox .cntnr  .button-container  h2{font-size: 28px !important;}
+.getFundwrapper .leftBox .cntnr  .button-container  h2 span{font-size: 18px !important;}
 #getFundwrap .animation-area{width: 278px;height: 594px;top: 110px;margin-left: -139px;}
 .getFundwrapper .rightBox .btnBox .btn{width: 256px!important;}
 }
 @media screen and (min-width: 1921px) and (max-width: 2560px){
 .rightBox{height: 1320px}
 .circle{width: 4800px;height: 4000px;top: 408px;left: -480px;}
-.cntnr .button-container{width: 324px;}
-.cntnr .button-container .button{width: 116px;height: 116px;font-size: 40px;}
-.getFundwrapper .leftBox .cntnr .button-container h2{margin-top: 24px;font-size: 32px !important;} 
-.getFundwrapper .leftBox .cntnr .button-container h2 span{margin-top: 16px;font-size: 20px !important;} 
+.cntnr  .button-container {width: 324px;}
+.cntnr  .button-container  .button{width: 116px;height: 116px;font-size: 40px;}
+.getFundwrapper .leftBox .cntnr  .button-container  h2{margin-top: 24px;font-size: 32px !important;} 
+.getFundwrapper .leftBox .cntnr  .button-container  h2 span{margin-top: 16px;font-size: 20px !important;} 
 .btc-1{left: 64px;top: 570px;}
 .btc-2{left: 337px;top: 351px;}
 .btc-3{left: 660px;top: 188px;}
@@ -184,3 +184,13 @@ main > .section > div.documentation-wrapper{
     position: relative;
 }
 
+
+@media (max-width:767px) {
+    .getFundwrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .getFundwrapper .leftBox{
+        padding: unset;
+    }
+}

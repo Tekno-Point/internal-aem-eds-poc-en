@@ -134,6 +134,10 @@
                 "value": "menu-img"
               }
             ]
+          },
+          {
+            "name": "Portlet-Journal",
+            "value": "Portlet-Journal"
           }
         ]
       }
@@ -1695,6 +1699,25 @@
         "name": "reference",
         "variationName": "contentFragmentVariation",
         "label": "CF Reference"
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "head",
+        "value": "",
+        "label": "Head",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Body",
+        "valueType": "string"
       }
     ]
   }

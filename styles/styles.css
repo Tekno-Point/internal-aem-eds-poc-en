@@ -10,23 +10,26 @@
  * governing permissions and limitations under the License.
  */
 
- /* Fonts  */
- @font-face {
-  font-family: 'Montserrat-Bold'; /* Name you want to use in CSS */
+/* Fonts  */
+@font-face {
+  font-family: 'Montserrat-Bold';
+  /* Name you want to use in CSS */
   src: url('/fonts/Montserrat-Bold.ttf') format('woff2');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat-Medium'; /* Name you want to use in CSS */
+  font-family: 'Montserrat-Medium';
+  /* Name you want to use in CSS */
   src: url('/fonts/Montserrat-Medium.ttf') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat-Regular'; /* Name you want to use in CSS */
+  font-family: 'Montserrat-Regular';
+  /* Name you want to use in CSS */
   src: url('/fonts/Montserrat-Regular.ttf') format('woff2');
   font-weight: 500;
   font-style: normal;
@@ -34,14 +37,16 @@
 }
 
 @font-face {
-  font-family: 'Montserrat-SemiBold'; /* Name you want to use in CSS */
+  font-family: 'Montserrat-SemiBold';
+  /* Name you want to use in CSS */
   src: url('/fonts/Montserrat-SemiBold.ttf') format('woff2');
   font-weight: 900;
   font-style: normal;
 }
 
 * {
-  font-family: 'Montserrat-Regular'; /* Name you want to use in CSS */
+  font-family: 'Montserrat-Regular';
+  /* Name you want to use in CSS */
 }
 
 :root {
@@ -87,7 +92,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -146,12 +151,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -176,7 +198,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -262,22 +284,22 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }
@@ -309,15 +331,16 @@ main .section.highlight {
   padding: 0px;
 } */
 
-.table-wrapper{
+.table-wrapper {
   display: grid;
-  grid-template-columns: 392px 1fr; 
+  grid-template-columns: 392px 1fr;
   font-family: "Open Sans", sans-serif;
   background-color: #fff;
   position: relative;
   gap: 0 2%;
   padding: 0 80px;
 }
+
 /* #tableofcontent{
   grid-column: 1;
   grid-row: 1 / span 5;
@@ -340,28 +363,28 @@ grid-column: 2;
 #toConclude{
   grid-column: 2;
   } */
-  .table-wrapper .section[data-id="tableofcontent"] {
-    grid-column: 1;
-    position: sticky;
-    top: 70px;
-    padding: 0 15px;
-    margin-top: 0px;
-    padding: 0;
-  }
-  .table-wrapper .section:not([data-id="tableofcontent"]) {
-    grid-column: 2;
-    padding: 0;
-  }
-  
-* Left sidebar section */
 .table-wrapper .section[data-id="tableofcontent"] {
+  grid-column: 1;
+  position: sticky;
+  top: 70px;
+  padding: 0 15px;
+  margin-top: 0px;
+  padding: 0;
+}
+
+.table-wrapper .section:not([data-id="tableofcontent"]) {
+  grid-column: 2;
+  padding: 0;
+}
+
+* Left sidebar section */ .table-wrapper .section[data-id="tableofcontent"] {
   padding-top: 20px;
   padding-right: 24px;
   border-right: 1px solid #e0e0e0;
 }
 
 /* Title */
-.table-wrapper .section[data-id="tableofcontent"] .default-content-wrapper > p {
+.table-wrapper .section[data-id="tableofcontent"] .default-content-wrapper>p {
   font-size: 24px;
   font-weight: 700;
   color: #1d1d1f;
@@ -415,70 +438,76 @@ grid-column: 2;
   outline: 2px solid #004aad;
   transition: outline 0.3s ease;
 }
+
 /* business css */
 
-.businessloan>.default-content-wrapper{
+.businessloan>.default-content-wrapper {
   padding: 0 80px;
   max-width: 100%;
 }
 
-.businessloan>.default-content-wrapper>p{
-          font-size: 16px;
+.businessloan>.default-content-wrapper>p {
+  font-size: 16px;
 }
-.businessloan>.default-content-wrapper>h1{
-        font-family: "Montserrat-Bold";
+
+.businessloan>.default-content-wrapper>h1 {
+  font-family: "Montserrat-Bold";
   margin: 0px;
-          font-size: 36px;
-        line-height: 1.2;
-        max-width: 828px;
-        width: 100%;
+  font-size: 36px;
+  line-height: 1.2;
+  max-width: 828px;
+  width: 100%;
 
 }
-.businessloan>.default-content-wrapper>ul{
+
+.businessloan>.default-content-wrapper>ul {
   list-style: none;
   padding: 0px;
 }
 
-.businessloan>.default-content-wrapper>ul>li>ul{
+.businessloan>.default-content-wrapper>ul>li>ul {
   list-style: none;
   display: flex;
   gap: 20px;
   align-items: center;
   padding: 0px;
 }
-.businessloan>.default-content-wrapper>ul>li>ul>li>ul{
+
+.businessloan>.default-content-wrapper>ul>li>ul>li>ul {
   list-style: none;
   padding: 0px;
 }
-.businessloan>.default-content-wrapper>ul>li>ul>li>ul>li:nth-child(1){
-      font-family: "Montserrat-SemiBold";
-    line-height: normal;
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-.businessloan>.default-content-wrapper>ul>li>ul>li>ul>li:nth-child(2){
-      font-family:"Montserrat-Regular";
-    line-height: normal;
-    font-size: 13px;
-    margin-bottom: 8px;
-    font-weight: 400px;
+
+.businessloan>.default-content-wrapper>ul>li>ul>li>ul>li:nth-child(1) {
+  font-family: "Montserrat-SemiBold";
+  line-height: normal;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
-.section[data-id="FrequentlyAskedQuestions"]{
+.businessloan>.default-content-wrapper>ul>li>ul>li>ul>li:nth-child(2) {
+  font-family: "Montserrat-Regular";
+  line-height: normal;
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: 400px;
+}
+
+.section[data-id="FrequentlyAskedQuestions"] {
   padding-bottom: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  .table-wrapper{
+  .table-wrapper {
     grid-template-columns: 1fr;
     padding: 0 15px;
   }
 
-  .businessloan>.default-content-wrapper{
+  .businessloan>.default-content-wrapper {
     padding: 0 15px;
   }
 
-  .table-wrapper .section[data-id="tableofcontent"]{
+  .table-wrapper .section[data-id="tableofcontent"] {
     display: none;
   }
 
@@ -486,30 +515,229 @@ grid-column: 2;
     grid-template-columns: 1fr;
   }
 
-   .table-wrapper .section[data-id="tableofcontent"] {
+  .table-wrapper .section[data-id="tableofcontent"] {
     grid-column: unset;
   }
+
   .table-wrapper .section:not([data-id="tableofcontent"]) {
     grid-column: 1;
   }
 
-  .table-wrapper .section[data-id="FrequentlyAskedQuestions"]{
-  padding-bottom: 0;
-}
+  .table-wrapper .section[data-id="FrequentlyAskedQuestions"] {
+    padding-bottom: 0;
+  }
 }
 
 
-.table-wrapper>.section>.default-content-wrapper>h2{
-  font-family:"Montserrat-Medium" ;
+.table-wrapper>.section>.default-content-wrapper>h2 {
+  font-family: "Montserrat-Medium";
   font-size: 44px;
 
 }
 
-.table-wrapper>.section>.default-content-wrapper>p{
+.table-wrapper>.section>.default-content-wrapper>p {
   font-size: 18px;
 }
 
+/* portlet-journal css start */
+.portlet-journal.columns-container {
+  width: 100%;
+}
 
+.portlet-journal .columns-wrapper {
+  max-width: 100%;
+  width: 91.2%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.portlet-journal .column-row {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: unset;
+  align-items: self-start;
+  justify-content: space-between;
+}
+
+.portlet-journal .column-col-1 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+}
+
+.portlet-journal .column-col-2 {
+  flex: 0 0 43%;
+  max-width: 43%;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+.portlet-journal .column-col-2>p:first-child {
+  margin: 10px 0;
+  color: #231f20;
+  font-family: "Montserrat-medium";
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  line-height: 122%;
+  word-wrap: break-word;
+}
+
+.portlet-journal .column-col-2>p:nth-child(2) {
+  margin-bottom: 14px;
+  font-family: "Montserrat-Bold";
+  font-size: 23px;
+  text-align: left;
+  font-weight: 700;
+  margin: 48px 0;
+  margin-bottom: 14px;
+}
+
+.portlet-journal .column-col-2>p:nth-child(3) {
+  font-size: 18px;
+  font-family: "Montserrat-medium";
+  font-weight: 500;
+  line-height: 27px;
+  margin-bottom: 32px;
+}
+
+.portlet-journal .column-col-2>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  margin-bottom: 34px;
+  max-width: 540px;
+}
+
+.portlet-journal .column-col-2>ul>li {
+  display: flex;
+  flex-direction: column;
+  font-size: 52px;
+  font-family: "Montserrat-Medium";
+  font-weight: 500;
+  line-height: normal;
+}
+
+.portlet-journal .column-col-2>ul>li ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portlet-journal .column-col-2>ul>li ul li {
+  font-size: 20px;
+  font-family: "Montserrat-medium";
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 4px;
+}
+
+.portlet-journal .column-col-2 .button-container {
+  width: 250px;
+  text-align: center;
+}
+
+.portlet-journal .column-col-2 .button-container .button {
+  display: block;
+  min-width: 250px;
+  margin-top: 20px;
+  background: #034EA2;
+  border-color: #034EA2;
+  border-radius: 8px;
+  padding: 8px 32px;
+  text-transform: uppercase;
+  font-family: "Montserrat-SemiBold";
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.portlet-journal .column-col-1 img {
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 600px;
+  width: 585px;
+}
+
+@media screen and (max-width: 900px) {
+  .portlet-journal .column-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .portlet-journal .column-col-1 {
+    flex: unset;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .portlet-journal .column-col-2 {
+    flex: unset;
+    max-width: 100%;
+    padding: 0;
+    width: 96%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .portlet-journal .column-col-2>ul>li {
+    font-size: 28px;
+  }
+
+  .portlet-journal .column-col-2>p:first-child {
+    font-size: 20px;
+    font-family: "Montserrat-regular";
+    font-weight: 400;
+  }
+
+  .portlet-journal .column-col-2 .button-container {
+    width: 100%;
+  }
+
+  .portlet-journal .column-col-2 .button-container .button {
+    min-width: inherit;
+    font-size: 18px;
+  }
+
+  .portlet-journal .column-col-2>ul>li ul li {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .portlet-journal .column-col-2>p:nth-child(2) {
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  .portlet-journal .column-col-2>p:nth-child(3) {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  .portlet-journal .columns-wrapper {
+    padding: 10px 0;
+  }
+}
+
+
+/* portlet-journal css End */
 @media (width >= 900px) {
     main > .section > div {
         padding: unset;

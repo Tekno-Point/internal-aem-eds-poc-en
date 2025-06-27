@@ -21,6 +21,7 @@
       "poona-fincorp-blogs",
       "poonawallaFincorpTeam",
       "footer",
+      "accordion",
       "tabproduct",
       "documentation",
       "cf-fragment",
@@ -84,5 +85,9 @@
     "components": [
       "customer-carousel-item"
     ]
+  },
+  {
+    "id": "accordion",
+    "components": [ "accordion-item"]
   }
 ]
