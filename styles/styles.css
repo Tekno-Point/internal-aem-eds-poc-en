@@ -257,19 +257,21 @@ main .section.highlight {
 }
 
 
+/* My CSS - RU */
 /* List icon */
-.custom-richtext li{
+
+.content1 .custom-richtext li{
   display: block;
   /* gap: 10px;
   align-items: start; */
   padding-left: 34px;
   position: relative;
 }
-.custom-richtext li strong{
+.content1 .custom-richtext li strong{
   color: #0073BB;
 }
 
-.custom-richtext li::before{
+.content1 .custom-richtext li::before{
   content: '';
   /* background: url('../icons/tick.svg'); */
   background: url('../icons/tick2.svg');
@@ -284,7 +286,7 @@ main .section.highlight {
   left: 0;
 }
 
-/* my css */
+
 .content2 > div.default-content-wrapper > p:nth-child(2){
     display: none;
   }
@@ -296,7 +298,7 @@ main .section.highlight {
   gap: 5px;
 }
 
-.custom-richtextblock > div {
+.content3 .custom-richtextblock > div {
   background-color: #F2F7FB;
     padding: 20px 40px 20px 40px;
     height: 100%;
@@ -310,7 +312,7 @@ main .section.highlight {
   .content2 > div.default-content-wrapper > p:nth-child(2){
     display: block;
   }
-  .custom-richtextblock > div {
+  .content3 .custom-richtextblock > div {
     max-width: 100%;
   }
 
