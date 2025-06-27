@@ -141,7 +141,6 @@ export default async function decorate(block) {
   }
 
   const navSections = nav.querySelector('.nav-sections');
-  console.log(navSections)
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
@@ -152,6 +151,14 @@ export default async function decorate(block) {
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         }
       });
+      if(!isDesktop.matches) {
+        navSection.querySelector('p').addEventListener('click', (e)=> {
+          navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((li) => {
+            li.classList.remove('active');
+          })
+          e.currentTarget.parentElement.classList.add('active');
+        })
+      }
     });
   }
 
@@ -168,6 +175,16 @@ export default async function decorate(block) {
       })
     })
   }
+
+  const navTools = nav.querySelector('.nav-tools');
+  if(isDesktop.matches){
+    navTools.querySelector('.nav-tools .default-content-wrapper > ul > li').addEventListener('click', (e)=> {
+      e.currentTarget.querySelector('ul').classList.toggle('dp-show');
+    })
+  }
+
+  // document.body.addEventListener('click', ()=> {
+  // })
 
   // hamburger for mobile
   const hamburger = document.createElement('div');

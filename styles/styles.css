@@ -255,3 +255,11 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+.dp-none {
+  display: none;
+}
+
+.dp-show {
+  display: block !important;
+}
