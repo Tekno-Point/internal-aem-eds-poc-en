@@ -197,11 +197,11 @@ header nav .nav-sections {
   display: none;
   visibility: hidden;
 }
-/* 
+
 header nav[aria-expanded='false'] .nav-sections {
   display: block;
   visibility: visible;
-} */
+}
 
 header nav[aria-expanded='true'] .nav-sections {
   display: flex;
