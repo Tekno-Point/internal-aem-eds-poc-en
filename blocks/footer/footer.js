@@ -1,7 +1,7 @@
 import { getMetadata } from "../../scripts/aem.js";
 import { loadFragment } from "../fragment/fragment.js";
 import accordionBlock from "../accordion/accordion.js";
-import {select , option , div , p ,a,input} from "../../scripts/dom-helpers.js";
+import { select, option, div, p, a, input } from "../../scripts/dom-helpers.js";
 
 /**
  * loads and decorates the footer
@@ -29,39 +29,7 @@ export default async function decorate(block) {
     });
   }
 
-  // changes for class
-
-  // function decorateFooterImages() {
-  //   const section = document.querySelector(".footer-sec4");
-  //   if (!section) return;
-
-  //   const container = section.querySelector(".default-content-wrapper");
-  //   if (!container) return;
-
-  //   const paragraphs = container.querySelectorAll("p");
-  //   if (paragraphs.length < 6) return;
-
-  //   const header = container.querySelector("h3");
-
-  //   // Create the wrapper div
-  //   const wrapperDiv = document.createElement("div");
-  //   wrapperDiv.classList.add("wrapper");
-
-  //   // Move the first 4 <p> tags into the wrapper
-  //   for (let i = 0; i < 5; i++) {
-  //     if (i === 4) {
-  //       paragraphs[i].appendChild(header);
-  //     }
-  //     wrapperDiv.appendChild(paragraphs[i]);
-  //   }
-
-  //   // Insert the wrapper before the first original <p>
-  //   container.insertBefore(wrapperDiv, container.firstChild);
-  // }
-
-  // // Call it when DOM is ready
-  // decorateFooterImages();
-
+  // footer show and hide
 
   function footerShowHide() {
     document
@@ -77,44 +45,81 @@ export default async function decorate(block) {
       });
   }
 
-  footerShowHide()
-    const button = document.createElement("button");
+  footerShowHide();
+  const button = document.createElement("button");
   button.textContent = "View More";
   button.className = "view-more-btn";
   document.querySelector(".footer-sec3 div").appendChild(button);
 
-
-  document.querySelector('.view-more-btn').addEventListener('click' , function(){
-    console.log("inn")
-    document.querySelector('.footer-sec3 div').childNodes.forEach(function(item , index){
-        if(!item.classList.contains('sec3-ul-show')){
-            item.classList.add(`sec3-ul-show`)
-            item.classList.remove(`sec3-ul-hide`)
-        } else{
-            if(index < 2){
-                item.classList.add(`sec3-ul-show`)
-            }else{
-                item.classList.add(`sec3-ul-hide`)
-                item.classList.remove(`sec3-ul-show`)
+  document
+    .querySelector(".view-more-btn")
+    .addEventListener("click", function () {
+      console.log("inn");
+      document
+        .querySelector(".footer-sec3 div")
+        .childNodes.forEach(function (item, index) {
+          if (!item.classList.contains("sec3-ul-show")) {
+            item.classList.add(`sec3-ul-show`);
+            item.classList.remove(`sec3-ul-hide`);
+          } else {
+            if (index < 2) {
+              item.classList.add(`sec3-ul-show`);
+            } else {
+              item.classList.add(`sec3-ul-hide`);
+              item.classList.remove(`sec3-ul-show`);
             }
-        }
+          }
+        });
+      document.querySelector(".view-more-btn").classList.remove(`sec3-ul-hide`);
+      if (document.querySelector(".view-more-btn").textContent == "View More") {
+        document.querySelector(".view-more-btn").textContent = "View Less";
+      } else if (
+        document.querySelector(".view-more-btn").textContent == "View Less"
+      ) {
+        document.querySelector(".view-more-btn").textContent = "View More";
+      }
+      console.log("out");
+    });
+
+  // domhelper
+  const optionPart = div(
+    { class: "OpstionContainer" },
+    div(
+      { class: "option1" },
+      select(
+        { class: "inp" },
+        option({class:"active"},a({href:"#"}),"HDFC Group Websites"),
+        option(a({href:"#"}),"HDFC Securities"),
+        option(a({href:"#"}),"HDFC Mutual Fund"),
+        option(a({href:"#"}),"HDFC Life"),
+        option(a({href:"#"}),"HDFC ERGO"),
+        option(a({href:"#"}),"HDFC Pension"),
+        option(a({href:"#"}),"HDFC Financial Services"),
+        option(a({href:"#"}),"HDFC Sales"),
+        option(a({href:"#"}),"HDFC Capital")
+      )
+    ),
+    div(
+      { class: "option2" },
+      select(
+        { class: "inp" },
+        option({class:"active"},a({ href: "#" }), "HDFC Bank Offshore Branches "),
+        option(a({ href: "#" }), "HDFC Bank Bahrain Branches "),
+        option(a({ href: "#" }), "HDFC Bank Gift City Branches "),
+        option(a({ href: "#" }), "HDFC Bank IDFC Branches "),
+        option(a({ href: "#" }), "HDFC Bank Honk Kong Branches "),
+        option(a({ href: "#" }), "HDFC Bank OFFSHORE Representative Branches ")
+      )
+    )
+  );
+
+
+  const opstioncontainers = block.querySelector('.footer-sec6 columns-wrapper ')
+  Array.from(document.querySelector(".footer-sec6 .columns-2-cols").children).forEach((el)=>{
+    Array.from(el.children).forEach((subel,index)=>{
+      subel.classList.add("footer-sec6-"+(index+1))
     })
-    document.querySelector('.view-more-btn').classList.remove(`sec3-ul-hide`)
-    if(document.querySelector('.view-more-btn').textContent == 'View More'){
-                document.querySelector('.view-more-btn').textContent = 'View Less'
-    }else if(document.querySelector('.view-more-btn').textContent == 'View Less'){
-             document.querySelector('.view-more-btn').textContent = 'View More'
-    }
-    console.log("out")
-})
+  })
 
-// dom 
-const optionPart = ({
-  div({class:"maindiv" },
-    div({class : "option1"})
-  )
-
-})
-
-
+  document.querySelector(".footer-sec6-1").append(optionPart)
 }
