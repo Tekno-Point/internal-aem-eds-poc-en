@@ -547,3 +547,18 @@ main .section.highlight {
     width: auto;
   }
 }
+
+.overlay {
+  background: rgba(0, 0, 0, .5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all .5s ease-in-out;
+  width: 100%;
+  z-index: 4;
+}
+
+header nav {
+  height: var(--nav-height);
+}

@@ -558,10 +558,7 @@ footer .footer-sec6 > .columns-wrapper > .columns > div {
     /* border-bottom: 1px solid #a5a8aa; */
 }
 
-footer .footer-sec6-1 > .OpstionContainer > div > .inp > Option.active {
-    color: white;
-    background-color: blue;
-}
+
 
 @media (max-width: 768px) {
     footer .footer-sec6-1 > .OpstionContainer {

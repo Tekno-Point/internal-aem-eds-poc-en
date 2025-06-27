@@ -62,6 +62,18 @@ async function loadFonts() {
   }
 }
 
+function wrapImgsInLinks(container) {
+  const pictures = container.querySelectorAll("picture");
+  pictures.forEach((pic) => {
+    const link = pic.parentElement.nextElementSibling;
+    if (link?.classList.contains("button-container")) {
+      link.querySelector("a").innerHTML = "";
+      link.querySelector("a").append(pic);
+      // pic.replaceWith(link);
+    }
+  });
+}
+
 function autolinkModals(element) {
   element.addEventListener('click', async (e) => {
     const origin = e.target.closest('a');
@@ -99,6 +111,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  wrapImgsInLinks(main)
 }
 
 /**
