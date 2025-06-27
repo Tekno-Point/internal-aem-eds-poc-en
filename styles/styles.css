@@ -498,13 +498,13 @@ main .section.highlight {
 }
 .footer-wrapper{
   position: relative;
-    z-index: 1;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
    .wrapperright >.section {
-    max-width: 100%;
-    width: 90%;
-    margin: 0 auto;
+    /* max-width: 100%;
+    width: 90%; */
+    margin: 0;
     }
   .wrapperright {
     

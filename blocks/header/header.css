@@ -173,20 +173,26 @@ header .nav-brand {
   line-height: 1;
 }
 
-header nav .nav-brand img {
-  width: 128px;
-  height: auto;
-}
-
 @media (width >=900px) {
   header .nav-brand {
     padding-left: 151px;
+  }
+
+  header nav .nav-brand img {
+    width: 178px;
+    height: auto;
   }
 }
 
 @media (width <=900px) {
   header .nav-brand {
     padding-left: 20px;
+  }
+
+  header nav .nav-brand p,
+  header nav .nav-brand img {
+    width: 128px;
+    height: auto;
   }
 }
 
