@@ -138,10 +138,56 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+function appendNextElements(container, nextElement) {
+  container.append(nextElement);
+}
+export default function decorateWrapper(main) {
+  // debugger;
+  main.querySelectorAll('.wrapperleft').forEach((block) => {
+    // wrapper.classList.remove('wrapper');
+    console.log('Decorating wrapper', block);
+    const blockWrapper = block;
+    let nextElement = blockWrapper.nextElementSibling;
+    while (nextElement && (!nextElement.classList.contains('wrapperleft'))) {
+      appendNextElements(block, nextElement);
+      nextElement = blockWrapper.nextElementSibling;
+    }
+  });
+  // block.innerHTML = '';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  let scrollBar = document.querySelector('[data-id="scroll-progress-bar"]');
+  window.addEventListener('scroll', () => {
+    
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+    scrollBar.style.width = scrollPercent + '%';
+  });
+
+  const scrollMap = {
+    "overview": "overview",
+    "mastertheStockMarketEasySteps": "mastertheStockMarketEasySteps",
+    "openaDematandTradingAccount": "openaDematandTradingAccount"
+  };
+
+  document.querySelectorAll('.section[data-id="tableofcontent"] li a').forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = scrollMap[link.getAttribute("href")];
+      const target = document.querySelector(`.section[data-id="${targetId}"]`);
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+});
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  decorateWrapper(document.querySelector("main"))
+
 }
 
 loadPage();
+
