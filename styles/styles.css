@@ -40,6 +40,33 @@
   --nav-height: 55px;
 }
 
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url('../fonts/OpenSans-ExtraBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-SamiBold';
+  src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* fallback fonts */
 @font-face {
   font-family: roboto-condensed-fallback;
@@ -79,6 +106,11 @@ body {
   font-size: var(--body-font-size-m);
   line-height: 1.6;
 }
+
+*{
+  font-family: "OpenSans-Regular";
+}
+
 
 body.appear {
   display: block;

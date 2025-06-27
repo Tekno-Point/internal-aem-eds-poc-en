@@ -112,6 +112,38 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "footer",
+            "value": "footer"
+          },
+          {
+            "name": "footer-sec1",
+            "value": "footer-sec1"
+          },
+           {
+            "name": "footer-sec2",
+            "value": "footer-sec2"
+          },
+          {
+            "name": "footer-sec3",
+            "value": "footer-sec3"
+          },
+          {
+            "name": "footer-sec4",
+            "value": "footer-sec4"
+          },
+          {
+            "name": "footer-sec5",
+            "value": "footer-sec5"
+          },
+          {
+            "name": "footer-sec6",
+            "value": "footer-sec6"
+          },
+          {
+            "name": "footer-white",
+            "value": "footer-white"
           }
         ]
       }
@@ -188,6 +220,18 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "number",
+        "name": "breadcrumb",
+        "value": "",
+        "label": "breadcrumb"
       }
     ]
   }
