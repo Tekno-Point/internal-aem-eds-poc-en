@@ -1,3 +1,7 @@
+.section.cf-fragment-container{
+    overflow: hidden;
+}
+
 .emi-calculator-container {
     background: #242831;
     color: #ecf0f1;

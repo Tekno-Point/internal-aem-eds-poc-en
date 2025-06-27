@@ -201,6 +201,10 @@ main>div {
   margin: 40px 16px;
 }
 
+main .section {
+  overflow: hidden;
+}
+
 input,
 textarea,
 select,
@@ -749,3 +753,47 @@ grid-column: 2;
     max-width: 100%;
   }
 }
+
+
+/* Quick Loans Css Start */
+.section.quick-loans {
+  margin: 0;
+  padding: 0;
+}
+
+.section.quick-loans>div>p:first-child {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -8px;
+}
+
+/* .section.quick-loans>div.default-content-wrapper>p:nth-child(2) {
+  display: none;
+} */
+
+.section.quick-loans>div>p:last-child {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .section.quick-loans>div {
+    margin: 0;
+    padding: 0;
+    margin-bottom: -8px;
+  }
+
+  .section.quick-loans>div>p:first-child {
+    display: none;
+  }
+
+  .section.quick-loans>div>p:last-child {
+    display: block;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -10px;
+  }
+}
+
+/* Quick Loans Css End */

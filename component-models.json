@@ -138,6 +138,18 @@
           {
             "name": "Portlet-Journal",
             "value": "Portlet-Journal"
+          },
+          {
+            "name": "Quick Loans",
+            "value": "quick-loans"
+          },
+          {
+            "name": "Quick Loans Image Dec",
+            "value": "quick-loans-img-dec"
+          },
+          {
+            "name": "Quick Loans Image Mob",
+            "value": "quick-loans-img-mob"
           }
         ]
       }
