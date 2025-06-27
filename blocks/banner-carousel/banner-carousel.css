@@ -46,6 +46,7 @@
     font-size: 64px;
     line-height: 72.96px;
     font-weight: 400;
+    font-family: unset;
     color: rgb(35, 31, 32);
     margin: 0;
     text-transform: uppercase;
@@ -99,7 +100,7 @@
 
 .section[data-id="banner"] .block .bannerCarousel.swiper-slide {
     background: transparent;
-    width: 352px;
+    /* width: 352px; */
 }
 
 .section[data-id="banner"] .block .subBannerpart {
@@ -140,7 +141,6 @@
 
 .section[data-id="banner"] .block .bannerCarousel.swiper-slide.swiper-slide-active ul {
     animation: moveDown 0.7s ease-in-out 0.1s forwards;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
     opacity: 1;
 }
 
@@ -197,7 +197,8 @@
 
 .section[data-id="banner"] .block .subBannerpart p img {
     width: 220px;
-    height: 350px;
+    /* height: 350px; */
+    height: 454px;
     border-radius: 10px;
 }
 
@@ -216,7 +217,7 @@
     font-size: 20px;
     line-height: 24px;
     font-weight: 400;
-    font-family: sans-serif;
+    font-family: unset;
     color: #fff;
     margin: 0 0 4px;
     text-align: left;
@@ -225,7 +226,7 @@
 .section[data-id="banner"] .block .subBannerpart .sub-title-text p {
     font-size: 12px;
     line-height: 18px;
-    font-family: sans-serif;
+    font-family: unset;
     font-weight: 400;
     color: #fff;
     margin: 0;
@@ -281,6 +282,7 @@
     .section[data-id="banner"] .banner-text h1 {
         font-size: 22px;
         line-height: 25px;
+        font-family: unset;
     }
 
     .section[data-id="banner"] .banner-text h1:first-of-type {
@@ -302,8 +304,8 @@
 
     .section[data-id="banner"] .block .bannerCarousel.swiper-slide {
         margin-right: 24px !important;
-        width: 280px !important;
-        padding-left: 16px;
+        /* width: 280px !important; */
+        /* padding-left: 16px; */
     }
 
     .section[data-id="banner"] .block .bannerCarousel ul .roundrestat {
@@ -364,6 +366,7 @@
     margin: 0;
     font-size: 32px;
     line-height: 38px;
+    font-family: unset;
     color: #323232;
 }
 
@@ -427,6 +430,7 @@
     color: rgb(35, 31, 32);
     font-size: 44px;
     line-height: 53px;
+    font-family: unset;
     margin: 0 0 30px;
     text-align: left;
 }
@@ -513,6 +517,10 @@
     display: none;
 }
 
+.section[data-id="awardSection"] .swipperActionBtn {
+    display: block;
+}
+
 @media screen and (max-width: 768px) {
     .section[data-id="awardSection"] {
         padding: 0 15px;
@@ -525,7 +533,7 @@
     }
 
     .section[data-id="awardSection"] .banner-text h3 {
-        font-family: sans-serif;
+        font-family: unset;
         font-size: 23px;
         line-height: 28px;
         color: #323232;
@@ -563,6 +571,7 @@
         font-size: 25px;
         line-height: 30px;
         font-weight: 500;
+        font-family: unset;
         color: rgb(35, 31, 32);
         margin-bottom: 16px;
     }
