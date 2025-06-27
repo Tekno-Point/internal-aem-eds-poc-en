@@ -27,7 +27,8 @@
       "banner-carousel",
       "banner-text",
       "blogs-carousel",
-      "customer-carousel"
+      "customer-carousel",
+      "tabs"
     ]
   },
   {
@@ -87,6 +88,12 @@
     "id": "customer-carousel",
     "components": [
       "customer-carousel-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tab-blogs-item"
     ]
   }
 ]

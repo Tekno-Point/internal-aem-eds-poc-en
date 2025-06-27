@@ -1536,5 +1536,23 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "tab-blogs-item",
+    "fields":[
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Tab Title",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fargment URL"
+      }
+    ]
+
   }
 ]
