@@ -136,6 +136,18 @@
           {
             "name": "Content6",
             "value": "content6"
+          },
+          {
+            "name": "Image2",
+            "value": "image2"
+          },
+          {
+            "name": "Image3",
+            "value": "image3"
+          },
+          {
+            "name": "Image4",
+            "value": "image4"
           }
         ]
       }
