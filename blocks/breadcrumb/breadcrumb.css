@@ -1,21 +1,20 @@
-/* breadcrumbs in body */
-.breadcrumbs-container {
-    margin: auto;
-    max-width: 1248px;
-    padding: 0 24px;
+/* breadcrumb in body */
+.section.breadcrumb-container {
     font-size: var(--body-font-size-xs);
     margin: 0;
 }
-.breadcrumbs-container >.breadcrumb-wrapper{
-    padding-top: 60px;
+.breadcrumb-container >.breadcrumb-wrapper{
+    padding: 60px 0 0 0;
+    max-width: 1280px;
+    margin: auto;
 }
-.breadcrumbs-container .breadcrumbs {
+.breadcrumb-container .breadcrumb {
     display: block;
     width: 100%;
-    height: var(--breadcrumbs-height);
+    height: var(--breadcrumb-height);
     overflow: hidden;
 }
-.breadcrumbs-container .breadcrumbs ol {
+.breadcrumb-container .breadcrumb ol {
     display: flex;
     flex-flow: wrap;
     list-style: none;
@@ -24,25 +23,25 @@
     margin-bottom: 0;
     gap: 1ch;
 }
-.breadcrumbs-container .breadcrumbs ol li {
+.breadcrumb-container .breadcrumb ol li {
     padding: 0;
     color: var(--dark-color);
 }
-.breadcrumbs-container .breadcrumbs ol li:not(:last-child)::after {
+.breadcrumb-container .breadcrumb ol li:not(:last-child)::after {
     content: "/";
     padding-left: 1ch;
 }
-.breadcrumbs-container .breadcrumbs ol li[aria-current] {
+.breadcrumb-container .breadcrumb ol li[aria-current] {
     color: var(--text-color);
 }
-@media (width >= 900px) {
-    .breadcrumbs-container {
+/* @media (width >= 900px) {
+    .breadcrumb-container {
         max-width: 1264px;
         padding: 0 32px;
     }
-}
-/* Hide old header breadcrumbs if present */
-header .breadcrumbs {
+} */
+/* Hide old header breadcrumb if present */
+header .breadcrumb {
     display: none !important;
 }
 .breadcrumb > .container-fluid > ul {
