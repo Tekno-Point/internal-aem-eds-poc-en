@@ -1555,7 +1555,7 @@
     ]
   },
   {
-    "id":"fragment-tab-blogs",
+    "id":"fragment-tab-blogs-item",
     "fields":[
       {
         "component": "reference",
