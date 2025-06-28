@@ -20,12 +20,12 @@
     margin-right: 55px;
 }
 
-.swipperActionBtn {
-    /* position: absolute;
+/* .swipperActionBtn {
+     position: absolute;
     right: 64%;
-    bottom: 26px; */
-    /* display: none; */
-}
+    bottom: 26px; 
+     display: none; 
+} */
 
 .section.customer-carousel-container .default-content-wrapper,
 .section.customer-carousel-container .customer-carousel-wrapper {
@@ -80,7 +80,7 @@
     bottom: 0;
     top: unset;
     right: unset;
-    left: 31%;
+    left: 460px;
     max-width: 48px;
     width: 100%;
     height: 48px;
@@ -89,7 +89,7 @@
 }
 
 .section.customer-carousel-container .customer-carousel .swiper-button-prev {
-    left: 27%;
+    left: 393px;
     right: unset;
 }
 

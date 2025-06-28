@@ -96,7 +96,7 @@ export default async function decorate(block) {
   const img = block.querySelector("picture");
   const form = await createForm(formLink, submitLink);
   block.replaceChildren(form);
-  block.append(img);
+  img?block?.append(img):'';
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const valid = form.checkValidity();

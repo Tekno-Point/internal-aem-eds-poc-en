@@ -682,6 +682,10 @@ grid-column: 2;
 }
 
 @media screen and (max-width: 900px) {
+  .portlet-journal.columns-container {
+    margin: 50px 0;
+  }
+
   .portlet-journal .column-row {
     flex-direction: column;
     gap: 20px;
