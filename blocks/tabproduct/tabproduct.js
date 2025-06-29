@@ -6,8 +6,6 @@ export default function decorate(block) {
     const bgImg = [];
     const props = [...block.children];
 
-    // block.innerHTML = '';
-
     let itemsDom = props.map((row, ind) => {
         let imgSrc = row?.children[0]?.querySelector("img")?.src;
         bgImg.push({ imgSrc })
@@ -24,22 +22,29 @@ export default function decorate(block) {
             </div>
         `
     })
+    let bgTabwrapper = document.createElement("div");
 
-    let dom = `
-        <div class="bgTabwrapper" ${isMobile ? '' : `style="background-image: url('${bgImg[0]?.imgSrc}')"`}>
+    bgTabwrapper.classList.add("bgTabwrapper");
+    !isMobile ? bgTabwrapper.style.backgroundImage = `url('${bgImg[0]?.imgSrc}')` : '';
+
+    bgTabwrapper.innerHTML = `
             <div class="bgTab-container">
                 ${itemsDom?.join("") || ''}
             </div>
-        </div>
     `;
 
-    // block.innerHTML = ''
-    block.innerHTML = dom
-    console.log(dom.outerHTML)
-    // block.insertAdjacentHTML('beforeend', dom);
-    // block.appendChild(dom.outerHTML)
+    // let dom = `
+    //     <div class="bgTabwrapper" ${isMobile ? '' : `style="background-image: url('${bgImg[0]?.imgSrc}')"`}>
+    //         <div class="bgTab-container">
+    //             ${itemsDom?.join("") || ''}
+    //         </div>
+    //     </div>
+    // `;
 
-    let bgTabwrapper = block.querySelector(".bgTabwrapper");
+    block.textContent = '';
+    block.append(bgTabwrapper);
+
+    // let bgTabwrapper = block.querySelector(".bgTabwrapper");
     const bgTabs = block.querySelectorAll(".bgTab");
     if (!isMobile) {
         bgTabs.forEach(tab => {
