@@ -41,8 +41,8 @@ export default function decorate(block) {
     //     </div>
     // `;
 
-    // block.textContent = '';
-   block.replaceWith(bgTabwrapper)
+    block.textContent = '';
+    block.append(bgTabwrapper);
 
     // let bgTabwrapper = block.querySelector(".bgTabwrapper");
     const bgTabs = block.querySelectorAll(".bgTab");
