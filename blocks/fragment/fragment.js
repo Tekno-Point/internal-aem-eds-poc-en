@@ -17,6 +17,20 @@ import {
  * @param {string} path The path to the fragment
  * @returns {HTMLElement} The root element of the fragment
  */
+
+export async function loadFragmenter(block) {
+  const link = block.querySelector("a");
+  const path = link ? link.getAttribute("href") : block.textContent.trim();
+  const fragment = await loadFragment(path);
+  if (fragment) {
+    const fragmentSection = fragment.querySelector(":scope .section");
+    if (fragmentSection) {
+      block.classList.add(...fragmentSection.classList);
+      block.classList.remove("section");
+      block.replaceChildren(...fragmentSection.childNodes);
+    }
+  }
+}
 export async function loadFragment(path) {
   if (path && path.startsWith('/')) {
     // eslint-disable-next-line no-param-reassign

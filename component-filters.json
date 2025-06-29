@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": "main",
     "components": ["section"]
   },
@@ -28,7 +29,9 @@
       "banner-carousel",
       "banner-text",
       "blogs-carousel",
-      "customer-carousel"
+      "customer-carousel",
+      "tabs",
+      "fragment-tab-blogs"
     ]
   },
   {
@@ -53,9 +56,7 @@
   },
   {
     "id": "tabproduct",
-    "components": [
-      "tabproduct-item"
-    ]
+    "components": ["tabproduct-item"]
   },
   {
     "id": "documentation",
@@ -68,26 +69,30 @@
   },
   {
     "id": "banner-carousel",
-    "components": [
-      "banner-carousel-item"
-    ]
+    "components": ["banner-carousel-item"]
   },
   {
-    "id":"blogs-carousel",
-    "components":[
-        "blogs-carousel-item",
-        "blogs-carousel-two-item",
-        "blogs-carousel-three-item"   
+    "id": "blogs-carousel",
+    "components": [
+      "blogs-carousel-item",
+      "blogs-carousel-two-item",
+      "blogs-carousel-three-item"
     ]
   },
   {
     "id": "customer-carousel",
-    "components": [
-      "customer-carousel-item"
-    ]
+    "components": ["customer-carousel-item"]
   },
   {
     "id": "accordion",
-    "components": [ "accordion-item"]
+    "components": ["accordion-item"]
+  },
+  {
+    "id": "tabs",
+    "components": ["tab-blogs-item"]
+  },
+  {
+    "id": "fragment-tab-blogs",
+    "components": ["fragment-tab-blogs-item"]
   }
 ]

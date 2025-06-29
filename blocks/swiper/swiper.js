@@ -19,10 +19,6 @@ export default function decorate(block) {
 if (window.innerWidth < 768) {   
     
       //Mobile
-      if (blockClassList.indexOf("mobile-auto-scroll") != -1) {
-        objConfig["loop"] = true;
-        objConfig["autoplay"] = true;
-      }
       if (blockClassList.indexOf("one-point-five-view") != -1) {
         objConfig['slidesPerView'] = 1.2;
         objConfig['spaceBetween'] = 10;
@@ -55,6 +51,10 @@ if (window.innerWidth < 768) {
       }
       if (blockClassList.indexOf("mobile-loop") != -1) {
         objConfig["loop"] = true
+      }
+      if (blockClassList.indexOf("mobile-auto-scroll") != -1) {
+        objConfig["loop"] = true;
+        objConfig["autoplay"] = true;
       }
     } else {
       //DeskTop
