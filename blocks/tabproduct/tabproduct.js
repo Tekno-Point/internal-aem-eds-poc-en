@@ -1,11 +1,10 @@
-import {isMobile} from '../../scripts/scripts.js'
-
 export default function decorate(block) {
 
     // if (window.location.href.includes("author-p48457-e1275402.adobeaemcloud.com")) return block;
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
     const bgImg = [];
-    const props = Array.from(block.children);
+    const props = [...block.children];
 
     // block.innerHTML = '';
 
@@ -13,7 +12,7 @@ export default function decorate(block) {
         let imgSrc = row?.children[0]?.querySelector("img")?.src;
         bgImg.push({ imgSrc })
         return `
-            <div class="bgTab" id="${ind + 1}" ${isMobile.matches ? `style="background-image: url('${row?.children[0]?.querySelector("img")?.src || ''}')"` : ''}>
+            <div class="bgTab" id="${ind + 1}" ${isMobile ? `style="background-image: url('${row?.children[0]?.querySelector("img")?.src || ''}')"` : ''}>
 	            <div class="progresLine">
 	            </div>
 	            <div class="tab">
@@ -26,17 +25,23 @@ export default function decorate(block) {
         `
     })
 
-    block.innerHTML = `
-        <div class="bgTabwrapper" ${isMobile.matches ? '' : `style="background-image: url('${bgImg[0]?.imgSrc}')"`}>
+    let dom = `
+        <div class="bgTabwrapper" ${isMobile ? '' : `style="background-image: url('${bgImg[0]?.imgSrc}')"`}>
             <div class="bgTab-container">
                 ${itemsDom?.join("") || ''}
             </div>
         </div>
     `;
 
+    // block.innerHTML = ''
+    block.innerHTML = dom
+    console.log(dom.outerHTML)
+    // block.insertAdjacentHTML('beforeend', dom);
+    // block.appendChild(dom.outerHTML)
+
     let bgTabwrapper = block.querySelector(".bgTabwrapper");
     const bgTabs = block.querySelectorAll(".bgTab");
-    if (!isMobile.matches) {
+    if (!isMobile) {
         bgTabs.forEach(tab => {
             tab.addEventListener("mouseover", (e) => {
                 let cureentId = e.currentTarget.id;
@@ -44,5 +49,6 @@ export default function decorate(block) {
             })
         });
     }
+
 
 }
