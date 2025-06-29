@@ -1,7 +1,7 @@
 export default function decorate(block) {
 
     // if (window.location.href.includes("author-p48457-e1275402.adobeaemcloud.com")) return block;
-    // const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
     const bgImg = [];
     const props = [...block.children];
@@ -25,7 +25,7 @@ export default function decorate(block) {
     let bgTabwrapper = document.createElement("div");
 
     bgTabwrapper.classList.add("bgTabwrapper");
-    // !isMobile ? bgTabwrapper.style.backgroundImage = `url('${bgImg[0]?.imgSrc}')` : '';
+    !isMobile ? bgTabwrapper.style.backgroundImage = `url('${bgImg[0]?.imgSrc}')` : '';
 
     bgTabwrapper.innerHTML = `
             <div class="bgTab-container">
@@ -42,7 +42,7 @@ export default function decorate(block) {
     // `;
 
     // block.textContent = '';
-    block.append(bgTabwrapper);
+   block.replaceWith(bgTabwrapper)
 
     // let bgTabwrapper = block.querySelector(".bgTabwrapper");
     const bgTabs = block.querySelectorAll(".bgTab");
