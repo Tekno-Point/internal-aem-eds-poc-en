@@ -1,6 +1,6 @@
 export default function decorate(block) {
 
-    // if (window.location.href.includes("author-p48457-e1275402.adobeaemcloud.com")) return block;
+    if (window.location.href.includes("author-p48457-e1275402.adobeaemcloud.com")) return block;
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
     const bgImg = [];
