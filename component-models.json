@@ -236,13 +236,6 @@
         "value": "",
         "label": "Link",
         "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "youtubeVideoThumbnailDamPath",
-        "value": "",
-        "label": "youtubeVideoThumbnailDamPath",
-        "valueType": "string"
       }
     ]
   },
