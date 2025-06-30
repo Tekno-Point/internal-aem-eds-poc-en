@@ -276,7 +276,7 @@
 
 @media screen and (max-width:768px) {
     .tabs-container {
-        padding: 0 15px;
+        padding: 50px 15px;
         flex-direction: column;
         gap: 32px;
     }
