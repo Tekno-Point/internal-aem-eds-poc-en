@@ -92,7 +92,8 @@ export default async function decorate(block) {
         loanTenure = 'loan Tenure',
         loanTenureMin = '12',
         loanTenureMax = '84',
-        button = null
+        button = 'Apply Now',
+        buttonUrl = '#'
     } = itemData;
 
     const parsedLoanAmountMin = parseFloat(loanAmountMin.replace(/[^0-9.]/g, ''));
@@ -180,7 +181,7 @@ export default async function decorate(block) {
 
                     <div class="control-group loan-tenure">
                     <div class="value-txt-wrapper">
-                        <label for="loanTenureRange">LOAN TENURE</label>
+                        <label for="loanTenureRange">${loanTenure}</label>
                         <div class="input-display-wrapper">
                             <input type="text" id="loanTenureDisplay" class="value-display" value="${currentLoanTenure} Months">
                         </div>
@@ -192,7 +193,7 @@ export default async function decorate(block) {
                         </div>
                     </div>
                     <div class="btn-wrap">
-                     <button class="apply-button">${button}</button> 
+                     <a href="${buttonUrl}" class="apply-button">${button}</a> 
                      </div>
                 </div>
             </div>
