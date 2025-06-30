@@ -35,3 +35,99 @@
     padding: 40px 32px;
   }
 }
+/* Base styling for full-height hero section */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000; /* fallback */
+}
+
+/* Wrapper holds content + image */
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Block holds image and overlay text */
+.hero.block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: left;
+  padding: 5vh 10vw;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+/* Position the image behind the content */
+.hero.block picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero.block picture img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Text content sits above the image */
+.hero.block > div:last-child {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+/* Typography */
+.hero.block h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero.block p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* CTA Button */
+.button-container .button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button-container .button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero.block h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero.block p {
+    font-size: 1rem;
+  }
+
+  .hero.block {
+    padding: 10vh 5vw;
+  }
+}
