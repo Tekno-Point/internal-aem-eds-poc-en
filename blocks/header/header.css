@@ -159,7 +159,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 }
 
 @media (width <=900px) {
-  header nav .nav-hamburger {
+  header nav .nav-hamburger button{
     padding-right: 20px;
   }
 }
@@ -395,7 +395,7 @@ header nav .nav-sections ul>li>ul>li {
     border-radius: .625rem;
     color: #6b7280;
     top: 100%;
-    width:26%;
+    min-width: 135px;
     padding: 0 10px;
     display: none;
   }
@@ -457,7 +457,7 @@ header nav .nav-sections ul>li>ul>li {
     line-height: 18px;
     font-weight: 400;
     position: relative;
-    width: 33%;
+    width: 43%;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop.active>p {
@@ -493,6 +493,8 @@ header nav .nav-sections ul>li>ul>li {
 
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop.active>ul {
     display: block;
+    background-color: #fff;
+    height: 100%;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop.active>p::after {
@@ -500,10 +502,10 @@ header nav .nav-sections ul>li>ul>li {
     display: inline-block;
     position: absolute;
     top: 1.1em;
-    right: 22px;
+    right: 70px;
     transform: rotate(45deg);
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     border: 2px solid currentcolor;
     border-radius: 0 1px 0 0;
     border-width: 3px 3px 0 0;

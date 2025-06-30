@@ -353,7 +353,8 @@ main .section.highlight {
 }
 
 [data-id="overview"] h2,
-[data-id="mastertheStockMarketEasySteps"] h2 {
+[data-id="mastertheStockMarketEasySteps"] h2,
+[data-id="openaDematandTradingAccount"] h2 {
   color: #292929;
   font-size: 28px;
   line-height: 38px;
@@ -370,6 +371,16 @@ main .section.highlight {
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 22px;
+}
+
+[data-id="openaDematandTradingAccount"] p {
+  color: #535353;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+[data-id="openaDematandTradingAccount"] p a {
+  color: #004c8f;
 }
 
 /* === 3. TABLE-OF-CONTENT CARD =================================== */
@@ -599,6 +610,42 @@ main .section.highlight {
     position: unset;
     width: auto;
     margin-top: 10px;
+    padding: 16px 12px;
+  }
+
+  [data-id="tableofcontent"] h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  [data-id="tableofcontent"] ul li {
+    padding-left: 0;
+  }
+
+  [data-id="overview"] h2,
+  [data-id="mastertheStockMarketEasySteps"] h2,
+  [data-id="openaDematandTradingAccount"] h2{
+    font-size: 24px;
+    margin-top: 40px;
+  }
+
+  [data-id="overview"] p {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  [data-id="mastertheStockMarketEasySteps"] ul {
+    padding-left: 20px;
+  }
+
+  [data-id="mastertheStockMarketEasySteps"] ul li p,
+  [data-id="openaDematandTradingAccount"] p {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  [data-id="openaDematandTradingAccount"] p a {
+    color: #004c8f;
   }
 
   [data-id="synopsis"] .default-content-wrapper {
