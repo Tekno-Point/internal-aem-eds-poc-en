@@ -196,7 +196,7 @@
     "fields": [
       {
         "component": "select",
-        "name": "style",
+        "name": "classes",
         "label": "Carousel Style",
         "options": [
           {
