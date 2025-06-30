@@ -798,12 +798,11 @@ header nav .section.nav-navigation .default-content-wrapper>ul>li>ul>li {
   margin: 0 20px 0 0;
 }
 
-header nav .section.nav-navigation .default-content-wrapper>ul>li>p::after,
-header nav .section.nav-navigation .default-content-wrapper>ul>li>ul>li::after {
+header nav .section.nav-navigation .default-content-wrapper>ul>li>p::after {
   content: '';
   display: inline-block;
   position: absolute;
-  top: 0.2em;
+  top: 0.3em;
   right: -15px;
   transform: rotate(135deg);
   width: 6px;
