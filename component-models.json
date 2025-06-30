@@ -157,6 +157,10 @@
           {
             "name": "Wrapper right",
             "value": "wrapperRight"
+          },
+          {
+            "name": "Login Modal",
+            "value": "login-modal"
           }
         ]
       }
