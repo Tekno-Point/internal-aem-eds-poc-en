@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-unresolved
 import { toClassName } from "../../scripts/aem.js";
+import { autolinkForm } from "../../scripts/scripts.js";
 
 export default async function decorate(block) {
   // build tablist
@@ -44,4 +45,6 @@ export default async function decorate(block) {
   });
 
   block.prepend(tablist);
+
+  autolinkForm(block.closest(".section .default-content-wrapper"));
 }
