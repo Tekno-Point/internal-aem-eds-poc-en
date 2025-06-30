@@ -66,6 +66,11 @@ header nav[aria-expanded='true'] {
       'brand tools hamburger' var(--nav-height) 'sections sections sections';
     grid-template-columns: 2fr 1fr auto;
   }
+
+  header .nav-wrapper {
+    overflow: hidden;
+    /* width: unset; */
+  }
 }
 
 header nav p {

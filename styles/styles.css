@@ -563,10 +563,8 @@ main .section.highlight {
 }
 @media screen and (max-width: 768px) {
    .wrapperright >.section {
-    /* max-width: 100%;
-    width: 90%; */
     margin: 0;
-    width: 90%;
+    /* width: unset; */
     }
   .wrapperright {
     
@@ -579,6 +577,12 @@ main .section.highlight {
    
     [data-id="accountsharebtn"] {
       order: 1;
+      width: 100%;
+      padding: 0;
+    }
+
+    [data-id="accountsharebtn"] div {
+      margin: 16px 20px;
     }
 
     [data-id="tableofcontent"] {
