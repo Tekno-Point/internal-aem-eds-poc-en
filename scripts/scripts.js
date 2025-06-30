@@ -109,6 +109,7 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   wrapImgsInLinks(main);
+  autolinkForm(main);
 }
 
 /**
