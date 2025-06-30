@@ -547,6 +547,11 @@ main .section.highlight {
     position: unset;
     width: auto;
   }
+
+  [data-id="scroll-progress-bar"]{
+    top: 56px;
+    left: 0;
+  }
 }
 
 .overlay {
