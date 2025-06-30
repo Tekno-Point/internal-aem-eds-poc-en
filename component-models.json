@@ -197,7 +197,7 @@
       {
         "component": "select",
         "name": "style",
-        "label": "Style",
+        "label": "Carousel Style",
         "options": [
           {
             "name": "Pagination",
