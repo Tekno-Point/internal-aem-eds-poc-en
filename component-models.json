@@ -177,7 +177,7 @@
         "multi":true
       },
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
         "name": "form-url",
         "label": "form path",
