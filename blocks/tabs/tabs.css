@@ -87,16 +87,6 @@
     list-style: none;
 }
 
-.tabs-container .default-content-wrapper p:nth-of-type(2) {
-    margin-top: auto;
-    font-size: 26px;
-    line-height: 39px;
-    margin-bottom: 20px;
-    color: rgb(35, 31, 32);
-    font-weight: 400;
-    font-family: unset;
-}
-
 .tabs-container .default-content-wrapper h2 {
     font-size: 44px;
     line-height: 58px;
@@ -112,6 +102,61 @@
 
 .tabs-container .default-content-wrapper:last-of-type {
     display: none;
+}
+
+.tabs-container .default-content-wrapper p:last-of-type {
+    margin-top: auto;
+    font-size: 26px;
+    line-height: 39px;
+    margin-bottom: 20px;
+    color: rgb(35, 31, 32);
+    font-weight: 400;
+    font-family: unset;
+}
+
+.tabs-container .default-content-wrapper ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.tabs-container .default-content-wrapper ul form .field-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tabs-container .default-content-wrapper ul form .field-wrapper::after {
+    content: '';
+    background: url('../../icons/rightArrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 25px;
+    height: 21px;
+    display: block;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+.tabs-container .default-content-wrapper ul form .field-wrapper input {
+    background-color: #eef1f8;
+    border-radius: 8px;
+    padding: 12px 50px 12px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    color: rgb(35 31 32 / .9);
+    font-size: 16px;
+    line-height: 24px;
+    transition: all 0.3s ease;
+}
+
+.tabs-container .default-content-wrapper ul form .field-wrapper input:focus {
+    box-shadow: rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px;
 }
 
 .tabs-container .tabs-wrapper {
@@ -239,18 +284,23 @@
         max-width: 100%;
     }
 
-    .tabs-container .default-content-wrapper p {
-        font-size: 20px;
-        line-height: 24px;
-    }
 
     .tabs-container .default-content-wrapper h2 {
         font-size: 32px;
         line-height: 38px;
     }
 
+    .tabs-container .default-content-wrapper p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
     .tabs-container .default-content-wrapper:first-of-type p:nth-of-type(2),
     .tabs-container .default-content-wrapper:first-of-type p:nth-of-type(3) {
+        display: none;
+    }
+
+    .tabs-container .default-content-wrapper:first-of-type ul {
         display: none;
     }
 
@@ -302,6 +352,39 @@
     .tabs-container .default-content-wrapper:last-of-type p:nth-of-type(1) {
         font-size: 24px;
         line-height: 36px;
+    }
+
+    .tabs-container .default-content-wrapper:last-of-type ul {
+        background-color: red;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background-color: #eef1f8;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .tabs-container .default-content-:last-of-type ul form .field-wrapper::after {
+        content: '';
+        background: url('../../icons/rightArrow.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 25px;
+        height: 23px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .tabs-container .default-content-wrapper:last-of-type ul form {
+        width: 100%;
+    }
+
+    .tabs-container .default-content-wrapper:last-of-type ul form input {
+        padding: 15px 50px 15px 23px;
+        font-size: 20px;
+        line-height: 30px;
     }
 
 }
