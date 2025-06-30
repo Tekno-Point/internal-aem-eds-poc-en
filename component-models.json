@@ -195,9 +195,9 @@
     "id": "carousel",
     "fields": [
       {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Carousel Classes",
+        "component": "select",
+        "name": "style",
+        "label": "Style",
         "options": [
           {
             "name": "Pagination",
