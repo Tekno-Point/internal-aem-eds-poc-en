@@ -171,17 +171,14 @@
       {
         "component": "richtext",
         "name": "text",
-        "value": "",
-        "label": "Text",
+        "label": "Tab Title",
         "valueType": "string",
-        "multi":true
+        "value": ""
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "form-url",
-        "label": "form path",
-        "multi": false
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fargment URL"
       }
     ]
   },
