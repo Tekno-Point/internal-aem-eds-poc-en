@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
-// export default async function decorate(block) {
-//     const blockchildCollection = block.children;
-//     console.log(blockchildCollection);
-
-//     const blockChild = Array.from(blockchildCollection);
-
-//     blockChild.forEach((el, index) => {
-//         el.classList.add("tab-content" + index);
-//     });
-// }
-
->>>>>>> heromoto/tab
 
 
 export default async function decorate(block) {
