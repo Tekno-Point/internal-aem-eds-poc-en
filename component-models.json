@@ -166,6 +166,25 @@
     ]
   },
   {
+    "id": "card",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "form-url",
+        "label": "form path",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "form",
     "fields": [
       {
@@ -184,33 +203,7 @@
       }
     ]
   },
-  {
-    "id": "multi-tab",
-    "fields": [
-      {
-        "component": "tab",
-        "label": "Tab 1",
-        "name": "tab1"
-      },
-      {
-        "component": "text-input",
-        "label": "Text 1",
-        "name": "text1",
-        "valueType": "string"
-      },
-      {
-        "component": "tab",
-        "label": "Tab 2",
-        "name": "tab2"
-      },
-      {
-        "component": "text-input",
-        "label": "Text 2",
-        "name": "text2",
-        "valueType": "string"
-      }
-    ]
-  },
+  
   {
     "id": "hero",
     "fields": [

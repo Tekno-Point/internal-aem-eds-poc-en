@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "tabs"
+      "tabs",
+      "form"
     ]
   },
   {
@@ -43,7 +44,7 @@
   {
     "id": "tabs",
     "components": [
-      "form"
+      "tabs-item"
     ]
   }
 ]
