@@ -20,7 +20,8 @@
       "custom-text",
       "custom-richtext",
       "custom-richtextblock",
-      "term-insurance"
+      "term-insurance",
+      "term-Insurance-carousel"
     ]
   },
   {
@@ -54,6 +55,12 @@
     "id": "custom-richtextblock",
     "components": [
       "custom-richtext-item"
+    ]
+  },
+  {
+    "id": "term-Insurance-carousel",
+    "components": [
+      "term-Insurance-carousel-item"
     ]
   }
 ]
