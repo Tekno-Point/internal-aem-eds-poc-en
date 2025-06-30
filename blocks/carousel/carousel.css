@@ -1,12 +1,18 @@
 @import url("../swiper/swiper.css");
 
+.carousel{
+  max-width: 1440px;
+  width: 100%;
+  overflow: hidden;
+}
+
 .carousel-wrapper {
     position: relative;
 }
 .swiper-wrapper {
     max-width: 1265px;
     width: 100%;
-    top: 40px;
+    margin-top: 64px;
     padding: 48px;
 }
 .swiper-slide {
@@ -81,11 +87,11 @@
     position: relative;
     
 }
-.swiper-pagination-bullet {
-    width: 200px;
+/* h3 .swiper-pagination-bullet {
+    width: 400px !important;
     border-radius: 0px;
     color: gray;
-    font-size: 15px;
+    font-size: 13px;
     padding: 12px 24px;
     border-left: 2px solid black;
     background-color: white;
@@ -94,7 +100,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .swiper-pagination-bullet-active{
     color: red;
@@ -188,7 +194,8 @@
 
 .swiper-slide {
   display: flex;
-  justify-content: center;
+  justify-content: center ;
+  gap: 40px;
   align-items: center;
 }
 
@@ -214,20 +221,33 @@
 }
 
 .swiper-pagination {
-  display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1rem;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
-.swiper-pagination-bullet {
+h3.swiper-pagination-bullet {
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: 0.6;
   cursor: pointer;
   transition: all 0.3s ease;
+
+   width: 400px !important;
+    border-radius: 0px;
+    color: gray;
+    font-size: 21px;
+    padding: 12px 24px;
+    border-left: 2px solid black;
+    background-color: white;
+    /* opacity: 1; */
+    font-weight: 700;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+     font-family: "TSTAR-PRO-Regular";
 }
 
 .swiper-pagination-bullet img {
@@ -237,6 +257,7 @@
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: 1;
+  color: #ed1c24;
 }
 
 .swiper-pagination-bullet span {
@@ -259,13 +280,31 @@
   position: absolute;
   top: 0;
   transform: translateY(-150%);
-  z-index: 10;
+  z-index: 1;
 }
 
 .swiper-button-prev {
   left: 10px;
+      top: 90px;
 }
 
 .swiper-button-next {
   right: 10px;
+      top: 90px;
+}
+
+
+.swiper-pagination {
+    max-width: 1265px;
+    width: 100%;
+    /* overflow-y:scroll; */
+    display: flex;
+    gap: 154px;
+}
+
+
+.inner-innerSub-1>h2{
+    font-family: "TSTAR-PRO-Regular";
+  padding-bottom: 20px;
+  border-bottom: 1px solid #a5a5a5;
 }
