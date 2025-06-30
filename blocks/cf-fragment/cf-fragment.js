@@ -33,7 +33,6 @@ export default async function decorate(block) {
     if (!block.textContent.trim()) {
         return block;
     }
-
     const configResp = await fetch('/config.json');
     const config = await configResp.json();
     let origin = config.data[0].value;
@@ -58,25 +57,25 @@ export default async function decorate(block) {
         console.log("error while fetching")
     }
 
-    // const itemData = respData?.data?.formByPath?.item;
-    const itemData = {
-        "_path": "/content/dam/internal-aem-eds-poc/calculator",
-        "title": "Dream Bigger, Plan Smarter With Our",
-        "heading": "EMI Calculator",
-        "circletext": "MONTHLY PAYABALE AMOUNT",
-        "loanTypeTittle": "Loan Type",
-        "loanTypeText": "Personal Loan",
-        "loanAmountText": "Loan Amount",
-        "loanAmountMin": "100000",
-        "loanAmountMax": "5000000",
-        "interestRateText": "Interest Rate",
-        "interestRateMin": "9.99%",
-        "interestRateMax": "30%",
-        "loanTenure": "Loan Tenure1",
-        "loanTenureMin": "12",
-        "loanTenureMax": "84",
-        "button": null
-    }
+    const itemData = respData?.data?.formByPath?.item;
+    // const itemData = {
+    //     "_path": "/content/dam/internal-aem-eds-poc/calculator",
+    //     "title": "Dream Bigger, Plan Smarter With Our",
+    //     "heading": "EMI Calculator",
+    //     "circletext": "MONTHLY PAYABALE AMOUNT",
+    //     "loanTypeTittle": "Loan Type",
+    //     "loanTypeText": "Personal Loan",
+    //     "loanAmountText": "Loan Amount",
+    //     "loanAmountMin": "100000",
+    //     "loanAmountMax": "5000000",
+    //     "interestRateText": "Interest Rate",
+    //     "interestRateMin": "9.99%",
+    //     "interestRateMax": "30%",
+    //     "loanTenure": "Loan Tenure1",
+    //     "loanTenureMin": "12",
+    //     "loanTenureMax": "84",
+    //     "button": null
+    // }
 
     const {
         title = '',
@@ -192,8 +191,9 @@ export default async function decorate(block) {
                             <span>${parsedLoanTenureMax} Months</span>
                         </div>
                     </div>
-
-                    ${button ? `<button class="apply-button">${button}</button>` : ''}
+                    <div class="btn-wrap">
+                     <button class="apply-button">${button}</button> 
+                     </div>
                 </div>
             </div>
         </div>
@@ -221,9 +221,9 @@ export default async function decorate(block) {
         const totalPayable = emi * tenure;
         const totalInterest = totalPayable - principal;
 
-        monthlyPayableAmountEl.textContent = Number(emi).toLocaleString('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0, maximumFractionDigits: 0 });
-        principalAmountDisplayEl.textContent = Number(principal).toLocaleString('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0, maximumFractionDigits: 0 });
-        interestPayableDisplayEl.textContent = Number(totalInterest).toLocaleString('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        monthlyPayableAmountEl.textContent ="₹  "+ Number(emi).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        principalAmountDisplayEl.textContent = "₹  "+ Number(principal).toLocaleString('en-IN', {  minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        interestPayableDisplayEl.textContent = "₹  "+ Number(totalInterest).toLocaleString('en-IN', {  minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
         updateRangeSliderFill(loanAmountRange);
         updateRangeSliderFill(interestRateRange);

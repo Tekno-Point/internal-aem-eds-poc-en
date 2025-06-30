@@ -1,4 +1,4 @@
-.section.cf-fragment-container{
+.section.cf-fragment-container {
     overflow: hidden;
 }
 
@@ -22,13 +22,14 @@
 
 .emi-title {
     font-size: 24px;
-    color: #bdc3c7;
+    color: #fff;
     margin: 0;
+    font-weight: 400;
 }
 
 .emi-heading {
     font-size: 44px;
-    font-weight: 700;
+    font-weight: 400;
     color: #ffffff;
     line-height: 1.2;
     margin: 0;
@@ -88,7 +89,8 @@
 
 .circle-value {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 400;
+
 }
 
 .legend {
@@ -315,29 +317,32 @@ input[type="range"]::-ms-track {
     padding: 12px 24px;
 }
 
-.apply-button {
-    background-color: #FF6600;
-    /* Orange button */
-    color: #ffffff;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+.btn-wrap {
+    text-align: center;
     width: 100%;
-    margin-top: 15px;
-    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.4);
+    display: flex;
+    justify-content: center;
+}
+
+.apply-button {
+    background-color: #fff;
+    color: #034EA2;
+    margin-top: 20px;
+    padding: 10px 60px;
+    font-size: 14px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: Montserrat-Bold;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .apply-button:hover {
-    background-color: #e67e22;
-    /* Slightly darker orange on hover */
-    transform: translateY(-2px);
+    background-color: #034EA2;
+    color: #fff;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .emi-content {
         flex-direction: column;
@@ -359,15 +364,57 @@ input[type="range"]::-ms-track {
     }
 
     .circle-chart-container {
-        width: 200px;
-        height: 200px;
+        width: 210px;
+        height: 210px;
     }
 
     .circle-value {
         font-size: 26px;
     }
-    .value-txt-wrapper .input-display-wrapper{
+
+    .value-txt-wrapper .input-display-wrapper {
         width: 40%;
+    }
+
+    .emi-title {
+        font-size: 17px;
+    }
+
+    .circle-text-label {
+        font-size: 10px;
+    }
+
+    .legend-label,
+    .legend-value {
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    .legend-color {
+        min-width: 16px;
+        height: 16px;
+    }
+
+    .legend {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .control-group label {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .value-display {
+        font-size: 20px;
+    }
+
+    .range-labels {
+        font-size: 12px;
+    }
+
+    .apply-button {
+        width: 100%;
     }
 }
 
