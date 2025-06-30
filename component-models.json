@@ -166,7 +166,7 @@
     ]
   },
   {
-    "id": "card",
+    "id": "tabs-item",
     "fields": [
       {
         "component": "richtext",
