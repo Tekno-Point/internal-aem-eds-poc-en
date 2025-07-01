@@ -25,7 +25,8 @@
     "/content/internal-aem-eds-poc/concordia/forms/rate-calculator:/concordia/forms/rate-calculator.json",
     "/content/internal-aem-eds-poc/concordia/forms/agency-search:/concordia/forms/agency-search.json",
     "/content/internal-aem-eds-poc/poonawallafincorp/form/subscription:/poonawallafincorp/form/subscription.json",
-    "/content/internal-aem-eds-poc/poonawallafincorp/form/form-email:/poonawallafincorp/form/form-email.json"
+    "/content/internal-aem-eds-poc/poonawallafincorp/form/form-email:/poonawallafincorp/form/form-email.json",
+    "/content/internal-aem-eds-poc/srilankan-airlines/footer-form:/srilankan-airlines/footer-form.json"
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
