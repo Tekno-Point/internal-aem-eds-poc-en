@@ -112,6 +112,10 @@
           {
             "name": "Primary Button",
             "value": "btn-primary"
+          },
+          {
+            "name": "Text Center",
+            "value": "text-center"
           }
         ]
       }
