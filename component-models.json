@@ -195,13 +195,25 @@
     "id": "carousel",
     "fields": [
       {
-        "component": "select",
+        "component": "multiselect",
         "name": "classes",
         "label": "Carousel Style",
         "options": [
           {
             "name": "Pagination",
             "value": "pagination"
+          },
+          {
+            "name": "Image Link Carousel",
+            "value": "image-link-carousel"
+          },
+          {
+            "name": "Card Carousel",
+            "value": "card-carousel"
+          },
+          {
+            "name": "Image Carousel",
+            "value": "image-carousel"
           }
         ]
       }
