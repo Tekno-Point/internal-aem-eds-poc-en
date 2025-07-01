@@ -207,7 +207,7 @@ h3.swiper-pagination-bullet {
     position: absolute;
     top: 0;
     transform: translateY(-150%);
-    z-index: 1;
+    z-index: 13;
 }
 
 .swiper-button-prev {
@@ -242,6 +242,7 @@ h3.swiper-pagination-bullet {
 .swiper-pagination > h3 {
     width: max-content;
     padding: 7px;
+        padding-left: 31px;
 }
 
 #xsens-fi-technology {
