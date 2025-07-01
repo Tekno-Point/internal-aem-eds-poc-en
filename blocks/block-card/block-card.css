@@ -1,6 +1,6 @@
 @import url("../cards/cards.css");
 
-section .block-card-container{
+.section.block-card-container{
 
     margin: 0 auto;
 
