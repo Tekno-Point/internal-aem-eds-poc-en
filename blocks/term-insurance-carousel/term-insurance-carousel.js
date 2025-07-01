@@ -4,14 +4,16 @@ export default function decorate(block) {
     block.classList.add('swiper');
 
     const swiperWrapper = document.createElement('div');
-    const swiperPagination = document.createElement('div');
-    swiperPagination.classList.add('swiper-pagination');
     swiperWrapper.classList.add('swiper-wrapper');
+
+    const swiperButtonPrev = document.createElement('div');
+    const swiperButtonNext = document.createElement('div');
+    swiperButtonPrev.classList.add('swiper-button-prev');
+    swiperButtonNext.classList.add('swiper-button-next');
 
     Array.from(block.children).forEach((row, index) => {
         row.classList.add('swiper-slide');
 
-        // Add unique class to each direct <div> inside .swiper-slide
         const divs = row.querySelectorAll(':scope > div');
         divs.forEach((div, divIndex) => {
             div.classList.add(`swiper-slide-cards-${divIndex + 1}`);
@@ -21,25 +23,27 @@ export default function decorate(block) {
     });
 
     block.appendChild(swiperWrapper);
-    block.appendChild(swiperPagination);
+    block.appendChild(swiperButtonPrev);
+    block.appendChild(swiperButtonNext);
 
     Swiper(block, {
         slidesPerView: "auto",
         spaceBetween: 20,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: swiperPagination,
-            clickable: true,
+        // loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: false,
+        navigation: {
+            nextEl: swiperButtonNext,
+            prevEl: swiperButtonPrev,
         },
         breakpoints: {
             769: {
-                spaceBetween: 32,
+                spaceBetween: 20,
                 slidesOffsetBefore: 0,
                 slidesOffsetAfter: 0,
             }
