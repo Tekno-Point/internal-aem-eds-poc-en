@@ -79,4 +79,8 @@
     .block-card > ul > li > .cards-card-body {
         left: 5px;
     }
+
+    .block-card-container>.block-card-wrapper{
+        width: 100%;
+    }
 }
