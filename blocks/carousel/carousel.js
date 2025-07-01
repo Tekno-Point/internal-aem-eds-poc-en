@@ -36,6 +36,13 @@ function swiperInit(block) {
         }
     }
 
+    if (block.classList.contains('banner-carousel')) {
+        swiperConfig.breakpoints = {
+            320 : {slidesPerView : 1},
+            1024 : {slidesPerView : 1}
+        }
+    }
+
     if (block.classList.contains('services-carousel') || block.classList.contains('experience-carousel')) {
         const slides = block.querySelectorAll('.swiper-slide');
         slides.forEach(slide => {
@@ -57,7 +64,7 @@ function swiperInit(block) {
         }
         else if(block.classList.contains('services-carousel')) {
             swiperConfig.breakpoints = {
-                320 : {slidesPerView : 1, slidesPerGroup : 1},
+                320 : {slidesPerView : 1, slidesPerGroup : 1, spaceBetween : 15},
                 1024 : {slidesPerView : 4, slidesPerGroup : 4, spaceBetween : 30}
             }
         }

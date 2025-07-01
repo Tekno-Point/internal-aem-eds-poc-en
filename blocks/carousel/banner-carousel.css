@@ -1,0 +1,32 @@
+.section.carousel-container .carousel-wrapper:has(.carousel.banner-carousel) {
+    max-width: unset;
+}
+
+.carousel.banner-carousel {
+    overflow: hidden;
+}
+
+.carousel.banner-carousel .swiper-slide div:has(picture) {
+    height: 630px;
+    width: 100%;
+}
+
+.carousel.banner-carousel .swiper-slide div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel.banner-carousel .swiper-pagination {
+    top: 70%;
+}
+
+.carousel.banner-carousel .swiper-pagination .swiper-pagination-bullet {
+    width: 30px;
+    height: 3px;
+    border-radius: unset;
+}
+
+.carousel.banner-carousel .swiper-pagination .swiper-pagination-bullet-active {
+    background: #fff;
+}
