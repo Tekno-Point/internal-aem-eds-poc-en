@@ -223,7 +223,7 @@ h3.swiper-pagination-bullet {
 .btnWrapper > .swiper-pagination{
     max-width: 1087px;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     gap: 60px;
     justify-content: flex-start;

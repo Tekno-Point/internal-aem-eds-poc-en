@@ -147,12 +147,12 @@ export default function decorate(block) {
 
   const leftArrow = document.createElement("div");
   leftArrow.classList.add("swiper-button-prev");
-  leftArrow.textContent = "<";
+//   leftArrow.textContent = "<";
   btnWrapper.appendChild(leftArrow);
 
   const rightArrow = document.createElement("div");
   rightArrow.classList.add("swiper-button-next");
-  rightArrow.textContent = ">";
+//   rightArrow.textContent = ">";
   btnWrapper.appendChild(rightArrow);
 
   block.appendChild(btnWrapper);
