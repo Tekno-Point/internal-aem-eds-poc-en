@@ -269,11 +269,6 @@ input::placeholder {
 .form-wrapper label {
     display: none;
 }
-main > .section > div {
-    max-width: 1565px;
-    padding: 0;
-    margin: 0;
-}
 .section .default-content-wrapper .button-container strong a {
     display: inline-flex;
     align-items: center;
