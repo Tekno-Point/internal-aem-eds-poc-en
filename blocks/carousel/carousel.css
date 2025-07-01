@@ -309,4 +309,8 @@ h3.swiper-pagination-bullet {
    .carousel > .swiper-wrapper {
           margin-top: 69px;
     }
+
+    .carousel-container>.carousel-wrapper{
+        width: 100%;
+    }
 }
