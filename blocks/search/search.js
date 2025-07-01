@@ -1,5 +1,8 @@
-import { createOptimizedPicture, decorateIcons } from "../../scripts/aem.js";
-import { fetchPlaceholders } from "../../scripts/placeholders.js";
+import {
+  createOptimizedPicture,
+  decorateIcons,
+  fetchPlaceholders,
+} from "../../scripts/aem.js";
 
 const searchParams = new URLSearchParams(window.location.search);
 
