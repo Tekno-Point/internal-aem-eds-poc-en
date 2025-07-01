@@ -305,4 +305,8 @@ h3.swiper-pagination-bullet {
     .swiper-button-next {
         right: 0px;
     }
+
+    .carousel > .swiper-wrapper {
+          margin-top: 69px;
+    }
 }
