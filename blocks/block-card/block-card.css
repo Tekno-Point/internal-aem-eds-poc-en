@@ -80,7 +80,7 @@
         left: 5px;
     }
 
-    /* .block-card-container>.block-card-wrapper{
-        width: 100%;
-    } */
+    .block-card-container>.block-card-wrapper{
+       padding: 0px;
+    }
 }
