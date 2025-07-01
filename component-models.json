@@ -105,6 +105,11 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "text",
+        "name": "id",
+        "label": "Id"
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
@@ -112,6 +117,14 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "viewmore-sec1",
+            "value": "sec1"
+          },
+          {
+            "name": "viewmore-sec2",
+            "value": "sec2"
           }
         ]
       }

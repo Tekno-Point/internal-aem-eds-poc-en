@@ -1,0 +1,78 @@
+.explormoreflights-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 120px;
+  font-family: Arial, sans-serif;
+}
+
+.explormoreflights-container h2 {
+  text-align: center;
+  color: #0073cf;
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+/* Use flex on the UL to make columns */
+.explormoreflights-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 60px; 
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  max-width: 1100px;
+}
+
+/* Each <li> becomes a flex item to form column blocks */
+.explormoreflights-container li {
+  flex: 0 0 calc(33.33% - 40px); /* 3 columns with spacing */
+  margin-bottom: 10px;
+}
+
+/* Link styling */
+.explormoreflights-container a {
+  color: #0073cf;
+  text-decoration: none;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.explormoreflights-container a:hover {
+  color: #042540;
+}
+.content3-div-hide {
+    display: none;
+}
+
+.content3-div-show {
+    display: block;
+}
+
+.view-more-btn{
+    font-size: 0.875rem;
+    width: 146px;
+    text-align: center;
+    display: block;
+    margin: 20px auto 0 auto; /* top margin, auto left/right for center */
+    border-radius: 20px;
+    background: #4197D3;
+    color: #FFF;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.14px;
+    padding: 10px 15px;
+    display: block;
+    cursor: pointer;
+}
+
+/* Responsive: stack in one column */
+@media (max-width: 768px) {
+  .explormoreflights-container ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .explormoreflights-container li {
+    flex: 0 0 100%;
+  }
+}
