@@ -335,5 +335,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "term-plan-carousel-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
