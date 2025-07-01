@@ -179,7 +179,7 @@
     ]
   },
   {
-    "id": "explormoreflights",
+    "id": "explormore-flights",
     "fields": [
       {
         "component": "richtext",
