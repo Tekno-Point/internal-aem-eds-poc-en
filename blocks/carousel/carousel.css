@@ -103,7 +103,7 @@
 }
 
 .swiper-pagination-bullet {
-    margin: 0 4px;
+    margin: 4 4px;
     opacity: 0.6;
     cursor: pointer;
 }
@@ -230,7 +230,7 @@ h3.swiper-pagination-bullet {
     margin-left: 53px;
     gap: 1rem;
     margin-bottom: 1rem;
-    margin-top: 12px;
+    margin-top: 2px;
 }
 
 .inner-innerSub-1 > h2 {
@@ -241,6 +241,7 @@ h3.swiper-pagination-bullet {
 
 .swiper-pagination > h3 {
     width: max-content;
+    padding: 7px;
 }
 
 #xsens-fi-technology {
