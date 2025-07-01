@@ -123,10 +123,19 @@ footer .footer.block>div .section:not(:last-of-type) {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.footer.block .section:nth-child(2) .default-content-wrapper ul li ul li:hover {
+  background-color: #0088dd;
+  border-radius: 50%;
 }
 
 .footer.block .section:nth-child(2) .default-content-wrapper ul li ul li .icon {
-  height: 33px;
+  max-height: 24px;
+  height: 100%;
   max-width: 40px;
 }
 
