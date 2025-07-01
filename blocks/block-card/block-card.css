@@ -18,6 +18,7 @@
     list-style: none;
     display: flex;
     gap: 8px;
+        justify-content: center;
 }
 .block-card > ul > li >.cards-card-body>p{
     position: absolute;
