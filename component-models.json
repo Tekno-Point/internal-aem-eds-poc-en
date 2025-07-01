@@ -204,8 +204,7 @@
               }
             ]
           }
-        ],
-        "valueType": "string[]"
+        ]
       },
       {
         "component": "boolean",
