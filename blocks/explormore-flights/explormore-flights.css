@@ -1,11 +1,11 @@
-.explormoreflights-container {
+.explormore-flights-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 120px;
   font-family: Arial, sans-serif;
 }
 
-.explormoreflights-container h2 {
+.explormore-flights-container h2 {
   text-align: center;
   color: #0073cf;
   font-size: 28px;
@@ -13,7 +13,7 @@
 }
 
 /* Use flex on the UL to make columns */
-.explormoreflights-container ul {
+.explormore-flights-container ul {
   display: flex;
   flex-wrap: wrap;
   gap: 0 60px; 
@@ -24,20 +24,20 @@
 }
 
 /* Each <li> becomes a flex item to form column blocks */
-.explormoreflights-container li {
+.explormore-flights-container li {
   flex: 0 0 calc(33.33% - 40px); /* 3 columns with spacing */
   margin-bottom: 10px;
 }
 
 /* Link styling */
-.explormoreflights-container a {
+.explormore-flights-container a {
   color: #0073cf;
   text-decoration: none;
   font-size: 16px;
   text-decoration: underline;
 }
 
-.explormoreflights-container a:hover {
+.explormore-flights-container a:hover {
   color: #042540;
 }
 .content3-div-hide {
@@ -67,12 +67,12 @@
 
 /* Responsive: stack in one column */
 @media (max-width: 768px) {
-  .explormoreflights-container ul {
+  .explormore-flights-container ul {
     flex-direction: column;
     gap: 0;
   }
 
-  .explormoreflights-container li {
+  .explormore-flights-container li {
     flex: 0 0 100%;
   }
 }
