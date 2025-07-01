@@ -208,16 +208,20 @@
             "value": "pagination"
           },
           {
-            "name": "Image Link Carousel",
-            "value": "image-link-carousel"
+            "name": "Services Carousel",
+            "value": "services-carousel"
           },
           {
-            "name": "Card Carousel",
-            "value": "card-carousel"
+            "name": "Deals Carousel",
+            "value": "deals-carousel"
           },
           {
-            "name": "Image Carousel",
-            "value": "image-carousel"
+            "name": "Banner Carousel",
+            "value": "banner-carousel"
+          },
+          {
+            "name": "Experience Carousel",
+            "value": "experience-carousel"
           }
         ]
       }
