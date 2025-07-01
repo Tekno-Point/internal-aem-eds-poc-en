@@ -14,6 +14,9 @@
       "cards",
       "columns",
       "fragment",
+      "why-choose-us",
+      "embed",
+      "carousel",
       "buy-card",
       "compare",
       "splendor-spec-tab",
@@ -33,7 +36,18 @@
   },
   {
     "id": "column",
-    "components": ["text", "image", "button", "title"]
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
+    ]
   },
   {
     "id": "buy-card",
