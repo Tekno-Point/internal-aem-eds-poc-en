@@ -60,6 +60,7 @@
     border: none;
 }
 .innerSub1 :is(ul, li) {
+  /* max-width: 57%; */
     display: inline;
     padding: 0;
     margin: 0;
@@ -107,7 +108,9 @@ main > .banner-image img {
     width: 100%;
     padding: 0px;
 }
-@media (min-width: 425px) {
+
+
+@media (max-width: 425px) {
   .innerSub1 {
     display: grid;
     background-color: #000000;
@@ -144,6 +147,13 @@ main > .banner-image img {
     );
     color: #fff;
     border: none;
+  }
+
+  .innerSub1 ul > li > ul > li{
+    font-size: 1.5rem;
+  }
+  .innerSub1 :is(ul, li) {
+    max-width: 57%;
   }
 }
 
