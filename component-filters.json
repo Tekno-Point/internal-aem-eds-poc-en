@@ -23,7 +23,8 @@
       "splendor-tab",
       "hero-carousel-block",
       "block-card",
-      "blogs-swiper"
+      "blogs-swiper",
+      "form"
     ]
   },
   {
@@ -36,18 +37,11 @@
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   },
   {
     "id": "carousel",
-    "components": [
-      "carousel-item"
-    ]
+    "components": ["carousel-item"]
   },
   {
     "id": "buy-card",
