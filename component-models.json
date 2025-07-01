@@ -190,5 +190,15 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"search",
+    "fields":[
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      }
+    ]
   }
 ]
