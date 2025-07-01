@@ -147,6 +147,10 @@
     .compare-child-2-inner-1 > ul > li > ul > li > h4 {
         font-size: 20px;
     }
+
+    .compare-container{
+        width: 100%;
+    }
 }
 
 
