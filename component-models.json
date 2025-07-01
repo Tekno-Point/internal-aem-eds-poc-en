@@ -1,5 +1,29 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "keywords",
+        "multi": true,
+        "label": "Keywords"
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
@@ -105,51 +129,13 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
-        "component": "text",
-        "name": "id",
-        "label": "Id"
-      },
-      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
         "options": [
           {
-            "name": "Wrapper Style",
-            "value": "wrapper"
-          },
-          {
-            "name": "Table Style",
-            "value": "table-wrapper"
-          },
-          {
-            "name": "Businessloan",
-            "value": "Businessloan"
-          },
-          {
-            "name": "Margin Classes",
-            "children": [
-              {
-                "name": "Header's Menu Img Right",
-                "value": "menu-img"
-              }
-            ]
-          },
-          {
-            "name": "Portlet-Journal",
-            "value": "Portlet-Journal"
-          },
-          {
-            "name": "Quick Loans",
-            "value": "quick-loans"
-          },
-          {
-            "name": "Quick Loans Image Dec",
-            "value": "quick-loans-img-dec"
-          },
-          {
-            "name": "Quick Loans Image Mob",
-            "value": "quick-loans-img-mob"
+            "name": "Highlight",
+            "value": "highlight"
           }
         ]
       }
@@ -204,52 +190,12 @@
     ]
   },
   {
-    "id": "search",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "apollo search",
-            "children": [
-              {
-                "name": "Search Block",
-                "value": "apollo-search"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "name": "query Index",
-        "label": "url"
-      }
-    ]
-  },
-  {
     "id": "hero",
     "fields": [
       {
         "component": "reference",
         "valueType": "string",
         "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "Phoneimage",
         "label": "Image",
         "multi": false
       },
@@ -268,77 +214,5 @@
         "valueType": "string"
       }
     ]
-  },
-  {
-    "id": "breadcrumb",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "number",
-        "name": "breadcrumb",
-        "value": "",
-        "label": "breadcrumb"
-      }
-    ]
-  },
-  {
-    "id": "form",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "form-url",
-        "label": "form path",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "api-url",
-        "label": "api-url",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "Phoneimage",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "heading",
-        "label": "Accordion Heading",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "summary",
-        "label": "Accordion Summary",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "knowmore",
-        "label": "Know More Button",
-        "valueType": "string",
-        "value": ""
-      }
-    ]
   }
- 
 ]
