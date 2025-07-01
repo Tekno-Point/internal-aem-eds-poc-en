@@ -233,8 +233,15 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
+        "name": "carousel_image",
+        "label": "Desktop Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "carousel_image",
+        "label": "Mobile Image",
         "multi": false
       },
       {
