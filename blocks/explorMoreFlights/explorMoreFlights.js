@@ -1,50 +1,58 @@
 export default function decorate(block) {
-    debugger
   console.log("Content: custom-richtext-item", block);
-  function addClassesContent() {
-    const lilist = document.querySelector(".explormoreflights-container ul");
+
+  function setupSection(section) {
+    const lilist = section.querySelector("ul");
     if (lilist) {
       const listItems = lilist.querySelectorAll("li");
       listItems.forEach((item, index) => {
         if (index < 15) {
-          item.classList.add(`content3-div-show`);
+          item.classList.add("content3-div-show");
         } else {
-          item.classList.add(`content3-div-hide`);
+          item.classList.add("content3-div-hide");
+        }
+      });
+    }
+
+    if (!section.querySelector(".view-more-btn")) {
+      const button = document.createElement("button");
+      button.textContent = "View More";
+      button.className = "view-more-btn";
+      section.appendChild(button);
+
+      button.addEventListener("click", function () {
+        const items = Array.from(section.querySelector("ul").children);
+
+        const isExpanded = button.textContent === "View Less";
+
+        if (isExpanded) {
+          items.forEach((item, index) => {
+            if (index < 15) {
+              item.classList.add("content3-div-show");
+              item.classList.remove("content3-div-hide");
+            } else {
+              item.classList.add("content3-div-hide");
+              item.classList.remove("content3-div-show");
+            }
+          });
+          button.textContent = "View More";
+        } else {
+          // Expand all items
+          items.forEach((item) => {
+            item.classList.add("content3-div-show");
+            item.classList.remove("content3-div-hide");
+          });
+          button.textContent = "View Less";
         }
       });
     }
   }
- 
-  if (!document.querySelector('.view-more-btn')) {
-     addClassesContent();
-      // Add Show More Button
-      const button = document.createElement('button')
-      button.textContent = "View More"
-      button.className = "view-more-btn"
-      document.querySelector('.explormoreflights-container').appendChild(button)
 
-      // Show More btn Click Event
-      document.querySelector('.view-more-btn').addEventListener('click', function () {
-          Array.from(document.querySelector('.explormoreflights-container ul').children).forEach(function (item, index) {
-              if (!item.classList.contains('content3-div-show')) {
-                  item.classList.add(`content3-div-show`)
-                  item.classList.remove(`content3-div-hide`)
-              } else {
-                  if (index < 2) {
-                      item.classList.add(`content3-div-show`)
-                  } else {
-                      item.classList.add(`content3-div-hide`)
-                      item.classList.remove(`content3-div-show`)
-                  }
-              }
-          })
-          document.querySelector('.view-more-btn').classList.remove(`content3-div-hide`)
-          if (document.querySelector('.view-more-btn').textContent == 'View More') {
-              document.querySelector('.view-more-btn').textContent = 'View Less'
-          } else if (document.querySelector('.view-more-btn').textContent == 'View Less') {
-              document.querySelector('.view-more-btn').textContent = 'View More'
-          }
-          console.log("out")
-      })
-  }
+  const allSections = document.querySelectorAll(
+    ".explormoreflights-container, #section-one, #section-two"
+  );
+
+  allSections.forEach((section) => {
+    setupSection(section);
+  });
 }
