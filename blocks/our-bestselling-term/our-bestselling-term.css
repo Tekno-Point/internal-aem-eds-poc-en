@@ -1,4 +1,4 @@
-@import url("../term-insurance-carousel/swiper-bundle.min.css");
+@import url("../our-bestselling-term/swiper-bundle.min.css");
 main > .section.our-bestselling-term-container {
   margin: 0;
   padding: 0;
@@ -20,4 +20,165 @@ main > .section.our-bestselling-term-container {
 main > .section.our-bestselling-term-container p {
   margin: 0;
   padding: 0;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term {
+  overflow: hidden;
+  padding-bottom: 35px;
+  height: auto;
+  position: unset;
+}
+@media (max-width: 768px) {
+  main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper {
+    margin-left: 2px;
+  }
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide {
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background-color: #f2f7fb;
+  position: relative;
+  width: 368px !important;
+  display: inline-block;
+  height: 421px;
+  border: 1px solid #E6E7E8;
+  margin-top: unset;
+  margin-right: 35px;
+  margin-bottom: 75px;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child {
+  font-weight: 700;
+  font-size: 17px;
+  overflow: hidden;
+  color: #333333;
+  padding: 20px;
+  line-height: normal;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:first-child {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 87px 18px 20px;
+  min-height: 95px;
+  position: relative;
+  font-family: "HelveticaNeueLTStd-Bd", sans-serif;
+  font-size: 24px;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:first-child li {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: -0.007em;
+  color: #58595B;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:first-child li:last-child {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.007em;
+  color: #58595B;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) {
+  box-shadow: 0px 0px 5px rgba(88, 89, 91, 0.15);
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 16px 20px 36px 20px;
+  min-height: 326px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 92%;
+  left: -5px;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child {
+  display: flex;
+  flex-direction: column;
+  height: 178px;
+  overflow: auto;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: #92bfd6 #f1f1f1;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.007em;
+  color: #A7A9AC;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child ul li {
+  display: flex;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child {
+  display: flex;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: auto;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:first-child {
+  background: #D62049;
+  border-radius: 8px;
+  font-family: "HelveticaNeueLTStd-Md";
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.007em;
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: unset;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:last-child {
+  border: 1px solid #D62049;
+  padding: 11px 23px;
+  font-family: "HelveticaNeueLTStd-Md";
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.007em;
+  background: transparent !important;
+  color: #d62049 !important;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child ol {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child ol li {
+  font-family: "helveticaregular";
+  font-size: 10px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: -0.007em;
+  color: #58595B;
 }/*# sourceMappingURL=our-bestselling-term.css.map */

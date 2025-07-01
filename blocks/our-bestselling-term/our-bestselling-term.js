@@ -24,10 +24,6 @@ export default function decorate(block) {
     block.appendChild(swiperPagination);
 
     Swiper(block, {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 0,
         loop: true,
         autoplay: {
             delay: 5000,
@@ -37,13 +33,25 @@ export default function decorate(block) {
             el: swiperPagination,
             clickable: true,
         },
+        slidesPerView: 1.2, // Default for small screens (can scroll more than 1)
+        spaceBetween: 16,
         breakpoints: {
-            769: {
+            480: {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            1024: {
+                slidesPerView: 3.2,
                 spaceBetween: 32,
-                slidesOffsetBefore: 0,
-                slidesOffsetAfter: 0,
-            }
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
         },
     });
 }
-
