@@ -49,7 +49,7 @@ export default function decorate(block) {
   }
 
   const allSections = document.querySelectorAll(
-    ".explormoreflights-container, #section-one, #section-two"
+    ".explormore-flights-container, #section-one, #section-two"
   );
 
   allSections.forEach((section) => {
