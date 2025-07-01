@@ -92,6 +92,17 @@
             "value": "secondary"
           }
         ]
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Button Style",
+        "options": [
+          {
+            "name": "Blue Button",
+            "value": "blue-button"
+          }
+        ]
       }
     ]
   },

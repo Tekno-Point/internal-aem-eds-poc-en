@@ -1,1 +1,9 @@
 @import url('../carousel/swiper-bundle.min.css');
+@import url('card-carousel.css');
+@import url('image-link-carousel.css');
+
+.section.carousel-container .carousel-wrapper {
+    position: relative;
+    max-width: 1140px;
+    padding: 0;
+}

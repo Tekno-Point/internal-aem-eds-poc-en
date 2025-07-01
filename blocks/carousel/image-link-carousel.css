@@ -1,0 +1,95 @@
+.carousel.image-link-carousel {
+    margin-top: 30px;
+    padding: 0 15px 15px 0;
+    overflow: hidden
+}
+
+.carousel.image-link-carousel .swiper-slide {
+    border-radius: 16px;
+    box-shadow: 6px 8px 12px rgba(0, 135, 219, 0.24);
+    border: 1px solid rgba(0, 136, 221, 0.08);
+    background-color: #fff;
+}
+
+.carousel.image-link-carousel .swiper-slide div picture,
+.carousel.image-link-carousel .swiper-slide div > a  {
+    display: block;
+}
+
+.carousel.image-link-carousel .swiper-slide div:has(picture),
+.carousel.image-link-carousel .swiper-slide div picture,
+.carousel.image-link-carousel .swiper-slide div > a {
+    height: 246px;
+    width: 100%;
+}
+
+.carousel.image-link-carousel .swiper-slide div img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.carousel.image-link-carousel .swiper-slide h4 {
+    text-align: center;
+    padding: 20px 20px 0;
+}
+
+.carousel.image-link-carousel .swiper-slide h4,
+.carousel.image-link-carousel .swiper-slide h4 a {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #0088dd;
+    margin: 0;
+}
+
+.carousel.image-link-carousel .swiper-slide h4 a:hover {
+    color: #153d8a;
+}
+
+.carousel.image-link-carousel .swiper-slide h4 a {
+    text-decoration: none;
+}
+
+.carousel.image-link-carousel .swiper-slide p {
+    text-align: center;
+    font-size: 15px;
+    color: #676767;
+    line-height: 24px;
+    margin: 0 0 14px;
+    padding: 20px 20px 0;
+    max-height: 96px;
+    min-height: 72px;
+}
+
+.carousel.image-link-carousel .swiper-slide p.button-container {
+    padding: 0;
+    margin: 0 0 20px;
+    max-height: unset;
+    min-height: unset;
+}
+
+.carousel.image-link-carousel .swiper-slide p.button-container a {
+    margin: 0;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: #0088dd;
+    border-radius: 8px;
+    transition: all 0.30s linear;
+}
+
+.carousel.image-link-carousel .swiper-slide p.button-container a:hover {
+    background: #153d8a;
+}
+
+.carousel.image-link-carousel .swiper-pagination {
+    top: 100%;
+}
+
+.carousel.image-link-carousel .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+}
