@@ -240,7 +240,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "carousel_image",
+        "name": "carousel_image-mob",
         "label": "Mobile Image",
         "multi": false
       },
