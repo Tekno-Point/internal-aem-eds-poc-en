@@ -92,6 +92,21 @@
             "value": "secondary"
           }
         ]
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Primary Button",
+            "value": "btn-primary"
+          },
+          {
+            "name": "Text Center",
+            "value": "text-center"
+          }
+        ]
       }
     ]
   },

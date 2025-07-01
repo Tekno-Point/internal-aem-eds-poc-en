@@ -1,10 +1,10 @@
-.carousel.card-carousel {
+.carousel.deals-carousel {
     padding-right: 15px;
     margin-top: 50px;
     overflow: hidden;
 }
 
-.carousel.card-carousel .swiper-slide {
+.carousel.deals-carousel .swiper-slide {
     display: flex;
     margin-bottom: 25px;
     background-color: #fff;
@@ -13,24 +13,24 @@
     border-radius: 16px;
 }
 
-.carousel.card-carousel .swiper-slide div picture {
+.carousel.deals-carousel .swiper-slide div picture {
     display: block;
 }
 
-.carousel.card-carousel .swiper-slide div:has(picture),
-.carousel.card-carousel .swiper-slide div picture {
+.carousel.deals-carousel .swiper-slide div:has(picture),
+.carousel.deals-carousel .swiper-slide div picture {
     height: 254px;
     width: 254px;
 }
 
-.carousel.card-carousel .swiper-slide div img {
+.carousel.deals-carousel .swiper-slide div img {
     width: 100%;
     height: 100%;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
 
-.carousel.card-carousel .swiper-slide h4 {
+.carousel.deals-carousel .swiper-slide h4 {
     font-style: 27px;
     line-height: 29px;
     font-weight: 500;
@@ -39,7 +39,7 @@
     color: #000000DE;
 }
 
-.carousel.card-carousel .swiper-slide p {
+.carousel.deals-carousel .swiper-slide p {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -50,13 +50,13 @@
     overflow: hidden;
 }
 
-.carousel.card-carousel .swiper-slide p.button-container {
+.carousel.deals-carousel .swiper-slide p.button-container {
     margin: 20px;
     font-size: 0;
     line-height: 0;
 }
 
-.carousel.card-carousel .swiper-slide a {
+.carousel.deals-carousel .swiper-slide a {
     margin: 20px;
     padding: 12px 15px;
     font-size: 14px;
@@ -68,30 +68,30 @@
     margin: 0;
 }
 
-.carousel.card-carousel .swiper-slide a:hover {
+.carousel.deals-carousel .swiper-slide a:hover {
     background: #153d8a;
 }
 
-.carousel.card-carousel .swiper-pagination {
+.carousel.deals-carousel .swiper-pagination {
     top: 100%;
 }
 
-.carousel.card-carousel .swiper-pagination .swiper-pagination-bullet {
+.carousel.deals-carousel .swiper-pagination .swiper-pagination-bullet {
     height: 12px;
     width: 12px;
 }
 
 @media (width <=768px) {
-    .carousel.card-carousel .swiper-slide {
+    .carousel.deals-carousel .swiper-slide {
         flex-direction: column;
     }
 
-    .carousel.card-carousel .swiper-slide div:has(picture),
-    .carousel.card-carousel .swiper-slide div picture {
+    .carousel.deals-carousel .swiper-slide div:has(picture),
+    .carousel.deals-carousel .swiper-slide div picture {
         width: 100%;
     }
 
-    .carousel.card-carousel .swiper-slide div img {
+    .carousel.deals-carousel .swiper-slide div img {
         border-top-right-radius: 16px;
         border-bottom-left-radius: unset;
     }

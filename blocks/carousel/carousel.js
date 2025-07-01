@@ -2,7 +2,6 @@ import Swiper from '../carousel/swiper-bundle.min.js'
 
 export default function decorate(block) {
     const rows = Array.from(block.children);
-
     const swiperWrapper = document.createElement('div');
     swiperWrapper.classList.add('swiper-wrapper');
 
@@ -11,14 +10,14 @@ export default function decorate(block) {
         swiperWrapper.append(row);
     });
     block.append(swiperWrapper);
-
     swiperInit(block);
 }
 
 
 function swiperInit(block) {
-    const swiperConfig = {
-    };
+    const swiperConfig = {};
+
+    const isDesktop = window.matchMedia('(min-width: 900px)'); 
 
     if (block.classList.contains('pagination')) {
         const swiperPagination = document.createElement('div');
@@ -30,14 +29,14 @@ function swiperInit(block) {
         }
     }
 
-    if (block.classList.contains('card-carousel')) {
+    if (block.classList.contains('deals-carousel')) {
         swiperConfig.breakpoints = {
             320 : {slidesPerView : 1, slidesPerGroup : 1},
             1024 : {slidesPerView : 2, slidesPerGroup : 2, spaceBetween : 15}
         }
     }
 
-    if (block.classList.contains('image-link-carousel')) {
+    if (block.classList.contains('services-carousel') || block.classList.contains('experience-carousel')) {
         const slides = block.querySelectorAll('.swiper-slide');
         slides.forEach(slide => {
             const anchor = slide.querySelectorAll('p.button-container a');
@@ -51,10 +50,18 @@ function swiperInit(block) {
             imgWrapper.append(newAnchor);
         })
 
-        swiperConfig.breakpoints = {
-            320 : {slidesPerView : 1, slidesPerGroup : 1},
-            1024 : {slidesPerView : 4, slidesPerGroup : 4, spaceBetween : 30}
+        if(block.classList.contains('services-carousel') && block.classList.contains('experience-carousel')){
+            if(isDesktop.matches){
+                return
+            }
         }
+        else if(block.classList.contains('services-carousel')) {
+            swiperConfig.breakpoints = {
+                320 : {slidesPerView : 1, slidesPerGroup : 1},
+                1024 : {slidesPerView : 4, slidesPerGroup : 4, spaceBetween : 30}
+            }
+        }
+
     }
     new Swiper(block, swiperConfig)
 }
