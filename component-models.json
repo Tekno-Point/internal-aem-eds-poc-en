@@ -112,10 +112,6 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "Framesent",
-            "value": "framesent"
           }
         ]
       }
