@@ -110,8 +110,16 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Primary Button",
+            "value": "btn-primary"
+          },
+          {
+            "name": "Text Center",
+            "value": "text-center"
+          },
+          {
+            "name": "Hero Banner Carousel",
+            "value": "hero-banner-carousel"
           }
         ]
       }
@@ -213,6 +221,57 @@
         "component": "text",
         "name": "title",
         "label": "Title"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Pagination",
+            "value": "pagination"
+          },
+          {
+            "name": "Services Carousel",
+            "value": "services-carousel"
+          },
+          {
+            "name": "Deals Carousel",
+            "value": "deals-carousel"
+          },
+          {
+            "name": "Banner Carousel",
+            "value": "banner-carousel"
+          },
+          {
+            "name": "Experience Carousel",
+            "value": "experience-carousel"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
