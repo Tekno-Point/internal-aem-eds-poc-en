@@ -1,9 +1,16 @@
 @import url('../carousel/swiper-bundle.min.css');
 @import url('deals-carousel.css');
 @import url('services-carousel.css');
+@import url('banner-carousel.css');
 
 .section.carousel-container .carousel-wrapper {
     position: relative;
     max-width: 1140px;
     padding: 0;
+}
+
+@media (width <=900px) {
+    .section.carousel-container {
+        margin: 50px 20px 0 35px;
+    }
 }

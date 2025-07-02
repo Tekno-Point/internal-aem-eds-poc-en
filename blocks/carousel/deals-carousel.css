@@ -82,8 +82,15 @@
 }
 
 @media (width <=768px) {
+    .carousel.deals-carousel {
+        padding: 0 15px 20px 0;
+        margin-top: 40px;
+    } 
+
     .carousel.deals-carousel .swiper-slide {
         flex-direction: column;
+        border: unset;
+        min-height: 535px;
     }
 
     .carousel.deals-carousel .swiper-slide div:has(picture),
@@ -94,5 +101,9 @@
     .carousel.deals-carousel .swiper-slide div img {
         border-top-right-radius: 16px;
         border-bottom-left-radius: unset;
+    }
+
+    .carousel.deals-carousel .swiper-pagination {
+        top: 95%;
     }
 }

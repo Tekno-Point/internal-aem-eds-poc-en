@@ -277,7 +277,7 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-/* .section.btn-primary p.button-container a {
+.section.btn-primary .default-content-wrapper > p.button-container a {
   font-size: 14px;
   font-weight: bold;
   line-height: 1.5;
@@ -285,12 +285,14 @@ main .section.highlight {
   background-color: #0088dd;
   color: #FFFFFF;
   border-radius: 4.8px;
-} */
+  margin: 30px 0 0;
+  text-transform: uppercase;
+}
 
-/* .section.btn-primary p.button-container a:hover {
+.section.btn-primary .default-content-wrapper > p.button-container a:hover {
   background: #153d8a;
-} */
+}
 
-/* .btn-primary.text-center {
+.section.btn-primary.text-center .default-content-wrapper{
   text-align: center;
-} */
+}

@@ -31,8 +31,15 @@ function swiperInit(block) {
 
     if (block.classList.contains('deals-carousel')) {
         swiperConfig.breakpoints = {
-            320 : {slidesPerView : 1, slidesPerGroup : 1},
+            320 : {slidesPerView : 1, spaceBetween : 15},
             1024 : {slidesPerView : 2, slidesPerGroup : 2, spaceBetween : 15}
+        }
+    }
+
+    if (block.classList.contains('banner-carousel')) {
+        swiperConfig.breakpoints = {
+            320 : {slidesPerView : 1},
+            1024 : {slidesPerView : 1}
         }
     }
 
@@ -54,14 +61,16 @@ function swiperInit(block) {
             if(isDesktop.matches){
                 return
             }
+            swiperConfig.breakpoints = {
+                320 : {slidesPerView : 1, spaceBetween : 15},
+            }
         }
         else if(block.classList.contains('services-carousel')) {
             swiperConfig.breakpoints = {
-                320 : {slidesPerView : 1, slidesPerGroup : 1},
+                320 : {slidesPerView : 1, spaceBetween : 15},
                 1024 : {slidesPerView : 4, slidesPerGroup : 4, spaceBetween : 30}
             }
         }
-
     }
     new Swiper(block, swiperConfig)
 }
