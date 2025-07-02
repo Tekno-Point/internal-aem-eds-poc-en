@@ -375,20 +375,20 @@ header nav .nav-tools {
   cursor: pointer;
 }
 
-.block .nav-wrapper nav .nav-tools .search-wrapper .block{
+.block .nav-wrapper nav .nav-tools .search-wrapper .block {
   height: 24px;
 }
 
-.block .nav-wrapper nav .nav-tools .search-wrapper .search-box .icon-search{
+.block .nav-wrapper nav .nav-tools .search-wrapper .search-box .icon-search {
   max-width: 24px;
-  border: 1px solid ;
+  border: 1px solid;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.block .nav-wrapper nav .nav-tools .search-wrapper .search-box .icon-search img{
+.block .nav-wrapper nav .nav-tools .search-wrapper .search-box .icon-search img {
   width: 15px;
   height: 15px;
 }
@@ -419,7 +419,7 @@ header nav .nav-tools {
   list-style: none;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:first-of-type ul li strong{
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:first-of-type ul li strong {
   gap: 5px;
   font-size: 16px;
   line-height: 24px;
@@ -484,10 +484,23 @@ header nav .nav-tools {
     width: 30px;
   }
 
-  .block .nav-wrapper nav[aria-expanded='true'] .nav-hamburger button .nav-hamburger-icon,
+  .block .nav-wrapper nav[aria-expanded='true'] .nav-hamburger button .nav-hamburger-icon {
+    background-color: #000;
+    height: 2px;
+  }
+
   .block .nav-wrapper nav[aria-expanded='true'] .nav-hamburger button .nav-hamburger-icon::before,
   .block .nav-wrapper nav[aria-expanded='true'] .nav-hamburger button .nav-hamburger-icon::after {
     transform: unset;
+  }
+
+  .block .nav-wrapper nav[aria-expanded='true'] .nav-hamburger button .nav-hamburger-icon::before {
+    top: 7px;
+  }
+
+  header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+    top: unset;
+    bottom: 6px;
   }
 
   .block nav .columns>div div:last-of-type {
@@ -542,13 +555,13 @@ header nav .nav-tools {
   }
 
   .block .nav-wrapper nav .nav-sections .search-wrapper .block .search-box .icon-search,
-  .block .nav-wrapper nav .nav-sections .search-wrapper .block .search-box .icon-search img{
+  .block .nav-wrapper nav .nav-sections .search-wrapper .block .search-box .icon-search img {
     width: 13px;
     height: 13px;
     display: block;
   }
-  
-  .block .nav-wrapper nav .nav-sections .search-wrapper .block .search-box input{
+
+  .block .nav-wrapper nav .nav-sections .search-wrapper .block .search-box input {
     border: none;
     outline: none;
     background-color: transparent;
