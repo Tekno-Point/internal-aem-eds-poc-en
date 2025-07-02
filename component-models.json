@@ -148,6 +148,18 @@
           {
             "name": "Image4",
             "value": "image4"
+          },
+          {
+            "name": "Your Budget",
+            "value": "your-budget"
+          },
+          {
+            "name": "Directors",
+            "value": "directors"
+          },
+          {
+            "name": "Inforgraphic",
+            "value": "inforgraphic"
           }
         ]
       }

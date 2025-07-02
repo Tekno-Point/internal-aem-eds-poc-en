@@ -25,32 +25,42 @@ export default function decorate(block) {
 
     Swiper(block, {
         loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
         pagination: {
             el: swiperPagination,
             clickable: true,
         },
-        slidesPerView: 1.2, // Default for small screens (can scroll more than 1)
-        spaceBetween: 16,
+        slidesPerView: 1.1, // Default for small screens (can scroll more than 1)
+        spaceBetween: 25,
+        slidesOffsetBefore: 5,
+        slidesOffsetAfter: -1,
         breakpoints: {
             480: {
-                slidesPerView: 1.5,
-                spaceBetween: 20,
+                slidesPerView: 1.1,
+                spaceBetween: 25,
+                slidesOffsetBefore: 5,
+                slidesOffsetAfter: -1,
             },
             768: {
                 slidesPerView: 2,
                 spaceBetween: 24,
+                slidesOffsetBefore: 5,
+                slidesOffsetAfter: -1,
             },
             1024: {
                 slidesPerView: 3.2,
                 spaceBetween: 32,
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
             },
             1280: {
                 slidesPerView: 4,
                 spaceBetween: 40,
+                slidesOffsetBefore: 0,
+                slidesOffsetAfter: 0,
             },
         },
     });

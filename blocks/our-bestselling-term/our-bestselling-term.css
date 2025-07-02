@@ -14,7 +14,7 @@ main > .section.our-bestselling-term-container {
   main > .section.our-bestselling-term-container {
     width: auto;
     padding: 0;
-    max-width: 77%;
+    max-width: 90%;
   }
 }
 main > .section.our-bestselling-term-container p {
@@ -181,4 +181,7 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   text-align: center;
   letter-spacing: -0.007em;
   color: #58595B;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide:last-child {
+  margin-right: 0 !important;
 }/*# sourceMappingURL=our-bestselling-term.css.map */
