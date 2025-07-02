@@ -190,5 +190,33 @@
         "valueType": "string"
       }
     ]
+  },
+   {
+    "id": "content-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "content-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
+      }
+    ]
   }
 ]
