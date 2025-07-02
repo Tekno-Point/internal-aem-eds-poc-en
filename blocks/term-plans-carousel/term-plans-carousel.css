@@ -47,7 +47,7 @@ main > .section.term-plans-carousel-container .default-content-wrapper h6 {
   padding: 0;
   margin: 0;
   color: #0D2042;
-  font-family: "inter";
+  font-family: "inter-bold";
   font-weight: 700;
   font-size: 36px;
   color: #333333;
@@ -98,7 +98,8 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
   box-shadow: 3px 6px 14px 0 rgba(0, 115, 187, 0.1);
 }
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child {
-  font-weight: 700;
+  font-family: "Helvetica-Rounded-Bold";
+  font-weight: 800;
   font-size: 17px;
   overflow: hidden;
   color: #333333;
@@ -110,6 +111,22 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
   list-style: none;
   margin: 0;
   padding: 0;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child::after {
+  content: "";
+  background: url(/icons/chevron_20x12.png) no-repeat;
+  width: 20px;
+  height: 13px;
+  transform: rotate(90deg);
+  position: absolute;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-position: 0 0;
+  right: 16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
 }
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:first-child {
   display: flex;

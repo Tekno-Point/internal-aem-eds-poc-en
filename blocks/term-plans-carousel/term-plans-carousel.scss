@@ -20,6 +20,8 @@ main>.section.term-plans-carousel-container {
     p {
         margin: 0;
         padding: 0;
+
+
     }
 
     .default-content-wrapper {
@@ -47,7 +49,7 @@ main>.section.term-plans-carousel-container {
             padding: 0;
             margin: 0;
             color: #0D2042;
-            font-family: "inter";
+            font-family: "inter-bold";
             font-weight: 700;
             font-size: 36px;
             color: #333333;
@@ -93,7 +95,8 @@ main>.section.term-plans-carousel-container {
                     box-shadow: 3px 6px 14px 0 rgba(0, 115, 187, 0.1);
 
                     &>div:last-child {
-                        font-weight: 700;
+                        font-family: "Helvetica-Rounded-Bold";
+                        font-weight: 800;
                         font-size: 17px;
                         overflow: hidden;
                         color: #333333;
@@ -105,6 +108,23 @@ main>.section.term-plans-carousel-container {
                             list-style: none;
                             margin: 0;
                             padding: 0;
+                        }
+
+                        &::after {
+                            content: "";
+                            background: url(/icons/chevron_20x12.png) no-repeat;
+                            width: 20px;
+                            height: 13px;
+                            transform: rotate(90deg);
+                            position: absolute;
+                            -o-object-fit: contain;
+                            object-fit: contain;
+                            background-position: 0 0;
+                            right: 16px;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            overflow: auto;
                         }
 
                         &>ul:first-child {
@@ -168,6 +188,7 @@ main>.section.term-plans-carousel-container {
                                     color: #A7A9AC;
                                     text-transform: uppercase;
                                     margin-bottom: 20px;
+
                                 }
 
                                 ul {
