@@ -105,15 +105,11 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
-        "component": "multiselect",
+        "component": "text",
         "name": "style",
+        "value": "",
         "label": "Style",
-        "options": [
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          }
-        ]
+        "valueType": "string"
       }
     ]
   },
