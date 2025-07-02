@@ -363,18 +363,39 @@ header nav .nav-tools {
   display: flex;
   align-items: center;
   justify-content: end;
-  position: relative;
   width: 24%;
 }
 
 .block .nav-wrapper nav .nav-tools .search-wrapper {
-  position: absolute;
-  top: 0;
-  left: 50px;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 50px; */
   width: 30%;
-  z-index: -1;
+  /* z-index: -1; */
   cursor: pointer;
 }
+
+.block .nav-wrapper nav .nav-tools .search-wrapper .block{
+  height: 24px;
+}
+
+.block .nav-wrapper nav .nav-tools .search-wrapper .search-box .icon-search{
+  max-width: 24px;
+  border: 1px solid ;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block .nav-wrapper nav .nav-tools .search-wrapper .search-box .icon-search img{
+  width: 15px;
+  height: 15px;
+}
+
+/* .block .nav-wrapper nav .nav-tools .search-wrapper .search-box input{
+  position: absolute;
+} */
 
 .block .nav-wrapper nav .nav-tools .default-content-wrapper {
   width: 70%;
@@ -398,18 +419,21 @@ header nav .nav-tools {
   list-style: none;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:first-of-type,
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:first-of-type strong {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:first-of-type ul li strong{
   gap: 5px;
   font-size: 16px;
   line-height: 24px;
   font-family: sans-serif;
   font-weight: 400;
+  color: #000;
+  text-decoration: underline;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:first-of-type strong {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:first-of-type ul li:last-of-type strong {
   font-size: 18px;
   line-height: 27px;
+  padding-left: 3px;
+  text-decoration: none;
 }
 
 
