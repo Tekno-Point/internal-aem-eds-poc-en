@@ -552,7 +552,6 @@ header nav .nav-tools {
 }
 
 .block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button-container.active .button:after {
-  /* background-color: red; */
   transform: rotate(180deg);
 }
 
