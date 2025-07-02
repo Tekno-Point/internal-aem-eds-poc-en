@@ -61,7 +61,7 @@ function toggleAllNavSections(sections, expanded = false) {
     section.setAttribute('aria-expanded', expanded);
     section?.querySelector("ul")?.classList.add("inner-ul");
     section?.querySelectorAll("ul >li")?.forEach((subLi, ind) => {
-      isDesktop.matches ? (subLi.setAttribute('aria-expanded', ind == 0 ? 'true' : expanded)) : subLi.setAttribute('aria-expanded', expanded);
+      isDesktop.matches ? (subLi.setAttribute('aria-expanded', ind == 0 ? 'true' : 'false')) : subLi.setAttribute('aria-expanded', expanded);
     })
   });
 }
@@ -87,7 +87,7 @@ function toggleAllNavTools(sections, expanded = false) {
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
-  document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
+  // document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   // toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
@@ -177,23 +177,19 @@ export default async function decorate(block) {
 
     navSections.querySelectorAll(':scope >.default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('mouseover', (e) => {
-        // debugger;
-        console.log('Hovered: ', navSection);
-        e.stopImmediatePropagation();
-
-        // if (isDesktop.matches && !e.target.closest(".inner-ul")) {
+      navSection.addEventListener('mouseenter', (e) => {
         if (!e.target.closest(".inner-ul")) {
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
-          toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-          if (isDesktop.matches) document.body.style.overflow = !expanded ? 'hidden' : 'auto';
+          navSection.setAttribute('aria-expanded', 'true');
         }
       });
+      navSection.addEventListener('mouseleave', (e) => {
+        if (!e.target.closest(".inner-ul")) {
+          navSection.setAttribute('aria-expanded', 'false');
+        }
+      });
+
       navSection.querySelectorAll(":scope>ul >li").forEach((subLi, ind) => {
         subLi?.querySelector(":scope>p, :scope>a")?.addEventListener("mouseover", (ele) => {
-          debugger;
-          // ele.stopPropagation();
           const li = ele.target?.closest("li");
           const expanded = li?.getAttribute("aria-expanded");
           if (expanded === "false") {

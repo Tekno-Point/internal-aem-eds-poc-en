@@ -90,10 +90,10 @@ export default async function decorate(block) {
   const formLink = links.find(
     (link) => link.startsWith(window.location.origin) && link.endsWith(".json")
   );
-  const submitLink = links.find((link) => link !== formLink);
+  const submitLink = links?.find((link) => link !== formLink) || "auto-form";
   if (!formLink ) return;
 
-  const img = block.querySelector("picture");
+  const img = block?.querySelector("picture") ;
   const form = await createForm(formLink, submitLink);
   block.replaceChildren(form);
   img?block?.append(img):'';

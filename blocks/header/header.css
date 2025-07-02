@@ -210,6 +210,34 @@ header nav .nav-sections ul>li>ul>li {
     line-height: 21px;
   }
 
+header nav >.section.nav-sections >.default-content-wrapper >p.button-container >strong >.button.primary{
+      color: #FFF;
+    font-family: 'Inter';
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    height: 32px;
+    width: max-content;
+    border-radius: 20px;
+    background: #D62049;
+    padding: 10px 15px;
+} 
+
+header nav[aria-expanded='true'] .nav-sections{
+  width: 60%;
+}
+
+
+header nav[aria-expanded='true'] .nav-sections >.default-content-wrapper{
+  display: flex;
+  
+}
+
+  header nav .nav-sections .default-content-wrapper>ul>li>p>a {
+    /* pointer-events: none; */
+  }
+
   header nav .nav-sections .nav-drop p::after {
     content: '';
     display: inline-block;
