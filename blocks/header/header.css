@@ -281,6 +281,31 @@ header nav .nav-sections ul>li>ul>li {
   header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
     padding: 8px 15px 8px 113px;
     max-width: 16.85%;
+    padding: 7.5px 20px;
+    max-width: 100%;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li:hover {
+    color: #0073BB;
+    background: #F2F7FB;
+  }
+
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li>a:hover {
+    color: #0073BB;
+    text-decoration: none;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li>a,
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
+    color: #58595B;
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.098px;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -341,7 +366,7 @@ header nav .nav-sections .nav-drop[aria-expanded='true'] .inner-ul p::after {
 }
 
 header nav .nav-sections .default-content-wrapper>ul>li {
-  position: unset;
+  position: relative;
   margin-right: 10px;
 }
 
@@ -356,12 +381,28 @@ header nav .nav-sections .default-content-wrapper>ul {
 }
 
 header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul {
-  background: #011933;
-  color: #fff;
-  padding: unset;
-  width: 100%;
-  height: calc(100vh - 104px);
-  padding-top: 35px;
+  background: #FFF;
+  width: 320px;
+  overflow-y: scroll;
+  padding: 20px 0px;
+  border-radius: 20px;
+  scrollbar-width: none;
+  color: #000;
+  top: 21px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 20px 0 rgba(0, 115, 187, 0.2);
+  border: 1.313px solid #F2F7FB;
+  height: auto;
+}
+
+header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul:has(>li>ul) {
+  max-width: 960px;
+  width: 960px;
+}
+
+header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul:has(>li>ul)>li {
+  width: 360px;
 }
 
 header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li[aria-expanded='false']>ul {
@@ -380,11 +421,11 @@ header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li[aria-expa
   padding: 24px 78px 20px 78px;
   /* max-height: calc(100% - 44px); */
   max-height: calc(100% - 0px);
-  left: 378px;
-  left: 25.5%;
+  left: 360px;
   padding: unset;
   width: 50%;
   padding-top: 30px;
+  width: calc(100% - 360px);
 }
 
 

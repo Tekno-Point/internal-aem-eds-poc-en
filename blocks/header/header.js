@@ -175,10 +175,12 @@ export default async function decorate(block) {
 
   if (navSections) {
 
-    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
+    navSections.querySelectorAll(':scope >.default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', (e) => {
-        e.stopPropagation();
+      navSection.addEventListener('mouseover', (e) => {
+        // debugger;
+        console.log('Hovered: ', navSection);
+        e.stopImmediatePropagation();
 
         // if (isDesktop.matches && !e.target.closest(".inner-ul")) {
         if (!e.target.closest(".inner-ul")) {
@@ -188,8 +190,10 @@ export default async function decorate(block) {
           if (isDesktop.matches) document.body.style.overflow = !expanded ? 'hidden' : 'auto';
         }
       });
-      navSection.querySelectorAll("ul >li").forEach((subLi, ind) => {
-        subLi?.querySelector("p, a")?.addEventListener("click", (ele) => {
+      navSection.querySelectorAll(":scope>ul >li").forEach((subLi, ind) => {
+        subLi?.querySelector(":scope>p, :scope>a")?.addEventListener("mouseover", (ele) => {
+          debugger;
+          // ele.stopPropagation();
           const li = ele.target?.closest("li");
           const expanded = li?.getAttribute("aria-expanded");
           if (expanded === "false") {
