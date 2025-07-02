@@ -81,6 +81,16 @@
     width: 12px;
 }
 
+.carousel.deals-carousel .swiper-button-next {
+    right: -5px;
+    top: 125px;
+}
+
+.carousel.deals-carousel .swiper-button-prev {
+    left: -25px;
+    top: 125px;
+}
+
 @media (width <=768px) {
     .carousel.deals-carousel {
         padding: 0 15px 20px 0;
@@ -105,5 +115,14 @@
 
     .carousel.deals-carousel .swiper-pagination {
         top: 95%;
+    }
+
+    .carousel.deals-carousel .swiper-pagination .swiper-pagination-bullet {
+        margin: 0 4px;
+    }
+
+    .carousel.deals-carousel .swiper-button-next,
+    .carousel.deals-carousel .swiper-button-prev  {
+        top: 240px;
     }
 }
