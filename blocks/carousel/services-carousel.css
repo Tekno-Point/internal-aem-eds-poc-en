@@ -96,7 +96,11 @@
 
 @media (width <=900px) {
     .carousel.services-carousel {
-        padding: 0;
+        padding: 0 15px 20px 0;
+    }
+
+    .carousel.services-carousel .swiper-slide {
+        border: unset;
     }
 
     .carousel.services-carousel .swiper-slide div:has(picture),
@@ -109,10 +113,6 @@
 
 /* Experience Carosel css */
 @media (width >=900px) {
-    .carousel.experience-carousel .swiper-wrapper {
-        justify-content: center;
-    }
-
     .carousel.experience-carousel .swiper-slide {
         width: 246px;
         margin-right: 30px;

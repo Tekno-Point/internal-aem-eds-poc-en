@@ -116,6 +116,10 @@
           {
             "name": "Text Center",
             "value": "text-center"
+          },
+          {
+            "name": "Hero Banner Carousel",
+            "value": "hero-banner-carousel"
           }
         ]
       }
