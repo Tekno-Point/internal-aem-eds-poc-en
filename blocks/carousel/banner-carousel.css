@@ -30,3 +30,17 @@
 .carousel.banner-carousel .swiper-pagination .swiper-pagination-bullet-active {
     background: #fff;
 }
+
+@media (width <= 900px) {
+    .section.hero-banner-carousel.carousel-container {
+        margin: 0;
+    }
+
+    .carousel.banner-carousel .swiper-slide div:has(picture) {
+        height: 500px;
+    }
+
+    .carousel.banner-carousel .swiper-slide div img {
+        object-position: 90%;
+    }
+}
