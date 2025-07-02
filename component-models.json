@@ -363,10 +363,13 @@
   {
     "id": "disclaimers",
     "fields": [
-      {
+     {
         "component": "text",
-        "name": "title",
-        "label": "Title"
+        "name": "text",
+        "value": "",
+        "label": "Dis Text",
+        "valueType": "string",
+        "description": "Disclaimers Title"
       },
       {
         "component": "richtext",
