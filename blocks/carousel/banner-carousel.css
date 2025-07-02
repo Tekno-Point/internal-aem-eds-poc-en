@@ -31,6 +31,21 @@
     background: #fff;
 }
 
+.carousel.banner-carousel .swiper-button-next {
+    right: 60px;
+    background: unset;
+}
+
+.carousel.banner-carousel .swiper-button-prev {
+    left: 60px;
+    background: unset;
+}
+
+.carousel.banner-carousel .swiper-button-next::after,
+.carousel.banner-carousel .swiper-button-prev::after {
+    font-size: 15px;
+}
+
 @media (width <= 900px) {
     .section.hero-banner-carousel.carousel-container {
         margin: 0;
@@ -42,5 +57,13 @@
 
     .carousel.banner-carousel .swiper-slide div img {
         object-position: 90%;
+    }
+
+    .carousel.banner-carousel .swiper-button-next {
+        right: 5px;
+    }
+    
+    .carousel.banner-carousel .swiper-button-prev {
+        left: 5px;
     }
 }

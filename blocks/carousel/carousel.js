@@ -15,9 +15,14 @@ export default function decorate(block) {
 
 
 function swiperInit(block) {
-    const swiperConfig = {};
+    const swiperConfig = {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    };
 
-    const isDesktop = window.matchMedia('(min-width: 900px)'); 
+    const isDesktop = window.matchMedia('(min-width: 900px)');
 
     if (block.classList.contains('pagination')) {
         const swiperPagination = document.createElement('div');
@@ -31,15 +36,15 @@ function swiperInit(block) {
 
     if (block.classList.contains('deals-carousel')) {
         swiperConfig.breakpoints = {
-            320 : {slidesPerView : 1, spaceBetween : 15},
-            1024 : {slidesPerView : 2, slidesPerGroup : 2, spaceBetween : 15}
+            320: { slidesPerView: 1, spaceBetween: 15 },
+            1024: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 15 }
         }
     }
 
     if (block.classList.contains('banner-carousel')) {
         swiperConfig.breakpoints = {
-            320 : {slidesPerView : 1},
-            1024 : {slidesPerView : 1}
+            320: { slidesPerView: 1 },
+            1024: { slidesPerView: 1 }
         }
     }
 
@@ -57,20 +62,26 @@ function swiperInit(block) {
             imgWrapper.append(newAnchor);
         })
 
-        if(block.classList.contains('services-carousel') && block.classList.contains('experience-carousel')){
-            if(isDesktop.matches){
+        if (block.classList.contains('services-carousel') && block.classList.contains('experience-carousel')) {
+            if (isDesktop.matches) {
                 return
             }
             swiperConfig.breakpoints = {
-                320 : {slidesPerView : 1, spaceBetween : 15},
+                320: { slidesPerView: 1, spaceBetween: 15 },
             }
         }
-        else if(block.classList.contains('services-carousel')) {
+        else if (block.classList.contains('services-carousel')) {
             swiperConfig.breakpoints = {
-                320 : {slidesPerView : 1, spaceBetween : 15},
-                1024 : {slidesPerView : 4, slidesPerGroup : 4, spaceBetween : 30}
+                320: { slidesPerView: 1, spaceBetween: 15 },
+                1024: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 30 }
             }
         }
     }
+
+    const nextBtn = document.createElement('div');
+    nextBtn.classList.add('swiper-button-next');
+    const prevBtn = document.createElement('div');
+    prevBtn.classList.add('swiper-button-prev');
+    block.append(nextBtn, prevBtn)
     new Swiper(block, swiperConfig)
 }

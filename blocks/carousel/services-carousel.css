@@ -7,7 +7,7 @@
 .carousel.services-carousel .swiper-slide {
     border-radius: 16px;
     box-shadow: 6px 8px 12px rgba(0, 135, 219, 0.24);
-    border: 1px solid rgba(0, 136, 221, 0.08);
+    /* border: 1px solid rgba(0, 136, 221, 0.08); */
     background-color: #fff;
 }
 
@@ -94,13 +94,17 @@
     width: 12px;
 }
 
+.carousel.services-carousel .swiper-button-next {
+    right: -5px;
+}
+
+.carousel.services-carousel .swiper-button-prev {
+    left: -25px;
+}
+
 @media (width <=900px) {
     .carousel.services-carousel {
         padding: 0 15px 20px 0;
-    }
-
-    .carousel.services-carousel .swiper-slide {
-        border: unset;
     }
 
     .carousel.services-carousel .swiper-slide div:has(picture),
