@@ -92,27 +92,13 @@ main>.section.our-bestselling-term-container {
                     margin-top: unset;
                     margin-right: 35px;
                     margin-bottom: 75px;
-                    // @media (max-width: 768px) {
-                    //     width: 306px !important;
-                    // }
-
-                    // &>div:first-child {
-                    //     width: 100%;
-                    //     // height: 63%;
-
-                    //     img {
-                    //         width: 100%;
-                    //         height: 100%;
-                    //         border-radius: 20px 20px 0 0;
-                    //     }
-                    // }
 
                     &>div:last-child {
                         font-weight: 700;
                         font-size: 17px;
                         overflow: hidden;
                         color: #333333;
-                        padding: 20px;
+                        // padding: 20px;
                         line-height: normal;
 
                         ul {
@@ -124,10 +110,10 @@ main>.section.our-bestselling-term-container {
                         &>ul:first-child {
                             display: flex;
                             flex-direction: column;
-                            padding: 20px 87px 18px 20px;
+                            padding: 20px 0px 0px 20px;
                             min-height: 95px;
                             position: relative;
-                            font-family: "HelveticaNeueLTStd-Bd", sans-serif;
+                            font-family: "HelveticaNeueLTStd-Bd";
                             font-size: 24px;
 
                             li {

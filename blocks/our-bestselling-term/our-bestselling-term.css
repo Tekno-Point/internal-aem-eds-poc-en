@@ -60,7 +60,6 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   font-size: 17px;
   overflow: hidden;
   color: #333333;
-  padding: 20px;
   line-height: normal;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child ul {
@@ -71,10 +70,10 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:first-child {
   display: flex;
   flex-direction: column;
-  padding: 20px 87px 18px 20px;
+  padding: 20px 0px 0px 20px;
   min-height: 95px;
   position: relative;
-  font-family: "HelveticaNeueLTStd-Bd", sans-serif;
+  font-family: "HelveticaNeueLTStd-Bd";
   font-size: 24px;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:first-child li {
