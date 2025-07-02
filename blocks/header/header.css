@@ -436,6 +436,125 @@ header nav .nav-tools {
   text-decoration: none;
 }
 
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) {
+  position: relative;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: #000;
+  overflow: unset;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: 400;
+  padding-top: 2px;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure {
+  background-color: #fff;
+  max-width: 350px;
+  width: 350px;
+  position: absolute;
+  top: 50px;
+  right: -20px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, .9);
+  border-radius: 0 0 3px 3px;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  transition: all 0.3s ;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button-container.active .langStructure {
+  padding: 15px 15px 20px;
+  height: 84px;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure h3 {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: left;
+  color: #000;
+  margin: 0;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul li:not(:last-of-type) {
+  width: 100%;
+  border: 1px solid;
+  padding: 6px;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: normal;
+  font-weight: 400;
+  border: 0.8px solid rgb(118, 118, 118);
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul li:nth-child(1) {
+  max-width: 123px;
+  width: 100%;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul li:nth-child(2) {
+  max-width: 106px;
+  width: 100%;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul li:nth-child(3) {
+  max-width: 80px;
+  width: 100%;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul li:nth-child(3) a {
+  width: initial;
+  background-color: #0088dd;
+  display: block;
+  padding: 6px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 700;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button:before {
+  content: '';
+  background: url('../../icons/in_flag.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin-right: 4px;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button:after {
+  content: '';
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #000;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button-container.active .button:after {
+  /* background-color: red; */
+  transform: rotate(180deg);
+}
 
 .block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:last-of-type p {
   display: flex;
