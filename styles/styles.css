@@ -519,6 +519,35 @@ main .section.highlight {
   padding: 0;
 }
 
+.section.directors .cards-wrapper .cards {
+  position: relative;
+}
+
+.section.directors .cards-wrapper .cards::after {
+  content: " ";
+  background: url(/icons/right-desk.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 170px;
+  height: 7px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.section.directors .cards-wrapper .cards::before {
+  content: " ";
+  background: url(/icons/left-desk.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 170px;
+  height: 7px;
+  display: block;
+  position: absolute;
+  top: 50%;
+}
+
 .section.directors .cards-wrapper .cards>ul {
   display: flex;
   align-items: center;
@@ -567,6 +596,85 @@ main .section.highlight {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .your-budget .default-content-wrapper,
+  .your-budget .cards-wrapper {
+    width: 96%
+  }
+
+  .your-budget .default-content-wrapper h1 {
+    font-size: 26px;
+    padding: 0;
+  }
+
+  .your-budget .cards-wrapper .cards>ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .your-budget .cards-wrapper .cards>ul>li {
+    width: 150px;
+    position: relative;
+    border: 1px solid #0073BB;
+    border-radius: 10px;
+  }
+
+  .your-budget .cards-wrapper .cards>ul>li .cards-card-image img {
+    border-radius: 10px;
+  }
+
+  .your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:first-child {
+    font-size: 16px;
+    letter-spacing: -0.16px;
+    line-height: 22.4px;
+    padding-bottom: 1px;
+  }
+
+  .your-budget .cards-wrapper .cards>ul>li .cards-card-body {
+    position: unset;
+    margin: 0;
+  }
+
+  .your-budget .cards-wrapper .cards>ul>li .cards-card-body .button-container .button {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 6px;
+    min-width: 150px;
+    min-height: 32px;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:nth-child(2) {
+    font-size: 0.875rem;
+    letter-spacing: -0.14px;
+  }
+
+  .your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:nth-child(2)>ul li {
+    font-size: 0.875rem;
+    letter-spacing: -0.14px;
+  }
+
+  .your-budget .cards-wrapper .cards>ul>li .cards-card-body>ul:first-child {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    display: flex;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .your-budget .cards-wrapper .cards>ul>li .cards-card-body p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 /* section directors css end  */
