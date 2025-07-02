@@ -53,7 +53,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -112,12 +112,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -142,7 +159,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -228,22 +245,22 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }
@@ -260,18 +277,22 @@ main .section.highlight {
 /* My CSS - RU */
 /* List icon - Content 1 */
 
-.content1 .custom-richtext li , .content4 .custom-richtext li{
+.content1 .custom-richtext li,
+.content4 .custom-richtext li {
   display: block;
   /* gap: 10px;
   align-items: start; */
   padding-left: 34px;
   position: relative;
 }
-.content1 .custom-richtext li strong , .content4 .custom-richtext li strong{
+
+.content1 .custom-richtext li strong,
+.content4 .custom-richtext li strong {
   color: #0073BB;
 }
 
-.content1 .custom-richtext li::before , .content4 .custom-richtext li::before{
+.content1 .custom-richtext li::before,
+.content4 .custom-richtext li::before {
   content: '';
   /* background: url('../icons/tick.svg'); */
   background: url('../icons/tick2.svg');
@@ -287,62 +308,265 @@ main .section.highlight {
 }
 
 
-.content2 > div.default-content-wrapper > p:nth-child(2){
-    display: none;
-  }
+.content2>div.default-content-wrapper>p:nth-child(2) {
+  display: none;
+}
 
-  .image2 > div.default-content-wrapper > p:nth-child(2) , .image3 > div.default-content-wrapper > p:nth-child(2){
-    display: none;
-  }
+.image2>div.default-content-wrapper>p:nth-child(2),
+.image3>div.default-content-wrapper>p:nth-child(2) {
+  display: none;
+}
 
-  
+
 .custom-richtextblock {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
 }
 
-.content3 .custom-richtextblock > div {
+.content3 .custom-richtextblock>div {
   background-color: #F2F7FB;
-    padding: 20px 40px 20px 40px;
-    height: 100%;
-    max-width: 42%;
+  padding: 20px 40px 20px 40px;
+  height: 100%;
+  max-width: 42%;
 }
 
 
-.content5 .custom-richtextblock > div {
+.content5 .custom-richtextblock>div {
   background-color: #F2F7FB;
-    padding: 20px 40px 20px 40px;
-    height: 100%;
-    max-width: 25%;
-    text-align: center;
+  padding: 20px 40px 20px 40px;
+  height: 100%;
+  max-width: 25%;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
-  .content2 > div.default-content-wrapper > p:nth-child(1){
+  .content2>div.default-content-wrapper>p:nth-child(1) {
     display: none;
   }
-  .content2 > div.default-content-wrapper > p:nth-child(2){
-    display: block;
-  }
-  .content3 .custom-richtextblock > div {
-    max-width: 100%;
-  }
-  .content5 .custom-richtextblock > div {
-    max-width: 100%;
-  }
-  .image2 > div.default-content-wrapper > p:nth-child(1){
-    display: none;
-  }
-  .image2 > div.default-content-wrapper > p:nth-child(2){
+
+  .content2>div.default-content-wrapper>p:nth-child(2) {
     display: block;
   }
 
-  .image3 > div.default-content-wrapper > p:nth-child(1){
+  .content3 .custom-richtextblock>div {
+    max-width: 100%;
+  }
+
+  .content5 .custom-richtextblock>div {
+    max-width: 100%;
+  }
+
+  .image2>div.default-content-wrapper>p:nth-child(1) {
     display: none;
   }
-  .image3 > div.default-content-wrapper > p:nth-child(2){
+
+  .image2>div.default-content-wrapper>p:nth-child(2) {
+    display: block;
+  }
+
+  .image3>div.default-content-wrapper>p:nth-child(1) {
+    display: none;
+  }
+
+  .image3>div.default-content-wrapper>p:nth-child(2) {
     display: block;
   }
 
 }
+
+/* Your Budget component css start */
+
+.your-budget.cards-container {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+.your-budget .default-content-wrapper,
+.your-budget .cards-wrapper {
+  max-width: 100%;
+  width: 84.7%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.your-budget .default-content-wrapper h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  color: #333333;
+  line-height: normal;
+  font-weight: 700;
+  padding: 0 80px;
+}
+
+.your-budget .cards-wrapper {
+  margin-top: 30px;
+}
+
+.your-budget .cards-wrapper .cards>ul {
+  gap: 11px;
+  flex-wrap: wrap;
+  padding: 0 40px;
+}
+
+.your-budget .cards-wrapper .cards>ul>li {
+  position: relative;
+  border: none;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-image {
+  border-radius: 25px;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-image img {
+  border-radius: 25px;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-body {
+  position: absolute;
+  top: 55px;
+  left: 36px;
+  margin: 0;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-body>ul:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-body p {
+  margin: 0;
+  padding: 0;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:first-child {
+  color: #FFF;
+  font-family: 'HelveticaNeueLTStd-Bd';
+  font-size: 2.625rem;
+  font-weight: 700;
+  padding-bottom: 5px;
+  letter-spacing: -0.42px;
+  display: block;
+  /* position: absolute;
+  top: 65px;
+  left: 40px; */
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:nth-child(2) {
+  color: #FFF;
+  font-family: 'helveticaregular';
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.24px;
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:nth-child(2)>ul {
+  position: absolute;
+  right: 56px;
+  top: -6px;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:nth-child(2)>ul li {
+  color: #FFF;
+  font-family: 'helveticaregular';
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.your-budget .cards-wrapper .cards>ul>li .cards-card-body .button-container .button {
+  width: 100%;
+  display: block;
+  margin: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 13px;
+  text-align: center;
+  color: #D62049;
+  font-family: 'HelveticaNeueLTStd-Md';
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.18px;
+  min-width: 212px;
+  min-height: 40px;
+  line-height: normal;
+}
+
+
+
+/* Your Budget component css end */
+
+/* section directors css start  */
+
+.section.directors.cards-container {
+  margin: 30px 0;
+  padding: 0;
+}
+
+.section.directors .cards-wrapper {
+  padding: 0;
+}
+
+.section.directors .cards-wrapper .cards>ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: inherit;
+}
+
+.section.directors .cards-wrapper .cards>ul>li {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: fit-content;
+  padding-right: 40px;
+  margin-left: 40px;
+  cursor: pointer;
+  border: none;
+  border-right: solid 1px #d2d2d2;
+}
+
+.section.directors .cards-wrapper .cards>ul>li:last-child {
+  border: none;
+}
+
+.section.directors .cards-wrapper .cards>ul>li .cards-card-image {
+  width: 64px;
+  height: 64px;
+}
+
+.section.directors .cards-wrapper .cards>ul>li .cards-card-image picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.section.directors .cards-wrapper .cards>ul>li .cards-card-body {
+  margin: 0;
+}
+
+.section.directors .cards-wrapper .cards>ul>li .cards-card-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section.directors .cards-wrapper .cards>ul>li .cards-card-body>ul>li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* section directors css end  */
