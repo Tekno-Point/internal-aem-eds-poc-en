@@ -192,17 +192,17 @@
     ]
   },
   {
-    "id":"footer-form",
+    "id":"form",
     "fields":[
       {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text"
+        "component": "aem-content",
+        "name": "form_url",
+        "label": "Form URL"
       },
       {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
+        "component": "text",
+        "name": "form_api",
+        "label": "Form API"
       }
     ]
   }
