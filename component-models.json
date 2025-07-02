@@ -160,6 +160,10 @@
           {
             "name": "Inforgraphic",
             "value": "inforgraphic"
+          },
+          {
+            "name": "VideoSection",
+            "value": "video-Section"
           }
         ]
       }
