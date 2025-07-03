@@ -249,5 +249,24 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "form-tab-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Tab Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Tab Content",
+        "valueType": "string"
+      }
+    ]
   }
 ]
