@@ -1,6 +1,16 @@
 import Swiper from '../carousel/swiper-bundle.min.js'
 
 export default function decorate(block) {
+    const isDesktop = window.matchMedia('(min-width: 900px)');
+
+    createSwiper(block);
+    wrapImageInLink(block);
+
+    if (block.classList.contains('services-carousel') && block.classList.contains('experience-carousel') && isDesktop.matches) return;
+    swiperInit(block);
+}
+
+function createSwiper(block) {
     const rows = Array.from(block.children);
     const swiperWrapper = document.createElement('div');
     swiperWrapper.classList.add('swiper-wrapper');
@@ -9,10 +19,8 @@ export default function decorate(block) {
         row.classList.add('swiper-slide');
         swiperWrapper.append(row);
     });
-    block.append(swiperWrapper);
-    swiperInit(block);
+    block.append(swiperWrapper); 
 }
-
 
 function swiperInit(block) {
     const swiperConfig = {
@@ -22,8 +30,19 @@ function swiperInit(block) {
         }
     };
 
-    const isDesktop = window.matchMedia('(min-width: 900px)');
+    const nextBtn = document.createElement('div');
+    nextBtn.classList.add('swiper-button-next');
+    const prevBtn = document.createElement('div');
+    prevBtn.classList.add('swiper-button-prev');
+    block.append(nextBtn, prevBtn);
 
+    applyPagination(block, swiperConfig);
+    applyBreakpoints(block, swiperConfig);
+    const swiperone =  applyBreakpoints(block, swiperConfig);
+    console.log(swiperone)
+}
+
+function applyPagination(block, swiperConfig) {
     if (block.classList.contains('pagination')) {
         const swiperPagination = document.createElement('div');
         swiperPagination.classList.add('swiper-pagination');
@@ -33,7 +52,9 @@ function swiperInit(block) {
             clickable: true,
         }
     }
+}
 
+function applyBreakpoints(block, swiperConfig) {   
     if (block.classList.contains('deals-carousel')) {
         swiperConfig.breakpoints = {
             320: { slidesPerView: 1, spaceBetween: 15 },
@@ -41,13 +62,22 @@ function swiperInit(block) {
         }
     }
 
-    if (block.classList.contains('banner-carousel')) {
+    if(block.classList.contains('banner-carousel')) {
         swiperConfig.breakpoints = {
-            320: { slidesPerView: 1 },
-            1024: { slidesPerView: 1 }
+            320: { slidesPerView: 1 }
         }
     }
 
+    if (block.classList.contains('services-carousel')) {
+        swiperConfig.breakpoints = {
+            320: { slidesPerView: 1, spaceBetween: 15 },
+            1024: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 30 }
+        }
+    }
+    return new Swiper(block, swiperConfig)
+}
+
+function wrapImageInLink(block) {
     if (block.classList.contains('services-carousel') || block.classList.contains('experience-carousel')) {
         const slides = block.querySelectorAll('.swiper-slide');
         slides.forEach(slide => {
@@ -61,27 +91,5 @@ function swiperInit(block) {
             newAnchor.append(picture);
             imgWrapper.append(newAnchor);
         })
-
-        if (block.classList.contains('services-carousel') && block.classList.contains('experience-carousel')) {
-            if (isDesktop.matches) {
-                return
-            }
-            swiperConfig.breakpoints = {
-                320: { slidesPerView: 1, spaceBetween: 15 },
-            }
-        }
-        else if (block.classList.contains('services-carousel')) {
-            swiperConfig.breakpoints = {
-                320: { slidesPerView: 1, spaceBetween: 15 },
-                1024: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 30 }
-            }
-        }
     }
-
-    const nextBtn = document.createElement('div');
-    nextBtn.classList.add('swiper-button-next');
-    const prevBtn = document.createElement('div');
-    prevBtn.classList.add('swiper-button-prev');
-    block.append(nextBtn, prevBtn)
-    new Swiper(block, swiperConfig)
 }
