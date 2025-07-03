@@ -440,7 +440,8 @@ header nav .nav-tools {
   position: relative;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button,
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -454,7 +455,8 @@ header nav .nav-tools {
   padding-top: 2px;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure,
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure {
   background-color: #fff;
   max-width: 350px;
   width: 350px;
@@ -467,15 +469,18 @@ header nav .nav-tools {
   overflow: hidden;
   height: 0;
   padding: 0;
-  transition: all 0.3s ;
+  transition: all 0.3s;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button-container.active .langStructure {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button-container.active .langStructure,
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container.active .langStructure {
   padding: 15px 15px 20px;
   height: 84px;
+  box-sizing: border-box;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure h3 {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure h3,
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure h3 {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -484,13 +489,16 @@ header nav .nav-tools {
   margin: 0;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul,
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure ul {
   display: flex;
   align-items: center;
   gap: 4px;
+  margin: 0;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul li:not(:last-of-type) {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul li:not(:last-of-type),
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure ul li:not(:last-of-type) {
   width: 100%;
   border: 1px solid;
   padding: 6px;
@@ -516,7 +524,8 @@ header nav .nav-tools {
   width: 100%;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul li:nth-child(3) a {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .langStructure ul li:nth-child(3) a,
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure ul li:nth-child(3) a {
   width: initial;
   background-color: #0088dd;
   display: block;
@@ -530,7 +539,8 @@ header nav .nav-tools {
   font-weight: 700;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button:before {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button:before,
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button::before {
   content: '';
   background: url('../../icons/in_flag.png');
   background-position: center;
@@ -542,7 +552,8 @@ header nav .nav-tools {
   margin-right: 4px;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button:after {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button:after,
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button::after {
   content: '';
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
@@ -551,7 +562,8 @@ header nav .nav-tools {
   transition: all 0.3s ease;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button-container.active .button:after {
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button-container.active .button:after,
+.block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container.active .button::after {
   transform: rotate(180deg);
 }
 
@@ -660,6 +672,36 @@ header nav .nav-tools {
   .block .nav-wrapper nav .nav-sections .default-content-wrapper p:first-of-type {
     margin-top: 15px;
     color: #0088dd;
+  }
+
+  .block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure {
+    position: unset;
+    max-width: 250px;
+    width: 250px;
+    box-shadow: unset;
+  }
+
+  .block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure ul li:nth-child(1) {
+    max-width: 93px;
+    width: 100%;
+  }
+
+  .block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure ul li:nth-child(2) {
+    max-width: 67px;
+    width: 100%;
+  }
+
+  .block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure ul li:nth-child(3) {
+    max-width: 56px;
+    width: 100%;
+  }
+
+  .block .nav-wrapper nav .nav-sections .default-content-wrapper .button {
+    justify-content: center;
+  }
+
+  .block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container.active .langStructure {
+    height: 100px;
   }
 
   .block .nav-wrapper nav .nav-sections .search-wrapper .block .search-box {

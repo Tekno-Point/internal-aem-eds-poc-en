@@ -167,20 +167,26 @@ export default async function decorate(block) {
 
 
   //multilang div append
+  function createLangStructure() {
+    return div(
+      { class: "langStructure" },
+      h3("Choose your country/region and language"),
+      ul(li("India"), li("English"), li(a("Go")))
+    );
+  }
+
+  function setupLangDropdown(container) {
+    const structure = createLangStructure();
+    container.appendChild(structure);
+    container.addEventListener("click", function () {
+      container.classList.toggle("active");
+    });
+  }
+
   const multilang = block.querySelector(".nav-tools ul li .button-container");
-  const langStructure = div({class:'langStructure'},
-    h3('Choose your country/region and language'),
-    ul(
-      li('India'),
-      li('English'),
-      li(
-        a('Go')
-      )
-    )
-  )
-  multilang.appendChild(langStructure);
-  // const langStrMain = block.querySelector(".nav-tools ul li .button-container .langStructure");
-  multilang.addEventListener('click', function () {
-    multilang.classList.toggle('active');
-  });
+  const multiLangMob = block.querySelector(".nav-sections .button-container");
+
+  setupLangDropdown(multilang);
+  setupLangDropdown(multiLangMob);
+   
 }
