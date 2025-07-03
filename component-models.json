@@ -251,6 +251,22 @@
     ]
   },
   {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Form Tab Style",
+        "options": [
+          {
+            "name": "Form Tabs",
+            "value": "form-tabs"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "tab",
     "fields": [
       {
