@@ -1,5 +1,5 @@
-import { getMetadata, loadFragment } from '../../scripts/aem.js';
-
+import { getMetadata } from '../../scripts/aem.js';
+import { loadFragment } from '../../scripts/scripts.js';
 /**
  * loads and decorates the footer
  * @param {Element} block The footer block element
