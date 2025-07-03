@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "swipper-card"
+      "swipper-card",
+      "rte-block"
     ]
   },
   {
@@ -44,6 +45,12 @@
     "id": "swipper-card",
     "components": [
       "swipper-card-item"
+    ]
+  },
+  {
+    "id": "rte-block",
+    "components": [
+      "rte-item"
     ]
   }
 ]
