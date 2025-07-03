@@ -1,0 +1,22 @@
+.section.term-insurance-container {
+    width: 100%;
+}
+
+.section.term-insurance-container h2 {
+    color: #333;
+    font-family: 'Helvetica-Rounded-Bold';
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.36px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.term-insurance>div {
+    color: #333;
+    font-family: 'Helvetica';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.18px;
+}

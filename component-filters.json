@@ -20,7 +20,12 @@
       "custom-text",
       "custom-richtext",
       "custom-richtextblock",
-      "term-insurance"
+      "term-insurance",
+      "term-Insurance-carousel",
+      "our-bestselling-term",
+      "term-plan-carousel",
+      "popular-searches",
+      "disclaimers"
     ]
   },
   {
@@ -54,6 +59,24 @@
     "id": "custom-richtextblock",
     "components": [
       "custom-richtext-item"
+    ]
+  },
+  {
+    "id": "term-Insurance-carousel",
+    "components": [
+      "term-Insurance-carousel-item"
+    ]
+  },
+  {
+    "id": "our-bestselling-term",
+    "components": [
+      "our-bestselling-term-item"
+    ]
+  },
+  {
+    "id": "term-plan-carousel",
+    "components": [
+      "term-plan-carousel-item"
     ]
   }
 ]

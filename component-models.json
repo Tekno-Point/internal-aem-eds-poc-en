@@ -148,6 +148,30 @@
           {
             "name": "Image4",
             "value": "image4"
+          },
+          {
+            "name": "Your Budget",
+            "value": "your-budget"
+          },
+          {
+            "name": "Directors",
+            "value": "directors"
+          },
+          {
+            "name": "Inforgraphic",
+            "value": "inforgraphic"
+          },
+          {
+            "name": "VideoSection",
+            "value": "video-Section"
+          },
+          {
+            "name": "popular-search",
+            "value": "popular-search"
+          },
+          {
+            "name": "term-calculator2",
+            "value": "term-calculator2"
           }
         ]
       }
@@ -281,6 +305,96 @@
   {
     "id": "term-insurance-item",
     "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "term-Insurance-carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "our-bestselling-term-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "term-plan-carousel-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "popular-searches",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "disclaimers",
+    "fields": [
+     {
+        "component": "text",
+        "name": "text",
+        "value": "",
+        "label": "Dis Text",
+        "valueType": "string",
+        "description": "Disclaimers Title"
+      },
       {
         "component": "richtext",
         "name": "text",

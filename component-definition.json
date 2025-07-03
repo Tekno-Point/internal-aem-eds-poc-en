@@ -276,6 +276,126 @@
               }
             }
           }
+        },
+        {
+          "title": "Term Insurance Carousel",
+          "id": "term-Insurance-carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Term Insurance Carousel",
+                  "filter": "term-Insurance-carousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Term Insurance Carousel Item",
+          "id": "term-Insurance-carousel-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Term Insurance Carousel Item",
+                  "model": "term-Insurance-carousel-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Our bestselling Term ",
+          "id": "our-bestselling-term",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Our bestselling Term",
+                  "filter": "our-bestselling-term"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Our bestselling Term Item",
+          "id": "our-bestselling-term-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Our bestselling Term Item",
+                  "model": "our-bestselling-term-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": " Term plans Carousel ",
+          "id": "term-plan-carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Term plans Carousel",
+                  "filter": "term-plan-carousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Term plans Carousel Item",
+          "id": "term-plan-carousel-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Term plans Carousel Item",
+                  "model": "term-plan-carousel-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Popular Searches ",
+          "id": "popular-searches",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Popular Searches",
+                  "model": "popular-searches"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Disclaimers",
+          "id": "disclaimers",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Disclaimers",
+                  "model": "disclaimers"
+                }
+              }
+            }
+          }
         }
       ]
     }
