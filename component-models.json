@@ -172,6 +172,10 @@
           {
             "name": "term-calculator2",
             "value": "term-calculator2"
+          },
+          {
+            "name": "term-insurance-plan",
+            "value": "term-insurance-plan"
           }
         ]
       }
