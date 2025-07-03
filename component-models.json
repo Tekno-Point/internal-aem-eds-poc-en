@@ -315,19 +315,8 @@
         "component": "richtext",
         "name": "col2_text",
         "value": "",
-        "label": "Life Cover Pointer",
+        "label": "Life Cover Pointer and Tagline IMG",
         "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "col3_taglineImage",
-        "label": "Tagline Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "col3_taglineImageAlt",
-        "label": "Alt Text"
       },
       {
         "component": "reference",
