@@ -977,7 +977,37 @@ main .section.highlight {
 /* benefit of buying insurance plan ends */
 
 /* types of insurance plan starts */
-    .types-of-insurance-plan{
-      background-color: #58595B;
+    .types-of-insurance-plan>div>div>div>div>h2{
+      color: #333;
+      font-family: 'Inter-Bold';
+      font-size: 2.25rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.36px;
+    }
+    .types-of-insurance-plan>div>div>div>div>p{
+      color: #333;
+      font-family: 'Helvetica';
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: -0.18px;
+    }
+    .types-of-insurance-plan>div>div>div>div>ul{
+      padding: 15px 0 10px 0;
+    }
+    .types-of-insurance-plan>div>div>div>div>ul li{
+      margin-left: unset;
+      padding-left: 52px;
+      list-style: none;
+      position: relative;
+      color: #333;
+      font-family: 'Helvetica';
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: -0.18px;
+      margin-bottom: 20px;    
     }
 /* types of insurance plan  ends */

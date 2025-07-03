@@ -184,6 +184,10 @@
           {
             "name": "types-of-insurance-plan",
             "value": "types-of-insurance-plan"
+          },
+          {
+            "name": "need-of-insurance-term-cover",
+            "value": "need-of-insurance-term-cover"
           }
         ]
       }
