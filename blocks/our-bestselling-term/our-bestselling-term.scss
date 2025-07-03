@@ -36,9 +36,9 @@ main>.section.our-bestselling-term-container {
             h5,
             h6 {
                 color: #333;
-                font-family: 'Helvetica-Rounded-Bold';
+                font-family: 'HelveticaNeueBold';
                 font-size: 36px;
-                font-weight: 800;
+                font-weight: 700;
                 letter-spacing: -0.36px;
                 margin: 0;
                 padding-bottom: 10px;
@@ -47,7 +47,7 @@ main>.section.our-bestselling-term-container {
 
             p {
                 color: #333;
-                font-family: 'Helvetica';
+                font-family: 'HelveticaNeueRoman';
                 font-size: 18px;
                 font-weight: 400;
                 line-height: 27px;
@@ -115,7 +115,7 @@ main>.section.our-bestselling-term-container {
                             padding: 20px 0px 0px 20px;
                             min-height: 95px;
                             position: relative;
-                            font-family: "Helvetica-Rounded-Bold";
+                            font-family: "HelveticaNeueBold";
                             font-weight: 700;
                             font-size: 24px;
 
@@ -180,7 +180,7 @@ main>.section.our-bestselling-term-container {
 
                                     li {
                                         display: flex;
-                                        font-family: 'Helvetica';
+                                        font-family: "HelveticaNeueRoman";
                                         font-size: 16px;
                                         font-weight: 400;
                                         line-height: 120%;
@@ -208,8 +208,8 @@ main>.section.our-bestselling-term-container {
                                         // min-width: 160px;
                                         background: #D62049;
                                         border-radius: 8px;
-                                        font-family: 'Helvetica-Bold';
-
+                                        font-family: "HelveticaNeueBold";
+                                        font-weight: 700;
                                         font-size: 16px;
                                         line-height: 20px;
                                         letter-spacing: -0.007em;
@@ -220,10 +220,10 @@ main>.section.our-bestselling-term-container {
                                     }
 
                                     &>li:last-child {
-                                        // min-width: 160px;
                                         border: 1px solid #D62049;
                                         padding: 11px 23px;
-                                        font-family: 'Helvetica-Bold';
+                                        font-family: "HelveticaNeueBold";
+                                        font-weight: 700;
                                         font-size: 16px;
                                         line-height: 16px;
                                         letter-spacing: -0.007em;
@@ -243,7 +243,7 @@ main>.section.our-bestselling-term-container {
                             padding: 0;
 
                             li {
-                                font-family: 'Helvetica';
+                                font-family: "HelveticaNeueRoman";
                                 font-weight: 400;
                                 font-size: 10px;
                                 line-height: 11px;

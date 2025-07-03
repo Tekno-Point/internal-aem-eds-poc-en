@@ -168,6 +168,10 @@
           {
             "name": "popular-search",
             "value": "popular-search"
+          },
+          {
+            "name": "term-calculator2",
+            "value": "term-calculator2"
           }
         ]
       }

@@ -20,8 +20,8 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: Inter-Regular, Inter-fallback, sans-serif;
+  --heading-font-family: Inter-Bold, Inter-Bold-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -42,13 +42,13 @@
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
+  font-family: Inter-Bold-fallback;
   size-adjust: 88.82%;
   src: local('Arial');
 }
 
 @font-face {
-  font-family: roboto-fallback;
+  font-family: Inter-fallback;
   size-adjust: 99.529%;
   src: local('Arial');
 }
@@ -77,7 +77,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: normal;
 }
 
 body.appear {
@@ -104,11 +104,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0.4em;
+  margin-bottom: 0.15em;
   font-family: var(--heading-font-family);
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 0.80;
   scroll-margin: 40px;
 }
 
@@ -142,8 +142,8 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0.4em;
+  margin-bottom: 0.15em;
 }
 
 code,
@@ -195,7 +195,7 @@ button {
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.05;
   text-align: center;
   text-decoration: none;
   background-color: var(--link-color);
@@ -448,20 +448,17 @@ main .section.highlight {
 
 .your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:first-child {
   color: #FFF;
-  font-family: 'HelveticaNeueLTStd-Bd';
+  font-family: 'HelveticaNeueBold';
   font-size: 2.625rem;
   font-weight: 700;
   padding-bottom: 5px;
   letter-spacing: -0.42px;
   display: block;
-  /* position: absolute;
-  top: 65px;
-  left: 40px; */
 }
 
 .your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:nth-child(2) {
   color: #FFF;
-  font-family: 'helveticaregular';
+  font-family: 'HelveticaNeueRoman';
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: -0.24px;
@@ -478,7 +475,7 @@ main .section.highlight {
 
 .your-budget .cards-wrapper .cards>ul>li .cards-card-body ul li:nth-child(2)>ul li {
   color: #FFF;
-  font-family: 'helveticaregular';
+  font-family: 'HelveticaNeueRoman';
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: normal;
@@ -495,7 +492,7 @@ main .section.highlight {
   padding: 13px;
   text-align: center;
   color: #D62049;
-  font-family: 'HelveticaNeueLTStd-Md';
+  font-family: 'HelveticaNeueMedium';
   font-size: 1.125rem;
   font-weight: 500;
   letter-spacing: -0.18px;
