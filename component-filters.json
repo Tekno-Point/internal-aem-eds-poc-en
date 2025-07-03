@@ -15,7 +15,12 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "embed",
+      "custom-text",
+      "custom-richtext",
+      "custom-richtextblock",
+      "term-insurance"
     ]
   },
   {
@@ -37,6 +42,18 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "term-insurance",
+    "components": [
+      "term-insurance-item"
+    ]
+  },
+  {
+    "id": "custom-richtextblock",
+    "components": [
+      "custom-richtext-item"
     ]
   }
 ]
