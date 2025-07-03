@@ -901,5 +901,83 @@ main .section.highlight {
 /* term insurance plan benefit ends */
 
 /* benefit of buying insurance plan starts */
+    .benefit-buying-insurance-plan> div> div > div >div> h2{
+        color: #333;
+        font-family: 'Inter-Bold';
+        font-size: 2.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.36px;
+        padding-bottom: 10px;
+    }
+    .benefit-buying-insurance-plan> div> div > div >div> p{
+        color: #333;
+        font-family: 'Helvetica';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: -0.18px;
+    }
+    .benefit-buying-insurance-plan> div> div > div> div> p span {
+        width: 50px;
+        height: 50px;
+    }
+    .benefit-buying-insurance-plan> div> div > div> div>h3 {
+        color: #333;
+        font-family: 'Inter-Bold';
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.24px;
+    }
+    .benefit-buying-insurance-plan> div> div > div> div>p {
+        color: #333;
+        font-family: 'helvetica';
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+    }
+    .benefit-buying-insurance-plan> .custom-richtextblock-wrapper{
+      margin: 25px auto;
+    }
+    .benefit-buying-insurance-plan> .custom-richtextblock-wrapper >div>div{
+        padding: 40px 40px;
+    }
+    .benefit-buying-insurance-plan> .custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(1){
+        border-top-left-radius: 25px;
+    }
+    .benefit-buying-insurance-plan> .custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(3){
+        border-top-right-radius: 25px;
+    }
+    .benefit-buying-insurance-plan> .custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(4){
+        border-bottom-left-radius: 25px;
+    }
+    .benefit-buying-insurance-plan> .custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(6){
+        border-bottom-right-radius: 25px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .benefit-buying-insurance-plan> div> div > div >div> h2{
+        font-size: 24px;
+        letter-spacing: -0.24px;
+      }
+      .benefit-buying-insurance-plan> div> div > div >div> p{
+        line-height: 22.4px;
+        letter-spacing: -0.16px;
+        font-size: 16px;
+      }
+      .benefit-buying-insurance-plan> .custom-richtextblock-wrapper >div>div{
+        padding: 20px 15px;
+    }
+    }
     
 /* benefit of buying insurance plan ends */
+
+/* types of insurance plan starts */
+    .types-of-insurance-plan{
+      background-color: #58595B;
+    }
+/* types of insurance plan  ends */

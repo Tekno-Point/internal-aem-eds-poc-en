@@ -180,6 +180,10 @@
           {
             "name": "benefit-buying-insurance-plan",
             "value": "benefit-buying-insurance-plan"
+          },
+          {
+            "name": "types-of-insurance-plan",
+            "value": "types-of-insurance-plan"
           }
         ]
       }
