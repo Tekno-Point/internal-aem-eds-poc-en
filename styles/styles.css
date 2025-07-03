@@ -252,7 +252,7 @@ main>.section {
 main>.section>div {
   max-width: 1200px;
   margin: auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 main>.section:first-of-type {
@@ -299,13 +299,72 @@ main .section.highlight {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   display: block;
   position: absolute;
-  top: 7px;
+  top: 0;
   left: 0;
 }
+
+/* content1-term  css start */
+.content1.content1-term.custom-richtext-container {
+  margin: 60px 0;
+}
+
+.content1-term .custom-richtext-wrapper {
+  padding: 0;
+}
+
+.content1-term .custom-richtext-wrapper>div h2 {
+  color: #333;
+  font-family: 'HelveticaNeueBold';
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.content1-term .custom-richtext-wrapper>div p {
+  color: #333;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.18px;
+}
+
+.content1-term .custom-richtext-wrapper>div ul {
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.content1-term .custom-richtext-wrapper>div ul li {
+  margin-left: unset;
+  padding-left: 52px;
+  list-style: none;
+  position: relative;
+  color: #333;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.18px;
+  margin-bottom: 20px;
+}
+
+.content1-term .custom-richtext-wrapper>div ul li strong {
+  color: #0073BB;
+  font-family: 'HelveticaNeueBold';
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.126px;
+}
+
+/* content1-term  css End */
 
 
 .content2>div.default-content-wrapper>p:nth-child(2) {
@@ -373,6 +432,98 @@ main .section.highlight {
     display: block;
   }
 
+  .content1-term .custom-richtext-wrapper>div h2 {
+    letter-spacing: -0.24px;
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .content1.content1-term.custom-richtext-container {
+    padding: 0 20px;
+  }
+
+  .content1-term .custom-richtext-wrapper>div p {
+    line-height: 20px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+  }
+
+  .content1-term .custom-richtext-wrapper>div ul {
+    margin-top: 40px;
+  }
+
+  .content1-term .custom-richtext-wrapper>div ul li {
+    line-height: 19.6px;
+    padding-left: 34px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: -0.14px;
+  }
+
+  .content1 .custom-richtext li::before,
+  .content4 .custom-richtext li::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .content1-term .custom-richtext-wrapper>div ul li strong {
+    letter-spacing: -0.14px;
+    font-size: 0.875rem;
+  }
+}
+
+.content2-term .custom-richtext>div>div h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-family: 'Inter-Bold';
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  padding-bottom: 10px;
+}
+
+.content2-term .custom-richtext>div>div p {
+  color: #333;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.18px;
+}
+
+.content2-term>div:nth-child(2) {
+  margin-top: 25px;
+}
+
+.content2-term img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+
+  .content2-term .custom-richtext>div>div h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+  }
+
+  .content2-term .custom-richtext>div>div p {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+  }
 }
 
 /* Your Budget component css start */
@@ -392,7 +543,7 @@ main .section.highlight {
 }
 
 .your-budget .default-content-wrapper h1 {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter-Bold";
   font-size: 36px;
   color: #333333;
   line-height: normal;
@@ -810,7 +961,77 @@ main .section.highlight {
 }
 
 
+
 /* term-calculator2 css start */
+.section.term-calculator2>div {
+  background: #F2F7FB;
+  margin: 0 auto;
+  padding: 0 60px;
+  padding-bottom: 32px;
+  border-radius: 8px;
+  padding-top: 32px;
+  text-align: center;
+}
+
+.term-calculator2>div h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter-Bold";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  color: #333333;
+  background: var(--Primary-Gradient, linear-gradient(90deg, #0073BB 0%, #D62049 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.section.term-calculator2>div p {
+  box-shadow: 0px 0px 16px 1px rgba(51, 51, 51, 0.15);
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  padding: 15px 0px 11px 0px;
+}
+
 .term-calculator2>div p:last-child {
   display: none;
 }
+
+@media screen and (max-width: 768px) {
+  .section.term-calculator2>div {
+    padding: 0 16px;
+    padding-top: 30px;
+  }
+
+  .term-calculator2>div h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 20px;
+  }
+
+  .term-calculator2>div p:nth-child(2) {
+    display: none;
+  }
+
+  .term-calculator2>div p:last-child {
+    display: block;
+    box-shadow: unset;
+    background-color: unset;
+    border-radius: unset;
+    padding: 0;
+  }
+}
+
+
+/* term-calculator2 css End */

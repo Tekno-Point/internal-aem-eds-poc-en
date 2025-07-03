@@ -41,6 +41,18 @@ main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-
   padding-bottom: 10px;
   display: block;
 }
+@media screen and (max-width: 768px) {
+  main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-richtext h1,
+  main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-richtext h2,
+  main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-richtext h3,
+  main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-richtext h4,
+  main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-richtext h5,
+  main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-richtext h6 {
+    letter-spacing: -0.24px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
 main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-richtext p {
   color: #333;
   font-family: "HelveticaNeueRoman";
@@ -48,6 +60,13 @@ main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-
   font-weight: 400;
   line-height: 27px;
   letter-spacing: -0.18px;
+}
+@media screen and (max-width: 768px) {
+  main > .section.our-bestselling-term-container .custom-richtext-wrapper .custom-richtext p {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+  }
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper {
   padding: 0;
@@ -83,6 +102,11 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   border: 1px solid #E6E7E8;
   margin-top: unset;
   height: auto;
+}
+@media screen and (max-width: 768px) {
+  main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide {
+    width: 303px !important;
+  }
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child {
   font-weight: 700;
@@ -145,6 +169,12 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2):hover {
   box-shadow: 0px 0px 5px rgba(92, 94, 100, 0.69);
 }
+@media screen and (max-width: 768px) {
+  main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) {
+    width: 89%;
+    left: -3px;
+  }
+}
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child {
   display: flex;
   flex-direction: column;
@@ -165,6 +195,9 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child p:hover {
+  color: #0073BB;
+}
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child ul {
   display: flex;
   flex-direction: column;
@@ -177,6 +210,12 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   font-weight: 400;
   line-height: 120%;
   color: #333333;
+}
+@media screen and (max-width: 768px) {
+  main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child ul li {
+    font-size: 14px;
+    line-height: 125%;
+  }
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child ul li .icon {
   margin-right: 8px;
@@ -207,6 +246,17 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   text-align: center;
   margin-bottom: unset;
 }
+@media screen and (max-width: 768px) {
+  main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:first-child {
+    font-size: 13px;
+    line-height: 8px;
+    width: 145px;
+    background: rgb(214, 32, 73);
+    border-radius: 8px;
+    padding: 15px 8px;
+    white-space: nowrap;
+  }
+}
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:last-child {
   width: 160px;
   border: 1px solid #D62049;
@@ -220,6 +270,16 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   color: #d62049;
   border-radius: 8px;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:last-child {
+    font-size: 13px;
+    line-height: 8px;
+    width: 145px;
+    border-radius: 8px;
+    padding: 15px 8px;
+    white-space: nowrap;
+  }
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child ol {
   position: absolute;
