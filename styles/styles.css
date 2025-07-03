@@ -70,6 +70,10 @@
   }
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   display: none;
   margin: 0;
@@ -118,6 +122,8 @@ h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
+
+h5 { line-height: 30px;}
 
 p,
 dl,
@@ -240,6 +246,14 @@ main > .section > div {
 
 main > .section:first-of-type {
   margin-top: 0;
+}
+
+.bg-primary {
+  background-color: #db6b0b;
+}
+
+.bg-tertiary {
+  background-color: #9b9b9b;
 }
 
 @media (width >= 900px) {

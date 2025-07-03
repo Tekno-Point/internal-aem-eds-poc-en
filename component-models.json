@@ -112,6 +112,14 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Background Orange",
+            "value": "bg-primary"
+          },
+          {
+            "name": "Background Tertiary",
+            "value": "bg-tertiary"
           }
         ]
       }
