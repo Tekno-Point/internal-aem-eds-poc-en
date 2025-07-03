@@ -835,7 +835,7 @@ main .section.highlight {
     list-style: none;
     position: relative;
     color: #333;
-    font-family: 'helveticaregular';
+    font-family: 'Helvetica';
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
@@ -844,8 +844,8 @@ main .section.highlight {
 }
 .term-insurance-plan > div ul li strong{
     color: #0073BB;
-    font-family: 'HelveticaNeueLTStd-Bd';
-    font-size: 23px;
+    font-family: 'HelveticaNeueBold';
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     letter-spacing: -0.126px;
@@ -858,8 +858,48 @@ main .section.highlight {
   height: 32px;
   top: 0px;
 }
+
+@media screen and (max-width: 768px) {
+  .term-insurance-plan > div h2{
+        font-family: 'Inter';
+        font-size: 24px;
+        letter-spacing: -0.24px;
+        font-weight: 700;
+  }
+  .term-insurance-plan > div ul li{
+        line-height: 19.6px;
+        padding-left: 34px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: -0.14px;
+  }
+  .content4 .custom-richtext li {
+        padding-left: 60px;
+  }
+  .content4 .custom-richtext li::before {
+    min-width: 24px;
+    height: 24px;
+    top: 0px;
+  }
+  .content4 .custom-richtext li strong{
+        line-height: 19.6px;
+        /* padding-left: 34px; */
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: -0.14px;
+  }
+  .content4 .custom-richtext li {
+        padding-left: 32px;
+        font-family: 'Helvetica';
+        font-weight: 400;
+        line-height: 19.6px;
+  }
+  .content4 .custom-richtext li strong{
+        font-size: 14px;
+  }
+}
 /* term insurance plan benefit ends */
 
-/* looking to buy new insurance plan form starts */
-
-/* looking to buy new insurance plan form ends */
+/* benefit of buying insurance plan starts */
+    
+/* benefit of buying insurance plan ends */
