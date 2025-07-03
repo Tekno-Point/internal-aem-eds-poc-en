@@ -241,4 +241,19 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
   text-align: center;
   letter-spacing: -0.007em;
   color: #58595B;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+  left: 13%;
+  width: auto;
+  transition: all 0.3s linear;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-pagination-bullet-active {
+  width: 27px;
+  height: 10px;
+  border-radius: 10px;
 }/*# sourceMappingURL=term-plans-carousel.css.map */

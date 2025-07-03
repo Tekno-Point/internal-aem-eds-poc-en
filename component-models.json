@@ -172,6 +172,14 @@
           {
             "name": "term-calculator2",
             "value": "term-calculator2"
+          },
+          {
+            "name": "content1-term",
+            "value": "content1-term"
+          },
+          {
+            "name": "content2-term",
+            "value": "content2-term"
           }
         ]
       }
@@ -387,7 +395,7 @@
   {
     "id": "disclaimers",
     "fields": [
-     {
+      {
         "component": "text",
         "name": "text",
         "value": "",

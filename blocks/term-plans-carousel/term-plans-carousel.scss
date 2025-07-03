@@ -261,6 +261,24 @@ main>.section.term-plans-carousel-container {
                 }
 
             }
+
+            .swiper-pagination-bullets.swiper-pagination-horizontal {
+                bottom: 0;
+                left: 13%;
+                width: auto;
+                transition: all 0.3s linear;
+            }
+
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+            }
+
+            .swiper-pagination-bullet-active {
+                width: 27px;
+                height: 10px;
+                border-radius: 10px;
+            }
         }
     }
 }

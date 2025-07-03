@@ -100,11 +100,17 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   display: flex;
   flex-direction: column;
   padding: 20px 0px 0px 20px;
-  min-height: 95px;
+  min-height: 75px;
   position: relative;
   font-family: "HelveticaNeueBold";
   font-weight: 700;
   font-size: 24px;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:first-child:hover {
+  border-left: 1px solid rgba(65, 151, 211, 0.5019607843);
+  border-right: 1px solid rgba(65, 151, 211, 0.5019607843);
+  border-top: 1px solid rgba(65, 151, 211, 0.5019607843);
+  border-radius: 20px 20px 0 0;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:first-child li {
   font-family: "Inter-Regular";
@@ -129,12 +135,15 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   border-radius: 20px;
   background-color: #ffffff;
   padding: 16px 20px 0px 20px;
-  min-height: 326px;
+  min-height: 351px;
   display: flex;
   flex-direction: column;
   position: absolute;
   width: 92%;
   left: -5px;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2):hover {
+  box-shadow: 0px 0px 5px rgba(92, 94, 100, 0.69);
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child {
   display: flex;
@@ -178,12 +187,14 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   display: flex;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 14px;
   margin-top: auto;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:first-child {
+  width: 160px;
   background: #D62049;
   border-radius: 8px;
   font-family: "HelveticaNeueBold";
@@ -192,20 +203,23 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   line-height: 20px;
   letter-spacing: -0.007em;
   color: #FFFFFF;
-  padding: 10px;
+  padding: 8px;
   text-align: center;
   margin-bottom: unset;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:last-child {
+  width: 160px;
   border: 1px solid #D62049;
-  padding: 11px 23px;
+  padding: 8px;
   font-family: "HelveticaNeueBold";
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
   letter-spacing: -0.007em;
-  background: transparent !important;
-  color: #d62049 !important;
+  background: transparent;
+  color: #d62049;
+  border-radius: 8px;
+  text-align: center;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child ol {
   position: absolute;
@@ -226,4 +240,16 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide:last-child {
   margin-right: 0 !important;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -41px;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-pagination-bullet-active {
+  width: 27px;
+  height: 10px;
+  border-radius: 10px;
 }/*# sourceMappingURL=our-bestselling-term.css.map */
