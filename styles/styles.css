@@ -1010,4 +1010,23 @@ main .section.highlight {
       letter-spacing: -0.18px;
       margin-bottom: 20px;    
     }
+
+    @media screen and (max-width: 768px) {
+      .types-of-insurance-plan>div>div>div>div>h2{
+        font-size: 1.5rem;
+        letter-spacing: -0.24px;
+      }
+      .types-of-insurance-plan>div>div>div>div>p{
+        line-height: 22.4px;
+        letter-spacing: -0.16px;
+        font-size: 16px;
+      }
+      .types-of-insurance-plan>div>div>div>div>ul li{
+        line-height: 19.6px;
+        padding-left: 34px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: -0.14px;
+      }
+    }
 /* types of insurance plan  ends */
