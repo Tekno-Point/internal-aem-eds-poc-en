@@ -112,7 +112,8 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },{
+          },
+          {
             "name" : "Million Indians", 
             "value": "million-indians"
           }
