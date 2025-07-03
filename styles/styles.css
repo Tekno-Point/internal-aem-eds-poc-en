@@ -248,6 +248,10 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
+.bg-megamenu {
+  background: linear-gradient(to bottom, #f58220 -18%, #b02a30 127%);
+}
+
 .bg-primary {
   background-color: #db6b0b;
 }

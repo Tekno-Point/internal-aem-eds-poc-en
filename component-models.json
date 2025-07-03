@@ -114,6 +114,10 @@
             "value": "highlight"
           },
           {
+            "name": "Background Mega Menu",
+            "value": "bg-megamenu"
+          },
+          {
             "name": "Background Orange",
             "value": "bg-primary"
           },
