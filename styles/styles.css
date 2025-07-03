@@ -814,3 +814,52 @@ main .section.highlight {
 .term-calculator2>div p:last-child {
   display: none;
 }
+
+/* term insurance plan benefit starts */
+.term-insurance-plan > div h2{
+    color: #333;
+    font-family: 'Inter';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    padding-bottom: 20px;
+}
+.term-insurance-plan > div ul{
+  padding-left: 0;
+}
+.term-insurance-plan > div ul li{
+    margin-left: unset;
+    padding-left: 60px;
+    list-style: none;
+    position: relative;
+    color: #333;
+    font-family: 'helveticaregular';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.18px;
+    margin-bottom: 20px;
+}
+.term-insurance-plan > div ul li strong{
+    color: #0073BB;
+    font-family: 'HelveticaNeueLTStd-Bd';
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.126px;
+}
+.content4 .custom-richtext li {
+  padding-left: 60px;
+}
+.content4 .custom-richtext li::before {
+  min-width: 32px;
+  height: 32px;
+  top: 0px;
+}
+/* term insurance plan benefit ends */
+
+/* looking to buy new insurance plan form starts */
+
+/* looking to buy new insurance plan form ends */

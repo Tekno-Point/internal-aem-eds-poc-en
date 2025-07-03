@@ -176,6 +176,10 @@
           {
             "name": "term-insurance-plan",
             "value": "term-insurance-plan"
+          },
+          {
+            "name": "buy-insurance-plan-form",
+            "value": "buy-insurance-plan-form"
           }
         ]
       }
