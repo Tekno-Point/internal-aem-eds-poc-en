@@ -128,6 +128,11 @@
         "multi": false
       },
       {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
