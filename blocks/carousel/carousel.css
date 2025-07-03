@@ -265,6 +265,17 @@ h3.swiper-pagination-bullet {
     cursor: default;
 }
 
+.carousel-container>.default-content-wrapper>h2{
+    font-family: "TSTAR-PRO-Heavy";
+    font-weight: 900;
+        text-transform: uppercase;
+        font-style: italic ;
+}
+
+.carousel-container{
+    margin-top: 64px;
+}
+
 @media (max-width: 600px) {
     .swiper-slide {
         flex-direction: column;
@@ -310,7 +321,7 @@ h3.swiper-pagination-bullet {
           margin-top: 69px;
     }
 
-    /* .carousel-container>.carousel-wrapper{
-        width: 100%;
-    } */
+   .carousel-container>.default-content-wrapper>h2{
+    font-size:  1.75rem;
+   }
 }

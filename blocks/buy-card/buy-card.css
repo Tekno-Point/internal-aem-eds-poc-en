@@ -39,11 +39,12 @@ main > .section > div {
 .buy-card {
     max-width: 1440px;
     width: 100%;
-    margin-top: 31px;
+    margin-top: 42px;
     display: flex;
     justify-content: center;
 }
 .buy-card-container > div > p {
+    font-family: "TSTAR-PRO-Heavy";
     text-align: center;
     font-size: 3rem;
     font-style: italic;
