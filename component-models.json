@@ -289,5 +289,57 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"aia-banner",
+    "fields":[
+      {
+        "component": "reference",
+        "name": "col1_SampoornaImage",
+        "label": "Sampoorna Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_SampoornaImageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Ratings And Customer Count",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Life Cover Pointer",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col3_taglineImage",
+        "label": "Tagline Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col3_taglineImageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "reference",
+        "name": "col3_amImage",
+        "label": "Ambassador Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col3_amImageAlt",
+        "label": "Alt Text"
+      }
+    ]
   }
 ]

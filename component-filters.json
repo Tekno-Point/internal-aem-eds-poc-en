@@ -20,7 +20,8 @@
       "custom-text",
       "custom-richtext",
       "custom-richtextblock",
-      "term-insurance"
+      "term-insurance",
+      "aia-banner"
     ]
   },
   {
@@ -54,6 +55,12 @@
     "id": "custom-richtextblock",
     "components": [
       "custom-richtext-item"
+    ]
+  },
+  {
+    "id": "aia-banner",
+    "components": [
+      "aia-banner-content"
     ]
   }
 ]
