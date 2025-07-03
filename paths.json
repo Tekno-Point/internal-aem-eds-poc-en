@@ -31,7 +31,8 @@
     "/content/internal-aem-eds-poc/poonawallafincorp/form/subscription:/poonawallafincorp/form/subscription.json",
     "/content/internal-aem-eds-poc/poonawallafincorp/form/form-email:/poonawallafincorp/form/form-email.json",
     "/content/internal-aem-eds-poc/srilankan-airlines/footer-form:/srilankan-airlines/footer-form.json",
-    "/content/internal-aem-eds-poc/srilankan-airlines/forms/booking-form:/srilankan-airlines/forms/booking-form.json"
+    "/content/internal-aem-eds-poc/srilankan-airlines/forms/booking-form:/srilankan-airlines/forms/booking-form.json",
+    "/content/internal-aem-eds-poc/srilankan-airlines/api/iata:/srilankan-airlines/api/iata.json"
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
