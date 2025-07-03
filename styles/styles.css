@@ -808,3 +808,9 @@ main .section.highlight {
   line-height: normal;
   letter-spacing: -0.267px;
 }
+
+
+/* term-calculator2 css start */
+.term-calculator2>div p:last-child {
+  display: none;
+}
