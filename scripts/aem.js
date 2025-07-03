@@ -10,13 +10,15 @@
  * governing permissions and limitations under the License.
  */
 
+import { decorateMain } from './scripts.js';
+
 /* eslint-env browser */
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
   const timeShift = () => (window.performance ? window.performance.now() : Date.now() - window.hlx.rum.firstReadTime);
   try {
     window.hlx = window.hlx || {};
-    sampleRUM.enhance = () => {};
+    sampleRUM.enhance = () => { };
     if (!window.hlx.rum) {
       const param = new URLSearchParams(window.location.search).get('rum');
       const weight = (window.SAMPLE_PAGEVIEWS_AT_RATE === 'high' && 10)
@@ -720,6 +722,50 @@ async function loadSections(element) {
     }
   }
 }
+/**
+ * Loads a fragment.
+ * @param {string} path The path to the fragment
+ * @returns {HTMLElement} The root element of the fragment
+ */
+async function loadFragment(path) {
+  if (path && path.startsWith('/')) {
+    // eslint-disable-next-line no-param-reassign
+    path = path.replace(/(\.plain)?\.html/, '');
+    const resp = await fetch(`${path}.plain.html`);
+    if (resp.ok) {
+      const main = document.createElement('main');
+      main.innerHTML = await resp.text();
+
+      // reset base path for media to fragment base
+      const resetAttributeBase = (tag, attr) => {
+        main.querySelectorAll(`${tag}[${attr}^="./media_"]`).forEach((elem) => {
+          elem[attr] = new URL(elem.getAttribute(attr), new URL(path, window.location)).href;
+        });
+      };
+      resetAttributeBase('img', 'src');
+      resetAttributeBase('source', 'srcset');
+
+      decorateMain(main);
+      await loadSections(main);
+      return main;
+    }
+  }
+  return null;
+}
+
+export default async function decorateFragment(block) {
+  const link = block.querySelector('a');
+  const path = link ? link.getAttribute('href') : block.textContent.trim();
+  const fragment = await loadFragment(path);
+  if (fragment) {
+    const fragmentSection = fragment.querySelector(':scope .section');
+    if (fragmentSection) {
+      block.classList.add(...fragmentSection.classList);
+      block.classList.remove('section');
+      block.replaceChildren(...fragmentSection.childNodes);
+    }
+  }
+}
 
 init();
 
@@ -745,6 +791,8 @@ export {
   sampleRUM,
   setup,
   toCamelCase,
+  decorateFragment,
+  loadFragment,
   toClassName,
   waitForFirstImage,
   wrapTextNodes,

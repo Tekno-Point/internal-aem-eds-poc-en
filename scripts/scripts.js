@@ -1,3 +1,4 @@
+import decorateFragment from '../blocks/fragment/fragment.js';
 import {
   loadHeader,
   loadFooter,
@@ -58,6 +59,28 @@ async function loadFonts() {
   }
 }
 
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
+
+function loadAutoBlock(doc) {
+  doc.querySelectorAll('a').forEach((a) => {
+    debugger;
+    if (a && a.href && a.href.includes('/fragments/')) {
+      decorateFragment(a.parentElement);
+    } else if (a && a.href && a.href.includes('/forms/')) {
+      decorateFragment(a.parentElement);
+    }
+  });
+}
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -114,6 +137,7 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  autolinkModals(doc);
   const main = doc.querySelector('main');
   await loadSections(main);
 
@@ -126,6 +150,7 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+  loadAutoBlock(doc);
 }
 
 /**
