@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "carousel"
+      "carousel",
+      "tabs"
     ]
   },
   {
@@ -45,5 +46,9 @@
     "components": [
       "carousel-item"
     ]
+  },
+  {
+    "id": "tab",
+    "components": ["tab"]
   }
 ]
