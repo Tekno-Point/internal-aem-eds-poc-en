@@ -1,0 +1,244 @@
+@import url("../term-plans-carousel/swiper-bundle.min.css");
+main > .section.term-plans-carousel-container {
+  margin: 0;
+  padding: 0;
+  max-width: 99%;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  main > .section.term-plans-carousel-container {
+    width: auto;
+    padding: 0;
+    max-width: 77%;
+  }
+}
+main > .section.term-plans-carousel-container p {
+  margin: 0;
+  padding: 0;
+}
+main > .section.term-plans-carousel-container .default-content-wrapper {
+  max-width: 100%;
+  width: 78%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* margin: 0; */
+  padding: 0;
+  margin-bottom: 64px;
+}
+@media (max-width: 768px) {
+  main > .section.term-plans-carousel-container .default-content-wrapper {
+    margin-left: -20px;
+    margin-bottom: 24px;
+  }
+}
+main > .section.term-plans-carousel-container .default-content-wrapper h1,
+main > .section.term-plans-carousel-container .default-content-wrapper h2,
+main > .section.term-plans-carousel-container .default-content-wrapper h3,
+main > .section.term-plans-carousel-container .default-content-wrapper h4,
+main > .section.term-plans-carousel-container .default-content-wrapper h5,
+main > .section.term-plans-carousel-container .default-content-wrapper h6 {
+  padding: 0;
+  margin: 0;
+  color: #0D2042;
+  font-family: "inter-bold";
+  font-weight: 700;
+  font-size: 36px;
+  color: #333333;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  main > .section.term-plans-carousel-container .default-content-wrapper h1,
+  main > .section.term-plans-carousel-container .default-content-wrapper h2,
+  main > .section.term-plans-carousel-container .default-content-wrapper h3,
+  main > .section.term-plans-carousel-container .default-content-wrapper h4,
+  main > .section.term-plans-carousel-container .default-content-wrapper h5,
+  main > .section.term-plans-carousel-container .default-content-wrapper h6 {
+    font-size: 24px;
+  }
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel {
+  overflow: hidden;
+  padding-bottom: 35px;
+  height: auto;
+  position: unset;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper {
+  margin-bottom: 23px;
+}
+@media (max-width: 768px) {
+  main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper {
+    margin-left: 2px;
+  }
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide {
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+  background-color: #fff;
+  position: relative;
+  width: 282px !important;
+  display: inline-block;
+  height: 144px;
+  border: 1px solid #E6E7E8;
+  box-shadow: 3px 6px 14px 0 rgba(0, 115, 187, 0.1);
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child {
+  font-family: "Helvetica-Rounded-Bold";
+  font-weight: 800;
+  font-size: 17px;
+  overflow: hidden;
+  color: #333333;
+  padding: 20px;
+  padding-top: 38px;
+  line-height: normal;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child::after {
+  content: "";
+  background: url(/icons/chevron_20x12.png) no-repeat;
+  width: 20px;
+  height: 13px;
+  transform: rotate(90deg);
+  position: absolute;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-position: 0 0;
+  right: 16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:first-child {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 87px 18px 20px;
+  min-height: 95px;
+  position: relative;
+  font-family: "HelveticaNeueLTStd-Bd";
+  font-size: 24px;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:first-child li {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: -0.007em;
+  color: #58595B;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:first-child li:last-child {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.007em;
+  color: #58595B;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) {
+  box-shadow: 0px 0px 5px rgba(88, 89, 91, 0.15);
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 16px 20px 36px 20px;
+  min-height: 326px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 92%;
+  left: -5px;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child {
+  display: flex;
+  flex-direction: column;
+  height: 178px;
+  overflow: auto;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: #92bfd6 #f1f1f1;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.007em;
+  color: #A7A9AC;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child ul li {
+  display: flex;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child {
+  display: flex;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: auto;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:first-child {
+  background: #D62049;
+  border-radius: 8px;
+  font-family: "HelveticaNeueLTStd-Md";
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.007em;
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: unset;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:last-child {
+  border: 1px solid #D62049;
+  padding: 11px 23px;
+  font-family: "HelveticaNeueLTStd-Md";
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.007em;
+  background: transparent !important;
+  color: #d62049 !important;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child ol {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child ol li {
+  font-family: "helveticaregular";
+  font-size: 10px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: -0.007em;
+  color: #58595B;
+}/*# sourceMappingURL=term-plans-carousel.css.map */
