@@ -16,10 +16,10 @@
       "cards",
       "columns",
       "fragment",
-      "search",
       "carousel",
-      "form",
-      "search"
+      "tabs",
+      "search",
+      "form"
     ]
   },
   {
@@ -48,5 +48,9 @@
     "components": [
       "carousel-item"
     ]
+  },
+  {
+    "id": "tab",
+    "components": ["tab"]
   }
 ]

@@ -274,5 +274,38 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Form Tab Style",
+        "options": [
+          {
+            "name": "Form Tabs",
+            "value": "form-tabs"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Tab Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Tab Content",
+        "valueType": "string"
+      }
+    ]
   }
 ]
