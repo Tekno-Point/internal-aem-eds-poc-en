@@ -29,13 +29,6 @@
     font-style: normal;
 }
 
-main > .section > div {
-    /*  this line for check*/
-    /* max-width: 1440px;  
-    width: 100%; */
-}
-
-
 .buy-card {
     max-width: 1440px;
     width: 100%;

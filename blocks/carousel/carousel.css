@@ -220,7 +220,7 @@ h3.swiper-pagination-bullet {
     top: 67px;
 }
 
-.btnWrapper > .swiper-pagination{
+.btnWrapper > .swiper-pagination {
     max-width: 1087px;
     width: 100%;
     overflow: hidden;
@@ -242,7 +242,7 @@ h3.swiper-pagination-bullet {
 .swiper-pagination > h3 {
     width: max-content;
     padding: 7px;
-        padding-left: 31px;
+    padding-left: 31px;
 }
 
 #xsens-fi-technology {
@@ -265,14 +265,14 @@ h3.swiper-pagination-bullet {
     cursor: default;
 }
 
-.carousel-container>.default-content-wrapper>h2{
+.carousel-container > .default-content-wrapper > h2 {
     font-family: "TSTAR-PRO-Heavy";
     font-weight: 900;
-        text-transform: uppercase;
-        font-style: italic ;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
-.carousel-container{
+.carousel-container {
     margin-top: 64px;
 }
 
@@ -286,9 +286,9 @@ h3.swiper-pagination-bullet {
         padding: 0px;
     }
 
-    .btnWrapper >.swiper-pagination {
+    .btnWrapper > .swiper-pagination {
         gap: 0px;
-         width: 80%;
+        width: 80%;
     }
 
     .swiper-slide {
@@ -317,11 +317,11 @@ h3.swiper-pagination-bullet {
         right: 0px;
     }
 
-   .carousel > .swiper-wrapper {
-          margin-top: 69px;
+    .carousel > .swiper-wrapper {
+        margin-top: 69px;
     }
 
-   .carousel-container>.default-content-wrapper>h2{
-    font-size:  1.75rem;
-   }
+    .carousel-container > .default-content-wrapper > h2 {
+        font-size: 1.75rem;
+    }
 }
