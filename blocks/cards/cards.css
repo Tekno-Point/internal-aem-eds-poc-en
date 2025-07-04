@@ -26,8 +26,6 @@
     object-fit: cover;
 }
 
-
-
 .million-indians > .default-content-wrapper > h2 {
     text-align: center;
     padding-bottom: 4rem;
@@ -36,4 +34,72 @@
     font-size: 3.6rem;
     line-height: 45px;
     margin-bottom: 0;
+}
+
+.million-indians .cards-wrapper > .cards > ul {
+    display: flex;
+}
+
+.million-indians .cards-wrapper > .cards > ul > li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 2.5rem 1.6rem 2.5rem 2.8rem;
+    width: 33.33%;
+    margin-right: 2.3rem;
+}
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body {
+    margin: 0;
+    padding-left: 6rem;
+}
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > h5 {
+    color: #ec6625;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 25px;
+    padding-bottom: 0.6rem;
+    margin: 0;
+}
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > p {
+    color: #282828;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 18px;
+    margin: 0;
+}
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul{
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li{
+  width: auto;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    color: #282828;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 18px;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: #6C6C6C;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  border-radius: 100%;
+
 }

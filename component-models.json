@@ -116,6 +116,10 @@
           {
             "name" : "Million Indians", 
             "value": "million-indians"
+          },
+          {
+            "name" : "Travel Insurance", 
+            "value": "travel-insurance"
           }
         ]
       }
