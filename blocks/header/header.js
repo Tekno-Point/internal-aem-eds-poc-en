@@ -174,22 +174,40 @@ export default async function decorate(block) {
   navSectionsImg?.remove();
 
   if (navSections) {
-
+    let isClick = isDesktop.matches ? "mouserover" : "click";
     navSections.querySelectorAll(':scope >.default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('mouseenter', (e) => {
-        if (!e.target.closest(".inner-ul")) {
-          navSection.setAttribute('aria-expanded', 'true');
-        }
-      });
-      navSection.addEventListener('mouseleave', (e) => {
-        if (!e.target.closest(".inner-ul")) {
-          navSection.setAttribute('aria-expanded', 'false');
-        }
-      });
+      if (isDesktop.matches) {
+        navSection.addEventListener('mouseenter', (e) => {
+          if (!e.target.closest(".inner-ul")) {
+            navSection.setAttribute('aria-expanded', 'true');
+          }
+        });
+        navSection.addEventListener('mouseleave', (e) => {
+          if (!e.target.closest(".inner-ul")) {
+            navSection.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+      else {
+        navSection.addEventListener('click', (e) => {
+          // debugger;
+          // e.stopPropagation();
+
+          // if (isDesktop.matches && !e.target.closest(".inner-ul")) {
+          if (!e.target.closest(".inner-ul")) {
+            const expanded = navSection.getAttribute('aria-expanded') === 'true';
+            toggleAllNavSections(navSections);
+            navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            // if (isDesktop.matches) document.body.style.overflow = !expanded ? 'hidden' : 'auto';
+          }
+        });
+      }
 
       navSection.querySelectorAll(":scope>ul >li").forEach((subLi, ind) => {
-        subLi?.querySelector(":scope>p, :scope>a")?.addEventListener("mouseover", (ele) => {
+        subLi?.querySelector(":scope>p, :scope>a")?.addEventListener(isClick, (ele) => {
+          // debugger;
+          // ele.stopPropagation();
           const li = ele.target?.closest("li");
           const expanded = li?.getAttribute("aria-expanded");
           if (expanded === "false") {
