@@ -142,6 +142,39 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "FAQs Calculator",
+            "value": "faqs-calculator"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col_head",
+        "label": "Accordion Head"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_body",
+        "label": "Accordion Body"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
