@@ -61,7 +61,7 @@ function toggleAllNavSections(sections, expanded = false) {
     section.setAttribute('aria-expanded', expanded);
     section?.querySelector("ul")?.classList.add("inner-ul");
     section?.querySelectorAll("ul >li")?.forEach((subLi, ind) => {
-      isDesktop.matches ? (subLi.setAttribute('aria-expanded', ind == 0 ? 'true' : 'false')) : subLi.setAttribute('aria-expanded', expanded);
+      isDesktop.matches ? (subLi.setAttribute('aria-expanded', ind == 0 ? 'true' : expanded)) : subLi.setAttribute('aria-expanded', expanded);
     })
   });
 }
@@ -174,7 +174,7 @@ export default async function decorate(block) {
   navSectionsImg?.remove();
 
   if (navSections) {
-    let isClick = isDesktop.matches ? "mouserover" : "click";
+    let isClick = isDesktop.matches ? "mouseover" : "click";
     navSections.querySelectorAll(':scope >.default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       if (isDesktop.matches) {
@@ -205,7 +205,8 @@ export default async function decorate(block) {
       }
 
       navSection.querySelectorAll(":scope>ul >li").forEach((subLi, ind) => {
-        subLi?.querySelector(":scope>p, :scope>a")?.addEventListener(isClick, (ele) => {
+        // subLi?.querySelector(":scope>p, :scope>a")?.addEventListener(isClick, (ele) => {
+        subLi?.addEventListener(isClick, (ele) => {
           // debugger;
           // ele.stopPropagation();
           const li = ele.target?.closest("li");
