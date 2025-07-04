@@ -211,69 +211,52 @@
     ]
   },
   {
-  "id": "table-item",
-  "label": "Amortization Table",
-  "fields": [
-    {
-      "component": "text",
-      "name": "title",
-      "label": "Table Title",
-      "value": "Amortization Schedule",
-      "valueType": "string"
-    },
-    {
-      "component": "text",
-      "name": "rows",
-      "label": "Table Rows",
-      "valueType": "array",
-      "itemLabel": "{{month}}",
-      "fields": [
-        {
-          "component": "number",
-          "name": "month",
-          "label": "Month",
-          "valueType": "number"
-        },
-        {
-          "component": "text",
-          "name": "principal",
-          "label": "Principal",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "interest",
-          "label": "Interest",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "emi",
-          "label": "EMI",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "balance",
-          "label": "Balance",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "loan_paid",
-          "label": "Loan Paid to Date",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "definition",
-          "label": "Definition",
-          "valueType": "string"
-        }
-      ],
-      "value": []
-    }
-  ]
-}
-
+    "id": "table-item",
+    "label": "Amortization Table",
+    "fields": [
+      {
+        "component": "number",
+        "name": "month",
+        "label": "Month",
+        "valueType": "number"
+      },
+      {
+        "component": "text",
+        "name": "principal",
+        "label": "Principal",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "interest",
+        "label": "Interest",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "emi",
+        "label": "EMI",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "balance",
+        "label": "Balance",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "loan_paid",
+        "label": "Loan Paid to Date",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "definition",
+        "label": "Definition",
+        "valueType": "string"
+      }
+    ],
+    "value": []
+  }
 ]
