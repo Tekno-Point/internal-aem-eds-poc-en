@@ -39,9 +39,16 @@ export async function showData(block, inputClass, wrapperClass, type) {
         cityDropdown(block, wrapperClass, type, inputClass);
         e.currentTarget.parentElement.classList.add('show');
     })
-    // inputElem.addEventListener('blur', (e) => {
-    //     e.currentTarget.parentElement.classList.remove('show');
-    // })
+
+    document.addEventListener('click', (e) => {
+        const inputWrapper = block.querySelector(inputClass);
+        const dropdown = inputWrapper?.querySelector(`.city-wrapper.${wrapperClass}`);
+
+        if (!inputWrapper.contains(e.target)) {
+            dropdown?.remove();
+            inputWrapper.classList.remove('show');
+        }
+    });
 }
 
 export function clickDropdown(block){
@@ -50,10 +57,16 @@ export function clickDropdown(block){
         if(e.target.classList.contains('city-option')) {
             const city = e.target.querySelector('.city');
             e.target.parentElement.parentElement.querySelector('input').value = city.textContent;
+
+            e.target.closest('.city-wrapper')?.remove();
+            e.target.closest('.input-wrapper')?.classList.remove('show');
         }
         else if( e.target.parentElement.classList.contains('city-option')){
             const city = e.target.parentElement.querySelector('.city');
             e.target.parentElement.parentElement.parentElement.querySelector('input').value = city.textContent;
+
+            e.target.closest('.city-wrapper')?.remove();
+            e.target.closest('.input-wrapper')?.classList.remove('show');
         }
     })
 }
