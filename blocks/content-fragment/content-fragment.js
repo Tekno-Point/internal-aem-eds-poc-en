@@ -41,10 +41,10 @@ export default async function decorate(block) {
         }
         // Remove all children before appending carousel
         // while (block.firstChild) block.removeChild(block.firstChild);
-        block.firstElementChild.firstElementChild.firstElementChild.remove()
+        row.firstElementChild.firstElementChild.remove()
         if (carousel instanceof HTMLElement) {
             // block.appendChild(carousel);
-            block.firstElementChild.firstElementChild.append(carousel);
+            row.firstElementChild.append(carousel);
         }
         // Only initialize Swiper (do not re-wrap slides)
         if (carousel instanceof HTMLElement) {
