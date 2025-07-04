@@ -241,6 +241,12 @@
     "id": "tab",
     "fields": [
       {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "col1_image",

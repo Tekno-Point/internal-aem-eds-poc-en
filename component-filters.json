@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -26,64 +24,43 @@
       "term-plan-carousel",
       "popular-searches",
       "disclaimers",
-     "tabs"
+      "tabs"
     ]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
   },
   {
     "id": "tabs",
-    "components": [
-      "tab"
-    ]
+    "components": ["tab"]
   },
   {
     "id": "term-insurance",
-    "components": [
-      "term-insurance-item"
-    ]
+    "components": ["term-insurance-item"]
   },
   {
     "id": "custom-richtextblock",
-    "components": [
-      "custom-richtext-item"
-    ]
+    "components": ["custom-richtext-item"]
   },
   {
     "id": "term-Insurance-carousel",
-    "components": [
-      "term-Insurance-carousel-item"
-    ]
+    "components": ["term-Insurance-carousel-item"]
   },
   {
     "id": "our-bestselling-term",
-    "components": [
-      "our-bestselling-term-item"
-    ]
+    "components": ["our-bestselling-term-item"]
   },
   {
     "id": "term-plan-carousel",
-    "components": [
-      "term-plan-carousel-item"
-    ]
+    "components": ["term-plan-carousel-item"]
   }
 ]
