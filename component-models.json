@@ -211,30 +211,64 @@
     ]
   },
   {
-  "id": "table-item",
-  "fields": [
-    {
-      "component": "text",
-      "name": "table_title",
-      "value": "Amortization Schedule",
-      "valueType": "string"
-    },
-    {
-      "component": "repeatable",
-      "name": "table_rows",
-      "valueType": "array",
-      "label": "Table Rows",
-      "fields": [
-        { "component": "number", "name": "month", "label": "Month", "valueType": "number" },
-        { "component": "text", "name": "principal", "label": "Principal", "valueType": "string" },
-        { "component": "text", "name": "interest", "label": "Interest", "valueType": "string" },
-        { "component": "text", "name": "emi", "label": "EMI", "valueType": "string" },
-        { "component": "text", "name": "balance", "label": "Balance", "valueType": "string" },
-        { "component": "text", "name": "loan_paid", "label": "Loan Paid to Date", "valueType": "string" },
-        { "component": "text", "name": "definition", "label": "Definition", "valueType": "string" }
-      ]
-    }
-  ]
-}
-
+    "id": "table-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "table_title",
+        "value": "Amortization Schedule",
+        "valueType": "string"
+      },
+      {
+        "component": "repeatable",
+        "name": "table_rows",
+        "valueType": "array",
+        "label": "Table Rows",
+        "fields": [
+          {
+            "component": "number",
+            "name": "month",
+            "label": "Month",
+            "valueType": "number"
+          },
+          {
+            "component": "text",
+            "name": "principal",
+            "label": "Principal",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "interest",
+            "label": "Interest",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "emi",
+            "label": "EMI",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "balance",
+            "label": "Balance",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "loan_paid",
+            "label": "Loan Paid to Date",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "definition",
+            "label": "Definition",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  }
 ]
