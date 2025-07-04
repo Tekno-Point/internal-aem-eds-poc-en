@@ -14,9 +14,8 @@ header nav {
   align-items: center;
   gap: 0 24px;
   margin: auto;
-  max-width: 1248px;
   height: var(--nav-height);
-  padding: 0 24px;
+  /* padding: 0 24px; */
   font-family: var(--body-font-family);
 }
 
@@ -24,16 +23,14 @@ header nav {
   header nav {
     display: flex;
     justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
+    /* gap: 0 32px; */
+    gap: 0;
   }
 
   header nav {
     display: grid;
-    grid-auto-columns: 0fr;
-    grid-template-columns: 0fr 1fr 1fr;
-    grid-template-rows: 0fr 1fr;
+    grid-template-columns: 0.45fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: -1px 0px;
     grid-template-areas:
       "top-nav top-nav top-nav"
@@ -112,8 +109,8 @@ header nav[aria-expanded='true'] .nav-hamburger-icon {
   height: 22px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::before,
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+header nav:hover .nav-hamburger-icon::before,
+header nav:hover .nav-hamburger-icon::after {
   top: 3px;
   left: 1px;
   transform: rotate(45deg);
@@ -123,7 +120,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   border-radius: 2px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+header nav:hover .nav-hamburger-icon::after {
   top: unset;
   bottom: 3px;
   transform: rotate(-45deg);
@@ -143,11 +140,20 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  text-align: right;
 }
 
 header nav .nav-brand img {
   width: 128px;
   height: auto;
+}
+
+@media (width >=900px) {
+  
+  header nav .nav-brand img {
+    width: 187px;
+    height: auto;
+  }
 }
 
 /* sections */
@@ -158,7 +164,7 @@ header nav .nav-sections {
   visibility: hidden;
 }
 
-header nav[aria-expanded='true'] .nav-sections {
+header nav:hover .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
@@ -182,14 +188,25 @@ header nav .nav-sections ul>li>ul>li {
   font-weight: 400;
 }
 
+#nav>div.section.bg-megamenu.nav-sections>div>ul>li>p>span {
+  display: none;
+}
+
 @media (width >=900px) {
+
+  header nav .nav-brand,
+  header nav .nav-sections .nav-drop {
+    padding-block: 10px;
+  }
+
   header nav .nav-sections {
     display: block;
     visibility: visible;
     white-space: nowrap;
+    padding-left: 4rem;
   }
 
-  header nav[aria-expanded='true'] .nav-sections {
+  header nav:hover .nav-sections {
     align-self: unset;
   }
 
@@ -197,13 +214,23 @@ header nav .nav-sections ul>li>ul>li {
     position: relative;
     padding-right: 16px;
     cursor: pointer;
+    font-size: 1.4rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding-right: 1.5rem;
+    font-weight: 600;
+  }
+
+  header nav .nav-sections .nav-drop > p{
+    padding-block: 14px;
   }
 
   header nav .nav-sections .nav-drop::after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: 0.5em;
+    top: 40%;
     right: 2px;
     transform: rotate(135deg);
     width: 6px;
@@ -213,9 +240,8 @@ header nav .nav-sections ul>li>ul>li {
     border-width: 2px 2px 0 0;
   }
 
-  header nav .nav-sections .nav-drop[aria-expanded='true']::after {
-    top: unset;
-    bottom: 0.5em;
+  header nav .nav-sections .nav-drop:hover::after {
+    top: 50%;
     transform: rotate(315deg);
   }
 
@@ -231,36 +257,105 @@ header nav .nav-sections ul>li>ul>li {
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul {
-    display: none;
+    width: 390px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 94%;
+    left: 0;
+    z-index: 9999;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 3rem 2rem 3rem 12rem;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.12);
+    transform: translateX(-35%);
+    margin-top: 0.3rem;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  header .nav-sections .default-content-wrapper>ul>li>ul>li:first-child {
     position: relative;
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul {
-    display: block;
-    position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
-    padding: 16px;
-    background-color: var(--light-color);
-    white-space: initial;
-  }
-
-  header nav .nav-sections .default-content-wrapper>ul>li>ul::before {
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li:first-child:before {
     content: '';
+    background-image: var(--before-bg);
+    background-repeat: no-repeat;
+    width: 6.5rem;
+    height: 2.5rem;
+    display: inline-block;
     position: absolute;
-    top: -8px;
-    left: 16px;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
+    left: -9rem;
+    top: 4px;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
-    padding: 8px 0;
+    display: block;
+    margin: 0;
   }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul::before{
+    content: "";
+    background-image: url(/content/dam/icici-lombard/rectangle.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 9rem;
+    top: 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li a {
+    color: #282828;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li a:hover {
+    padding-left: 5px;
+    color: #ec6608;
+  }
+
+  header nav .nav-sections .nav-drop::before {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 90%;
+    content: "";
+    background: #fff;
+    height: 6px;
+    width: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(4px);
+    transition-property: transform, width, opacity, visibility;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    border-radius: 3px 3px 0 0;
+  }
+
+  header nav .nav-sections .nav-drop:hover::before {
+    visibility: visible;
+    opacity: 1;
+    right: auto;
+    left: 0;
+    width: 100%;
+    transform: translateY(0);
+  }
+
 }
 
 /* tools */
