@@ -124,6 +124,10 @@
           {
             "name" : "FIC Lombard Travel Insurance", 
             "value": "fic-Lombard-travel-insurance"
+          },
+          {
+            "name" : "Insurance policy Advantages", 
+            "value": "insurance-policy-advantages"
           }
         ]
       }
