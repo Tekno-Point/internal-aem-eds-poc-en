@@ -25,7 +25,8 @@
       "our-bestselling-term",
       "term-plan-carousel",
       "popular-searches",
-      "disclaimers"
+      "disclaimers",
+     " tabs"
     ]
   },
   {
@@ -47,6 +48,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tab"
     ]
   },
   {
