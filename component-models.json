@@ -120,6 +120,10 @@
           {
             "name" : "Travel Insurance", 
             "value": "travel-insurance"
+          },
+          {
+            "name" : "FIC Lombard Travel Insurance", 
+            "value": "fic-Lombard-travel-insurance"
           }
         ]
       }

@@ -4,7 +4,6 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-    grid-gap: 24px;
 }
 
 .cards > ul > li {
@@ -14,6 +13,7 @@
 
 .cards .cards-card-body {
     margin: 16px;
+    
 }
 
 .cards .cards-card-image {
@@ -38,22 +38,38 @@
 
 .million-indians .cards-wrapper > .cards > ul {
     display: flex;
+    gap: 23px;
 }
 
 .million-indians .cards-wrapper > .cards > ul > li {
     display: flex;
-    align-items: center;
-    position: relative;
     border: 1px solid #eaeaea;
     border-radius: 10px;
     padding: 2.5rem 1.6rem 2.5rem 2.8rem;
     width: 33.33%;
-    margin-right: 2.3rem;
+    gap: 24px;
+}
+
+
+.million-indians .cards-wrapper > .cards > ul > li:last-child{
+  margin-right: unset;
+  }
+
+/* .million-indians .cards-wrapper > .cards > ul > li > .cards-card-image{
+  position: absolute;
+  top: 25px;
+  left: 28px;
+} */
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-image > picture > img{
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  aspect-ratio: unset;
 }
 
 .million-indians .cards-wrapper > .cards > ul > li > .cards-card-body {
     margin: 0;
-    padding-left: 6rem;
 }
 
 .million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > h5 {
@@ -77,6 +93,7 @@
   margin: 0;
   list-style: none;
   display: flex;
+  padding: unset;
 }
 
 .million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li{
@@ -100,6 +117,110 @@
   position: absolute;
   top: 9px;
   left: 0;
-  border-radius: 100%;
+  border-radius: 100%; 
+} 
 
+
+
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li:has(sup){
+  margin-top: -5px;
+}
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li:has(sup)::after{
+  top: 14px;
+}
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li:first-child {
+    list-style-type: none;
+    padding-left: 0; 
+}
+
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li:first-child::after {
+  content: none;
+}
+
+
+.travel-insurance > .cards-wrapper > .cards > ul{
+  display: flex;
+}
+
+
+
+.travel-insurance > .cards-wrapper > .cards > ul > li{
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body {
+  margin: 0; 
+  width: 68%; 
+}
+
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body > h1{
+  color: #282828;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 45px;
+  margin-bottom: 0;
+  padding-bottom: 3rem;
+  margin: 0; 
+}
+
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body > p{
+  color: #282828;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  padding: 0 2rem 2rem 0;
+  margin: 0;
+} 
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-image{
+    width: 42%;
+}
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-image > picture > img{ 
+  max-width: 450px;
+  height: 258px; 
+}
+
+@media screen and (max-width : 767.99px) {
+  .million-indians > .default-content-wrapper > h2 {
+    text-align: left;
+    font-size: 2.4rem;
+    line-height: 30px;
+  
+}
+
+  .million-indians .cards-wrapper > .cards > ul {
+    gap: 20px;
+    flex-direction: column;
+ }
+
+  .million-indians .cards-wrapper > .cards > ul > li{
+    width : calc(100% - 53px)
+  }
+
+  .million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul{
+    flex-wrap: wrap;
+  }
+
+  .travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-image{
+    display: none;
+}
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  width: 100%; 
+}
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body > h1{
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 30px;
+
+}
 }
