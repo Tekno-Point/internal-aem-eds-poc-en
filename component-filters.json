@@ -57,9 +57,7 @@
     ]
   },
   {
-    "id": "tab",
-    "components": [
-      "tab"
-    ]
+    "id": "tabs",
+    "components": ["tab"]
   }
 ]

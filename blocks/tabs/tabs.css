@@ -63,7 +63,7 @@
   max-width: 1300px;
 }
 
-.tabs.form-tabs .tabs-list button[aria-selected='true']{
+.tabs.form-tabs .tabs-list button[aria-selected='true'] {
   background-color: #0F1E7D;
   color: #fff;
   padding: 13px;
@@ -89,7 +89,7 @@
 .tabs.form-tabs .tabs-panel {
   border: unset;
   padding: 0;
-  box-shadow:  0 0 #0000, 0 0 #0000, 0px 4px 30px -5px rgba(0, 0, 0, .25);
+  box-shadow: 0 0 #0000, 0 0 #0000, 0px 4px 30px -5px rgba(0, 0, 0, .25);
   overflow: unset;
 }
 
@@ -102,7 +102,7 @@
   padding: 25px;
 }
 
-.tabs.form-tabs .tabs-panel form > div {
+.tabs.form-tabs .tabs-panel form>div {
   display: flex;
   border: 1px solid #CCCCCC;
   padding: 20px 16px;
@@ -110,16 +110,16 @@
   border-radius: 8px;
 }
 
-.tabs.form-tabs .tabs-panel form > div .field-wrapper.trip-wrapper {
+.tabs.form-tabs .tabs-panel form>div .field-wrapper.trip-wrapper {
   display: none;
 }
 
-.tabs.form-tabs .tabs-panel form > div .field-wrapper {
+.tabs.form-tabs .tabs-panel form>div .field-wrapper {
   margin-right: 20px;
   position: relative;
 }
 
-.tabs.form-tabs .tabs-panel form > div > .field-wrapper::after {
+.tabs.form-tabs .tabs-panel form>div>.field-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
@@ -128,7 +128,7 @@
   border-right: 0.5px solid #808286;
 }
 
-.tabs.form-tabs .tabs-panel form > div > .field-wrapper:last-child:after {
+.tabs.form-tabs .tabs-panel form>div>.field-wrapper:last-child:after {
   border: unset;
 }
 
@@ -152,11 +152,32 @@
   flex-direction: column;
   position: relative;
   gap: 5px;
+  height: 60px;
+}
+
+.tabs.form-tabs .tabs-panel form .destination-wrapper fieldset .field-wrapper.input-wrapper input,
+.tabs.form-tabs .tabs-panel form .calender-wrapper fieldset .field-wrapper.input-wrapper input {
+  background-color: rgb(244 245 245 / 1);
+  border-radius: 5px;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.tabs.form-tabs .tabs-panel form .destination-wrapper fieldset .field-wrapper.input-wrapper input::placeholder,
+.tabs.form-tabs .tabs-panel form .calender-wrapper fieldset .field-wrapper.input-wrapper input::placeholder {
+  font-size: 14px;
+  line-height: 18px;
 }
 
 input[type=date],
 input[type=input] {
   border: unset;
+}
+
+input[type=date]:focus,
+input[type=input]:focus {
+  outline: unset;
+  border-bottom: 2px solid #0F1E7D;
 }
 
 input[type=date] {
@@ -181,15 +202,41 @@ input[type=date] {
   border-radius: 8.43px;
 }
 
-.tabs.form-tabs .tabs-panel form > fieldset {
+.tabs.form-tabs .tabs-panel form>fieldset {
   display: flex;
 }
 
-.tabs.form-tabs .tabs-panel form > fieldset  .field-wrapper {
+.tabs.form-tabs .tabs-panel form>fieldset .field-wrapper {
   margin-right: 33px;
 }
 
+.tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper {
+  width: 300px;
+  padding-right: 20px;
+  display: flex;
+  gap: 5px;
+  height: 60px;
+  flex-direction: column;
+}
 
+.tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper select {
+  border: unset;
+  background-color: rgb(244 245 245 / 1);
+  border-radius: 5px;
+  height: 100%;
+  font-size: 14px;
+  line-height: 14px;
+  padding-left: 20px;
+}
+
+.tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper select:focus {
+  outline: unset;
+  border-bottom: 1px solid #0F1E7D;
+}
+
+.tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper {
+  margin: 0;
+}
 
 /* city wrapper css */
 .city-wrapper {
@@ -201,7 +248,7 @@ input[type=date] {
   z-index: 20;
   padding: 0 20px;
   display: none;
-  box-shadow:  0 0 #0000, 0 0 #0000, 0px 4px 30px -5px rgba(0, 0, 0, .25);
+  box-shadow: 0 0 #0000, 0 0 #0000, 0px 4px 30px -5px rgba(0, 0, 0, .25);
   scrollbar-width: none;
   position: absolute;
   top: 100%;
@@ -225,7 +272,7 @@ input[type=date] {
   margin: 0;
 }
 
-.city-wrapper .city-option .city p {
+.city-wrapper .city-option p.city {
   margin: 0;
   color: #151515;
   font-size: 14px;

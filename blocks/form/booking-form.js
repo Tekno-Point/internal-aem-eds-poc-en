@@ -16,13 +16,6 @@ export async function cityDropdown(block, wrapperClass, type, inputparent) {
 
     const cities = await fetchData();
 
-    // const firstCity = cities.data[0];
-    // const IATA = firstCity[`${type}_IATA`];
-    // const cityName = firstCity[`${type}_city`];
-    // const country = firstCity[`${type}_country`];
-
-    // wrapper.querySelector('input').value = `${IATA} - ${cityName}, ${country}`
-
     cities.data.forEach(city => {
         const cityOption = document.createElement('div');
         cityOption.classList.add('city-option');
@@ -32,12 +25,11 @@ export async function cityDropdown(block, wrapperClass, type, inputparent) {
 
         cityOption.innerHTML = `
             <p class="iata-code">${IATA}</p>
-            <div class="city">
-               <p>${city1}, ${country}</p>
-            </div>`
+               <p class="city">${city1}, ${country}</p>`  
 
         cityWrapper.append(cityOption);
     });
+
     wrapper.append(cityWrapper);
 }
 
@@ -47,7 +39,34 @@ export async function showData(block, inputClass, wrapperClass, type) {
         cityDropdown(block, wrapperClass, type, inputClass);
         e.currentTarget.parentElement.classList.add('show');
     })
-    inputElem.addEventListener('blur', (e) => {
-        e.currentTarget.parentElement.classList.remove('show');
+
+    document.addEventListener('click', (e) => {
+        const inputWrapper = block.querySelector(inputClass);
+        const dropdown = inputWrapper?.querySelector(`.city-wrapper.${wrapperClass}`);
+
+        if (!inputWrapper.contains(e.target)) {
+            dropdown?.remove();
+            inputWrapper.classList.remove('show');
+        }
+    });
+}
+
+export function clickDropdown(block){
+    const wrapper = block.querySelector(`form .destination-wrapper`);
+    wrapper?.addEventListener("click",(e)=>{
+        if(e.target.classList.contains('city-option')) {
+            const city = e.target.querySelector('.city');
+            e.target.parentElement.parentElement.querySelector('input').value = city.textContent;
+
+            e.target.closest('.city-wrapper')?.remove();
+            e.target.closest('.input-wrapper')?.classList.remove('show');
+        }
+        else if( e.target.parentElement.classList.contains('city-option')){
+            const city = e.target.parentElement.querySelector('.city');
+            e.target.parentElement.parentElement.parentElement.querySelector('input').value = city.textContent;
+
+            e.target.closest('.city-wrapper')?.remove();
+            e.target.closest('.input-wrapper')?.classList.remove('show');
+        }
     })
 }
