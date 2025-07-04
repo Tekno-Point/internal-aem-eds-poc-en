@@ -581,6 +581,10 @@ function renderCard(data = []) {
         const textId = `cta-text-${Date.now()}_${Math.floor(Math.random()*1e17)}`;
         const priceId = `price-${Math.random().toString(36).substring(2, 18)}`;
         // Card markup as swiper-slide
+        // Helper to build city code only if present
+        function cityCodeDiv(code) {
+            return code ? div({ class: 'city-code' }, `(${code})`) : '';
+        }
         return div({
             class: `swiper-slide carousel-item carousel-item-${idx} carousel-item-visible`,
         },
@@ -616,18 +620,18 @@ function renderCard(data = []) {
                         div({ class: 'card-body' },
                             div({
                                 role: 'heading',
-                                'aria-label': `${departure} (${departureCode}) to ${destination} (${destinationCode})`,
+                                'aria-label': `${departure}${departureCode ? ` (${departureCode})` : ''} to ${destination}${destinationCode ? ` (${destinationCode})` : ''}`,
                                 'aria-level': 3,
                                 class: 'route-info'
                             },
                                 div({ class: 'origin-city' },
                                     div({ class: 'city-name' }, departure),
-                                    div({ class: 'city-code' }, `(${departureCode})`)
+                                    cityCodeDiv(departureCode)
                                 ),
                                 div({ class: 'to-label' }, 'to'),
                                 div({ class: 'destination-city' },
                                     div({ class: 'city-name' }, destination),
-                                    div({ class: 'city-code' }, `(${destinationCode})`)
+                                    cityCodeDiv(destinationCode)
                                 )
                             ),
                             div({ class: 'dates-row' },

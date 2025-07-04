@@ -57,7 +57,7 @@ function swiperInit(block) {
             320: { slidesPerView: 1, spaceBetween: 15 },
             600: { slidesPerView: 2, spaceBetween: 15 },
             900: { slidesPerView: 3, spaceBetween: 16 },
-            1200: { slidesPerView: 4, spaceBetween: 16 }
+            1200: { slidesPerView: 3, spaceBetween: 16 }
         },
         loop: false,
         observer: true,
