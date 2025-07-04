@@ -134,7 +134,9 @@
     border-radius: 5px;
 }
 
-.swiper-slide {
+.fr-col > .swiper-initialized > .swiper-wrapper > .swiper-slide {
+    max-width: 378.333px;
+    width: 100%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
     /* padding: 10px; */
     border-radius: 10px;
@@ -167,6 +169,14 @@
     padding: 12px 24px;
     border-radius: 5px;
     text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.cta-row:hover {
+    background-color: #064b95;
+    transition: background-color 0.3s ease;
 }
 
 .card-footer > .price-row > .price-currency-row > .price {
@@ -180,7 +190,7 @@
     bottom: -9px !important;
 }
 
-.swiper-wrapper {
+.fr-col > .swiper-initialized > .swiper-wrapper {
     padding: 20px;
 }
 
@@ -214,8 +224,8 @@
 }
 
 .fr-input > input {
-   border: none;
-   outline: none;
+    border: none;
+    outline: none;
 }
 
 .city-suggestions {
@@ -225,20 +235,18 @@
     border: 1px solid rgb(212, 212, 212);
 }
 
-.popover-body>.as-copa-ltr-ikhtdx {
+.popover-body > .as-copa-ltr-ikhtdx {
     display: flex;
     gap: 10px;
     justify-content: end;
 }
 
-
-.fr-budget>.fr-input{
-        display: flex
-;
+.fr-budget > .fr-input {
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-      padding: 5px;
+    padding: 5px;
     border: 1px solid rgb(212, 212, 212);
     font-family: "Roboto";
     font-size: 16px;
@@ -251,45 +259,41 @@
     text-transform: none;
 }
 
-.fr-input-group-prepend>.fr-label{
-   color: #0088dd;
-
+.fr-input-group-prepend > .fr-label {
+    color: #0088dd;
 }
 
-.fr-budget>.fr-input:hover{
-   border: 3px solid #0088dd;
+.fr-budget > .fr-input:hover {
+    border: 3px solid #0088dd;
 }
 
-.as-copa-ltr-11nnxtd{
+.as-copa-ltr-11nnxtd {
     font-size: 15px;
 }
 
-.as-copa-ltr-p13x9t{
+.as-copa-ltr-p13x9t {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.as-copa-ltr-ikhtdx{
-
-      font-family: "Roboto";
+.as-copa-ltr-ikhtdx {
+    font-family: "Roboto";
     font-size: 16px;
     font-weight: 400;
     letter-spacing: normal;
     line-height: 1.5;
     color: rgb(119, 119, 119);
     font-family: 800;
-
 }
 
-.as-copa-ltr-ikhtdx>div:nth-child(2){
+.as-copa-ltr-ikhtdx > div:nth-child(2) {
     color: #0088dd;
     text-decoration: underline;
 }
 
-.fr-input{
-
-      padding: 5px;
+.fr-input {
+    padding: 5px;
     border: 1px solid rgb(212, 212, 212);
     font-family: "Roboto";
     font-size: 16px;
@@ -300,26 +304,24 @@
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     text-transform: none;
-
 }
 
-.popover-footer{
-      font-family: "Roboto";
+.popover-footer {
+    font-family: "Roboto";
     font-size: 16px;
     font-weight: 400;
     letter-spacing: normal;
     line-height: 1.5;
     color: rgb(119, 119, 119);
     font-weight: 800;
-
 }
 
-.popover-footer>div:nth-child(2){
-      color: #0088dd;
+.popover-footer > div:nth-child(2) {
+    color: #0088dd;
     text-decoration: underline;
 }
 
-.route-popover{
+.route-popover {
     font-family: "Roboto";
     font-size: 15px;
 }
