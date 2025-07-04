@@ -212,7 +212,6 @@
   },
   {
     "id": "table-item",
-    "label": "Amortization Table",
     "fields": [
       {
         "component": "number",
@@ -256,7 +255,6 @@
         "label": "Definition",
         "valueType": "string"
       }
-    ],
-    "value": []
+    ]
   }
 ]
