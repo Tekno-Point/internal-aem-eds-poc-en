@@ -687,7 +687,7 @@ header nav .nav-tools .default-content-wrapper>ul>li[aria-expanded="true"]>ul {
   padding: 0;
 }
 
-a.button:any-link,
+header nav a.button:any-link,
 button {
   all: unset;
 }

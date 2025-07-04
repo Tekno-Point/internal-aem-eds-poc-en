@@ -381,12 +381,13 @@ main .section.highlight {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+  align-items: stretch;
 }
 
 .content3 .custom-richtextblock>div {
   background-color: #F2F7FB;
   padding: 20px 40px 20px 40px;
-  height: 100%;
+  height: auto;
   max-width: 42%;
 }
 
@@ -397,6 +398,23 @@ main .section.highlight {
   height: 100%;
   max-width: 25%;
   text-align: center;
+}
+
+
+main>.section.image2 {
+  margin: 50px 0;
+}
+
+.image2>div.default-content-wrapper>p:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.image2>div.default-content-wrapper>p:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -410,6 +428,11 @@ main .section.highlight {
 
   .content3 .custom-richtextblock>div {
     max-width: 100%;
+    padding: 18px;
+  }
+
+  .content3 .custom-richtextblock>div:first-child {
+    border-radius: 20px 20px 0px 0px;
   }
 
   .content5 .custom-richtextblock>div {
@@ -472,12 +495,7 @@ main .section.highlight {
   }
 }
 
-.content2-term .custom-richtext>div>div h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.content2-term .custom-richtext>div>div :is(h1, h2, h3, h4, h5, h6) {
   color: #333;
   font-family: 'Inter-Bold';
   font-size: 2.25rem;
@@ -509,12 +527,7 @@ h6 {
 
 @media screen and (max-width: 768px) {
 
-  .content2-term .custom-richtext>div>div h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  .content2-term .custom-richtext>div>div :is(h1, h2, h3, h4, h5, h6) {
     font-size: 1.5rem;
     letter-spacing: -0.24px;
   }
@@ -525,6 +538,78 @@ h6 {
     font-size: 16px;
   }
 }
+
+/* content3 css start */
+.content3 .custom-richtext {
+  margin-bottom: 20px;
+}
+
+.content3 .custom-richtext>div>div :is(h1, h2, h3, h4, h5, h6) {
+  color: #333;
+  font-family: 'Inter-Bold';
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  padding-bottom: 10px;
+}
+
+.content3 .custom-richtext>div>div p {
+  color: #333;
+  font-family: "HelveticaNeueRoman";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.18px;
+}
+
+.content3 .custom-richtextblock .content3-div>div :is(h1, h2, h3, h4, h5, h6) {
+  color: #333;
+  font-family: 'Inter-Bold';
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  padding-bottom: 10px;
+}
+
+.content3 .custom-richtextblock .content3-div>div p {
+  color: #333;
+  font-family: "HelveticaNeueRoman";
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.18px;
+}
+
+@media screen and (max-width: 768px) {
+  .content3 .custom-richtext>div>div :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+  }
+
+  .content3 .custom-richtext>div>div p {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+  }
+
+  .content3 .custom-richtextblock .content3-div>div :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 1.125rem;
+    letter-spacing: -0.18px;
+  }
+
+  .content3 .custom-richtextblock .content3-div>div p {
+    font-size: 0.875rem;
+    letter-spacing: -0.14px;
+    line-height: 19.6px;
+  }
+
+}
+
+/* content3 css End */
 
 /* Your Budget component css start */
 
@@ -973,12 +1058,7 @@ h6 {
   text-align: center;
 }
 
-.term-calculator2h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.term-calculator2>div :is(h1, h2, h3, h4, h5, h6) {
   font-family: "Inter-Bold";
   font-size: 28px;
   font-style: normal;
@@ -989,6 +1069,7 @@ h6 {
   background: var(--Primary-Gradient, linear-gradient(90deg, #0073BB 0%, #D62049 100%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0;
   margin-bottom: 25px;
 }
@@ -1038,7 +1119,7 @@ h6 {
 /* term insurance plan benefit starts */
 .term-insurance-plan>div h2 {
   color: #333;
-  font-family: 'Inter';
+  font-family: 'Inter-Bold';
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -1057,7 +1138,7 @@ h6 {
   list-style: none;
   position: relative;
   color: #333;
-  font-family: 'Helvetica';
+  font-family: "HelveticaNeueRoman";
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
@@ -1086,7 +1167,7 @@ h6 {
 
 @media screen and (max-width: 768px) {
   .term-insurance-plan>div h2 {
-    font-family: 'Inter';
+    font-family: 'Inter-Bold';
     font-size: 24px;
     letter-spacing: -0.24px;
     font-weight: 700;
@@ -1120,7 +1201,7 @@ h6 {
 
   .content4 .custom-richtext li {
     padding-left: 32px;
-    font-family: 'Helvetica';
+    font-family: "HelveticaNeueRoman";
     font-weight: 400;
     line-height: 19.6px;
   }
@@ -1146,7 +1227,7 @@ h6 {
 
 .benefit-buying-insurance-plan>div>div>div>div>p {
   color: #333;
-  font-family: 'Helvetica';
+  font-family: 'HelveticaNeueRoman';
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
@@ -1170,7 +1251,7 @@ h6 {
 
 .benefit-buying-insurance-plan>div>div>div>div>p {
   color: #333;
-  font-family: 'helvetica';
+  font-family: 'HelveticaNeueRoman';
   font-size: 1rem;
   font-weight: 400;
   line-height: 24px;
@@ -1233,7 +1314,7 @@ h6 {
 
 .types-of-insurance-plan>div>div>div>div>p {
   color: #333;
-  font-family: 'Helvetica';
+  font-family: 'HelveticaNeueRoman';
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
@@ -1250,7 +1331,7 @@ h6 {
   list-style: none;
   position: relative;
   color: #333;
-  font-family: 'Helvetica';
+  font-family: 'HelveticaNeueRoman';
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
@@ -1294,18 +1375,126 @@ h6 {
 
 .affordable-insurance-plan>div>div>div>div>p {
   color: #333;
-  font-family: 'Helvetica';
+  font-family: 'HelveticaNeueRoman';
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
   letter-spacing: -0.18px;
 }
 
-.affordable-insurance-plan>div>div>div>div>ul {
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul>li {
+  width: 48%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+  font-family: "HelveticaNeueBold";
+  color: #4197d3;
+  letter-spacing: -0.4px;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.affordable-insurance-plan>div>div>div>div>ul>li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2) {
+  padding: 30px 30px 0;
+  counter-reset: hl-counter;
+  border-radius: 20px;
+  box-shadow: 3px 6px 14px 0 rgba(0, 115, 187, 0.1);
+  background: #fff;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2) ul li ul li {
+  font-size: 18px;
+  font-family: "HelveticaNeueRoman";
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: -0.126px;
+  color: #333333;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul>li ul {
+  padding-left: 20px;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3) {
+  margin: 50px 0 20px;
+  border-bottom: 2px solid #4197d3;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div p {
+  font-family: "HelveticaNeueRoman";
+  font-size: 18px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: normal;
+  color: #373737;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul li {
+  display: flex;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #58595b;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul>li>p {
+  width: 114px;
+  border: 2px solid #4197d3;
+  margin: 0;
+  padding: 20px;
+  border-bottom: none;
+  border-right: none;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #58595b;
+  white-space: nowrap;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul li ul {
+  border: 2px solid #4197d3;
+  padding: 20px;
+  margin: 0;
+  width: -webkit-fill-available;
+  border-bottom: none;
 }
 
 /* affordable plan ends */

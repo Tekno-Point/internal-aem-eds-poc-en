@@ -197,6 +197,15 @@
             "name": "affordable-insurance-plan",
             "value": "affordable-insurance-plan"
           }
+          ,
+          {
+            "name": "life-stages-plan",
+            "value": "life-stages-plan"
+          },
+          {
+            "name": "features-of-ti",
+            "value": "features-of-ti"
+          }
         ]
       }
     ]

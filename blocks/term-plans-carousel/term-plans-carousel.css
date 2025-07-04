@@ -47,7 +47,7 @@ main > .section.term-plans-carousel-container .default-content-wrapper h6 {
   padding: 0;
   margin: 0;
   color: #0D2042;
-  font-family: "inter-bold";
+  font-family: "inter-Bold";
   font-weight: 700;
   font-size: 36px;
   color: #333333;
@@ -98,14 +98,13 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
   box-shadow: 3px 6px 14px 0 rgba(0, 115, 187, 0.1);
 }
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child {
-  font-family: "Helvetica-Rounded-Bold";
-  font-weight: 800;
+  font-family: "HelveticaNeueBold";
+  font-weight: 700;
   font-size: 17px;
   overflow: hidden;
   color: #333333;
-  padding: 20px;
-  padding-top: 38px;
-  line-height: normal;
+  padding: 30px 20px 0px 21px;
+  line-height: 24px;
 }
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child ul {
   list-style: none;
@@ -134,11 +133,12 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
   padding: 20px 87px 18px 20px;
   min-height: 95px;
   position: relative;
-  font-family: "HelveticaNeueLTStd-Bd";
+  font-family: "HelveticaNeueBold";
+  font-weight: 700;
   font-size: 24px;
 }
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:first-child li {
-  font-family: "Inter";
+  font-family: "Inter-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -147,7 +147,7 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
   color: #58595B;
 }
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:first-child li:last-child {
-  font-family: "Inter";
+  font-family: "Inter-Bold";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -177,7 +177,7 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
   scrollbar-color: #92bfd6 #f1f1f1;
 }
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child p {
-  font-family: "Inter";
+  font-family: "Inter-Bold";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -207,7 +207,8 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:first-child {
   background: #D62049;
   border-radius: 8px;
-  font-family: "HelveticaNeueLTStd-Md";
+  font-family: " HelveticaNeueMedium";
+  font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: -0.007em;
@@ -219,7 +220,8 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:last-child ul > li:last-child {
   border: 1px solid #D62049;
   padding: 11px 23px;
-  font-family: "HelveticaNeueLTStd-Md";
+  font-family: " HelveticaNeueMedium";
+  font-weight: 500;
   font-size: 16px;
   line-height: 16px;
   letter-spacing: -0.007em;
@@ -235,7 +237,8 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
   padding: 0;
 }
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-wrapper .swiper-slide > div:last-child ol li {
-  font-family: "helveticaregular";
+  font-family: "HelveticaNeueRoman";
+  font-weight: 400;
   font-size: 10px;
   line-height: 11px;
   text-align: center;
