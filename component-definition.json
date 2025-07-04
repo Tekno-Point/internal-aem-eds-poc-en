@@ -219,7 +219,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Table Item",
-                  "model": "table item"
+                  "model": "table-item"
                 }
               }
             }
