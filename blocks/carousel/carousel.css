@@ -1,4 +1,7 @@
 @import url('../carousel/swiper-bundle.min.css');
+@import url('deals-carousel.css');
+@import url('services-carousel.css');
+@import url('banner-carousel.css');
 
 .section.carousel-container .carousel-wrapper {
     position: relative;
