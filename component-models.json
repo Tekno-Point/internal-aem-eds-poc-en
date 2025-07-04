@@ -330,5 +330,20 @@
         "label": "Alt Text"
       }
     ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "form_url",
+        "label": "Form URL"
+      },
+      {
+        "component": "text",
+        "name": "form_api",
+        "label": "Form API"
+      }
+    ]
   }
 ]
