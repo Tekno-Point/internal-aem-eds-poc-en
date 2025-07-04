@@ -59,8 +59,8 @@ function focusNavSection() {
 function toggleAllNavSections(sections, expanded = false) {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li, .nav-tools .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
-    section?.querySelector("ul")?.classList.add("inner-ul");
-    section?.querySelectorAll("ul >li")?.forEach((subLi, ind) => {
+    // section?.querySelector("ul")?.classList.add("inner-ul");
+    section?.querySelectorAll(":scope>ul >li")?.forEach((subLi, ind) => {
       isDesktop.matches ? (subLi.setAttribute('aria-expanded', ind == 0 ? 'true' : expanded)) : subLi.setAttribute('aria-expanded', expanded);
     })
   });
@@ -174,6 +174,12 @@ export default async function decorate(block) {
   navSectionsImg?.remove();
 
   if (navSections) {
+
+    // debugger;
+    navSections.querySelectorAll('.default-content-wrapper > ul > li, .nav-tools .default-content-wrapper > ul > li').forEach((section) => {
+      section?.querySelector("ul")?.classList.add("inner-ul");
+    })
+
     let isClick = isDesktop.matches ? "mouseover" : "click";
     navSections.querySelectorAll(':scope >.default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
@@ -204,20 +210,23 @@ export default async function decorate(block) {
         });
       }
 
-      navSection.querySelectorAll(":scope>ul >li").forEach((subLi, ind) => {
+      // debugger;
+      navSection.querySelectorAll(":scope>ul.inner-ul>li").forEach((subLi, ind) => {
         // subLi?.querySelector(":scope>p, :scope>a")?.addEventListener(isClick, (ele) => {
-        subLi?.addEventListener(isClick, (ele) => {
+        // subLi?.querySelector(":scope>li")?.addEventListener(isClick, (ele) => {
+          subLi?.addEventListener(isClick, (ele) => {
           // debugger;
-          // ele.stopPropagation();
-          const li = ele.target?.closest("li");
-          const expanded = li?.getAttribute("aria-expanded");
+          ele.stopPropagation();
+          // const li = ele.target?.closest("li");
+          // const expanded = li?.getAttribute("aria-expanded");
+          const expanded = subLi?.getAttribute("aria-expanded");
           if (expanded === "false") {
             navSections.querySelectorAll('.default-content-wrapper > ul > li').forEach((section) => {
-              section.querySelectorAll("ul >li").forEach((subLi, ind) => {
+              section.querySelectorAll(":scope>ul >li").forEach((subLi, ind) => {
                 subLi.setAttribute('aria-expanded', 'false');
               })
             });
-            li.setAttribute('aria-expanded', 'true');
+            subLi.setAttribute('aria-expanded', 'true');
           }
           else if (!isDesktop.matches) {
             navSections.querySelectorAll('.default-content-wrapper > ul > li').forEach((section) => {
@@ -227,7 +236,7 @@ export default async function decorate(block) {
             });
             li.setAttribute('aria-expanded', 'false');
           }
-        })
+        },true)
       })
     });
   }
