@@ -112,6 +112,22 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Benefits PL Calculator",
+            "value": "personalLoanBenefits"
+          },
+          {
+            "name": "Types of Personal loan",
+            "value": "typeOfPersonalLoan"
+          },
+          {
+            "name": "Bank Products",
+            "value": "bankProducts"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
           }
         ]
       }
