@@ -16,6 +16,7 @@
       "cards",
       "columns",
       "fragment",
+      "content-fragment",
       "carousel",
       "tabs",
       "search",
@@ -41,6 +42,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "content-fragment",
+    "components": [
+      "content-fragment-item"
     ]
   },
   {
