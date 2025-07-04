@@ -222,7 +222,7 @@
       "valueType": "string"
     },
     {
-      "component": "collection",
+      "component": "text",
       "name": "rows",
       "label": "Table Rows",
       "valueType": "array",
