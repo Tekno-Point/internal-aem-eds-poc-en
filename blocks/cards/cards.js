@@ -21,4 +21,15 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
+
+
+// Adding class to ul and li elements
+  const ulClass = block.querySelector('ul');
+  if (ulClass) {
+    ul.classList.add('grid-cards');
+    
+    ul.querySelectorAll('li').forEach((li) => {
+      li.classList.add('benefit-cards');
+    });
+  }
 }

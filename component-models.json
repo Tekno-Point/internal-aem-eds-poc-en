@@ -128,6 +128,18 @@
           {
             "name": "PL Faqs",
             "value": "pl-faqs"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
           }
         ]
       }
@@ -242,6 +254,50 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "swipper-card",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          },
+          {
+            "name": "Benefits PL Calculator",
+            "value": "personalLoanBenefits"
+          },
+          {
+            "name": "Types of Personal loan",
+            "value": "typeOfPersonalLoan"
+          },
+          {
+            "name": "Bank Products",
+            "value": "bankProducts"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
+          }
+        ]
       }
     ]
   },
