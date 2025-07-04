@@ -1,8 +1,10 @@
 // eslint-disable-next-line import/no-unresolved
 import { toClassName } from '../../scripts/aem.js';
+import { showData } from '../form/booking-form.js';
 
 export default async function decorate(block) {
   // build tablist
+  // console.log(block)
   const tablist = document.createElement('div');
   tablist.className = 'tabs-list';
   tablist.setAttribute('role', 'tablist');
@@ -44,4 +46,6 @@ export default async function decorate(block) {
   });
 
   block.prepend(tablist);
+  showData(block, '.from-input','from-wrapper', 'source');
+  showData(block, '.to-input','to-wrapper', 'destination');
 }
