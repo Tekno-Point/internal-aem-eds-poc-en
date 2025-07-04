@@ -214,10 +214,10 @@
     "id": "table-item",
     "fields": [
       {
-        "component": "number",
+        "component": "text",
         "name": "month",
         "label": "Month",
-        "valueType": "number"
+        "valueType": "text"
       },
       {
         "component": "text",
