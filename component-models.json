@@ -213,46 +213,11 @@
   {
     "id": "table-item",
     "fields": [
-      {
-        "component": "text",
-        "name": "month",
-        "label": "Month",
-        "valueType": "text"
-      },
-      {
-        "component": "text",
-        "name": "principal",
-        "label": "Principal",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "interest",
-        "label": "Interest",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "emi",
-        "label": "EMI",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "balance",
-        "label": "Balance",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "loan_paid",
-        "label": "Loan Paid to Date",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "definition",
-        "label": "Definition",
+     {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
         "valueType": "string"
       }
     ]
