@@ -180,6 +180,22 @@
           {
             "name": "content2-term",
             "value": "content2-term"
+          },
+          {
+            "name": "term-insurance-plan",
+            "value": "term-insurance-plan"
+          },
+          {
+            "name": "benefit-buying-insurance-plan",
+            "value": "benefit-buying-insurance-plan"
+          },
+          {
+            "name": "types-of-insurance-plan",
+            "value": "types-of-insurance-plan"
+          },
+          {
+            "name": "affordable-insurance-plan",
+            "value": "affordable-insurance-plan"
           }
         ]
       }
