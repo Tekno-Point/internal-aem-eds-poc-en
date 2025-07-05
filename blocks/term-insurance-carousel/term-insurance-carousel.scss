@@ -14,7 +14,9 @@ main>.section.term-insurance-carousel-container {
     @media (max-width: 768px) {
         width: auto;
         padding: 0;
-        max-width: 77%;
+        max-width: 76%;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     p {
@@ -33,7 +35,7 @@ main>.section.term-insurance-carousel-container {
 
         @media (max-width: 768px) {
             margin-left: -20px;
-            margin-bottom: 24px;
+            margin-bottom: 14px;
         }
 
         h1,
@@ -72,8 +74,12 @@ main>.section.term-insurance-carousel-container {
             position: unset;
 
             .swiper-wrapper {
+                // overflow: hidden;
+
                 @media (max-width: 768px) {
-                    margin-left: 2px;
+                    margin-left: -6px;
+                    padding: 20px 0;
+                    padding-left: 6px;
                 }
 
                 .swiper-slide {
@@ -89,7 +95,7 @@ main>.section.term-insurance-carousel-container {
                     background-color: #fff;
 
                     @media (max-width: 768px) {
-                        width: 306px !important;
+                        width: 256px !important;
                     }
 
                     &>div:first-child {
@@ -120,7 +126,12 @@ main>.section.term-insurance-carousel-container {
                 right: auto;
                 height: 30px;
                 width: 30px;
-                top: var(--swiper-navigation-top-offset, 60%);
+                top: 60%;
+
+                @media (max-width: 768px) {
+                    left: -36px
+                }
+
 
                 &::after {
                     content: ' ';

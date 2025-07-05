@@ -84,6 +84,7 @@ main>.section.our-bestselling-term-container {
 
             .swiper-wrapper {
                 height: 460px;
+                // overflow: hidden;
 
                 @media (max-width: 768px) {
                     margin-left: 2px;

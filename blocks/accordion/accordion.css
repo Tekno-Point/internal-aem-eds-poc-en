@@ -1,15 +1,21 @@
 .accordion details {
-  border: 1px solid #dadada;
+  border: 1px solid #E6E7E8;
+  border-right: 0;
+  border-left: 0;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.accordion details + details {
+.accordion details+details {
   margin-top: 24px;
 }
 
-.accordion details p {
-  margin-bottom: 0.8em;
+.section.accordion-container {
+  margin: 60px 0;
 }
+
+/* .accordion details p {
+  margin-bottom: 0.8em;
+} */
 
 .accordion details summary {
   position: relative;
@@ -19,15 +25,17 @@
   list-style: none;
   overflow: auto;
   transition: background-color 0.2s;
+  border-right: 0;
+  border-left: 0;
 }
 
 .accordion details[open] summary {
-  background-color: var(--light-color);
+  background-color: transparent;
 }
 
 .accordion details summary:focus,
 .accordion details summary:hover {
-  background-color: var(--light-color);
+  background-color: transparent;
 }
 
 .accordion details summary::-webkit-details-marker {
@@ -40,8 +48,8 @@
   top: 50%;
   right: 18px;
   transform: translateY(-50%) rotate(135deg);
-  width: 6px;
-  height: 6px;
+  width: 11px;
+  height: 11px;
   border: 2px solid;
   border-width: 2px 2px 0 0;
   transition: transform 0.2s;
@@ -56,6 +64,105 @@
 }
 
 .accordion details[open] .accordion-item-body {
-  border-top: 1px solid #dadada;
+  /* border-top: 1px solid #E6E7E8; */
   background-color: var(--background-color);
+  padding-bottom: 20px;
+}
+
+.accordion-item :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  padding: 40px 0px;
+  /* border-top: 1px solid #E6E7E8;
+  border-bottom: 1px solid #E6E7E8; */
+  font-family: "Inter-Bold";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  background: transparent;
+  -webkit-text-fill-color: unset;
+}
+
+.accordion-item:nth-child(2) .accordion-item-body {
+  border-top: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.accordion-item:nth-child(2) .accordion-item-body .button-container {
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-item:nth-child(2) .accordion-item-body .tabs-list {
+  gap: unset;
+  display: none;
+}
+
+.accordion-item:nth-child(2) .accordion-item-body .tabs-panel {
+  border: none;
+  padding: 0;
+  padding-top: 15px;
+}
+
+.accordion-item:nth-child(2) .accordion-item-body .tabs-panel ul {
+  padding-left: 21px;
+}
+
+.accordion-item:nth-child(2) .accordion-item-body .tabs-panel ul li {
+  color: #333;
+  font-family: "Inter-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  list-style: disc;
+}
+
+@media screen and (max-width: 767.99px) {
+  .section.accordion-container .accordion-wrapper {
+    padding: 0;
+  }
+
+  .accordion-item :is(h1, h2, h3, h4, h5, h6) {
+    padding: 16px 0px;
+    font-size: 1.25rem;
+  }
+
+  .accordion details summary::after {
+    width: 8px;
+    height: 8px;
+  }
+
+  .tabs .tabs-list button {
+    font-size: 0.75rem;
+    flex: 0 0 auto;
+  }
+
+  .tabs .tabs-list button[aria-selected='true'] {
+    font-size: 0.75rem;
+    flex: 0 0 auto;
+  }
+
+  .tabs .tabs-panel>div h3 {
+    font-size: 0.875rem;
+    padding: 16px 0px 0px 2px;
+  }
+
+  .tabs .tabs-panel>div p {
+    font-size: 0.875rem;
+    margin-left: 18px;
+    line-height: 21px;
+  }
+
+  .accordion-item:nth-child(2) .accordion-item-body .tabs-panel ul li {
+    font-size: 0.875rem;
+  }
+  .accordion-item:nth-child(2) .accordion-item-body .tabs-panel {
+    border: none;
+    padding: 0 20px;
+    padding-top: 15px;
+  }
 }

@@ -1097,6 +1097,18 @@ main>.section.image2 {
   letter-spacing: -0.267px;
 }
 
+@media screen and (max-width: 767.99px) {
+  .section.popular-search>div h1 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.625px;
+  }
+
+  .popular-searches>div>div ul {
+    padding: 0px 8px 4px;
+    margin: 0 8px 8px 0;
+  }
+}
 
 
 /* term-calculator2 css start */
@@ -1151,6 +1163,7 @@ main>.section.image2 {
   h5,
   h6 {
     font-size: 20px;
+    line-height: normal;
   }
 
   .term-calculator2>div p:nth-child(2) {
@@ -1549,6 +1562,73 @@ main>.section.image2 {
   border-bottom: none;
 }
 
+@media screen and (max-width: 768px) {
+  .affordable-insurance-plan>div>div>div>div>h2 {
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+  }
+
+  .affordable-insurance-plan>div>div>div>div>p {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul {
+    flex-direction: column;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul>li {
+    width: 100%;
+    margin-bottom: 18px;
+    letter-spacing: normal;
+    font-size: 16px;
+    line-height: 28px;
+    align-items: flex-start;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2) {
+    padding: 20px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2) ul li ul li {
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.126px;
+    color: #333333;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul>li ul {
+    padding-left: 12px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #333333;
+    margin-bottom: 10px;
+    margin-right: unset;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul>li>p {
+    width: 66px;
+    white-space: inherit;
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul li {
+    font-size: 12px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul li ul {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+}
+
 /* affordable plan ends */
 
 /* life-stages-plan css start */
@@ -1577,22 +1657,10 @@ main>.section.image2 {
   letter-spacing: -0.18px;
 }
 
-/* .life-stages-plan .custom-richtextblock>div:first-child>div>ul>li:first-child p {
-  color: #333;
-  font-family: 'Inter-Regular';
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.2px;
-  list-style: disc;
-  padding-bottom: 2px;
-} */
-
 .life-stages-plan .custom-richtextblock>div:first-child>div>ul {
   margin: 0;
   padding: 0;
-
+  padding-left: 9px;
 }
 
 .life-stages-plan .custom-richtextblock>div:first-child>div>ul>li {
@@ -1748,6 +1816,96 @@ main>.section.image2 {
   letter-spacing: -0.18px;
   padding-bottom: 15px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .life-stages-plan .custom-richtextblock-wrapper .custom-richtextblock>div>div :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:first-child>div p {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 15px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:first-child>div>ul>li :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 17px;
+    letter-spacing: -0.18px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(2)>div ul li :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 14px;
+    letter-spacing: -0.14px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(2)>div ul li strong {
+    font-family: 'HelveticaNeueRoman';
+    font-size: 12px;
+    padding: 4px;
+    margin-right: 2px;
+    position: absolute;
+    left: 0;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(2)>div ul li {
+    display: block;
+    list-style: none;
+    word-break: break-all;
+    line-height: 19.6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: -0.14px;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(2)>div p {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(3)>div:first-child>:is(h1, h2, h3, h4, h5, h6),
+  .life-stages-plan .custom-richtextblock>div:nth-child(4)>div:first-child>:is(h1, h2, h3, h4, h5, h6) {
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(3)>div>ul li :is(h1, h2, h3, h4, h5, h6) {
+    font-size: 1.125rem;
+    letter-spacing: -0.18px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(3)>div>ul li p {
+    font-size: 0.875rem;
+    line-height: 19px;
+    letter-spacing: -0.14px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(3)>div>ul li {
+    padding-bottom: 10px;
+    font-size: 1.125rem;
+    letter-spacing: -0.18px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(4)>div p:nth-child(2) {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
+  .life-stages-plan .custom-richtextblock>div:nth-child(4)>div ul:nth-child(3) li {
+    line-height: 19.2px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
 }
 
 /* life-stages-plan css End */
@@ -2010,6 +2168,210 @@ main>.section.image2 {
 
   .work-plan>div p:first-child {
     display: none;
+  }
+
+  .features-of-ti .custom-richtext>div>div h2:nth-child(3) {
+    padding-top: 40px;
+  }
+
+  .features-of-ti .custom-richtext>div>div:where(h1, h2, h3, h4, h5, h6),
+  .choose-best-plan .custom-richtext>div>div h2 {
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+  }
+
+  .choose-best-plan .custom-richtextblock-wrapper .custom-richtextblock {
+    padding: 20px 0px;
+  }
+
+  .choose-best-plan .custom-richtextblock-wrapper .custom-richtextblock>div {
+    padding: 20px 20px;
+  }
+
+  .choose-best-plan .custom-richtextblock-wrapper {
+    padding: 0 20px;
+    width: auto;
+  }
+
+  .choose-best-plan .custom-richtextblock>div>div h3 {
+    font-size: 1.125rem;
+    letter-spacing: -0.18px;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+  .choose-best-plan .custom-richtextblock>div>div p {
+    font-size: 0.875rem;
+    letter-spacing: -0.14px;
+    line-height: 19.6px;
+    padding-bottom: unset;
+  }
+}
+
+.section.insight-plan {
+  max-width: 999px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 14px;
+  border: 1.5px solid #0073BB;
+  background: #FFF;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.insight-plan>div:first-child {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  width: 74%;
+}
+
+.insight-plan>div:nth-child(2) {
+  margin: 0;
+  padding: 0;
+  max-width: inherit;
+  width: 26%;
+  text-align: center;
+  height: 100%;
+}
+
+.insight-plan .custom-richtext>div>div h6 {
+  position: absolute;
+  padding: 8px 16px;
+  border-radius: 16px;
+  top: -23px;
+  left: 20px;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Inter-Bold';
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.14px;
+  background: linear-gradient(90deg, #0073BB 0%, #D62049 100%);
+}
+
+.insight-plan .custom-richtext>div>div p:nth-child(2) {
+  color: #333;
+  font-family: "Inter-Bold";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+  /* display: block; */
+}
+
+.insight-plan .custom-richtext>div>div p:nth-child(3),
+.insight-plan .custom-richtext>div>div p:nth-child(4) {
+  color: #333;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.16px;
+}
+
+@media screen and (max-width: 767px) {
+  .section.insight-plan {
+    flex-direction: column-reverse;
+    margin: 0 20px;
+    margin-bottom: 40px;
+    padding: 0;
+    width: auto;
+    max-width: inherit;
+  }
+
+  .insight-plan>div:nth-child(2),
+  .insight-plan>div:first-child {
+    width: inherit;
+  }
+
+  .insight-plan .custom-richtext>div>div p:nth-child(2) {
+    font-size: 18px;
+  }
+
+  .insight-plan .custom-richtext>div>div p:nth-child(3),
+  .insight-plan .custom-richtext>div>div p:nth-child(4) {
+    font-size: 14px;
+  }
+
+  .insight-plan>div:first-child>div>div>div {
+    padding: 10px 16px;
+  }
+
+  .insight-plan>div:nth-child(2) {
+    padding-top: 30px;
+    border-bottom: 0.1px solid rgb(214, 206, 206);
+  }
+
+  .insight-plan>div:nth-child(2) img {
+    width: 36px;
+    height: 39px;
+  }
+
+  .insight-plan .custom-richtext>div>div h6 {
+    left: 38%;
+  }
+
+  .choose-best-plan.section {
+    margin-bottom: 0;
+  }
+
+  .section.long-policy-period {
+    margin-top: 0;
+  }
+
+  .long-policy-period .custom-richtextblock div:first-child>div h2,
+  .long-policy-period .custom-richtextblock div:nth-child(2)>div h2 {
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+  }
+
+  .long-policy-period .custom-richtextblock div:first-child>div p,
+  .long-policy-period .custom-richtextblock div:nth-child(2)>div p:nth-child(2) {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+  }
+
+  .long-policy-period .custom-richtextblock div:nth-child(2) ul:nth-child(3)>li {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .list-of-documents .custom-richtext>div>div h2 {
+    font-size: 1.25rem;
+    line-height: 24px;
+    /* margin: 16px 21px 0 16px; */
+  }
+
+  .list-of-documents .custom-richtext>div>div h2::before {
+    width: 80px;
+    height: 82px;
+    display: block;
+    margin-left: 17px;
+    margin-top: -5px;
+    margin-right: 16px;
+  }
+
+  .list-of-documents .custom-richtext>div>div ul li {
+    padding: 10px 6px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .list-of-documents .custom-richtext>div>div p {
+    font-size: 14px;
+    margin-top: 10px;
   }
 }
 

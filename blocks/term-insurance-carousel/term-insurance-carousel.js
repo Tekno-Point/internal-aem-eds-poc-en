@@ -29,8 +29,8 @@ export default function decorate(block) {
     Swiper(block, {
         slidesPerView: "auto",
         spaceBetween: 20,
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 0,
+        slidesOffsetBefore: 5,
+        slidesOffsetAfter: 5,
         // loop: true,
         // autoplay: {
         //     delay: 5000,

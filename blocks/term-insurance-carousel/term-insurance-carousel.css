@@ -14,7 +14,9 @@ main > .section.term-insurance-carousel-container {
   main > .section.term-insurance-carousel-container {
     width: auto;
     padding: 0;
-    max-width: 77%;
+    max-width: 76%;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 main > .section.term-insurance-carousel-container p {
@@ -33,7 +35,7 @@ main > .section.term-insurance-carousel-container .default-content-wrapper {
 @media (max-width: 768px) {
   main > .section.term-insurance-carousel-container .default-content-wrapper {
     margin-left: -20px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
 }
 main > .section.term-insurance-carousel-container .default-content-wrapper h1,
@@ -77,7 +79,9 @@ main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapp
 }
 @media (max-width: 768px) {
   main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper {
-    margin-left: 2px;
+    margin-left: -6px;
+    padding: 20px 0;
+    padding-left: 6px;
   }
 }
 main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper .swiper-slide {
@@ -94,7 +98,7 @@ main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapp
 }
 @media (max-width: 768px) {
   main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper .swiper-slide {
-    width: 306px !important;
+    width: 256px !important;
   }
 }
 main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper .swiper-slide > div:first-child {
@@ -120,7 +124,12 @@ main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapp
   right: auto;
   height: 30px;
   width: 30px;
-  top: var(--swiper-navigation-top-offset, 60%);
+  top: 60%;
+}
+@media (max-width: 768px) {
+  main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-prev {
+    left: -36px;
+  }
 }
 main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-prev::after {
   content: " ";
