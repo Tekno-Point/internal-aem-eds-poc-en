@@ -489,13 +489,6 @@
         "label": "Question"
       },
       {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "answer",
-        "label": "Answer",
-        "raw": true
-      },
-      {
         "component": "aem-content",
         "name": "link",
         "label": "Fragment URL"
