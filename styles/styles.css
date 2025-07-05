@@ -255,9 +255,10 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+/* IDFC */
 
-
-.section.personalloanbenefits h2{
+.section.personalloanbenefits h2, 
+.section.swipper-card-container h2{
   color: #25243B;
   font-size: 24px;
   font-style: normal;
@@ -265,4 +266,12 @@ main .section.highlight {
   line-height: normal;
   letter-spacing: -0.686px;
   margin-bottom: 30px;
+}
+
+.section.rte-block-container h3{
+    color: #25243B;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: -0.5px;
 }

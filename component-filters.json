@@ -18,7 +18,8 @@
       "columns",
       "fragment",
       "swipper-card",
-      "rte-block"
+      "rte-block",
+      "git-block"
     ]
   },
   {
@@ -58,6 +59,12 @@
     "id": "rte-block",
     "components": [
       "rte-item"
+    ]
+  },
+  {
+    "id": "git-block",
+    "components": [
+      "git-item"
     ]
   }
 ]
