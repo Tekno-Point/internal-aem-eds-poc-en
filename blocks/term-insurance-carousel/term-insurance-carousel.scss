@@ -45,7 +45,7 @@ main>.section.term-insurance-carousel-container {
             padding: 0;
             margin: 0;
             color: #0D2042;
-            font-family: "inter";
+            font-family: "inter-Bold";
             font-weight: 700;
             font-size: 36px;
             color: #333333;
@@ -111,71 +111,7 @@ main>.section.term-insurance-carousel-container {
                         height: 26%;
                         padding: 20px;
                         line-height: normal;
-
-                        // .button-container,
-                        // .button {
-                        //     padding: 0;
-                        //     margin: 0;
-                        // }
-
-                        // .button-container {
-                        //     position: relative;
-                        //     display: flex;
-                        //     justify-content: center;
-                        //     align-items: center;
-                        //     gap: 4px;
-                        // }
-
-                        // .button {
-                        //     background: transparent;
-                        //     display: flex;
-                        //     justify-content: center;
-                        //     gap: 4px;
-                        //     color: #2E3E5C;
-                        //     font-family: "Manrope-Regular";
-                        //     font-size: 12px;
-                        //     font-weight: 400;
-                        //     line-height: 15.6px;
-
-                        //     &::before {
-                        //         content: "";
-                        //         display: block;
-                        //         width: 16px;
-                        //         height: 16px;
-                        //         background-image: url(/icons/material-symbols_star.svg);
-                        //         background-repeat: no-repeat;
-                        //         background-position: center;
-                        //         background-size: 100%;
-                        //     }
-                        // }
                     }
-
-                    // &-cards-3 {
-                    //     position: absolute;
-                    //     // width: 65px;
-                    //     // height: 65px;
-                    //     // background: #ffffff;
-                    //     // border-radius: 50%;
-                    //     // background: #ffffff;
-                    //     left: 50%;
-                    //     top: 40%;
-                    //     transform: translate(-50%, -50%);
-
-                    //     .button-container {
-                    //         margin: 0;
-                    //         padding: 0;
-
-                    //         .button {
-                    //             background: transparent;
-
-                    //             .icon {
-                    //                 width: 42px;
-                    //                 height: 54px;
-                    //                 flex-shrink: 0;
-                    //             }
-                    //         }
-                    //     }
-                    // }
                 }
             }
 
@@ -200,9 +136,6 @@ main>.section.term-insurance-carousel-container {
                     -webkit-font-smoothing: antialiased;
                 }
 
-                // @media (max-width: 768px) {
-                //     display: none;
-                // }
             }
 
             .swiper-button-next {
@@ -221,15 +154,11 @@ main>.section.term-insurance-carousel-container {
                     font-family: 'slick';
                     font-size: 20px;
                     line-height: 1;
-                    // opacity: .75;
                     color: white;
                     -webkit-font-smoothing: antialiased;
                 }
             }
 
-            // @media (max-width: 768px) {
-            //     display: none;
-            // }
         }
     }
 }

@@ -24,7 +24,8 @@
       "term-plan-carousel",
       "popular-searches",
       "disclaimers",
-      "tabs"
+      "tabs",
+      "accordion"
     ]
   },
   {
@@ -62,5 +63,9 @@
   {
     "id": "term-plan-carousel",
     "components": ["term-plan-carousel-item"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordionitem"]
   }
 ]

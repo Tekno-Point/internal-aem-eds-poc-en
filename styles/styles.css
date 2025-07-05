@@ -294,7 +294,6 @@ main .section.highlight {
 .content1 .custom-richtext li::before,
 .content4 .custom-richtext li::before {
   content: '';
-  /* background: url('../icons/tick.svg'); */
   background: url('../icons/tick2.svg');
   background-position: center;
   background-size: cover;
@@ -1647,7 +1646,7 @@ main>.section.image2 {
   display: flex;
   align-items: flex-start;
   margin-left: unset;
-  padding-left: 52px;
+  /* padding-left: 52px; */
   /* list-style: none; */
   position: relative;
   color: #333;
@@ -1673,6 +1672,17 @@ main>.section.image2 {
   padding: 0;
   padding-top: 2px;
   padding-right: 6px;
+}
+
+.life-stages-plan .custom-richtextblock>div:nth-child(2)>div ul li strong {
+  color: #fff;
+  background-color: #0073BB;
+  padding: 8px;
+  border-radius: 20px;
+  font-family: 'HelveticaNeueBold';
+  font-size: 17px;
+  font-weight: 400;
+  margin-right: 10px;
 }
 
 .life-stages-plan .custom-richtextblock>div:nth-child(3) {
@@ -1916,6 +1926,75 @@ main>.section.image2 {
   padding: 15px;
   border-bottom: 2px solid #4197d3;
   border-right: 2px solid #4197d3;
+}
+
+.list-of-documents .custom-richtext>div>div h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background: #4197D3;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: 'Inter-Bold';
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 48px;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -.47px;
+}
+
+.list-of-documents .custom-richtext>div>div h2::before {
+  content: '';
+  background: url(../icons/Revisionary-Bonus.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 108px;
+  height: 121px;
+  display: block;
+  margin-left: 48px;
+  margin-top: -9px;
+}
+
+
+.list-of-documents .custom-richtext>div>div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #4197d3;
+  border-top: none;
+}
+
+.list-of-documents .custom-richtext>div>div ul li {
+  list-style: none;
+  padding: 12px 16px;
+  border: 1px solid #4197d3;
+  border-top: none;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #58595b;
+}
+
+.list-of-documents .custom-richtext>div>div p {
+  margin-top: 20px;
+  font-family: "HelveticaNeueRoman";
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #373737;
 }
 
 /* long policy period css end */

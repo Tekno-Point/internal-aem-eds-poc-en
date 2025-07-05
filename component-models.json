@@ -477,5 +477,24 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "accordion-item",
+    "type": "accordion/text",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "question",
+        "label": "Question"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "answer",
+        "label": "Answer",
+        "raw": true
+      }
+    ]
   }
 ]
