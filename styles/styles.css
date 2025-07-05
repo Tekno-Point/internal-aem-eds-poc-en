@@ -1805,12 +1805,14 @@ main>.section.image2 {
 /* choose-best-plan css end */
 
 /* long policy period css start */
-.long-policy-period .custom-richtextblock div:first-child {
+.long-policy-period .custom-richtextblock div:first-child,
+.long-policy-period .custom-richtextblock div:nth-child(2) {
   margin: 20px 0;
   margin-top: unset;
 }
 
-.long-policy-period .custom-richtextblock div:first-child>div h2 {
+.long-policy-period .custom-richtextblock div:first-child>div h2,
+.long-policy-period .custom-richtextblock div:nth-child(2)>div h2 {
   color: #333;
   font-family: 'Inter-Bold';
   font-size: 2.25rem;
@@ -1821,7 +1823,8 @@ main>.section.image2 {
   padding-bottom: 10px;
 }
 
-.long-policy-period .custom-richtextblock div:first-child>div p {
+.long-policy-period .custom-richtextblock div:first-child>div p,
+.long-policy-period .custom-richtextblock div:nth-child(2)>div p:nth-child(2) {
   color: #333;
   font-family: 'HelveticaNeueRoman';
   font-size: 18px;
@@ -1829,6 +1832,37 @@ main>.section.image2 {
   line-height: 27px;
   letter-spacing: -0.18px;
   padding-bottom: 10px;
+}
+
+.long-policy-period .custom-richtextblock div:nth-child(2) {
+  overflow: auto;
+}
+
+.long-policy-period .custom-richtextblock div:nth-child(2) ul:nth-child(3) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
+  border: 2px solid #4197d3;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.long-policy-period .custom-richtextblock div:nth-child(2) ul:nth-child(3)>li {
+  color: #58595b;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  list-style: none;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 2px solid #4197d3;
+  border-right: 2px solid #4197d3;
 }
 
 /* long policy period css end */
