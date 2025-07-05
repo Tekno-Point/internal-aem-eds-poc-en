@@ -1,3 +1,4 @@
+import modifyForm from "../aia-banner/bannerForm.js";
 import createField from "./form-fields.js";
 
 async function createForm(formHref, submitHref) {
@@ -108,4 +109,5 @@ export default async function decorate(block) {
       }
     }
   });
+  modifyForm(block)
 }
