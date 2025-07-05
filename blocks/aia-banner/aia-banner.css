@@ -1,0 +1,546 @@
+.aia-banner * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.section.aia-banner-container {
+    max-width: 1206px;
+    box-sizing: border-box;
+    /* background-color: lavender; */
+    background: linear-gradient(0deg, #FBFBFC 0%, #F2F7FB 100%);
+    padding: 24px;
+    border-radius: 24px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    gap: 2.06%;
+}
+
+.aia-banner-container .aia-banner-wrapper {
+    max-width: 46.64%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.aia-banner>div {
+    background: url('../../icons//tata-bg.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 450px;
+    height: 100%;
+    border-radius: 16px;
+    position: relative;
+}
+
+.aia-banner>div div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 0 16px;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+}
+
+.aia-banner>div div:nth-child(1)::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #6b1026;
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: -8px;
+    border-top-right-radius: 10px;
+}
+
+.aia-banner>div div:nth-child(1) picture {
+    line-height: 0;
+    display: block;
+    height: 100%;
+    width: 190px;
+    height: 79px;
+}
+
+.aia-banner>div div:nth-child(1) picture img {
+    object-fit: cover;
+    width: 190px;
+    height: 79px;
+}
+
+.aia-banner>div div:nth-child(1)>ul {
+    padding: 0;
+    list-style: none;
+    background: linear-gradient(90deg, #0073BB 0%, #D62049 100%);
+    clip-path: polygon(0% 0%, 20px 50%, 0% 100%, 100% 100%, 100% 0%);
+    border-radius: 0 0 8px 0;
+    max-width: 192px;
+    width: 100%;
+    /* height: 50px; */
+    padding: 7px 9px;
+    margin-right: -8px;
+    position: relative;
+}
+
+/* .aia-banner>div div:nth-child(1)>ul::before {
+    content: '';
+    border-top: 26px solid transparent;
+    border-bottom: 26px solid transparent;
+    border-left: 26px solid lavender;
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+} */
+
+.aia-banner>div div:nth-child(1) ul>li p {
+    font-size: 20px;
+    line-height: normal;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    color: #F2F7FB;
+}
+
+.aia-banner>div div:nth-child(1) ul>li,
+.aia-banner>div div:nth-child(1) ul>li>ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.aia-banner>div div:nth-child(1) ul>li>ul>li {
+    width: 16px;
+    height: 16px;
+}
+
+.aia-banner>div div:nth-child(1) ul>li>ul>li .icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+}
+
+.aia-banner>div div:nth-child(1) ul>li:last-of-type p {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.12px;
+}
+
+.aia-banner>div div:nth-child(2) {
+    padding: 13px 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.aia-banner>div div:nth-child(2) p:first-of-type {
+    color: #333;
+    font-size: 28px;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    padding-bottom: 20px;
+}
+
+.aia-banner>div div:nth-child(2)>p:first-of-type strong {
+    color: #0073BB;
+}
+
+.aia-banner>div div:nth-child(2)>ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.aia-banner>div div:nth-child(2)>ul>li {
+    position: relative;
+    padding-left: 29px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: -0.144px;
+    color: #333;
+}
+
+.aia-banner>div div:nth-child(2)>ul>li:last-of-type {
+    font-size: 8px;
+    padding-left: 10px;
+}
+
+.aia-banner>div div:nth-child(2)>ul>li span {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.aia-banner>div div:nth-child(2) p:last-of-type {
+    position: absolute;
+    bottom: 30px;
+}
+
+.aia-banner>div div:nth-child(2) .icon-tata-tagline {
+    width: 153px;
+    height: 23px;
+}
+
+.aia-banner>div div:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.aia-banner>div div:nth-child(3) picture {
+    line-height: 0;
+    height: 100%;
+    display: block;
+}
+
+.aia-banner-container .form-wrapper {
+    max-width: 52%;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.aia-banner-container .form-wrapper .form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.aia-banner-container .form-wrapper .form form .field-wrapper {
+    margin: 0;
+}
+
+.aia-banner-container .form-wrapper .heading-wrapper,
+.aia-banner-container .form-wrapper .heading-wrapper h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: normal;
+    letter-spacing: -0.62px;
+    font-weight: 700;
+    font-family: sans-serif;
+    width: 100%;
+    background: linear-gradient(90deg, #0073BB 0%, #D62049 55%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.half-width {
+    max-width: 48.65%;
+    width: 100%;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.medium-width {
+    max-width: 31.5%;
+    width: 100%;
+    display: flex;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.small-width {
+    max-width: 22.98%;
+    width: 100%;
+    position: relative;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.half-width.date-wrapper input {
+    position: relative;
+    z-index: 1;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.half-width.date-wrapper input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.half-width.date-wrapper input::before {
+    content: '';
+    background: url('../../icons/calendar-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 14px;
+    z-index: -1;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper label,
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper legend {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    letter-spacing: -0.14px;
+    color: #58595b;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper input {
+    padding: 13px 16px;
+    border-radius: 8px;
+    border: 1px solid #E6E7E8;
+    outline: none;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper input:focus,
+.aia-banner-container .form-wrapper .form form>.field-wrapper.small-width select:focus {
+    border: 1px solid #0073bb;
+    outline: none;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset {
+    display: flex;
+    width: 100%;
+    gap: 0;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .radioBtnWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #a3a3a3;
+    border-radius: 8px;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.radio-wrapper {
+    width: 50%;
+    display: flex;
+
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.radio-wrapper label {
+    position: relative;
+    margin: 0;
+    padding: 16px;
+    width: 100%;
+    color: #58595B;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.radio-wrapper input {
+    position: absolute;
+    display: none;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.radio-wrapper input[type="radio"]:checked~label {
+    border-radius: 7px 8px 8px 7px;
+    border: 2px solid #0073BB;
+    background: #FFF;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
+    color: #0073BB;
+    display: flex;
+    gap: 5px;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.radio-wrapper input[type="radio"]:checked~label::before {
+    content: '';
+    background: url('../../icons/blue-tick.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.text-wrapper {
+    display: flex;
+    position: relative;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.text-wrapper label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    border-right: 1px solid #9c9c9c4d;
+    padding: 6px 25px 6px 0;
+    margin: 0;
+    color: #58595b;
+    font-weight: 500;
+}
+
+.aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.text-wrapper input {
+    padding-left: 60px;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.small-width select {
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.14px;
+    cursor: pointer;
+    padding: 13px 16px;
+    border-radius: 8px;
+    border: 1px solid #e6e7e8;
+    appearance: none;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.small-width::after {
+    content: '';
+    border-right: 1.5px solid #333;
+    border-bottom: 1.5px solid #333;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 52%;
+    right: 22px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.checkbox-wrapper {
+    display: flex;
+    align-items: start;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.checkbox-wrapper input {
+    width: 35px;
+    height: 20px;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.checkbox-wrapper label {
+    color: #58595B;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.1px;
+    margin: 0;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.submit-wrapper .button {
+    margin: 0;
+    border-radius: 8px;
+    background: #D62049;
+    padding: 16px 24px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.14px;
+    transition: all 0.3s ease;
+}
+
+.aia-banner-container .form-wrapper .form form>.field-wrapper.submit-wrapper .button:hover {
+    background-color: #B6163A;
+}
+
+@media screen and (max-width:768px) {
+    .section.aia-banner-container {
+        max-width: 100%;
+        padding: 0;
+        border-radius: 0;
+        background: unset;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .aia-banner-container .aia-banner-wrapper {
+        max-width: 100%;
+        padding: 0px 20px;
+    }
+
+    .aia-banner>div {
+        background: url('../../icons/tata-bg-mob.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 176px;
+    }
+
+    .aia-banner>div div:nth-child(1) {
+        padding: 8px 0 0 11px;
+    }
+
+    .aia-banner>div div:nth-child(1)::after {
+        content: unset;
+    }
+
+    .aia-banner>div div:nth-child(1) picture {
+        width: 144px;
+        height: 60px;
+    }
+
+    .aia-banner>div div:nth-child(1) picture img {
+        width: 144px;
+        height: 60px;
+    }
+
+    .aia-banner>div div:nth-child(1)>ul {
+        max-width: 124px;
+        margin-right: 8px;
+        padding: 6px;
+        clip-path: polygon(0% 0%, 10px 50%, 0% 100%, 100% 100%, 100% 0%);
+        border-radius: 0;
+    }
+
+    .aia-banner>div div:nth-child(1) ul>li p {
+        font-size: 12px;
+        letter-spacing: -0.12px;
+    }
+
+    .aia-banner>div div:nth-child(1) ul>li>ul>li {
+        width: 10px;
+        height: 10px;
+    }
+
+    .aia-banner>div div:nth-child(1) ul>li:last-of-type p {
+        font-size: 8px;
+        letter-spacing: -0.08px;
+    }
+
+    .aia-banner>div div:nth-child(2) {
+        padding: 10px;
+    }
+
+    .aia-banner>div div:nth-child(2) p:first-of-type {
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        padding-bottom: 8px;
+    }
+
+    .aia-banner>div div:nth-child(2)>ul {
+        gap: 2px;
+    }
+
+    .aia-banner>div div:nth-child(2) p:last-of-type,
+    .aia-banner>div div:nth-child(3) {
+        position: unset;
+        display: none;
+    }
+
+    .aia-banner>div div:nth-child(2)>ul>li {
+        font-size: 11px;
+        letter-spacing: -0.11px;
+        padding-left: 20px;
+    }
+
+    .aia-banner>div div:nth-child(2)>ul>li span {
+        width: 16px;
+        height: 16px;
+    }
+}
