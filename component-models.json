@@ -224,6 +224,10 @@
           {
             "name": "work-plan",
             "value": "work-plan"
+          },
+          {
+            "name": "insight-plan",
+            "value": "insight-plan"
           }
         ]
       }

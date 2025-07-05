@@ -1997,4 +1997,20 @@ main>.section.image2 {
   color: #373737;
 }
 
+/* .work-plan>div p:first-child {} */
+
+.work-plan>div p:nth-child(2) {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .work-plan>div p:nth-child(2) {
+    display: block;
+  }
+
+  .work-plan>div p:first-child {
+    display: none;
+  }
+}
+
 /* long policy period css end */
