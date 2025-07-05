@@ -609,6 +609,59 @@ main>.section.image2 {
 
 }
 
+.content-model .custom-richtextblock>div>div ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-model .custom-richtextblock>div>div>ul>li h4 {
+  display: flex;
+  align-items: center;
+  font-family: "Inter-Bold";
+  font-size: 24px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.63px;
+  color: #333;
+}
+
+.content-model .custom-richtextblock>div>div>ul>li h4 .icon {
+  padding-right: 27px;
+  height: 46px;
+  width: 46px;
+}
+
+.content-model .custom-richtextblock>div>div>ul>li p {
+  font-family: 'HelveticaNeueRoman';
+  font-size: 18px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #373737;
+}
+
+@media screen and (max-width: 767.99px) {
+  .content-model .custom-richtextblock>div>div>ul>li h4 {
+    font-size: 22px;
+  }
+
+  .content-model .custom-richtextblock>div>div>ul>li h4 .icon {
+    padding-right: 13px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .content-model .custom-richtextblock>div>div>ul>li p {
+    font-size: 14px;
+  }
+
+}
+
+
 /* content3 css End */
 
 /* Your Budget component css start */
@@ -1505,7 +1558,7 @@ main>.section.image2 {
   width: 100%;
 }
 
-.life-stages-plan .custom-richtextblock>div:first-child>div :is(h1, h2, h3, h4, h5, h6) {
+.life-stages-plan .custom-richtextblock-wrapper .custom-richtextblock>div>div :is(h1, h2, h3, h4, h5, h6) {
   color: #333;
   font-family: 'Inter-Bold';
   font-size: 2.25rem;
@@ -1525,7 +1578,7 @@ main>.section.image2 {
   letter-spacing: -0.18px;
 }
 
-.life-stages-plan .custom-richtextblock>div:first-child>div>ul>li:first-child p {
+/* .life-stages-plan .custom-richtextblock>div:first-child>div>ul>li:first-child p {
   color: #333;
   font-family: 'Inter-Regular';
   font-size: 1.25rem;
@@ -1535,7 +1588,7 @@ main>.section.image2 {
   letter-spacing: -0.2px;
   list-style: disc;
   padding-bottom: 2px;
-}
+} */
 
 .life-stages-plan .custom-richtextblock>div:first-child>div>ul {
   margin: 0;
@@ -1544,7 +1597,7 @@ main>.section.image2 {
 }
 
 .life-stages-plan .custom-richtextblock>div:first-child>div>ul>li {
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   margin-left: 10px;
 }
 

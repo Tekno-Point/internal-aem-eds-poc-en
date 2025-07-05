@@ -216,6 +216,10 @@
           {
             "name": "content-model",
             "value": "content-model"
+          },
+          {
+            "name": "list-of-documents",
+            "value": "list-of-documents"
           }
         ]
       }
