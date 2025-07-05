@@ -492,6 +492,11 @@
         "component": "aem-content",
         "name": "link",
         "label": "Fragment URL"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
       }
     ]
   }
