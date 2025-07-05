@@ -220,6 +220,10 @@
           {
             "name": "list-of-documents",
             "value": "list-of-documents"
+          },
+          {
+            "name": "work-plan",
+            "value": "work-plan"
           }
         ]
       }

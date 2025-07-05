@@ -1,3 +1,4 @@
+import loadFragment from '../blocks/fragment/fragment.js';
 import {
   loadHeader,
   loadFooter,
@@ -29,6 +30,57 @@ export function moveAttributes(from, to, attributes) {
       from.removeAttribute(attr);
     }
   });
+}
+export function createElement(tagName, options = {}) {
+  const { classes = [], props = {} } = options;
+  const elem = document.createElement(tagName);
+  const isString = typeof classes === 'string';
+  if (classes || (isString && classes !== '') || (!isString && classes.length > 0)) {
+    const classesArr = isString ? [classes] : classes;
+    elem.classList.add(...classesArr);
+  }
+  if (!isString && classes.length === 0) elem.removeAttribute('class');
+
+  if (props) {
+    Object.keys(props).forEach((propName) => {
+      const isBooleanAttribute = propName === 'allowfullscreen' || propName === 'autoplay' || propName === 'muted' || propName === 'controls';
+
+      // For boolean attributes, add the attribute without a value if it's truthy
+      if (isBooleanAttribute) {
+        if (props[propName]) {
+          elem.setAttribute(propName, '');
+        }
+      } else {
+        const value = props[propName];
+        elem.setAttribute(propName, value);
+      }
+    });
+  }
+
+  return elem;
+}
+
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
+function autolinkFragements(element) {
+  element.querySelectorAll('a').forEach(function (origin) {
+    if (origin && origin.href && origin.href.includes('/fragment/')) {
+      const parent = origin.parentElement;
+      const div = document.createElement('div');
+      div.append(origin);
+      parent.append(div);
+      loadFragment(div);
+    }
+  })
 }
 
 /**
@@ -114,7 +166,9 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
+  autolinkModals(doc)
   const main = doc.querySelector('main');
+  autolinkFragements(doc);
   await loadSections(main);
 
   const { hash } = window.location;
@@ -145,3 +199,15 @@ async function loadPage() {
 }
 
 loadPage();
+
+// const section = document.querySelector('.section.why-exchange-traded');
+// console.log(section);
+
+// if (section) {
+//   section.classList.add('why-exchange-trand');
+//   const fundHd = section.querySelector('.default-content-wrapper');
+//   if (fundHd) {
+//     fundHd.classList.add('etf-funds-1213');
+//     console.log(fundHd);
+//   }
+// }
