@@ -196,8 +196,7 @@
           {
             "name": "affordable-insurance-plan",
             "value": "affordable-insurance-plan"
-          }
-          ,
+          },
           {
             "name": "life-stages-plan",
             "value": "life-stages-plan"
@@ -213,6 +212,10 @@
           {
             "name": "long-policy-period",
             "value": "long-policy-period"
+          },
+          {
+            "name": "content-model",
+            "value": "content-model"
           }
         ]
       }
