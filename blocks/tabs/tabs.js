@@ -2045,6 +2045,7 @@ export default async function decorate(block) {
 
   const select = block.querySelector('select');
   select.innerHTML = `
+     <option>1 Traveller</option>
      <option>2 Traveller</option>
      <option>3 Traveller</option>
      <option>4 Traveller</option>
