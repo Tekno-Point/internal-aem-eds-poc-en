@@ -136,6 +136,9 @@
           {
             "name" : "Tips to lower your travel insurance premium", 
             "value": "tlt-insurance-premium"
+          },{
+            "name" : "Calculate Travel Insurance Premiums Online", 
+            "value": "calculate-TI-premiums-online"
           }
         ]
       }
