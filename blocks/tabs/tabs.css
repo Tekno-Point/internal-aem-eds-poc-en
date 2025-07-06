@@ -61,7 +61,7 @@
 /* form tab css */
 .tabs-wrapper:has(.tabs.form-tabs) {
   max-width: 1300px;
-  z-index: 3;
+  z-index: 1;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
@@ -241,6 +241,28 @@ input[type=date] {
 
 .tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper {
   margin: 0;
+}
+
+@media (width <= 900px) {
+  .tabs.form-tabs .tabs-panel form {
+    flex-direction: column-reverse;
+  }
+
+  .tabs.form-tabs .tabs-panel form>div  {
+    flex-direction: column;
+  } 
+
+  .tabs.form-tabs .tabs-panel form>div .field-wrapper {
+    margin: 0;
+  }
+
+  .tabs.form-tabs .tabs-panel form .destination-wrapper fieldset {
+    flex-direction: column;
+  }
+
+  .tabs.form-tabs .tabs-panel form>div>.field-wrapper::after {
+    content: unset;
+  }
 }
 
 /* city wrapper css */

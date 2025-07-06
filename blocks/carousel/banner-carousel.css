@@ -19,6 +19,7 @@
 
 .carousel.banner-carousel .swiper-pagination {
     top: 70%;
+    height: 30px;
 }
 
 .carousel.banner-carousel .swiper-pagination .swiper-pagination-bullet {
