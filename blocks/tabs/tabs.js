@@ -1872,6 +1872,7 @@ async function getAccessToken() {
     if (response.ok) {
       const json = await response.json();
       value = json.body.access_token;
+      console.log(json)
     }
   } catch (error) {
     console.warn(error);
@@ -1969,6 +1970,21 @@ export default async function decorate(block) {
   showData(block, '.from-input', 'from-wrapper', 'source');
   showData(block, '.to-input', 'to-wrapper', 'destination');
   clickDropdown(block);
+
+  const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>a</td>
+      <td>b</td>
+      <td>1</td>
+      <td>2</td>
+      <td>
+        <div class="price-cell">
+          <strong>3</strong><br/>
+        </div>
+      </td>
+      <td><a href="#book" class="book-now-button">Book now</a></td>
+    `;
+    block.append(row)
    
    const form = block.querySelector('form');
    form.addEventListener('submit', async function(e) {
@@ -1989,6 +2005,7 @@ export default async function decorate(block) {
       console.log(data);
       
    data.body.data.forEach((flight,index) => {
+    console.log(data)
     const from = flight.itineraries[0].segments[0].departure.iataCode;
     const to = flight.itineraries[0].segments[0]?.arrival.iataCode;
 
@@ -2004,20 +2021,26 @@ export default async function decorate(block) {
 
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${from}</td>
-      <td>${to}</td>
-      <td>${fare}</td>
-      <td>${dates}</td>
-      <td>
-        <div class="price-cell">
-          <strong>${price}</strong><br/>
-        </div>
-      </td>
-      <td><a href="#book" class="book-now-button">Book now</a></td>
+      <div class="card">    
+      <div class="departure-wrapper">
+         <p>${departureDate}</p>
+         <div>
+            <p>${from}</p>
+            <p></p>
+         </div>
+      </div>
+      <div></div>
+      <div class="return-wrapper">
+         <p>${returnDate}</p>
+         <div>
+            <p>${to}</p>
+            <p></p>
+         </div>
+      </div>
+      </div>
     `;
     block.appendChild(row);
    });
    })
-   
   
 }
