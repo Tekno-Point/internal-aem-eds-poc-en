@@ -467,7 +467,7 @@
     ]
   },
   {
-    "id": "disclaimers",
+    "id": "comparison-of-plans",
     "fields": [
       {
         "component": "text",
@@ -475,7 +475,7 @@
         "value": "",
         "label": "Dis Text",
         "valueType": "string",
-        "description": "Disclaimers Title"
+        "description": "Comparison of Plans Title"
       },
       {
         "component": "richtext",

@@ -383,21 +383,6 @@
           }
         },
         {
-          "title": "Disclaimers",
-          "id": "disclaimers",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Disclaimers",
-                  "model": "disclaimers"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Tabs",
           "id": "tabs",
           "plugins": {
@@ -453,6 +438,21 @@
                 "template": {
                   "name": "accordion item",
                   "model": "accordion-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Comparison of Plans",
+          "id": "comparison-of-plans",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Comparison of Plans",
+                  "model": "comparison-of-plans"
                 }
               }
             }

@@ -280,8 +280,6 @@ main .section.highlight {
 .content1 .custom-richtext li,
 .content4 .custom-richtext li {
   display: block;
-  /* gap: 10px;
-  align-items: start; */
   padding-left: 34px;
   position: relative;
 }
@@ -364,8 +362,6 @@ main .section.highlight {
 }
 
 /* content1-term  css End */
-
-
 .content2>div.default-content-wrapper>p:nth-child(2) {
   display: none;
 }
@@ -374,7 +370,6 @@ main .section.highlight {
 .image3>div.default-content-wrapper>p:nth-child(2) {
   display: none;
 }
-
 
 .custom-richtextblock {
   display: flex;
@@ -390,7 +385,6 @@ main .section.highlight {
   max-width: 42%;
 }
 
-
 .content5 .custom-richtextblock>div {
   background-color: #F2F7FB;
   padding: 20px 40px 20px 40px;
@@ -398,7 +392,6 @@ main .section.highlight {
   max-width: 25%;
   text-align: center;
 }
-
 
 main>.section.image2 {
   margin: 50px 0;
@@ -869,8 +862,6 @@ main>.section.image2 {
   }
 }
 
-
-
 /* Your Budget component css end */
 
 /* section directors css start  */
@@ -1110,7 +1101,6 @@ main>.section.image2 {
   }
 }
 
-
 /* term-calculator2 css start */
 .section.term-calculator2>div {
   background: #F2F7FB;
@@ -1178,7 +1168,6 @@ main>.section.image2 {
     padding: 0;
   }
 }
-
 
 /* term-calculator2 css End */
 /* term insurance plan benefit starts */
@@ -1277,7 +1266,6 @@ main>.section.image2 {
 }
 
 /* term insurance plan benefit ends */
-
 /* benefit of buying insurance plan starts */
 .benefit-buying-insurance-plan>div>div>div>div>h2 {
   color: #333;
@@ -1357,15 +1345,38 @@ main>.section.image2 {
     line-height: 22.4px;
     letter-spacing: -0.16px;
     font-size: 16px;
+    padding: 0;
+    margin: 0;
   }
 
   .benefit-buying-insurance-plan>.custom-richtextblock-wrapper>div>div {
-    padding: 20px 15px;
+    padding: 15px 15px;
+    border-radius: unset;
+    width: 39.7%;
+  }
+
+  .benefit-buying-insurance-plan>div>div>div>div>h3 {
+    font-size: 1.125rem;
+    letter-spacing: -0.18px;
+  }
+
+  .benefit-buying-insurance-plan>div>div>div>div>p:nth-child(3) {
+    font-size: 0.875rem;
+    line-height: 19px;
+    letter-spacing: -0.14px;
+  }
+
+  .benefit-buying-insurance-plan>div>div>div>div>p span {
+    width: 37px;
+    height: 37px;
+  }
+
+  .benefit-buying-insurance-plan>.custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(3) {
+    border-radius: unset;
   }
 }
 
 /* benefit of buying insurance plan ends */
-
 /* types of insurance plan starts */
 .types-of-insurance-plan>div>div>div>div>h2 {
   color: #333;
@@ -1630,7 +1641,6 @@ main>.section.image2 {
 }
 
 /* affordable plan ends */
-
 /* life-stages-plan css start */
 
 .life-stages-plan .custom-richtextblock>div:first-child {
@@ -1957,6 +1967,20 @@ main>.section.image2 {
   letter-spacing: -0.18px;
 }
 
+@media screen and (max-width: 768px) {
+  .features-of-ti .custom-richtextblock>div>div h3 {
+    font-size: 1.125rem;
+    letter-spacing: -0.18px;
+    margin-top: 0;
+  }
+
+  .features-of-ti .custom-richtextblock>div>div p {
+    font-size: 14px;
+    letter-spacing: -0.18px;
+    line-height: 20px;
+  }
+}
+
 /* features of term insurance plan */
 
 /* choose-best-plan css start */
@@ -2157,16 +2181,20 @@ main>.section.image2 {
 
 /* .work-plan>div p:first-child {} */
 
-.work-plan>div p:nth-child(2) {
+.work-plan>div p:nth-child(2),
+.inforgraphic>div p:nth-child(2) {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
-  .work-plan>div p:nth-child(2) {
+
+  .work-plan>div p:nth-child(2),
+  .inforgraphic>div p:nth-child(2) {
     display: block;
   }
 
-  .work-plan>div p:first-child {
+  .work-plan>div p:first-child,
+  .inforgraphic>div p:first-child {
     display: none;
   }
 
