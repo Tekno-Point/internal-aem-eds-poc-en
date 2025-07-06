@@ -214,7 +214,7 @@ export default async function decorate(block) {
       navSection.querySelectorAll(":scope>ul.inner-ul>li").forEach((subLi, ind) => {
         // subLi?.querySelector(":scope>p, :scope>a")?.addEventListener(isClick, (ele) => {
         // subLi?.querySelector(":scope>li")?.addEventListener(isClick, (ele) => {
-          subLi?.addEventListener(isClick, (ele) => {
+        subLi?.addEventListener(isClick, (ele) => {
           // debugger;
           ele.stopPropagation();
           // const li = ele.target?.closest("li");
@@ -236,7 +236,7 @@ export default async function decorate(block) {
             });
             li.setAttribute('aria-expanded', 'false');
           }
-        },true)
+        }, true)
       })
     });
   }
