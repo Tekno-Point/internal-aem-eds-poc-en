@@ -1,4 +1,4 @@
-.aia-banner * {
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -7,7 +7,6 @@
 .section.aia-banner-container {
     max-width: 1206px;
     box-sizing: border-box;
-    /* background-color: lavender; */
     background: linear-gradient(0deg, #FBFBFC 0%, #F2F7FB 100%);
     padding: 24px;
     border-radius: 24px;
@@ -53,9 +52,13 @@
     background-color: #6b1026;
     display: block;
     position: absolute;
-    top: 30px;
+    top: 30.2px;
     right: -8px;
     border-top-right-radius: 10px;
+}
+
+.aia-banner>div div:nth-child(1) p {
+    margin: 0;
 }
 
 .aia-banner>div div:nth-child(1) picture {
@@ -80,24 +83,10 @@
     border-radius: 0 0 8px 0;
     max-width: 192px;
     width: 100%;
-    /* height: 50px; */
     padding: 7px 9px;
-    margin-right: -8px;
+    margin: 0 -8px 0 0;
     position: relative;
 }
-
-/* .aia-banner>div div:nth-child(1)>ul::before {
-    content: '';
-    border-top: 26px solid transparent;
-    border-bottom: 26px solid transparent;
-    border-left: 26px solid lavender;
-    width: 0;
-    height: 0;
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%)
-} */
 
 .aia-banner>div div:nth-child(1) ul>li p {
     font-size: 20px;
@@ -106,6 +95,8 @@
     font-weight: 700;
     letter-spacing: -0.2px;
     color: #F2F7FB;
+    margin: 0;
+    padding: 0 5px 0 0;
 }
 
 .aia-banner>div div:nth-child(1) ul>li,
@@ -113,6 +104,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
+    margin: 0;
 }
 
 .aia-banner>div div:nth-child(1) ul>li>ul>li {
@@ -144,7 +136,8 @@
     font-size: 28px;
     line-height: normal;
     letter-spacing: -0.28px;
-    padding-bottom: 20px;
+    padding: 0 0 20px 0;
+    margin: 0;
 }
 
 .aia-banner>div div:nth-child(2)>p:first-of-type strong {
@@ -156,6 +149,8 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin: 0;
+    max-width: 55%;
 }
 
 .aia-banner>div div:nth-child(2)>ul>li {
@@ -352,6 +347,7 @@
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.16);
     color: #0073BB;
     display: flex;
+    justify-content: center;
     gap: 5px;
 }
 
@@ -361,7 +357,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 16px;
+    min-width: 16px;
     height: 16px;
     display: block;
 }
@@ -369,6 +365,7 @@
 .aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.text-wrapper {
     display: flex;
     position: relative;
+    width: 100%;
 }
 
 .aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.text-wrapper label {
@@ -464,7 +461,7 @@
 
     .aia-banner-container .aia-banner-wrapper {
         max-width: 100%;
-        padding: 0px 20px;
+        padding: 0 20px;
     }
 
     .aia-banner>div {
@@ -483,6 +480,7 @@
         content: unset;
     }
 
+
     .aia-banner>div div:nth-child(1) picture {
         width: 144px;
         height: 60px;
@@ -495,7 +493,7 @@
 
     .aia-banner>div div:nth-child(1)>ul {
         max-width: 124px;
-        margin-right: 8px;
+        margin: 0 8px 0 0;
         padding: 6px;
         clip-path: polygon(0% 0%, 10px 50%, 0% 100%, 100% 100%, 100% 0%);
         border-radius: 0;
@@ -545,5 +543,71 @@
     .aia-banner>div div:nth-child(2)>ul>li span {
         width: 16px;
         height: 16px;
+    }
+
+    .aia-banner-container .form-wrapper {
+        max-width: 100%;
+        background-color: #F2F7FB;
+        padding: 20px;
+    }
+
+    .aia-banner-container .form-wrapper .form form {
+        border-radius: 16px;
+        background: #FFF;
+        box-shadow: 0px 0px 10px 1px rgba(0, 127, 197, 0.12);
+        padding: 16px;
+    }
+
+    .aia-banner-container .form-wrapper .heading-wrapper,
+    .aia-banner-container .form-wrapper .heading-wrapper h2 {
+        text-align: center;
+    }
+
+    .aia-banner-container .form-wrapper .form form>.field-wrapper.half-width:not(.date-wrapper) {
+        max-width: 100%;
+    }
+
+    .aia-banner-container .form-wrapper .form form>.field-wrapper.medium-width,
+    .aia-banner-container .form-wrapper .form form>.field-wrapper.half-width.date-wrapper,
+    .aia-banner-container .form-wrapper .form form>.field-wrapper.small-width {
+        max-width: 47.88%;
+    }
+
+    .aia-banner-container .form-wrapper .field-wrapper label,
+    .aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper legend {
+        margin-bottom: 4px;
+        color: #58595B;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: -0.12px;
+    }
+
+    .aia-banner-container .form-wrapper .field-wrapper input {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.radio-wrapper label {
+        color: #A7A9AC;
+        padding: 16px 10px;
+    }
+
+    .aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.text-wrapper {
+        width: 100%;
+    }
+
+    .aia-banner-container .form-wrapper .form form>.field-wrapper.small-width::after {
+        width: 7px;
+        height: 7px;
+        top: 57%;
+    }
+
+    .aia-banner-container .form-wrapper .form form>.field-wrapper.checkbox-wrapper input {
+        width: 50px;
+    }
+
+    .aia-banner-container .form-wrapper .form form>.field-wrapper.submit-wrapper {
+        width: 100%;
     }
 }
