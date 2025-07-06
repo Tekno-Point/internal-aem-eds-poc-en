@@ -61,6 +61,11 @@
 /* form tab css */
 .tabs-wrapper:has(.tabs.form-tabs) {
   max-width: 1300px;
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 540px;
 }
 
 .tabs.form-tabs .tabs-list button[aria-selected='true'] {
