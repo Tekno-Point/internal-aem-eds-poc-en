@@ -25,7 +25,7 @@ export async function cityDropdown(block, wrapperClass, type, inputparent) {
 
         cityOption.innerHTML = `
             <p class="iata-code">${IATA}</p>
-               <p class="city">${city1}, ${country}</p>`  
+            <p class="city">${city1}, ${country}</p>`  
 
         cityWrapper.append(cityOption);
     });
