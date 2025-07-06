@@ -1972,7 +1972,7 @@ export default async function decorate(block) {
   clickDropdown(block);
 
   const row = document.createElement('tr');
-    row.innerHTML = `
+  row.innerHTML = `
       <td>a</td>
       <td>b</td>
       <td>1</td>
@@ -1984,46 +1984,47 @@ export default async function decorate(block) {
       </td>
       <td><a href="#book" class="book-now-button">Book now</a></td>
     `;
-    block.append(row)
-   
-   const form = block.querySelector('form');
-   form.addEventListener('submit', async function(e) {
+  block.append(row)
+
+  const form = block.querySelector('form');
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
     console.log(e)
     console.log(this);
-    
+
     const auth = await getAccessToken();
-    const data = await getData(auth , {
-        originLocationCode: this.source.dataset.iataCode,
-        destinationLocationCode: this.destination.dataset.iataCode,
-        departureDate: this.departure.value,
-        returnDate: this.return.value,
-        adults: '1',
-        includedAirlineCodes: 'TG',
-        max: '10',
-      });
-      console.log(data);
-      
-   data.body.data.forEach((flight,index) => {
-    console.log(data)
-    const from = flight.itineraries[0].segments[0].departure.iataCode;
-    const to = flight.itineraries[0].segments[0]?.arrival.iataCode;
-
-    const departureDate = flight.lastTicketingDate ;
-    const returnDate = flight.lastTicketingDateTime;
-    const dates = departureDate && returnDate ? `${departureDate} - ${returnDate}` : '—';
-
-    const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
-    
-    const inrPrice = convertEurToInr(flight.price.grandTotal);
-    console.log(inrPrice);
-    const price = inrPrice;
+    const data = await getData(auth, {
+      originLocationCode: this.source.dataset.iataCode,
+      destinationLocationCode: this.destination.dataset.iataCode,
+      departureDate: this.departure.value,
+      returnDate: this.return.value,
+      adults: '1',
+      includedAirlineCodes: 'TG',
+      max: '10',
+    });
+    console.log(data);
 
     const rowWrapper = document.createElement('div');
     rowWrapper.classList.add("row-wrapper");
-    const row = document.createElement('div');
-    row.classList.add("booking-card");
-    row.innerHTML = `   
+
+    data.body.data.forEach((flight, index) => {
+      console.log(data)
+      const from = flight.itineraries[0].segments[0].departure.iataCode;
+      const to = flight.itineraries[0].segments[0]?.arrival.iataCode;
+
+      const departureDate = flight.lastTicketingDate;
+      const returnDate = flight.lastTicketingDateTime;
+      const dates = departureDate && returnDate ? `${departureDate} - ${returnDate}` : '—';
+
+      const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
+
+      const inrPrice = convertEurToInr(flight.price.grandTotal);
+      console.log(inrPrice);
+      const price = inrPrice;
+
+      const row = document.createElement('div');
+      row.classList.add("booking-card");
+      row.innerHTML = `   
       <div class="departure-wrapper">
          <p class="date">${departureDate}</p>
          <div class"city">
@@ -2040,10 +2041,8 @@ export default async function decorate(block) {
          </div>
       </div>
     `;
-
-    rowWrapper.appendChild(row)
-   });
-   block.appendChild(rowWrapper);
-   })
-  
+      rowWrapper.appendChild(row)
+    });
+    block.appendChild(rowWrapper);
+  })
 }
