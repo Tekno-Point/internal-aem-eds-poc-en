@@ -121,11 +121,12 @@
 }
 
 @media (max-width:900px) {
-    .quicklinks.hero-container {
+    header nav[aria-expanded='true']>.nav-sections>.default-content-wrapper>p.quicklinks.hero-container {
         padding: 20px 0;
         max-width: 100%;
         width: 100%;
     }
+
 
     .quicklinks.hero-container .default-content-wrapper {
         padding: 16px 30px;

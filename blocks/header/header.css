@@ -854,7 +854,7 @@ header nav .nav-sections .default-content-wrapper>ul>li>p a span {
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li:last-child {
-    border-bottom: unset;
+    /* border-bottom: unset; */
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul {
@@ -1083,6 +1083,8 @@ header nav .nav-sections .default-content-wrapper>ul>li>p a span {
 
   header nav[aria-expanded='true']>.nav-sections>.default-content-wrapper>p {
     display: flex;
+    padding-top: 10px;
+    padding: 10px 20px;
   }
 
   header nav .nav-sections .default-content-wrapper>p>em {
@@ -1118,5 +1120,7 @@ header nav .nav-sections .default-content-wrapper>ul>li>p a span {
   header nav .nav-sections .default-content-wrapper>p>strong>a {
     background-color: #D62049;
     color: #fff;
+    text-transform: capitalize;
+
   }
 }
