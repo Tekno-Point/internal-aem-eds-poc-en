@@ -302,3 +302,85 @@
     text-align : left;
 }
 }
+
+
+.section.insurance-policy-advantages.cards-container .default-content-wrapper >h2{
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.section.insurance-policy-advantages.cards-container{
+  counter-reset: section;
+}
+
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+}
+
+/* .section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li::before{
+  counter-increment: section; 
+  content: counter(section); 
+} */
+
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li{
+  border: unset;
+}
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li .cards-card-body:first-child{
+  display: none;
+}
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li .cards-card-body:last-child{
+  display: flex ;
+  align-items: center;
+  background: linear-gradient(270deg, #FFFFFF 0%, #FFF2EB 99.75%);
+  border: 1px solid #FFE2D2;
+  border-radius: 15px;
+  padding: 3rem 3rem 3.2rem 3rem;
+  width: auto;
+  margin: unset;
+  justify-content: space-between;
+  align-items: start;
+}
+
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li .cards-card-body:last-child >ul{
+  margin: 0;
+  padding: 0;
+  width: 89%;
+  list-style: none;
+}
+
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li .cards-card-body:last-child h3{
+  font-weight: 300;
+  font-size: 65px;
+  line-height: 49px;
+  background: linear-gradient(180deg, #F58820 0%, #B02A30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: unset;
+  width: 10%;
+}
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li .cards-card-body:last-child >ul >li >h2{
+  color: #282828;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 23px;
+    padding-bottom: 1rem;
+}
+
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li .cards-card-body:last-child >ul >li{
+  color: #282828;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  padding-right: 6rem;
+}
