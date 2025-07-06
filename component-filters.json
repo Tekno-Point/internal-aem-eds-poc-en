@@ -67,5 +67,9 @@
   {
     "id": "accordion",
     "components": ["accordion-item"]
+  },
+  {
+    "id": "comparison-of-plans",
+    "components": ["comparison-of-plans-item"]
   }
 ]
