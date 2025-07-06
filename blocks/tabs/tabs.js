@@ -2042,4 +2042,12 @@ export default async function decorate(block) {
     const tabSection = document.querySelector('.section.tabs-container')
     tabSection.appendChild(rowWrapper);
   })
+
+  const select = block.querySelector('select');
+  select.innerHTML = `
+     <option>2 Traveller</option>
+     <option>3 Traveller</option>
+     <option>4 Traveller</option>
+     <option>5 Traveller</option>
+  `
 }
