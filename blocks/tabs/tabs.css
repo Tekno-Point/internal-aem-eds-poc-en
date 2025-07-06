@@ -302,3 +302,27 @@ input[type=date] {
   flex: 1;
   width: 50%;
 }
+
+.booking-card .departure-wrapper .date {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
+}
+
+.booking-card .departure-wrapper .city-container {
+  display: flex;
+}
+
+.booking-card .departure-wrapper .city-container .iata-code {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  background-color: #0F1E7D;
+  border-radius: 2px;
+  padding: 2px;
+}
