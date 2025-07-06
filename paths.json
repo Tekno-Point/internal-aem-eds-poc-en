@@ -22,10 +22,20 @@
     "/content/internal-aem-eds-poc/hero-splinder-page/form/test-ride-form:/hero-splinder-page/form/test-ride-form.json",
     "/content/internal-aem-eds-poc/hero-splinder-page/form/state:/hero-splinder-page/form/state.json",
     "/content/internal-aem-eds-poc/hero-splinder-page/form/city:/hero-splinder-page/form/city.json",
+    "/content/internal-aem-eds-poc/concordia/language-master/en/forms/rate-calculator:/concordia/language-master/en/forms/rate-calculator.json",
+    "/content/internal-aem-eds-poc/concordia/language-master/en/forms/agency-search:/concordia/language-master/en/forms/agency-search.json",
+    "/content/internal-aem-eds-poc/concordia/ch/en/forms/rate-calculator:/concordia/ch/en/forms/rate-calculator.json",
+    "/content/internal-aem-eds-poc/concordia/ch/en/forms/agency-search:/concordia/ch/en/forms/agency-search.json",
     "/content/internal-aem-eds-poc/concordia/forms/rate-calculator:/concordia/forms/rate-calculator.json",
     "/content/internal-aem-eds-poc/concordia/forms/agency-search:/concordia/forms/agency-search.json",
     "/content/internal-aem-eds-poc/poonawallafincorp/form/subscription:/poonawallafincorp/form/subscription.json",
-    "/content/internal-aem-eds-poc/poonawallafincorp/form/form-email:/poonawallafincorp/form/form-email.json"
+    "/content/internal-aem-eds-poc/poonawallafincorp/form/form-email:/poonawallafincorp/form/form-email.json",
+    "/content/internal-aem-eds-poc/srilankan-airlines/footer-form:/srilankan-airlines/footer-form.json",
+    "/content/internal-aem-eds-poc/srilankan-airlines/forms/booking-form:/srilankan-airlines/forms/booking-form.json",
+    "/content/internal-aem-eds-poc/srilankan-airlines/api/iata:/srilankan-airlines/api/iata.json",
+    "/content/internal-aem-eds-poc/tataaia/forms/banner-form:/tataaia/forms/banner-form.json",
+    "/content/internal-aem-eds-poc/tataaia/forms/insurance-plan-form:/tataaia/forms/insurance-plan-form.json"
+    
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
