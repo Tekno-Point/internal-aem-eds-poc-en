@@ -1,7 +1,7 @@
 let isFetched = false;
 
 export async function fetchData() {
-    const cityData = await fetch('http://localhost:3000/srilankan-airlines/api/iata.json');
+    const cityData = await fetch('/srilankan-airlines/api/iata.json');
     return await cityData.json();
 }
 
