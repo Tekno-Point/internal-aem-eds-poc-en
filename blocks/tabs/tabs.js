@@ -1971,21 +1971,6 @@ export default async function decorate(block) {
   showData(block, '.to-input', 'to-wrapper', 'destination');
   clickDropdown(block);
 
-  const row = document.createElement('tr');
-  row.innerHTML = `
-      <td>a</td>
-      <td>b</td>
-      <td>1</td>
-      <td>2</td>
-      <td>
-        <div class="price-cell">
-          <strong>3</strong><br/>
-        </div>
-      </td>
-      <td><a href="#book" class="book-now-button">Book now</a></td>
-    `;
-  block.append(row)
-
   const form = block.querySelector('form');
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
