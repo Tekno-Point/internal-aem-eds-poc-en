@@ -244,12 +244,21 @@ input[type=date] {
 }
 
 @media (width <= 900px) {
+  .tabs-wrapper:has(.tabs.form-tabs) {
+    left: 0;
+    transform: unset;
+    top: 470px;
+    width: 100%;
+  }
+
   .tabs.form-tabs .tabs-panel form {
     flex-direction: column-reverse;
+    padding: 10px 0;
   }
 
   .tabs.form-tabs .tabs-panel form>div  {
     flex-direction: column;
+    gap: 15px;
   } 
 
   .tabs.form-tabs .tabs-panel form>div .field-wrapper {
