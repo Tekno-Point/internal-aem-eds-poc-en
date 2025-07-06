@@ -2042,8 +2042,8 @@ export default async function decorate(block) {
     `;
 
     rowWrapper.appendChild(row)
-    block.appendChild(rowWrapper);
    });
+   block.appendChild(rowWrapper);
    })
   
 }
