@@ -2027,7 +2027,7 @@ export default async function decorate(block) {
       row.innerHTML = `   
       <div class="departure-wrapper">
          <p class="date">${departureDate}</p>
-         <div class"city">
+         <div class="city">
             <p>${from}</p>
             <p></p>
          </div>
