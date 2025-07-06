@@ -439,11 +439,19 @@ input[type=date] {
 
 .booking-card {
   width: 100%;
-  padding: 25px;
-  gap: 20px;
+  padding: 25px 20px;
+  gap: 15px;
 }
 
 .booking-card .forward-arrow {
   width: 130px;
+  margin-top: 5px;
+}
+
+.booking-card .departure-wrapper .date, 
+.booking-card .return-wrapper .date,
+.booking-card .departure-wrapper .terminal, 
+.booking-card .return-wrapper .terminal {
+  font-size: 13px;
 }
 }
