@@ -245,68 +245,12 @@
   font-size: 1.6rem;
   line-height: 24px; 
   margin: 0;
-}
-
-@media screen and (max-width : 767.99px) {
-  .million-indians > .default-content-wrapper > h2 {
-    text-align: left;
-    font-size: 2.4rem;
-    line-height: 30px;
-  
-}
-
-  .million-indians .cards-wrapper > .cards > ul {
-    gap: 20px;
-    flex-direction: column;
- }
-
-  .million-indians .cards-wrapper > .cards > ul > li{
-    width : calc(100% - 53px)
-  }
-
-  .million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul{
-    flex-wrap: wrap;
-  }
-
-  .travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-image{
-    display: none;
-}
-
-.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body{
-  width: 100%; 
-}
-
-.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body > h1{
-  text-align: center;
-  font-size: 2.4rem;
-  line-height: 30px;
-
-}
-
-.fic-lombard-travel-insurance{
-
-}
-
-.fic-lombard-travel-insurance > .cards-wrapper > .cards > ul{
-  flex-direction: column;
-  gap: 50px;
-}
-
-.fic-lombard-travel-insurance > .cards-wrapper > .cards > ul > li{
-  max-width: 100%;
-}
-
-.fic-lombard-travel-insurance > .default-content-wrapper > h2{
-  font-size: 2.4rem;
-        line-height: 30px;
-    text-align : left;
-}
-}
-
+} 
 
 .section.insurance-policy-advantages.cards-container .default-content-wrapper >h2{
   text-align: center;
   padding-bottom: 4rem;
+  font-size: 36px;
 }
 
 .section.insurance-policy-advantages.cards-container{
@@ -383,4 +327,169 @@
   font-size: 1.6rem;
   line-height: 24px;
   padding-right: 6rem;
+}
+
+.travel-insurance-blog-articles{
+    display: flex;  
+    flex-direction: column;
+    gap: 30px;
+}
+
+.travel-insurance-blog-articles > .default-content-wrapper > h2 {
+  /* margin-bottom: 30px; */
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.travel-insurance-blog-articles  > .cards-wrapper > .cards > ul{
+  display: flex;
+  gap: 20px;
+}
+
+.travel-insurance-blog-articles  > .cards-wrapper > .cards > ul > li{
+  display: inline-block;
+  width: 100%;
+  padding: 3rem 2rem; 
+  border-radius: 10px;
+  border: solid 1px #eaeaea;
+  overflow: hidden;
+  /* min-height: auto; */
+}
+.travel-insurance-blog-articles  > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  margin: 0;
+}
+
+.travel-insurance-blog-articles  > .cards-wrapper > .cards > ul > li > .cards-card-body > h6{
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 10px;
+} 
+
+.travel-insurance-blog-articles  > .cards-wrapper > .cards > ul > li > .cards-card-body > p{
+  display: inline-block;
+  font-size: 1.6rem;
+  padding: 0;
+  line-height: 3rem;
+  margin-bottom: 15px;
+  margin-right: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.travel-insurance-blog-articles > .default-content-wrapper{
+
+}
+
+.travel-insurance-blog-articles > .default-content-wrapper > .button-container{}
+
+
+.travel-insurance-blog-articles > .default-content-wrapper > .button-container > em >  a{
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none !important;
+  min-width: 160px;
+  margin-top: 10px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: 50% 99%;
+  color: #fe6625 !important;
+  border: 1px solid #fe6625;
+  -webkit-transition: .6s ease-out;
+  -moz-transition: .6s ease-out;
+  -ms-transition: .6s ease-out;
+  transition: .3s ease-out;
+  margin: none;
+}
+
+.travel-insurance-blog-articles > .default-content-wrapper > .button-container > em > a:hover{
+  background: #fe6625;
+  color: #fff !important;
+}
+
+@media screen and (max-width : 767.99px) {
+  .million-indians > .default-content-wrapper > h2 {
+    text-align: left;
+    font-size: 2.4rem;
+    line-height: 30px;
+  
+}
+
+  .million-indians .cards-wrapper > .cards > ul {
+    gap: 20px;
+    flex-direction: column;
+ }
+
+  .million-indians .cards-wrapper > .cards > ul > li{
+    width : calc(100% - 53px)
+  }
+
+  .million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul{
+    flex-wrap: wrap;
+  }
+
+  .travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-image{
+    display: none;
+}
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  width: 100%; 
+}
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body > h1{
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 30px;
+
+}
+
+.fic-lombard-travel-insurance{
+
+}
+
+.fic-lombard-travel-insurance > .cards-wrapper > .cards > ul{
+  flex-direction: column;
+  gap: 50px;
+}
+
+.fic-lombard-travel-insurance > .cards-wrapper > .cards > ul > li{
+  max-width: 100%;
+}
+
+.fic-lombard-travel-insurance > .default-content-wrapper > h2{
+  font-size: 2.4rem;
+        line-height: 30px;
+    text-align : left;
+}
+
+.section.insurance-policy-advantages.cards-container .default-content-wrapper >h2{
+  text-align: left;
+  padding-bottom: 4rem;
+font-size: 24px;
+}
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section.insurance-policy-advantages.cards-container > .cards-wrapper >.cards > ul > li > .cards-card-body{
+  padding: 23px 20px 25px;
+}
+
+.travel-insurance-blog-articles > .default-content-wrapper > h2{
+  font-size: 3.5rem;
+  text-align: left;
+}
+
+.travel-insurance-blog-articles  > .cards-wrapper > .cards > ul{
+  flex-direction: column;
+  gap: 30px;
+}
+
+.travel-insurance-blog-articles  > .cards-wrapper > .cards > ul > li {
+  width: unset;
+}
+
 }
