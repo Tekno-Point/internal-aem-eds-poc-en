@@ -311,15 +311,13 @@ input[type=date] {
   letter-spacing: 0%;
   vertical-align: middle;
   color: #0F1E7DE5;
-}
-
-.booking-card .departure-wrapper .city-container {
-  display: flex;
+  margin: 0;
 }
 
 .booking-card .departure-wrapper .city-container,
 .booking-card .return-wrapper .city-container {
   margin-top: 10px;
+  display: flex;
 }
 
 .booking-card .departure-wrapper .city-container .iata-code,

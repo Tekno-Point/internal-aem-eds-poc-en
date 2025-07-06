@@ -2034,7 +2034,7 @@ export default async function decorate(block) {
       </div>
       <div class="forward-arrow"></div>
       <div class="return-wrapper">
-         <p class"date">${returnDate}</p>
+         <p class="date">${returnDate}</p>
          <div class="city-container">
             <p class="iata-code">${to}</p>
             <p class="city"></p>
