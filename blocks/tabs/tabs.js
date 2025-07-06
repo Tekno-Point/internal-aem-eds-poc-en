@@ -1997,6 +1997,8 @@ export default async function decorate(block) {
       const from = flight.itineraries[0].segments[0].departure.iataCode;
       const to = flight.itineraries[0].segments[0]?.arrival.iataCode;
 
+      console.log(flight.itineraries)
+
       const departureDate = flight.lastTicketingDate;
       const returnDate = flight.lastTicketingDateTime;
       const dates = departureDate && returnDate ? `${departureDate} - ${returnDate}` : '—';
