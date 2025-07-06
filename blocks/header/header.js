@@ -172,7 +172,7 @@ export default async function decorate(block) {
   }
 
   navSectionsImg?.remove();
-
+  let isClick = isDesktop.matches ? "mouseover" : "click";
   if (navSections) {
 
     // debugger;
@@ -180,7 +180,7 @@ export default async function decorate(block) {
       section?.querySelector("ul")?.classList.add("inner-ul");
     })
 
-    let isClick = isDesktop.matches ? "mouseover" : "click";
+
     navSections.querySelectorAll(':scope >.default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       if (isDesktop.matches) {
@@ -215,8 +215,6 @@ export default async function decorate(block) {
         // subLi?.querySelector(":scope>p, :scope>a")?.addEventListener(isClick, (ele) => {
         // subLi?.querySelector(":scope>li")?.addEventListener(isClick, (ele) => {
         subLi?.addEventListener(isClick, (ele) => {
-          // debugger;
-          ele.stopPropagation();
           // const li = ele.target?.closest("li");
           // const expanded = li?.getAttribute("aria-expanded");
           const expanded = subLi?.getAttribute("aria-expanded");
@@ -246,15 +244,26 @@ export default async function decorate(block) {
     toggleAllNavTools(navTools);
     navTools.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navTool) => {
       if (navTool.querySelector('ul')) navTool.classList.add('nav-drop');
-      navTool.addEventListener('click', (e) => {
-        // e.stopPropagation()
 
-        // if (isDesktop.matches) {
-        const expanded = navTool.getAttribute('aria-expanded') === 'true';
-        toggleAllNavTools(navTools);
-        navTool.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        // }
-      });
+      if (isDesktop.matches) {
+        navTool.addEventListener('mouseenter', (e) => {
+          // if (!e.target.closest(".inner-ul")) {
+            navTool.setAttribute('aria-expanded', 'true');
+          // }
+        });
+        navTool.addEventListener('mouseleave', (e) => {
+          // if (!e.target.closest(".inner-ul")) {
+            navTool.setAttribute('aria-expanded', 'false');
+          // }
+        });
+      }
+      else {
+        navTool.addEventListener("click", (e) => {
+          const expanded = navTool.getAttribute('aria-expanded') === 'true';
+          toggleAllNavTools(navTools);
+          navTool.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        });
+      }
     })
 
     // hamburger for mobile
