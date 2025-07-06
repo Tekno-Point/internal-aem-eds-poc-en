@@ -1081,7 +1081,42 @@ header nav .nav-sections .default-content-wrapper>ul>li>p a span {
     width: max-content;
   }
 
-  header nav[aria-expanded='true'] >.nav-sections>.default-content-wrapper>p{
+  header nav[aria-expanded='true']>.nav-sections>.default-content-wrapper>p {
     display: flex;
+  }
+
+  header nav .nav-sections .default-content-wrapper>p>em {
+    padding: unset;
+    border: unset;
+    width: 50%;
+  }
+
+  header nav .nav-sections .default-content-wrapper>p>em>a,
+  header nav .nav-sections .default-content-wrapper>p>strong>a {
+    display: block;
+    border: 1px solid #D62049;
+    background: #FFF;
+    color: #D62049;
+    padding: 9px 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  header nav .nav-sections .default-content-wrapper>p>strong {
+    padding: unset;
+    margin: unset;
+    width: 50%;
+    background: unset;
+  }
+
+
+  header nav .nav-sections .default-content-wrapper>p>strong>a {
+    background-color: #D62049;
+    color: #fff;
   }
 }
