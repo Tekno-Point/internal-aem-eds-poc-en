@@ -53,7 +53,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -148,7 +148,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -160,6 +160,12 @@ button {
 }
 
 /* links */
+a {
+  color: #6c6c6c;
+  display: inline-block;
+  font-weight: 500;
+}
+
 a:any-link {
   color: var(--link-color);
   text-decoration: none;
@@ -168,7 +174,7 @@ a:any-link {
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* buttons */
@@ -234,17 +240,17 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
 }
 
@@ -257,11 +263,11 @@ main > .section:first-of-type {
 }
 
 .bg-tertiary {
-  background-color: #9b9b9b;
+  background-color: #eaeaea;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }

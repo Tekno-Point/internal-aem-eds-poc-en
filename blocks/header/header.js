@@ -113,13 +113,24 @@ export default async function decorate(block) {
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
 
+  if (!isDesktop.matches) {
+
+    const secondUlListTopMenu = fragment.querySelector(".default-content-wrapper ul:nth-child(2)")
+    const sectionsContentWrapper = fragment.querySelector("div:nth-child(3) .default-content-wrapper");
+    //appending secondUlListTopMenu in sectionsContentWrapper for mobile view
+
+    if (secondUlListTopMenu && sectionsContentWrapper) {
+      sectionsContentWrapper.appendChild(secondUlListTopMenu);
+    }
+  }
+
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['top-nav', 'brand', 'sections', 'tools'];
+  const classes = ['top-menu', 'brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
@@ -135,9 +146,9 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-      if (navSection.querySelector('ul')){
+      if (navSection.querySelector('ul')) {
         navSection.classList.add('nav-drop');
-        const navSectionIconSRC = navSection.querySelector(".icon img").src;
+        const navSectionIconSRC = navSection.querySelector(".icon img")?.src;
         const innerList = navSection.querySelector('ul');
         innerList.style.setProperty('--before-bg', `url("${navSectionIconSRC}")`);
       }
