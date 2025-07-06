@@ -139,6 +139,13 @@
           },{
             "name" : "Calculate Travel Insurance Premiums Online", 
             "value": "calculate-TI-premiums-online"
+          },{
+            "name" : "Eligibility Criteria For Travel Insurance Policy", 
+            "value": "ECFT-insurance-policy"
+          },
+          {
+            "name" : "Eligibility Criteria For Travel Insurance Policy", 
+            "value": "ECFT-insurance-policy"
           }
         ]
       }
