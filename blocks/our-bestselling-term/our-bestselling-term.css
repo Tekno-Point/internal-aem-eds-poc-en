@@ -84,6 +84,7 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper {
   height: 460px;
+  padding-left: 6px;
 }
 @media (max-width: 768px) {
   main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper {
