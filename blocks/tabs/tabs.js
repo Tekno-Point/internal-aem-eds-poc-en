@@ -41,6 +41,7 @@ const dummyData = {
                 },
                 "arrival": {
                   "iataCode": "BKK",
+                  "terminal": "3",
                   "at": "2025-07-17T05:35:00"
                 },
                 "carrierCode": "TG",
@@ -2021,7 +2022,7 @@ export default async function decorate(block) {
             <p class="iata-code">${from}</p>
             <p class="city"></p>
          </div>
-         <p>${fromTerminal}</p>
+         <p>Terminal ${fromTerminal}</p>
       </div>
       <div class="forward-arrow"></div>
       <div class="return-wrapper">
@@ -2030,7 +2031,7 @@ export default async function decorate(block) {
             <p class="iata-code">${to}</p>
             <p class="city"></p>
          </div>
-         <p>${toTerminal}</p>
+         <p>Terminal ${toTerminal}</p>
       </div>
     `;
       rowWrapper.appendChild(row)
