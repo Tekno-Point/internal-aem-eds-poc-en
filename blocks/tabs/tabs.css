@@ -166,6 +166,12 @@
   border-radius: 5px;
   height: 100%;
   padding-left: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
 }
 
 .tabs.form-tabs .tabs-panel form .destination-wrapper fieldset .field-wrapper.input-wrapper input::placeholder,
@@ -243,7 +249,7 @@ input[type=date] {
   margin: 0;
 }
 
-@media (width <= 900px) {
+@media (width <=900px) {
   .tabs-wrapper:has(.tabs.form-tabs) {
     left: 0;
     transform: unset;
@@ -257,10 +263,10 @@ input[type=date] {
     padding: 10px 0;
   }
 
-  .tabs.form-tabs .tabs-panel form>div  {
+  .tabs.form-tabs .tabs-panel form>div {
     flex-direction: column;
     gap: 15px;
-  } 
+  }
 
   .tabs.form-tabs .tabs-panel form>div .field-wrapper {
     margin: 0;
@@ -268,6 +274,10 @@ input[type=date] {
 
   .tabs.form-tabs .tabs-panel form .destination-wrapper fieldset {
     flex-direction: column;
+  }
+
+  .tabs.form-tabs .tabs-panel form>div .calender-wrapper fieldset {
+    justify-content: space-between;
   }
 
   .tabs.form-tabs .tabs-panel form>div .field-wrapper.date-wrapper {
@@ -284,6 +294,21 @@ input[type=date] {
 
   .tabs.form-tabs .tabs-panel form>div>.field-wrapper::after {
     content: unset;
+  }
+
+  .tabs.form-tabs .tabs-panel form .destination-wrapper fieldset .field-wrapper.input-wrapper,
+  .tabs.form-tabs .tabs-panel form .calender-wrapper fieldset .field-wrapper.input-wrapper,
+  .tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper {
+    gap: 10px;
+  }
+
+  .tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper {
+    margin: 10px 0 0 0;
+  }
+
+  .tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper {
+    padding: 0;
+    width: unset;
   }
 }
 
@@ -394,4 +419,31 @@ input[type=date] {
   height: 13px;
   width: 209px;
   margin-top: 35px;
+}
+
+.booking-card .departure-wrapper .terminal,
+.booking-card .return-wrapper .terminal {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #0F1E7DE5;
+}
+
+@media (width <=900px) {
+  .section.tabs-container .row-wrapper {
+    padding-top: 400px;
+}
+
+.booking-card {
+  width: 100%;
+  padding: 25px;
+  gap: 20px;
+}
+
+.booking-card .forward-arrow {
+  width: 130px;
+}
 }

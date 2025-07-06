@@ -2025,7 +2025,7 @@ export default async function decorate(block) {
             <p class="iata-code">${from}</p>
             <p class="city"></p>
          </div>
-         <p>Terminal ${fromTerminal}</p>
+         <p class="terminal">Terminal ${fromTerminal}</p>
       </div>
       <div class="forward-arrow"></div>
       <div class="return-wrapper">
@@ -2034,7 +2034,7 @@ export default async function decorate(block) {
             <p class="iata-code">${to}</p>
             <p class="city"></p>
          </div>
-         <p>Terminal ${toTerminal}</p>
+         <p class="terminal">Terminal ${toTerminal}</p>
       </div>
     `;
       rowWrapper.appendChild(row)
