@@ -1974,8 +1974,50 @@ export default async function decorate(block) {
    form.addEventListener('submit', async function(e) {
     e.preventDefault();
     console.log(e)
+    console.log(this);
+    
     const auth = await getAccessToken();
-    const getData = getData(auth);
+    const data = await getData(auth , {
+        originLocationCode: this.source.dataset.iataCode,
+        destinationLocationCode: this.destination.dataset.iataCode,
+        departureDate: this.departure.value,
+        returnDate: this.return.value,
+        adults: '1',
+        includedAirlineCodes: 'TG',
+        max: '10',
+      });
+      console.log(data);
+      
+   data.body.data.forEach((flight,index) => {
+    const from = flight.itineraries[0].segments[0].departure.iataCode;
+    const to = flight.itineraries[0].segments[0]?.arrival.iataCode;
+
+    const departureDate = flight.lastTicketingDate ;
+    const returnDate = flight.lastTicketingDateTime;
+    const dates = departureDate && returnDate ? `${departureDate} - ${returnDate}` : '—';
+
+    const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
+    
+    const inrPrice = convertEurToInr(flight.price.grandTotal);
+    console.log(inrPrice);
+    const price = inrPrice;
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${from}</td>
+      <td>${to}</td>
+      <td>${fare}</td>
+      <td>${dates}</td>
+      <td>
+        <div class="price-cell">
+          <strong>${price}</strong><br/>
+        </div>
+      </td>
+      <td><a href="#book" class="book-now-button">Book now</a></td>
+    `;
+    block.appendChild(row);
+   });
    })
+   
   
 }
