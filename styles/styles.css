@@ -11,6 +11,8 @@
  */
 
 /* Fonts  */
+@import url(quicklinks.css);
+
 @font-face {
   font-family: 'Montserrat-Bold';
   /* Name you want to use in CSS */
@@ -313,7 +315,6 @@ main>.section:first-of-type {
     padding: 0 32px;
   }
 }
-
 
 
 /* section metadata */

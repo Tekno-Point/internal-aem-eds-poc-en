@@ -68,6 +68,7 @@ export function moveInstrumentation(from, to) {
  */
 async function loadFonts() {
   await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
+  // await loadCSS(`${window.hlx.codeBasePath}/block/quicklinks.css`);
   try {
     if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
   } catch (e) {
