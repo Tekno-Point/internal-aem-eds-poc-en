@@ -292,7 +292,7 @@ input[type=date] {
 
 
 /* booking card css */
-.row-wrapper {
+.section.tabs-container .row-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
