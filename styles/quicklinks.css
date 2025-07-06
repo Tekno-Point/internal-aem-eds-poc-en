@@ -122,25 +122,25 @@
 
 @media (max-width:900px) {
     header nav[aria-expanded='true']>.nav-sections>.default-content-wrapper>p.quicklinks.hero-container {
-        padding: 20px 0;
+        padding: 10px 0;
         max-width: 100%;
         width: 100%;
     }
 
 
     .quicklinks.hero-container .default-content-wrapper {
-        padding: 16px 30px;
+        padding: 16px 18px;
     }
 
     .quicklinks.hero-container .default-content-wrapper:first-child {
-        padding: 16px 25px;
+        /* padding: 16px 25px; */
         border-top: 1px solid #E6E7E8;
         border-bottom: 1px solid #E6E7E8;
     }
 
     .quicklinks.hero-container .hero-wrapper {
-        padding: 10px 30px;
-        width: calc(100% - 60px);
+        padding: 10px 19px;
+        width: calc(100% - 38px);
         border-bottom: unset;
     }
 }

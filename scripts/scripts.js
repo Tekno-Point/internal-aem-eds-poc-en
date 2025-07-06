@@ -63,6 +63,18 @@ export function moveInstrumentation(from, to) {
   );
 }
 
+function autolinkModals(element) {
+  element.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
+
 /**
  * load fonts.css and set a session storage flag
  */
@@ -76,17 +88,7 @@ async function loadFonts() {
   }
 }
 
-function autolinkModals(element) {
-  element.addEventListener('click', async (e) => {
-    const origin = e.target.closest('a');
 
-    if (origin && origin.href && origin.href.includes('/modals/')) {
-      e.preventDefault();
-      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
-      openModal(origin.href);
-    }
-  });
-}
 
 function createFieldWrapper(fd) {
   const fieldWrapper = document.createElement('div');
