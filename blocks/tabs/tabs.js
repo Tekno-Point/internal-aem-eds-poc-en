@@ -2028,6 +2028,7 @@ export default async function decorate(block) {
     `;
       rowWrapper.appendChild(row)
     });
-    block.appendChild(rowWrapper);
+    const tabSection = document.querySelector('.section.tabs-container')
+    tabSection.appendChild(rowWrapper);
   })
 }
