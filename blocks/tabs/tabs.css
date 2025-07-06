@@ -249,6 +249,7 @@ input[type=date] {
     transform: unset;
     top: 470px;
     width: 100%;
+    padding: 0;
   }
 
   .tabs.form-tabs .tabs-panel form {
@@ -267,6 +268,18 @@ input[type=date] {
 
   .tabs.form-tabs .tabs-panel form .destination-wrapper fieldset {
     flex-direction: column;
+  }
+
+  .tabs.form-tabs .tabs-panel form>div .field-wrapper.date-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabs.form-tabs .tabs-panel form>div .field-wrapper.date-wrapper input {
+    background-color: rgb(244 245 245 / 1);
+    border-radius: 5px;
+    height: 100%;
+    padding: 10px;
   }
 
   .tabs.form-tabs .tabs-panel form>div>.field-wrapper::after {
