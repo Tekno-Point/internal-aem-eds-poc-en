@@ -25,7 +25,7 @@ export async function cityDropdown(block, wrapperClass, type, inputparent) {
 
         cityOption.innerHTML = `
             <p class="iata-code">${IATA}</p>
-               <p class="city">${city1}, ${country}</p>`  
+            <p class="city">${city1}, ${country}</p>`  
 
         cityWrapper.append(cityOption);
     });
@@ -56,14 +56,19 @@ export function clickDropdown(block){
     wrapper?.addEventListener("click",(e)=>{
         if(e.target.classList.contains('city-option')) {
             const city = e.target.querySelector('.city');
+            const iataCode = e.target.querySelector('.iata-code');
             e.target.parentElement.parentElement.querySelector('input').value = city.textContent;
+            e.target.parentElement.parentElement.querySelector('input').dataset.iataCode = iataCode.textContent;
 
             e.target.closest('.city-wrapper')?.remove();
             e.target.closest('.input-wrapper')?.classList.remove('show');
         }
         else if( e.target.parentElement.classList.contains('city-option')){
             const city = e.target.parentElement.querySelector('.city');
+            const iataCode = e.target.parentElement.querySelector('.iata-code');
+            
             e.target.parentElement.parentElement.parentElement.querySelector('input').value = city.textContent;
+            e.target.parentElement.parentElement.parentElement.querySelector('input').dataset.iataCode = iataCode.textContent;
 
             e.target.closest('.city-wrapper')?.remove();
             e.target.closest('.input-wrapper')?.classList.remove('show');
