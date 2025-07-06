@@ -1997,6 +1997,9 @@ export default async function decorate(block) {
       const from = flight.itineraries[0].segments[0].departure.iataCode;
       const to = flight.itineraries[0].segments[0]?.arrival.iataCode;
 
+      const fromTerminal = flight.itineraries[0].segments[0].departure.terminal;
+      const toTerminal = flight.itineraries[0].segments[0]?.arrival.terminal;
+
       console.log(flight.itineraries)
 
       const departureDate = flight.lastTicketingDate;
@@ -2018,6 +2021,7 @@ export default async function decorate(block) {
             <p class="iata-code">${from}</p>
             <p class="city"></p>
          </div>
+         <p>${fromTerminal}</p>
       </div>
       <div class="forward-arrow"></div>
       <div class="return-wrapper">
@@ -2026,6 +2030,7 @@ export default async function decorate(block) {
             <p class="iata-code">${to}</p>
             <p class="city"></p>
          </div>
+         <p>${toTerminal}</p>
       </div>
     `;
       rowWrapper.appendChild(row)
