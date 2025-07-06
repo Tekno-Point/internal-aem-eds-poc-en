@@ -303,20 +303,27 @@ input[type=date] {
   width: 50%;
 }
 
-.booking-card .departure-wrapper .date {
+.booking-card .departure-wrapper .date,
+.booking-card .return-wrapper .date {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0%;
   vertical-align: middle;
-
+  color: #0F1E7DE5;
 }
 
 .booking-card .departure-wrapper .city-container {
   display: flex;
 }
 
-.booking-card .departure-wrapper .city-container .iata-code {
+.booking-card .departure-wrapper .city-container,
+.booking-card .return-wrapper .city-container {
+  margin-top: 10px;
+}
+
+.booking-card .departure-wrapper .city-container .iata-code,
+.booking-card .return-wrapper .city-container .iata-code {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -325,4 +332,5 @@ input[type=date] {
   background-color: #0F1E7D;
   border-radius: 2px;
   padding: 2px;
+  color: #fff;
 }
