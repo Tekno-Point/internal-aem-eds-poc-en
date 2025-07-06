@@ -491,6 +491,7 @@ const dummyData = {
                 },
                 "arrival": {
                   "iataCode": "BKK",
+                  "terminal": "3",
                   "at": "2025-07-17T05:35:00"
                 },
                 "carrierCode": "TG",
@@ -940,6 +941,7 @@ const dummyData = {
                 },
                 "arrival": {
                   "iataCode": "BKK",
+                  "terminal": "3",
                   "at": "2025-07-17T05:35:00"
                 },
                 "carrierCode": "TG",
@@ -1389,6 +1391,7 @@ const dummyData = {
                 },
                 "arrival": {
                   "iataCode": "BKK",
+                  "terminal": "3",
                   "at": "2025-07-17T05:35:00"
                 },
                 "carrierCode": "TG",
