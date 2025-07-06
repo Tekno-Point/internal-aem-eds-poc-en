@@ -300,4 +300,5 @@ input[type=date] {
   padding: 10px 32px;
   display: flex;
   flex: 1;
+  width: 50%;
 }
