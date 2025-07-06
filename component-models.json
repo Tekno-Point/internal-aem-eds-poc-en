@@ -136,6 +136,26 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Quicklinks",
+            "value": "quicklinks"
+          },
+          {
+            "name": "Menu Item",
+            "value": "menu-item"
+          },
+          {
+            "name": "Modal Search",
+            "value": "modal-search"
+          },
+          {
+            "name": "Modal Call",
+            "value": "modal-call"
+          },
+          {
+            "name": "Modal Hamburger",
+            "value": "modal-hamburger"
           }
         ]
       }
