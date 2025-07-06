@@ -2019,26 +2019,30 @@ export default async function decorate(block) {
     console.log(inrPrice);
     const price = inrPrice;
 
+    const rowWrapper = document.createElement('div');
+    rowWrapper.classList.add("row-wrapper");
     const row = document.createElement('div');
     row.classList.add("booking-card");
     row.innerHTML = `   
       <div class="departure-wrapper">
-         <p>${departureDate}</p>
-         <div>
+         <p class="date">${departureDate}</p>
+         <div class"city">
             <p>${from}</p>
             <p></p>
          </div>
       </div>
-      <div></div>
+      <div class="forward-arrow"></div>
       <div class="return-wrapper">
-         <p>${returnDate}</p>
-         <div>
+         <p class"date">${returnDate}</p>
+         <div class="city">
             <p>${to}</p>
             <p></p>
          </div>
       </div>
     `;
-    block.appendChild(row);
+
+    rowWrapper.appendChild(row)
+    block.appendChild(rowWrapper);
    });
    })
   
