@@ -2081,6 +2081,6 @@ export default async function decorate(block) {
       card.append(flightInfo, airlineDetails);
       cardWrapper.appendChild(card);
     });
-    block.appendChild(card);
+    block.appendChild(cardWrapper);
   });
 }
