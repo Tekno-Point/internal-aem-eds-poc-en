@@ -35,7 +35,7 @@
 }
 
 .fr-filters-left > .fr-btn-clear-wrapper > .fr-btn {
-    font-family: "Helvetica Neue, serif, sans-serif";
+    font-family: "roboto";
     font-size: 16px;
     letter-spacing: normal;
     line-height: 1.2;
@@ -106,7 +106,7 @@
 }
 
 .card-body > div:nth-child(1) {
-    font-family: "Roboto, serif, sans-serif";
+    font-family: "roboto";
     font-size: 18px;
     letter-spacing: normal;
     line-height: 1.2;
@@ -122,7 +122,7 @@
     appearance: none;
     text-align: center;
     text-decoration: none;
-    font-family: "Helvetica Neue, sans-serif";
+    font-family: "roboto";
     font-size: 16px;
     font-weight: 400;
     letter-spacing: normal;
@@ -150,7 +150,8 @@
 .card-footer > .price-row {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    justify-content: flex-end;
+    align-items: end;
 }
 
 .card-footer > .seen-row {
@@ -183,7 +184,7 @@
     color: #0088dd;
     font-weight: 800;
     font-size: 18px;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 .carousel > .swiper-pagination {
@@ -205,7 +206,12 @@
     color: #0088dd;
     font-weight: 800;
     font-size: 18px;
-    margin: 10px;
+    margin: 10px 0px;
+}
+
+.price-currency-row > .asterisk,
+.price-currency-row > .price-note {
+    display: none;
 }
 
 .popover-fields-wrapper > .popover-fields-row {
@@ -239,6 +245,13 @@
     display: flex;
     gap: 10px;
     justify-content: end;
+    font-weight: 800;
+}
+
+.as-copa-ltr-11nnxtd > div:nth-child(2) {
+    width: 100%;
+    padding-bottom: 21px;
+    border-bottom: 1px solid rgb(212, 212, 212);
 }
 
 .fr-budget > .fr-input {
@@ -275,6 +288,46 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 16px;
+}
+
+.as-copa-ltr-p13x9t > div {
+    font-family: "roboto";
+    color: rgb(119, 119, 119);
+}
+
+.route-popover > .popover-body-content {
+    padding: 40px;
+    /* padding-bottom: 40px; */
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.popover-header > .popover-title {
+    display: none;
+}
+
+.route-popover > .popover-footer {
+    padding: 20px;
+}
+
+.route-popover > .departure-error {
+    display: none;
+}
+
+.fare-card>.card-count {
+    display: flex;
+    justify-content: end;
+        top: 10px;
+    right: 10px;
+}
+
+.fare-card > .card-count > .card-count-text {
+    text-align: center;
+    width: 42px;
+    background: black;
+    opacity: 0.8;
+    border-radius: 10px;
+    color: white;
 }
 
 .as-copa-ltr-ikhtdx {
@@ -289,11 +342,16 @@
 
 .as-copa-ltr-ikhtdx > div:nth-child(2) {
     color: #0088dd;
+    cursor: pointer;
+}
+
+.as-copa-ltr-ikhtdx > div:nth-child(2):hover {
+    color: rgb(10, 10, 114);
     text-decoration: underline;
 }
 
 .fr-input {
-    padding: 5px;
+    padding: 13px 20px;
     border: 1px solid rgb(212, 212, 212);
     font-family: "Roboto";
     font-size: 16px;
@@ -304,6 +362,14 @@
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     text-transform: none;
+}
+
+.location-selector-container > .fr-bg-white > .fr-input:hover {
+    border: 2px solid #0088dd;
+}
+
+.route-popover > .popover-body-content {
+    color: rgb(119, 119, 119);
 }
 
 .popover-footer {
@@ -318,10 +384,32 @@
 
 .popover-footer > div:nth-child(2) {
     color: #0088dd;
+    cursor: pointer;
+}
+
+.popover-footer > div:nth-child(2):hover {
+    color: rgb(10, 10, 114);
     text-decoration: underline;
 }
 
 .route-popover {
     font-family: "Roboto";
     font-size: 15px;
+}
+
+.fr-sr-only {
+    display: none;
+}
+
+.popover-body {
+    padding: 0px !important;
+}
+
+.popover-body > .as-copa-ltr-ikhtdx {
+    padding: 20px;
+}
+
+.fr-btn,.popover-btn,
+.as-copa-ltr-tyl0cm {
+    cursor: pointer;
 }
