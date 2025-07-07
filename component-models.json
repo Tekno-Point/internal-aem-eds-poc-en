@@ -196,12 +196,92 @@
           {
             "name": "Insurance Plan Form",
             "value": "insurance-plan-form"
+          },
+          {
+            "name": "Your Budget",
+            "value": "your-budget"
+          },
+          {
+            "name": "Directors",
+            "value": "directors"
+          },
+          {
+            "name": "Inforgraphic",
+            "value": "inforgraphic"
+          },
+          {
+            "name": "VideoSection",
+            "value": "video-Section"
+          },
+          {
+            "name": "popular-search",
+            "value": "popular-search"
+          },
+          {
+            "name": "term-calculator2",
+            "value": "term-calculator2"
+          },
+          {
+            "name": "content1-term",
+            "value": "content1-term"
+          },
+          {
+            "name": "content2-term",
+            "value": "content2-term"
+          },
+          {
+            "name": "term-insurance-plan",
+            "value": "term-insurance-plan"
+          },
+          {
+            "name": "benefit-buying-insurance-plan",
+            "value": "benefit-buying-insurance-plan"
+          },
+          {
+            "name": "types-of-insurance-plan",
+            "value": "types-of-insurance-plan"
+          },
+          {
+            "name": "affordable-insurance-plan",
+            "value": "affordable-insurance-plan"
+          },
+          {
+            "name": "life-stages-plan",
+            "value": "life-stages-plan"
+          },
+          {
+            "name": "features-of-ti",
+            "value": "features-of-ti"
+          },
+          {
+            "name": "choose-best-plan",
+            "value": "choose-best-plan"
+          },
+          {
+            "name": "long-policy-period",
+            "value": "long-policy-period"
+          },
+          {
+            "name": "content-model",
+            "value": "content-model"
+          },
+          {
+            "name": "list-of-documents",
+            "value": "list-of-documents"
+          },
+          {
+            "name": "work-plan",
+            "value": "work-plan"
+          },
+          {
+            "name": "insight-plan",
+            "value": "insight-plan"
           }
         ]
       }
     ]
   },
-   {
+  {
     "id": "search",
     "fields": [
       {
@@ -243,6 +323,32 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "content_img",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content_body",
+        "value": "",
+        "label": "Body"
       }
     ]
   },
@@ -365,8 +471,8 @@
     ]
   },
   {
-    "id":"aia-banner-content",
-    "fields":[
+    "id": "aia-banner-content",
+    "fields": [
       {
         "component": "reference",
         "name": "col1_SampoornaImage",
@@ -417,6 +523,125 @@
         "component": "text",
         "name": "form_api",
         "label": "Form API"
+      }
+    ]
+  },
+  {
+    "id": "term-Insurance-carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "our-bestselling-term-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "term-plan-carousel-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "popular-searches",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "comparison-of-plans-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "value": "",
+        "label": "Dis Text",
+        "valueType": "string",
+        "description": "Comparison of Plans Title"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "type": "accordion/text",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "question",
+        "label": "Question"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fragment URL"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
       }
     ]
   }

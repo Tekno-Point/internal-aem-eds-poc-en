@@ -1,64 +1,41 @@
-.accordion-container .accordion-wrapper {
-  margin-bottom: 50px;
-  padding-top: 18px
+.accordion details {
+  border: 1px solid #E6E7E8;
+  border-right: 0;
+  border-left: 0;
 }
 
-.accordion a {
-  color: #fff;
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion details+details {
+  margin-top: 24px;
 }
 
-.accordion a:hover {
-  text-decoration: none;
+.section.accordion-container {
+  margin: 60px 0;
 }
 
-.accordion-wrapper .accordion .accordion-item:first-child .accordion-item-label {
-  border-top: 1px solid #FFFFFF;
-}
-
-.accordion details p {
-  margin: 0;
-}
-
-.accordion-item .accordion-item-label p {
-  background-color: transparent;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 0.0625rem;
-  width: 99%;
-  color: #fff;
-  font-family: "Montserrat-Medium";
-  font-size: 18px;
-  padding: 24px 0;
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.5;
-  cursor: pointer;
-  display: inline-block;
-  user-select: none;
-  vertical-align: middle;
-  text-transform: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
+/* .accordion details p {
+  margin-bottom: 0.8em;
+} */
 
 .accordion details summary {
   position: relative;
+  padding: 0 16px;
   padding-right: 46px;
   cursor: pointer;
   list-style: none;
   overflow: auto;
   transition: background-color 0.2s;
-  border-bottom: 1px solid #FFFFFF;
+  border-right: 0;
+  border-left: 0;
 }
 
 .accordion details[open] summary {
-  color: rgb(255, 255, 255);
-  background: rgb(37, 58, 113);
+  background-color: transparent;
 }
 
 .accordion details summary:focus,
 .accordion details summary:hover {
-  color: rgb(255, 255, 255);
-  background: rgb(37, 58, 113);
+  background-color: transparent;
 }
 
 .accordion details summary::-webkit-details-marker {
@@ -68,92 +45,124 @@
 .accordion details summary::after {
   content: '';
   position: absolute;
-  display: inline-block;
   top: 50%;
   right: 18px;
-  transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
+  transform: translateY(-50%) rotate(135deg);
+  width: 11px;
+  height: 11px;
+  border: 2px solid;
+  border-width: 2px 2px 0 0;
   transition: transform 0.2s;
-  background: url(/icons/icon-plus.svg);
-  background-size: cover;
 }
-
 
 .accordion details[open] summary::after {
-  background: url(/icons/icon-minus.svg);
-  width: 24px;
-  height: 2px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
-.accordion-item .accordion-item-body {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.accordion details .accordion-item-body {
+  padding: 0 16px;
+}
+
+.accordion details[open] .accordion-item-body {
+  /* border-top: 1px solid #E6E7E8; */
+  background-color: var(--background-color);
+  padding-bottom: 20px;
+}
+
+.accordion-item :is(h1, h2, h3, h4, h5, h6) {
   margin: 0;
-  padding: 0;
-  color: rgb(255, 255, 255);
-  background: rgb(37, 58, 113);
+  padding: 40px 0px;
+  /* border-top: 1px solid #E6E7E8;
+  border-bottom: 1px solid #E6E7E8; */
+  font-family: "Inter-Bold";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  background: transparent;
+  -webkit-text-fill-color: unset;
 }
 
-.accordion-item .accordion-item-body ul {
-  list-style: none;
-  color: rgb(255, 255, 255);
+.accordion-item:nth-child(2) .accordion-item-body {
+  border-top: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.accordion-item:nth-child(2) .accordion-item-body .button-container {
+  padding: 0;
   margin: 0;
+}
+
+.accordion-item:nth-child(2) .accordion-item-body .tabs-list {
+  gap: unset;
+  display: none;
+}
+
+.accordion-item:nth-child(2) .accordion-item-body .tabs-panel {
+  border: none;
   padding: 0;
+  padding-top: 15px;
 }
 
-.accordion-item .accordion-item-body>ul>li>p {
-  visibility: hidden;
+.accordion-item:nth-child(2) .accordion-item-body .tabs-panel ul {
+  padding-left: 21px;
 }
 
-.accordion-item .accordion-item-body>ul>li ul li p {
-  margin-bottom: 10px;
-  word-wrap: break-word;
-  color: #fff;
-  font-family: 'Montserrat-SemiBold';
-  font-weight: 600;
+.accordion-item:nth-child(2) .accordion-item-body .tabs-panel ul li {
+  color: #333;
+  font-family: "Inter-Regular";
   font-size: 16px;
-  line-height: 1.5;
-}
-
-.accordion-item .accordion-item-body>ul>li ul li ul li a {
-  font-family: "Montserrat-Regular";
-  font-size: 14px;
-  line-height: 14px;
+  font-style: normal;
   font-weight: 400;
-  color: #fff;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  list-style: disc;
 }
 
-.accordion-item[open] {
-  padding: 0px 0 18px 0;
-  border-bottom: 1px solid #FFFFFF;
-}
+@media screen and (max-width: 767.99px) {
+  .section.accordion-container .accordion-wrapper {
+    padding: 0;
+  }
 
-.accordion details[open] .accordion-item-label {
-  border-bottom: none;
-}
-
-@media screen and (max-width: 768px) {
-  .accordion-item .accordion-item-label p {
-    font-size: 14px;
-    padding: 16px 0;
+  .accordion-item :is(h1, h2, h3, h4, h5, h6) {
+    padding: 16px 0px;
+    font-size: 1.25rem;
   }
 
   .accordion details summary::after {
-    width: 24px;
-    height: 24px;
+    width: 8px;
+    height: 8px;
   }
 
-  .accordion-item .accordion-item-body>ul>li ul li p {
-    font-size: 14px;
+  .tabs .tabs-list button {
+    font-size: 0.75rem;
+    flex: 0 0 auto;
   }
 
-  .accordion-item .accordion-item-body>ul>li ul li ul li a {
-    font-size: 13px;
-    line-height: 14px;
+  .tabs .tabs-list button[aria-selected='true'] {
+    font-size: 0.75rem;
+    flex: 0 0 auto;
+  }
+
+  .tabs .tabs-panel>div h3 {
+    font-size: 0.875rem;
+    padding: 16px 0px 0px 2px;
+  }
+
+  .tabs .tabs-panel>div p {
+    font-size: 0.875rem;
+    margin-left: 18px;
+    line-height: 21px;
+  }
+
+  .accordion-item:nth-child(2) .accordion-item-body .tabs-panel ul li {
+    font-size: 0.875rem;
+  }
+  .accordion-item:nth-child(2) .accordion-item-body .tabs-panel {
+    border: none;
+    padding: 0 20px;
+    padding-top: 15px;
   }
 }

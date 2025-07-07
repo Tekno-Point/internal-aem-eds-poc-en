@@ -1,9 +1,9 @@
 export default function decorate(block) {
-    console.log("Content 3 : custom-richtext-item", block)
+    // console.log("Content 3 : custom-richtext-item", block)
 
     function addClassesContent3() {
         Array.from(document.querySelector('.content3 .custom-richtextblock').children).forEach(function (item, index) {
-            console.log(item)
+            // console.log(item)
             item.classList.add(`content3-div`)
             //  item.classList.add(`sec3-${index}`)
             if (index < 2) {
@@ -42,7 +42,7 @@ export default function decorate(block) {
             } else if (document.querySelector('.view-more-btn').textContent == 'View Less') {
                 document.querySelector('.view-more-btn').textContent = 'View More'
             }
-            console.log("out")
+            // console.log("out")
         })
     }
 

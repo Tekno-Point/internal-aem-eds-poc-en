@@ -1,0 +1,164 @@
+@import url("./swiper-bundle.min.css");
+main > .section.term-insurance-carousel-container {
+  margin: 0;
+  padding: 0;
+  max-width: 79.3%;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  main > .section.term-insurance-carousel-container {
+    width: auto;
+    padding: 0;
+    max-width: 76%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+main > .section.term-insurance-carousel-container p {
+  margin: 0;
+  padding: 0;
+}
+main > .section.term-insurance-carousel-container .default-content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 64px;
+}
+@media (max-width: 768px) {
+  main > .section.term-insurance-carousel-container .default-content-wrapper {
+    margin-left: -20px;
+    margin-bottom: 14px;
+  }
+}
+main > .section.term-insurance-carousel-container .default-content-wrapper h1,
+main > .section.term-insurance-carousel-container .default-content-wrapper h2,
+main > .section.term-insurance-carousel-container .default-content-wrapper h3,
+main > .section.term-insurance-carousel-container .default-content-wrapper h4,
+main > .section.term-insurance-carousel-container .default-content-wrapper h5,
+main > .section.term-insurance-carousel-container .default-content-wrapper h6 {
+  padding: 0;
+  margin: 0;
+  color: #0D2042;
+  font-family: "inter-Bold";
+  font-weight: 700;
+  font-size: 36px;
+  color: #333333;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  main > .section.term-insurance-carousel-container .default-content-wrapper h1,
+  main > .section.term-insurance-carousel-container .default-content-wrapper h2,
+  main > .section.term-insurance-carousel-container .default-content-wrapper h3,
+  main > .section.term-insurance-carousel-container .default-content-wrapper h4,
+  main > .section.term-insurance-carousel-container .default-content-wrapper h5,
+  main > .section.term-insurance-carousel-container .default-content-wrapper h6 {
+    font-size: 24px;
+  }
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel {
+  overflow: hidden;
+  padding-bottom: 35px;
+  height: auto;
+  position: unset;
+}
+@media (max-width: 768px) {
+  main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper {
+    margin-left: -6px;
+    padding: 20px 0;
+    padding-left: 6px;
+  }
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper .swiper-slide {
+  position: relative;
+  display: flex;
+  width: 282px !important;
+  height: 351px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 0 rgba(0, 115, 187, 0.1);
+  background-color: #fff;
+}
+@media (max-width: 768px) {
+  main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper .swiper-slide {
+    width: 256px !important;
+  }
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper .swiper-slide > div:first-child {
+  width: 100%;
+  height: 63%;
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper .swiper-slide > div:first-child img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-wrapper .swiper-slide > div:last-child {
+  font-weight: 700;
+  font-size: 17px;
+  overflow: hidden;
+  color: #333333;
+  height: 26%;
+  padding: 20px;
+  line-height: normal;
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-prev {
+  left: -44px;
+  right: auto;
+  height: 30px;
+  width: 30px;
+  top: 60%;
+}
+@media (max-width: 768px) {
+  main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-prev {
+    left: -36px;
+  }
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-prev::after {
+  content: " ";
+  background: url(/icons/slider-arrow-prev.svg);
+  width: 30px;
+  height: 30px;
+  display: block;
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-next {
+  top: var(--swiper-navigation-top-offset, 60%);
+  right: -33px;
+  left: auto;
+  width: auto;
+  height: auto;
+}
+main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-next::after {
+  content: " ";
+  background: url(/icons/slider-next-arrow.svg);
+  width: 30px;
+  height: 30px;
+  display: block;
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}/*# sourceMappingURL=term-insurance-carousel.css.map */

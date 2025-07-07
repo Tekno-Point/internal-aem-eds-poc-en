@@ -1,9 +1,7 @@
 [
   {
     "id": "main",
-    "components": [
-      "section"
-    ]
+    "components": ["section"]
   },
   {
     "id": "section",
@@ -23,46 +21,70 @@
       "custom-richtextblock",
       "term-insurance",
       "aia-banner",
-      "form"
+      "form",
+      "term-Insurance-carousel",
+      "our-bestselling-term",
+      "term-plan-carousel",
+      "popular-searches",
+      "comparison-of-plans",
+      "tabs",
+      "accordion"
     ]
   },
   {
     "id": "cards",
-    "components": [
-      "card"
-    ]
+    "components": ["card"]
   },
   {
     "id": "columns",
-    "components": [
-      "column"
-    ]
+    "components": ["column"]
   },
   {
     "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
+    "components": ["text", "image", "button", "title"]
+  },
+  {
+    "id": "tabs",
+    "components": ["tab"]
   },
   {
     "id": "term-insurance",
-    "components": [
-      "term-insurance-item"
-    ]
+    "components": ["term-insurance-item"]
   },
   {
     "id": "custom-richtextblock",
-    "components": [
-      "custom-richtext-item"
-    ]
+    "components": ["custom-richtext-item"]
   },
   {
     "id": "aia-banner",
-    "components": [
-      "aia-banner-content"
-    ]
+    "components": ["aia-banner-content"]
+  },
+  {
+    "id": "term-insurance",
+    "components": ["term-insurance-item"]
+  },
+  {
+    "id": "custom-richtextblock",
+    "components": ["custom-richtext-item"]
+  },
+  {
+    "id": "term-Insurance-carousel",
+    "components": ["term-Insurance-carousel-item"]
+  },
+  {
+    "id": "our-bestselling-term",
+    "components": ["our-bestselling-term-item"]
+  },
+  {
+    "id": "term-plan-carousel",
+    "components": ["term-plan-carousel-item"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
+  },
+  {
+    "id": "comparison-of-plans",
+    "components": ["comparison-of-plans-item"]
   }
 ]
