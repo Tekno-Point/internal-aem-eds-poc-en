@@ -2006,8 +2006,6 @@ export default async function decorate(block) {
 
       const card = document.createElement('div');
       card.className = 'flight-card';
-
-      // ✈️ Flight Info
       const flightInfo = document.createElement('div');
       flightInfo.className = 'flight-info';
 
