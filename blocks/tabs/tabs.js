@@ -1992,6 +1992,7 @@ export default async function decorate(block) {
     const locations = data.body.dictionaries.locations;
     
     const cardWrapper = document.createElement('div');
+    cardWrapper.classList.add("card-wrapper");
     data.body.data.forEach((flight, index) => {
       const segment = flight.itineraries[0].segments[0];
 

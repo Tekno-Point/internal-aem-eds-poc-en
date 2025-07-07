@@ -106,6 +106,7 @@
     padding: 20px 16px;
     margin-top: 17px;
     border-radius: 8px;
+    gap: 10px;
 }
 
 @media (max-width: 786px) {
@@ -144,10 +145,9 @@
     }
 
     .tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper select {
-        width: 70%;
+        width: 63%;
         font-size: 14px;
     }
-
 }
 
 .tabs.form-tabs .tabs-panel form > div > .field-wrapper::after {
@@ -175,6 +175,9 @@
 .tabs.form-tabs .tabs-panel form .destination-wrapper fieldset,
 .tabs.form-tabs .tabs-panel form .calender-wrapper fieldset {
     display: flex;
+    gap: 20px;
+    padding-right: 10px;
+    border-right: 1px solid #808286;
 }
 
 .tabs.form-tabs
@@ -307,7 +310,7 @@ input[type="date"] {
 
 .tabs.form-tabs > div {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: c; */
     gap: 20px;
 }
 
@@ -370,6 +373,12 @@ input[type="date"] {
     font-weight: 600;
 }
 
+.card-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 @media (max-width: 786px) {
     .tabs.form-tabs > div > .flight-card {
         flex-direction: column;
@@ -384,8 +393,21 @@ input[type="date"] {
         align-items: center;
     }
 
-    .tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper button{
-      padding: 10px 15px;
+    .tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper button {
+        padding: 10px 15px;
+    }
+    .tabs.form-tabs .tabs-panel form .destination-wrapper fieldset,
+    .tabs.form-tabs .tabs-panel form .calender-wrapper fieldset {
+        border: none;
+    }
+    .fare-card > .card-count > .card-count-text {
+      font-size: 14px;
+    }
+    .tabs.form-tabs > div{
+      flex-direction: column;
+    }
+    .tabs.form-tabs .tabs-panel form > fieldset{
+      flex-direction: column;
     }
 }
 
