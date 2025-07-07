@@ -126,3 +126,63 @@
 .modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul>li>ul {
     padding: unset;
 }
+
+/* popular search css */
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper {}
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper p {
+    font-size: 18px;
+    font-family: "Inter-Bold";
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    color: #333333;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper>ul>li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: max-content !important;
+    border: 1px solid #58595B;
+    padding: 7px 12px 6px;
+    margin: 0 12px 12px 0;
+    cursor: pointer;
+    line-height: normal;
+}
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper ul li {
+    line-height: normal;
+}
+
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper ul li a {
+    color: #58595B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Inter-Regular";
+    line-height: normal;
+    letter-spacing: -0.267px;
+}
+
+@media screen and (max-width: 767.99px) {
+    .modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper h1 {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: -0.625px;
+    }
+
+    .modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper ul {
+        padding: 0px 8px 4px;
+        margin: 0 8px 8px 0;
+    }
+}

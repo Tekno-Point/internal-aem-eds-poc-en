@@ -164,7 +164,7 @@
     }
 
     .search .search-box input:hover {
-        background-color: #5c2d91;
+        /* background-color: #5c2d91; */
         border: unset
     }
 
