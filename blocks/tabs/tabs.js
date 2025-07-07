@@ -1965,6 +1965,7 @@ export default async function decorate(block) {
     tab.remove();
   });
 
+
   block.prepend(tablist);
   showData(block, '.from-input', 'from-wrapper', 'source');
   showData(block, '.to-input', 'to-wrapper', 'destination');
@@ -1973,9 +1974,6 @@ export default async function decorate(block) {
    const form = block.querySelector('form');
    form.addEventListener('submit', async function(e) {
     e.preventDefault();
-    console.log(e)
-    console.log(this);
-    
     const auth = await getAccessToken();
     const data = await getData(auth , {
         originLocationCode: this.source.dataset.iataCode,
@@ -1986,38 +1984,108 @@ export default async function decorate(block) {
         includedAirlineCodes: 'TG',
         max: '10',
       });
-      console.log(data);
-      
-   data.body.data.forEach((flight,index) => {
-    const from = flight.itineraries[0].segments[0].departure.iataCode;
-    const to = flight.itineraries[0].segments[0]?.arrival.iataCode;
 
-    const departureDate = flight.lastTicketingDate ;
-    const returnDate = flight.lastTicketingDateTime;
-    const dates = departureDate && returnDate ? `${departureDate} - ${returnDate}` : '—';
+    // Remove previous cards (for clean UI)
+    block.querySelectorAll('.flight-card').forEach(card => card.remove());
 
-    const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
+    const countries = new Intl.DisplayNames(['en'], { type: 'region' });
+    const locations = data.body.dictionaries.locations;
     
-    const inrPrice = convertEurToInr(flight.price.grandTotal);
-    console.log(inrPrice);
-    const price = inrPrice;
+    const cardWrapper = document.createElement('div');
+    cardWrapper.classList.add("card-wrapper");
+    data.body.data.forEach((flight, index) => {
+      const segment = flight.itineraries[0].segments[0];
 
-    const row = document.createElement('tr');
-    row.innerHTML = `
-      <td>${from}</td>
-      <td>${to}</td>
-      <td>${fare}</td>
-      <td>${dates}</td>
-      <td>
-        <div class="price-cell">
-          <strong>${price}</strong><br/>
-        </div>
-      </td>
-      <td><a href="#book" class="book-now-button">Book now</a></td>
-    `;
-    block.appendChild(row);
-   });
-   })
-   
-  
+      const cityNames = {
+        BOM: 'Mumbai',
+        DEL: 'Delhi',
+        CMB: 'Colombo',
+        BKK: 'Bangkok',
+        MAA: 'Chennai',
+        BLR: 'Bangalore',
+        DXB: 'Dubai',
+        SIN: 'Singapore'
+      };
+
+      const from = segment.departure.iataCode;
+      const fromTerminal = segment.departure.terminal ? segment.departure.terminal : '1';
+      const to = segment.arrival.iataCode;
+      const toTerminal = segment.arrival.terminal ? segment.arrival.terminal : '1';
+
+      const fromCity = cityNames[from] || from;
+      const fromCountryCode = locations[from]?.countryCode || 'IN';
+      const fromCountry = countries.of(fromCountryCode);
+
+      const toCity = cityNames[to] || to;
+      const toCountryCode = locations[to]?.countryCode || 'IN';
+      const toCountry = countries.of(toCountryCode);
+
+      const departure = new Date(segment.departure.at);
+      const departureTime = departure.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const departureDate = departure.toLocaleDateString('en-GB');
+
+      const duration = flight.itineraries[0].duration.replace('PT', '').toLowerCase();
+      const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
+      const price = convertEurToInr(flight.price.grandTotal);
+
+      const card = document.createElement('div');
+      card.className = 'flight-card';
+
+      const flightInfo = document.createElement('div');
+      flightInfo.className = 'flight-info';
+
+      const fromDiv = document.createElement('div');
+      fromDiv.className = 'from-info';
+      fromDiv.innerHTML = `
+        <strong>${from}</strong> ${fromCity}, ${fromCountry}<br>
+        Terminal ${fromTerminal}<br>
+        ${departureDate}
+      `;
+
+      const arrowDiv = document.createElement('div');
+      arrowDiv.className = 'arrow';
+      const arrowImg = document.createElement('img');
+      arrowImg.src = '/image/arrow.png'; // or your desired image path
+      arrowImg.alt = 'to';
+      arrowImg.className = 'arrow-img'; // optional, for styling
+      arrowDiv.appendChild(arrowImg);
+
+      const toDiv = document.createElement('div');
+      toDiv.className = 'to-info';
+      toDiv.innerHTML = `
+        <strong>${to}</strong> ${toCity}, ${toCountry}<br>
+        Terminal ${toTerminal}<br>
+        ${departureDate}
+      `;
+
+      flightInfo.append(fromDiv, arrowDiv, toDiv);
+
+      // Airline Details
+      const airlineDetails = document.createElement('div');
+      airlineDetails.className = 'airline-details';
+
+      const heading = document.createElement('h4');
+      heading.textContent = 'SriLankan Airlines';
+
+      const detailDiv = document.createElement('div');
+      detailDiv.className = 'detail';
+      detailDiv.textContent = `${fare} Class`;
+
+      const durationDiv = document.createElement('div');
+      durationDiv.className = 'duration';
+      durationDiv.textContent = `Duration: ${duration}`;
+      const departureDiv = document.createElement('div');
+      departureDiv.className = 'departure';
+      departureDiv.textContent = `Departure: ${departureTime}`;
+
+      const button = document.createElement('button');
+      button.className = 'book-now-button';
+      button.textContent = 'Book Now';
+
+      airlineDetails.append(heading, detailDiv, durationDiv, departureDiv, button);
+      card.append(flightInfo, airlineDetails);
+      cardWrapper.appendChild(card);
+    });
+    block.appendChild(cardWrapper);
+  });
 }

@@ -1,285 +1,458 @@
 .tabs .tabs-list {
-  display: flex;
-  gap: 0.5ch;
-  max-width: 100%;
-  font-size: var(--body-font-size-xs);
-  overflow-x: auto;
+    display: flex;
+    gap: 0.5ch;
+    max-width: 100%;
+    font-size: var(--body-font-size-xs);
+    overflow-x: auto;
 }
 
 @media (width >=600px) {
-  .tabs .tabs-list {
-    font-size: var(--body-font-size-s);
-  }
+    .tabs .tabs-list {
+        font-size: var(--body-font-size-s);
+    }
 }
 
 @media (width >=900px) {
-  .tabs .tabs-list {
-    font-size: var(--body-font-size-m);
-  }
+    .tabs .tabs-list {
+        font-size: var(--body-font-size-m);
+    }
 }
 
 .tabs .tabs-list button {
-  flex: 0 0 max-content;
-  margin: 0;
-  border: 1px solid #dadada;
-  border-radius: 0;
-  padding: 0.5em;
-  background-color: var(--light-color);
-  color: initial;
-  font-weight: bold;
-  line-height: unset;
-  text-align: initial;
-  text-overflow: unset;
-  overflow: unset;
-  white-space: unset;
-  transition: background-color 0.2s;
+    flex: 0 0 max-content;
+    margin: 0;
+    border: 1px solid #dadada;
+    border-radius: 0;
+    padding: 0.5em;
+    background-color: var(--light-color);
+    color: initial;
+    font-weight: bold;
+    line-height: unset;
+    text-align: initial;
+    text-overflow: unset;
+    overflow: unset;
+    white-space: unset;
+    transition: background-color 0.2s;
 }
 
 .tabs .tabs-list button p {
-  margin: 0;
+    margin: 0;
 }
 
-
-.tabs .tabs-list button[aria-selected='true'] {
-  border-bottom: 1px solid var(--background-color);
-  background-color: var(--background-color);
-  cursor: initial;
+.tabs .tabs-list button[aria-selected="true"] {
+    border-bottom: 1px solid var(--background-color);
+    background-color: var(--background-color);
+    cursor: initial;
 }
 
 .tabs .tabs-panel {
-  margin-top: -1px;
-  padding: 24px;
-  border: 1px solid #dadada;
-  overflow: auto;
+    margin-top: -1px;
+    padding: 24px;
+    border: 1px solid #dadada;
+    overflow: auto;
 }
 
-.tabs .tabs-panel[aria-hidden='true'] {
-  display: none;
+.tabs .tabs-panel[aria-hidden="true"] {
+    display: none;
 }
-
 
 /* form tab css */
 .tabs-wrapper:has(.tabs.form-tabs) {
-  max-width: 1300px;
+    max-width: 1300px;
 }
 
-.tabs.form-tabs .tabs-list button[aria-selected='true'] {
-  background-color: #0F1E7D;
-  color: #fff;
-  padding: 13px;
-  border-top-right-radius: 8.5px;
-  border-top-left-radius: 8.5px;
-  cursor: pointer;
+.tabs.form-tabs .tabs-list button[aria-selected="true"] {
+    background-color: #0f1e7d;
+    color: #fff;
+    padding: 13px;
+    border-top-right-radius: 8.5px;
+    border-top-left-radius: 8.5px;
+    cursor: pointer;
 }
 
-.tabs.form-tabs .tabs-list button[aria-selected='false'] {
-  color: #313131;
-  padding: 13px;
-  border-top-right-radius: 8.5px;
-  border-top-left-radius: 8.5px;
-  border: 0.53px solid #D1D1D1;
+.tabs.form-tabs .tabs-list button[aria-selected="false"] {
+    color: #313131;
+    padding: 13px;
+    border-top-right-radius: 8.5px;
+    border-top-left-radius: 8.5px;
+    border: 0.53px solid #d1d1d1;
 }
 
-.tabs.form-tabs .tabs-list button[aria-selected='true'] p,
-.tabs.form-tabs .tabs-list button[aria-selected='false'] p {
-  font-size: 14px;
-  font-weight: 700;
+.tabs.form-tabs .tabs-list button[aria-selected="true"] p,
+.tabs.form-tabs .tabs-list button[aria-selected="false"] p {
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .tabs.form-tabs .tabs-panel {
-  border: unset;
-  padding: 0;
-  box-shadow: 0 0 #0000, 0 0 #0000, 0px 4px 30px -5px rgba(0, 0, 0, .25);
-  overflow: unset;
+    border: unset;
+    padding: 0;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0px 4px 30px -5px rgba(0, 0, 0, 0.25);
+    overflow: unset;
 }
 
 .tabs.form-tabs .tabs-panel form {
-  background-color: #fff;
-  border-radius: 8.43px;
-  border: 0.42px solid #D1D1D1;
-  display: flex;
-  flex-direction: column-reverse;
-  padding: 25px;
+    background-color: #fff;
+    border-radius: 8.43px;
+    border: 0.42px solid #d1d1d1;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 25px;
 }
 
-.tabs.form-tabs .tabs-panel form>div {
-  display: flex;
-  border: 1px solid #CCCCCC;
-  padding: 20px 16px;
-  margin-top: 17px;
-  border-radius: 8px;
+.tabs.form-tabs .tabs-panel form > div {
+    display: flex;
+    border: 1px solid #cccccc;
+    padding: 20px 16px;
+    margin-top: 17px;
+    border-radius: 8px;
+    gap: 10px;
 }
 
-.tabs.form-tabs .tabs-panel form>div .field-wrapper.trip-wrapper {
-  display: none;
+@media (max-width: 786px) {
+    .tabs.form-tabs .tabs-panel form > div {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .tabs.form-tabs .tabs-panel form > div .field-wrapper > fieldset {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tabs.form-tabs
+        .tabs-panel
+        form
+        > div
+        .field-wrapper
+        > fieldset
+        > .from-input
+        > input {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .tabs.form-tabs
+        .tabs-panel
+        form
+        > div
+        .field-wrapper
+        > fieldset
+        > .to-input
+        > input {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper select {
+        width: 63%;
+        font-size: 14px;
+    }
 }
 
-.tabs.form-tabs .tabs-panel form>div .field-wrapper {
-  margin-right: 20px;
-  position: relative;
+.tabs.form-tabs .tabs-panel form > div > .field-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-right: 0.5px solid #808286;
 }
 
-.tabs.form-tabs .tabs-panel form>div>.field-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  border-right: 0.5px solid #808286;
-}
-
-.tabs.form-tabs .tabs-panel form>div>.field-wrapper:last-child:after {
-  border: unset;
+.tabs.form-tabs .tabs-panel form > div > .field-wrapper:last-child:after {
+    border: unset;
 }
 
 .tabs.form-tabs .tabs-panel form fieldset {
-  border: unset;
-  padding: 0;
+    border: unset;
+    padding: 0;
 }
 
 .tabs.form-tabs .tabs-panel form fieldset legend {
-  display: none;
+    display: none;
 }
 
 .tabs.form-tabs .tabs-panel form .destination-wrapper fieldset,
 .tabs.form-tabs .tabs-panel form .calender-wrapper fieldset {
-  display: flex;
+    display: flex;
+    gap: 20px;
+    padding-right: 10px;
+    border-right: 1px solid #808286;
 }
 
-.tabs.form-tabs .tabs-panel form .destination-wrapper fieldset .field-wrapper.input-wrapper,
-.tabs.form-tabs .tabs-panel form .calender-wrapper fieldset .field-wrapper.input-wrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  gap: 5px;
-  height: 60px;
+.tabs.form-tabs
+    .tabs-panel
+    form
+    .destination-wrapper
+    fieldset
+    .field-wrapper.input-wrapper,
+.tabs.form-tabs
+    .tabs-panel
+    form
+    .calender-wrapper
+    fieldset
+    .field-wrapper.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+    height: 60px;
 }
 
-.tabs.form-tabs .tabs-panel form .destination-wrapper fieldset .field-wrapper.input-wrapper input,
-.tabs.form-tabs .tabs-panel form .calender-wrapper fieldset .field-wrapper.input-wrapper input {
-  background-color: rgb(244 245 245 / 1);
-  border-radius: 5px;
-  height: 100%;
-  padding-left: 20px;
+.tabs.form-tabs
+    .tabs-panel
+    form
+    .destination-wrapper
+    fieldset
+    .field-wrapper.input-wrapper
+    input,
+.tabs.form-tabs
+    .tabs-panel
+    form
+    .calender-wrapper
+    fieldset
+    .field-wrapper.input-wrapper
+    input {
+    background-color: rgb(244 245 245 / 1);
+    border-radius: 5px;
+    height: 100%;
+    padding-left: 20px;
 }
 
-.tabs.form-tabs .tabs-panel form .destination-wrapper fieldset .field-wrapper.input-wrapper input::placeholder,
-.tabs.form-tabs .tabs-panel form .calender-wrapper fieldset .field-wrapper.input-wrapper input::placeholder {
-  font-size: 14px;
-  line-height: 18px;
+.tabs.form-tabs
+    .tabs-panel
+    form
+    .destination-wrapper
+    fieldset
+    .field-wrapper.input-wrapper
+    input::placeholder,
+.tabs.form-tabs
+    .tabs-panel
+    form
+    .calender-wrapper
+    fieldset
+    .field-wrapper.input-wrapper
+    input::placeholder {
+    font-size: 14px;
+    line-height: 18px;
 }
 
-input[type=date],
-input[type=input] {
-  border: unset;
+input[type="date"],
+input[type="input"] {
+    border: unset;
 }
 
-input[type=date]:focus,
-input[type=input]:focus {
-  outline: unset;
-  border-bottom: 2px solid #0F1E7D;
+input[type="date"]:focus,
+input[type="input"]:focus {
+    outline: unset;
+    border-bottom: 2px solid #0f1e7d;
 }
 
-input[type=date] {
-  font-size: 14px;
-  line-height: 18px;
+input[type="date"] {
+    font-size: 14px;
+    line-height: 18px;
 }
 
 .tabs.form-tabs .tabs-panel form label,
 .tabs.form-tabs .tabs-panel form label {
-  font-size: 14px;
-  line-height: 14px;
-  color: #0F1E7D;
+    font-size: 14px;
+    line-height: 14px;
+    color: #0f1e7d;
 }
 
 .tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper button {
-  margin: 0;
-  font-size: 15px;
-  line-height: 18px;
-  color: #FFFFFF;
-  padding: 15px 33px;
-  background-color: #0F1E7D;
-  border-radius: 8.43px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 18px;
+    color: #ffffff;
+    padding: 15px 33px;
+    background-color: #0f1e7d;
+    border-radius: 8.43px;
 }
 
-.tabs.form-tabs .tabs-panel form>fieldset {
-  display: flex;
+.tabs.form-tabs .tabs-panel form > fieldset {
+    display: flex;
 }
 
-.tabs.form-tabs .tabs-panel form>fieldset .field-wrapper {
-  margin-right: 33px;
+.tabs.form-tabs .tabs-panel form > fieldset .field-wrapper {
+    margin-right: 33px;
 }
 
 .tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper {
-  width: 300px;
-  padding-right: 20px;
-  display: flex;
-  gap: 5px;
-  height: 60px;
-  flex-direction: column;
+    width: 300px;
+    padding-right: 20px;
+    display: flex;
+    gap: 5px;
+    height: 60px;
+    flex-direction: column;
 }
 
 .tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper select {
-  border: unset;
-  background-color: rgb(244 245 245 / 1);
-  border-radius: 5px;
-  height: 100%;
-  font-size: 14px;
-  line-height: 14px;
-  padding-left: 20px;
+    border: unset;
+    background-color: rgb(244 245 245 / 1);
+    border-radius: 5px;
+    height: 100%;
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 20px;
 }
 
 .tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper select:focus {
-  outline: unset;
-  border-bottom: 1px solid #0F1E7D;
+    outline: unset;
+    border-bottom: 1px solid #0f1e7d;
 }
 
 .tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper {
-  margin: 0;
+    margin: 0;
+}
+
+/* flight-card*/
+
+.tabs.form-tabs > div {
+    display: flex;
+    /* flex-direction: c; */
+    gap: 20px;
+}
+
+.tabs.form-tabs > div > .flight-card {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background: linear-gradient(180deg, #ffffff 0%, #ecf2ff 100%);
+    box-shadow: 0px 4px 4px 0px #0640ad33;
+    border-radius: 10px;
+    font-family: "roboto";
+    color: #0f1e7de5;
+    font-size: 12px;
+}
+
+.tabs.form-tabs > div > .flight-card > .flight-info {
+    max-width: 500px;
+    width: 100%;
+    min-height: 180px;
+    border-right: 0.5px solid #6b65e9c4;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs.form-tabs > div > .flight-card > .flight-info > .from-info > strong {
+    color: white;
+    background: #0f1e7d;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.tabs.form-tabs > div > .flight-card > .airline-details {
+    max-width: 309px;
+    width: 100%;
+}
+
+.tabs.form-tabs > div > .flight-card > .airline-details {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.tabs.form-tabs > div > .flight-card > .airline-details > h4 {
+    font-size: 14px;
+    padding: 0px;
+}
+
+.tabs.form-tabs > div > .flight-card > .airline-details > button {
+    background-color: #0f1e7d;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.tabs.form-tabs > div > .flight-card > .airline-details > div {
+    font-weight: 600;
+}
+
+.card-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 786px) {
+    .tabs.form-tabs > div > .flight-card {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .tabs.form-tabs > div > .flight-card > .flight-info {
+        border: none;
+    }
+
+    .tabs.form-tabs > div > .flight-card > .airline-details {
+        align-items: center;
+    }
+
+    .tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper button {
+        padding: 10px 15px;
+    }
+    .tabs.form-tabs .tabs-panel form .destination-wrapper fieldset,
+    .tabs.form-tabs .tabs-panel form .calender-wrapper fieldset {
+        border: none;
+    }
+    .fare-card > .card-count > .card-count-text {
+      font-size: 14px;
+    }
+    .tabs.form-tabs > div{
+      flex-direction: column;
+    }
+    .tabs.form-tabs .tabs-panel form > fieldset{
+      flex-direction: column;
+    }
 }
 
 /* city wrapper css */
 .city-wrapper {
-  background-color: rgb(255 255 255 / 1);
-  border-radius: 20px;
-  width: 240px;
-  max-height: 380px;
-  overflow-y: scroll;
-  z-index: 20;
-  padding: 0 20px;
-  display: none;
-  box-shadow: 0 0 #0000, 0 0 #0000, 0px 4px 30px -5px rgba(0, 0, 0, .25);
-  scrollbar-width: none;
-  position: absolute;
-  top: 100%;
+    background-color: rgb(255 255 255 / 1);
+    border-radius: 20px;
+    width: 240px;
+    max-height: 380px;
+    overflow-y: scroll;
+    z-index: 20;
+    padding: 0 20px;
+    display: none;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0px 4px 30px -5px rgba(0, 0, 0, 0.25);
+    scrollbar-width: none;
+    position: absolute;
+    top: 100%;
 }
 
 .city-wrapper .city-option {
-  display: flex;
-  gap: 15px;
-  border-bottom: 1px solid rgb(214 215 219 / 1);
-  padding: 20px 0;
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid rgb(214 215 219 / 1);
+    padding: 20px 0;
 }
 
 .city-wrapper .city-option p.iata-code {
-  background-color: #0F1E7D;
-  color: #fff;
-  border-radius: 2px;
-  padding: 2px 6px;
-  font-size: 12px;
-  line-height: 14px;
-  font-weight: 500;
-  margin: 0;
+    background-color: #0f1e7d;
+    color: #fff;
+    border-radius: 2px;
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    margin: 0;
 }
 
 .city-wrapper .city-option p.city {
-  margin: 0;
-  color: #151515;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
+    margin: 0;
+    color: #151515;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
 }
 
 .show .city-wrapper {
-  display: block;
+    display: block;
 }
