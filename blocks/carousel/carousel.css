@@ -3,6 +3,11 @@
 @import url('services-carousel.css');
 @import url('banner-carousel.css');
 
+
+.carousel-container{
+    background-color: white;
+    margin-top: 50px;
+}
 .section.carousel-container .carousel-wrapper {
     position: relative;
     max-width: 1140px;
