@@ -4,6 +4,8 @@ import { loadFragment } from '../fragment/fragment.js';
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
+let removeClickOutsideHandler = null;
+
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
     const nav = document.getElementById('nav');
@@ -51,12 +53,21 @@ function focusNavSection() {
   document.activeElement.addEventListener('keydown', openOnKeydown);
 }
 
+function handleClickOutsideNav(e, nav, navSections, hamburger) {
+  if (
+    !navSections.contains(e.target) &&
+    !hamburger.contains(e.target)
+  ) {
+    toggleMenu(nav, navSections, false);
+  }
+}
+
 /**
  * Toggles all nav sections
  * @param {Element} sections The container element
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
-function toggleAllNavSections(sections, expanded = false) {
+function toggleAllNavSections(sections, expanded = 'false') {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
@@ -69,12 +80,21 @@ function toggleAllNavSections(sections, expanded = false) {
  * @param {*} forceExpanded Optional param to force nav expand behavior when not null
  */
 function toggleMenu(nav, navSections, forceExpanded = null) {
-  const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
+  const expanded = forceExpanded !== null ? forceExpanded : nav.getAttribute('aria-expanded') !== 'true';
   const button = nav.querySelector('.nav-hamburger button');
-  document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
-  nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-  toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
-  button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+  // Prevent background scroll only when overlay is active (mobile menu open)
+  if (expanded && !isDesktop.matches) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+  nav.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  toggleAllNavSections(navSections, 'false');
+  button.setAttribute('aria-label', expanded ? 'Close navigation' : 'Open navigation');
+  // Toggle overlay for mobile
+  if (nav._overlay) {
+    nav._overlay.style.display = (expanded && !isDesktop.matches) ? 'block' : 'none';
+  }
   // enable nav dropdown keyboard accessibility
   const navDrops = navSections.querySelectorAll('.nav-drop');
   if (isDesktop.matches) {
@@ -92,12 +112,22 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 
   // enable menu collapse on escape keypress
-  if (!expanded || isDesktop.matches) {
-    // collapse menu on escape press
+  if (expanded && !isDesktop.matches) {
+    // Add click outside handler for mobile only when menu is open
+    if (!removeClickOutsideHandler) {
+      const hamburger = nav.querySelector('.nav-hamburger');
+      const clickHandler = (e) => handleClickOutsideNav(e, nav, navSections, hamburger);
+      document.addEventListener('mousedown', clickHandler);
+      removeClickOutsideHandler = () => document.removeEventListener('mousedown', clickHandler);
+    }
     window.addEventListener('keydown', closeOnEscape);
-    // collapse menu on focus lost
-    nav.addEventListener('focusout', closeOnFocusLost);
+    // Don't add focusout listener for mobile - only use click outside
   } else {
+    // Remove click outside handler if present
+    if (removeClickOutsideHandler) {
+      removeClickOutsideHandler();
+      removeClickOutsideHandler = null;
+    }
     window.removeEventListener('keydown', closeOnEscape);
     nav.removeEventListener('focusout', closeOnFocusLost);
   }
@@ -113,28 +143,48 @@ export default async function decorate(block) {
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const fragment = await loadFragment(navPath);
 
-  if (!isDesktop.matches) {
-
-    const secondUlListTopMenu = fragment.querySelector(".default-content-wrapper ul:nth-child(2)")
-    const sectionsContentWrapper = fragment.querySelector("div:nth-child(3) .default-content-wrapper");
-    //appending secondUlListTopMenu in sectionsContentWrapper for mobile view
-
-    if (secondUlListTopMenu && sectionsContentWrapper) {
-      sectionsContentWrapper.appendChild(secondUlListTopMenu);
-    }
-  }
-
   // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
+  // Add overlay for mobile
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  overlay.style.display = 'none';
+
   const classes = ['top-menu', 'brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
   });
+
+  if (!isDesktop.matches) {
+
+    const secondUlListTopMenu = nav.querySelector(".nav-top-menu .default-content-wrapper ul:nth-child(2)")
+    const loginButton = nav.querySelector(".nav-top-menu .default-content-wrapper > .button-container")
+    const sectionsContentWrapper = nav.querySelector(".nav-sections .default-content-wrapper");
+
+    loginButton.classList.add('login-button');
+    // Add cross (close) button after login button
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'nav-login-close';
+    closeBtn.setAttribute('aria-label', 'Close menu');
+    closeBtn.addEventListener('click', () => {
+      const nav = document.getElementById('nav');
+      const navSections = nav.querySelector('.nav-sections');
+      toggleMenu(nav, navSections, false);
+    });
+    loginButton.appendChild(closeBtn);
+    //appending secondUlListTopMenu in sectionsContentWrapper for mobile view
+    if (secondUlListTopMenu && sectionsContentWrapper) {
+      sectionsContentWrapper.insertBefore(loginButton, sectionsContentWrapper.firstChild)
+      sectionsContentWrapper.appendChild(secondUlListTopMenu);
+    }
+    // Insert overlay as first child of nav for mobile only
+    nav.prepend(overlay);
+  }
 
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
@@ -152,13 +202,16 @@ export default async function decorate(block) {
         const innerList = navSection.querySelector('ul');
         innerList.style.setProperty('--before-bg', `url("${navSectionIconSRC}")`);
       }
-      // navSection.addEventListener('mouseover', (e) => {
-      //   if (isDesktop.matches) {
-      //     const expanded = navSection.getAttribute('aria-expanded') === 'true';
-      //     toggleAllNavSections(navSections);
-      //     navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-      //   }
-      // });
+
+      if (!isDesktop.matches) {
+        navSection.addEventListener('click', (e) => {
+          const scrollHeight = navSection.scrollHeight;
+          navSection.style.setProperty('--scroll-height', `${scrollHeight}px`);
+          const expanded = navSection.getAttribute('aria-expanded') === 'true';
+          toggleAllNavSections(navSections);
+          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        });
+      }
     });
   }
 
@@ -179,4 +232,6 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  // Store overlay on nav for access in toggleMenu
+  nav._overlay = overlay;
 }

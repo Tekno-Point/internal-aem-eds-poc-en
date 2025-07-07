@@ -13,6 +13,7 @@
 :root {
   /* colors */
   --background-color: white;
+  --brand-bg-color: linear-gradient(to bottom, #f58220 -18%, #b02a30 127%);
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
@@ -20,8 +21,8 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Muli', roboto, roboto-fallback, sans-serif;
+  --heading-font-family: 'Muli', roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
