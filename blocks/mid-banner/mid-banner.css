@@ -1,0 +1,54 @@
+.mid-banner .mb-card{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #EBAFAA 0%, #F3D1C9 83.44%, #F4D8CF 100%);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 81px 0 58px;
+    margin-bottom: 50px;
+}
+
+.mb-card .mb-text{
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 12px;
+}
+
+.mb-card .mb-text .button-container a{
+    color: #9B1E26;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.457px;
+    text-decoration-line: underline;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    background-color: unset;
+}
+
+@media (max-width:767px) {
+    .mb-card{
+        padding: 0;
+        margin-bottom: 24px;
+    }
+
+    .mb-card .mb-text{
+        padding: 18px 0 17px 38px;
+    }
+
+    .mb-card .mb-text h2{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 6px;
+    }
+
+    .mb-card .mb-text .button-container a{
+        font-size: 14px;
+    }
+}

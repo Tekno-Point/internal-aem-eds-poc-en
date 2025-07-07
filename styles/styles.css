@@ -276,7 +276,8 @@ main .section.highlight {
     letter-spacing: -0.5px;
 }
 
-.section.personalloanbenefits h2{
+.section.personalloanbenefits h2,
+.section.typeofpersonalloan h2{
   color: #25243B;
     font-size: 24px;
     font-style: normal;
@@ -285,4 +286,13 @@ main .section.highlight {
     letter-spacing: -0.923px;
     margin-bottom: 24px;
     display: block;
+}
+
+@media (max-width:767px) {
+  .section.personalloanbenefits h2,
+  .section.typeofpersonalloan h2{
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 13px;
+  }
 }

@@ -80,5 +80,17 @@
     "components": [
       "mid-banner-item"
     ]
+  },
+  {
+    "id": "pl-blogs",
+    "components": [
+      "pl-blogs-item"
+    ]
+  },
+  {
+    "id": "pl-swipper-blogs",
+    "components": [
+      "pl-swipper-blogs-item"
+    ]
   }
 ]
