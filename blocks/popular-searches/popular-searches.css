@@ -1,4 +1,4 @@
-.section.popular-search>div h1 {
+.section.popular-search>div>div p {
   font-size: 36px;
   font-family: "Inter-Bold";
   font-style: normal;
@@ -14,24 +14,31 @@
   flex-wrap: wrap;
 }
 
-.popular-searches>div>div ul,.popular-searches>div>div >ul >li {
+.popular-searches>div>div ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
-  width: max-content !important;
-  border: 1px solid #58595B;
-  padding: 7px 12px 6px;
-  margin: 0 12px 12px 0;
   cursor: pointer;
   line-height: normal;
 }
 
 .popular-searches>div>div ul li {
+  display: flex;
   line-height: normal;
+  /* border: 1px solid #58595B;
+  padding: 7px 12px 6px; */
 }
 
+.popular-searches>div>div>ul>li .button-container {
+  margin: 0;
+  padding: 0;
+}
 
-.popular-searches>div>div ul li a {
+.popular-searches>div>div>ul>li .button {
+  margin: 0;
   color: #58595B;
   font-size: 16px;
   font-style: normal;
@@ -39,6 +46,11 @@
   font-family: "Inter-Regular";
   line-height: normal;
   letter-spacing: -0.267px;
+  border: 1px solid #58595B;
+  padding: 7px 12px 6px;
+  background: transparent;
+  border-radius: inherit;
+  white-space: unset;
 }
 
 @media screen and (max-width: 767.99px) {
