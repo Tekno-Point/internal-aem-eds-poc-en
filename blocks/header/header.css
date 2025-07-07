@@ -1,4 +1,10 @@
 /* header and nav layout */
+
+header a.button:any-link,
+header button {
+  all: unset;
+}
+
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
@@ -790,10 +796,10 @@ header nav .nav-tools .default-content-wrapper>ul>li[aria-expanded="true"]>ul {
   /* transform: translateX(-50%); */
 }
 
-a.button:any-link,
+/* a.button:any-link,
 button {
   all: unset;
-}
+} */
 
 
 header nav .nav-tools .default-content-wrapper>ul>li>ul>li {
