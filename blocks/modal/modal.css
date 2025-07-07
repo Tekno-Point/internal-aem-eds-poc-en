@@ -84,3 +84,161 @@ body.modal-open {
 .modal dialog .section {
     padding: 0;
 }
+
+/*  */
+
+.modal.block dialog:has(.section.modal-call) {
+    all: unset;
+    width: auto;
+    max-height: none;
+    max-width: 810px;
+    top: 62px;
+    /* right: 0; */
+    left: calc((1416px - 357px) / 2);
+    /* left: unset; */
+    /* max-width: 658px; */
+    /* overflow-y: auto; */
+    height: auto;
+    transform: unset;
+    bottom: unset;
+    border: unset;
+    padding: 20px;
+    background: #F2F7FB;
+    filter: drop-shadow(0px 0px 14px rgba(0, 115, 187, 0.25));
+    border-radius: 8px;
+}
+
+
+.modal.block dialog:has(.section.modal-call)::backdrop {
+    /* all: unset; */
+    background: unset;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content {
+    all: unset;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .default-content-wrapper {}
+
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row {
+    align-items: start;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1,
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-2 {
+    /* display: flex; */
+    padding: 20px 20px 12px 20px;
+    flex: unset;
+    border-radius: 8px;
+    border: 1px solid #DAEEF8;
+    background: #FFF;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1 {
+    display: flex;
+    gap: 20px;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1>ul {
+    margin: unset;
+    padding: unset;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1 ul li em:has(a span),
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-2 p em:has(a span) {
+    border-radius: 100px;
+    border: 1px solid #0B80C3;
+    padding: 8px 15px 8px 21px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1 ul li em:has(a span) a {
+    display: flex;
+    align-items: center;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1 ul li,
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-2 p {
+    color: #58595B;
+    font-family: 'HelveticaNeueLTStd-Bd', sans-serif;
+    font-size: 0.875rem;
+    line-height: 110%;
+    list-style: none;
+    padding: 5px 0;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1 ul li em,
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-2 p em {
+    color: #D62049;
+    font-size: 1rem;
+    font-style: normal;
+
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1 ul li em sub {
+    color: #000;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-2 p {
+    padding: unset;
+    margin: unset;
+    color: #000;
+    font-family: 'HelveticaNeueLTStd-Bd', sans-serif;
+    font-size: 0.875rem;
+    line-height: 110%;
+    padding: 5px 0;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-2 p em sub {
+    color: #58595B;
+    font-family: 'HelveticaNeueLTStd-Bd', sans-serif;
+    font-size: 0.875rem;
+    line-height: 110%;
+}
+
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1 ul li u,
+.modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-2 ul li u {
+    color: #0073BB;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    column-gap: 5px;
+    line-height: normal;
+    margin-bottom: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+
+@media (max-width:900px) {
+    .modal.block dialog:has(.section.modal-call) {
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-height: calc(100% - 200px);
+        overflow: hidden;
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+
+
+    .modal.block dialog:has(.section.modal-call)::backdrop {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1 {
+        flex-direction: column;
+    }
+
+    .modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row{
+        gap: 30px;
+    }
+
+    .modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-1,
+    .modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row .column-col-2 {
+        width: 100%;
+    }
+}

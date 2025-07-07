@@ -1090,7 +1090,6 @@ header nav .nav-tools .default-content-wrapper>ul>li::after {
     display: block;
   }
 
-
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li[aria-expanded='false']>ul {
     max-height: 0;
     overflow: hidden;
