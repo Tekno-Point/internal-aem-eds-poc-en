@@ -156,6 +156,46 @@
           {
             "name": "Modal Hamburger",
             "value": "modal-hamburger"
+          },
+          {
+            "name": "Content1",
+            "value": "content1"
+          },
+          {
+            "name": "Content2",
+            "value": "content2"
+          },
+          {
+            "name": "Content3",
+            "value": "content3"
+          },
+          {
+            "name": "Content4",
+            "value": "content4"
+          },
+          {
+            "name": "Content5",
+            "value": "content5"
+          },
+          {
+            "name": "Content6",
+            "value": "content6"
+          },
+          {
+            "name": "Image2",
+            "value": "image2"
+          },
+          {
+            "name": "Image3",
+            "value": "image3"
+          },
+          {
+            "name": "Image4",
+            "value": "image4"
+          },
+          {
+            "name": "Insurance Plan Form",
+            "value": "insurance-plan-form"
           }
         ]
       }
@@ -258,6 +298,125 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "text",
+        "name": "link",
+        "value": "",
+        "label": "Link",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "custom-text",
+    "fields": [
+      {
+        "component": "text",
+        "name": "text",
+        "value": "",
+        "label": "Custom Text",
+        "valueType": "string",
+        "description": "Custom plain text block for content display"
+      }
+    ]
+  },
+  {
+    "id": "custom-richtext",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Custom Richtext",
+        "valueType": "string",
+        "description": "Custom rich text block for content display"
+      }
+    ]
+  },
+  {
+    "id": "custom-richtext-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Custom Richtext",
+        "valueType": "string",
+        "description": "Custom rich text item for content display"
+      }
+    ]
+  },
+  {
+    "id": "term-insurance-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id":"aia-banner-content",
+    "fields":[
+      {
+        "component": "reference",
+        "name": "col1_SampoornaImage",
+        "label": "Sampoorna Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_SampoornaImageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Ratings And Customer Count",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Life Cover Pointer and Tagline IMG",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "col3_amImage",
+        "label": "Ambassador Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col3_amImageAlt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "form_url",
+        "label": "Form URL"
+      },
+      {
+        "component": "text",
+        "name": "form_api",
+        "label": "Form API"
       }
     ]
   }

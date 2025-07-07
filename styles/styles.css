@@ -300,8 +300,7 @@ main img {
 
 /* sections */
 main>.section {
-  /* margin: 40px 0; */
-  margin: unset;
+  margin: 40px 0;
 }
 
 main>.section>div {
@@ -329,483 +328,362 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-/* business css */
 
-/* .businessloan>.default-content-wrapper>p{
-          font-size: 16px;
-}
-.businessloan>.default-content-wrapper>h1{
-        font-family: "Montserrat-Bold";
-  margin: 0px;
-          font-size: 36px;
-        line-height: 1.2;
-        max-width: 828px;
-        width: 100%;
+/* My CSS - RU */
+/* List icon - Content 1 */
 
-}
-.businessloan>.default-content-wrapper>ul{
-  list-style: none;
-  padding: 0px;
-} */
-
-.table-wrapper {
-  display: grid;
-  grid-template-columns: 392px 1fr;
-  font-family: "Open Sans", sans-serif;
-  background-color: #fff;
-  position: relative;
-  gap: 0 2%;
-  padding: 0 80px;
-}
-
-/* #tableofcontent{
-  grid-column: 1;
-  grid-row: 1 / span 5;
-  }
-  #NeedforDaycareBusinessIndia{
-    grid-column: 2;
-    }
-    #StepsStartDaycarBusinessedit{
-      grid-column: 2;
-      }
-      #StepstoApplyBusinessLoan{
-        grid-column: 2;
-        }
-        #FrequentlyAskedQuestions{
-          grid-column: 2;
-}
-#AbouttheAuthor{
-grid-column: 2;
-}
-#toConclude{
-  grid-column: 2;
-  } */
-.table-wrapper .section[data-id="tableofcontent"] {
-  grid-column: 1;
-  position: sticky;
-  top: 70px;
-  padding: 0 15px;
-  margin-top: 0px;
-  padding: 0;
-}
-
-.table-wrapper .section:not([data-id="tableofcontent"]) {
-  grid-column: 2;
-  padding: 0;
-}
-
-* Left sidebar section */ .table-wrapper .section[data-id="tableofcontent"] {
-  padding-top: 20px;
-  padding-right: 24px;
-  border-right: 1px solid #e0e0e0;
-}
-
-/* Title */
-.table-wrapper .section[data-id="tableofcontent"] .default-content-wrapper>p {
-  font-size: 24px;
-  font-weight: 700;
-  color: #1d1d1f;
-  margin-bottom: 24px;
-}
-
-/* List container */
-.table-wrapper .section[data-id="tableofcontent"] ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-height: 435px;
-  overflow: auto;
-}
-
-/* List items */
-.table-wrapper .section[data-id="tableofcontent"] li {
-  /* padding: 14px 0; */
-  padding: 30px 82px 30px 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-/* Links */
-.table-wrapper .section[data-id="tableofcontent"] li a {
-  font-size: 16px;
-  font-weight: 400;
-  color: #1d1d1f;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: font-weight 0.3s ease;
+.content1 .custom-richtext li,
+.content4 .custom-richtext li {
+  display: block;
+  /* gap: 10px;
+  align-items: start; */
+  padding-left: 34px;
   position: relative;
 }
 
-/* Arrow on hover */
-.table-wrapper .section[data-id="tableofcontent"] li a:hover::after {
-  content: "›";
-  font-size: 18px;
-  color: #1d1d1f;
+.content1 .custom-richtext li strong,
+.content4 .custom-richtext li strong {
+  color: #0073BB;
+}
+
+.content1 .custom-richtext li::before,
+.content4 .custom-richtext li::before {
+  content: '';
+  /* background: url('../icons/tick.svg'); */
+  background: url('../icons/tick2.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 20px;
+  height: 20px;
+  display: block;
   position: absolute;
-  right: 0;
+  top: 7px;
+  left: 0;
 }
 
-/* Bold text on hover */
-.table-wrapper .section[data-id="tableofcontent"] li a:hover {
-  font-weight: 600;
+
+.content2>div.default-content-wrapper>p:nth-child(2) {
+  display: none;
 }
 
-.highlight {
-  outline: 2px solid #004aad;
-  transition: outline 0.3s ease;
+.image2>div.default-content-wrapper>p:nth-child(2),
+.image3>div.default-content-wrapper>p:nth-child(2) {
+  display: none;
 }
 
-/* business css */
 
-.businessloan>.default-content-wrapper {
-  padding: 0 80px;
-  max-width: 100%;
-}
-
-.businessloan>.default-content-wrapper>p {
-  font-size: 16px;
-}
-
-.businessloan>.default-content-wrapper>h1 {
-  font-family: "Montserrat-Bold";
-  margin: 0px;
-  font-size: 36px;
-  line-height: 1.2;
-  max-width: 828px;
-  width: 100%;
-
-}
-
-.businessloan>.default-content-wrapper>ul {
-  list-style: none;
-  padding: 0px;
-}
-
-.businessloan>.default-content-wrapper>ul>li>ul {
-  list-style: none;
+.custom-richtextblock {
   display: flex;
-  gap: 20px;
-  align-items: center;
-  padding: 0px;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
-.businessloan>.default-content-wrapper>ul>li>ul>li>ul {
-  list-style: none;
-  padding: 0px;
-}
-
-.businessloan>.default-content-wrapper>ul>li>ul>li>ul>li:nth-child(1) {
-  font-family: "Montserrat-SemiBold";
-  line-height: normal;
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.businessloan>.default-content-wrapper>ul>li>ul>li>ul>li:nth-child(2) {
-  font-family: "Montserrat-Regular";
-  line-height: normal;
-  font-size: 13px;
-  margin-bottom: 8px;
-  font-weight: 400px;
-}
-
-.section[data-id="FrequentlyAskedQuestions"] {
-  padding-bottom: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .table-wrapper {
-    grid-template-columns: 1fr;
-    padding: 0 15px;
-  }
-
-  .businessloan>.default-content-wrapper {
-    padding: 0 15px;
-  }
-
-  .table-wrapper .section[data-id="tableofcontent"] {
-    display: none;
-  }
-
-  main {
-    grid-template-columns: 1fr;
-  }
-
-  .table-wrapper .section[data-id="tableofcontent"] {
-    grid-column: unset;
-  }
-
-  .table-wrapper .section:not([data-id="tableofcontent"]) {
-    grid-column: 1;
-  }
-
-  .table-wrapper .section[data-id="FrequentlyAskedQuestions"] {
-    padding-bottom: 0;
-  }
+.content3 .custom-richtextblock>div {
+  background-color: #F2F7FB;
+  padding: 20px 40px 20px 40px;
+  height: 100%;
+  max-width: 42%;
 }
 
 
-.table-wrapper>.section>.default-content-wrapper>h2 {
-  font-family: "Montserrat-Medium";
-  font-size: 44px;
-
-}
-
-.table-wrapper>.section>.default-content-wrapper>p {
-  font-size: 18px;
-}
-
-/* portlet-journal css start */
-.portlet-journal.columns-container {
-  width: 100%;
-}
-
-.portlet-journal .columns-wrapper {
-  max-width: 100%;
-  width: 91.2%;
-  margin: 0 auto;
-  padding: 60px 0;
-}
-
-.portlet-journal .column-row {
-  display: flex;
-  /* flex-wrap: wrap; */
-  gap: unset;
-  align-items: self-start;
-  justify-content: space-between;
-}
-
-.portlet-journal .column-col-1 {
-  flex: 0 0 50%;
-  max-width: 50%;
-  padding-left: 15px;
-  padding-right: 15px;
-  display: flex;
-}
-
-.portlet-journal .column-col-2 {
-  flex: 0 0 43%;
-  max-width: 43%;
-  padding-left: 15px;
-  padding-right: 20px;
-}
-
-.portlet-journal .column-col-2>p:first-child {
-  margin: 10px 0;
-  color: #231f20;
-  font-family: "Montserrat-medium";
-  font-size: 23px;
-  font-weight: 500;
-  line-height: 28px;
-  text-align: left;
-  line-height: 122%;
-  word-wrap: break-word;
-}
-
-.portlet-journal .column-col-2>p:nth-child(2) {
-  margin-bottom: 14px;
-  font-family: "Montserrat-Bold";
-  font-size: 23px;
-  text-align: left;
-  font-weight: 700;
-  margin: 48px 0;
-  margin-bottom: 14px;
-}
-
-.portlet-journal .column-col-2>p:nth-child(3) {
-  font-size: 18px;
-  font-family: "Montserrat-medium";
-  font-weight: 500;
-  line-height: 27px;
-  margin-bottom: 32px;
-}
-
-.portlet-journal .column-col-2>ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 20px;
-  margin-bottom: 34px;
-  max-width: 540px;
-}
-
-.portlet-journal .column-col-2>ul>li {
-  display: flex;
-  flex-direction: column;
-  font-size: 52px;
-  font-family: "Montserrat-Medium";
-  font-weight: 500;
-  line-height: normal;
-}
-
-.portlet-journal .column-col-2>ul>li ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.portlet-journal .column-col-2>ul>li ul li {
-  font-size: 20px;
-  font-family: "Montserrat-medium";
-  font-weight: 500;
-  line-height: normal;
-  margin-top: 4px;
-}
-
-.portlet-journal .column-col-2 .button-container {
-  width: 250px;
+.content5 .custom-richtextblock>div {
+  background-color: #F2F7FB;
+  padding: 20px 40px 20px 40px;
+  height: 100%;
+  max-width: 25%;
   text-align: center;
 }
 
-.portlet-journal .column-col-2 .button-container .button {
-  display: block;
-  min-width: 250px;
-  margin-top: 20px;
-  background: #034EA2;
-  border-color: #034EA2;
-  border-radius: 8px;
-  padding: 8px 32px;
-  text-transform: uppercase;
-  font-family: "Montserrat-SemiBold";
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.portlet-journal .column-col-1 img {
-  display: block;
-  margin: auto;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 8px;
-  overflow: hidden;
-  height: 600px;
-  width: 585px;
-}
-
-@media screen and (max-width: 900px) {
-  .portlet-journal.columns-container {
-    margin: 50px 0;
-  }
-
-  .portlet-journal .column-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .portlet-journal .column-col-1 {
-    flex: unset;
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-  }
-
-  .portlet-journal .column-col-2 {
-    flex: unset;
-    max-width: 100%;
-    padding: 0;
-    width: 96%;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
-  .portlet-journal .column-col-2>ul>li {
-    font-size: 28px;
-  }
-
-  .portlet-journal .column-col-2>p:first-child {
-    font-size: 20px;
-    font-family: "Montserrat-regular";
-    font-weight: 400;
-  }
-
-  .portlet-journal .column-col-2 .button-container {
-    width: 100%;
-  }
-
-  .portlet-journal .column-col-2 .button-container .button {
-    min-width: inherit;
-    font-size: 18px;
-  }
-
-  .portlet-journal .column-col-2>ul>li ul li {
-    font-size: 16px;
-    line-height: 1.2;
-  }
-
-  .portlet-journal .column-col-2>p:nth-child(2) {
-    margin-top: 25px;
-    margin-bottom: 0;
-    font-size: 20px;
-  }
-
-  .portlet-journal .column-col-2>p:nth-child(3) {
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 25px;
-    line-height: 1.5;
-  }
-
-  .portlet-journal .columns-wrapper {
-    padding: 10px 0;
-  }
-}
-
-
-/* portlet-journal css End */
-@media (width >=900px) {
-  main>.section>div {
-    padding: unset;
-    max-width: 100%;
-  }
-}
-
-
-/* Quick Loans Css Start */
-.section.quick-loans {
-  margin: 0;
-  padding: 0;
-}
-
-.section.quick-loans>div>p:first-child {
-  display: block;
-  padding: 0;
-  margin: 0;
-  margin-bottom: -8px;
-}
-
-/* .section.quick-loans>div.default-content-wrapper>p:nth-child(2) {
-  display: none;
-} */
-
-.section.quick-loans>div>p:last-child {
-  display: none;
-}
-
 @media screen and (max-width: 768px) {
-  .section.quick-loans>div {
-    margin: 0;
-    padding: 0;
-    margin-bottom: -8px;
-  }
-
-  .section.quick-loans>div>p:first-child {
+  .content2>div.default-content-wrapper>p:nth-child(1) {
     display: none;
   }
 
-  .section.quick-loans>div>p:last-child {
+  .content2>div.default-content-wrapper>p:nth-child(2) {
     display: block;
-    display: block;
-    margin: 0;
-    padding: 0;
-    margin-bottom: -10px;
   }
+
+  .content3 .custom-richtextblock>div {
+    max-width: 100%;
+  }
+
+  .content5 .custom-richtextblock>div {
+    max-width: 100%;
+  }
+
+  .image2>div.default-content-wrapper>p:nth-child(1) {
+    display: none;
+  }
+
+  .image2>div.default-content-wrapper>p:nth-child(2) {
+    display: block;
+  }
+
+  .image3>div.default-content-wrapper>p:nth-child(1) {
+    display: none;
+  }
+
+  .image3>div.default-content-wrapper>p:nth-child(2) {
+    display: block;
+  }
+
 }
 
-/* Quick Loans Css End */
+
+/* CSS for insurance plan form */
+
+
+.insurance-plan-form .form-wrapper {
+  max-width: 1366px;
+  padding: 20px 60px;
+  background: linear-gradient(180deg, rgba(242, 247, 251, 0) -13.13%, #F2F7FB 86.87%);
+  border: 1px solid #F2F7FB;
+  box-shadow: 0px 0px 15px rgba(88, 89, 91, 0.25);
+  border-radius: 20px;
+}
+
+.insurance-plan-form .form-wrapper .form form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.insurance-plan-form .form-wrapper .form .heading-wrapper {
+  width: 100%;
+}
+
+.insurance-plan-form .form-wrapper .form .heading-wrapper h2 {
+  color: #333333;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: -0.007em;
+  margin: 0 0 10px;
+}
+
+.insurance-plan-form .form-wrapper .form .plaintext-wrapper,
+.insurance-plan-form .form-wrapper .form .plaintext-wrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  margin: 0 0 11px;
+  width: 100%;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.heading-wrapper, .plaintext-wrapper, .selection-wrapper) {
+  max-width: 32.3%;
+  width: 100%;
+  margin: 0;
+  /* background-color: red; */
+  margin-right: 10px;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) label,
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) legend {
+  font-size: 16px;
+  line-height: 16px;
+  color: #333;
+  font-weight: 400;
+  margin: 0;
+  max-width: 80%;
+  width: 100%;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) input {
+  max-width: 80%;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px 0 10px;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid #e6e7e8;
+  border-radius: 0;
+  color: #333333;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) input::placeholder {
+  color: #d3d4d5;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper fieldset {
+  display: flex;
+  gap: 15px;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper {
+  max-width: 100%;
+  margin: 0;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper {
+  position: relative;
+  max-width: 62px;
+  /* padding-right: 7px; */
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper::after {
+  content: '';
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  width: 10px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  right: 2px;
+  top: 42%;
+  transform: translateY(-50%) rotate(45deg);
+  z-index: 1;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper label {
+  display: none;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper select {
+  border: none;
+  padding: 0;
+  appearance: none;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper.mobile-btn {
+  display: none;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper .button {
+  margin: 0;
+  background-color: #d81b46;
+  box-shadow: 0 0 10px 0 rgb(214 32 73 / 10%);
+  padding: 10px;
+  max-width: 220px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper {
+  margin: 13px 0 0;
+  gap: 8px;
+  align-items: center;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper input {
+  width: 18px;
+  height: 18px;
+  outline: none;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper label {
+  color: #58595B;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .insurance-plan-form {
+    padding: 20px;
+  }
+
+  .insurance-plan-form .form-wrapper {
+    padding: 30px 20px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .heading-wrapper h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .insurance-plan-form .form-wrapper .form .plaintext-wrapper,
+  .insurance-plan-form .form-wrapper .form .plaintext-wrapper p {
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    margin-bottom: 0 0 8px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper:not(.heading-wrapper, .plaintext-wrapper, .selection-wrapper) {
+    max-width: 100%;
+    margin: 0 0 8px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) label,
+  .insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) legend {
+    font-size: 12px;
+    line-height: 12px;
+    max-width: 100%;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) input {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 6px 0 10px;
+    max-width: 100%;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper {
+    max-width: 48px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper select {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper::after {
+    width: 7px;
+    height: 7px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper.desktop-btn {
+    display: none;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper.mobile-btn {
+    display: flex;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper {
+    justify-content: center;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper .button {
+    margin: 8px 0 0;
+    max-width: 240px;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.67px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper {
+    margin: 2px 0 0;
+    align-items: start;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper label {
+    font-size: 8px;
+  }
+  
+}

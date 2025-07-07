@@ -1,7 +1,7 @@
+import modifyForm from "../aia-banner/bannerForm.js";
 import createField from "./form-fields.js";
 
 async function createForm(formHref, submitHref) {
-  console.log(formHref);
   const { pathname } = new URL(formHref);
   const resp = await fetch(pathname);
   const json = await resp.json();
@@ -90,13 +90,12 @@ export default async function decorate(block) {
   const formLink = links.find(
     (link) => link.startsWith(window.location.origin) && link.endsWith(".json")
   );
-  const submitLink = links?.find((link) => link !== formLink) || "auto-form";
-  if (!formLink ) return;
+  const submitLink = links.find((link) => link !== formLink);
+  if (!formLink || !submitLink) return;
 
-  const img = block?.querySelector("picture") ;
   const form = await createForm(formLink, submitLink);
   block.replaceChildren(form);
-  img?block?.append(img):'';
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const valid = form.checkValidity();
@@ -110,30 +109,5 @@ export default async function decorate(block) {
       }
     }
   });
-
-  if (block.querySelector(".errorEmail") == null) {
-    block.querySelector(".email-wrapper").innerHTML +=
-      //   "<label class='errorEmail'>Enter Your Email</label>";
-      "<p class='errorEmail'>Enter Your Email</p>";
-    block.querySelector(".errorEmail").style.display = "none";
-  }
-
-  // block.querySelector("picture img").addEventListener("click", () => {
-  //   if (block.querySelector("[type='email']").value == "") {
-  //     block.querySelector(".errorEmail").style.display = "block";
-  //     // block.querySelector("picture img").style.top = "53%"
-  //   }
-  // });
-
-  // block.querySelector("[type=email]").addEventListener("keyup", (event) => {
-  //   if (event.target.value != "") {
-  //     block.querySelector(".errorEmail").style.display = "none";
-  //     block.querySelector("picture img").style.top = "57%"
-  //   } else {
-  //     block.querySelector(".errorEmail").style.display = "block";
-  //     block.querySelector(".errorEmail").style.color = "red";
-  //     block.querySelector("picture img").style.top = "53%"
-
-  //   }
-  // });
+  modifyForm(block)
 }

@@ -16,7 +16,14 @@
       "cards",
       "columns",
       "fragment",
-      "search"
+      "search",
+      "embed",
+      "custom-text",
+      "custom-richtext",
+      "custom-richtextblock",
+      "term-insurance",
+      "aia-banner",
+      "form"
     ]
   },
   {
@@ -38,6 +45,24 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "term-insurance",
+    "components": [
+      "term-insurance-item"
+    ]
+  },
+  {
+    "id": "custom-richtextblock",
+    "components": [
+      "custom-richtext-item"
+    ]
+  },
+  {
+    "id": "aia-banner",
+    "components": [
+      "aia-banner-content"
     ]
   }
 ]
