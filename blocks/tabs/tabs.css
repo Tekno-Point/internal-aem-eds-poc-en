@@ -456,3 +456,15 @@ input[type="date"] {
 .show .city-wrapper {
     display: block;
 }
+
+
+/* .tabs-container{
+  position: absolute;
+  top: 520px;
+  left: 10px;
+  z-index: 2;
+} */
+ 
+.button.disabled {
+  opacity: 0.8;
+}

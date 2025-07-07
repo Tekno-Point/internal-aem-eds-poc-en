@@ -407,31 +407,31 @@ async function handleSubmit(form) {
   const submit = form.querySelector('button[type="submit"]');
   try {
     form.setAttribute('data-submitting', 'true');
-    submit.disabled = true;
+    // submit.disabled = true;
 
-    // create payload
-    const payload = generatePayload(form);
-    const response = await fetch(form.dataset.action, {
-      method: 'POST',
-      body: JSON.stringify({ data: payload }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    if (response.ok) {
-      if (form.dataset.confirmation) {
-        window.location.href = form.dataset.confirmation;
-      }
-    } else {
-      const error = await response.text();
-      throw new Error(error);
-    }
+    // // create payload
+    // const payload = generatePayload(form);
+    // const response = await fetch(form.dataset.action, {
+    //   method: 'POST',
+    //   body: JSON.stringify({ data: payload }),
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // });
+    // if (response.ok) {
+    //   if (form.dataset.confirmation) {
+    //     window.location.href = form.dataset.confirmation;
+    //   }
+    // } else {
+    //   const error = await response.text();
+    //   throw new Error(error);
+    // }
   } catch (e) {
     // eslint-disable-next-line no-console
     console.error(e);
   } finally {
     form.setAttribute('data-submitting', 'false');
-    submit.disabled = false;
+    // submit.disabled = false;
   }
 }
 
