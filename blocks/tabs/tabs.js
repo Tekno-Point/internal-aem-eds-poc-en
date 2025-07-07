@@ -1990,7 +1990,8 @@ export default async function decorate(block) {
 
     const countries = new Intl.DisplayNames(['en'], { type: 'region' });
     const locations = data.body.dictionaries.locations;
-
+    
+    const cardWrapper = document.createElement('div');
     data.body.data.forEach((flight, index) => {
       const segment = flight.itineraries[0].segments[0];
 
@@ -2078,7 +2079,8 @@ export default async function decorate(block) {
 
       airlineDetails.append(heading, detailDiv, durationDiv, departureDiv, button);
       card.append(flightInfo, airlineDetails);
-      block.appendChild(card);
+      cardWrapper.appendChild(card);
     });
+    block.appendChild(card);
   });
 }
