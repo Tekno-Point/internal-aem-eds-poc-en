@@ -20,7 +20,8 @@
       "swipper-card",
       "rte-block",
       "git-block",
-      "personal-loan-block"
+      "personal-loan-block",
+      "mid-banner"
     ]
   },
   {
@@ -72,6 +73,12 @@
     "id": "personal-loan-block",
     "components": [
       "personal-loan-item"
+    ]
+  },
+  {
+    "id": "mid-banner",
+    "components": [
+      "mid-banner-item"
     ]
   }
 ]

@@ -126,8 +126,8 @@
             "value": "bankProducts"
           },
           {
-            "name": "PL Faqs",
-            "value": "pl-faqs"
+            "name": "Mid Banner",
+            "value": "mid-banner"
           },
           {
             "name": "PL Faqs",
@@ -323,6 +323,32 @@
   },
   {
     "id": "personal-loan-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "mid-banner-item",
     "fields": [
       {
         "component": "reference",
