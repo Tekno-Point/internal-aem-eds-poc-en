@@ -170,6 +170,9 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2):hover {
   box-shadow: 0px 0px 5px rgba(92, 94, 100, 0.69);
 }
+main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2):hover > li:first-child p {
+  color: #0073BB;
+}
 @media screen and (max-width: 768px) {
   main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) {
     width: 89%;
@@ -195,9 +198,6 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   color: #A7A9AC;
   text-transform: uppercase;
   margin-bottom: 20px;
-}
-main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child p:hover {
-  color: #0073BB;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) > li:first-child ul {
   display: flex;
