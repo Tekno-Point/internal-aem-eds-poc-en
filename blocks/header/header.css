@@ -1087,6 +1087,7 @@ header nav .nav-tools .default-content-wrapper>ul>li::after {
 
   header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li[aria-expanded='true']:has(>ul) {
     padding: unset;
+    display: block;
   }
 
 
@@ -1256,7 +1257,7 @@ header nav .nav-tools .default-content-wrapper>ul>li::after {
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li[aria-expanded='true']>ul:has(>li >.default-content-wrapper) {
-    width: 100%;
+    width: calc(100% - 40px);
     height: max-content;
   }
 
