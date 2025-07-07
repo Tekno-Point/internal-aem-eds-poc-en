@@ -163,10 +163,13 @@ export default async function decorate(block) {
   if (!isDesktop.matches) {
 
     const secondUlListTopMenu = nav.querySelector(".nav-top-menu .default-content-wrapper ul:nth-child(2)")
-    const loginButton = nav.querySelector(".nav-top-menu .default-content-wrapper > .button-container")
+    const loginButton = nav.querySelector(".nav-top-menu .default-content-wrapper > .button-container");
+    const callBack = nav.querySelector(".nav-top-menu .default-content-wrapper > ul li:nth-child(2) a");
     const sectionsContentWrapper = nav.querySelector(".nav-sections .default-content-wrapper");
 
     loginButton.classList.add('login-button');
+    callBack.classList.add('callback');
+
     // Add cross (close) button after login button
     const closeBtn = document.createElement('button');
     closeBtn.className = 'nav-login-close';
@@ -179,7 +182,9 @@ export default async function decorate(block) {
     loginButton.appendChild(closeBtn);
     //appending secondUlListTopMenu in sectionsContentWrapper for mobile view
     if (secondUlListTopMenu && sectionsContentWrapper) {
-      sectionsContentWrapper.insertBefore(loginButton, sectionsContentWrapper.firstChild)
+      sectionsContentWrapper.insertBefore(loginButton, sectionsContentWrapper.firstChild);
+      // Insert callBack after the first child of sectionsContentWrapper
+      sectionsContentWrapper.insertBefore(callBack, sectionsContentWrapper.firstChild.nextSibling);
       sectionsContentWrapper.appendChild(secondUlListTopMenu);
     }
     // Insert overlay as first child of nav for mobile only

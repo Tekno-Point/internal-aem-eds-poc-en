@@ -192,11 +192,11 @@ header .nav-top-menu .default-content-wrapper>ul {
   align-items: center;
 }
 
-@media (width < 900px) {
+/* @media (width < 900px) {
  header .nav-top-menu .default-content-wrapper>ul li:nth-child(n+2):nth-child(-n+3) {
    display: none;
  }
-}
+} */
 
 @media (width >=900px) {
 
@@ -413,11 +413,23 @@ header nav .nav-sections ul>li>ul>li {
     transition: all 0.5s ease;
   }
 
+  header .nav-sections li[aria-expanded] .button-container .button {
+    display: block;
+    color: #282828;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 2.5rem 0;
+    line-height: 1;
+    background: transparent;
+    margin: 0;
+    text-align: left;
+  }
+
   .nav-sections .button-container.login-button {
     display: flex;
     justify-content: space-between;
     background: var(--brand-bg-color);
-    padding:2.5px 0 2.5px 2rem;
+    padding: 2.5px 0 2.5px 2rem;
     letter-spacing: 0.5px;
   }
 
