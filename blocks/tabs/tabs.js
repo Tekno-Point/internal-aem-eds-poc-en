@@ -2043,7 +2043,11 @@ export default async function decorate(block) {
 
       const arrowDiv = document.createElement('div');
       arrowDiv.className = 'arrow';
-      arrowDiv.textContent = '→';
+      const arrowImg = document.createElement('img');
+      arrowImg.src = '/image/arrow.png'; // or your desired image path
+      arrowImg.alt = 'to';
+      arrowImg.className = 'arrow-img'; // optional, for styling
+      arrowDiv.appendChild(arrowImg);
 
       const toDiv = document.createElement('div');
       toDiv.className = 'to-info';
