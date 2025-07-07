@@ -1,0 +1,449 @@
+/* List icon - Content 1 */
+
+.content1 .custom-richtext li,
+.content4 .custom-richtext li {
+    display: block;
+    padding-left: 34px;
+    position: relative;
+}
+
+.content1 .custom-richtext li strong,
+.content4 .custom-richtext li strong {
+    color: #0073BB;
+}
+
+.content1 .custom-richtext li::before,
+.content4 .custom-richtext li::before {
+    content: '';
+    background: url('../icons/tick2.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* content1-term  css start */
+.content1.content1-term.custom-richtext-container {
+    margin: 60px 0;
+}
+
+.content1-term .custom-richtext-wrapper {
+    padding: 0;
+}
+
+.content1-term .custom-richtext-wrapper>div h2 {
+    color: #333;
+    font-family: 'HelveticaNeueBold';
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.content1-term .custom-richtext-wrapper>div p {
+    color: #333;
+    font-family: 'HelveticaNeueRoman';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.18px;
+}
+
+.content1-term .custom-richtext-wrapper>div ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.content1-term .custom-richtext-wrapper>div ul li {
+    margin-left: unset;
+    padding-left: 52px;
+    list-style: none;
+    position: relative;
+    color: #333;
+    font-family: 'HelveticaNeueRoman';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.18px;
+    margin-bottom: 20px;
+}
+
+.content1-term .custom-richtext-wrapper>div ul li strong {
+    color: #0073BB;
+    font-family: 'HelveticaNeueBold';
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.126px;
+}
+
+/* content1-term  css End */
+.content2>div.default-content-wrapper>p:nth-child(2) {
+    display: none;
+}
+
+.image2>div.default-content-wrapper>p:nth-child(2),
+.image3>div.default-content-wrapper>p:nth-child(2) {
+    display: none;
+}
+
+.custom-richtextblock {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: stretch;
+}
+
+.content3 .custom-richtextblock>div {
+    background-color: #F2F7FB;
+    padding: 20px 40px 20px 40px;
+    height: auto;
+    max-width: 43%;
+}
+
+.content5 .custom-richtextblock>div {
+    background-color: #F2F7FB;
+    padding: 20px 40px 20px 40px;
+    height: 100%;
+    max-width: 25%;
+    text-align: center;
+}
+
+main>.section.image2 {
+    margin: 50px 0;
+}
+
+.image2>div.default-content-wrapper>p:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.image2>div.default-content-wrapper>p:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .content2>div.default-content-wrapper>p:nth-child(1) {
+        display: none;
+    }
+
+    .content2>div.default-content-wrapper>p:nth-child(2) {
+        display: block;
+    }
+
+    .content3 .custom-richtextblock>div {
+        max-width: 100%;
+        padding: 18px;
+    }
+
+    .content3 .custom-richtextblock>div:first-child {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .content5 .custom-richtextblock>div {
+        max-width: 100%;
+    }
+
+    .image2>div.default-content-wrapper>p:nth-child(1) {
+        display: none;
+    }
+
+    .image2>div.default-content-wrapper>p:nth-child(2) {
+        display: block;
+    }
+
+    .image3>div.default-content-wrapper>p:nth-child(1) {
+        display: none;
+    }
+
+    .image3>div.default-content-wrapper>p:nth-child(2) {
+        display: block;
+    }
+
+    .content1-term .custom-richtext-wrapper>div h2 {
+        letter-spacing: -0.24px;
+        font-size: 24px;
+        line-height: normal;
+    }
+
+    .content1.content1-term.custom-richtext-container {
+        padding: 0 20px;
+    }
+
+    .content1-term .custom-richtext-wrapper>div p {
+        line-height: 20px;
+        letter-spacing: -0.16px;
+        font-size: 16px;
+    }
+
+    .content1-term .custom-richtext-wrapper>div ul {
+        margin-top: 40px;
+    }
+
+    .content1-term .custom-richtext-wrapper>div ul li {
+        line-height: 19.6px;
+        padding-left: 34px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: -0.14px;
+    }
+
+    .content1 .custom-richtext li::before,
+    .content4 .custom-richtext li::before {
+        width: 24px;
+        height: 24px;
+    }
+
+    .content1-term .custom-richtext-wrapper>div ul li strong {
+        letter-spacing: -0.14px;
+        font-size: 0.875rem;
+    }
+}
+
+.content2-term .custom-richtext>div>div :is(h1, h2, h3, h4, h5, h6) {
+    color: #333;
+    font-family: 'Inter-Bold';
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    padding-bottom: 10px;
+}
+
+.content2-term .custom-richtext>div>div p {
+    color: #333;
+    font-family: 'HelveticaNeueRoman';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.18px;
+}
+
+.content2-term>div:nth-child(2) {
+    margin-top: 25px;
+}
+
+.content2-term img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+
+    .content2-term .custom-richtext>div>div :is(h1, h2, h3, h4, h5, h6) {
+        font-size: 1.5rem;
+        letter-spacing: -0.24px;
+    }
+
+    .content2-term .custom-richtext>div>div p {
+        line-height: 22.4px;
+        letter-spacing: -0.16px;
+        font-size: 16px;
+    }
+}
+
+/* content3 css start */
+.content3 .custom-richtext {
+    margin-bottom: 20px;
+}
+
+.content3 .custom-richtext>div>div :is(h1, h2, h3, h4, h5, h6) {
+    color: #333;
+    font-family: 'Inter-Bold';
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    padding-bottom: 10px;
+}
+
+.content3 .custom-richtext>div>div p {
+    color: #333;
+    font-family: "HelveticaNeueRoman";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.18px;
+}
+
+.content3 .custom-richtextblock .content3-div>div :is(h1, h2, h3, h4, h5, h6) {
+    color: #333;
+    font-family: 'Inter-Bold';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    padding-bottom: 10px;
+}
+
+.content3 .custom-richtextblock .content3-div>div p {
+    color: #333;
+    font-family: "HelveticaNeueRoman";
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.18px;
+}
+
+@media screen and (max-width: 768px) {
+    .content3 .custom-richtext>div>div :is(h1, h2, h3, h4, h5, h6) {
+        font-size: 1.5rem;
+        letter-spacing: -0.24px;
+    }
+
+    .content3 .custom-richtext>div>div p {
+        line-height: 22.4px;
+        letter-spacing: -0.16px;
+        font-size: 16px;
+    }
+
+    .content3 .custom-richtextblock .content3-div>div :is(h1, h2, h3, h4, h5, h6) {
+        font-size: 1.125rem;
+        letter-spacing: -0.18px;
+    }
+
+    .content3 .custom-richtextblock .content3-div>div p {
+        font-size: 0.875rem;
+        letter-spacing: -0.14px;
+        line-height: 19.6px;
+    }
+
+}
+
+.content-model .custom-richtextblock>div>div ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-model .custom-richtextblock>div>div>ul>li h4 {
+    display: flex;
+    align-items: center;
+    font-family: "Inter-Bold";
+    font-size: 24px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.63px;
+    color: #333;
+}
+
+.content-model .custom-richtextblock>div>div>ul>li h4 .icon {
+    padding-right: 27px;
+    height: 46px;
+    width: 46px;
+}
+
+.content-model .custom-richtextblock>div>div>ul>li p {
+    font-family: 'HelveticaNeueRoman';
+    font-size: 18px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #373737;
+}
+
+@media screen and (max-width: 767.99px) {
+    .content-model .custom-richtextblock>div>div>ul>li h4 {
+        font-size: 22px;
+    }
+
+    .content-model .custom-richtextblock>div>div>ul>li h4 .icon {
+        padding-right: 13px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .content-model .custom-richtextblock>div>div>ul>li p {
+        font-size: 14px;
+    }
+
+}
+
+/* content3 css End */
+
+/* video Section css start */
+.video-section .embed-container {
+    margin: 40px 0;
+}
+
+.video-section .embed-wrapper {
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 15px 0 rgba(0, 115, 187, .1);
+    background-color: #fff;
+}
+
+.video-section .embed-wrapper .embed {
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.video-section .embed-wrapper .embed>div iframe {
+    border-radius: 20px;
+}
+
+/* video Section css End */
+
+
+
+
+.content4 .custom-richtext li {
+    padding-left: 60px;
+}
+
+.content4 .custom-richtext li::before {
+    min-width: 32px;
+    height: 32px;
+    top: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .content4 .custom-richtext li {
+        padding-left: 60px;
+    }
+
+    .content4 .custom-richtext li::before {
+        min-width: 24px;
+        height: 24px;
+        top: 0px;
+    }
+
+    .content4 .custom-richtext li strong {
+        line-height: 19.6px;
+        /* padding-left: 34px; */
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: -0.14px;
+    }
+
+    .content4 .custom-richtext li {
+        padding-left: 32px;
+        font-family: "HelveticaNeueRoman";
+        font-weight: 400;
+        line-height: 19.6px;
+    }
+
+    .content4 .custom-richtext li strong {
+        font-size: 14px;
+    }
+}

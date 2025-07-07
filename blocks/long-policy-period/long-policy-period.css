@@ -1,0 +1,590 @@
+/* long policy period css start */
+.long-policy-period .custom-richtextblock div:first-child,
+.long-policy-period .custom-richtextblock div:nth-child(2) {
+    margin: 20px 0;
+    margin-top: unset;
+}
+
+.long-policy-period .custom-richtextblock div:first-child>div h2,
+.long-policy-period .custom-richtextblock div:nth-child(2)>div h2 {
+    color: #333;
+    font-family: 'Inter-Bold';
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    padding-bottom: 10px;
+}
+
+.long-policy-period .custom-richtextblock div:first-child>div p,
+.long-policy-period .custom-richtextblock div:nth-child(2)>div p:nth-child(2) {
+    color: #333;
+    font-family: 'HelveticaNeueRoman';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.18px;
+    padding-bottom: 10px;
+}
+
+.long-policy-period .custom-richtextblock div:nth-child(2) {
+    overflow: auto;
+}
+
+.long-policy-period .custom-richtextblock div:nth-child(2) ul:nth-child(3) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    border: 2px solid #4197d3;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.long-policy-period .custom-richtextblock div:nth-child(2) ul:nth-child(3)>li {
+    color: #58595b;
+    font-family: 'HelveticaNeueRoman';
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    list-style: none;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #4197d3;
+    border-right: 2px solid #4197d3;
+}
+
+@media screen and (max-width: 767px) {
+    .section.long-policy-period {
+        margin-top: 0;
+    }
+
+    .long-policy-period .custom-richtextblock div:first-child>div h2,
+    .long-policy-period .custom-richtextblock div:nth-child(2)>div h2 {
+        font-size: 1.5rem;
+        letter-spacing: -0.24px;
+    }
+
+    .long-policy-period .custom-richtextblock div:first-child>div p,
+    .long-policy-period .custom-richtextblock div:nth-child(2)>div p:nth-child(2) {
+        line-height: 22.4px;
+        letter-spacing: -0.16px;
+        font-size: 16px;
+    }
+
+    .long-policy-period .custom-richtextblock div:nth-child(2) ul:nth-child(3)>li {
+        padding: 6px;
+        font-size: 11px;
+    }
+}
+
+/* term-calculator2 css start */
+.section.term-calculator2>div {
+    background: #F2F7FB;
+    margin: 0 auto;
+    padding: 0 60px;
+    padding-bottom: 32px;
+    border-radius: 8px;
+    padding-top: 32px;
+    text-align: center;
+}
+
+.term-calculator2>div :is(h1, h2, h3, h4, h5, h6) {
+    font-family: "Inter-Bold";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    color: #333333;
+    background: var(--Primary-Gradient, linear-gradient(90deg, #0073BB 0%, #D62049 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.section.term-calculator2>div p {
+    box-shadow: 0px 0px 16px 1px rgba(51, 51, 51, 0.15);
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    padding: 15px 0px 11px 0px;
+}
+
+.term-calculator2>div p:last-child {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .section.term-calculator2>div {
+        padding: 0 16px;
+        padding-top: 30px;
+    }
+
+    .term-calculator2>div h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .term-calculator2>div p:nth-child(2) {
+        display: none;
+    }
+
+    .term-calculator2>div p:last-child {
+        display: block;
+        box-shadow: unset;
+        background-color: unset;
+        border-radius: unset;
+        padding: 0;
+    }
+}
+
+/* term-calculator2 css End */
+
+/* term insurance plan benefit starts */
+.term-insurance-plan>div h2 {
+    color: #333;
+    font-family: 'Inter-Bold';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    padding-bottom: 20px;
+}
+
+.term-insurance-plan>div ul {
+    padding-left: 0;
+}
+
+.term-insurance-plan>div ul li {
+    margin-left: unset;
+    padding-left: 60px;
+    list-style: none;
+    position: relative;
+    color: #333;
+    font-family: "HelveticaNeueRoman";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.18px;
+    margin-bottom: 20px;
+}
+
+.term-insurance-plan>div ul li strong {
+    color: #0073BB;
+    font-family: 'HelveticaNeueBold';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.126px;
+}
+
+@media screen and (max-width: 768px) {
+    .term-insurance-plan>div h2 {
+        font-family: 'Inter-Bold';
+        font-size: 24px;
+        letter-spacing: -0.24px;
+        font-weight: 700;
+    }
+
+    .term-insurance-plan>div ul li {
+        line-height: 19.6px;
+        padding-left: 34px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        letter-spacing: -0.14px;
+    }
+}
+/* term insurance plan benefit ends */
+
+
+/* benefit of buying insurance plan starts */
+.benefit-buying-insurance-plan>div>div>div>div>h2 {
+  color: #333;
+  font-family: 'Inter-Bold';
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  padding-bottom: 10px;
+}
+
+.benefit-buying-insurance-plan>div>div>div>div>p {
+  color: #333;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.18px;
+}
+
+.benefit-buying-insurance-plan>div>div>div>div>p span {
+  width: 50px;
+  height: 50px;
+}
+
+.benefit-buying-insurance-plan>div>div>div>div>h3 {
+  color: #333;
+  font-family: 'Inter-Bold';
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.24px;
+}
+
+.benefit-buying-insurance-plan>div>div>div>div>p {
+  color: #333;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.benefit-buying-insurance-plan>.custom-richtextblock-wrapper {
+  margin: 25px auto;
+}
+
+.benefit-buying-insurance-plan>.custom-richtextblock-wrapper>div>div {
+  padding: 40px 40px;
+}
+
+.benefit-buying-insurance-plan>.custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(1) {
+  border-top-left-radius: 25px;
+}
+
+.benefit-buying-insurance-plan>.custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(3) {
+  border-top-right-radius: 25px;
+}
+
+.benefit-buying-insurance-plan>.custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(4) {
+  border-bottom-left-radius: 25px;
+}
+
+.benefit-buying-insurance-plan>.custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(6) {
+  border-bottom-right-radius: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .benefit-buying-insurance-plan>div>div>div>div>h2 {
+    font-size: 24px;
+    letter-spacing: -0.24px;
+  }
+
+  .benefit-buying-insurance-plan>div>div>div>div>p {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .benefit-buying-insurance-plan>.custom-richtextblock-wrapper>div>div {
+    padding: 15px 15px;
+    border-radius: unset;
+    width: 39.7%;
+  }
+
+  .benefit-buying-insurance-plan>div>div>div>div>h3 {
+    font-size: 1.125rem;
+    letter-spacing: -0.18px;
+  }
+
+  .benefit-buying-insurance-plan>div>div>div>div>p:nth-child(3) {
+    font-size: 0.875rem;
+    line-height: 19px;
+    letter-spacing: -0.14px;
+  }
+
+  .benefit-buying-insurance-plan>div>div>div>div>p span {
+    width: 37px;
+    height: 37px;
+  }
+
+  .benefit-buying-insurance-plan>.custom-richtextblock-wrapper .custom-richtextblock>div:nth-child(3) {
+    border-radius: unset;
+  }
+}
+
+/* benefit of buying insurance plan ends */
+
+/* types of insurance plan starts */
+.types-of-insurance-plan>div>div>div>div>h2 {
+  color: #333;
+  font-family: 'Inter-Bold';
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.types-of-insurance-plan>div>div>div>div>p {
+  color: #333;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.18px;
+}
+
+.types-of-insurance-plan>div>div>div>div>ul {
+  padding: 15px 0 10px 0;
+}
+
+.types-of-insurance-plan>div>div>div>div>ul li {
+  margin-left: unset;
+  padding-left: 52px;
+  list-style: none;
+  position: relative;
+  color: #333;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.18px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .types-of-insurance-plan>div>div>div>div>h2 {
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+  }
+
+  .types-of-insurance-plan>div>div>div>div>p {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+  }
+
+  .types-of-insurance-plan>div>div>div>div>ul li {
+    line-height: 19.6px;
+    padding-left: 34px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: -0.14px;
+  }
+}
+
+/* types of insurance plan  ends */
+
+
+/* affordable plan starts */
+.affordable-insurance-plan>div>div>div>div>h2 {
+  color: #333;
+  font-family: 'Inter-Bold';
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.affordable-insurance-plan>div>div>div>div>p {
+  color: #333;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.18px;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul>li {
+  width: 48%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+  font-family: "HelveticaNeueBold";
+  color: #4197d3;
+  letter-spacing: -0.4px;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.affordable-insurance-plan>div>div>div>div>ul>li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2) {
+  padding: 30px 30px 0;
+  counter-reset: hl-counter;
+  border-radius: 20px;
+  box-shadow: 3px 6px 14px 0 rgba(0, 115, 187, 0.1);
+  background: #fff;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2) ul li ul li {
+  font-size: 18px;
+  font-family: "HelveticaNeueRoman";
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: -0.126px;
+  color: #333333;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul>li ul {
+  padding-left: 20px;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3) {
+  margin: 50px 0 20px;
+  border-bottom: 2px solid #4197d3;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div p {
+  font-family: "HelveticaNeueRoman";
+  font-size: 18px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: normal;
+  color: #373737;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul li {
+  display: flex;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #58595b;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul>li>p {
+  width: 114px;
+  border: 2px solid #4197d3;
+  margin: 0;
+  padding: 20px;
+  border-bottom: none;
+  border-right: none;
+  font-family: 'HelveticaNeueRoman';
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #58595b;
+  white-space: nowrap;
+}
+
+.affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul li ul {
+  border: 2px solid #4197d3;
+  padding: 20px;
+  margin: 0;
+  width: -webkit-fill-available;
+  border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+  .affordable-insurance-plan>div>div>div>div>h2 {
+    font-size: 1.5rem;
+    letter-spacing: -0.24px;
+  }
+
+  .affordable-insurance-plan>div>div>div>div>p {
+    line-height: 22.4px;
+    letter-spacing: -0.16px;
+    font-size: 16px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul {
+    flex-direction: column;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul>li {
+    width: 100%;
+    margin-bottom: 18px;
+    letter-spacing: normal;
+    font-size: 16px;
+    line-height: 28px;
+    align-items: flex-start;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2) {
+    padding: 20px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2) ul li ul li {
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.126px;
+    color: #333333;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(2)>div>ul>li ul {
+    padding-left: 12px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #333333;
+    margin-bottom: 10px;
+    margin-right: unset;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul>li>p {
+    width: 66px;
+    white-space: inherit;
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul li {
+    font-size: 12px;
+  }
+
+  .affordable-insurance-plan .custom-richtextblock div:nth-child(3)>div>ul li ul {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+}
+
+/* affordable plan ends */

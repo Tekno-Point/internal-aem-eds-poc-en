@@ -211,3 +211,42 @@ loadPage();
 //     console.log(fundHd);
 //   }
 // }
+
+function setupCardToggle(containerSelector, maxVisible = 4) {
+  const block = document.querySelector(`${containerSelector} .custom-richtextblock.block`);
+  if (!block) return;
+
+  const allCards = block.querySelectorAll(':scope > div');
+  if (allCards.length <= maxVisible) return;
+
+  // Hide extra cards
+  allCards.forEach((card, index) => {
+    if (index >= maxVisible) {
+      card.classList.add('card-hidden');
+    }
+  });
+
+  // Create toggle button
+  const toggleBtn = document.createElement('div');
+  toggleBtn.textContent = 'View More';
+  toggleBtn.className = 'view-toggle-btn';
+  block.appendChild(toggleBtn);
+
+  let expanded = false;
+
+  toggleBtn.addEventListener('click', function () {
+    expanded = !expanded;
+    allCards.forEach((card, index) => {
+      if (index >= maxVisible) {
+        card.classList.toggle('card-hidden', !expanded);
+      }
+    });
+    toggleBtn.textContent = expanded ? 'View Less' : 'View More';
+  });
+}
+
+// Apply to both components
+setupCardToggle('.features-of-ti', 4);
+setupCardToggle('.choose-best-plan', 4);
+
+
