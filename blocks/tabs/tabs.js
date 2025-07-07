@@ -1972,8 +1972,12 @@ export default async function decorate(block) {
   clickDropdown(block);
    
    const form = block.querySelector('form');
+     const submit = form.querySelector('button[type="submit"]');
+
    form.addEventListener('submit', async function(e) {
     e.preventDefault();
+    submit.classList.add('disabled');
+
     const auth = await getAccessToken();
     const data = await getData(auth , {
         originLocationCode: this.source.dataset.iataCode,
@@ -2087,5 +2091,6 @@ export default async function decorate(block) {
       cardWrapper.appendChild(card);
     });
     block.appendChild(cardWrapper);
+    submit.classList.remove('disabled');
   });
 }
