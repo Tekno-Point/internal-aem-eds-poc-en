@@ -1985,16 +1985,38 @@ export default async function decorate(block) {
         max: '10',
       });
 
-    // Remove previous cards if needed (optional, for clean UI)
+    // Remove previous cards (for clean UI)
     block.querySelectorAll('.flight-card').forEach(card => card.remove());
+
+    const countries = new Intl.DisplayNames(['en'], { type: 'region' });
+    const locations = data.body.dictionaries.locations;
 
     data.body.data.forEach((flight, index) => {
       const segment = flight.itineraries[0].segments[0];
+
+      const cityNames = {
+        BOM: 'Mumbai',
+        DEL: 'Delhi',
+        CMB: 'Colombo',
+        BKK: 'Bangkok',
+        MAA: 'Chennai',
+        BLR: 'Bangalore',
+        DXB: 'Dubai',
+        SIN: 'Singapore'
+      };
 
       const from = segment.departure.iataCode;
       const fromTerminal = segment.departure.terminal ? segment.departure.terminal : '1';
       const to = segment.arrival.iataCode;
       const toTerminal = segment.arrival.terminal ? segment.arrival.terminal : '1';
+
+      const fromCity = cityNames[from] || from;
+      const fromCountryCode = locations[from]?.countryCode || 'IN';
+      const fromCountry = countries.of(fromCountryCode);
+
+      const toCity = cityNames[to] || to;
+      const toCountryCode = locations[to]?.countryCode || 'IN';
+      const toCountry = countries.of(toCountryCode);
 
       const departure = new Date(segment.departure.at);
       const departureTime = departure.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -2006,13 +2028,14 @@ export default async function decorate(block) {
 
       const card = document.createElement('div');
       card.className = 'flight-card';
+
       const flightInfo = document.createElement('div');
       flightInfo.className = 'flight-info';
 
       const fromDiv = document.createElement('div');
       fromDiv.className = 'from-info';
       fromDiv.innerHTML = `
-        <strong>${from}</strong><br>
+        <strong>${from}</strong> ${fromCity}, ${fromCountry}<br>
         Terminal ${fromTerminal}<br>
         ${departureDate}
       `;
@@ -2024,14 +2047,14 @@ export default async function decorate(block) {
       const toDiv = document.createElement('div');
       toDiv.className = 'to-info';
       toDiv.innerHTML = `
-        <strong>${to}</strong><br>
+        <strong>${to}</strong> ${toCity}, ${toCountry}<br>
         Terminal ${toTerminal}<br>
         ${departureDate}
       `;
 
       flightInfo.append(fromDiv, arrowDiv, toDiv);
 
-      // 🛫 Airline Details
+      // Airline Details
       const airlineDetails = document.createElement('div');
       airlineDetails.className = 'airline-details';
 
@@ -2045,7 +2068,6 @@ export default async function decorate(block) {
       const durationDiv = document.createElement('div');
       durationDiv.className = 'duration';
       durationDiv.textContent = `Duration: ${duration}`;
-
       const departureDiv = document.createElement('div');
       departureDiv.className = 'departure';
       departureDiv.textContent = `Departure: ${departureTime}`;
@@ -2055,7 +2077,6 @@ export default async function decorate(block) {
       button.textContent = 'Book Now';
 
       airlineDetails.append(heading, detailDiv, durationDiv, departureDiv, button);
-
       card.append(flightInfo, airlineDetails);
       block.appendChild(card);
     });
