@@ -1964,6 +1964,7 @@ export default async function decorate(block) {
     tablist.append(button);
     tab.remove();
   });
+}
 
   block.prepend(tablist);
   showData(block, '.from-input', 'from-wrapper', 'source');
@@ -1973,9 +1974,6 @@ export default async function decorate(block) {
    const form = block.querySelector('form');
    form.addEventListener('submit', async function(e) {
     e.preventDefault();
-    console.log(e)
-    console.log(this);
-    
     const auth = await getAccessToken();
     const data = await getData(auth , {
         originLocationCode: this.source.dataset.iataCode,
@@ -1986,38 +1984,72 @@ export default async function decorate(block) {
         includedAirlineCodes: 'TG',
         max: '10',
       });
-      console.log(data);
-      
-   data.body.data.forEach((flight,index) => {
-    const from = flight.itineraries[0].segments[0].departure.iataCode;
-    const to = flight.itineraries[0].segments[0]?.arrival.iataCode;
 
-    const departureDate = flight.lastTicketingDate ;
-    const returnDate = flight.lastTicketingDateTime;
-    const dates = departureDate && returnDate ? `${departureDate} - ${returnDate}` : '—';
+    // Remove previous cards if needed (optional, for clean UI)
+    block.querySelectorAll('.flight-card').forEach(card => card.remove());
 
-    const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
-    
-    const inrPrice = convertEurToInr(flight.price.grandTotal);
-    console.log(inrPrice);
-    const price = inrPrice;
+    data.body.data.forEach((flight, index) => {
+      const from = flight.itineraries[0].segments[0].departure.iataCode;
+      const to = flight.itineraries[0].segments[0].arrival.iataCode;
+      const departure = new Date(flight.itineraries[0].segments[0].departure.at);
+      const departureTime = departure.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const departureDate = departure.toLocaleDateString('en-GB');
 
-    const row = document.createElement('tr');
-    row.innerHTML = `
-      <td>${from}</td>
-      <td>${to}</td>
-      <td>${fare}</td>
-      <td>${dates}</td>
-      <td>
-        <div class="price-cell">
-          <strong>${price}</strong><br/>
-        </div>
-      </td>
-      <td><a href="#book" class="book-now-button">Book now</a></td>
-    `;
-    block.appendChild(row);
-   });
-   })
-   
-  
-}
+      const duration = flight.itineraries[0].duration.replace('PT', '').toLowerCase();
+      const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
+      const price = convertEurToInr(flight.price.grandTotal);
+
+      // Create outer card container
+      const card = document.createElement('div');
+      card.className = 'flight-card';
+
+      // First section: flight info (from → to)
+      const flightInfo = document.createElement('div');
+      flightInfo.className = 'flight-info';
+
+      const fromDiv = document.createElement('div');
+      fromDiv.className = 'from-info';
+      fromDiv.textContent = `${from}, ${departureDate}`;
+
+      const arrowDiv = document.createElement('div');
+      arrowDiv.className = 'arrow';
+      arrowDiv.textContent = '→';
+
+      const toDiv = document.createElement('div');
+      toDiv.className = 'to-info';
+      toDiv.textContent = `${to}, ${departureDate}`;
+
+      flightInfo.append(fromDiv, arrowDiv, toDiv);
+
+      // Second section: airline and meta
+      const airlineDetails = document.createElement('div');
+      airlineDetails.className = 'airline-details';
+
+      const heading = document.createElement('h4');
+      heading.textContent = 'SriLankan Airlines';
+
+      const detailDiv = document.createElement('div');
+      detailDiv.className = 'detail';
+      detailDiv.textContent = `${fare} Class`;
+
+      const durationDiv = document.createElement('div');
+      durationDiv.className = 'duration';
+      durationDiv.textContent = `Duration: ${duration}`;
+
+      const departureDiv = document.createElement('div');
+      departureDiv.className = 'departure';
+      departureDiv.textContent = `Departure: ${departureTime}`;
+
+      const button = document.createElement('button');
+      button.className = 'book-now-button';
+      button.textContent = 'Book Now';
+
+      airlineDetails.append(heading, detailDiv, durationDiv, departureDiv, button);
+
+      // Combine both sections
+      card.append(flightInfo, airlineDetails);
+
+      // Append to DOM
+      block.appendChild(card);
+    });
+  });
