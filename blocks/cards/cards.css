@@ -676,6 +676,42 @@ line-height: 45px;
     left: 0; 
 }
 
+.claim-pt-insurance-policiesP{
+   padding: 8.4rem 0 8rem;
+}
+
+.claim-pt-insurance-policies > .cards-wrapper > .cards > ul > li {
+  align-items: center;
+}
+
+.claim-pt-insurance-policies > .cards-wrapper > .cards > ul > li > .cards-card-image{
+    width: 40%;
+}
+
+.claim-pt-insurance-policies > .cards-wrapper > .cards > ul > li > .cards-card-image > picture > img{
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  vertical-align: middle;
+  max-width: 450px;
+  width: 100%;
+  height: 283px;
+}
+
+.claim-pt-insurance-policies > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  width: 60%;
+  padding-right: 80px;
+  margin: 0;
+}
+
+.claim-pt-insurance-policies > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
+padding-right: 98px;
+}
+
+.claim-pt-insurance-policies > .cards-wrapper > .cards > ul > li > .cards-card-body > p{
+padding-right: 98px;
+}
+
 @media screen and (max-width : 767.99px) {
   .million-indians > .default-content-wrapper > h2 {
     text-align: left;
@@ -864,6 +900,20 @@ padding: 5rem 0;
 .buying-travel-insurance-online > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
   font-size: 2.4rem;
   line-height: 30px;
+}
+
+.claim-pt-insurance-policies > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  padding: unset;
+  width: 100%;
+}
+
+.claim-pt-insurance-policies > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
+  padding: unset;
+}
+
+
+.claim-pt-insurance-policies > .cards-wrapper > .cards > ul > li > .cards-card-body > p{
+  padding: unset;
 }
 
 }

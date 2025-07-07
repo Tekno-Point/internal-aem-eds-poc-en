@@ -151,6 +151,9 @@
           },{
             "name" : "Claim procedure for travel insurance policies",
             "value" : "claim-pt-insurance-policies"
+          },{
+            "name" : "ICICI Lombard's travel insurance policy cover ",
+            "value" : "lombard-travel-insurance-policy-cover "
           }
         ]
       }
