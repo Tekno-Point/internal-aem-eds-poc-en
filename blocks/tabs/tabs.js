@@ -1964,7 +1964,7 @@ export default async function decorate(block) {
     tablist.append(button);
     tab.remove();
   });
-}
+
 
   block.prepend(tablist);
   showData(block, '.from-input', 'from-wrapper', 'source');
@@ -1989,9 +1989,14 @@ export default async function decorate(block) {
     block.querySelectorAll('.flight-card').forEach(card => card.remove());
 
     data.body.data.forEach((flight, index) => {
-      const from = flight.itineraries[0].segments[0].departure.iataCode;
-      const to = flight.itineraries[0].segments[0].arrival.iataCode;
-      const departure = new Date(flight.itineraries[0].segments[0].departure.at);
+      const segment = flight.itineraries[0].segments[0];
+
+      const from = segment.departure.iataCode;
+      const fromTerminal = segment.departure.terminal ? segment.departure.terminal : '1';
+      const to = segment.arrival.iataCode;
+      const toTerminal = segment.arrival.terminal ? segment.arrival.terminal : '1';
+
+      const departure = new Date(segment.departure.at);
       const departureTime = departure.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
       const departureDate = departure.toLocaleDateString('en-GB');
 
@@ -1999,17 +2004,20 @@ export default async function decorate(block) {
       const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
       const price = convertEurToInr(flight.price.grandTotal);
 
-      // Create outer card container
       const card = document.createElement('div');
       card.className = 'flight-card';
 
-      // First section: flight info (from → to)
+      // ✈️ Flight Info
       const flightInfo = document.createElement('div');
       flightInfo.className = 'flight-info';
 
       const fromDiv = document.createElement('div');
       fromDiv.className = 'from-info';
-      fromDiv.textContent = `${from}, ${departureDate}`;
+      fromDiv.innerHTML = `
+        <strong>${from}</strong><br>
+        Terminal ${fromTerminal}<br>
+        ${departureDate}
+      `;
 
       const arrowDiv = document.createElement('div');
       arrowDiv.className = 'arrow';
@@ -2017,11 +2025,15 @@ export default async function decorate(block) {
 
       const toDiv = document.createElement('div');
       toDiv.className = 'to-info';
-      toDiv.textContent = `${to}, ${departureDate}`;
+      toDiv.innerHTML = `
+        <strong>${to}</strong><br>
+        Terminal ${toTerminal}<br>
+        ${departureDate}
+      `;
 
       flightInfo.append(fromDiv, arrowDiv, toDiv);
 
-      // Second section: airline and meta
+      // 🛫 Airline Details
       const airlineDetails = document.createElement('div');
       airlineDetails.className = 'airline-details';
 
@@ -2046,10 +2058,8 @@ export default async function decorate(block) {
 
       airlineDetails.append(heading, detailDiv, durationDiv, departureDiv, button);
 
-      // Combine both sections
       card.append(flightInfo, airlineDetails);
-
-      // Append to DOM
       block.appendChild(card);
     });
   });
+}
