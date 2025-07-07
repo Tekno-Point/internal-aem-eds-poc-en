@@ -195,6 +195,16 @@
     padding: 20px;
 }
 
+@media (max-width: 786px) {
+    .fr-col > .swiper-initialized > .swiper-wrapper {
+        padding: 0px;
+    }
+
+    .content-fragment > div > div > .fares-carousel-container > .fares-carousel-content > .fr-secondary-filters {
+        flex-direction: column;
+    }
+}
+
 .card-body > .dates-row {
     padding-left: 10px;
 }
@@ -314,10 +324,10 @@
     display: none;
 }
 
-.fare-card>.card-count {
+.fare-card > .card-count {
     display: flex;
     justify-content: end;
-        top: 10px;
+    top: 10px;
     right: 10px;
 }
 
@@ -409,7 +419,58 @@
     padding: 20px;
 }
 
-.fr-btn,.popover-btn,
+.fr-btn,
+.popover-btn,
 .as-copa-ltr-tyl0cm {
     cursor: pointer;
+}
+
+.fr-sortby-wrapper > div {
+    color: #0088dd;
+    font-weight: 800;
+    position: relative;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.fr-sortby-wrapper > div:hover {
+    color: rgb(6, 6, 99);
+}
+
+.fr-sortby-wrapper > div::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: -17px;
+    transform: rotate(135deg);
+    width: 6px;
+    height: 6px;
+    border: 2px solid currentcolor;
+    border-radius: 0 1px 0 0;
+    border-width: 3px 3px 0 0;
+    color: #0088dd;
+}
+
+
+@media(max-width : 786px){
+    .fr-sortby-wrapper > div::after{
+        content: "";
+    display: inline-block;
+    position: absolute;
+    top: 17px;
+    transform: rotate(135deg);
+    width: 6px;
+    height: 6px;
+    border: 2px solid currentcolor;
+    border-radius: 0 1px 0 0;
+    border-width: 3px 3px 0 0;
+    color: #0088dd;
+    left: 93px;
+    }
+
+    .fr-sortby-wrapper > div{
+        font-size: 15px;
+    }
 }

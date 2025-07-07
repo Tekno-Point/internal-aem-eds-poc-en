@@ -128,6 +128,7 @@
         > .from-input
         > input {
         width: 80%;
+        font-size: 14px;
     }
 
     .tabs.form-tabs
@@ -139,20 +140,14 @@
         > .to-input
         > input {
         width: 80%;
+        font-size: 14px;
     }
 
     .tabs.form-tabs .tabs-panel form .field-wrapper.fares-wrapper select {
         width: 70%;
+        font-size: 14px;
     }
-}
 
-.tabs.form-tabs .tabs-panel form > div .field-wrapper.trip-wrapper {
-    display: none;
-}
-
-.tabs.form-tabs .tabs-panel form > div .field-wrapper {
-    margin-right: 20px;
-    position: relative;
 }
 
 .tabs.form-tabs .tabs-panel form > div > .field-wrapper::after {
@@ -371,6 +366,10 @@ input[type="date"] {
     cursor: pointer;
 }
 
+.tabs.form-tabs > div > .flight-card > .airline-details > div {
+    font-weight: 600;
+}
+
 @media (max-width: 786px) {
     .tabs.form-tabs > div > .flight-card {
         flex-direction: column;
@@ -379,6 +378,14 @@ input[type="date"] {
 
     .tabs.form-tabs > div > .flight-card > .flight-info {
         border: none;
+    }
+
+    .tabs.form-tabs > div > .flight-card > .airline-details {
+        align-items: center;
+    }
+
+    .tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper button{
+      padding: 10px 15px;
     }
 }
 
