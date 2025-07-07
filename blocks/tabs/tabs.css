@@ -311,7 +311,7 @@ input[type="date"] {
 .tabs.form-tabs > div {
     display: flex;
     /* flex-direction: c; */
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 .tabs.form-tabs > div > .flight-card {
@@ -403,9 +403,9 @@ input[type="date"] {
     .fare-card > .card-count > .card-count-text {
       font-size: 14px;
     }
-    .tabs.form-tabs > div{
+    /* .tabs.form-tabs > div{
       flex-direction: column;
-    }
+    } */
     .tabs.form-tabs .tabs-panel form > fieldset{
       flex-direction: column;
     }
