@@ -83,6 +83,91 @@ function renderUI(data = []) {
         // Remove any open popover
         const old = document.querySelector('.popover-body');
         if (old && old.parentNode) old.parentNode.removeChild(old);
+        // Remove any open sort popover
+        const sortOld = document.querySelector('.sort-popover');
+        if (sortOld && sortOld.parentNode) sortOld.parentNode.removeChild(sortOld);
+    }
+    // Helper to apply sort
+    function applySort(sortType) {
+        if (sortType === 'price-asc') {
+            filteredData = [...filteredData].sort((a, b) => Number(a.price) - Number(b.price));
+        } else if (sortType === 'price-desc') {
+            filteredData = [...filteredData].sort((a, b) => Number(b.price) - Number(a.price));
+        } else if (sortType === 'popular') {
+            // Show all 'popular' type first, then the rest
+            filteredData = [...filteredData].sort((a, b) => {
+                if (a.type === 'popular' && b.type !== 'popular') return -1;
+                if (a.type !== 'popular' && b.type === 'popular') return 1;
+                return 0;
+            });
+        } else if (sortType === 'duration') {
+            // Show all 'duration' type first, then the rest
+            filteredData = [...filteredData].sort((a, b) => {
+                if (a.type === 'duration' && b.type !== 'duration') return -1;
+                if (a.type !== 'duration' && b.type === 'duration') return 1;
+                return 0;
+            });
+        }
+        // Replace cards row
+        const cardsRow = document.querySelector('.fares-carousel-content .fr-row.fr-mt-3');
+        if (cardsRow && cardsRow.parentNode) {
+            const newCards = div({ class: 'fr-row fr-mt-3' },
+                div({ class: 'fr-col fr-h-100' },
+                    div({ class: 'carousel swiper' },
+                        div({ class: 'swiper-wrapper' },
+                            ...renderCard(filteredData)
+                        ),
+                        div({ class: 'swiper-button-prev' }),
+                        div({ class: 'swiper-button-next' }),
+                        div({ class: 'swiper-pagination' })
+                    )
+                )
+            );
+            cardsRow.parentNode.replaceChild(newCards, cardsRow);
+            // Re-init Swiper
+            initSwiperOnly(newCards.querySelector('.carousel.swiper'));
+        }
+    }
+
+    // Popover for sort by
+    function sortPopover(target) {
+        let popover;
+        function closePopover() {
+            if (popover && popover.parentNode) popover.parentNode.removeChild(popover);
+            document.removeEventListener('mousedown', handleClickOutside, true);
+        }
+        function handleClickOutside(e) {
+            if (popover && !popover.contains(e.target) && !target.contains(e.target)) {
+                closePopover();
+            }
+        }
+        popover = div({ class: 'sort-popover', style: 'position:absolute;z-index:1000;top:0;left:0;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.15);padding:8px 0;border-radius:8px;min-width:160px;' },
+            div({ class: 'sort-option', style: 'padding:8px 16px;cursor:pointer;', onclick: () => { applySort('price-asc'); closePopover(); } }, 'Price: Low to High'),
+            div({ class: 'sort-option', style: 'padding:8px 16px;cursor:pointer;', onclick: () => { applySort('price-desc'); closePopover(); } }, 'Price: High to Low'),
+            div({ class: 'sort-option', style: 'padding:8px 16px;cursor:pointer;', onclick: () => { applySort('popular'); closePopover(); } }, 'Popular'),
+            div({ class: 'sort-option', style: 'padding:8px 16px;cursor:pointer;', onclick: () => { applySort('duration'); closePopover(); } }, 'Duration')
+        );
+        // Position popover below the target
+        setTimeout(() => {
+            if (!target || !popover) return;
+            const rect = target.getBoundingClientRect();
+            popover.style.top = `${rect.bottom + window.scrollY + 4}px`;
+            popover.style.left = `${rect.left + window.scrollX}px`;
+            popover.style.minWidth = `${rect.width}px`;
+        }, 0);
+        document.addEventListener('mousedown', handleClickOutside, true);
+        return popover;
+    }
+
+    // Handler for Sort By click
+    function onSortByClick(e) {
+        // Remove any existing sort popover
+        const old = document.querySelector('.sort-popover');
+        if (old && old.parentNode) old.parentNode.removeChild(old);
+        // Insert new popover as child of body, positioned below Sort By button
+        const target = e.currentTarget;
+        const pop = sortPopover(target);
+        document.body.appendChild(pop);
     }
     // Build city/codes list for suggestions
     const cityOptions = (() => {
@@ -536,7 +621,7 @@ function renderUI(data = []) {
                             class: 'fr-btn fr-btn-sortby',
                             type: 'button',
                             'aria-label': 'Sort by',
-                            // You can add an onclick handler for sort logic here
+                            onclick: onSortByClick
                         },
                             div({ as: 'span', class: 'fr-icon fr-icon-sort', style: 'margin-right:6px;' }),
                             'Sort by'
