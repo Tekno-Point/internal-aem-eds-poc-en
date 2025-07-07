@@ -608,6 +608,73 @@ line-height: 45px;
       object-fit: contain;
     }
 
+/* .buying-travel-insurance-online{
+
+}     */
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul {
+  display: flex;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li{
+  display: flex;
+  border: none;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li > .cards-card-image {
+    width: 40%;
+    padding-right: 80px;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li > .cards-card-image > picture > img{
+    object-fit: contain;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li  > .cards-card-body{
+    margin: 0;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li  > .cards-card-body > h2{
+  color: #282828;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 45px;
+    margin-bottom: 0;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li  > .cards-card-body > ul{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li  > .cards-card-body > ul > li{
+  color: #282828;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  position: relative; 
+  padding-left: 30px;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li  > .cards-card-body > ul > li::before{
+  counter-increment: section; 
+  content: counter(section); 
+  font-size: 2.4rem !important;
+    top: 1px;
+    color: #EC6625;
+    font-weight: 800;
+    font-size: 2.4rem;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
 
 @media screen and (max-width : 767.99px) {
   .million-indians > .default-content-wrapper > h2 {
@@ -643,6 +710,11 @@ line-height: 45px;
   text-align: center;
   font-size: 2.4rem;
   line-height: 30px;
+
+}
+
+.travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-body > p{
+  padding: unset;
 
 }
 
@@ -723,6 +795,11 @@ font-size: 24px;
 .section.calculate-ti-premiums-online > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
   font-size: 2.4rem;
         line-height: 30px;
+        padding: unset;
+} 
+
+.section.calculate-ti-premiums-online > .cards-wrapper > .cards > ul > li > .cards-card-body > p{ 
+        padding: unset;
 } 
 
 .tlt-insurance-premium > .default-content-wrapper > h2{
@@ -769,6 +846,24 @@ padding: 5rem 0;
 
 .section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li  > .cards-card-image{
   display: none;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li >{
+  width: 100%;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li > .cards-card-image{
+  display: none;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  width: 100%;
+  gap: 20px;
+}
+
+.buying-travel-insurance-online > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
+  font-size: 2.4rem;
+  line-height: 30px;
 }
 
 }
