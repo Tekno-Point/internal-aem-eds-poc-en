@@ -142,10 +142,9 @@
           },{
             "name" : "Eligibility Criteria For Travel Insurance Policy", 
             "value": "ECFT-insurance-policy"
-          },
-          {
-            "name" : "Eligibility Criteria For Travel Insurance Policy", 
-            "value": "ECFT-insurance-policy"
+          },{
+            "name" : "Purchase an Online Travel Insurance Plan",
+            "value" : "purchase-online-travel-insurance-plan"
           }
         ]
       }
