@@ -94,19 +94,11 @@ function renderUI(data = []) {
         } else if (sortType === 'price-desc') {
             filteredData = [...filteredData].sort((a, b) => Number(b.price) - Number(a.price));
         } else if (sortType === 'popular') {
-            // Show all 'popular' type first, then the rest
-            filteredData = [...filteredData].sort((a, b) => {
-                if (a.type === 'popular' && b.type !== 'popular') return -1;
-                if (a.type !== 'popular' && b.type === 'popular') return 1;
-                return 0;
-            });
+            // Only show cards with type 'popular'
+            filteredData = [...data].filter(card => card.type === 'popular');
         } else if (sortType === 'duration') {
-            // Show all 'duration' type first, then the rest
-            filteredData = [...filteredData].sort((a, b) => {
-                if (a.type === 'duration' && b.type !== 'duration') return -1;
-                if (a.type !== 'duration' && b.type === 'duration') return 1;
-                return 0;
-            });
+            // Only show cards with type 'duration'
+            filteredData = [...data].filter(card => card.type === 'duration');
         }
         // Replace cards row
         const cardsRow = document.querySelector('.fares-carousel-content .fr-row.fr-mt-3');
