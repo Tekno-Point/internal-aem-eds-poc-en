@@ -19,7 +19,8 @@
       "fragment",
       "swipper-card",
       "rte-block",
-      "git-block"
+      "git-block",
+      "personal-loan-block"
     ]
   },
   {
@@ -65,6 +66,12 @@
     "id": "git-block",
     "components": [
       "git-item"
+    ]
+  },
+  {
+    "id": "personal-loan-block",
+    "components": [
+      "personal-loan-item"
     ]
   }
 ]
