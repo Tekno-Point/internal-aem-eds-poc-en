@@ -1,0 +1,55 @@
+.section.popular-search>div h1 {
+  font-size: 36px;
+  font-family: "Inter-Bold";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.popular-searches>div>div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popular-searches>div>div ul,.popular-searches>div>div >ul >li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: max-content !important;
+  border: 1px solid #58595B;
+  padding: 7px 12px 6px;
+  margin: 0 12px 12px 0;
+  cursor: pointer;
+  line-height: normal;
+}
+
+.popular-searches>div>div ul li {
+  line-height: normal;
+}
+
+
+.popular-searches>div>div ul li a {
+  color: #58595B;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Inter-Regular";
+  line-height: normal;
+  letter-spacing: -0.267px;
+}
+
+@media screen and (max-width: 767.99px) {
+  .section.popular-search>div h1 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.625px;
+  }
+
+  .popular-searches>div>div ul {
+    padding: 0px 8px 4px;
+    margin: 0 8px 8px 0;
+  }
+}

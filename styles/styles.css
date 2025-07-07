@@ -1045,7 +1045,7 @@ main>.section.image2 {
 }
 
 /* video Section css End */
-
+/* 
 .section.popular-search>div h1 {
   font-size: 36px;
   font-family: "Inter-Bold";
@@ -1062,7 +1062,7 @@ main>.section.image2 {
   flex-wrap: wrap;
 }
 
-.popular-searches>div>div ul {
+.popular-searches>div>div ul,.popular-searches>div>div >ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1077,6 +1077,7 @@ main>.section.image2 {
 .popular-searches>div>div ul li {
   line-height: normal;
 }
+
 
 .popular-searches>div>div ul li a {
   color: #58595B;
@@ -1099,7 +1100,7 @@ main>.section.image2 {
     padding: 0px 8px 4px;
     margin: 0 8px 8px 0;
   }
-}
+} */
 
 /* term-calculator2 css start */
 .section.term-calculator2>div {
