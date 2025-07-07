@@ -1,8 +1,12 @@
 let isFetched = false;
-
-export async function fetchData() {
+let iataData ;
+export async function fetchIataData() {
     const cityData = await fetch('/srilankan-airlines/api/iata.json');
-    return await cityData.json();
+    if(iataData){
+        return iataData;
+    }
+    iataData =  await cityData.json();
+    return iataData;
 }
 
 export async function cityDropdown(block, wrapperClass, type, inputparent) {
@@ -14,7 +18,7 @@ export async function cityDropdown(block, wrapperClass, type, inputparent) {
     cityWrapper.classList.add('city-wrapper');
     cityWrapper.classList.add(wrapperClass);
 
-    const cities = await fetchData();
+    const cities = await fetchIataData();
 
     cities.data.forEach(city => {
         const cityOption = document.createElement('div');
