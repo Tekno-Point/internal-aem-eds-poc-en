@@ -192,6 +192,8 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  background: #F8F6F6;
+  padding: 7rem 0;
 }
 
 .fic-lombard-travel-insurance > .default-content-wrapper > h2{
@@ -213,6 +215,7 @@
   max-width: 29%;
   width: 100%;
   border: none;
+  background-color: #F8F6F6; 
 }
 
 .fic-lombard-travel-insurance > .cards-wrapper > .cards > ul > li > .cards-card-image{
@@ -540,6 +543,71 @@ display: none;
     color: #ec6625; 
 }
 
+.purchase-online-travel-insurance-plan{
+  background: #00305B;
+  padding: 8rem 0 9rem;
+}
+
+.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul{
+  display: unset;
+}
+
+.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #00305B;
+    border: none;
+}
+
+.section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
+color: #ffffff;
+margin-bottom: 30px;
+font-weight: 700;
+font-size: 3.6rem;
+line-height: 45px;
+/* margin-bottom: 0; */
+}
+
+.section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > p{
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
+
+  .section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul{
+    list-style: none;
+  }
+
+  .section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li{
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 0 1rem 3rem;
+    color: #ffffff;
+    margin-bottom: 0; 
+    }
+
+    .section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li:last-child{
+      padding-bottom: 0px;
+    }
+
+    .section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li::before{
+      content: url(/icons/benefit-tick.svg);
+    /* background: url(/); */
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+
+    .section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li  > .cards-card-image > picture > img {
+      object-fit: contain;
+    }
+
 
 @media screen and (max-width : 767.99px) {
   .million-indians > .default-content-wrapper > h2 {
@@ -555,7 +623,8 @@ display: none;
  }
 
   .million-indians .cards-wrapper > .cards > ul > li{
-    width : calc(100% - 53px)
+    /* width : calc(100% - 53px) */
+    width: 100%;
   }
 
   .million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul{
@@ -610,7 +679,7 @@ font-size: 24px;
 
 .section.insurance-policy-advantages.cards-container > .cards-wrapper >.cards > ul > li > .cards-card-body{
   padding: 23px 20px 25px;
-}
+} 
 
 .travel-insurance-blog-articles > .default-content-wrapper > h2{
   font-size: 3.5rem;
@@ -679,5 +748,27 @@ font-size: 24px;
         top: 24px;
         left: 20px;
 } 
+
+.purchase-online-travel-insurance-plan{
+padding: 5rem 0;
+}
+
+.section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  margin: unset;
+}
+
+.section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
+  font-size: 2.4rem;
+  line-height: 30px;
+}
+
+.section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > p{
+  /* font-size: 2.4rem; */
+  /* line-height: 30px; */
+}
+
+.section.purchase-online-travel-insurance-plan > .cards-wrapper > .cards > ul > li  > .cards-card-image{
+  display: none;
+}
 
 }
