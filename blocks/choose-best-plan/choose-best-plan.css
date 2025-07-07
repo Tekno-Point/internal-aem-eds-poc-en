@@ -77,11 +77,11 @@
   display: none;
 }
 
-.choose-best-plan .custom-richtextblock .view-toggle-btn {
+.choose-best-plan .custom-richtextblock-wrapper .custom-richtextblock .view-toggle-btn {
   display: inline-flex;
   text-align: center;
   position: absolute;
-  bottom: -20px;
+  bottom: 21px;
   left: 45.5%;
   cursor: pointer;
   border-radius: 20px;
@@ -126,5 +126,10 @@
     letter-spacing: -0.14px;
     line-height: 19.6px;
     padding-bottom: unset;
+  }
+  .choose-best-plan .custom-richtextblock-wrapper .custom-richtextblock .view-toggle-btn {
+    bottom: 9px;
+    left: 37%;
+    padding: 7px 9px;
   }
 }
