@@ -192,8 +192,10 @@ header .nav-top-menu .default-content-wrapper>ul {
   align-items: center;
 }
 
-header .nav-top-menu .default-content-wrapper>ul li:nth-child(n+2):nth-child(-n+3) {
-  display: none
+@media (width < 900px) {
+ header .nav-top-menu .default-content-wrapper>ul li:nth-child(n+2):nth-child(-n+3) {
+   display: none;
+ }
 }
 
 @media (width >=900px) {
