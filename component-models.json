@@ -1,5 +1,29 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "keywords",
+        "multi": true,
+        "label": "Keywords"
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
@@ -232,8 +256,54 @@
           {
             "name": "custom-txt",
             "value": "custom-txt"
+          },
+          {
+            "name": "Quicklinks",
+            "value": "quicklinks"
+          },
+          {
+            "name": "Menu Item",
+            "value": "menu-item"
+          },
+          {
+            "name": "Modal Search",
+            "value": "modal-search"
+          },
+          {
+            "name": "Modal Call",
+            "value": "modal-call"
+          },
+          {
+            "name": "Modal Hamburger",
+            "value": "modal-hamburger"
           }
         ]
+      }
+    ]
+  },
+   {
+    "id": "search",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "apollo search",
+            "children": [
+              {
+                "name": "Search Block",
+                "value": "apollo-search"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "query Index",
+        "label": "url"
       }
     ]
   },
@@ -334,188 +404,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "embed",
-    "fields": [
-      {
-        "component": "text",
-        "name": "link",
-        "value": "",
-        "label": "Link",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "custom-text",
-    "fields": [
-      {
-        "component": "text",
-        "name": "text",
-        "value": "",
-        "label": "Custom Text",
-        "valueType": "string",
-        "description": "Custom plain text block for content display"
-      }
-    ]
-  },
-  {
-    "id": "custom-richtext",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Custom Richtext",
-        "valueType": "string",
-        "description": "Custom rich text block for content display"
-      }
-    ]
-  },
-  {
-    "id": "custom-richtext-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Custom Richtext",
-        "valueType": "string",
-        "description": "Custom rich text item for content display"
-      }
-    ]
-  },
-  {
-    "id": "term-insurance-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "term-Insurance-carousel-item",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "our-bestselling-term-item",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "term-plan-carousel-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "popular-searches",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "comparison-of-plans-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "text",
-        "value": "",
-        "label": "Dis Text",
-        "valueType": "string",
-        "description": "Comparison of Plans Title"
-      },
-      {
-        "component": "richtext",
-        "name": "col1_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "col2_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "accordion-item",
-    "type": "accordion/text",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "question",
-        "label": "Question"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Fragment URL"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text"
       }
     ]
   }

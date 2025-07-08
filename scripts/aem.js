@@ -19,7 +19,7 @@ function sampleRUM(checkpoint, data) {
       : Date.now() - window.hlx.rum.firstReadTime;
   try {
     window.hlx = window.hlx || {};
-    sampleRUM.enhance = () => {};
+    sampleRUM.enhance = () => { };
     if (!window.hlx.rum) {
       const param = new URLSearchParams(window.location.search).get("rum");
       const weight =
@@ -484,30 +484,31 @@ function decorateButtons(element) {
  * @param {string} [prefix] prefix to be added to icon src
  * @param {string} [alt] alt text to be added to icon
  */
-function decorateIcon(span, prefix = "", alt = "") {
-  if (Array.from(span.classList).find((c) => c.includes("icon-images"))) {
-    const classes = span.classList[1]?.split("-");
-    const path = `/${classes.slice(1, 2).join("/")}/${classes
-      .slice(2, -1)
-      .join("-")}.${classes.slice(-1)}`;
-    const img = document.createElement("img");
+function decorateIcon(span, prefix = '', alt = '') {
+  if (Array.from(span.classList)
+    .find((c) => c.includes('icon-images'))) {
+    const classes = (span.classList[1])?.split('-');
+    const path = `/${classes.slice(1, 2).join('/')}/${classes.slice(2, -1).join('-')}.${classes.slice(-1)}`;
+    const img = document.createElement('img');
     img.dataset.iconName = path;
     img.src = `${window.hlx.codeBasePath}${prefix + path}`;
     img.alt = alt;
-    img.loading = "lazy";
+    img.loading = 'lazy';
     span.append(img);
   } else {
     const iconName = Array.from(span.classList)
-      .find((c) => c.startsWith("icon-"))
+      .find((c) => c.startsWith('icon-'))
       .substring(5);
-    const img = document.createElement("img");
+    const img = document.createElement('img');
     img.dataset.iconName = iconName;
     img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
     img.alt = alt;
-    img.loading = "lazy";
+    img.loading = 'lazy';
     span.append(img);
   }
 }
+
+
 
 /**
  * Add <img> for icons, prefixed with codeBasePath and optional prefix.
@@ -637,7 +638,7 @@ function buildBlock(blockName, content) {
  * Loads JS and CSS for a block.
  * @param {Element} block The block element
  */
-async function loadBlock(block) {
+async function loadBlock(block, state) {
   const status = block.dataset.blockStatus;
   if (status !== "loading" && status !== "loaded") {
     block.dataset.blockStatus = "loading";
@@ -721,7 +722,7 @@ async function loadFooter(footer) {
   const footerBlock = buildBlock("footer", "");
   footer.append(footerBlock);
   decorateBlock(footerBlock);
-  return loadBlock(footerBlock);
+  return loadBlock(footerBlock, true);
 }
 
 /**

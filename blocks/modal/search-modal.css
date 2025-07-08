@@ -1,0 +1,188 @@
+.modal.block dialog:has(.section.modal-search) .modal-content {}
+
+
+.modal.block dialog:has(.section.modal-search) .modal-content .search .search-box input {
+    border: unset;
+    border-bottom: 3px solid blue;
+    border-radius: unset;
+}
+
+.modal.block dialog:has(.section.modal-search)::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+.modal.block dialog:has(.section.modal-hamburger) {
+    /* overflow: auto; */
+    width: auto;
+    max-height: none;
+    max-width: max-content;
+    top: 62px;
+    /* right: 0; */
+    left: calc((1416px - 357px) / 2);
+    /* left: unset; */
+    /* max-width: 658px; */
+    /* overflow-y: auto; */
+    height: 470px;
+    transform: unset;
+    bottom: unset;
+    border: unset;
+    /* padding: 50px; */
+}
+
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content {
+    border-radius: 0px 0px 0px 20px;
+    /* background: #F2F7FB; */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.02), 3px 8px 16px 0px rgba(0, 115, 187, 0.12);
+    /* width: fit-content;
+    height: 470px; */
+    padding: unset;
+}
+
+
+.modal.block dialog:has(.section.modal-hamburger)::backdrop {
+    background: unset;
+    /* border: ; */
+}
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper {
+    padding: unset;
+}
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper,
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul {
+    display: flex;
+    border-radius: 0px 0px 0px 20px;
+    /* background: #F2F7FB; */
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.02), 3px 8px 16px 0px rgba(0, 115, 187, 0.12);
+    width: max-content;
+    margin: unset;
+}
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul {
+    list-style: none;
+    margin: unset;
+    padding: unset;
+    background: #F2F7FB;
+    padding: 15px 25px;
+    gap: 40px;
+}
+
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul>li {
+    color: #58595B;
+    font-family: 'Inter';
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.14px;
+    list-style: none;
+    max-width: 160px;
+}
+
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger .quicklinks.hero-container {
+    min-width: 200px;
+    margin: unset;
+}
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul>li>p {
+    margin: unset;
+}
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul>li>p>a {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter';
+    font-size: 0.875rem;
+}
+
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul>li p a span {
+    width: 48px;
+    height: 48px;
+    padding-bottom: 10px;
+}
+
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul>li>ul>li,
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul>li>ul>li>a {
+    padding-bottom: 10px;
+    color: #58595B;
+    font-family: 'Inter';
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.098px;
+    list-style: none;
+}
+
+
+.modal.block dialog:has(.section.modal-hamburger) .modal-content>.section.modal-hamburger>.default-content-wrapper>ul>li>ul {
+    padding: unset;
+}
+
+/* popular search css */
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper {}
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper p {
+    font-size: 18px;
+    font-family: "Inter-Bold";
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    color: #333333;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper>ul>li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: max-content !important;
+    border: 1px solid #58595B;
+    padding: 7px 12px 6px;
+    margin: 0 12px 12px 0;
+    cursor: pointer;
+    line-height: normal;
+}
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper ul li {
+    line-height: normal;
+}
+
+
+.modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper ul li a {
+    color: #58595B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Inter-Regular";
+    line-height: normal;
+    letter-spacing: -0.267px;
+}
+
+@media screen and (max-width: 767.99px) {
+    .modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper h1 {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: -0.625px;
+    }
+
+    .modal.block dialog:has(.section.modal-search) .modal-content .section.modal-search .default-content-wrapper ul {
+        padding: 0px 8px 4px;
+        margin: 0 8px 8px 0;
+    }
+}

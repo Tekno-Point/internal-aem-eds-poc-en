@@ -1,5 +1,5 @@
 import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
+import { loadFragment } from '../../scripts/scripts.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
@@ -59,8 +59,8 @@ function focusNavSection() {
 function toggleAllNavSections(sections, expanded = false) {
   sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li, .nav-tools .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
-    section?.querySelector("ul")?.classList.add("inner-ul");
-    section?.querySelectorAll("ul >li")?.forEach((subLi, ind) => {
+    // section?.querySelector("ul")?.classList.add("inner-ul");
+    section?.querySelectorAll(":scope>ul >li")?.forEach((subLi, ind) => {
       isDesktop.matches ? (subLi.setAttribute('aria-expanded', ind == 0 ? 'true' : expanded)) : subLi.setAttribute('aria-expanded', expanded);
     })
   });
@@ -172,9 +172,15 @@ export default async function decorate(block) {
   }
 
   navSectionsImg?.remove();
-
+  let isClick = isDesktop.matches ? "mouseover" : "click";
   if (navSections) {
-    let isClick = isDesktop.matches ? "mouseover" : "click";
+
+    // debugger;
+    navSections.querySelectorAll('.default-content-wrapper > ul > li, .nav-tools .default-content-wrapper > ul > li').forEach((section) => {
+      section?.querySelector("ul")?.classList.add("inner-ul");
+    })
+
+
     navSections.querySelectorAll(':scope >.default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       if (isDesktop.matches) {
@@ -204,20 +210,21 @@ export default async function decorate(block) {
         });
       }
 
-      navSection.querySelectorAll(":scope>ul >li").forEach((subLi, ind) => {
+      // debugger;
+      navSection.querySelectorAll(":scope>ul.inner-ul>li").forEach((subLi, ind) => {
         // subLi?.querySelector(":scope>p, :scope>a")?.addEventListener(isClick, (ele) => {
+        // subLi?.querySelector(":scope>li")?.addEventListener(isClick, (ele) => {
         subLi?.addEventListener(isClick, (ele) => {
-          // debugger;
-          // ele.stopPropagation();
-          const li = ele.target?.closest("li");
-          const expanded = li?.getAttribute("aria-expanded");
+          // const li = ele.target?.closest("li");
+          // const expanded = li?.getAttribute("aria-expanded");
+          const expanded = subLi?.getAttribute("aria-expanded");
           if (expanded === "false") {
             navSections.querySelectorAll('.default-content-wrapper > ul > li').forEach((section) => {
-              section.querySelectorAll("ul >li").forEach((subLi, ind) => {
+              section.querySelectorAll(":scope>ul >li").forEach((subLi, ind) => {
                 subLi.setAttribute('aria-expanded', 'false');
               })
             });
-            li.setAttribute('aria-expanded', 'true');
+            subLi.setAttribute('aria-expanded', 'true');
           }
           else if (!isDesktop.matches) {
             navSections.querySelectorAll('.default-content-wrapper > ul > li').forEach((section) => {
@@ -227,7 +234,7 @@ export default async function decorate(block) {
             });
             li.setAttribute('aria-expanded', 'false');
           }
-        })
+        }, true)
       })
     });
   }
@@ -237,15 +244,26 @@ export default async function decorate(block) {
     toggleAllNavTools(navTools);
     navTools.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navTool) => {
       if (navTool.querySelector('ul')) navTool.classList.add('nav-drop');
-      navTool.addEventListener('click', (e) => {
-        // e.stopPropagation()
 
-        // if (isDesktop.matches) {
-        const expanded = navTool.getAttribute('aria-expanded') === 'true';
-        toggleAllNavTools(navTools);
-        navTool.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        // }
-      });
+      if (isDesktop.matches) {
+        navTool.addEventListener('mouseenter', (e) => {
+          // if (!e.target.closest(".inner-ul")) {
+            navTool.setAttribute('aria-expanded', 'true');
+          // }
+        });
+        navTool.addEventListener('mouseleave', (e) => {
+          // if (!e.target.closest(".inner-ul")) {
+            navTool.setAttribute('aria-expanded', 'false');
+          // }
+        });
+      }
+      else {
+        navTool.addEventListener("click", (e) => {
+          const expanded = navTool.getAttribute('aria-expanded') === 'true';
+          toggleAllNavTools(navTools);
+          navTool.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        });
+      }
     })
 
     // hamburger for mobile
