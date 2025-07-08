@@ -83,7 +83,7 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   position: unset;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper {
-  height: 460px;
+  height: 445px;
   padding-left: 6px;
 }
 @media (max-width: 768px) {
@@ -164,8 +164,9 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 92%;
-  left: -5px;
+  width: 102%;
+  left: -3px;
+  bottom: -1px;
 }
 main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2):hover {
   box-shadow: 0px 0px 5px rgba(92, 94, 100, 0.69);
@@ -175,7 +176,6 @@ main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .ou
 }
 @media screen and (max-width: 768px) {
   main > .section.our-bestselling-term-container .our-bestselling-term-wrapper .our-bestselling-term .swiper-wrapper .swiper-slide > div:last-child > ul:nth-child(2) {
-    width: 89%;
     left: -3px;
   }
 }

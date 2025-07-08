@@ -89,6 +89,10 @@
   --nav-height: 64px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* fallback fonts */
 @font-face {
   font-family: Inter-Bold-fallback;
