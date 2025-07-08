@@ -1,5 +1,6 @@
 import { div } from "../../scripts/dom-helper.js";
 import { initSwiperOnly } from '../carousel/carousel.js';
+import { showCards } from "../modal/modal.js";
 
 // Ensure Swiper CSS is loaded
 (function ensureSwiperCss() {
@@ -21,7 +22,7 @@ export default async function decorate(block) {
     let origin = config.data[0].value
     if (exclude.includes(window.location.host)) {
         origin = 'https://author-p48457-e1275402.adobeaemcloud.com';
-    }
+    }    
 
     Array.from(block.children).forEach(async (row, i) => {
         const item = row.querySelector('a');
@@ -31,8 +32,10 @@ export default async function decorate(block) {
             method: "GET"
         });
         const respData = await response.json();
+        // console.log(respData)
         // Render the carousel markup
         let carousel = renderUI(respData?.data?.cfListByPath?.item?.contentFragment);
+        
         // If renderUI returns an array, wrap it in a div
         if (Array.isArray(carousel)) {
             const wrapper = document.createElement('div');
@@ -50,6 +53,11 @@ export default async function decorate(block) {
         if (carousel instanceof HTMLElement) {
             initSwiperOnly(carousel);
         }
+
+        showCards(respData?.data?.cfListByPath?.item?.contentFragment);
+        window.addEventListener('userDataSave', (e)=> {
+            showCards(respData?.data?.cfListByPath?.item?.contentFragment);
+        })
     });
 }
 
@@ -175,6 +183,7 @@ function renderUI(data = []) {
         });
         return Array.from(set).filter(Boolean);
     })();
+    // console.log(cityOptions)
     // State for departure filter
     let fromValue = '';
     let toValue = '';
@@ -268,6 +277,7 @@ function renderUI(data = []) {
                     input.parentNode.appendChild(dropdown);
                 }
                 dropdown.innerHTML = '';
+                // console.log(filtered);
                 filtered.slice(0, 8).forEach(opt => {
                     const optDiv = document.createElement('div');
                     optDiv.className = 'city-suggestion-item';
@@ -641,7 +651,7 @@ function renderUI(data = []) {
     );
 }
 
-function renderCard(data = []) {
+export function renderCard(data = []) {
     return data.map(function (eachData, idx) {
         // Data extraction
         const image = eachData.image?._publishUrl || '';
