@@ -30,6 +30,11 @@
     bottom: unset;
     border: unset;
     /* padding: 50px; */
+    right: unset;
+    bottom: unset;
+    left: unset;
+    top: 62px;
+    left: calc((100% - 319px) / 2);
 }
 
 

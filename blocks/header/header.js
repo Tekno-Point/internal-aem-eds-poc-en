@@ -187,6 +187,7 @@ export default async function decorate(block) {
         navSection.addEventListener('mouseenter', (e) => {
           if (!e.target.closest(".inner-ul")) {
             navSection.setAttribute('aria-expanded', 'true');
+            navSection.querySelector(".inner-ul li").setAttribute('aria-expanded', 'true')
           }
         });
         navSection.addEventListener('mouseleave', (e) => {

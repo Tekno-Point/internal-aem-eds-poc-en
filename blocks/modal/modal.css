@@ -1,7 +1,7 @@
 @import url(search-modal.css);
 
 .modal a.button,
-.modal button{
+.modal button {
     all: unset;
 }
 
@@ -111,6 +111,11 @@ body.modal-open {
     background: #F2F7FB;
     filter: drop-shadow(0px 0px 14px rgba(0, 115, 187, 0.25));
     border-radius: 8px;
+    right: unset;
+    bottom: unset;
+    left: unset;
+    top: 62px;
+    left: calc((100% - 325px) / 2);
 }
 
 
@@ -238,7 +243,7 @@ body.modal-open {
         flex-direction: column;
     }
 
-    .modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row{
+    .modal.block dialog:has(.section.modal-call) .modal-content .section.modal-call .columns-wrapper .column-row {
         gap: 30px;
     }
 
