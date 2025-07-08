@@ -280,6 +280,10 @@
           {
             "name": "Insurance Plan Form",
             "value": "insurance-plan-form"
+          },
+          {
+            "name": "long-term-policy",
+            "value": "long-term-policy"
           }
         ]
       }
