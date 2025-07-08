@@ -7,13 +7,46 @@
 .section.aia-banner-container {
     max-width: 1206px;
     box-sizing: border-box;
-    background: linear-gradient(0deg, #FBFBFC 0%, #F2F7FB 100%);
-    padding: 24px;
-    border-radius: 24px;
+    /* background: linear-gradient(0deg, #FBFBFC 0%, #F2F7FB 100%); */
+    /* padding: 24px; */
+    /* border-radius: 24px; */
     margin: 0 auto;
     display: flex;
-    gap: 24px;
-    gap: 2.06%;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+    /* gap: 2.06%; */
+}
+
+.section .default-content-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 30px 0 20px;
+}
+
+.section .default-content-wrapper h1 {
+    color: #333;
+    font-family: "Inter-Bold";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    margin: 0;
+}
+
+.section .default-content-wrapper p {
+    color: #333;
+    font-family: 'Inter-Regular';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    margin: 0;
+}
+
+.section .default-content-wrapper p a {
+    color: #0073BB;
+    font-family: "Inter-Bold";
+    text-decoration: none;
 }
 
 .aia-banner-container .aia-banner-wrapper {
@@ -21,6 +54,10 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    margin: 0;
+    background: linear-gradient(0deg, #FBFBFC 0%, #F2F7FB 100%);
+    padding: 24px 24px 24px 24px;
+    border-radius: 24px 0 0 24px;
 }
 
 .aia-banner>div {
@@ -91,7 +128,7 @@
 .aia-banner>div div:nth-child(1) ul>li p {
     font-size: 20px;
     line-height: normal;
-    font-family: sans-serif;
+    font-family: "Inter-Bold";
     font-weight: 700;
     letter-spacing: -0.2px;
     color: #F2F7FB;
@@ -121,6 +158,7 @@
 .aia-banner>div div:nth-child(1) ul>li:last-of-type p {
     font-size: 12px;
     font-weight: 400;
+    font-family: 'Inter-Regular';
     letter-spacing: -0.12px;
 }
 
@@ -135,6 +173,8 @@
     color: #333;
     font-size: 28px;
     line-height: normal;
+    font-family: 'Inter-Regular';
+    font-weight: 400;
     letter-spacing: -0.28px;
     padding: 0 0 20px 0;
     margin: 0;
@@ -157,6 +197,7 @@
     position: relative;
     padding-left: 29px;
     font-weight: 400;
+    font-family: 'Inter-Regular';
     font-size: 14px;
     line-height: normal;
     letter-spacing: -0.144px;
@@ -200,10 +241,14 @@
 }
 
 .aia-banner-container .form-wrapper {
-    max-width: 52%;
+    max-width: 51.3%;
     width: 100%;
     height: 100%;
     padding: 0;
+    margin: 0;
+    background: linear-gradient(0deg, #FBFBFC 0%, #F2F7FB 100%);
+    padding: 24px 24px 24px 0;
+    border-radius: 0 24px 24px 0;
 }
 
 .aia-banner-container .form-wrapper .form form {
@@ -223,7 +268,7 @@
     line-height: normal;
     letter-spacing: -0.62px;
     font-weight: 700;
-    font-family: sans-serif;
+    font-family: "Inter-Bold";
     width: 100%;
     background: linear-gradient(90deg, #0073BB 0%, #D62049 55%);
     background-clip: text;
@@ -279,6 +324,7 @@
     font-size: 14px;
     line-height: 14px;
     font-weight: 600;
+    font-family: "Inter-Bold";
     letter-spacing: -0.14px;
     color: #58595b;
     margin-bottom: 8px;
@@ -293,6 +339,7 @@
     font-size: 16px;
     line-height: 22px;
     color: #333;
+    font-family: 'Inter-Regular';
 }
 
 .aia-banner-container .form-wrapper .field-wrapper input:focus,
@@ -330,6 +377,7 @@
     font-size: 14px;
     font-weight: 700;
     line-height: normal;
+    font-family: "Inter-Bold";
     letter-spacing: -0.14px;
     text-align: center;
     cursor: pointer;
@@ -378,6 +426,7 @@
     margin: 0;
     color: #58595b;
     font-weight: 500;
+    font-family: 'Inter-Regular';
     text-align: center;
     width: 50px;
     box-sizing: border-box;
@@ -390,6 +439,7 @@
 .aia-banner-container .form-wrapper .form form>.field-wrapper.small-width select {
     color: #000;
     font-size: 14px;
+    font-family: 'Inter-Regular';
     font-weight: 500;
     line-height: 18px;
     letter-spacing: -0.14px;
@@ -428,6 +478,7 @@
     font-size: 10px;
     font-weight: 400;
     line-height: normal;
+    font-family: 'Inter-Regular';
     letter-spacing: -0.1px;
     margin: 0;
 }
@@ -440,9 +491,12 @@
     color: #FFF;
     font-size: 14px;
     font-weight: 700;
+    font-family: "Inter-Bold";
     line-height: 18px;
     letter-spacing: -0.14px;
     transition: all 0.3s ease;
+    max-width: 100%;
+    width: 100%;
 }
 
 .aia-banner-container .form-wrapper .form form>.field-wrapper.submit-wrapper .button:hover {
@@ -459,9 +513,26 @@
         gap: 16px;
     }
 
+    .section .default-content-wrapper {
+        padding: 0 20px;
+    }
+
+    .section .default-content-wrapper h1 {
+        font-size: 24px;
+        letter-spacing: -0.24px;
+        padding: 0 0 5px;
+    }
+
+    .section .default-content-wrapper p {
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: -0.14px;
+    }
+
     .aia-banner-container .aia-banner-wrapper {
         max-width: 100%;
         padding: 0 20px;
+        background: unset;
     }
 
     .aia-banner>div {
@@ -493,7 +564,7 @@
 
     .aia-banner>div div:nth-child(1)>ul {
         max-width: 124px;
-        margin: 0 8px 0 0;
+        margin: 0 11px 0 0;
         padding: 6px;
         clip-path: polygon(0% 0%, 10px 50%, 0% 100%, 100% 100%, 100% 0%);
         border-radius: 0;
@@ -579,6 +650,7 @@
         color: #58595B;
         font-size: 12px;
         font-weight: 600;
+        font-family: "Inter-Bold";
         line-height: 16px;
         letter-spacing: -0.12px;
     }
@@ -586,6 +658,7 @@
     .aia-banner-container .form-wrapper .field-wrapper input {
         font-size: 14px;
         line-height: 19px;
+        max-width: 100%;
     }
 
     .aia-banner-container .form-wrapper .field-wrapper.fieldset-wrapper fieldset .field-wrapper.radio-wrapper label {
@@ -610,5 +683,5 @@
     .aia-banner-container .form-wrapper .form form>.field-wrapper.submit-wrapper {
         width: 100%;
     }
-    
+
 }
