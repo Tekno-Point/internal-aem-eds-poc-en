@@ -24,6 +24,8 @@
   src: url('/fonts/Montserrat-Bold.ttf') format('woff2');
   font-weight: 900;
   font-style: normal;
+  display: swap;
+  font-display: swap;
 }
 
 @font-face {
@@ -32,6 +34,8 @@
   src: url('/fonts/Montserrat-Medium.ttf') format('woff2');
   font-weight: 700;
   font-style: normal;
+  display: swap;
+  font-display: swap;
 }
 
 @font-face {
@@ -41,6 +45,8 @@
   font-weight: 500;
   font-style: normal;
   font-size: 20px;
+  display: swap;
+  font-display: swap;
 }
 
 @font-face {
@@ -49,6 +55,8 @@
   src: url('/fonts/Montserrat-SemiBold.ttf') format('woff2');
   font-weight: 900;
   font-style: normal;
+  display: swap;
+  font-display: swap;
 }
 
 /* * {
