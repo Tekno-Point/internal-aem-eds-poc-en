@@ -140,7 +140,8 @@
 }
 
 .swiper-slide > .item-wrapper > .item-col > div > div:nth-child(2) > div {
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .fr-col > .swiper-initialized > .swiper-wrapper > .swiper-slide {
