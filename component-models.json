@@ -189,7 +189,7 @@
     ]
   },
   {
-    "id": "tabsText",
+    "id": "tab",
     "fields": [
       {
         "component": "text",
