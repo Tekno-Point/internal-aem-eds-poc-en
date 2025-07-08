@@ -342,6 +342,10 @@
           {
             "name": "Form Tabs",
             "value": "form-tabs"
+          },
+          {
+            "name": "Form Absolute",
+            "value": "form-absolute"
           }
         ]
       }
