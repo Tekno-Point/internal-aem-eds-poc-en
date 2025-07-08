@@ -1,5 +1,5 @@
 /* header and nav layout */
-
+@import url(quicklinks.css);
 header a.button:any-link,
 header button {
   all: unset;
