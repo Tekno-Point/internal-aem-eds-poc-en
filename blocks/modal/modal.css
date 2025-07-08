@@ -1,5 +1,10 @@
 @import url(search-modal.css);
 
+.modal a.button,
+.modal button{
+    all: unset;
+}
+
 body.modal-open {
     overflow: hidden;
 }
