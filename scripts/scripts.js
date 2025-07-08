@@ -592,7 +592,6 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
-   loadScript("https://assets.adobedtm.com/68d5933462dd/0f45052f726e/launch-2190e0b9d934-development.min.js", { async: true });
   autolinkModals(doc);
   const main = doc.querySelector('main');
   autolinkFragements(doc);
@@ -609,6 +608,7 @@ async function loadLazy(doc) {
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
   loadAutoBlock(doc);
+  loadScript("https://assets.adobedtm.com/68d5933462dd/0f45052f726e/launch-2190e0b9d934-development.min.js", { async: true });
 }
 
 //////
