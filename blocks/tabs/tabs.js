@@ -1970,85 +1970,132 @@ export default async function decorate(block) {
     tab.remove();
   });
 
+
   block.prepend(tablist);
   showData(block, '.from-input', 'from-wrapper', 'source');
   showData(block, '.to-input', 'to-wrapper', 'destination');
   clickDropdown(block);
+   
+   const form = block.querySelector('form');
+     const submit = form.querySelector('button[type="submit"]');
 
-  const form = block.querySelector('form');
-  form.addEventListener('submit', async function (e) {
+   form.addEventListener('submit', async function(e) {
     e.preventDefault();
-    console.log(e)
-    console.log(this);
+    submit.classList.add('disabled');
 
     const auth = await getAccessToken();
-    const data = await getData(auth, {
-      originLocationCode: this.source.dataset.iataCode,
-      destinationLocationCode: this.destination.dataset.iataCode,
-      departureDate: this.departure.value,
-      returnDate: this.return.value,
-      adults: '1',
-      includedAirlineCodes: 'TG',
-      max: '10',
-    });
-    console.log(data);
+    const data = await getData(auth , {
+        originLocationCode: this.source.dataset.iataCode,
+        destinationLocationCode: this.destination.dataset.iataCode,
+        departureDate: this.departure.value,
+        returnDate: this.return.value,
+        adults: '1',
+        includedAirlineCodes: 'TG',
+        max: '10',
+      });
 
-    const rowWrapper = document.createElement('div');
-    rowWrapper.classList.add("row-wrapper");
+    // Remove previous cards (for clean UI)
+    block.querySelectorAll('.flight-card').forEach(card => card.remove());
 
+    const countries = new Intl.DisplayNames(['en'], { type: 'region' });
+    const locations = data.body.dictionaries.locations;
+    
+    const cardWrapper = document.createElement('div');
+    cardWrapper.classList.add("card-wrapper");
     data.body.data.forEach((flight, index) => {
-      console.log(data)
-      const from = flight.itineraries[0].segments[0].departure.iataCode;
-      const to = flight.itineraries[0].segments[0]?.arrival.iataCode;
+      const segment = flight.itineraries[0].segments[0];
 
-      const fromTerminal = flight.itineraries[0].segments[0].departure.terminal;
-      const toTerminal = flight.itineraries[0].segments[0]?.arrival.terminal;
+      const cityNames = {
+        BOM: 'Mumbai',
+        DEL: 'Delhi',
+        CMB: 'Colombo',
+        BKK: 'Bangkok',
+        MAA: 'Chennai',
+        BLR: 'Bangalore',
+        DXB: 'Dubai',
+        SIN: 'Singapore'
+      };
 
-      console.log(flight.itineraries)
+      const from = segment.departure.iataCode;
+      const fromTerminal = segment.departure.terminal ? segment.departure.terminal : '1';
+      const to = segment.arrival.iataCode;
+      const toTerminal = segment.arrival.terminal ? segment.arrival.terminal : '1';
 
-      const departureDate = flight.lastTicketingDate;
-      const returnDate = flight.lastTicketingDateTime;
-      const dates = departureDate && returnDate ? `${departureDate} - ${returnDate}` : '—';
+      const fromCity = cityNames[from] || from;
+      const fromCountryCode = locations[from]?.countryCode || 'IN';
+      const fromCountry = countries.of(fromCountryCode);
 
+      const toCity = cityNames[to] || to;
+      const toCountryCode = locations[to]?.countryCode || 'IN';
+      const toCountry = countries.of(toCountryCode);
+
+      const departure = new Date(segment.departure.at);
+      const departureTime = departure.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const departureDate = departure.toLocaleDateString('en-GB');
+
+      const duration = flight.itineraries[0].duration.replace('PT', '').toLowerCase();
       const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
+      const price = convertEurToInr(flight.price.grandTotal);
 
-      const inrPrice = convertEurToInr(flight.price.grandTotal);
-      console.log(inrPrice);
-      const price = inrPrice;
+      const card = document.createElement('div');
+      card.className = 'flight-card';
 
-      const row = document.createElement('div');
-      row.classList.add("booking-card");
-      row.innerHTML = `   
-      <div class="departure-wrapper">
-         <p class="date">${departureDate}</p>
-         <div class="city-container">
-            <p class="iata-code">${from}</p>
-            <p class="city"></p>
-         </div>
-         <p class="terminal">Terminal ${fromTerminal}</p>
-      </div>
-      <div class="forward-arrow"></div>
-      <div class="return-wrapper">
-         <p class="date">${returnDate}</p>
-         <div class="city-container">
-            <p class="iata-code">${to}</p>
-            <p class="city"></p>
-         </div>
-         <p class="terminal">Terminal ${toTerminal}</p>
-      </div>
-    `;
-      rowWrapper.appendChild(row)
+      const flightInfo = document.createElement('div');
+      flightInfo.className = 'flight-info';
+
+      const fromDiv = document.createElement('div');
+      fromDiv.className = 'from-info';
+      fromDiv.innerHTML = `
+        <strong>${from}</strong> ${fromCity}, ${fromCountry}<br>
+        Terminal ${fromTerminal}<br>
+        ${departureDate}
+      `;
+
+      const arrowDiv = document.createElement('div');
+      arrowDiv.className = 'arrow';
+      const arrowImg = document.createElement('img');
+      arrowImg.src = '/image/arrow.png'; // or your desired image path
+      arrowImg.alt = 'to';
+      arrowImg.className = 'arrow-img'; // optional, for styling
+      arrowDiv.appendChild(arrowImg);
+
+      const toDiv = document.createElement('div');
+      toDiv.className = 'to-info';
+      toDiv.innerHTML = `
+        <strong>${to}</strong> ${toCity}, ${toCountry}<br>
+        Terminal ${toTerminal}<br>
+        ${departureDate}
+      `;
+
+      flightInfo.append(fromDiv, arrowDiv, toDiv);
+
+      // Airline Details
+      const airlineDetails = document.createElement('div');
+      airlineDetails.className = 'airline-details';
+
+      const heading = document.createElement('h4');
+      heading.textContent = 'SriLankan Airlines';
+
+      const detailDiv = document.createElement('div');
+      detailDiv.className = 'detail';
+      detailDiv.textContent = `${fare} Class`;
+
+      const durationDiv = document.createElement('div');
+      durationDiv.className = 'duration';
+      durationDiv.textContent = `Duration: ${duration}`;
+      const departureDiv = document.createElement('div');
+      departureDiv.className = 'departure';
+      departureDiv.textContent = `Departure: ${departureTime}`;
+
+      const button = document.createElement('button');
+      button.className = 'book-now-button';
+      button.textContent = 'Book Now';
+
+      airlineDetails.append(heading, detailDiv, durationDiv, departureDiv, button);
+      card.append(flightInfo, airlineDetails);
+      cardWrapper.appendChild(card);
     });
-    const tabSection = document.querySelector('.section.tabs-container')
-    tabSection.appendChild(rowWrapper);
-  })
-
-  const select = block.querySelector('select');
-  select.innerHTML = `
-     <option>1 Traveller</option>
-     <option>2 Traveller</option>
-     <option>3 Traveller</option>
-     <option>4 Traveller</option>
-     <option>5 Traveller</option>
-  `
+    block.appendChild(cardWrapper);
+    submit.classList.remove('disabled');
+  });
 }
