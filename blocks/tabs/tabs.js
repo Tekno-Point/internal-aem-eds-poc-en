@@ -2096,8 +2096,8 @@ export default async function decorate(block) {
       cardWrapper.appendChild(card);
     });
     if(block.classList.contains("form-absolute")) {
-      const tabsWrapper = document.querySelector('.tabs-wrapper');
-      tabsWrapper.appendChild(cardWrapper)
+      const tabsContainer = document.querySelector('.section.tabs-container');
+      tabsContainer.appendChild(cardWrapper)
     }
     else {
       block.appendChild(cardWrapper);
