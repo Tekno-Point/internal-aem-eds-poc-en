@@ -16,7 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "tabs"
+      "tabsText"
     ]
   },
   {
@@ -26,9 +26,9 @@
     ]
   },
   {
-    "id": "tabs",
+    "id": "tabsText",
     "components": [
-      "tab"
+      "tabsText"
     ]
   },
   {
