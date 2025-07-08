@@ -298,7 +298,7 @@
 
 /* features of term insurance plan */
 .section.features-of-ti {
-  margin-bottom: 100px;
+  padding-bottom: 20px;
 }
 
 .features-of-ti .custom-richtext>div>div:where(h1, h2, h3, h4, h5, h6) {
