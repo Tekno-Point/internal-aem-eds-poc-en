@@ -18,7 +18,6 @@
       "custom-text",
       "custom-richtext",
       "custom-richtextblock",
-      "term-insurance",
       "term-Insurance-carousel",
       "our-bestselling-term",
       "term-plan-carousel",
@@ -46,10 +45,6 @@
   {
     "id": "tabs",
     "components": ["tab"]
-  },
-  {
-    "id": "term-insurance",
-    "components": ["term-insurance-item"]
   },
   {
     "id": "custom-richtextblock",

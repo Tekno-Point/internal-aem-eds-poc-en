@@ -1,32 +1,3 @@
-@font-face {
-  font-family: 'Montserrat-Bold'; /* Name you want to use in CSS */
-  src: url('/fonts/Montserrat-Bold.ttf') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat-Medium'; /* Name you want to use in CSS */
-  src: url('/fonts/Montserrat-Medium.ttf') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat-Regular'; /* Name you want to use in CSS */
-  src: url('/fonts/Montserrat-Regular.ttf') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat-SemiBold'; /* Name you want to use in CSS */
-  src: url('/fonts/Montserrat-SemiBold.ttf') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-
-
 
 .section> div.hero-container{
   padding: 0;
