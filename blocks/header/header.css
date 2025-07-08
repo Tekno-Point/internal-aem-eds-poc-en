@@ -889,6 +889,13 @@ header nav .nav-tools .default-content-wrapper>ul>li::after {
     height: 58px;
   }
 
+  header nav[aria-expanded='true'] .nav-sections{
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    height: calc(100% - 1px);
+  }
+
   header nav[aria-expanded='true'] {
     padding: unset;
     scrollbar-width: thin;
