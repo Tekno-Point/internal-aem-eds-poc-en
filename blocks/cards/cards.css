@@ -979,6 +979,127 @@ padding-right: 98px;
   font-size: 1.5rem;
 }
 
+.buy-travel-insurance-policy-online{
+  background: #F8F6E4;
+  padding: 9rem 0;
+  align-items: center;
+  display: flex;
+}
+
+.buy-travel-insurance-policy-online > .default-content-wrapper{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* padding: unset; */
+}
+
+.buy-travel-insurance-policy-online > .default-content-wrapper > h2{
+  color: #282828;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 45px;
+    margin-bottom: 0; 
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper { ;
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul{
+  display: block;
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li{
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background-color: #F8F6E4;
+  border: none;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #E0DDBD;
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-image{
+  width: 35px;
+  height: 43px;
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-image > picture > img{
+  width: 100%;
+  height: 100%;
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  margin: unset;
+}
+
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul{
+    display: block;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li {
+  display: flex; 
+  flex-direction: row-reverse;
+  align-items: center;
+  border: none;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-image{   
+  /* max-width: 512px; */
+  /* height: 251px; */
+  padding-left: 80px;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-image > picture > img{
+  object-fit: contain;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  width: 60%;
+    margin: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
+ color: #282828;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 45px;
+  margin-bottom: 0;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li{
+  display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li > h5{
+  color: #282828;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 25px;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li > p{
+  color: #282828;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  padding: 0 2rem 0 0;
+}
 
 
 @media screen and (max-width : 767.99px) {
