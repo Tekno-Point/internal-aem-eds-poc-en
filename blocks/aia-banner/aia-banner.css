@@ -61,7 +61,7 @@
 }
 
 .aia-banner>div {
-    background: url('../../icons//tata-bg.svg');
+    background: url('../../icons/tata-bg.webp');
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -536,7 +536,7 @@
     }
 
     .aia-banner>div {
-        background: url('../../icons/tata-bg-mob.png');
+        background: url('../../icons/tata-bg-mob.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
