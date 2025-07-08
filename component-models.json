@@ -154,6 +154,10 @@
           },{
             "name" : "ICICI Lombard's travel insurance policy cover ",
             "value" : "lombard-travel-insurance-policy-cover "
+          },
+          {
+            "name" : "international travel insurance policy",
+            "value" : "international-travel-insurance-policy"
           }
         ]
       }
