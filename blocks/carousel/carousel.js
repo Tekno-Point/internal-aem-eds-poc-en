@@ -55,12 +55,20 @@ function applyBreakpoints(block, swiperConfig) {
     }
 
     if (block.classList.contains('banner-carousel')) {
+        swiperConfig.loop = true;
+        swiperConfig.autoplay = {
+            delay: 2000
+        };
         swiperConfig.breakpoints = {
             320: { slidesPerView: 1 }
         }
     }
 
     if (block.classList.contains('services-carousel')) {
+        swiperConfig.loop = true;
+        swiperConfig.autoplay = {
+            delay: 2000
+        };
         swiperConfig.breakpoints = {
             320: { slidesPerView: 1, spaceBetween: 15 },
             1024: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 30 }
