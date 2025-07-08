@@ -453,6 +453,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  gap: 20px;
   justify-content: flex-start;
   width: 100%;
   background: #4197D3;
