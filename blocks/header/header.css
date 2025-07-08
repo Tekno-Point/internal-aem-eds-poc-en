@@ -451,7 +451,8 @@ header nav .nav-tools .default-content-wrapper>p>a {
 }
 
 header nav .nav-sections .nav-drop .inner-ul p::after,
-header nav .nav-sections .nav-drop[aria-expanded='true'] .inner-ul li[aria-expanded='false'] p::after {
+header nav .nav-sections .nav-drop[aria-expanded='true'] .inner-ul li[aria-expanded='false'] p::after,
+header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul:has(>li>ul)>li>strong::after {
   rotate: 401deg;
   content: '';
   display: inline-block;
@@ -465,11 +466,11 @@ header nav .nav-sections .nav-drop[aria-expanded='true'] .inner-ul li[aria-expan
   border-radius: 0 1px 0 0;
   border-width: 2px 2px 0 0;
   rotate: 135deg;
-  rotate: 401deg;
+  rotate: 405deg;
 }
 
 header nav .nav-sections .nav-drop[aria-expanded='true'] .inner-ul p::after,
-header nav .nav-sections .nav-drop[aria-expanded='true'] >.inner-ul >li >strong::after {
+header nav .nav-sections .nav-drop[aria-expanded='true']>.inner-ul>li>strong::after {
   width: 7px;
   height: 7px;
   border: 2px solid currentcolor;
@@ -596,7 +597,7 @@ header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>p>strong 
 }
 
 
-header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>p>strong>span{
+header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>p>strong>span {
   margin-right: 10px;
 }
 
@@ -961,6 +962,10 @@ header nav .nav-tools .default-content-wrapper>ul>li::after {
     /* align-items: start; */
   }
 
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul:has(>li>ul)>li[aria-expanded='true']>strong::after {
+    rotate: 495deg;
+    right: 20px;
+  }
 
 
   header nav .nav-hamburger {
@@ -1057,11 +1062,11 @@ header nav .nav-tools .default-content-wrapper>ul>li::after {
     display: none;
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li>strong>span{
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li>strong>span {
     margin-right: 10px;
   }
-  
-  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li>strong{
+
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li>strong {
     color: #58595B;
     font-family: 'Inter';
     font-size: 0.875rem;
