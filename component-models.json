@@ -112,6 +112,52 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name" : "Million Indians", 
+            "value": "million-indians"
+          },
+          {
+            "name" : "Travel Insurance", 
+            "value": "travel-insurance"
+          },
+          {
+            "name" : "FIC Lombard Travel Insurance", 
+            "value": "fic-Lombard-travel-insurance"
+          },
+          {
+            "name" : "Insurance policy Advantages", 
+            "value": "insurance-policy-advantages"
+          },
+          {
+            "name" : "Travel Insurance Blog Articles", 
+            "value": "travel-insurance-blog articles"
+          },
+          {
+            "name" : "Tips to lower your travel insurance premium", 
+            "value": "tlt-insurance-premium"
+          },{
+            "name" : "Calculate Travel Insurance Premiums Online", 
+            "value": "calculate-TI-premiums-online"
+          },{
+            "name" : "Eligibility Criteria For Travel Insurance Policy", 
+            "value": "ECFT-insurance-policy"
+          },{
+            "name" : "Purchase an Online Travel Insurance Plan",
+            "value" : "purchase-online-travel-insurance-plan"
+          },{
+            "name" : "Things to consider while buying travel insurance online",
+            "value" : "buying-travel-insurance-online"
+          },{
+            "name" : "Claim procedure for travel insurance policies",
+            "value" : "claim-pt-insurance-policies"
+          },{
+            "name" : "ICICI Lombard's travel insurance policy cover ",
+            "value" : "lombard-travel-insurance-policy-cover "
+          },
+          {
+            "name" : "international travel insurance policy",
+            "value" : "international-travel-insurance-policy"
           }
         ]
       }
