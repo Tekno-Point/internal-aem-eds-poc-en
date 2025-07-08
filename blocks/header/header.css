@@ -1,3 +1,5 @@
+@import url("./contactform.css");
+
 /* header and nav layout */
 header .nav-wrapper {
   background-color: var(--background-color);
@@ -188,15 +190,39 @@ header .nav-top-menu .default-content-wrapper {
 
 header .nav-top-menu .default-content-wrapper>ul {
   display: flex;
+  width: 100%;
   gap: 2rem;
   align-items: center;
 }
 
-/* @media (width < 900px) {
- header .nav-top-menu .default-content-wrapper>ul li:nth-child(n+2):nth-child(-n+3) {
-   display: none;
- }
-} */
+@media (width < 900px) {
+  header .nav-top-menu .default-content-wrapper>ul {
+    justify-content: space-between;
+    padding: 2.5px 15px;
+  }
+
+  header .nav-top-menu .default-content-wrapper>ul li:first-child a {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  header .nav-top-menu .default-content-wrapper>ul li:nth-child(3) {
+    display: none;
+  }
+
+  .header .nav-top-menu .default-content-wrapper>ul li:nth-child(4) {
+    height: 30px;
+  }
+
+  .header .nav-top-menu .default-content-wrapper>ul li:nth-child(4) .icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  header .nav-top-menu ul li>a sub {
+    display: none;
+  }
+}
 
 @media (width >=900px) {
 
@@ -253,7 +279,13 @@ header .nav-top-menu .default-content-wrapper>ul {
     animation: blink-animation 1.5s steps(5, start) infinite;
   }
 
-  header .nav-top-menu .default-content-wrapper>ul:nth-child(2)>li {
+  header .nav-top-menu .default-content-wrapper>ul:first-child li:nth-child(4) {
+    display: none;
+  }
+
+
+  header .nav-top-menu .default-content-wrapper>ul:nth-child(2)>li,
+  header .nav-top-menu .default-content-wrapper>ul:nth-child(2)>li>.button-container .button {
     padding: 1rem 1.5rem;
     font-size: 1.3rem;
     font-weight: 600;
@@ -261,6 +293,10 @@ header .nav-top-menu .default-content-wrapper>ul {
     display: inline-block;
     position: relative;
     cursor: pointer;
+  }
+
+  header .nav-top-menu .default-content-wrapper>ul:nth-child(2)>li>.button-container .button {
+    padding: 0;
   }
 
   header .nav-top-menu .default-content-wrapper>ul:nth-child(2)>li:has(ul):after {
@@ -309,10 +345,15 @@ header .nav-top-menu .default-content-wrapper>ul {
     font-size: 1.5rem;
   }
 
+  header .nav-top-menu .default-content-wrapper>ul:nth-child(2) li>.button-container .button {
+    background: transparent;
+    margin: 0;
+  }
+
   header .nav-top-menu .default-content-wrapper>ul:nth-child(2) li:nth-child(4) {
     background: #014579;
     color: #fff;
-    padding-right: 3rem;
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
     font-weight: 700;
     border-radius: 0px;
   }
@@ -331,10 +372,13 @@ header .nav-top-menu .default-content-wrapper>ul {
   header .nav-top-menu .default-content-wrapper>.button-container a {
     margin: 0;
     font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1;
     letter-spacing: 0.5px;
     background: #ec6625;
+    position: relative;
     border-radius: 5px;
-    padding: 0.4rem 1.4rem 0.7rem;
+    padding: 0.4rem 2rem 0.7rem 1.4rem;
   }
 
   header .nav-top-menu .default-content-wrapper>.button-container a:hover {
@@ -344,7 +388,7 @@ header .nav-top-menu .default-content-wrapper>ul {
   header .nav-top-menu .default-content-wrapper>.button-container a::after {
     content: "";
     position: absolute;
-    top: 22%;
+    top: 34%;
     border: solid #fff;
     border-width: 0 2px 2px 0;
     display: inline-block;
@@ -456,6 +500,45 @@ header nav .nav-sections ul>li>ul>li {
     position: absolute;
     top: 10px;
     right: 4px;
+  }
+
+  .header .nav-sections .call-back {
+    display: block;
+    background: #dddccb;
+    color: #6c6c6c;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+    position: relative;
+    padding-left: 4rem;
+  }
+
+  header .nav-sections .call-back::before {
+    content: "";
+    background-image: url(/content/dam/icici-lombard/call-back-ico.png);
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 1.2rem;
+    display: inline-block;
+    position: absolute;
+    left: 2rem;
+    top: 1.7rem;
+  }
+
+  .header .nav-sections .call-back::after {
+    border: solid #282828;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    vertical-align: top;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-46deg);
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 15px;
   }
 
   .nav-sections ul {
@@ -753,3 +836,5 @@ header nav .nav-tools {
     display: none !important;
   }
 }
+
+/* contact modal form */

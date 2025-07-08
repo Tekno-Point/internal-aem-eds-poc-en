@@ -168,7 +168,7 @@ export default async function decorate(block) {
     const sectionsContentWrapper = nav.querySelector(".nav-sections .default-content-wrapper");
 
     loginButton.classList.add('login-button');
-    callBack.classList.add('callback');
+    callBack.classList.add('call-back');
 
     // Add cross (close) button after login button
     const closeBtn = document.createElement('button');
@@ -239,4 +239,22 @@ export default async function decorate(block) {
   block.append(navWrapper);
   // Store overlay on nav for access in toggleMenu
   nav._overlay = overlay;
+ 
+  document.addEventListener('focusin', function(e) {
+    if (e.target.matches('.text-wrapper input')) {
+      const wrapper = e.target.closest('.text-wrapper');
+      if (wrapper) {
+        wrapper.classList.add('focus-active');
+      }
+    }
+  });
+  
+  document.addEventListener('focusout', function(e) {
+    if (e.target.matches('.text-wrapper input')) {
+      const wrapper = e.target.closest('.text-wrapper');
+      if (wrapper && e.target.value.length === 0) {
+        wrapper.classList.remove('focus-active');
+      }
+    }
+  });
 }
