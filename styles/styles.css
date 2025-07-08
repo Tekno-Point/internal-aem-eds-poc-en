@@ -1,7 +1,8 @@
-@import url(../blocks/choose-best-plan/choose-best-plan.css);
-@import url(../blocks/long-policy-period/long-policy-period.css);
-@import url(../blocks/life-stages-plan/life-stages-plan.css);
-@import url(../blocks/content/content.css);
+@import url(../styles/choose-best-plan.css);
+@import url(../styles/content.css);
+@import url(../styles/long-policy-period.css);
+@import url(../styles/life-stages-plan.css);
+/* @import url(../styles/popular-searches.css); */
 
 /*
  * Copyright 2020 Adobe. All rights reserved.
