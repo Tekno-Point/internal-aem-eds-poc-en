@@ -175,11 +175,9 @@ export default async function decorate(block) {
   let isClick = isDesktop.matches ? "mouseover" : "click";
   if (navSections) {
 
-    // debugger;
     navSections.querySelectorAll('.default-content-wrapper > ul > li, .nav-tools .default-content-wrapper > ul > li').forEach((section) => {
       section?.querySelector("ul")?.classList.add("inner-ul");
     })
-
 
     navSections.querySelectorAll(':scope >.default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
@@ -198,26 +196,18 @@ export default async function decorate(block) {
       }
       else {
         navSection.addEventListener('click', (e) => {
-          // debugger;
-          // e.stopPropagation();
-
-          // if (isDesktop.matches && !e.target.closest(".inner-ul")) {
           if (!e.target.closest(".inner-ul")) {
             const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
             navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-            // if (isDesktop.matches) document.body.style.overflow = !expanded ? 'hidden' : 'auto';
           }
         });
       }
 
-      // debugger;
       navSection.querySelectorAll(":scope>ul.inner-ul>li").forEach((subLi, ind) => {
         // subLi?.querySelector(":scope>p, :scope>a")?.addEventListener(isClick, (ele) => {
         // subLi?.querySelector(":scope>li")?.addEventListener(isClick, (ele) => {
         subLi?.addEventListener(isClick, (ele) => {
-          // const li = ele.target?.closest("li");
-          // const expanded = li?.getAttribute("aria-expanded");
           const expanded = subLi?.getAttribute("aria-expanded");
           if (expanded === "false") {
             navSections.querySelectorAll('.default-content-wrapper > ul > li').forEach((section) => {
@@ -235,7 +225,7 @@ export default async function decorate(block) {
             });
             li.setAttribute('aria-expanded', 'false');
           }
-        }, true)
+        })
       })
     });
   }
@@ -248,14 +238,10 @@ export default async function decorate(block) {
 
       if (isDesktop.matches) {
         navTool.addEventListener('mouseenter', (e) => {
-          // if (!e.target.closest(".inner-ul")) {
-            navTool.setAttribute('aria-expanded', 'true');
-          // }
+          navTool.setAttribute('aria-expanded', 'true');
         });
         navTool.addEventListener('mouseleave', (e) => {
-          // if (!e.target.closest(".inner-ul")) {
-            navTool.setAttribute('aria-expanded', 'false');
-          // }
+          navTool.setAttribute('aria-expanded', 'false');
         });
       }
       else {
@@ -280,8 +266,6 @@ export default async function decorate(block) {
     );
     nav.prepend(hamburger);
     nav.setAttribute('aria-expanded', 'false');
-    // prevent mobile nav behavior on window resize
-    // toggleMenu(nav, navSections);
     toggleMenu(nav, navSections, isDesktop.matches);
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 

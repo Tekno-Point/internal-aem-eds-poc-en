@@ -468,7 +468,8 @@ header nav .nav-sections .nav-drop[aria-expanded='true'] .inner-ul li[aria-expan
   rotate: 401deg;
 }
 
-header nav .nav-sections .nav-drop[aria-expanded='true'] .inner-ul p::after {
+header nav .nav-sections .nav-drop[aria-expanded='true'] .inner-ul p::after,
+header nav .nav-sections .nav-drop[aria-expanded='true'] >.inner-ul >li >strong::after {
   width: 7px;
   height: 7px;
   border: 2px solid currentcolor;
@@ -583,6 +584,20 @@ header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li[aria-expa
   font-size: 15px;
   width: 100%;
   text-align: left;
+}
+
+header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>p>strong {
+  font-style: normal;
+  font-family: 'Inter-Regular';
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+
+}
+
+
+header nav .nav-sections .default-content-wrapper>ul>li.nav-drop>ul>li>p>strong>span{
+  margin-right: 10px;
 }
 
 header nav .nav-sections .nav-drop p a,
@@ -889,7 +904,7 @@ header nav .nav-tools .default-content-wrapper>ul>li::after {
     height: 58px;
   }
 
-  header nav[aria-expanded='true'] .nav-sections{
+  header nav[aria-expanded='true'] .nav-sections {
     overflow: hidden;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -1042,7 +1057,23 @@ header nav .nav-tools .default-content-wrapper>ul>li::after {
     display: none;
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li {
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li>strong>span{
+    margin-right: 10px;
+  }
+  
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li>strong{
+    color: #58595B;
+    font-family: 'Inter';
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.098px;
+    display: flex;
+    align-items: center;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li,
+  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul>li[aria-expanded='true']>strong {
     font-weight: 400;
     position: relative;
     display: flex;
