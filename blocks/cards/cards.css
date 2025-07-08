@@ -1101,6 +1101,76 @@ padding-right: 98px;
   padding: 0 2rem 0 0;
 }
 
+.popular-searches{
+  background: #f8f6f6;
+  padding: 50px 0;
+  /* margin-bottom: 50px; */
+}
+
+.popular-searches > .cards-wrapper > .cards > ul{
+  display: block;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li{
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color:  #f8f6f6;;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-image{
+  max-width: 433px;
+  width: 100%;
+
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-image > picture > img{
+  object-fit: contain;
+  aspect-ratio: unset;
+width: 330px;
+display: block;
+  margin: 0 auto;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-body{
+  width: 66.66666667%;
+  padding-left: 40px;
+  margin: unset;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
+  font-weight: 500;
+  font-size: 3.5rem;
+  padding-bottom: 3rem;
+  line-height: 44px; 
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-body > ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li{
+  background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    border-radius: 100px;
+    padding: 8px 15px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li > a{
+word-break: normal;
+color: #000;
+}
+
 
 @media screen and (max-width : 767.99px) {
   .million-indians > .default-content-wrapper > h2 {
@@ -1378,6 +1448,24 @@ padding-right: unset;
 
 .travel-insurance-plans-in-india > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li > h5{
   font-size: 1.6rem;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li{
+  flex-direction: column-reverse;
+  gap: 30px;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-image {
+  width: 100%;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-body {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.popular-searches > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
+  text-align: left;
 }
 
 }
