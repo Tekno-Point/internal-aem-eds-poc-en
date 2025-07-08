@@ -22,6 +22,8 @@ export default async function decorate(block) {
 
     // build tab button
     const button = document.createElement('button');
+    const para = document.querySelectorAll('button p');
+    button.style.borderBottom = '3px solid #ec6608'
     button.className = 'tabs-tab';
     button.id = `tab-${id}`;
     button.innerHTML = tab.innerHTML;
@@ -35,9 +37,11 @@ export default async function decorate(block) {
       });
       tablist.querySelectorAll('button').forEach((btn) => {
         btn.setAttribute('aria-selected', false);
+        btn.style.borderBottom = 'none';
       });
       tabpanel.setAttribute('aria-hidden', false);
       button.setAttribute('aria-selected', true);
+      button.style.borderBottom = '3px solid #ec6608'
     });
     tablist.append(button);
     tab.remove();

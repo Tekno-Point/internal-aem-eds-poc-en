@@ -1,27 +1,119 @@
 .tabs .tabs-list {
   display: flex;
-  gap: 0.5ch;
   max-width: 100%;
   font-size: var(--body-font-size-xs);
   overflow-x: auto;
+  border: 1px solid #b2b2b2;
+  border-radius: 1rem 1rem 0 0;
+}
+.tabs {
+    border-bottom: 1px solid #b2b2b2;
+}
+.tab-container-wrapper{
+    background: #F8F6F6;
+    padding: 5.7rem 0 7.2rem;
+}
+.tabs-list .tabs-tab{
+    border: none;
+    border-bottom: 2.5px solid #f16623;
+}
+.tabs-list .tabs-tab p{
+    width: 170px;
+    text-align: center;
+    color: #f16623;
+    letter-spacing: 0.7px;
+}
+.tabs-panel:nth-child(2) >div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 36px;
+}
+.tabs-panel:nth-child(3) >div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 36px;
+}
+.tabs > div:nth-child(2) >div >ul {
+    list-style-type: none;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.tabs >div:nth-child(2) >div >ul>li:nth-child(1) {
+    color: #282828;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 23px;
+    padding-bottom: 0.5rem;
+}
+.tabs > div:nth-child(3) >div >ul {
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 20px;
+    flex: 1 1 45%;
+}
+.tabs >div:nth-child(3)>div>ul>li{
+    color: #282828;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 23px;
+    padding-bottom: 0.5rem;
+    padding-left: 40px;
+    position: relative;
+}
+.tabs >div:nth-child(3)>div>ul>li>p{
+    color: #282828;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 24px;
+    flex-basis: 100%;
+    margin-top: 20px;
+}
+.tabs >div:nth-child(3)>div>ul>li::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../../icons/exclusion-tick.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+} 
+.tabs >div:nth-child(3)>div>p{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    letter-spacing: 0.5px;
 }
 
-@media (width >= 600px) {
-  .tabs .tabs-list {
-    font-size: var(--body-font-size-s);
-  }
+.tabs >div:nth-child(2) >div >ul>li:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 23%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../../icons/inclusion-tick.svg'); /* <-- update this */
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
 }
-
-@media (width >= 900px) {
-  .tabs .tabs-list {
-    font-size: var(--body-font-size-m);
-  }
+#whats-covered-under-icici-lombards-travel-insurance{
+    color: #282828;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 45px;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 50px 40px;
 }
-
 .tabs .tabs-list button {
   flex: 0 0 max-content;
   margin: 0;
-  border: 1px solid #dadada;
   border-radius: 0;
   padding: 0.5em;
   background-color: var(--light-color);
@@ -47,12 +139,51 @@
 }
 
 .tabs .tabs-panel {
-  margin-top: -1px;
-  padding: 24px;
-  border: 1px solid #dadada;
-  overflow: auto;
+    margin-top: -1px;
+    padding: 24px;
+    border: 1px solid #dadada;
+    overflow: auto;
+    padding: 25px 0;
+    border: none;
 }
+
 
 .tabs .tabs-panel[aria-hidden='true'] {
   display: none;
 }
+
+@media (max-width: 600px) {
+  .tabs .tabs-list {
+    font-size: var(--body-font-size-s);
+    justify-content: space-around;
+  }
+  #whats-covered-under-icici-lombards-travel-insurance{
+    font-size: 2.4rem;
+    line-height: 30px;
+    text-align: left;
+    padding: 0 0px 40px;
+  }
+  .tabs-list .tabs-tab p  {
+        width: 130px;
+  }
+  .tabs-panel:nth-child(2) >div {
+    grid-template-columns: unset;
+    }
+    .tabs >div:nth-child(2) >div >ul>li:nth-child(1)::before{
+        top: 17%;
+    }
+    .tabs >div:nth-child(2) >div >ul>li:nth-child(2){
+            color: #282828;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 24px;
+    }
+
+}
+
+@media (width >= 900px) {
+  .tabs .tabs-list {
+    font-size: var(--body-font-size-m);
+  }
+}
+
