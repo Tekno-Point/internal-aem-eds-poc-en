@@ -178,6 +178,22 @@
           {
             "name": "Popular Searches",
             "value": "popular-searches"
+          },
+          {
+            "name": "Background Mega Menu",
+            "value": "bg-megamenu"
+          },
+          {
+            "name": "Background Orange",
+            "value": "bg-primary"
+          },
+          {
+            "name": "Background Tertiary",
+            "value": "bg-tertiary"
+          },
+          {
+            "name": "Header Contact Modal",
+            "value": "header-contact-modal"
           }
         ]
       }
@@ -237,6 +253,25 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "Form Link",
+        "value": "",
+        "label": "Form Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "API ",
+        "value": "",
+        "label": "API"
       }
     ]
   },
