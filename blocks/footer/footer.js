@@ -16,31 +16,65 @@ export default async function decorate(block) {
   block.textContent = "";
   const footer = document.createElement("div");
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-
-
+// console.log(block)
+// console.log(footer)
   block.append(footer);
+
+
 if (window.innerWidth <= 776) {
 
-  if (footer && footer.querySelector(".button-container")) {
-    document.querySelectorAll(".button-container").forEach((button) => {
-      button.addEventListener("click", () => {
+if (footer && footer.querySelector(".button-container")) {
+  const buttons = document.querySelectorAll(".button-container");
+
+  // Step 1: Add class to all buttons on load
+  buttons.forEach((button) => {
+    button.classList.add("dropdown-border-bottom");
+  });
+
+  // Step 2: Setup click handlers for buttons
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+      const isOpen = content?.classList.contains("open");
+
+      // Step 3: Close all other dropdowns and reset classes
+      buttons.forEach((otherButton) => {
+        const otherContent = otherButton.nextElementSibling;
+        if (otherButton !== button) {
+          otherContent?.classList.remove("open");
+          otherButton.classList.add("dropdown-border-bottom");
+          otherButton.classList.remove("active");
+        }
+      });
+
+      // Step 4: Toggle clicked dropdown and update button style
+      if (!isOpen) {
+        content?.classList.add("open");
+        button.classList.remove("dropdown-border-bottom");
+        button.classList.add("active");
+      } else {
+        content?.classList.remove("open");
+        button.classList.add("dropdown-border-bottom");
+        button.classList.remove("active");
+      }
+    });
+  });
+
+  // ✅ Step 5: Close dropdowns when a specific footer <li> is clicked
+  document.querySelectorAll(
+    ".footer-wrapper .footer .columns-container .columns-wrapper .columns > div div:last-child ul li"
+  ).forEach((li) => {
+    li.addEventListener("click", () => {
+      buttons.forEach((button) => {
         const content = button.nextElementSibling;
-
-        // Close all other dropdowns
-        document.querySelectorAll(".button-container").forEach((otherButton) => {
-          const otherContent = otherButton.nextElementSibling;
-          if (otherButton !== button) {
-            otherContent?.classList.remove("open");
-            otherButton.classList.remove("dropdown-border-bottom");
-          }
-        });
-
-        // Toggle the clicked one
-        content?.classList.toggle("open");
-        button.classList.toggle("dropdown-border-bottom");
+        content?.classList.remove("open");
+        button.classList.add("dropdown-border-bottom");
+        button.classList.remove("active");
       });
     });
-  }
+  });
+}
+
 }
 
 }
