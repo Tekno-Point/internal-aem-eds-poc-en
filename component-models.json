@@ -315,6 +315,18 @@
       }
     ]
   },
+   {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "text",
+        "name": "link",
+        "value": "",
+        "label": "Link",
+        "valueType": "string"
+      }
+    ]
+  },
   {
     "id": "card",
     "fields": [
