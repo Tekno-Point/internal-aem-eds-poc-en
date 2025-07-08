@@ -12,10 +12,12 @@ import {
   loadSections,
   loadCSS,
   toClassName,
+  loadScript,
 } from './aem.js';
 // import { loadFragmenter } from "../blocks/fragment/fragment.js";
 
 import decorateForm from '../blocks/form/form.js';
+
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -116,6 +118,7 @@ function autolinkModals(element) {
     }
   });
 }
+
 
 /**
  * load fonts.css and set a session storage flag
@@ -652,6 +655,8 @@ async function loadPage() {
 }
 
 loadPage();
+loadScript("https://assets.adobedtm.com/68d5933462dd/0f45052f726e/launch-2190e0b9d934-development.min.js", { async: true })
+
 export function decorateWrapper(main) {
   // debugger;
   main.querySelectorAll('.wrapper').forEach((block) => {
