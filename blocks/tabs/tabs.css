@@ -288,6 +288,11 @@ input[type="date"] {
   /* gap: 20px; */
 }
 
+.section.tabs-container>.card-wrapper {
+  padding: 85px 0 0;
+  max-width: 1300px;
+}
+
 .tabs.form-tabs>div>.flight-card,
 .section.tabs-container>.card-wrapper>.flight-card {
   min-height: 220px;
