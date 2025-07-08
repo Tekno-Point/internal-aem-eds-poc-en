@@ -127,6 +127,7 @@ main>.section.term-insurance-carousel-container {
                 height: 30px;
                 width: 30px;
                 top: 60%;
+                z-index: 1;
 
                 @media (max-width: 768px) {
                     left: -36px
@@ -155,6 +156,7 @@ main>.section.term-insurance-carousel-container {
                 left: auto;
                 width: auto;
                 height: auto;
+                z-index: 1;
 
                 @media (max-width: 768px) {
                     right: -33px;

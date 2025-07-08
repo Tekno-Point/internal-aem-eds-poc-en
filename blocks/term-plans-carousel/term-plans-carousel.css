@@ -250,6 +250,7 @@ main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term
   left: 13%;
   width: auto;
   transition: all 0.3s linear;
+  z-index: 1;
 }
 main > .section.term-plans-carousel-container .term-plans-carousel-wrapper .term-plans-carousel .swiper-pagination-bullet {
   width: 10px;

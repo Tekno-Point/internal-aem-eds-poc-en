@@ -6,19 +6,23 @@
     display: block;
 }
 
-.view-more-btn{
+.view-more-btn {
     font-size: 0.875rem;
-    width: 146px;
-    text-align: center;
-    display: block;
-    margin: 20px auto 0 auto; /* top margin, auto left/right for center */
+    font-family: 'Inter-Bold';
+    width: 100px;
+    margin: -12px auto 0 auto;
     border-radius: 20px;
     background: #4197D3;
     color: #FFF;
     text-align: center;
     font-weight: 700;
     letter-spacing: -0.14px;
-    padding: 10px 15px;
+    padding: 9px 15px;
     display: block;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.view-more-btn:hover{
+    background-color: #4197D3;
 }

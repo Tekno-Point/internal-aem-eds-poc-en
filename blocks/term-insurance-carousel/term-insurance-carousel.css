@@ -125,6 +125,7 @@ main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapp
   height: 30px;
   width: 30px;
   top: 60%;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-prev {
@@ -144,11 +145,17 @@ main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapp
   -webkit-font-smoothing: antialiased;
 }
 main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-next {
-  top: var(--swiper-navigation-top-offset, 60%);
-  right: -33px;
+  top: 60%;
+  right: -45px;
   left: auto;
   width: auto;
   height: auto;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-next {
+    right: -33px;
+  }
 }
 main > .section.term-insurance-carousel-container .term-insurance-carousel-wrapper .term-insurance-carousel .swiper-button-next::after {
   content: " ";
