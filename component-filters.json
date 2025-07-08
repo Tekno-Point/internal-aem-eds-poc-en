@@ -28,7 +28,7 @@
   {
     "id": "tabs",
     "components": [
-      "tabs"
+      "tab"
     ]
   },
   {
