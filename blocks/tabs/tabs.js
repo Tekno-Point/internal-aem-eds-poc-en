@@ -2095,7 +2095,13 @@ export default async function decorate(block) {
       card.append(flightInfo, airlineDetails);
       cardWrapper.appendChild(card);
     });
-    block.appendChild(cardWrapper);
+    if(block.classList.contains("form-absolute")) {
+      const tabsWrapper = document.querySelector('.tabs-wrapper');
+      tabsWrapper.appendChild(cardWrapper)
+    }
+    else {
+      block.appendChild(cardWrapper);
+    }
     submit.classList.remove('disabled');
   });
 }
