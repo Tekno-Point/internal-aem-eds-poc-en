@@ -370,6 +370,7 @@ main .section.highlight {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  font-family: "Inter-Bold";
   letter-spacing: -0.007em;
   margin: 0 0 10px;
 }
@@ -378,6 +379,7 @@ main .section.highlight {
 .insurance-plan-form .form-wrapper .form .plaintext-wrapper p {
   font-weight: 400;
   font-size: 18px;
+  font-family: 'Inter-Regular';
   line-height: 21px;
   color: #333333;
   margin: 0 0 11px;
@@ -397,6 +399,7 @@ main .section.highlight {
   font-size: 16px;
   line-height: 16px;
   color: #333;
+  font-family: 'Inter-Regular';
   font-weight: 400;
   margin: 0;
   max-width: 80%;
@@ -416,6 +419,7 @@ main .section.highlight {
   font-size: 24px;
   line-height: 24px;
   font-weight: 500;
+  font-family: "Inter-Bold";
 }
 
 .insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) input::placeholder {
@@ -436,6 +440,7 @@ main .section.highlight {
   position: relative;
   max-width: 62px;
   /* padding-right: 7px; */
+  display: flex;
 }
 
 .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper::after {
@@ -463,6 +468,7 @@ main .section.highlight {
   font-size: 24px;
   line-height: 24px;
   font-weight: 500;
+  font-family: "Inter-Bold";
   color: #333;
   outline: none;
   cursor: pointer;
@@ -491,10 +497,12 @@ main .section.highlight {
   font-size: 22px;
   line-height: 28px;
   font-weight: 600;
+  font-family: "Inter-Bold";
 }
 
 .insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper {
   margin: 13px 0 0;
+  display: flex;
   gap: 8px;
   align-items: center;
 }
@@ -508,6 +516,7 @@ main .section.highlight {
 .insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper label {
   color: #58595B;
   font-size: 10px;
+  font-family: 'Inter-Regular';
   font-weight: 400;
   line-height: normal;
 }
@@ -526,6 +535,8 @@ main .section.highlight {
     margin: 0 0 8px;
     font-size: 20px;
     line-height: normal;
+    font-family: "Inter-Bold";
+    font-weight: 600;
     text-align: center;
   }
 
@@ -534,6 +545,8 @@ main .section.highlight {
     font-size: 16px;
     line-height: 21px;
     text-align: center;
+    font-family: 'Inter-Regular';
+    font-weight: 400;
     margin-bottom: 0 0 8px;
   }
 
@@ -547,6 +560,8 @@ main .section.highlight {
     font-size: 12px;
     line-height: 12px;
     max-width: 100%;
+    font-family: 'Inter-Regular';
+    font-weight: 400;
   }
 
   .insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) input {
@@ -554,6 +569,8 @@ main .section.highlight {
     line-height: 16px;
     padding: 6px 0 10px;
     max-width: 100%;
+    font-family: 'Inter-Regular';
+    font-weight: 400;
   }
 
   .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper {
@@ -563,6 +580,8 @@ main .section.highlight {
   .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper select {
     font-size: 16px;
     line-height: 16px;
+    font-family: 'Inter-Regular';
+    font-weight: 400;
   }
 
   .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper::after {
@@ -588,6 +607,8 @@ main .section.highlight {
     font-size: 16px;
     line-height: 16px;
     letter-spacing: -0.67px;
+    font-family: "Inter-Bold";
+    font-weight: 600;
   }
 
   .insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper {

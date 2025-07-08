@@ -513,17 +513,17 @@
         gap: 16px;
     }
 
-    .section .default-content-wrapper {
+    .section.aia-banner-container .default-content-wrapper {
         padding: 0 20px;
     }
 
-    .section .default-content-wrapper h1 {
+    .section.aia-banner-container .default-content-wrapper h1 {
         font-size: 24px;
         letter-spacing: -0.24px;
         padding: 0 0 5px;
     }
 
-    .section .default-content-wrapper p {
+    .section.aia-banner-container .default-content-wrapper p {
         font-size: 14px;
         line-height: 21px;
         letter-spacing: -0.14px;
