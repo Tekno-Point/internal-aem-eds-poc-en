@@ -53,7 +53,6 @@
   },
   {
     "id": "custom-richtextblock",
-<<<<<<< HEAD
     "components": ["custom-richtext-item"]
   },
   {
@@ -75,16 +74,9 @@
   {
     "id": "comparison-of-plans",
     "components": ["comparison-of-plans-item"]
-=======
-    "components": [
-      "custom-richtext-item"
-    ]
   },
   {
     "id": "aia-banner",
-    "components": [
-      "aia-banner-content"
-    ]
->>>>>>> cde10ee0c01c4dc6301dfc378b64382b4a965fdd
+    "components": ["aia-banner-content"]
   }
 ]
