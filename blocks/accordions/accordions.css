@@ -1,3 +1,8 @@
+.accordions-container{
+    background: #F8F6F6;
+    padding: 7rem 0;
+}
+
 .accordions details {
   border: 1px solid #dadada;
 }
