@@ -232,6 +232,10 @@
           {
             "name": "custom-txt",
             "value": "custom-txt"
+          },
+          {
+            "name": "long-term-policy",
+            "value": "long-term-policy"
           }
         ]
       }
