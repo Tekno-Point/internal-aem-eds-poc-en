@@ -796,6 +796,9 @@ padding-right: 98px;
   top: 0px;
 }
 
+.international-travel-insurance-policy{
+  display: flex; 
+}
 
 @media screen and (max-width : 767.99px) {
   .million-indians > .default-content-wrapper > h2 {
