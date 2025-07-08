@@ -296,3 +296,9 @@ main .section.highlight {
     margin-bottom: 13px;
   }
 }
+
+.section.pl-blogs-container{
+    background-color: rgba(225, 225, 235, 0.29);
+    padding: 32px 0;
+    margin: 0;
+}

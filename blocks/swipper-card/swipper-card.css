@@ -43,6 +43,7 @@
 }
 
 .prodCard .prodTextDiv ul{
+    padding: 0;
     position: absolute;
     /* width: 100%; */
     bottom: 34px;
@@ -62,9 +63,8 @@
 .prodCard .prodTextDiv ul li:nth-child(1){
     border-radius: 27px;
     background: #9B1E26;
-    width: 150px;
-    height: 40px;
-    color: #FFF;
+    width: 150px!important;
+    /* height: 40px; */
     text-align: center;
     font-size: 14px;
     font-style: normal;
@@ -73,6 +73,11 @@
     letter-spacing: -0.5px;
     padding: 10px 13px;
     border: 0;
+}
+
+.prodCard .prodTextDiv ul li:nth-child(1) a{
+    text-decoration: none;
+    color: #FFF;
 }
 
 .prodCard .prodTextDiv ul li:nth-child(2){
@@ -84,6 +89,10 @@
     font-weight: 600;
     line-height: 20px;
     letter-spacing: -0.5px;
+}
+
+.prodCard .prodTextDiv ul li:nth-child(2) a{
+    color: #9B1E26;
 }
 
 .prodCard .prodTextDiv .button-container .button{
