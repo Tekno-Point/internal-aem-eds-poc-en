@@ -934,6 +934,13 @@ header nav .nav-tools .default-content-wrapper>ul>li::after {
     /* padding: 0 20px; */
   }
 
+  header nav[aria-expanded='true'] .section.nav-brand{
+    padding: 0 20px;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li>p>span{
+    margin-right: 10px;
+  }
 
   header nav .section.nav-brand .default-content-wrapper>p>a>picture>img {
     width: 90px;
