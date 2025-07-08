@@ -194,16 +194,16 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "text",
-        "label": "Text",
-        "multi": false
+        "name": "title",
+        "value": "",
+        "label": "Heading"
       },
       {
         "component": "richtext",
-        "name": "text",
+        "valueType": "string",
+        "name": "content",
         "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "label": "Body"
       }
     ]
   },
