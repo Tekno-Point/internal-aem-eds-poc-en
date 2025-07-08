@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "tabs"
+      "tabs",
+      "accordions"
     ]
   },
   {
@@ -35,6 +36,12 @@
     "id": "columns",
     "components": [
       "column"
+    ]
+  },
+  {
+    "id": "accordions",
+    "components": [
+      "accordion"
     ]
   },
   {
