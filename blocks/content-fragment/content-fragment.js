@@ -99,6 +99,9 @@ function renderUI(data = []) {
         } else if (sortType === 'duration') {
             // Only show cards with type 'duration'
             filteredData = [...data].filter(card => card.type === 'duration');
+        } else if (sortType === 'duration') {
+            // Only show cards with type 'duration'
+            filteredData = [...data].filter(card => card.type === 'duration');
         }
         // Replace cards row
         const cardsRow = document.querySelector('.fares-carousel-content .fr-row.fr-mt-3');

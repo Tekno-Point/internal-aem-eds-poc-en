@@ -148,6 +148,10 @@
           {
             "name": "CF Wrapper",
             "value": "cf-wrapper"
+          },
+          {
+            "name": "Login Modal",
+            "value": "login-modal-wrapper"
           }
         ]
       }
