@@ -332,3 +332,365 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+
+/* My CSS - RU */
+/* List icon - Content 1 */
+
+.content1 .custom-richtext li,
+.content4 .custom-richtext li {
+  display: block;
+  /* gap: 10px;
+  align-items: start; */
+  padding-left: 34px;
+  position: relative;
+}
+
+.content1 .custom-richtext li strong,
+.content4 .custom-richtext li strong {
+  color: #0073BB;
+}
+
+.content1 .custom-richtext li::before,
+.content4 .custom-richtext li::before {
+  content: '';
+  /* background: url('../icons/tick.svg'); */
+  background: url('../icons/tick2.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+
+.content2>div.default-content-wrapper>p:nth-child(2) {
+  display: none;
+}
+
+.image2>div.default-content-wrapper>p:nth-child(2),
+.image3>div.default-content-wrapper>p:nth-child(2) {
+  display: none;
+}
+
+
+.custom-richtextblock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.content3 .custom-richtextblock>div {
+  background-color: #F2F7FB;
+  padding: 20px 40px 20px 40px;
+  height: 100%;
+  max-width: 42%;
+}
+
+
+.content5 .custom-richtextblock>div {
+  background-color: #F2F7FB;
+  padding: 20px 40px 20px 40px;
+  height: 100%;
+  max-width: 25%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .content2>div.default-content-wrapper>p:nth-child(1) {
+    display: none;
+  }
+
+  .content2>div.default-content-wrapper>p:nth-child(2) {
+    display: block;
+  }
+
+  .content3 .custom-richtextblock>div {
+    max-width: 100%;
+  }
+
+  .content5 .custom-richtextblock>div {
+    max-width: 100%;
+  }
+
+  .image2>div.default-content-wrapper>p:nth-child(1) {
+    display: none;
+  }
+
+  .image2>div.default-content-wrapper>p:nth-child(2) {
+    display: block;
+  }
+
+  .image3>div.default-content-wrapper>p:nth-child(1) {
+    display: none;
+  }
+
+  .image3>div.default-content-wrapper>p:nth-child(2) {
+    display: block;
+  }
+
+}
+
+
+/* CSS for insurance plan form */
+/* .insurance-plan-form {
+  background-color: red;
+} */
+
+.insurance-plan-form .form-wrapper {
+  max-width: 1366px;
+  padding: 20px 60px;
+  background: linear-gradient(180deg, rgba(242, 247, 251, 0) -13.13%, #F2F7FB 86.87%);
+  border: 1px solid #F2F7FB;
+  box-shadow: 0px 0px 15px rgba(88, 89, 91, 0.25);
+  border-radius: 20px;
+}
+
+.insurance-plan-form .form-wrapper .form form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.insurance-plan-form .form-wrapper .form .heading-wrapper {
+  width: 100%;
+}
+
+.insurance-plan-form .form-wrapper .form .heading-wrapper h2 {
+  color: #333333;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: -0.007em;
+  margin: 0 0 10px;
+}
+
+.insurance-plan-form .form-wrapper .form .plaintext-wrapper,
+.insurance-plan-form .form-wrapper .form .plaintext-wrapper p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  margin: 0 0 11px;
+  width: 100%;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.heading-wrapper, .plaintext-wrapper, .selection-wrapper) {
+  max-width: 32.3%;
+  width: 100%;
+  margin: 0;
+  /* background-color: red; */
+  margin-right: 10px;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) label,
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) legend {
+  font-size: 16px;
+  line-height: 16px;
+  color: #333;
+  font-weight: 400;
+  margin: 0;
+  max-width: 80%;
+  width: 100%;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) input {
+  max-width: 80%;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px 0 10px;
+  outline: 0;
+  border: none;
+  border-bottom: 1px solid #e6e7e8;
+  border-radius: 0;
+  color: #333333;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) input::placeholder {
+  color: #d3d4d5;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper fieldset {
+  display: flex;
+  gap: 15px;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper {
+  max-width: 100%;
+  margin: 0;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper {
+  position: relative;
+  max-width: 62px;
+  /* padding-right: 7px; */
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper::after {
+  content: '';
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  width: 10px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  right: 2px;
+  top: 42%;
+  transform: translateY(-50%) rotate(45deg);
+  z-index: 1;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper label {
+  display: none;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper select {
+  border: none;
+  padding: 0;
+  appearance: none;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper.mobile-btn {
+  display: none;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper .button {
+  margin: 0;
+  background-color: #d81b46;
+  box-shadow: 0 0 10px 0 rgb(214 32 73 / 10%);
+  padding: 10px;
+  max-width: 220px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper {
+  margin: 13px 0 0;
+  gap: 8px;
+  align-items: center;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper input {
+  width: 18px;
+  height: 18px;
+  outline: none;
+}
+
+.insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper label {
+  color: #58595B;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .insurance-plan-form {
+    padding: 20px;
+  }
+
+  .insurance-plan-form .form-wrapper {
+    padding: 30px 20px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .heading-wrapper h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .insurance-plan-form .form-wrapper .form .plaintext-wrapper,
+  .insurance-plan-form .form-wrapper .form .plaintext-wrapper p {
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    margin-bottom: 0 0 8px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper:not(.heading-wrapper, .plaintext-wrapper, .selection-wrapper) {
+    max-width: 100%;
+    margin: 0 0 8px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) label,
+  .insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) legend {
+    font-size: 12px;
+    line-height: 12px;
+    max-width: 100%;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper:not(.selection-wrapper) input {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 6px 0 10px;
+    max-width: 100%;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper {
+    max-width: 48px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper select {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.fieldset-wrapper .field-wrapper.select-wrapper::after {
+    width: 7px;
+    height: 7px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper.desktop-btn {
+    display: none;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper.mobile-btn {
+    display: flex;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper {
+    justify-content: center;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.submit-wrapper .button {
+    margin: 8px 0 0;
+    max-width: 240px;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.67px;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper {
+    margin: 2px 0 0;
+    align-items: start;
+  }
+
+  .insurance-plan-form .form-wrapper .form .field-wrapper.selection-wrapper label {
+    font-size: 8px;
+  }
+  
+}
