@@ -144,6 +144,10 @@
           {
             "name": "Hero Banner Carousel",
             "value": "hero-banner-carousel"
+          },
+          {
+            "name": "CF Wrapper",
+            "value": "cf-wrapper"
           }
         ]
       }
