@@ -164,6 +164,10 @@
           {
             "name": "international travel insurance policy",
             "value": "international-travel-insurance-policy"
+          },
+          {
+            "name": "tab container wrapper",
+            "value": "tab-container-wrapper"
           }
         ]
       }
