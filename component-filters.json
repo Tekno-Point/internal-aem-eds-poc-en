@@ -18,7 +18,9 @@
       "fragment",
       "tabs",
       "form",
-      "carousel"
+      "carousel",
+      "form",
+      "table"
     ]
   },
   {
@@ -52,6 +54,12 @@
     "id": "carousel",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id": "table-item",
+    "components": [
+      "table-item"
     ]
   }
 ]

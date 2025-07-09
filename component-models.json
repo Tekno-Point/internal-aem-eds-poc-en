@@ -168,10 +168,12 @@
           {
             "name": "Types of travel insurance plans in India",
             "value": "travel-insurance-plans-in-india"
-          },{
+          },
+          {
             "name": "Buy a travel insurance policy online",
             "value": "buy-travel-insurance-policy-online"
-          },{
+          },
+          {
             "name": "Additional coverage under travel insurance plans",
             "value": "coverage-under-travel-insu-plan"
           },
@@ -331,6 +333,25 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "headerRow",
+        "label": "Header Row",
+        "description": "Comma-separated list of header names (e.g., Name, Age, Occupation)."
+      },
+      {
+        "component": "richtext",
+        "name": "tableRows",
+        "valueType": "string",
+        "label": "Table Rows",
+        "description": "Each row should be on a new line, with columns separated by commas (e.g., John Doe, 30, Engineer)."
       }
     ]
   }
