@@ -112,6 +112,18 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Image Banner",
+            "value": "image-banner"
+          },
+          {
+            "name": "Image Blue Banner",
+            "value": "imagebannerblue"
+          },
+          {
+            "name": "Image Light Blue Banner",
+            "value": "imagebannerlightblue"
           }
         ]
       }
