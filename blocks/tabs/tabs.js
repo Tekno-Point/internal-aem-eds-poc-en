@@ -2103,7 +2103,7 @@ export default async function decorate(block) {
       block.appendChild(cardWrapper);
     }
     submit.classList.remove('disabled');
-    swiperInit();
+    // swiperInit();
   });
 }
 
