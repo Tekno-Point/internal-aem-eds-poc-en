@@ -15,24 +15,13 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "tabs",
-      "form",
-      "carousel",
-      "form",
-      "table"
+      "fragment"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tab"
     ]
   },
   {
@@ -51,15 +40,9 @@
     ]
   },
   {
-    "id": "carousel",
+    "id": "idfc-header",
     "components": [
-      "carousel-item"
-    ]
-  },
-  {
-    "id": "table-item",
-    "components": [
-      "table-item"
+      "nav-item"
     ]
   }
 ]
