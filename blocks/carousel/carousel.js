@@ -57,7 +57,7 @@ function applyBreakpoints(block, swiperConfig) {
     if (block.classList.contains('banner-carousel')) {
         swiperConfig.loop = true;
         swiperConfig.autoplay = {
-            delay: 2000
+            delay: 3000
         };
         swiperConfig.breakpoints = {
             320: { slidesPerView: 1 }
@@ -67,7 +67,7 @@ function applyBreakpoints(block, swiperConfig) {
     if (block.classList.contains('services-carousel')) {
         swiperConfig.loop = true;
         swiperConfig.autoplay = {
-            delay: 2000
+            delay: 3000
         };
         swiperConfig.breakpoints = {
             320: { slidesPerView: 1, spaceBetween: 15 },
@@ -94,7 +94,6 @@ function wrapImageInLink(block) {
         })
     }
 }
-
 
 
 // --- Add this function for direct Swiper init on already correct markup ---
@@ -137,19 +136,6 @@ export function initSwiperOnly(block) {
 }
 
 
-
-// function createSwiper(block) {
-//     const rows = Array.from(block.children);
-//     const swiperWrapper = document.createElement('div');
-//     swiperWrapper.classList.add('swiper-wrapper');
-
-//     rows.forEach(row => {
-//         row.classList.add('swiper-slide');
-//         swiperWrapper.append(row);
-//     });
-//     block.append(swiperWrapper);
-// }
-
 export default function decorate(block) {
     const isDesktop = window.matchMedia('(min-width: 900px)');
 
@@ -159,3 +145,4 @@ export default function decorate(block) {
     if (block.classList.contains('services-carousel') && block.classList.contains('experience-carousel') && isDesktop.matches) return;
     swiperInit(block);
 }
+

@@ -1,3 +1,7 @@
+.section.hero-banner-carousel {
+    margin: 0;
+}
+
 .section.carousel-container .carousel-wrapper:has(.carousel.banner-carousel) {
     max-width: unset;
 }

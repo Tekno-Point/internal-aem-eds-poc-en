@@ -148,6 +148,14 @@
           {
             "name": "CF Wrapper",
             "value": "cf-wrapper"
+          },
+          {
+            "name": "Login Modal",
+            "value": "login-modal-wrapper"
+          },
+          {
+            "name": "Marque Conatainer",
+            "value": "marque-container"
           }
         ]
       }
@@ -239,6 +247,10 @@
           {
             "name": "Frag",
             "value": "individual-insurance-teaser"
+          },
+          {
+            "name": "Marque",
+            "value": "marque"
           }
         ]
       }

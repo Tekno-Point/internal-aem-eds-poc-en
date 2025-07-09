@@ -2,7 +2,7 @@
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
-  z-index: 2;
+  z-index: 100;
   position: fixed;
 }
 
@@ -218,7 +218,7 @@ header nav .nav-sections ul>li>ul>li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
     margin: 0;
   }
 
@@ -273,6 +273,7 @@ header nav .nav-tools {
   width: 100%;
   padding: 0;
   gap: 0;
+  height: var(--nav-height);
 }
 
 .block .nav-wrapper nav .nav-brand {
@@ -370,7 +371,7 @@ header nav .nav-tools {
   /* position: absolute; */
   /* top: 0; */
   /* left: 50px; */
-  width: 30%;
+  width: 20%;
   /* z-index: -1; */
   cursor: pointer;
 }
@@ -398,7 +399,8 @@ header nav .nav-tools {
 } */
 
 .block .nav-wrapper nav .nav-tools .default-content-wrapper {
-  width: 70%;
+  width: 68%;
+  margin-right: 20px;
 }
 
 .block .nav-wrapper nav .nav-tools .default-content-wrapper ul {
@@ -580,6 +582,16 @@ header nav .nav-tools {
 .block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:last-of-type span {
   width: 10px;
   height: 12px;
+}
+
+.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:last-of-type p a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: unset;
+  color: #0088dd;
+  margin: 0;
 }
 
 .block .nav-wrapper nav .nav-tools .search-wrapper .search-box input {

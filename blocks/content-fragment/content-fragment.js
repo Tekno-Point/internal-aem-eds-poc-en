@@ -1,5 +1,6 @@
-import { div } from "../../scripts/dom-helper.js";
+import { div, h3, p } from "../../scripts/dom-helper.js";
 import { initSwiperOnly } from '../carousel/carousel.js';
+import { showCards } from "../modal/modal.js";
 
 // Ensure Swiper CSS is loaded
 (function ensureSwiperCss() {
@@ -26,13 +27,33 @@ export default async function decorate(block) {
     Array.from(block.children).forEach(async (row, i) => {
         const item = row.querySelector('a');
         const formurl = new URL(item.href)?.pathname.replace('.html', '');
-        const url = `${origin}/graphql/execute.json/internal-aem-eds-poc/trending-destination-list;path=${formurl}`
+        let url = `${origin}/graphql/execute.json/internal-aem-eds-poc/trending-destination-list;path=${formurl}`
+        if (block.classList.contains('marque')) {
+            url = `${origin}/graphql/execute.json/internal-aem-eds-poc/marque;path=${formurl}`;
+            const response = await fetch((url), {
+                method: "GET"
+            });
+            const respData = await response.json();
+            const marqueData = respData?.data?.srilankaMarqueByPath?.item;
+
+            const marqueewrapper = document.createElement('div');
+            marqueewrapper.classList.add("marque-wrapper")
+            marqueewrapper.innerHTML = `
+               <h3 class='marque-heading'>${marqueData.head}</h3>
+               <div class='marque-description'>${marqueData.description.html}</div>
+            `
+            row.firstElementChild.firstElementChild.remove()
+            row.firstElementChild.append(marqueewrapper);
+            return
+        }
         const response = await fetch((url), {
             method: "GET"
         });
         const respData = await response.json();
+        // console.log(respData)
         // Render the carousel markup
         let carousel = renderUI(respData?.data?.cfListByPath?.item?.contentFragment);
+
         // If renderUI returns an array, wrap it in a div
         if (Array.isArray(carousel)) {
             const wrapper = document.createElement('div');
@@ -50,6 +71,11 @@ export default async function decorate(block) {
         if (carousel instanceof HTMLElement) {
             initSwiperOnly(carousel);
         }
+
+        showCards(respData?.data?.cfListByPath?.item?.contentFragment);
+        window.addEventListener('userDataSave', (e) => {
+            showCards(respData?.data?.cfListByPath?.item?.contentFragment);
+        })
     });
 }
 
@@ -96,6 +122,9 @@ function renderUI(data = []) {
         } else if (sortType === 'popular') {
             // Only show cards with type 'popular'
             filteredData = [...data].filter(card => card.type === 'popular');
+        } else if (sortType === 'duration') {
+            // Only show cards with type 'duration'
+            filteredData = [...data].filter(card => card.type === 'duration');
         } else if (sortType === 'duration') {
             // Only show cards with type 'duration'
             filteredData = [...data].filter(card => card.type === 'duration');
@@ -172,6 +201,7 @@ function renderUI(data = []) {
         });
         return Array.from(set).filter(Boolean);
     })();
+    // console.log(cityOptions)
     // State for departure filter
     let fromValue = '';
     let toValue = '';
@@ -226,12 +256,12 @@ function renderUI(data = []) {
 
     // Popover for departure filter
     function departurePopover(target) {
-        const fromInputId = `input-from-${Math.floor(Math.random()*1e10)}`;
-        const toInputId = `input-to-${Math.floor(Math.random()*1e10)}`;
-        const fromLabelId = `label-from-${Math.floor(Math.random()*1e10)}`;
-        const toLabelId = `label-to-${Math.floor(Math.random()*1e10)}`;
-        const fromDescId = `desc-from-${Math.floor(Math.random()*1e10)}`;
-        const toDescId = `desc-to-${Math.floor(Math.random()*1e10)}`;
+        const fromInputId = `input-from-${Math.floor(Math.random() * 1e10)}`;
+        const toInputId = `input-to-${Math.floor(Math.random() * 1e10)}`;
+        const fromLabelId = `label-from-${Math.floor(Math.random() * 1e10)}`;
+        const toLabelId = `label-to-${Math.floor(Math.random() * 1e10)}`;
+        const fromDescId = `desc-from-${Math.floor(Math.random() * 1e10)}`;
+        const toDescId = `desc-to-${Math.floor(Math.random() * 1e10)}`;
         let popover;
         let from = fromValue;
         let to = toValue;
@@ -265,6 +295,7 @@ function renderUI(data = []) {
                     input.parentNode.appendChild(dropdown);
                 }
                 dropdown.innerHTML = '';
+                // console.log(filtered);
                 filtered.slice(0, 8).forEach(opt => {
                     const optDiv = document.createElement('div');
                     optDiv.className = 'city-suggestion-item';
@@ -465,9 +496,9 @@ function renderUI(data = []) {
 
     // Popover for budget input
     function budgetPopover(target) {
-        const inputId = `input-${Math.floor(Math.random()*1e10)}`;
-        const labelId = `label-budget-${Math.floor(Math.random()*1e10)}`;
-        const descId = `${Math.floor(Math.random()*1e10)}`;
+        const inputId = `input-${Math.floor(Math.random() * 1e10)}`;
+        const labelId = `label-budget-${Math.floor(Math.random() * 1e10)}`;
+        const descId = `${Math.floor(Math.random() * 1e10)}`;
         let popover;
         let inputValue = budgetValue;
         // Helper to create a real input element and attach events
@@ -638,7 +669,7 @@ function renderUI(data = []) {
     );
 }
 
-function renderCard(data = []) {
+export function renderCard(data = []) {
     return data.map(function (eachData, idx) {
         // Data extraction
         const image = eachData.image?._publishUrl || '';
@@ -655,9 +686,9 @@ function renderCard(data = []) {
         // Description is HTML, so we need to inject it safely
         const descHtml = eachData.description?.html || '';
         // IDs for ARIA
-        const cardId = `card-${Date.now()}_${Math.floor(Math.random()*1e17)}`;
-        const btnId = `cta-btn-${Math.floor(Math.random()*2e9)}`;
-        const textId = `cta-text-${Date.now()}_${Math.floor(Math.random()*1e17)}`;
+        const cardId = `card-${Date.now()}_${Math.floor(Math.random() * 1e17)}`;
+        const btnId = `cta-btn-${Math.floor(Math.random() * 2e9)}`;
+        const textId = `cta-text-${Date.now()}_${Math.floor(Math.random() * 1e17)}`;
         const priceId = `price-${Math.random().toString(36).substring(2, 18)}`;
         // Card markup as swiper-slide
         // Helper to build city code only if present
@@ -684,7 +715,7 @@ function renderCard(data = []) {
                         ),
                         // Image header
                         div({
-                            id: `img-${Date.now()}_${Math.floor(Math.random()*1e17)}`,
+                            id: `img-${Date.now()}_${Math.floor(Math.random() * 1e17)}`,
                             'data-testid': 'imageHeader',
                             class: 'image-header'
                         },
@@ -782,7 +813,7 @@ function formatDateShort(dateStr) {
     if (!dateStr) return '';
     const d = new Date(dateStr);
     if (isNaN(d)) return dateStr;
-    return `${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}/${d.getFullYear()}`;
+    return `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}/${d.getFullYear()}`;
 }
 // Helper: format date as "Month DD, YYYY"
 function formatDateLong(dateStr) {
