@@ -234,14 +234,7 @@
           {
             "name": "Hero Banner",
             "value": "hero-banner"
-          }
-        ]
-      },
-       {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
+          },
           {
             "name": "Feature Cards",
             "value": "feature-cards"
