@@ -2106,18 +2106,11 @@ export default async function decorate(block) {
   });
 }
 
-// const cardWrapper = document.querySelector('.card-wrapper');
-// console.log(cardWrapper)
-// const swiperWrapper = document.createElement('div');
-// swiperWrapper.classList.add('swiper-wrapper');
+const cardWrapper = document.querySelector('.card-wrapper');
+const container = document.createElement('div');
+container.classList.add('container');
+container.append(cardWrapper);
 
-// cardWrapper.forEach(card => {
-//   card.classList.add('swiper-slide');
-//   swiperWrapper.append(card);
-// });
-// cardWrapper.append(swiperWrapper);
+const swiper = new Swiper('.card-wrapper', {
 
-
-// new Swiper('.card-wrapper', {
-
-// })
+})
