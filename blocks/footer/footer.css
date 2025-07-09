@@ -28,7 +28,7 @@ footer .footer>div .section>div {
   max-width: 1200px;
   margin: 0 auto;
   /* padding: 50px 0px; */
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 
 footer .footer p,
@@ -40,7 +40,7 @@ footer .footer ul {
 
 .footer>div>div {
   display: flex;
-  padding-bottom: 50px;
+  padding: 50px 0;
 }
 
 .footer>div>div .accordion-wrapper {
@@ -199,7 +199,7 @@ footer .footer ul {
 
 .footer>div>div:nth-child(3) {
   padding: 50px 0;
-  padding-top: 0;
+  /* padding-top: 0; */
 }
 
 .footer>div>div:nth-child(3) .accordion-wrapper .accordion>div,
