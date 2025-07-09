@@ -2001,7 +2001,7 @@ export default async function decorate(block) {
     const locations = data.body.dictionaries.locations;
 
     const cardWrapper = document.createElement('div');
-    cardWrapper.classList.add("card-wrapper","swiper-wrapper");
+    cardWrapper.classList.add("card-wrapper");
     data.body.data.forEach((flight, index) => {
       const segment = flight.itineraries[0].segments[0];
 
@@ -2103,17 +2103,22 @@ export default async function decorate(block) {
       block.appendChild(cardWrapper);
     }
     submit.classList.remove('disabled');
-    // swiperInit();
+    swiperInit();
   });
 }
 
 function swiperInit() {
   const cardWrapper = document.querySelector('.card-wrapper');
-  const container = document.createElement('div');
-  container.classList.add('container');
-  container.append(cardWrapper);
+  const SwiperWrapper = document.createElement('div');
+  SwiperWrapper.classList.add('swiper-wrapper');
   
-  // const swiper = new Swiper('.card-wrapper', {
+  const slides = cardWrapper.querySelectorAll('.swiper-slide');
+  slides.forEach(slide => {
+    SwiperWrapper.append(slide)
+  })
+  cardWrapper.append(SwiperWrapper);
   
-  // })
+  const swiper = new Swiper('.card-wrapper', {
+  
+  })
 }
