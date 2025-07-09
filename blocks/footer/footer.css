@@ -16,9 +16,9 @@ footer {
   margin: 0 auto;
 } */
 
-.footer a:any-link {
+/* .footer a:any-link {
   color: #FFFFFF;
-}
+} */
 
 /* footer .footer>div .section {
   color: #FFFFFF;
@@ -27,7 +27,8 @@ footer {
 footer .footer>div .section>div {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 0px;
+  /* padding: 50px 0px; */
+  padding-top: 50px;
 }
 
 footer .footer p,
@@ -117,6 +118,7 @@ footer .footer ul {
 
 .footer>div>div:nth-child(2)>div>ul {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer>div>div:nth-child(2)>div>ul>li {
@@ -138,6 +140,7 @@ footer .footer ul {
 
 .footer>div>div:nth-child(3) {
   padding: 50px 0;
+  padding-top: 0;
 }
 
 .footer>div>div:nth-child(3) .accordion-wrapper .accordion>div {
@@ -148,23 +151,70 @@ footer .footer ul {
 footer .footer>div .section:nth-child(4) {
   background-color: #FFFFFF;
   color: #0D0D0D;
-  padding-bottom: 0;
+  padding-bottom: 30px;
 }
 
-footer .footer>div .section:nth-child(4)>div p {
-  font-size: 14px;
-  font-weight: 300;
-  font: 400 1rem / 1.25rem Roboto, sans-serif;
+footer .footer>div .section:nth-child(4)>div {
+  display: flex;
+  align-items: flex-start;
+}
+
+footer .footer>div .section:nth-child(4)>div ul li {
+  font: 300 1rem / 1.25rem Roboto, sans-serif;
+  line-height: 23px;
   padding-bottom: 16px;
   color: #0D0D0D;
 }
 
 footer .footer>div .section:nth-child(4)>div p a {
+  font: 300 1rem / 1.25rem Roboto, sans-serif;
+  line-height: 23px;
+  padding-bottom: 16px;
   color: #0D0D0D;
 }
 
 @media (max-width: 767px) {
   footer .footer>div {
-    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
   }
+
+  footer .footer>div .section>div {
+    padding: 30px 15px;
+  }
+
+  .footer>div>div .accordion-wrapper .accordion {
+    flex-direction: column;
+  }
+
+  .footer .accordion details summary {
+    background-color: transparent;
+    border: none;
+  }
+
+  .footer>div>div .accordion-wrapper .accordion .accordion-item {
+    border: none;
+    border-radius: unset;
+    border-bottom: 1px solid #dadada;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.21);
+    padding-bottom: 16px;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+  }
+
+  footer>div>div .accordion .accordion-item-body {
+    background-color: transparent;
+  }
+
+  .footer>div>div:nth-child(2)>div>ul {
+    flex-direction: column;
+  }
+
+  footer .footer>div .section:nth-child(4)>div {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
 }
