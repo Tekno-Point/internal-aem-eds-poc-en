@@ -14,13 +14,18 @@
       "cards",
       "columns",
       "fragment",
+      "why-choose-us",
+      "embed",
+      "carousel",
       "buy-card",
       "compare",
       "splendor-spec-tab",
       "splendor-tab",
       "hero-carousel-block",
       "block-card",
-      "blogs-swiper"
+      "blogs-swiper",
+      "form",
+      "price-listing"
     ]
   },
   {
@@ -34,6 +39,10 @@
   {
     "id": "column",
     "components": ["text", "image", "button", "title"]
+  },
+  {
+    "id": "carousel",
+    "components": ["carousel-item"]
   },
   {
     "id": "buy-card",

@@ -29,21 +29,15 @@
     font-style: normal;
 }
 
-main > .section > div {
-    /*  this line for check*/
-    /* max-width: 1440px;  
-    width: 100%; */
-}
-
-
 .buy-card {
     max-width: 1440px;
     width: 100%;
-    margin-top: 31px;
+    margin-top: 42px;
     display: flex;
     justify-content: center;
 }
 .buy-card-container > div > p {
+    font-family: "TSTAR-PRO-Heavy";
     text-align: center;
     font-size: 3rem;
     font-style: italic;
@@ -148,7 +142,7 @@ main > .section > div {
         border-right: dashed 1px silver;
         position: absolute;
         top: 36px;
-        left: 65px;
+        left: 42px;
         width: 204px;
         height: 347px;
         transform: rotate(0deg);

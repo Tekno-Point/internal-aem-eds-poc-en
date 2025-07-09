@@ -1,5 +1,11 @@
 @import url("../cards/cards.css");
 
+.section.block-card-container{
+
+    margin: 0 auto;
+
+}
+
 .block-card-container>.block-card-wrapper{
     max-width: 100%;
 }
@@ -12,6 +18,7 @@
     list-style: none;
     display: flex;
     gap: 8px;
+        justify-content: center;
 }
 .block-card > ul > li >.cards-card-body>p{
     position: absolute;
@@ -71,5 +78,9 @@
 
     .block-card > ul > li > .cards-card-body {
         left: 5px;
+    }
+
+    .block-card-container>.block-card-wrapper{
+       padding: 0px;
     }
 }

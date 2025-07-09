@@ -1,6 +1,5 @@
 @import url("../tab/tab.css");
 
-
 .splendor-tab {
     max-width: 1200px;
     width: 100%;
@@ -116,6 +115,18 @@
     width: 100%;
 }
 
+.section.splendor-tab-container {
+    margin-top: 80px;
+}
+
+.section.splendor-tab-container>.default-content-wrapper > h2 {
+    font-family: "TSTAR-PRO-Heavy";
+    font-weight: 900;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
 @media (max-width: 768px) {
     .tabs-list > .tabs-tab {
         max-width: 8.125rem;
@@ -147,5 +158,8 @@
     }
     .tab-slide > ul > li > ul > li {
         font-size: 18px;
+    }
+    .section.splendor-tab-container>.default-content-wrapper > h2 {
+         font-size: 1.75rem;
     }
 }

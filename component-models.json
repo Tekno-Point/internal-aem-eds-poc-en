@@ -203,161 +203,55 @@
       },
       {
         "component": "reference",
-        "valueType": "string",
-        "name": "cols1_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "cols1_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "cols1_Bordertext",
+        "name": "youtubeVideoThumbnailDamPath",
         "value": "",
-        "label": "Boder Text",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "cols2_richtext",
-        "value": "",
-        "label": "Text",
+        "label": "youtubeVideoThumbnailDamPath",
         "valueType": "string"
       }
     ]
   },
   {
-    "id": "compare-item1",
+    "id": "why-choose-us",
     "fields": [
       {
-        "component": "richtext",
-        "name": "img1_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Multi Select",
         "valueType": "string",
-        "name": "img1_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "img1_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "col2_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col2_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col2_imageAlt",
-        "label": "Alt",
-        "value": ""
+        "options": [
+          {
+            "name": "h3",
+            "value": "h4"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          }
+        ]
       }
     ]
   },
-   {
-    "id": "compare-item2",
+  {
+    "id": "embed",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
+        "component": "text",
+        "name": "link",
         "value": "",
-        "label": "Text",
+        "label": "Link",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "youtubeVideoThumbnailDamPath",
+        "value": "",
+        "label": "youtubeVideoThumbnailDamPath",
         "valueType": "string"
       }
     ]
   },
   {
-    "id": "splendor-spec-tab-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "col1_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col2_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col2_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "col2_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-   {
-    "id": "splendor-tab-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "col1_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "col2_image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "col2_imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "col2_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-   {
-    "id": "hero-carousel-item",
+    "id": "carousel-item",
     "fields": [
       {
         "component": "text",
@@ -477,6 +371,25 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "form-url",
+        "label": "form path",
+        "value":""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "api-url",
+        "label": "api-url",
+        "value": ""
       }
     ]
   }
