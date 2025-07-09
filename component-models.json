@@ -152,6 +152,10 @@
           {
             "name": "Login Modal",
             "value": "login-modal-wrapper"
+          },
+          {
+            "name": "Marque Conatiner",
+            "value": "marque-container"
           }
         ]
       }

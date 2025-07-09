@@ -1,4 +1,4 @@
-import { div } from "../../scripts/dom-helper.js";
+import { div, h3, p } from "../../scripts/dom-helper.js";
 import { initSwiperOnly } from '../carousel/carousel.js';
 import { showCards } from "../modal/modal.js";
 
@@ -30,10 +30,20 @@ export default async function decorate(block) {
         let url = `${origin}/graphql/execute.json/internal-aem-eds-poc/trending-destination-list;path=${formurl}`
         if(block.classList.contains('marque')){
             url = `${origin}/graphql/execute.json/internal-aem-eds-poc/marque;path=${formurl}`;
+            const response = await fetch((url), {
+                method: "GET"
+            });
+            const respData = await response.json();
+            const marqueData = respData?.data?.srilankaMarqueByPath?.item;
 
-            const marque = div('hello marquer')
+            const marqueewrapper = document.createElement('div');
+            marqueewrapper.classList.add("marque-wrapper")
+            marqueewrapper.innerHTML = `
+               <h3 class='marque-heading'>${marqueData.head}</h3>
+               <div class='marque-wrapper'>${marqueData.description.html}</div>
+            `      
             row.firstElementChild.firstElementChild.remove()
-            row.firstElementChild.append(marque);
+            row.firstElementChild.append(marqueewrapper);
             return 
         }
         const response = await fetch((url), {
