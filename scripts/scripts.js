@@ -549,7 +549,7 @@ async function loadPage() {
   loadDelayed();
 }
 
-
+//fucntion for state and city.
 async function setSessionStorage() {
   const dataMapping = {};
 
