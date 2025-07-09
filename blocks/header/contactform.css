@@ -1,0 +1,193 @@
+.modal-open:has(.header-contact-modal) {
+    overflow: unset;
+}
+
+.modal:has(.header-contact-modal) dialog {
+    display: block;
+    max-width: 100%;
+    max-height: fit-content;
+    width: 100%;
+    height: 0px;
+    border: none;
+    margin: 0;
+    position: absolute;
+    background: #f7f6f6;
+    width: 100%;
+    top: 4.2rem;
+    left: 0;
+    z-index: 9;
+    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal:has(.header-contact-modal) dialog::before {
+    border-color: #eaeaea #eaeaea transparent transparent;
+    width: 0;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid #eaeaea;
+    position: absolute;
+    content: "";
+    left: 22%;
+    top: 0;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    transition: all 0.5s;
+    transform: rotateZ(180deg);
+}
+
+.modal:has(.header-contact-modal) dialog[open] {
+    animation: dialogOpen 1s cubic-bezier(0.4, 0, 0.2, 1) 1 forwards;
+}
+
+@media (width < 900px) {
+    .modal:has(.header-contact-modal) dialog {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh !important;
+        max-width: 100vw;
+        max-height: 100vh;
+        border-radius: 0;
+        margin: 0;
+        animation: none !important;
+    }
+
+    .modal:has(.header-contact-modal) .modal-content {
+        padding-inline: 15px;
+        max-height: 100%;
+    }
+    
+    .header-contact-modal .form-wrapper form div.field-wrapper {
+       flex-basis: 100%; 
+    }
+}
+
+.modal:has(.header-contact-modal) dialog::backdrop {
+    background: transparent;
+}
+
+.modal:has(.header-contact-modal) .modal-content {
+    margin-top: 2.2rem;
+}
+
+.header-contact-modal {
+    width: 100%;
+    max-width: 65rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 0 4rem;
+    position: relative;
+}
+
+.header-contact-modal .default-content-wrapper {}
+
+.header-contact-modal .form-wrapper {
+    margin: 0;
+}
+
+.header-contact-modal .form-wrapper form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem 5rem;
+}
+
+.header-contact-modal .form-wrapper form div {
+    flex-basis: 292px;
+    position: relative;
+}
+
+.header-contact-modal .form form>.field-wrapper+.field-wrapper,
+.form form fieldset .field-wrapper+.field-wrapper {
+    margin: 0;
+}
+
+.header-contact-modal .form-wrapper form label {
+    cursor: auto;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 2rem;
+    color: #b6b4b4;
+    font-weight: 400;
+    position: absolute;
+    top: 10px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.header-contact-modal .form-wrapper form input {
+    cursor: auto;
+    border: none;
+    color: #282828;
+    border-bottom: 1px solid #b6b4b4;
+    font-size: 2rem;
+    font-weight: 300;
+    z-index: 2;
+    width: 100%;
+    height: 35px;
+    margin-top: 1rem;
+    outline: 0;
+    background: 0 0;
+}
+
+.header-contact-modal .form-wrapper form select {
+    cursor: pointer;
+    z-index: 2;
+    width: 100%;
+    outline: 0;
+    background: transparent;
+    appearance: menulist-button;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #282828;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #b6b4b4;
+}
+
+.header-contact-modal .form-wrapper form .submit-wrapper .button {
+    color: #fff;
+    background-color: #ec6608;
+    font-size: 1.7rem;
+    margin-inline: auto;
+    padding: 1.6rem 4rem;
+    font-weight: 600;
+    border: 1px solid #d66a1e;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.6s;
+    border-radius: 50px;
+    display: inline-block;
+    outline: none;
+}
+
+.header-contact-modal h3 {
+    font-size: 1.7rem;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding-bottom: 2rem;
+}
+
+@keyframes dialogOpen {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+.header-contact-modal .text-wrapper.focus-active label,
+.header-contact-modal .form-wrapper form .select-wrapper label {
+    font-size: 1.6rem;
+    top: -16px;
+}

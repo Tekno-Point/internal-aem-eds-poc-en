@@ -13,6 +13,7 @@
 :root {
   /* colors */
   --background-color: white;
+  --brand-bg-color: linear-gradient(to bottom, #f58220 -18%, #b02a30 127%);
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
@@ -20,8 +21,8 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Muli', roboto, roboto-fallback, sans-serif;
+  --heading-font-family: 'Muli', roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -53,7 +54,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -70,7 +71,7 @@
   }
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
@@ -123,6 +124,8 @@ h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
 
+h5 { line-height: 30px;}
+
 p,
 dl,
 ol,
@@ -146,7 +149,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -158,6 +161,12 @@ button {
 }
 
 /* links */
+a {
+  color: #6c6c6c;
+  display: inline-block;
+  font-weight: 500;
+}
+
 a:any-link {
   color: var(--link-color);
   text-decoration: none;
@@ -166,7 +175,7 @@ a:any-link {
 
 a:hover {
   color: var(--link-hover-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* buttons */
@@ -256,7 +265,7 @@ time, mark, audio, video {
 
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
@@ -266,12 +275,24 @@ main > .section > div {
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
+.bg-megamenu {
+  background: linear-gradient(to bottom, #f58220 -18%, #b02a30 127%);
+}
+
+.bg-primary {
+  background-color: #db6b0b;
+}
+
+.bg-tertiary {
+  background-color: #eaeaea;
+}
+
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }

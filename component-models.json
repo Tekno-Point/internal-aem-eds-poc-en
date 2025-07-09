@@ -172,6 +172,42 @@
           {
             "name": "accordion container wrapper",
             "value": "accordion-container-wrapper"
+          },
+          {
+            "name": "Types of travel insurance plans in India",
+            "value": "travel-insurance-plans-in-india"
+          },
+          {
+            "name": "Buy a travel insurance policy online",
+            "value": "buy-travel-insurance-policy-online"
+          },
+          {
+            "name": "Additional coverage under travel insurance plans",
+            "value": "coverage-under-travel-insu-plan"
+          },
+          {
+            "name": "Popular Searches",
+            "value": "popular-searches"
+          },
+          {
+            "name": "Background Mega Menu",
+            "value": "bg-megamenu"
+          },
+          {
+            "name": "Background Orange",
+            "value": "bg-primary"
+          },
+          {
+            "name": "Background Tertiary",
+            "value": "bg-tertiary"
+          },
+          {
+            "name": "Header Contact Modal",
+            "value": "header-contact-modal"
+          },
+          {
+            "name": "Login Form Modal",
+            "value": "login-form-modal"
           }
         ]
       }
@@ -254,6 +290,25 @@
     ]
   },
   {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "Form Link",
+        "value": "",
+        "label": "Form Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "API ",
+        "value": "",
+        "label": "API"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -286,6 +341,44 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "headerRow",
+        "label": "Header Row",
+        "description": "Comma-separated list of header names (e.g., Name, Age, Occupation)."
+      },
+      {
+        "component": "richtext",
+        "name": "tableRows",
+        "valueType": "string",
+        "label": "Table Rows",
+        "description": "Each row should be on a new line, with columns separated by commas (e.g., John Doe, 30, Engineer)."
       }
     ]
   }

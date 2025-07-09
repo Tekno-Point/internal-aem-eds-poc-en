@@ -1,0 +1,25 @@
+.insurance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-m, 1rem) 0;
+}
+
+.insurance-table th,
+.insurance-table td {
+  border: 1px solid var(--border-color, #ddd);
+  padding: var(--spacing-s, 0.5rem);
+  text-align: left;
+}
+
+.insurance-table th {
+  background-color: var(--header-bg, #f9f9f9);
+  font-weight: bold;
+}
+
+.insurance-table tr:nth-child(even) {
+  background-color: var(--row-bg-even, #f1f1f1);
+}
+
+.insurance-table tr:nth-child(odd) {
+  background-color: var(--row-bg-odd, #fff);
+}
