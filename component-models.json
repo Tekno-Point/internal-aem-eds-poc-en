@@ -112,18 +112,6 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "Image Banner",
-            "value": "image-banner"
-          },
-          {
-            "name": "Imagebannerblue",
-            "value": "imagebannerblue"
-          },
-          {
-            "name": "Imagebannerlightblue",
-            "value": "imagebannerlightblue"
           }
         ]
       }
@@ -195,6 +183,32 @@
   },
   {
     "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "imagebanner",
     "fields": [
       {
         "component": "reference",

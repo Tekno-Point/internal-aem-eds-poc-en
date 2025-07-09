@@ -91,8 +91,7 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Cards",
-                  "filter": "cards",
-                  "model": "cards"
+                  "filter": "cards"
                 }
               }
             }
@@ -153,6 +152,21 @@
                 "template": {
                   "name": "Hero",
                   "model": "hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "ImageBanner",
+          "id": "imagebanner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Image Banner",
+                  "model": "imagebanner"
                 }
               }
             }
