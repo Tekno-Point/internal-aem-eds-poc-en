@@ -112,6 +112,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Hero Banner",
+            "value": "hero-banner"
           }
         ]
       }
@@ -139,6 +143,17 @@
   {
     "id": "columns",
     "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Hero Banner",
+            "value": "hero-banner"
+          }
+        ]
+      },
       {
         "component": "text",
         "valueType": "number",
