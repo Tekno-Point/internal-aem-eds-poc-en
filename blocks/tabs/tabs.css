@@ -302,7 +302,7 @@ input[type="date"] {
 }
 
 .tabs.form-tabs>div>.flight-card,
-.section.tabs-container>.card-wrapper>.flight-card {
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card {
   min-height: 220px;
   display: flex;
   align-items: center;
@@ -317,7 +317,7 @@ input[type="date"] {
 }
 
 .tabs.form-tabs>div>.flight-card>.flight-info,
-.section.tabs-container>.card-wrapper>.flight-card>.flight-info {
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info {
   max-width: 500px;
   width: 100%;
   min-height: 180px;
@@ -329,7 +329,7 @@ input[type="date"] {
 }
 
 .tabs.form-tabs>div>.flight-card>.flight-info>.from-info>strong,
-.section.tabs-container>.card-wrapper>.flight-card>.flight-info>strong {
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>strong {
   color: white;
   background: #0f1e7d;
   padding: 2px;
@@ -337,26 +337,26 @@ input[type="date"] {
 }
 
 .tabs.form-tabs>div>.flight-card>.airline-details,
-.section.tabs-container>.card-wrapper>.flight-card>.airline-details {
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details {
   max-width: 309px;
   width: 100%;
 }
 
 .tabs.form-tabs>div>.flight-card>.airline-details,
-.section.tabs-container>.card-wrapper>.flight-card>.airline-details {
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details {
   display: flex;
   flex-direction: column;
   gap: 9px;
 }
 
 .tabs.form-tabs>div>.flight-card>.airline-details>h4,
-.section.tabs-container>.card-wrapper>.flight-card>.airline-details>h4 {
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details>h4 {
   font-size: 14px;
   padding: 0px;
 }
 
 .tabs.form-tabs>div>.flight-card>.airline-details>button,
-.section.tabs-container>.card-wrapper>.flight-card>.airline-details>button {
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details>button {
   background-color: #0f1e7d;
   color: white;
   font-weight: 800;
@@ -364,7 +364,7 @@ input[type="date"] {
 }
 
 .tabs.form-tabs>div>.flight-card>.airline-details>div,
-.section.tabs-container>.card-wrapper>.flight-card>.airline-details>div {
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details>div {
   font-weight: 600;
 }
 
@@ -377,18 +377,18 @@ input[type="date"] {
 @media (max-width: 786px) {
 
   .tabs.form-tabs>div>.flight-card,
-  .section.tabs-container>.card-wrapper>.flight-card {
+  .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card {
     flex-direction: column;
     padding: 10px;
   }
 
   .tabs.form-tabs>div>.flight-card>.flight-info,
-  .section.tabs-container>.card-wrapper>.flight-card>.flight-info {
+  .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info {
     border: none;
   }
 
   .tabs.form-tabs>div>.flight-card>.airline-details,
-  .section.tabs-container>.card-wrapper>.flight-card>.airline-details {
+  .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details {
     align-items: center;
   }
 
