@@ -16,8 +16,7 @@
       "cards",
       "columns",
       "fragment",
-      "hero-banner",
-      "table"
+      "hero-banner"
     ]
   },
   {
@@ -45,12 +44,6 @@
     "id": "hero-banner",
     "components": [
       "hero-banner-item"
-    ]
-  },
-  {
-    "id": "table",
-    "components": [
-      "table-item"
     ]
   }
 ]
