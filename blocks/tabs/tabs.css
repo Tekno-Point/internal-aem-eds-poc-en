@@ -63,7 +63,7 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  top: 540px;
+  top: 585px;
 }
 
 .tabs.form-tabs .tabs-list button[aria-selected="true"] {

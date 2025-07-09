@@ -40,7 +40,7 @@ export default async function decorate(block) {
             marqueewrapper.classList.add("marque-wrapper")
             marqueewrapper.innerHTML = `
                <h3 class='marque-heading'>${marqueData.head}</h3>
-               <div class='marque-wrapper'>${marqueData.description.html}</div>
+               <div class='marque-description'>${marqueData.description.html}</div>
             `      
             row.firstElementChild.firstElementChild.remove()
             row.firstElementChild.append(marqueewrapper);
