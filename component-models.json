@@ -168,12 +168,12 @@
   {
     "id": "nav-item",
     "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "navTitle",
-        "label": "Navigation Title",
-        "description": "The title of the navigation item."
+            {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
