@@ -38,5 +38,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "custom-header",
+    "components": [
+      "nav-item"
+    ]
   }
 ]
