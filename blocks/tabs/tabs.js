@@ -2038,7 +2038,7 @@ export default async function decorate(block) {
       const price = convertEurToInr(flight.price.grandTotal);
 
       const card = document.createElement('div');
-      card.classList.add("flight-card","swiper-slide");
+      card.classList.add("flight-card", "swiper-slide");
 
       const flightInfo = document.createElement('div');
       flightInfo.className = 'flight-info';
@@ -2111,14 +2111,27 @@ function swiperInit() {
   const cardWrapper = document.querySelector('.card-wrapper');
   const SwiperWrapper = document.createElement('div');
   SwiperWrapper.classList.add('swiper-wrapper');
-  
+  const swiperPagination = document.createElement('div');
+  swiperPagination.classList.add('swiper-pagination');
+
   const slides = cardWrapper.querySelectorAll('.swiper-slide');
   slides.forEach(slide => {
     SwiperWrapper.append(slide)
   })
   cardWrapper.append(SwiperWrapper);
-  
+  cardWrapper.append(swiperPagination);
+
   const swiper = new Swiper('.card-wrapper', {
-  
+
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 15 },
+      600: { slidesPerView: 2, spaceBetween: 15 },
+      900: { slidesPerView: 1, spaceBetween: 16 },
+      1200: { slidesPerView: 1, spaceBetween: 16 }
+    },
+    loop: false,
+    pagination: {
+      el: '.swiper-pagination',
+    },
   })
 }
