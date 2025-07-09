@@ -333,5 +333,29 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "headerRow",
+        "label": "Header Row",
+        "description": "Comma-separated list of header names (e.g., Name, Age, Occupation)."
+      }
+    ]
+  },
+  {
+    "id": "table-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rowData",
+        "label": "Row Data",
+        "description": "Comma-separated list of values for the row (e.g., John Doe, 30, Engineer)."
+      }
+    ]
   }
 ]
