@@ -204,6 +204,7 @@ header .nav-top-menu .default-content-wrapper>ul {
 
   header .nav-top-menu .default-content-wrapper>ul li:first-child a {
     font-size: 1.3rem;
+    vertical-align: middle;
     font-weight: bold;
   }
 
