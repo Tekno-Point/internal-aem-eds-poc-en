@@ -70,11 +70,11 @@ export async function openModal(fragmentUrl) {
 
     const fragment = await loadFragment(path);
     const { showModal, block } = await createModal(fragment.childNodes);
-    //   console.log(block)
+    // login(block);
     showModal();
     setTimeout(() => {
         login(block);
-    }, 100);
+    }, 500);
 }
 
 export function login(block) {
@@ -127,7 +127,7 @@ export function isLogin(block) {
     const profile = userData.username;
 
     user.innerHTML = `
-       <div class="user-profile">Hi ${profile}</div>
+       <div class="user-profile">Hi, ${profile}</div>
     `
 
     const ul = block.querySelector('.section.nav-tools .default-content-wrapper ul');

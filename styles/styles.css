@@ -296,3 +296,7 @@ main .section.highlight {
 .section.btn-primary.text-center .default-content-wrapper{
   text-align: center;
 }
+
+header nav {
+  height: var(--nav-height);
+}

@@ -116,6 +116,14 @@
 
 
 /* Experience Carosel css */
+.section.exp-carousel-container {
+    margin: 0;
+}
+
+.section.exp-carousel-container .default-content-wrapper h3 {
+    padding-top: 50px;
+}
+
 @media (width >=900px) {
     .carousel.experience-carousel .swiper-slide {
         width: 246px;
