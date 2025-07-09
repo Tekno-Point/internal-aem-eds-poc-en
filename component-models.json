@@ -237,6 +237,17 @@
           }
         ]
       },
+       {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Feature Cards",
+            "value": "feature-cards"
+          }
+        ]
+      },
       {
         "component": "text",
         "valueType": "number",

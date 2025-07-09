@@ -19,6 +19,11 @@
   display: block;
 }
 
+.columns.block.feature-cards{
+  display: flex;
+  align-items: center;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
@@ -30,7 +35,4 @@
     flex: 1;
     order: unset;
   }
-}
-.columns.block.features{
-  
 }
