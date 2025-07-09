@@ -1245,9 +1245,21 @@ font-size: 24px;
   gap: 20px;
 }
 
-.section.insurance-policy-advantages.cards-container > .cards-wrapper >.cards > ul > li > .cards-card-body{
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li .cards-card-body:last-child{
   padding: 23px 20px 25px;
 } 
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li .cards-card-body:last-child h3{
+  font-weight: 300;
+        font-size: 36px;
+        line-height: 45px;
+        top: 23px;
+        left: 20px;
+}
+
+.section.insurance-policy-advantages.cards-container .cards-wrapper >.cards >ul >li .cards-card-body:last-child >ul >li{
+  padding-right: 0;
+}
 
 .travel-insurance-blog-articles > .default-content-wrapper > h2{
   font-size: 3.5rem;
@@ -1401,6 +1413,32 @@ padding-right: unset;
 .lombard-travel-insurance-policy-cover > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li{ 
   padding: 0 0 0 2rem;
 }
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li{
+    display: block;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-image{
+  display: none;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body{
+width: 100%;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > h2{
+  font-size: 2.4rem;
+  line-height: 30px;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul {
+  gap: 20px;
+}
+
+.coverage-under-travel-insu-plan > .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li >p{
+  padding: unset;
+}
+
 
 .international-travel-insurance-policy > .cards-wrapper > .cards > ul > li > .cards-card-body{
   flex-direction: column;
