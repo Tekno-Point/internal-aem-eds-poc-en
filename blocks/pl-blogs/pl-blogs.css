@@ -1,0 +1,130 @@
+.pl-blogs div:nth-child(1){
+  display: flex;
+}
+
+.pl-blogs div:nth-child(1) div{
+  padding: 0 15px;
+}
+
+.pl-blogs div:nth-child(2) h3{
+  color: #000;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.pl-blogs div:nth-child(2) p{
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.pl-blogs div:nth-child(2) ul{
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.pl-blogs div:nth-child(2) ul li{
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.5;
+}
+
+.pl-blogs div:nth-child(2) .button-container .button{
+  padding: 0;
+  margin: 0;
+  color: #9B1E26;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  background-color: unset;
+}
+
+.pl-blogs .swiper .swiper-slide div{
+  position: relative;
+  background-color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.pl-blogs .swiper-blog {
+  padding: 20px 0;
+  box-sizing: border-box;
+  /* overflow: visible; */
+  overflow: hidden;
+}
+
+.pl-blogs .swiper-wrapper {
+  box-sizing: border-box;
+}
+
+.pl-blogs .swiper-slide {
+  box-sizing: border-box;
+}
+
+/* Position and show the pagination container */
+.pl-blogs .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Default grey dots */
+.pl-blogs .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  opacity: 1;
+  border-radius: 50%;
+  margin: 0 6px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Active bullet = grey rectangle */
+.pl-blogs .swiper-pagination-bullet-active {
+  width: 24px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: #888;
+}
+.pl-blogs .swiper-blog {
+  padding-bottom: 32px; /* adds space below cards for dots */
+}
+
+.pl-blogs .swiper-blog .swiper-slide div div:nth-child(1) img{
+  border-radius: 8px 8px 0px 0px;
+  object-fit: cover;
+  width: 130px;
+  height: 130px;
+}
+
+.pl-blogs .swiper-blog .swiper-slide div div:nth-child(2) p{
+  color: #25243B;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.pl-blogs .swiper-blog .swiper-slide div div:nth-child(2) ul li{
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+}

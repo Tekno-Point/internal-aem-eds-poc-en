@@ -1,0 +1,114 @@
+@import "../swipper/swipper-bundle.min.css";
+
+.swipper-card{
+    display: flex;
+    flex-direction: row;
+}
+
+.prodCard{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    min-width: 0;
+    height: 200px;
+    border-radius: 8px;
+    gap: 24px;
+    background: #FFF;
+    box-shadow: 3px 4px 10px 1px rgba(37, 36, 59, 0.15);
+    margin-bottom: 14px;
+}
+
+.prodCard .prodTextDiv{
+    position: relative;
+}
+
+.prodCard .prodTextDiv p:nth-child(1),
+.prodCard .prodTextDiv h3{
+    color: #25243B;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.375px;
+    margin-bottom: 11px;
+}
+
+.prodCard .prodTextDiv p:nth-child(2){
+    color: #25243B;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.262px;
+}
+
+.prodCard .prodTextDiv ul{
+    padding: 0;
+    position: absolute;
+    /* width: 100%; */
+    bottom: 34px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.prodCard .prodTextDiv ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.prodCard .prodTextDiv ul li:nth-child(1){
+    border-radius: 27px;
+    background: #9B1E26;
+    width: 150px!important;
+    /* height: 40px; */
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    padding: 10px 13px;
+    border: 0;
+}
+
+.prodCard .prodTextDiv ul li:nth-child(1) a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.prodCard .prodTextDiv ul li:nth-child(2){
+    width: 123px;
+    color: #9B1E26;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+}
+
+.prodCard .prodTextDiv ul li:nth-child(2) a{
+    color: #9B1E26;
+}
+
+.prodCard .prodTextDiv .button-container .button{
+    position: absolute;
+    border-radius: 27px;
+    background: #9B1E26;
+    width: 150px;
+    height: 40px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    padding: 10px 13px;
+    border: 0;
+    bottom: 15px;
+}
