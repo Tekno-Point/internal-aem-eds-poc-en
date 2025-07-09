@@ -2,23 +2,61 @@
     background: #F8F6F6;
     padding: 7rem 0;
 }
-
+.accordions-container >div{
+    max-width: 825px;
+    margin: 50px auto;
+} 
+.accordions-container >div:nth-child(1){
+    width: 815px;
+}
+#frequently-asked-questions-about-travel-insurance{
+    color: #282828;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 45px;
+    margin-bottom: 0;
+    text-align: center;
+    margin: 0 70px 50px;
+    letter-spacing: 0.5px;
+}    
+.accordions{
+    max-width: 815px;
+    margin: 0 auto;
+}
 .accordions details {
-  border: 1px solid #dadada;
+    border: 1px solid #dadada;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+.accordions details:last-child{
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 24px;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 .accordions details + details {
-  margin-top: 24px;
+    margin-top: 24px;
 }
 
 .accordions details p {
-  margin-bottom: 0.8em;
+    margin-bottom: 0.8em;
 }
+.accordions details summary p{
+    font-size: 1.6rem;
+    font-weight: 700;
+    /* color: #282828; */
+    color: #494646;
+    line-height: 25px;
+    padding: 2.3rem 2rem 2.3rem 0;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+}
+    
 
 .accordions details summary {
   position: relative;
-  padding: 0 16px;
+  /* padding: 0 16px; */
   padding-right: 46px;
   cursor: pointer;
   list-style: none;
@@ -56,11 +94,29 @@
   transform: translateY(-50%) rotate(-45deg);
 }
 
-.accordions details .accordion-item-body {
+.accordions details  {
   padding: 0 16px;
 }
 
 .accordions details[open] .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
+}
+.accordion-item-body p{
+    font-size: 16px;
+    padding-top: 2px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2b2929;
+}
+
+@media (max-width:767px) {
+    .accordions-container >div:nth-child(1){
+        width: unset;
+    }   
+    #frequently-asked-questions-about-travel-insurance{
+        text-align: left;
+        margin: 0 0 50px 0;
+        font-size: 2.4rem;
+    }
 }
