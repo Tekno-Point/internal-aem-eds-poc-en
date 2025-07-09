@@ -23,7 +23,8 @@
       "personal-loan-block",
       "mid-banner",
       "pl-swipper-blogs",
-      "pl-blogs"
+      "pl-blogs",
+      "faq-accordion"
     ]
   },
   {
@@ -93,6 +94,12 @@
     "id": "pl-swipper-blogs",
     "components": [
       "pl-swipper-blogs-item"
+    ]
+  },
+  {
+    "id": "faq-accordion",
+    "components": [
+      "faq-accordion-item"
     ]
   }
 ]
