@@ -2113,7 +2113,7 @@ function swiperInit() {
   container.classList.add('container');
   container.append(cardWrapper);
   
-  const swiper = new Swiper('.card-wrapper', {
+  // const swiper = new Swiper('.card-wrapper', {
   
-  })
+  // })
 }
