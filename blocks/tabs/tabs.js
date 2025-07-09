@@ -2104,13 +2104,17 @@ export default async function decorate(block) {
     }
     submit.classList.remove('disabled');
   });
+
+  swiperInit();
 }
 
-const cardWrapper = document.querySelector('.card-wrapper');
-const container = document.createElement('div');
-container.classList.add('container');
-container.append(cardWrapper);
-
-const swiper = new Swiper('.card-wrapper', {
-
-})
+function swiperInit() {
+  const cardWrapper = document.querySelector('.card-wrapper');
+  const container = document.createElement('div');
+  container.classList.add('container');
+  container.append(cardWrapper);
+  
+  const swiper = new Swiper('.card-wrapper', {
+  
+  })
+}
