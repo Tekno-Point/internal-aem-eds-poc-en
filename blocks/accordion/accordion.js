@@ -1,4 +1,8 @@
 export default function decorate(block) {
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+
+  if (!isMobile) return; // Skip accordion transformation on desktop
+
   [...block.children].forEach((row) => {
     const children = [...row.children];
 

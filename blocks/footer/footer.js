@@ -18,3 +18,18 @@ export default async function decorate(block) {
 
   block.append(footer);
 }
+
+// const accordion = document.querySelector('.footer .accordion-wrapper .accordion');
+// const children = accordion.querySelectorAll(':scope > div');
+
+// let allEmpty = true;
+
+// children.forEach(child => {
+//   if (child.textContent.trim() !== '') {
+//     allEmpty = false;
+//   }
+// });
+
+// if (allEmpty) {
+//   accordion.style.display = 'none';
+// }
