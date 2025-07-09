@@ -165,6 +165,18 @@ footer .footer ul {
   padding-left: 15px;
 }
 
+.footer>div>div:nth-child(2)>div>ul>li:nth-child(2)>ul>li {
+  text-align: center;
+}
+
+.footer>div>div:nth-child(2)>div>ul>li:nth-child(2)>ul>li>.icon {
+  height: 56px;
+  width: 56px;
+  background: #fff;
+  padding: 2px;
+  margin-left: 84px;
+}
+
 .footer>div>div:nth-child(2)>div>ul li>p {
   padding-bottom: 16px;
   letter-spacing: .5px;
@@ -227,33 +239,48 @@ footer .footer>div .section:nth-child(4)>div p a {
 }
 
 @media (max-width: 767px) {
+  .footer>div>div {
+    padding: 0;
+    order: 1;
+    padding-top: 14px;
+  }
+
   footer .footer>div {
     display: flex;
     flex-direction: column;
   }
 
   footer .footer>div .section>div {
-    padding: 30px 15px;
+    padding: 0 15px;
+  }
+
+  .footer>div>div:nth-child(2),
+  .footer .accordion-item-body {
+    padding: 30px 0;
+    order: 3;
   }
 
   .footer>div>div .accordion-wrapper .accordion {
     flex-direction: column;
   }
 
-  .footer .accordion details summary {
+  .footer>div>div .accordion-wrapper .accordion .accordion-item-label {
     background-color: transparent;
     border: none;
+    margin: 0;
+    padding: 0;
   }
 
   .footer>div>div .accordion-wrapper .accordion .accordion-item {
+    flex: 0 0 100%;
+    max-width: 100%;
     border: none;
     border-radius: unset;
     border-bottom: 1px solid #dadada;
     font-weight: 700;
     border-bottom: 1px solid rgba(255, 255, 255, 0.21);
-    padding-bottom: 16px;
     letter-spacing: .5px;
-    margin-bottom: 10px;
+    padding: 18px 0;
   }
 
   footer>div>div .accordion .accordion-item-body {
@@ -262,8 +289,19 @@ footer .footer>div .section:nth-child(4)>div p a {
 
   .footer>div>div:nth-child(2)>div>ul {
     flex-direction: column;
-    gap: 16px;
+    gap: 23px;
     padding: 0;
+  }
+
+  .footer>div>div:nth-child(3) {
+    padding: 0;
+    order: 2;
+    padding-bottom: 14px;
+  }
+
+  footer .footer>div .section:nth-child(4) {
+    padding: 50px 0;
+    order: 4;
   }
 
   footer .footer>div .section:nth-child(4)>div {
@@ -275,6 +313,57 @@ footer .footer>div .section:nth-child(4)>div p a {
   .footer>div>div:nth-child(2)>div>ul>li {
     flex: 0 0 100%;
     max-width: 100%;
+    padding: 0;
+  }
+
+  .footer>div>div .accordion-wrapper .accordion .accordion-item-body ul li {
+    line-height: 20px;
+    margin-top: 9px;
+  }
+
+  .footer>div>div .accordion-wrapper .accordion .accordion-item-label p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .footer>div>div .accordion-wrapper .accordion .accordion-item-body ul li a {
+    font: 400 14px / 14px 'Roboto', sans-serif;
+  }
+
+  .footer>div>div .accordion-wrapper .accordion .accordion-item-body ul {
+    padding-left: 0;
+  }
+
+  .footer>div>div:nth-child(3) .accordion-wrapper .accordion .accordion-item {
+    border-bottom: unset;
+  }
+
+  footer .footer>div .section:nth-child(4)>div ul li {
+    font: 300 14px / 14px Roboto, sans-serif;
+    line-height: 20px;
+    word-break: break-word;
+  }
+
+  footer .footer>div .section:nth-child(4)>div p a {
+    font: 300 14px / 14px Roboto, sans-serif;
+    line-height: 18px;
+  }
+
+  footer .footer>div .section:nth-child(4)>div ul li:first-child {
+    padding-bottom: 40px;
+  }
+
+  footer .footer>div .section:nth-child(4)>div ul li:nth-child(2) {
+    padding-bottom: 0px;
+  }
+
+  footer .footer>div .section:nth-child(4)>div ul li:nth-child(3) {
+    padding-bottom: 0px;
+  }
+
+  .footer>div>div:nth-child(2)>div>ul li>p {
+
+    font: 700 14px / 20px Roboto, sans-serif;
   }
 
   .footer>div>div:nth-child(2)>div>ul>li:nth-child(2)>ul>li:nth-child(2) {
@@ -303,6 +392,11 @@ footer .footer>div .section:nth-child(4)>div p a {
 
   .footer>div>div:nth-child(2)>div>ul>li:nth-child(2)>ul>li:first-child {
     display: none;
+  }
+
+  .footer>div>div .accordion-wrapper .accordion .accordion-item-label::after {
+    top: 40%;
+    right: 4px;
   }
 
 }
