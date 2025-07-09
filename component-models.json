@@ -166,6 +166,14 @@
             "value": "international-travel-insurance-policy"
           },
           {
+            "name": "tab container wrapper",
+            "value": "tab-container-wrapper"
+          },
+          {
+            "name": "accordion container wrapper",
+            "value": "accordion-container-wrapper"
+          },
+          {
             "name": "Types of travel insurance plans in India",
             "value": "travel-insurance-plans-in-india"
           },
@@ -226,6 +234,25 @@
   },
   {
     "id": "tab",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "value": "",
+        "label": "Body"
+      }
+    ]
+  },
+  {
+    "id": "accordion",
     "fields": [
       {
         "component": "text",
