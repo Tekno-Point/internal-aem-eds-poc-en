@@ -251,7 +251,7 @@
     ]
   },
   {
-    "id": "carousel-item",
+    "id": "carousel-it",
     "fields": [
       {
         "component": "text",
@@ -345,25 +345,6 @@
         "name": "imageAlt",
         "label": "Alt",
         "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "price-listing",
-    "fields": [
-      {
-        "component": "aem-content",
-        "valueType": "string",
-        "name": "api url",
-        "label": "url",
-        "multi": false
       },
       {
         "component": "richtext",
