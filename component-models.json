@@ -128,6 +128,10 @@
           {
             "name": "Header Contact Modal",
             "value": "header-contact-modal"
+          },
+          {
+            "name": "Login Form Modal",
+            "value": "login-form-modal"
           }
         ]
       }
@@ -216,6 +220,25 @@
         "name": "imageAlt",
         "label": "Alt",
         "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
       },
       {
         "component": "richtext",
