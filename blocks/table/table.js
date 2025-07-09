@@ -1,16 +1,20 @@
 export default function decorate(block) {
-  // Parse the raw sequential divs
-  const headerRow = block.children[0]?.textContent?.trim() || '';
-  const tableItems = Array.from(block.children).slice(1);
-
-  // Split header row into individual headers
+  // Get header text (first row)
+  const headerRow = block.querySelector(':scope > div:nth-child(1) p')?.textContent?.trim() || '';
   const headers = headerRow.split(',').map((header) => header.trim());
 
-  // Create the table structure
+  // Get all subsequent <p> elements inside second row (data rows)
+  const rowElements = block.querySelectorAll(':scope > div:nth-child(2) p');
+  const rows = Array.from(rowElements)
+    .map((p) => p.textContent.trim())
+    .filter(Boolean) // remove empty rows
+    .map((line) => line.split(',').map((cell) => cell.trim()));
+
+  // Create the table
   const table = document.createElement('table');
   table.classList.add('dynamic-table');
 
-  // Add table header
+  // Create header row
   const headerElement = document.createElement('tr');
   headers.forEach((header) => {
     const th = document.createElement('th');
@@ -19,21 +23,18 @@ export default function decorate(block) {
   });
   table.appendChild(headerElement);
 
-  // Add table rows
-  tableItems.forEach((item) => {
-    const rowData = item.children[0]?.textContent?.trim() || '';
-    const values = rowData.split(',').map((value) => value.trim());
-
-    const row = document.createElement('tr');
-    values.forEach((value) => {
+  // Add data rows
+  rows.forEach((row) => {
+    const tr = document.createElement('tr');
+    row.forEach((cell) => {
       const td = document.createElement('td');
-      td.textContent = value;
-      row.appendChild(td);
+      td.textContent = cell;
+      tr.appendChild(td);
     });
-    table.appendChild(row);
+    table.appendChild(tr);
   });
 
-  // Replace the block content with the table
+  // Replace block content with table
   block.innerHTML = '';
   block.appendChild(table);
 }
