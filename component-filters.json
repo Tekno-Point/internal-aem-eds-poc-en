@@ -15,7 +15,13 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "tabs",
+      "form",
+      "carousel",
+      "form",
+      "table",
+      "idfc-header"
     ]
   },
   {
