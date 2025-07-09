@@ -101,5 +101,9 @@
     "components": [
       "faq-accordion-item"
     ]
+  },
+  {
+    "id":"overview-rte",
+    "components":["overview-rte-item"]
   }
 ]

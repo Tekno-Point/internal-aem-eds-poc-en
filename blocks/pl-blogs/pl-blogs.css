@@ -103,3 +103,28 @@
 .pl-blogs .swiper-blog {
   padding-bottom: 32px; /* adds space below cards for dots */
 }
+
+.pl-blogs .swiper-blog .swiper-slide div div:nth-child(1) img{
+  border-radius: 8px 8px 0px 0px;
+  object-fit: cover;
+  width: 130px;
+  height: 130px;
+}
+
+.pl-blogs .swiper-blog .swiper-slide div div:nth-child(2) p{
+  color: #25243B;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.pl-blogs .swiper-blog .swiper-slide div div:nth-child(2) ul li{
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+}
