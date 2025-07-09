@@ -48,7 +48,7 @@
   {
     "id": "idfc-header",
     "components": [
-      "nav-item"
+      "cust-nav-item"
     ]
   }
 ]

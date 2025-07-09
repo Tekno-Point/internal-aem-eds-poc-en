@@ -173,15 +173,15 @@
           }
         },
         {
-          "title": "Nav Item",
-          "id": "nav-item",
+          "title": "Custom Nav-Item",
+          "id": "cust-nav-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Nav Item",
-                  "model": "nav-item"
+                  "name": "Custom Nav Item",
+                  "model": "cust-nav-item"
                 }
               }
             }
