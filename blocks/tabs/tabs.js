@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-unresolved
 import { toClassName } from '../../scripts/aem.js';
 import { clickDropdown, showData } from '../form/booking-form.js';
-
+import Swiper from '../carousel/swiper-bundle.min.js'
 
 
 /* eslint-disable */
@@ -1975,33 +1975,33 @@ export default async function decorate(block) {
   showData(block, '.from-input', 'from-wrapper', 'source');
   showData(block, '.to-input', 'to-wrapper', 'destination');
   clickDropdown(block);
-   
-   const form = block.querySelector('form');
-     const submit = form.querySelector('button[type="submit"]');
 
-   form.addEventListener('submit', async function(e) {
+  const form = block.querySelector('form');
+  const submit = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
     submit.classList.add('disabled');
 
     const auth = await getAccessToken();
-    const data = await getData(auth , {
-        originLocationCode: this.source.dataset.iataCode,
-        destinationLocationCode: this.destination.dataset.iataCode,
-        departureDate: this.departure.value,
-        returnDate: this.return.value,
-        adults: '1',
-        includedAirlineCodes: 'TG',
-        max: '10',
-      });
+    const data = await getData(auth, {
+      originLocationCode: this.source.dataset.iataCode,
+      destinationLocationCode: this.destination.dataset.iataCode,
+      departureDate: this.departure.value,
+      returnDate: this.return.value,
+      adults: '1',
+      includedAirlineCodes: 'TG',
+      max: '10',
+    });
 
     // Remove previous cards (for clean UI)
     block.querySelectorAll('.flight-card').forEach(card => card.remove());
 
     const countries = new Intl.DisplayNames(['en'], { type: 'region' });
     const locations = data.body.dictionaries.locations;
-    
+
     const cardWrapper = document.createElement('div');
-    cardWrapper.classList.add("card-wrapper");
+    cardWrapper.classList.add("card-wrapper","swiper-wrapper");
     data.body.data.forEach((flight, index) => {
       const segment = flight.itineraries[0].segments[0];
 
@@ -2038,7 +2038,7 @@ export default async function decorate(block) {
       const price = convertEurToInr(flight.price.grandTotal);
 
       const card = document.createElement('div');
-      card.className = 'flight-card';
+      card.classList.add("flight-card","swiper-slide");
 
       const flightInfo = document.createElement('div');
       flightInfo.className = 'flight-info';
@@ -2095,7 +2095,7 @@ export default async function decorate(block) {
       card.append(flightInfo, airlineDetails);
       cardWrapper.appendChild(card);
     });
-    if(block.classList.contains("form-absolute")) {
+    if (block.classList.contains("form-absolute")) {
       const tabsContainer = document.querySelector('.section.tabs-container');
       tabsContainer.appendChild(cardWrapper)
     }
@@ -2105,3 +2105,19 @@ export default async function decorate(block) {
     submit.classList.remove('disabled');
   });
 }
+
+// const cardWrapper = document.querySelector('.card-wrapper');
+// console.log(cardWrapper)
+// const swiperWrapper = document.createElement('div');
+// swiperWrapper.classList.add('swiper-wrapper');
+
+// cardWrapper.forEach(card => {
+//   card.classList.add('swiper-slide');
+//   swiperWrapper.append(card);
+// });
+// cardWrapper.append(swiperWrapper);
+
+
+// new Swiper('.card-wrapper', {
+
+// })
