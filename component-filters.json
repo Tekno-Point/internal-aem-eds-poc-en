@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "custom-header"
+      "fragment"
     ]
   },
   {
@@ -41,7 +40,7 @@
     ]
   },
   {
-    "id": "custom-header",
+    "id": "nav-list",
     "components": [
       "nav-item"
     ]
