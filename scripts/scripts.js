@@ -549,4 +549,85 @@ async function loadPage() {
   loadDelayed();
 }
 
+
+async function setSessionStorage() {
+  const dataMapping = {};
+
+  dataMapping.state_city_master = {
+    state: "Delhi",
+    city: "Delhi"
+  };
+
+  function updateStateAndCity(state, city) {
+    dataMapping.state_city_master.state = state;
+    dataMapping.state_city_master.city = city;
+    sessionStorage.setItem('dataMapping', JSON.stringify(dataMapping));
+  }
+
+  function getUserLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          getStateInfo(lat, lng);
+        },
+        (error) => {
+          updateStateAndCity("Delhi", "Delhi");
+        },
+        // {
+        //   timeout: 10000, 
+        //   maximumAge: 60000, 
+        //   enableHighAccuracy: true 
+        // }
+      );
+    } else {
+      updateStateAndCity("Delhi", "Delhi");
+    }
+  }
+
+  function getStateInfo(lat, lng) {
+    const url = `https://apis.mappls.com/advancedmaps/v1/5b8424bdaf84cda4fccf61d669d85f5a/rev_geocode?lat=${lat}&lng=${lng}`;
+
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(mapplsData => {
+        if (mapplsData.responseCode === 200 && mapplsData.results && mapplsData.results.length > 0) {
+          const result = mapplsData.results[0];
+          const state = result.state || "Delhi";
+          const city = result.city || "Delhi";
+          updateStateAndCity(state, city);
+        } else {
+          updateStateAndCity("Delhi", "Delhi");
+        }
+      })
+      .catch(error => {
+        updateStateAndCity("Delhi", "Delhi");
+      });
+  }
+
+  getUserLocation();
+
+  await fetch('https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.state-and-city.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(` Errorr while Fetching Data ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(apiData => {
+      dataMapping.state_city_master.apiData = apiData.data.stateCity;
+      sessionStorage.setItem('dataMapping', JSON.stringify(dataMapping));
+    })
+    .catch(error => {
+      console.error('Error fetching or storing data:', error);
+    });
+
+}
+setSessionStorage();
 loadPage();
