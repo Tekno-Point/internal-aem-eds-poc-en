@@ -17,15 +17,15 @@
 }
 
 .section.cf-wrapper .content-fragment .carousel .swiper-wrapper {
-    padding: 1px 10px 10px 1px;
+    padding: 1px 10px 8px 1px;
 }
 
 .section.cf-wrapper .content-fragment .carousel .swiper-button-next {
-    right: -7px;
+    right: 0;
 }
 
 .section.cf-wrapper .content-fragment .carousel .swiper-button-prev {
-    left: -25px;
+    left: 0;
 }
 
 .content-fragment>div>div>.fares-carousel-container>.fares-carousel-content>.fr-secondary-filters {

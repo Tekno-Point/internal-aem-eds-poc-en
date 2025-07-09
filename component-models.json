@@ -156,6 +156,10 @@
           {
             "name": "Marque Conatainer",
             "value": "marque-container"
+          },
+          {
+            "name": "Experience Carousel Container",
+            "value": "exp-carousel-container"
           }
         ]
       }
