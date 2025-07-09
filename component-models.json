@@ -174,20 +174,6 @@
         "name": "navTitle",
         "label": "Navigation Title",
         "description": "The title of the navigation item."
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "navLink",
-        "label": "Navigation Link",
-        "description": "The URL the navigation item links to."
-      },
-      {
-        "component": "richtext",
-        "name": "dropdownContent",
-        "value": "",
-        "label": "Dropdown Content",
-        "valueType": "string"
       }
     ]
   },
