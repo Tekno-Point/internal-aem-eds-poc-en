@@ -533,6 +533,7 @@
     color: #ffcc80;
     margin: 0;
     background-color: #282828;
+    z-index: 2;
 }
 
 .section.marque-container .content-fragment-wrapper .content-fragment.marque.block .marque-wrapper .marque-description {
