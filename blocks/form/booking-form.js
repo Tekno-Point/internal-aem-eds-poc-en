@@ -28,7 +28,6 @@ export async function cityDropdown(block, wrapperClass, type, inputparent) {
 
 export function createCityDom(cities,wrapper,type){
     wrapper.innerHTML = "";
-    console.log(cities)
     cities.forEach(city => {
         const cityOption = document.createElement('div');
         cityOption.classList.add('city-option');
@@ -44,17 +43,25 @@ export function createCityDom(cities,wrapper,type){
     });
 }
 
-export async function inputFilter(block, inputClass,type) {
+export async function inputFilter(block, inputClass,type, otherInput) {
     const inputElem = block.querySelector(`${inputClass} input`);
     const wrapper = block.querySelector(`${inputClass} .city-wrapper`);
     
+    
     inputElem.addEventListener('input', (e)=> {
+        const otherInputVal = block.querySelector(`${otherInput} input`)?.value || "";
+        const otherInputCity = otherInputVal?.split(',')[0]
         const query = e.target.value.toLowerCase();
-        const filteredData = iataData.data.filter(entry => 
+        let filteredData = iataData.data.filter(entry => 
             entry[`${type}_city`].toLowerCase().includes(query) ||
             entry[`${type}_country`].toLowerCase().includes(query) ||
             entry[`${type}_IATA`].toLowerCase().includes(query)
         );
+        if (otherInputCity) {
+            filteredData = filteredData.filter(entry => 
+                entry[`${type}_city`].toLowerCase() !== otherInputCity.toLowerCase()
+            );
+        }
         const uniqueData = Array.from(
             new Map(
                 filteredData.map(entry => [entry[`${type}_IATA`], entry])
@@ -62,7 +69,6 @@ export async function inputFilter(block, inputClass,type) {
         );
 
         createCityDom(uniqueData,wrapper,type)
-    
     })
 }
 
@@ -113,8 +119,24 @@ export function dateDisable(block) {
     const startInput = block.querySelector('form .departure-date input');
     const endInput = block.querySelector('form .return-date input');
 
+    // Get today's date in YYYY-MM-DD format
+    const today = new Date().toISOString().split('T')[0];
+
+    // Disable previous dates in start input
+    startInput.min = today;
+
+    // Optional: Disable previous dates in return input too
+    endInput.min = today;
+
+    // Update end date min when start date changes
     startInput.addEventListener('change', function () {
         const selectedDate = this.value;
-        endInput.min = selectedDate; // Disable earlier dates in end date picker
+        endInput.min = selectedDate;
+
+        if (endInput.value && endInput.value < selectedDate) {
+            endInput.value = '';
+        }
     });
+
+    console.log(Date.now());
 }

@@ -1978,8 +1978,8 @@ export default async function decorate(block) {
   dateDisable(block);
 
   window.addEventListener("datafetched", () => {
-    inputFilter(block, '.from-input','source');
-    inputFilter(block, '.to-input','destination');
+    inputFilter(block, '.from-input','source', '.to-input');
+    inputFilter(block, '.to-input','destination', '.from-input');
   })
 
   const form = block.querySelector('form');
@@ -2103,7 +2103,7 @@ export default async function decorate(block) {
     });
     if (block.classList.contains("form-absolute")) {
       const tabsContainer = document.querySelector('.section.tabs-container');
-      tabsContainer.appendChild(cardWrapper)
+      tabsContainer.appendChild(cardWrapper);
     }
     else {
       block.appendChild(cardWrapper);
@@ -2115,6 +2115,7 @@ export default async function decorate(block) {
 
 function swiperInit() {
   const cardWrapper = document.querySelector('.card-wrapper');
+  cardWrapper.innerHTML = "";
   const SwiperWrapper = document.createElement('div');
   SwiperWrapper.classList.add('swiper-wrapper');
   const swiperPagination = document.createElement('div');
