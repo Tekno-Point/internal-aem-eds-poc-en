@@ -22,13 +22,13 @@ export default async function decorate(block) {
     let origin = config.data[0].value
     if (exclude.includes(window.location.host)) {
         origin = 'https://author-p48457-e1275402.adobeaemcloud.com';
-    }    
+    }
 
     Array.from(block.children).forEach(async (row, i) => {
         const item = row.querySelector('a');
         const formurl = new URL(item.href)?.pathname.replace('.html', '');
         let url = `${origin}/graphql/execute.json/internal-aem-eds-poc/trending-destination-list;path=${formurl}`
-        if(block.classList.contains('marque')){
+        if (block.classList.contains('marque')) {
             url = `${origin}/graphql/execute.json/internal-aem-eds-poc/marque;path=${formurl}`;
             const response = await fetch((url), {
                 method: "GET"
@@ -41,10 +41,10 @@ export default async function decorate(block) {
             marqueewrapper.innerHTML = `
                <h3 class='marque-heading'>${marqueData.head}</h3>
                <div class='marque-description'>${marqueData.description.html}</div>
-            `      
+            `
             row.firstElementChild.firstElementChild.remove()
             row.firstElementChild.append(marqueewrapper);
-            return 
+            return
         }
         const response = await fetch((url), {
             method: "GET"
@@ -53,7 +53,7 @@ export default async function decorate(block) {
         // console.log(respData)
         // Render the carousel markup
         let carousel = renderUI(respData?.data?.cfListByPath?.item?.contentFragment);
-        
+
         // If renderUI returns an array, wrap it in a div
         if (Array.isArray(carousel)) {
             const wrapper = document.createElement('div');
@@ -73,7 +73,7 @@ export default async function decorate(block) {
         }
 
         showCards(respData?.data?.cfListByPath?.item?.contentFragment);
-        window.addEventListener('userDataSave', (e)=> {
+        window.addEventListener('userDataSave', (e) => {
             showCards(respData?.data?.cfListByPath?.item?.contentFragment);
         })
     });
@@ -256,12 +256,12 @@ function renderUI(data = []) {
 
     // Popover for departure filter
     function departurePopover(target) {
-        const fromInputId = `input-from-${Math.floor(Math.random()*1e10)}`;
-        const toInputId = `input-to-${Math.floor(Math.random()*1e10)}`;
-        const fromLabelId = `label-from-${Math.floor(Math.random()*1e10)}`;
-        const toLabelId = `label-to-${Math.floor(Math.random()*1e10)}`;
-        const fromDescId = `desc-from-${Math.floor(Math.random()*1e10)}`;
-        const toDescId = `desc-to-${Math.floor(Math.random()*1e10)}`;
+        const fromInputId = `input-from-${Math.floor(Math.random() * 1e10)}`;
+        const toInputId = `input-to-${Math.floor(Math.random() * 1e10)}`;
+        const fromLabelId = `label-from-${Math.floor(Math.random() * 1e10)}`;
+        const toLabelId = `label-to-${Math.floor(Math.random() * 1e10)}`;
+        const fromDescId = `desc-from-${Math.floor(Math.random() * 1e10)}`;
+        const toDescId = `desc-to-${Math.floor(Math.random() * 1e10)}`;
         let popover;
         let from = fromValue;
         let to = toValue;
@@ -496,9 +496,9 @@ function renderUI(data = []) {
 
     // Popover for budget input
     function budgetPopover(target) {
-        const inputId = `input-${Math.floor(Math.random()*1e10)}`;
-        const labelId = `label-budget-${Math.floor(Math.random()*1e10)}`;
-        const descId = `${Math.floor(Math.random()*1e10)}`;
+        const inputId = `input-${Math.floor(Math.random() * 1e10)}`;
+        const labelId = `label-budget-${Math.floor(Math.random() * 1e10)}`;
+        const descId = `${Math.floor(Math.random() * 1e10)}`;
         let popover;
         let inputValue = budgetValue;
         // Helper to create a real input element and attach events
@@ -686,9 +686,9 @@ export function renderCard(data = []) {
         // Description is HTML, so we need to inject it safely
         const descHtml = eachData.description?.html || '';
         // IDs for ARIA
-        const cardId = `card-${Date.now()}_${Math.floor(Math.random()*1e17)}`;
-        const btnId = `cta-btn-${Math.floor(Math.random()*2e9)}`;
-        const textId = `cta-text-${Date.now()}_${Math.floor(Math.random()*1e17)}`;
+        const cardId = `card-${Date.now()}_${Math.floor(Math.random() * 1e17)}`;
+        const btnId = `cta-btn-${Math.floor(Math.random() * 2e9)}`;
+        const textId = `cta-text-${Date.now()}_${Math.floor(Math.random() * 1e17)}`;
         const priceId = `price-${Math.random().toString(36).substring(2, 18)}`;
         // Card markup as swiper-slide
         // Helper to build city code only if present
@@ -715,7 +715,7 @@ export function renderCard(data = []) {
                         ),
                         // Image header
                         div({
-                            id: `img-${Date.now()}_${Math.floor(Math.random()*1e17)}`,
+                            id: `img-${Date.now()}_${Math.floor(Math.random() * 1e17)}`,
                             'data-testid': 'imageHeader',
                             class: 'image-header'
                         },
@@ -813,7 +813,7 @@ function formatDateShort(dateStr) {
     if (!dateStr) return '';
     const d = new Date(dateStr);
     if (isNaN(d)) return dateStr;
-    return `${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}/${d.getFullYear()}`;
+    return `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}/${d.getFullYear()}`;
 }
 // Helper: format date as "Month DD, YYYY"
 function formatDateLong(dateStr) {

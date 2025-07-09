@@ -299,6 +299,7 @@ input[type="date"] {
 .section.tabs-container>.card-wrapper {
   padding: 85px 0 0;
   max-width: 1140px;
+  overflow: hidden;
 }
 
 .tabs.form-tabs>div>.flight-card,
@@ -621,14 +622,19 @@ input[type="date"] {
   }
 }
 
-
-/* .tabs-container{
-  position: absolute;
-  top: 520px;
-  left: 10px;
-  z-index: 2;
-} */
-
 .button.disabled {
   opacity: 0.8;
+}
+
+.user-wrapper {
+  position: relative;
+}
+
+.user-wrapper .user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid black;
 }

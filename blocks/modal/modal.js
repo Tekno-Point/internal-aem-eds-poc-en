@@ -98,13 +98,13 @@ export async function showCards(data) {
     const userData = JSON.parse(localStorage.getItem('userData'));
     const swiperWrapper = document.querySelector('.cf-wrapper .content-fragment-wrapper .swiper-wrapper')
     let filteredData;
-    let from = userData.city;
-    
+    let from = userData?.city;
+
     if (from) {
         filteredData = data.filter(card =>
             card.departureCity && card.departureCity.toLowerCase().includes(from.trim().toLowerCase())
         );
-        if(!filteredData) {
+        if (!filteredData) {
             filteredData = data;
         }
     }
@@ -117,3 +117,22 @@ export async function showCards(data) {
         swiperWrapper.appendChild(card)
     })
 }
+
+export function isLogin(block) {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    if (!userData || !userData.username) return;
+    const user = document.createElement('div');
+    user.classList.add('user-wrapper');
+
+    const profile = userData.username;
+
+    user.innerHTML = `
+       <div class="user-profile">Hi ${profile}</div>
+    `
+
+    const ul = block.querySelector('.section.nav-tools .default-content-wrapper ul');
+    const loginBtn = ul.lastElementChild.querySelector('p');
+
+    loginBtn.replaceWith(user);
+}
+

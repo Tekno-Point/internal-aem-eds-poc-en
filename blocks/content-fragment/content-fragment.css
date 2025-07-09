@@ -14,11 +14,9 @@
 
 .section.cf-wrapper .content-fragment .carousel {
     padding: 10px 10px 18px;
-    overflow: unset;
 }
 
 .section.cf-wrapper .content-fragment .carousel .swiper-wrapper {
-    overflow: hidden;
     padding: 1px 10px 10px 1px;
 }
 

@@ -1,6 +1,7 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../../scripts/scripts.js';
-import {div, ul, li, a, h3} from '../../scripts/dom-helper.js'
+import { div, ul, li, a, h3 } from '../../scripts/dom-helper.js'
+import { isLogin } from '../modal/modal.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
@@ -188,5 +189,12 @@ export default async function decorate(block) {
 
   setupLangDropdown(multilang);
   setupLangDropdown(multiLangMob);
-   
+
+  isLogin(block);
+  window.addEventListener('userDataSave', () => {
+    isLogin(block);
+    const modal = document.querySelector('.modal.block dialog');
+    modal.remove();
+  });
+
 }

@@ -138,6 +138,10 @@ body.modal-open {
     text-align: center;
   }
 
+  .modal-content .section.login-modal-wrapper form > div .field-wrapper.submit-wrapper:last-child {
+    display: none;
+  }
+
   .modal-content .section.login-modal-wrapper form .field-wrapper.submit-wrapper button {
     margin: 35px 0 0;
     padding: 16px;
