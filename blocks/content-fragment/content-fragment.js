@@ -27,7 +27,15 @@ export default async function decorate(block) {
     Array.from(block.children).forEach(async (row, i) => {
         const item = row.querySelector('a');
         const formurl = new URL(item.href)?.pathname.replace('.html', '');
-        const url = `${origin}/graphql/execute.json/internal-aem-eds-poc/trending-destination-list;path=${formurl}`
+        let url = `${origin}/graphql/execute.json/internal-aem-eds-poc/trending-destination-list;path=${formurl}`
+        if(block.classList.contains('marque')){
+            url = `${origin}/graphql/execute.json/internal-aem-eds-poc/marque;path=${formurl}`;
+
+            const marque = div('hello marquer')
+            row.firstElementChild.firstElementChild.remove()
+            row.firstElementChild.append(marque);
+            return 
+        }
         const response = await fetch((url), {
             method: "GET"
         });

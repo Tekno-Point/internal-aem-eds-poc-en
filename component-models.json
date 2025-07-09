@@ -243,6 +243,10 @@
           {
             "name": "Frag",
             "value": "individual-insurance-teaser"
+          },
+          {
+            "name": "Marque",
+            "value": "marque"
           }
         ]
       }
