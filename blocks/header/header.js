@@ -241,8 +241,8 @@ export default async function decorate(block) {
   nav._overlay = overlay;
  
   document.addEventListener('focusin', function(e) {
-    if (e.target.matches('.text-wrapper input')) {
-      const wrapper = e.target.closest('.text-wrapper');
+    if (e.target.matches('.field-wrapper input')) {
+      const wrapper = e.target.closest('.field-wrapper');
       if (wrapper) {
         wrapper.classList.add('focus-active');
       }
@@ -250,8 +250,8 @@ export default async function decorate(block) {
   });
   
   document.addEventListener('focusout', function(e) {
-    if (e.target.matches('.text-wrapper input')) {
-      const wrapper = e.target.closest('.text-wrapper');
+    if (e.target.matches('.field-wrapper input')) {
+      const wrapper = e.target.closest('.field-wrapper');
       if (wrapper && e.target.value.length === 0) {
         wrapper.classList.remove('focus-active');
       }

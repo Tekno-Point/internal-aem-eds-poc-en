@@ -17,8 +17,11 @@
       "columns",
       "fragment",
       "tabs",
+      "accordions",
       "form",
-      "carousel"
+      "carousel",
+      "form",
+      "table"
     ]
   },
   {
@@ -40,6 +43,12 @@
     ]
   },
   {
+    "id": "accordions",
+    "components": [
+      "accordion"
+    ]
+  },
+  {
     "id": "column",
     "components": [
       "text",
@@ -53,6 +62,12 @@
     "id": "carousel",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id": "table-item",
+    "components": [
+      "table-item"
     ]
   }
 ]
