@@ -168,6 +168,10 @@
           {
             "name": "tab container wrapper",
             "value": "tab-container-wrapper"
+          },
+          {
+            "name": "accordion container wrapper",
+            "value": "accordion-container-wrapper"
           }
         ]
       }
