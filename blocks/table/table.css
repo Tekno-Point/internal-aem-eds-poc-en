@@ -1,0 +1,32 @@
+.dynamic-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-m, 1rem) 0;
+  font-size: var(--font-size-base, 1rem);
+}
+
+.dynamic-table th,
+.dynamic-table td {
+  border: 1px solid var(--border-color, #ddd);
+  padding: var(--spacing-s, 0.5rem);
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dynamic-table th {
+  background-color: var(--header-bg, #f9f9f9);
+  font-weight: bold;
+  color: var(--header-color, #333);
+}
+
+.dynamic-table tr:nth-child(even) {
+  background-color: var(--row-bg-even, #f1f1f1);
+}
+
+.dynamic-table tr:nth-child(odd) {
+  background-color: var(--row-bg-odd, #fff);
+}
+
+.dynamic-table tr:hover {
+  background-color: var(--row-bg-hover, #e2e2e2);
+}
