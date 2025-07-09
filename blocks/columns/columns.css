@@ -19,7 +19,7 @@
   display: block;
 }
 
-.columns.block.feature-cards{
+.columns .block .feature-cards{
   display: flex;
   align-items: center;
 }
