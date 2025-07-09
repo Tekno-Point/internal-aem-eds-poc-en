@@ -130,22 +130,6 @@
     ]
   },
   {
-    "id": "cards",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Banner Wrapper",
-            "value": "banner-wrapper"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "card",
     "fields": [
       {
