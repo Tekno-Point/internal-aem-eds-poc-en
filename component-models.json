@@ -195,26 +195,11 @@
     "id": "nav-item",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "linkText",
-        "label": "Link Text",
-        "description": "The text for the navigation link."
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "linkUrl",
-        "label": "Link URL",
-        "description": "The URL for the navigation link."
-      },
-      {
         "component": "richtext",
-        "name": "dropdownContent",
+        "name": "text",
         "value": "",
-        "label": "Dropdown Content",
-        "valueType": "string",
-        "description": "The HTML content for the dropdown."
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
