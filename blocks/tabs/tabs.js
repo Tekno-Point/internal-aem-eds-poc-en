@@ -217,9 +217,9 @@ export default async function decorate(block) {
       const fromDiv = document.createElement('div');
       fromDiv.className = 'from-info';
       fromDiv.innerHTML = `
-        <strong>${from}</strong> ${fromCity}, ${fromCountry}<br>
-        Terminal ${fromTerminal}<br>
-        ${departureDate}
+        <p class="city"><strong>${from}</strong> ${fromCity}, ${fromCountry}</p>
+        <p class="terminal">Terminal ${fromTerminal}</p>
+        <p class="date">${departureDate}</p>
       `;
 
       const arrowDiv = document.createElement('div');
@@ -233,9 +233,9 @@ export default async function decorate(block) {
       const toDiv = document.createElement('div');
       toDiv.className = 'to-info';
       toDiv.innerHTML = `
-        <strong>${to}</strong> ${toCity}, ${toCountry}<br>
-        Terminal ${toTerminal}<br>
-        ${departureDate}
+        <p class="city"><strong>${to}</strong> ${toCity}, ${toCountry}</p>
+        <p class="terminal">Terminal ${toTerminal}</p>
+        <p class="date">${departureDate}</p>
       `;
 
       flightInfo.append(fromDiv, arrowDiv, toDiv);
