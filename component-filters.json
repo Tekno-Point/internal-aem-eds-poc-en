@@ -106,5 +106,11 @@
   {
     "id":"overview-rte",
     "components":["overview-rte-item"]
+  },
+  {
+    "id": "nav-list",
+    "components": [
+      "nav-item"
+    ]
   }
 ]

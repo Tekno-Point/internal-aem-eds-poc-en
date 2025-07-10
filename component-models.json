@@ -479,5 +479,39 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "nav-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "description": "Title of the navigation item."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "link",
+        "label": "Link",
+        "description": "URL for the navigation item."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "sub-title",
+        "label": "Sub Title",
+        "description": "Sub Title of the navigation item."
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Description or additional details for the navigation item."
+      }
+    ]
   }
 ]
