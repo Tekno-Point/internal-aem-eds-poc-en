@@ -12,7 +12,8 @@
     "/content/internal-aem-eds-poc/api/test:/api/test.json",
     "/content/internal-aem-eds-poc/dept-best-practice/form/contact-form:/dept-best-practice/form/contact-form.json",
     "/content/internal-aem-eds-poc/nerolac-paint/banner-form:/nerolac-paint/banner-form.json",
-    "/content/internal-aem-eds-poc/srilankan-airlines/footer-form:/srilankan-airlines/footer-form.json"
+    "/content/internal-aem-eds-poc/srilankan-airlines/footer-form:/srilankan-airlines/footer-form.json",
+    "/content/internal-aem-eds-poc/hero-splinder-page/form/splendor:/hero-splinder-page/form/splendor.json"
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
