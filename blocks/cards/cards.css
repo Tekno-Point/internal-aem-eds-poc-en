@@ -981,9 +981,14 @@ padding-right: 98px;
 
 .buy-travel-insurance-policy-online{
   background: #F8F6E4;
-  padding: 9rem 0;
-  align-items: center;
-  display: flex;
+  /* align-items: center; */
+  display: flex; 
+    width: 100%;
+    max-width: 100%;
+    padding-left:  calc((100% - 1240px) / 2);  
+    padding-right:  calc((100% - 1240px) / 2);
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .buy-travel-insurance-policy-online > .default-content-wrapper{
@@ -991,7 +996,8 @@ padding-right: 98px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  /* padding: unset; */
+  padding: unset;
+  margin: unset;
 }
 
 .buy-travel-insurance-policy-online > .default-content-wrapper > h2{
@@ -1000,38 +1006,89 @@ padding-right: 98px;
     font-size: 3.6rem;
     line-height: 45px;
     margin-bottom: 0; 
+} 
+
+.buy-travel-insurance-policy-online > .default-content-wrapper  > p{
+  color: #282828;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 24px;
+    padding: 0 2rem 2rem 0;
 }
 
-.buy-travel-insurance-policy-online > .cards-wrapper { ;
+.buy-travel-insurance-policy-online > .cards-wrapper{
+  padding: unset;
 }
 
 .buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul{
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li{
   /* display: block; */
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center; */
+  position: relative;
+  padding-left: 70px;
   gap: 35px;
   background-color: #F8F6E4;
   border: none;
   padding-bottom: 30px;
-  border-bottom: 1px solid #E0DDBD;
+  border-bottom: 1px solid #E0DDBD; 
+  /* padding-top: 25px; */
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li:first-child{
+ padding-top: unset ;
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li:last-child{
+  border-bottom: none;
+ padding-bottom: unset ;
+
 }
 
 .buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-image{
   width: 35px;
   height: 43px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-image > picture > img{
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-body{
   margin: unset;
+}
+
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-body > h5 {
+  color: #282828;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 23px;
+    padding-bottom: 0.5rem;
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-body > p {
+  color: #282828;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  padding: 0 2rem 0 0;
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-body > p > a{
+  color: #EC6625;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 
@@ -1506,4 +1563,27 @@ width: 100%;
   text-align: left;
 }
 
+.buy-travel-insurance-policy-online{
+  flex-direction: column;
+  padding: 50px 15px;
+  gap: 40px;
+}
+
+.buy-travel-insurance-policy-online > .default-content-wrapper{
+  width: 100%;
+  gap: 20px;
+}
+
+.buy-travel-insurance-policy-online > .default-content-wrapper > h2{
+  font-size: 2.4rem;
+        line-height: 30px;
+}
+
+.buy-travel-insurance-policy-online > .default-content-wrapper > p{
+  padding: unset;
+}
+
+.buy-travel-insurance-policy-online > .cards-wrapper > .cards > ul > li > .cards-card-body > p{
+  padding: unset;
+}
 }

@@ -31,12 +31,6 @@
     ]
   },
   {
-    "id": "tabs",
-    "components": [
-      "tab"
-    ]
-  },
-  {
     "id": "columns",
     "components": [
       "column"
@@ -54,14 +48,7 @@
       "text",
       "image",
       "button",
-      "title",
-      "card"
-    ]
-  },
-  {
-    "id": "carousel",
-    "components": [
-      "carousel-item"
+      "title"
     ]
   },
   {

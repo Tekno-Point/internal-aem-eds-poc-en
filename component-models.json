@@ -290,25 +290,6 @@
     ]
   },
   {
-    "id": "form",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "Form Link",
-        "value": "",
-        "label": "Form Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "API ",
-        "value": "",
-        "label": "API"
-      }
-    ]
-  },
-  {
     "id": "fragment",
     "fields": [
       {
