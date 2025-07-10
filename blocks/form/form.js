@@ -110,24 +110,28 @@ export default async function decorate(block) {
     }
   });
 
+  // Book a ride form start
   const state_inp = document.querySelector("#form-state");
   const state_field = state_inp.closest(".field-wrapper");
+  const city_inp = document.querySelector("#form-city");
+  const city_field = city_inp.closest(".field-wrapper");
   const city_input = document.querySelector("#form-city");
-  console.log(state_field);
-  const selectOptions = function (mainClass, ulClass, liClass) {
+
+  const stateOptions = function (mainClass, ulClass, liClass, dataList) {
     return div(
-      { class: "state" },
+      { class: mainClass },
       ul(
-        { class: "state-list" },
-        li({ class: "state-name" }, "M1"),
-        li({ class: "state-name" }, "M2"),
-        li({ class: "state-name" }, "M3"),
-        li({ class: "state-name" }, "M4"),
-        li({ class: "state-name" }, "M5"),
-        li({ class: "state-name" }, "M6"),
-        li({ class: "state-name" }, "M7"),
-        li({ class: "state-name" }, "M8"),
-        li({ class: "state-name" }, "M9")
+        { class: ulClass },
+        ...dataList.map((item) => li({ class: liClass }, item))
+      )
+    );
+  };
+  const cityOptions = function (mainClass, ulClass, liClass, dataList) {
+    return div(
+      { class: mainClass },
+      ul(
+        { class: ulClass },
+        ...Object.keys(dataList).map((item) => li({ class: liClass }, item))
       )
     );
   };
@@ -141,13 +145,16 @@ export default async function decorate(block) {
       city_input.style.pointerEvents = "unset";
       city_input.style.cursor = "unset";
     }
-  };
+  }
   toggleCityInputState();
 
   state_inp.addEventListener("focus", function () {
     // Avoid adding it again
     if (!state_field.querySelector(".state")) {
-      state_field.appendChild(selectOptions());
+      const states = dataMapping.state_city_master.state;
+      state_field.appendChild(
+        stateOptions("state", "state-list", "state-name", states)
+      );
       document.querySelectorAll(".state-name").forEach((ele) => {
         ele.addEventListener("click", function () {
           document.querySelectorAll(".state-name").forEach((ele) => {
@@ -156,7 +163,13 @@ export default async function decorate(block) {
           ele.classList.add("active");
           state_inp.value = ele.textContent;
           toggleCityInputState();
-
+          if (!city_field.querySelector(".city")) {
+            const cities = dataMapping.state_city_master[state_inp.value];
+            city_field.appendChild(
+              cityOptions("city", "city-list", "city-name", cities)
+            );
+            city_inp.value = "";
+          }
         });
       });
       toggleCityInputState();
@@ -173,4 +186,23 @@ export default async function decorate(block) {
     }
   });
 
+  // city_inp.addEventListener("focus", function () {
+  //   // city_field.querySelector(".city").style.display = "block";
+  //   document.querySelectorAll(".state-name").forEach((ele) => {
+  //     ele.addEventListener('click', function () {
+  //       document.querySelectorAll(".city-name").forEach((ele) => {
+  //         ele.classList.remove("active");
+  //       });
+  //       ele.classList.add("active")
+  //     })
+  //   })
+  // });
+
+  // Hide dropdown if clicked outside input or dropdown
+  // document.addEventListener("click", function (e) {
+  //   if (!city_field.contains(e.target)) {
+  //     const dropdown = city_field.querySelector(".city");
+  //     if (dropdown) dropdown.remove();
+  //   }
+  // });
 }
