@@ -386,5 +386,11 @@ section.faq-accordion-container h4{
 }
 
 .section.faq-accordion-container h4{
-
+  color: #25243B;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -0.923px;
+  margin-bottom: 28px;
 }
