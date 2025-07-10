@@ -1,146 +1,134 @@
-import createField from './form-fields.js';
+import createField from "./form-fields.js";
+import { div, ul, li } from "../../scripts/dom-helpers.js";
 
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
   const resp = await fetch(pathname);
   const json = await resp.json();
 
-  const form = document.createElement('form');
+  const form = document.createElement("form");
   form.dataset.action = submitHref;
 
-  // Create fields and append to form
-  const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
-fields.forEach((field) => {
-  if (field) {
-    // Add <p> after input inside each field-wrapper
-    const input = field.querySelector('input');
-    if (input && !input.nextElementSibling?.classList?.contains('input-helper')) {
-      const p = document.createElement('p');
-      p.className = 'input-helper';
-      if (input.name === 'name') p.textContent = 'The Name is required';
-      if (input.name === 'mobile') p.textContent = 'Please Enter a valid Mobile Number';
-      if (input.name === 'otp') p.textContent = 'The OTP is required';
-      if (input.name === 'email') p.textContent = 'The email is required';
-      input.insertAdjacentElement('afterend', p);
-    }
-    form.append(field);
-  }
-});
-
-  // Disable OTP field until 10 digits are entered in mobile
-  const mobileInput = form.querySelector('input[name="mobile"]');
-  const otpInput = form.querySelector('input[name="otp"]');
-  if (mobileInput && otpInput) {
-    otpInput.disabled = true;
-    mobileInput.addEventListener('input', function () {
-      if (/^\d{10}$/.test(mobileInput.value)) {
-        otpInput.disabled = false;
-      } else {
-        otpInput.disabled = true;
-      }
-    });
-    // Also check on page load (in case value is pre-filled)
-    if (/^\d{10}$/.test(mobileInput.value)) {
-      otpInput.disabled = false;
-    } else {
-      otpInput.disabled = true;
-    }
-  }
-
-  // Validation and error message display on submit
-form.addEventListener('submit', function(e) {
-  let valid = true;
-  [...form.querySelectorAll('input')].forEach(input => {
-    const helper = input.nextElementSibling;
-    if (helper && helper.classList.contains('input-helper')) {
-      if (input.name === 'mobile') {
-        if (!/^\d{10}$/.test(input.value.trim())) {
-          helper.classList.add('visible');
-          valid = false;
-        } else {
-          helper.classList.remove('visible');
-        }
-      } else {
-        if (!input.value.trim()) {
-          helper.classList.add('visible');
-          valid = false;
-        } else {
-          helper.classList.remove('visible');
-        }
-      }
+  const fields = await Promise.all(
+    json.data.map((fd) => createField(fd, form))
+  );
+  fields.forEach((field) => {
+    if (field) {
+      form.append(field);
     }
   });
-  if (!valid) {
-    e.preventDefault();
-    // Optionally focus the first invalid input
-    const firstInvalid = form.querySelector('input + .input-helper.visible');
-    if (firstInvalid) firstInvalid.previousElementSibling.focus();
-    return;
-  }
-  e.preventDefault();
-  handleSubmit(form);
-});
 
-// Hide error message as soon as user types
-[...form.querySelectorAll('input')].forEach(input => {
-  input.addEventListener('input', function() {
-    const helper = input.nextElementSibling;
-    if (helper && helper.classList.contains('input-helper')) {
-      helper.classList.remove('visible');
-    }
+  // group fields into fieldsets
+  const fieldsets = form.querySelectorAll("fieldset");
+  fieldsets.forEach((fieldset) => {
+    form
+      .querySelectorAll(`[data-fieldset="${fieldset.name}"`)
+      .forEach((field) => {
+        fieldset.append(field);
+      });
   });
-});
 
   return form;
 }
 
 function generatePayload(form) {
   const payload = {};
-  [...form.elements].forEach((el) => {
-    if (el.name && !el.disabled) {
-      payload[el.name] = el.value;
+
+  [...form.elements].forEach((field) => {
+    if (field.name && field.type !== "submit" && !field.disabled) {
+      if (field.type === "radio") {
+        if (field.checked) payload[field.name] = field.value;
+      } else if (field.type === "checkbox") {
+        if (field.checked)
+          payload[field.name] = payload[field.name]
+            ? `${payload[field.name]},${field.value}`
+            : field.value;
+      } else {
+        payload[field.name] = field.value;
+      }
     }
   });
   return payload;
 }
 
 async function handleSubmit(form) {
-  const payload = generatePayload(form);
-  // Example: send payload to the form's data-action endpoint
-  const resp = await fetch(form.dataset.action, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  });
-  if (resp.ok) {
-    // Show success message or handle response
-    alert('Form submitted successfully!');
-  } else {
-    alert('There was an error submitting the form.');
+  if (form.getAttribute("data-submitting") === "true") return;
+
+  const submit = form.querySelector('button[type="submit"]');
+  try {
+    form.setAttribute("data-submitting", "true");
+    submit.disabled = true;
+
+    // create payload
+    const payload = generatePayload(form);
+    const response = await fetch(form.dataset.action, {
+      method: "POST",
+      body: JSON.stringify({ data: payload }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+      if (form.dataset.confirmation) {
+        window.location.href = form.dataset.confirmation;
+      }
+    } else {
+      const error = await response.text();
+      throw new Error(error);
+    }
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.error(e);
+  } finally {
+    form.setAttribute("data-submitting", "false");
+    submit.disabled = false;
   }
 }
 
 export default async function decorate(block) {
-  const formHref = block.querySelector('a')?.href;
-  const submitHref = block.querySelector('a[data-submit]')?.href || formHref;
-  const form = await createForm(formHref, submitHref);
-  block.innerHTML = '';
-  block.append(form);
+  const links = [...block.querySelectorAll("a")].map((a) => a.href);
+  const formLink = links.find(
+    (link) => link.startsWith(window.location.origin) && link.endsWith(".json")
+  );
+  const submitLink = links.find((link) => link !== formLink);
+  if (!formLink || !submitLink) return;
 
-  // Associate external submit button (if any) with the form
-  const submitBtn = document.querySelector('.button-container .button.primary');
-  if (form && submitBtn) {
-    submitBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      form.requestSubmit();
-    });
-  }
-}
-//this adds a span tag to target the "SUBMIT" button
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.button.primary').forEach(btn => {
-    if (!btn.querySelector('.gradient-text')) {
-      btn.innerHTML = '<span class="gradient-text">' + btn.textContent + '</span>';
+  const form = await createForm(formLink, submitLink);
+  block.replaceChildren(form);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const valid = form.checkValidity();
+    if (valid) {
+      handleSubmit(form);
+    } else {
+      const firstInvalidEl = form.querySelector(":invalid:not(fieldset)");
+      if (firstInvalidEl) {
+        firstInvalidEl.focus();
+        firstInvalidEl.scrollIntoView({ behavior: "smooth" });
+      }
     }
   });
-});
+
+  const state_field = document.querySelector('#form-state').closest('.field-wrapper');
+  console.log(state_field);
+  const selectOptions = function (mainClass, ulClass, liClass) {
+    return div({class:mainClass},
+      ul({class:ulClass},
+        li({class:liClass},"Maharashtra"),
+        li({class:liClass},"Maharashtra"),
+        li({class:liClass},"Maharashtra"),
+        li({class:liClass},"Maharashtra"),
+        li({class:liClass},"Maharashtra"),
+        li({class:liClass},"Maharashtra"),
+        li({class:liClass},"Maharashtra"),
+        li({class:liClass},"Maharashtra"),
+        li({class:liClass},"Maharashtra")
+      )
+    )
+  }
+  
+  state_field.addEventListener("focus", function () {
+    state_field.append(selectOptions("state", "state-list","state-name"));
+  });
+}
