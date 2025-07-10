@@ -326,6 +326,6 @@ main .section.highlight {
     color: #767676;
     width: 400px;
 }
-.section.banner-image .default-content-wrapper .button-container{
+.section.banner-image .default-content-wrapper .button-container a{
   background-color: #9B1E26;
 }
