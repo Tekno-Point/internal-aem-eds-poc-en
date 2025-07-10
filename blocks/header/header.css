@@ -1,8 +1,5 @@
 /* header and nav layout */
 
-main,footer{
-  display: none;
-}
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
