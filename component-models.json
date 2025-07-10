@@ -156,37 +156,6 @@
     ]
   },
   {
-    "id": "nav-list",
-    "fields": []
-  },
-  {
-    "id": "nav-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Title",
-        "description": "Title of the navigation item."
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "link",
-        "label": "Link",
-        "description": "URL for the navigation item."
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "value": "",
-        "label": "Description",
-        "valueType": "string",
-        "description": "Description or additional details for the navigation item."
-      }
-    ]
-  },
-  {
     "id": "fragment",
     "fields": [
       {
@@ -219,6 +188,37 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "nav-list",
+    "fields": []
+  },
+  {
+    "id": "nav-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "description": "Title of the navigation item."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "link",
+        "label": "Link",
+        "description": "URL for the navigation item."
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string",
+        "description": "Description or additional details for the navigation item."
       }
     ]
   }
