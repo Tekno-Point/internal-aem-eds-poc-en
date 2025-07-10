@@ -39,6 +39,10 @@
 .carousel > .swiper-wrapper > .swiper-slide > .inner-innerSub-2 {
     display: flex;
 }
+
+.carousel > .swiper-wrapper > .swiper-slide > .inner-innerSub-2>p:nth-child(2) {
+   opacity: 0.4;
+}
 .carousel
     > .swiper-wrapper
     > .swiper-slide

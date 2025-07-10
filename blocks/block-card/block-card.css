@@ -1,12 +1,10 @@
 @import url("../cards/cards.css");
 
-.section.block-card-container{
-
+.section.block-card-container {
     margin: 0 auto;
-
 }
 
-.block-card-container>.block-card-wrapper{
+.block-card-container > .block-card-wrapper {
     max-width: 100%;
 }
 .block-card > ul > li {
@@ -18,9 +16,10 @@
     list-style: none;
     display: flex;
     gap: 8px;
-        justify-content: center;
+    justify-content: center;
+    padding: 0px;
 }
-.block-card > ul > li >.cards-card-body>p{
+.block-card > ul > li > .cards-card-body > p {
     position: absolute;
     top: 16px;
     left: 35px;
@@ -73,14 +72,14 @@
         -webkit-transform: skewX(0deg);
     }
     .cards-card-image > picture > img:hover {
-        transform: none /* Zoom in 1.2x */
+        transform: none; /* Zoom in 1.2x */
     }
 
     .block-card > ul > li > .cards-card-body {
         left: 5px;
     }
 
-    .block-card-container>.block-card-wrapper{
-       padding: 0px;
+    .block-card-container > .block-card-wrapper {
+        padding: 0px;
     }
 }
