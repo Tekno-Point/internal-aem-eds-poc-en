@@ -19,10 +19,7 @@
   display: block;
 }
 
-.columns.block.feature-cards > div > div{
-  display: flex;
-  align-items: center;
-}
+
 
 @media (width >= 900px) {
   .columns > div {
@@ -35,4 +32,9 @@
     flex: 1;
     order: unset;
   }
+}
+
+.columns.block.feature-cards > div > div > div{
+  display: flex;
+  align-items: center;
 }
