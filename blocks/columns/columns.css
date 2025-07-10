@@ -34,7 +34,7 @@
   }
 }
 
-.columns.block.feature-cards > div > div div{
+.columns.block.feature-cards > div div div{
   display: flex;
   align-items: center;
   gap: 6px;
@@ -44,7 +44,7 @@
   width: 253px;
   height: 82px
 }
-.columns.block.feature-cards > div > div div p{
+.columns.block.feature-cards > div div div p{
     color: #25243B;
     font-size: 14px;
     font-style: normal;
