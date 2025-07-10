@@ -61,7 +61,8 @@ header nav[aria-expanded='true'] {
     display: flex;
     justify-content: space-between;
     gap: 0 32px;
-    max-width: 1264px;
+    max-width: 1430px;
+    margin: 0 auto;
     padding: 0 32px;
   }
 
@@ -224,7 +225,7 @@ header nav .nav-sections ul>li>ul>li {
 
   header nav .nav-sections .nav-drop {
     position: relative;
-    padding-right: 16px;
+    /* padding-right: 16px; */
     cursor: pointer;
   }
 
@@ -275,6 +276,10 @@ header nav .nav-sections ul>li>ul>li {
   header nav .nav-sections .default-content-wrapper>ul>li {
     flex: 0 1 auto;
     position: relative;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li:nth-child(2) {
+    margin-left: auto;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul {
@@ -337,11 +342,14 @@ header nav .nav-sections ul>li>ul>li {
   .sectionlast{
     align-items: none;
   }
+
   .nav-tools>div>p:first-child {
+    display: flex;
+    align-items: center;
     border-radius: 19.5px;
     border: 1px solid #353535;
     background: #fff;
-    padding: 9px 10px 9px 50px;
+    padding: 9px 10px 9px 23px;
     width: 100%;
     color: #3a3a3a;
     font-size: 16px;
@@ -349,6 +357,18 @@ header nav .nav-sections ul>li>ul>li {
     line-height: normal;
     box-sizing: border-box;
     height: 40px;
+  }
+  
+  .nav-tools>div>p:first-child > strong{
+    margin-left: 8px;
+    color: #3a3a3a;
+    font-weight: 400;
+    opacity: 0.6;
+  }
+
+  .nav-tools .default-content-wrapper .icon-search {
+    width: 22px;
+    height: 22px;
   }
 
   .nav-tools>div {
@@ -359,6 +379,8 @@ header nav .nav-sections ul>li>ul>li {
   }
 
   .nav-tools>div>p:nth-child(2) {
+    display: flex;
+    align-items: center;
     min-width: 70px;
     padding: 7px 16px;
     font-weight: 400;
@@ -370,8 +392,14 @@ header nav .nav-sections ul>li>ul>li {
     border-radius: 50px;
     background: rgba(0, 0, 0, 0);
     margin-left: 15px;
-    width: 30%;
+    width: 25%;
     height: 25px;
+  }
+
+  .nav-tools>div>p:nth-child(2) .icon-special{
+    width: 17px;
+    height: 17px;
+    margin-right: 0.5rem;
   }
 
   .nav-tools>div>ul {
@@ -435,7 +463,10 @@ header nav .nav-sections ul>li>ul>li {
   }
 
   .nav-tools>div>ul>li:not(:first-child)>p {
-    min-width: 70px;
+    min-width: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 8px 16px;
     font-weight: 500;
     height: 25px;
@@ -444,6 +475,11 @@ header nav .nav-sections ul>li>ul>li {
     background-color: #902a2c;
     margin-left: 12px;
     border-radius: 25px;
+  }
+
+  .nav-tools>div>ul>li:not(:first-child)>p .icon-login_header {
+    width: 15px;
+    height: 14px;
   }
 }
 
@@ -608,6 +644,8 @@ header nav .nav-sections ul>li>ul>li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  max-width: 1230px; 
+  margin: 0 auto;
 }
 
 /* /// */
