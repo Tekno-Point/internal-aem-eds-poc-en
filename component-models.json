@@ -113,6 +113,10 @@
             "name": "Highlight",
             "value": "highlight"
           },
+           {
+            "name": "Banner Image",
+            "value": "banner-image"
+          },
           {
             "name": "Hero Banner",
             "value": "hero-banner"
