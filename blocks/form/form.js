@@ -112,7 +112,7 @@ export default async function decorate(block) {
 
   const state_inp = document.querySelector("#form-state");
   const state_field = state_inp.closest(".field-wrapper");
-  // const state_field = document.querySelector('#form-state').closest('.field-wrapper');
+  const city_input = document.querySelector("#form-city");
   console.log(state_field);
   const selectOptions = function (mainClass, ulClass, liClass) {
     return div(
@@ -131,6 +131,19 @@ export default async function decorate(block) {
       )
     );
   };
+
+  function toggleCityInputState() {
+    if (state_inp.value.trim() === "") {
+      city_input.style.pointerEvents = "none";
+      city_input.style.cursor = "no-drop";
+      city_input.value = "";
+    } else {
+      city_input.style.pointerEvents = "unset";
+      city_input.style.cursor = "unset";
+    }
+  };
+  toggleCityInputState();
+
   state_inp.addEventListener("focus", function () {
     // Avoid adding it again
     if (!state_field.querySelector(".state")) {
@@ -138,14 +151,19 @@ export default async function decorate(block) {
       document.querySelectorAll(".state-name").forEach((ele) => {
         ele.addEventListener("click", function () {
           document.querySelectorAll(".state-name").forEach((ele) => {
-            ele.classList.remove('active')
-          })
+            ele.classList.remove("active");
+          });
           ele.classList.add("active");
           state_inp.value = ele.textContent;
+          toggleCityInputState();
+
         });
       });
+      toggleCityInputState();
     }
   });
+
+  state_inp.addEventListener("input", toggleCityInputState);
 
   // Hide dropdown if clicked outside input or dropdown
   document.addEventListener("click", function (e) {
@@ -154,4 +172,5 @@ export default async function decorate(block) {
       if (dropdown) dropdown.remove();
     }
   });
+
 }
