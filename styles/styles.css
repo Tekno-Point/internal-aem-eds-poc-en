@@ -324,3 +324,13 @@ main .section.highlight {
 .section.banner-image .default-content-wrapper .button-container a{
   background-color: #9B1E26;
 }
+.section.banner-image .default-content-wrapper:nth-child(2){
+    position: relative;
+}
+.section.banner-image .default-content-wrapper > div{
+  position: absolute;
+  top: 0;
+}
+
+
+
