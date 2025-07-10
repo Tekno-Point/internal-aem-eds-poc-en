@@ -290,10 +290,25 @@ input[type="date"] {
 }
 
 .section.tabs-container>.card-wrapper {
-  padding: 85px 0 0;
+  padding: 85px 12px 0;
   max-width: 1140px;
   overflow: hidden;
+  position: relative;
 }
+
+/* .section.tabs-container>.card-wrapper .swiper-button-prev {
+  left: 0;
+}
+
+.section.tabs-container>.card-wrapper .swiper-button-next {
+  right: 0;
+} */
+
+.section.tabs-container>.card-wrapper .swiper-pagination {
+  top: 305px;
+}
+
+.section.tabs-container>.card-wrapper .swiper-pagination
 
 .tabs.form-tabs>div>.flight-card,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card {
@@ -306,7 +321,7 @@ input[type="date"] {
   box-shadow: 0px 4px 4px 0px #0640ad33;
   border-radius: 10px;
   font-family: "roboto";
-  color: #0f1e7de5;
+  color: #0088dd;
   font-size: 12px;
 }
 
@@ -315,7 +330,7 @@ input[type="date"] {
   max-width: 500px;
   width: 100%;
   min-height: 180px;
-  border-right: 0.5px solid #6b65e9c4;
+  border-right: 0.5px solid #0088dd;
   display: flex;
   gap: 30px;
   justify-content: center;
@@ -351,7 +366,7 @@ input[type="date"] {
 
 .tabs.form-tabs>div>.flight-card>.airline-details>button,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details>button {
-  background-color: #0f1e7d;
+  background-color: #0088dd;
   color: white;
   font-weight: 800;
   cursor: pointer;

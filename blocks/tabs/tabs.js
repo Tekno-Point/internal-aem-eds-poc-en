@@ -136,8 +136,8 @@ export default async function decorate(block) {
   dateDisable(block);
 
   window.addEventListener("datafetched", () => {
-    inputFilter(block, '.from-input','source', '.to-input');
-    inputFilter(block, '.to-input','destination', '.from-input');
+    inputFilter(block, '.from-input', 'source', '.to-input');
+    inputFilter(block, '.to-input', 'destination', '.from-input');
   })
 
   const form = block.querySelector('form');
@@ -164,7 +164,7 @@ export default async function decorate(block) {
     const countries = new Intl.DisplayNames(['en'], { type: 'region' });
     const locations = data.body.dictionaries.locations;
     console.log("data body", data.body);
-    
+
 
     const cardWrapper = document.createElement('div');
     cardWrapper.classList.add("card-wrapper");
@@ -198,6 +198,11 @@ export default async function decorate(block) {
       const departure = new Date(segment.departure.at);
       const departureTime = departure.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
       const departureDate = departure.toLocaleDateString('en-GB');
+
+      const totalPrice = parseFloat(flight.price.grandTotal).toLocaleString(
+        "en-US",
+        { style: "currency", currency: "USD" }
+      );
 
       const duration = flight.itineraries[0].duration.replace('PT', '').toLowerCase();
       const fare = flight.travelerPricings[0].fareDetailsBySegment[1].cabin;
@@ -253,19 +258,23 @@ export default async function decorate(block) {
       departureDiv.className = 'departure';
       departureDiv.textContent = `Departure: ${departureTime}`;
 
+      const priceDiv = document.createElement("div");
+      priceDiv.className = "Price";
+      priceDiv.textContent = `Price: ${totalPrice}`;
+
       const button = document.createElement('button');
       button.className = 'book-now-button';
       button.textContent = 'Book Now';
 
-      airlineDetails.append(heading, detailDiv, durationDiv, departureDiv, button);
+      airlineDetails.append(heading, detailDiv, durationDiv, departureDiv, priceDiv, button);
       card.append(flightInfo, airlineDetails);
       cardWrapper.appendChild(card);
     });
     if (block.classList.contains("form-absolute")) {
       const tabsContainer = document.querySelector('.section.tabs-container');
-        tabsContainer.querySelector('.card-wrapper')?.remove();
-        tabsContainer.appendChild(cardWrapper);
-        swiperInit();     
+      tabsContainer.querySelector('.card-wrapper')?.remove();
+      tabsContainer.appendChild(cardWrapper);
+      swiperInit();
     }
     else {
       block.appendChild(cardWrapper);
@@ -281,14 +290,26 @@ function swiperInit() {
   const swiperPagination = document.createElement('div');
   swiperPagination.classList.add('swiper-pagination');
 
+  // const nextBtn = document.createElement('div');
+  // nextBtn.classList.add('swiper-button-next');
+  // const prevBtn = document.createElement('div');
+  // prevBtn.classList.add('swiper-button-prev');
+
+
+
   const slides = cardWrapper.querySelectorAll('.swiper-slide');
   slides.forEach(slide => {
     SwiperWrapper.append(slide)
   })
   cardWrapper.append(SwiperWrapper);
   cardWrapper.append(swiperPagination);
+  // cardWrapper.append(prevBtn, nextBtn)
 
   const swiper = new Swiper('.card-wrapper', {
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
 
     breakpoints: {
       320: { slidesPerView: 1, spaceBetween: 15 },
@@ -299,6 +320,7 @@ function swiperInit() {
     loop: false,
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
   })
 }
