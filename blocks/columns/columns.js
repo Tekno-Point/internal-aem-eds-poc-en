@@ -1,5 +1,4 @@
-export default function decorateTable(block) {
-  // Clone the original block so we can keep the classnames
+export function decorateTable(block) {
   const originalClassList = Array.from(block.classList);
 
   const rows = Array.from(block.children).map((row) =>
