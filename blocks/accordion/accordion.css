@@ -1,0 +1,95 @@
+.accordion {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  display: none;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  overflow: hidden;
+}
+
+.accordion-item .accordion-item-label p{
+  margin: 0;
+}
+.accordion-item .accordion-item-label p strong{
+  font-size: 14px;
+}
+
+.accordion-item.visible {
+  display: block;
+  box-shadow: 0px 4px 8px 0px rgba(37, 36, 59, 0.1);
+}
+
+.accordion-item + .accordion-item.visible {
+  margin-top: 24px;
+}
+
+.accordion-item-label {
+  position: relative;
+  padding: 20px 30px;
+  padding-right: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  color: #1c1c1c;
+  font-size: 16px;
+}
+
+.accordion-item .accordion-item-label p {
+  margin: 0;
+}
+
+.accordion-item .accordion-item-label p strong {
+  font-size: 14px;
+}
+
+.accordion-item-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #b70000;
+  border-width: 2px 2px 0 0;
+  transform: translateY(-50%) rotate(135deg);
+  transition: transform 0.2s ease;
+}
+
+.accordion-item.open .accordion-item-label::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 24px;
+  font-size: 15px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  color: #333;
+}
+
+.accordion-item.open .accordion-item-body {
+  padding: 16px 24px;
+}
+
+.accordion-item-body p {
+  margin: 0;
+}
+
+.accordion-toggle-btn {
+  background: none;
+  border: none;
+  color: #b70000;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 24px;
+  cursor: pointer;
+  float: right;
+  padding: 8px;
+}
