@@ -28,13 +28,16 @@ export default function decorate(block) {
   });
 
   // Optional: Only one open at a time
+  const footerAccordion = document.querySelector(".footer-accordion")
+
   block.querySelectorAll('details').forEach((detail) => {
     detail.addEventListener('toggle', () => {
-      if (detail.open) {
-        block.querySelectorAll('details').forEach((el) => {
-          if (el !== detail) el.removeAttribute('open');
-        });
-      }
+      
+      // if (detail.open) {
+      //   block.querySelectorAll('details').forEach((el) => {
+      //     if (el !== detail) el.removeAttribute('open');
+      //   });
+      // }
     });
   });
 }
