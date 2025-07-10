@@ -98,9 +98,6 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
-.header-wrapper{
-  display: none;
-}
 
 h1,
 h2,
