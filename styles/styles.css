@@ -321,17 +321,11 @@ main .section.highlight {
     border-radius: 12px;
     background: #F6F6F6 !important;
     padding: 4px 13px;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 16px;
     color: #767676;
+    width: 400px;
 }
-.section.banner-image .default-content-wrapper > div ol:nth-child(1) li:before{
-  content: '\e902';
-    color: #9D1D27;
-    font-family: 'icomoon' !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    -webkit-font-smoothing: antialiased;
+.section.banner-image .default-content-wrapper .button-container{
+  background-color: #9B1E26;
 }
