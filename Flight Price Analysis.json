@@ -1,0 +1,46 @@
+{
+    "warnings": [],
+    "data": [
+        {
+            "type": "itinerary-price-metric",
+            "origin": {
+                "iataCode": "BOM"
+            },
+            "destination": {
+                "iataCode": "CMB"
+            },
+            "departureDate": "2025-08-03",
+            "transportType": "FLIGHT",
+            "currencyCode": "INR",
+            "oneWay": false,
+            "priceMetrics": [
+                {
+                    "amount": "7102.59",
+                    "quartileRanking": "MINIMUM"
+                },
+                {
+                    "amount": "27761.37",
+                    "quartileRanking": "FIRST"
+                },
+                {
+                    "amount": "29510.57",
+                    "quartileRanking": "MEDIUM"
+                },
+                {
+                    "amount": "30492.19",
+                    "quartileRanking": "THIRD"
+                },
+                {
+                    "amount": "31845.53",
+                    "quartileRanking": "MAXIMUM"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "count": 1,
+        "links": {
+            "self": "https://test.api.amadeus.com/v1/analytics/flight-price-metrics?originIataCode=BOM&destinationIataCode=CMB&departureDate=2025-08-03&currencyCode=INR&oneWay=False"
+        }
+    }
+}
