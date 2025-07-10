@@ -37,8 +37,10 @@
     "/content/internal-aem-eds-poc/tataaia/forms/insurance-plan-form:/tataaia/forms/insurance-plan-form.json",
     "/content/internal-aem-eds-poc/icicilombard/forms/contanct:/icicilombard/forms/contanct.json",
     "/content/internal-aem-eds-poc/srilankan-airlines/forms/login-form:/srilankan-airlines/forms/login-form.json",
+    "/content/internal-aem-eds-poc/icicilombard/forms/trip/single-trip:/content/internal-aem-eds-poc/icicilombard/forms/trip/single-trip",
     "/content/internal-aem-eds-poc/icicilombard/forms/login:/icicilombard/forms/login.json",
-    "/content/internal-aem-eds-poc/icicilombard/forms/group-companies:/icicilombard/forms/group-companies.json"
+    "/content/internal-aem-eds-poc/icicilombard/forms/group-companies:/icicilombard/forms/group-companies.json",
+    "/content/internal-aem-eds-poc/hero-splinder-page/form/splendor:/hero-splinder-page/form/splendor.json"
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
