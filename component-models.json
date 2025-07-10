@@ -116,6 +116,10 @@
           {
             "name": "hero-footer",
             "value": "hero-footer"
+          },
+          {
+            "name": "hero-footer-icon",
+            "value": "hero-footer-icon"
           }
         ]
       }

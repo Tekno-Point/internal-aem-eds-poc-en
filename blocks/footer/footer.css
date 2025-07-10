@@ -24,24 +24,28 @@ footer .footer p {
     color: white;
 }
 
-.footer > div > div > .default-content-wrapper {
+.footer > div >.hero-footer{
+  padding-bottom: 60px;
+}
+
+.footer > div > .hero-footer > .default-content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 20px;
 }
 
-.footer > div > div > .default-content-wrapper > ul {
+.footer > div > .hero-footer > .default-content-wrapper > ul {
     display: flex;
     justify-content: space-between;
     width: 100%;
     list-style: none;
     padding: 0px;
 }
-.footer > div > div > .default-content-wrapper > ul > li {
+.footer > div > .hero-footer > .default-content-wrapper > ul > li {
     text-align: left;
 }
-.footer > div > div > .default-content-wrapper > ul > li > p > a {
+.footer > div > .hero-footer > .default-content-wrapper > ul > li > p > a {
     background: none;
     color: #f3f3f3;
     font-family: "TSTAR-PRO-Bold";
@@ -50,25 +54,25 @@ footer .footer p {
     padding: 0px;
     margin: 0px;
 }
-.footer > div > div > .default-content-wrapper > ul > li > ul {
+.footer > div > .hero-footer > .default-content-wrapper > ul > li > ul {
     list-style: none;
     padding: 0px;
 }
-.footer > div > div > .default-content-wrapper > ul > li > ul > li {
+.footer > div > .hero-footer > .default-content-wrapper > ul > li > ul > li {
     text-align: start;
 }
 
-.footer > div > div > .default-content-wrapper > ul > li > ul > li > a {
+.footer > div > .hero-footer > .default-content-wrapper > ul > li > ul > li > a {
     color: white;
 }
 
-.footer > div > div > .default-content-wrapper > ul > li > ul {
+.footer > div > .hero-footer > .default-content-wrapper > ul > li > ul {
     display: flex;
     flex-direction: column;
     gap: 9px;
 }
 
-.footer > div > div > .default-content-wrapper > ul > li > ul>li>a{
+.footer > div > .hero-footer > .default-content-wrapper > ul > li > ul>li>a{
   font-family: "TSTAR-PRO-Medium";
   color: #f3f3f3;
   line-height: 22.4px;
