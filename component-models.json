@@ -113,6 +113,14 @@
             "name": "Highlight",
             "value": "highlight"
           },
+           {
+            "name": "Banner Image",
+            "value": "banner-image"
+          },
+          {
+            "name": "Hero Banner",
+            "value": "hero-banner"
+          },
           {
             "name": "Benefits PL Calculator",
             "value": "personalLoanBenefits"
@@ -140,8 +148,40 @@
           {
             "name": "PL Faqs",
             "value": "pl-faqs"
+          },
+          {
+            "name": "Banner Breadcrumb",
+            "value": "banner-breadcrumb"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
       }
     ]
   },
@@ -156,11 +196,6 @@
         "multi": false
       },
       {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text"
-      },
-      {
         "component": "richtext",
         "name": "text",
         "value": "",
@@ -170,58 +205,23 @@
     ]
   },
   {
-    "id": "accordion",
+    "id": "columns",
     "fields": [
       {
         "component": "multiselect",
-        "name": "style",
+        "name": "classes",
         "label": "Style",
         "options": [
           {
-            "name": "FAQs Calculator",
-            "value": "faqs-calculator"
+            "name": "Hero Banner",
+            "value": "hero-banner"
+          },
+          {
+            "name": "Feature Cards",
+            "value": "feature-cards"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "col_head",
-        "label": "Accordion Head"
       },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "col1_body",
-        "label": "Accordion Body"
-      }
-    ]
-  },
-  {
-    "id": "faq-accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "col_head",
-        "label": "Accordion Head"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "col1_body",
-        "label": "Accordion Body"
-      }
-    ]
-  },
-  {
-    "id": "columns",
-    "fields": [
       {
         "component": "text",
         "valueType": "number",
@@ -275,236 +275,36 @@
     ]
   },
   {
-    "id": "swipper-card-item",
+    "id": "nav-item",
     "fields": [
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "name": "title",
+        "label": "Title",
+        "description": "Title of the navigation item."
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
+        "name": "link",
+        "label": "Link",
+        "description": "URL for the navigation item."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "sub-title",
+        "label": "Sub Title",
+        "description": "Sub Title of the navigation item."
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "description",
         "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "rte-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "git-item",
-    "fields": [
-      {
-        "component": "reference",
+        "label": "Description",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "personal-loan-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "mid-banner-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "pl-blogs-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "pl-swipper-blogs-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id":"overview-rte",
-    "fields": [
-      {
-        "component": "text",
-        "name": "classes",
-        "label": "Style",
-        "valueType":"string"
-      }]
-  },
-  {
-    "id": "overview-rte-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id":"secondary-navbar-item",
-    "fields":[
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text"
-      },
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
-      },
-      {
-        "component": "select",
-        "name": "linkType",
-        "label": "Type",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "cta",
-            "value": "true"
-          }
-        ]
+        "description": "Description or additional details for the navigation item."
       }
     ]
   }
