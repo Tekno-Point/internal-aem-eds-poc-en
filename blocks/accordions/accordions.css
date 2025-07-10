@@ -110,6 +110,7 @@
     color: #2b2929;
 }
 
+
 @media (max-width:767px) {
     .accordions-container >div:nth-child(1){
         width: unset;
