@@ -163,4 +163,13 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+
+  document.querySelector('.sectionlast ul li').addEventListener("mouseenter", () => {
+      console.log("Clicked");
+      document.querySelector('.fragment-wrapper').style.display = "block";
+    });
 }
+
+
+
