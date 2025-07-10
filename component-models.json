@@ -104,51 +104,14 @@
         "label": "Section Name",
         "description": "The label shown for this section in the Content Tree"
       },
-       {
-        "component": "text",
-        "name": "id",
-        "label": "Id"
-      },
       {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
         "options": [
           {
-            "name": "sectionlast",
-            "value": "sectionlast"
-          },
-          {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "Benefits PL Calculator",
-            "value": "personalLoanBenefits"
-          },
-          {
-            "name": "Types of Personal loan",
-            "value": "typeOfPersonalLoan"
-          },
-          {
-            "name": "Bank Products",
-            "value": "bankProducts"
-          },
-          {
-            "name": "Mid Banner",
-            "value": "mid-banner"
-          },
-          {
-            "name": "PL Faqs",
-            "value": "pl-faqs"
-          },
-          {
-            "name": "PL Faqs",
-            "value": "pl-faqs"
-          },
-          {
-            "name": "PL Faqs",
-            "value": "pl-faqs"
           }
         ]
       }
@@ -165,66 +128,11 @@
         "multi": false
       },
       {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text"
-      },
-      {
         "component": "richtext",
         "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "accordion",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "FAQs Calculator",
-            "value": "faqs-calculator"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "col_head",
-        "label": "Accordion Head"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "col1_body",
-        "label": "Accordion Body"
-      }
-    ]
-  },
-  {
-    "id": "faq-accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "col_head",
-        "label": "Accordion Head"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "col1_body",
-        "label": "Accordion Body"
       }
     ]
   },
@@ -254,13 +162,6 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -287,240 +188,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "swipper-card-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "rte-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "git-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "personal-loan-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "mid-banner-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "pl-blogs-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "pl-swipper-blogs-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id":"overview-rte",
-    "fields": [
-      {
-        "component": "text",
-        "name": "classes",
-        "label": "Style",
-        "valueType":"string"
-      }]
-  },
-  {
-    "id": "overview-rte-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id":"secondary-navbar-item",
-    "fields":[
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Text"
-      },
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Title"
-      },
-      {
-        "component": "select",
-        "name": "linkType",
-        "label": "Type",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "cta",
-            "value": "true"
-          }
-        ]
       }
     ]
   },
@@ -557,5 +224,5 @@
         "description": "Description or additional details for the navigation item."
       }
     ]
-  } 
+  }
 ]
