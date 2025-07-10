@@ -226,6 +226,19 @@
     .content-fragment>div>div>.fares-carousel-container>.fares-carousel-content>.fr-secondary-filters {
         flex-direction: column;
     }
+
+    .section.cf-wrapper {
+        padding-top: 440px;
+        margin: 0px 25px 0 25px;
+    }
+
+    .section.cf-wrapper .content-fragment .carousel {
+        padding: 10px 2px 18px;
+    }
+
+    .section.cf-wrapper .content-fragment .carousel .swiper-button-next {
+        right: 0;
+    }
 }
 
 .card-body>.dates-row {

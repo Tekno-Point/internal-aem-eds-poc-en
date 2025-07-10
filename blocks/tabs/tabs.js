@@ -244,6 +244,11 @@ export default async function decorate(block) {
       const airlineDetails = document.createElement('div');
       airlineDetails.className = 'airline-details';
 
+      const airlineDetailsLeft = document.createElement('div');
+      airlineDetailsLeft.className = 'airline-details-left';
+      const airlineDetailsRight = document.createElement('div');
+      airlineDetailsRight.className = 'airline-details-right';
+
       const heading = document.createElement('h4');
       heading.textContent = 'SriLankan Airlines';
 
@@ -266,7 +271,10 @@ export default async function decorate(block) {
       button.className = 'book-now-button';
       button.textContent = 'Book Now';
 
-      airlineDetails.append(heading, detailDiv, durationDiv, departureDiv, priceDiv, button);
+      airlineDetailsLeft.append(heading, detailDiv, durationDiv, departureDiv, button);
+      airlineDetailsRight.append(priceDiv);
+
+      airlineDetails.append(airlineDetailsLeft, airlineDetailsRight);
       card.append(flightInfo, airlineDetails);
       cardWrapper.appendChild(card);
     });
@@ -290,13 +298,6 @@ function swiperInit() {
   const swiperPagination = document.createElement('div');
   swiperPagination.classList.add('swiper-pagination');
 
-  // const nextBtn = document.createElement('div');
-  // nextBtn.classList.add('swiper-button-next');
-  // const prevBtn = document.createElement('div');
-  // prevBtn.classList.add('swiper-button-prev');
-
-
-
   const slides = cardWrapper.querySelectorAll('.swiper-slide');
   slides.forEach(slide => {
     SwiperWrapper.append(slide)
@@ -306,11 +307,6 @@ function swiperInit() {
   // cardWrapper.append(prevBtn, nextBtn)
 
   const swiper = new Swiper('.card-wrapper', {
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-
     breakpoints: {
       320: { slidesPerView: 1, spaceBetween: 15 },
       600: { slidesPerView: 2, spaceBetween: 15 },

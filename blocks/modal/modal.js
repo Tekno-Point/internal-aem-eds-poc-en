@@ -82,7 +82,8 @@ export function login(block) {
 
     loginBtn.addEventListener('click', () => {
         const name = block.querySelector('form .input-wrapper input')?.value;
-        const city = block.querySelector('form .select-wrapper select')?.value;
+        // const city = block.querySelector('form .select-wrapper select')?.value;
+        const city = 'mumbai';
 
         const userData = {
             username: name,

@@ -308,6 +308,10 @@ input[type="date"] {
   top: 305px;
 }
 
+.section.tabs-container>.card-wrapper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #0088dd;
+}
+
 .section.tabs-container>.card-wrapper .swiper-pagination .tabs.form-tabs>div>.flight-card,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card {
   min-height: 220px;

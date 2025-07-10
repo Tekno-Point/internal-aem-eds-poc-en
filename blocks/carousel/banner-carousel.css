@@ -71,4 +71,8 @@
     .carousel.banner-carousel .swiper-button-prev {
         left: 5px;
     }
+
+    .carousel.banner-carousel .swiper-pagination {
+        top: 63%;
+    }
 }
