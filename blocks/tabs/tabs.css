@@ -116,7 +116,7 @@
   margin: 0;
   border-radius: 0;
   padding: 0.5em;
-  background-color: var(--light-color);
+  background-color: #F8F6F6;
   color: initial;
   font-weight: bold;
   line-height: unset;
@@ -134,7 +134,7 @@
 
 .tabs .tabs-list button[aria-selected='true'] {
   border-bottom: 1px solid var(--background-color);
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   cursor: initial;
 }
 
