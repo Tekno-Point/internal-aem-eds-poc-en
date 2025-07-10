@@ -2,23 +2,22 @@
   display: flex;
 }
 
-.pl-blogs div:nth-child(1) div{
+/* .pl-blogs div:nth-child(1) div{
   padding: 0 15px;
-}
+} */
 /*  */
 .pl-blogs > div:first-child {
   display: flex;
-  align-items: stretch; /* <-- Key to match height */
+  align-items: stretch;
   margin-bottom: 40px;
 }
 
-/* Left: Image Column */
 .pl-blogs > div:first-child > div:first-child {
   flex: 0 0 45%;
   height: auto;
+  margin-right: 25px;
 }
 
-/* Right: Text Column */
 .pl-blogs > div:first-child > div:last-child {
   flex: 1;
   display: flex;
@@ -26,11 +25,10 @@
   justify-content: center;
 }
 
-/* Make image height match the container */
 .pl-blogs > div:first-child picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Fills container without distortion */
+  object-fit: cover;
   border-radius: 16px;
   display: block;
 }
@@ -168,7 +166,6 @@
 
 /* Mobile view */
 @media (max-width: 768px) {
-  /* Stack vertically */
   .pl-blogs > div:first-child {
     flex-direction: column !important;
     align-items: stretch;
@@ -180,25 +177,32 @@
     width: 100%;
   }
 
-  /* Image should fit naturally */
   .pl-blogs > div:first-child picture img {
     height: auto !important;
     object-fit: cover;
     border-radius: 12px;
   }
 
-  /* Optional: adjust heading/font for mobile */
   .pl-blogs > div:first-child h3 {
     font-size: 24px;
     line-height: 32px;
   }
 
   .pl-blogs > div:first-child p {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 12px;
+    line-height: normal;
   }
 
   .pl-blogs > div:first-child ul li {
     font-size: 14px;
+  }
+
+  .pl-blogs div:nth-child(2) ul{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 12px;
   }
 }
