@@ -34,7 +34,20 @@
   }
 }
 
-.columns.block.feature-cards > div > div > div{
+.columns.block.feature-cards > div > div div{
   display: flex;
   align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  background: #FFF;
+  padding: 14px 24px 14px 7px;
+  width: 253px;
+  height: 82px
+}
+.columns.block.feature-cards > div > div div p{
+    color: #25243B;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px
 }
