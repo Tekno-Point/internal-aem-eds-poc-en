@@ -1,5 +1,7 @@
 import createField from "./form-fields.js";
 import { div, ul, li } from "../../scripts/dom-helpers.js";
+// import { sendotp } from "./api.js";
+
 
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
@@ -163,13 +165,15 @@ export default async function decorate(block) {
           ele.classList.add("active");
           state_inp.value = ele.textContent;
           toggleCityInputState();
-          if (!city_field.querySelector(".city")) {
+          city_field.querySelectorAll(".city").forEach((ele) => {
+            console.log(ele);
+            ele.remove();
+          });
             const cities = dataMapping.state_city_master[state_inp.value];
             city_field.appendChild(
               cityOptions("city", "city-list", "city-name", cities)
             );
             city_inp.value = "";
-          }
         });
       });
       toggleCityInputState();
@@ -206,3 +210,11 @@ export default async function decorate(block) {
   //   }
   // });
 }
+
+
+
+// const sendOtpBtn = document.querySelector(".sendOTP-btn");
+
+// sendOtpBtn.addEventListener("click", function () {
+//   sendotp();
+// });

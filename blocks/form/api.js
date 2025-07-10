@@ -1,5 +1,4 @@
 const mobileNumber = document.getElementById('form-mobile').value;
-const sendOtpBtn = document.querySelector(".sendOTP-btn");
 
 function createReqId(){
     window.sessionStorage.setItem("booktestridekey", generateRandomId().then((id) => id));
@@ -14,7 +13,7 @@ function generateRandomId() {
 }
 
 
-function sendotp(){
+export function sendotp(){
     debugger;
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -190,9 +189,3 @@ function createLead(){
 function renderResponse(){
 
 }
-
-
-
-sendOtpBtn.addEventListener('click', function () {
-    sendotp();
-})
