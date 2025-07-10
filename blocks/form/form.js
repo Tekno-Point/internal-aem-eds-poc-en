@@ -2,7 +2,6 @@ import createField from "./form-fields.js";
 import { div, ul, li } from "../../scripts/dom-helpers.js";
 // import { sendotp } from "./api.js";
 
-
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
   const resp = await fetch(pathname);
@@ -169,11 +168,11 @@ export default async function decorate(block) {
             console.log(ele);
             ele.remove();
           });
-            const cities = dataMapping.state_city_master[state_inp.value];
-            city_field.appendChild(
-              cityOptions("city", "city-list", "city-name", cities)
-            );
-            city_inp.value = "";
+          const cities = dataMapping.state_city_master[state_inp.value];
+          city_field.appendChild(
+            cityOptions("city", "city-list", "city-name", cities)
+          );
+          city_inp.value = "";
         });
       });
       toggleCityInputState();
@@ -189,29 +188,7 @@ export default async function decorate(block) {
       if (dropdown) dropdown.remove();
     }
   });
-
-  // city_inp.addEventListener("focus", function () {
-  //   // city_field.querySelector(".city").style.display = "block";
-  //   document.querySelectorAll(".state-name").forEach((ele) => {
-  //     ele.addEventListener('click', function () {
-  //       document.querySelectorAll(".city-name").forEach((ele) => {
-  //         ele.classList.remove("active");
-  //       });
-  //       ele.classList.add("active")
-  //     })
-  //   })
-  // });
-
-  // Hide dropdown if clicked outside input or dropdown
-  // document.addEventListener("click", function (e) {
-  //   if (!city_field.contains(e.target)) {
-  //     const dropdown = city_field.querySelector(".city");
-  //     if (dropdown) dropdown.remove();
-  //   }
-  // });
 }
-
-
 
 // const sendOtpBtn = document.querySelector(".sendOTP-btn");
 
