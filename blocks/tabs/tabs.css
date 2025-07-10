@@ -308,9 +308,7 @@ input[type="date"] {
   top: 305px;
 }
 
-.section.tabs-container>.card-wrapper .swiper-pagination
-
-.tabs.form-tabs>div>.flight-card,
+.section.tabs-container>.card-wrapper .swiper-pagination .tabs.form-tabs>div>.flight-card,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card {
   min-height: 220px;
   display: flex;
@@ -375,6 +373,11 @@ input[type="date"] {
 .tabs.form-tabs>div>.flight-card>.airline-details>div,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details>div {
   font-weight: 600;
+}
+
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details .Price {
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .card-wrapper {
