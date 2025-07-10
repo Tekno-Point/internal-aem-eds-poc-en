@@ -140,6 +140,10 @@
   content: none;
 }
 
+.million-indians .cards-wrapper > .cards > ul > li > .cards-card-body > ul > li:last-child {
+  padding-right: 0;
+}
+
 
 .travel-insurance > .cards-wrapper > .cards > ul{
   display: flex;
