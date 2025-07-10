@@ -34,7 +34,7 @@
   }
 }
 
-.columns.block.feature-cards > div div div{
+.columns.block.feature-cards > div div > div{
   display: flex;
   align-items: center;
   gap: 6px;
