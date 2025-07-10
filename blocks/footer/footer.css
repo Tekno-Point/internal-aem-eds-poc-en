@@ -37,7 +37,22 @@ footer h5 {
 .footer .right-col>p {
   font-size: 1.2rem;
   padding-bottom: 2rem;
+  color: #282828;
 }
+.footer .left-col pre{
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+   
+    margin: 0;
+    padding : 1rem  0 0.5rem;
+    
+
+}
+.footer .left-col code{
+  font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
 
 @media (width >=900px) {
   footer .footer>div {
