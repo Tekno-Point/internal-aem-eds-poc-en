@@ -208,6 +208,10 @@
           {
             "name": "Login Form Modal",
             "value": "login-form-modal"
+          },
+          {
+            "name": "Review Carousel",
+            "value": "review-carousel"
           }
         ]
       }
