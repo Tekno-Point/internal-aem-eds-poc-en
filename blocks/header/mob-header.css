@@ -1,9 +1,4 @@
 @media (width < 900px) {
-
-  main,
-  footer {
-    display: none;
-  }
   
   #nav {
     padding: 0;

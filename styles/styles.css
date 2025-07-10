@@ -94,10 +94,6 @@ footer .footer {
   visibility: hidden;
 }
 
-.header-wrapper{
-  display: none;
-}
-
 header .header[data-block-status="loaded"],
 footer .footer[data-block-status="loaded"] {
   visibility: visible;
