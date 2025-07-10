@@ -169,14 +169,14 @@ export default async function decorate(block) {
       li.id = `fragment-item-${index + 1}`;
     });
 
-  document.querySelector('.sectionlast ul li').addEventListener("mouseenter", () => {
-      console.log("Clicked");
-      document.querySelector('.fragment-wrapper').style.display = "block";
-    });
+  // document.querySelector('.sectionlast ul li').addEventListener("mouseenter", () => {
+  //     console.log("Clicked");
+  //     document.querySelector('.fragment-wrapper').style.display = "block";
+  //   });
   
-     document.querySelector('.sectionlast ul li').addEventListener("mouseleave", () => {
-      document.querySelector('.fragment-wrapper').style.display = "none";
-    });
+  //    document.querySelector('.sectionlast ul li').addEventListener("mouseleave", () => {
+  //     document.querySelector('.fragment-wrapper').style.display = "none";
+  //   });
 }
 
 
