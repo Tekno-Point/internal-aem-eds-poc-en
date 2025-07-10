@@ -53,8 +53,8 @@
     padding: 0;
 }
 
-.form form>.selection-wrapper+.selection-wrapper,
-.form form fieldset .selection-wrapper+.selection-wrapper {
+.form form > .selection-wrapper + .selection-wrapper,
+.form form fieldset .selection-wrapper + .selection-wrapper {
     margin-top: 0.25em;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .form label,
-.form fieldset>legend {
+.form fieldset > legend {
     margin-bottom: 0.25em;
     font-size: var(--body-font-size-s);
     font-weight: 700;

@@ -401,17 +401,31 @@
     "id": "price-listing",
     "fields": [
       {
-        "component": "text",
+        "component": "reference",
         "valueType": "string",
-        "name": "api url",
-        "label": "url",
+        "name": "image",
+        "label": "Image",
         "multi": false
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
         "component": "richtext",
-        "name": "text",
+        "name": "title",
         "value": "",
-        "label": "Text",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
         "valueType": "string"
       }
     ]
