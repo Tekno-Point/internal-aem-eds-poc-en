@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.faq-accordion-item {
+.faq-accordion .faq-accordion-item {
   display: none;
   border-radius: 12px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
@@ -11,17 +11,17 @@
   overflow: hidden;
 }
 
-.faq-accordion-item.visible {
+.faq-accordion .faq-accordion-item.visible {
   display: block;
   box-shadow: 0px 4px 8px 0px rgba(37, 36, 59, 0.1);
 }
 
-.faq-accordion-item + .faq-accordion-item.visible {
+.faq-accordion .faq-accordion-item + .faq-accordion-item.visible {
   margin-top: 24px;
 }
 
 /* Label (Question) */
-.faq-accordion-label {
+.faq-accordion .faq-accordion-label {
   position: relative;
   padding: 20px 30px;
   padding-right: 50px;
@@ -32,16 +32,16 @@
   font-size: 16px;
 }
 
-.faq-accordion-item .faq-accordion-label p {
+.faq-accordion .faq-accordion-item .faq-accordion-label p {
   margin: 0;
 }
 
-.faq-accordion-item .faq-accordion-label p strong {
+.faq-accordion .faq-accordion-item .faq-accordion-label p strong {
   font-size: 14px;
 }
 
 /* Arrow */
-.faq-accordion-label::after {
+.faq-accordion .faq-accordion-label::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -54,12 +54,12 @@
   transition: transform 0.2s ease;
 }
 
-.faq-accordion-item.open .faq-accordion-label::after {
+.faq-accordion .faq-accordion-item.open .faq-accordion-label::after {
   transform: translateY(-50%) rotate(-45deg);
 }
 
 /* Answer (Body) */
-.faq-accordion-body {
+.faq-accordion .faq-accordion-body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
@@ -74,12 +74,12 @@
   padding: 16px 24px;
 }
 
-.faq-accordion-body p {
+.faq-accordion .faq-accordion-body p {
   margin: 0;
 }
 
 /* Toggle Button */
-.faq-accordion-toggle-btn {
+.faq-accordion .faq-accordion-toggle-btn {
   background: none;
   border: none;
   color: #b70000;
@@ -91,7 +91,7 @@
   padding: 8px;
 }
 
-.faq-accordion-toggle-btn {
+.faq-accordion .faq-accordion-toggle-btn {
   background: none;
   border: none;
   color: #b70000;
@@ -104,13 +104,13 @@
   outline: none;
 }
 
-.faq-accordion-toggle-btn:focus,
-.faq-accordion-toggle-btn:active {
+.faq-accordion .faq-accordion-toggle-btn:focus,
+.faq-accordion .faq-accordion-toggle-btn:active {
   background-color: transparent;
   outline: none;
   box-shadow: none;
 }
 
-.faq-accordion-toggle-btn:hover {
+.faq-accordion .faq-accordion-toggle-btn:hover {
   background-color: transparent;
 }
