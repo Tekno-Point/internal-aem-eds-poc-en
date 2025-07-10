@@ -23,7 +23,9 @@
       "personal-loan-block",
       "mid-banner",
       "pl-swipper-blogs",
-      "pl-blogs"
+      "pl-blogs",
+      "faq-accordion",
+      "overview-rte"
     ]
   },
   {
@@ -94,5 +96,15 @@
     "components": [
       "pl-swipper-blogs-item"
     ]
+  },
+  {
+    "id": "faq-accordion",
+    "components": [
+      "faq-accordion-item"
+    ]
+  },
+  {
+    "id":"overview-rte",
+    "components":["overview-rte-item"]
   }
 ]

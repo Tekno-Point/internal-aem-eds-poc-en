@@ -21,7 +21,15 @@
 .prodCard .prodTextDiv{
     position: relative;
 }
-
+.prodCard .prodTextDiv p:nth-child(1) strong{
+    color: #25243B;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.375px;
+    margin-bottom: 11px;
+}
 .prodCard .prodTextDiv p:nth-child(1),
 .prodCard .prodTextDiv h3{
     color: #25243B;
@@ -63,7 +71,7 @@
 .prodCard .prodTextDiv ul li:nth-child(1){
     border-radius: 27px;
     background: #9B1E26;
-    width: 150px!important;
+    width: 120px;
     /* height: 40px; */
     text-align: center;
     font-size: 14px;
@@ -111,4 +119,53 @@
     padding: 10px 13px;
     border: 0;
     bottom: 15px;
+}
+
+@media (max-width:767px) {
+    .prodCard{
+        width: 300px;
+        height: 120px;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .prodCard .prodImgDiv img{
+        width: 100px;
+        height: 120px;
+    }
+    .prodCard .prodTextDiv p:nth-child(1){
+        margin: 0 0 12px;
+    }
+    .prodCard .prodTextDiv p:nth-child(1) strong{
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    .prodCard .prodTextDiv p:nth-child(2){
+        font-size: 12px;
+        line-height: normal;
+    }
+    .prodCard .prodTextDiv ul{
+        bottom: 10px;
+        gap: 12px;
+    }
+    .prodCard .prodTextDiv ul li:nth-child(1){
+        position: absolute;
+        width: 70px;
+    }
+    .prodCard .prodTextDiv ul li:nth-child(1) a{
+        line-height: normal;
+        /* width: 62px; */
+        font-size: 12px;
+    }
+    
+    .prodCard .prodTextDiv ul li:nth-child(2){
+      /* position: absolute;   */
+      right: 0px;
+    }
+
+    .prodCard .prodTextDiv h3{
+        font-size: 14px;
+        margin:0 0 12px;
+    }
+    
 }
