@@ -378,7 +378,8 @@ input::placeholder {
     padding: 0;
 }
 
-.section.form-container .form form {
+.section.form-container .form for,
+.section.form-container .form form fieldset#form-f1 {
     display: flex;
     flex-wrap: wrap;
     gap: 40px 34px;
@@ -393,7 +394,7 @@ input::placeholder {
     display: block;
 }
 
-.section.form-container .form form .field-wrapper {
+.section.form-container .form form>.field-wrapper {
     width: 100%;
 }
 
@@ -467,16 +468,22 @@ input::placeholder {
     margin: 0;
 }
 
-.section.form-container .form form fieldset .field-wrapper .state .state-list .state-name{
+.section.form-container .form form fieldset .field-wrapper .state .state-list .state-name {
     padding: 5px 10px;
     color: #000;
     cursor: pointer;
 }
 
-.section.form-container .form form fieldset .field-wrapper .state .state-list .state-name:hover{
+.section.form-container .form form fieldset .field-wrapper .state .state-list .state-name:hover {
     background-color: #d2e3f5;
 }
 
-.section.form-container .form form fieldset .field-wrapper .state .state-list .state-name.active{
+.section.form-container .form form fieldset .field-wrapper .state .state-list .state-name.active {
     background-color: #007bff;
+}
+
+
+
+#form-city{
+    pointer-events: none;
 }

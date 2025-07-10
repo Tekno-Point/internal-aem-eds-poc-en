@@ -110,25 +110,48 @@ export default async function decorate(block) {
     }
   });
 
-  const state_field = document.querySelector('#form-state').closest('.field-wrapper');
+  const state_inp = document.querySelector("#form-state");
+  const state_field = state_inp.closest(".field-wrapper");
+  // const state_field = document.querySelector('#form-state').closest('.field-wrapper');
   console.log(state_field);
   const selectOptions = function (mainClass, ulClass, liClass) {
-    return div({class:mainClass},
-      ul({class:ulClass},
-        li({class:liClass},"Maharashtra"),
-        li({class:liClass},"Maharashtra"),
-        li({class:liClass},"Maharashtra"),
-        li({class:liClass},"Maharashtra"),
-        li({class:liClass},"Maharashtra"),
-        li({class:liClass},"Maharashtra"),
-        li({class:liClass},"Maharashtra"),
-        li({class:liClass},"Maharashtra"),
-        li({class:liClass},"Maharashtra")
+    return div(
+      { class: "state" },
+      ul(
+        { class: "state-list" },
+        li({ class: "state-name" }, "M1"),
+        li({ class: "state-name" }, "M2"),
+        li({ class: "state-name" }, "M3"),
+        li({ class: "state-name" }, "M4"),
+        li({ class: "state-name" }, "M5"),
+        li({ class: "state-name" }, "M6"),
+        li({ class: "state-name" }, "M7"),
+        li({ class: "state-name" }, "M8"),
+        li({ class: "state-name" }, "M9")
       )
-    )
-  }
-  
-  state_field.addEventListener("focus", function () {
-    state_field.append(selectOptions("state", "state-list","state-name"));
+    );
+  };
+  state_inp.addEventListener("focus", function () {
+    // Avoid adding it again
+    if (!state_field.querySelector(".state")) {
+      state_field.appendChild(selectOptions());
+      document.querySelectorAll(".state-name").forEach((ele) => {
+        ele.addEventListener("click", function () {
+          document.querySelectorAll(".state-name").forEach((ele) => {
+            ele.classList.remove('active')
+          })
+          ele.classList.add("active");
+          state_inp.value = ele.textContent;
+        });
+      });
+    }
+  });
+
+  // Hide dropdown if clicked outside input or dropdown
+  document.addEventListener("click", function (e) {
+    if (!state_field.contains(e.target)) {
+      const dropdown = state_field.querySelector(".state");
+      if (dropdown) dropdown.remove();
+    }
   });
 }

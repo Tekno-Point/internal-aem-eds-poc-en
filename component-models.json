@@ -112,6 +112,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Book Ride",
+            "value": "book-ride"
           }
         ]
       }
