@@ -477,5 +477,35 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"secondary-navbar-item",
+    "fields":[
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "cta",
+            "value": "true"
+          }
+        ]
+      }
+    ]
   }
 ]
