@@ -14,28 +14,14 @@
       "title",
       "hero",
       "cards",
-      "accordion",
       "columns",
-      "fragment",
-      "swipper-card",
-      "rte-block",
-      "git-block",
-      "personal-loan-block",
-      "mid-banner",
-      "pl-swipper-blogs",
-      "pl-blogs"
+      "fragment"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "accordion",
-    "components": [
-      "accordion-item"
     ]
   },
   {
@@ -54,45 +40,9 @@
     ]
   },
   {
-    "id": "swipper-card",
+    "id": "nav-list",
     "components": [
-      "swipper-card-item"
-    ]
-  },
-  {
-    "id": "rte-block",
-    "components": [
-      "rte-item"
-    ]
-  },
-  {
-    "id": "git-block",
-    "components": [
-      "git-item"
-    ]
-  },
-  {
-    "id": "personal-loan-block",
-    "components": [
-      "personal-loan-item"
-    ]
-  },
-  {
-    "id": "mid-banner",
-    "components": [
-      "mid-banner-item"
-    ]
-  },
-  {
-    "id": "pl-blogs",
-    "components": [
-      "pl-blogs-item"
-    ]
-  },
-  {
-    "id": "pl-swipper-blogs",
-    "components": [
-      "pl-swipper-blogs-item"
+      "nav-item"
     ]
   }
 ]

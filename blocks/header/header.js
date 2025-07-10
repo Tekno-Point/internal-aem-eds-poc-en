@@ -1,5 +1,5 @@
 import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
+import { loadFragment } from '../../scripts/scripts.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
@@ -132,8 +132,43 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
+  // Get logo image src and alt from nav-brand
+  let logoImgSrc = '/content/dam/idfcfirstbank/images/n1/IDFC-logo-website.svg';
+  let logoImgAlt = 'Logo';
+  const navBrandImg = navBrand ? navBrand.querySelector('img') : null;
+  if (navBrandImg) {
+    logoImgSrc = navBrandImg.getAttribute('src') || logoImgSrc;
+    logoImgAlt = navBrandImg.getAttribute('alt') || logoImgAlt;
+  }
+
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
+    // Inject custom mobile HTML if not desktop and not already present
+    if (!isDesktop.matches && !navSections.querySelector('.container.mm-top-in')) {
+      const mobileContainer = document.createElement('div');
+      mobileContainer.className = 'container';
+      mobileContainer.innerHTML = `
+        <div class="mm-top-in">
+          <div class="logo"> <a href="//www.idfcfirstbank.com" aria-label="Menu"> <img src="${logoImgSrc}" alt="${logoImgAlt}"> </a> </div>
+          <a href="javascript:void(0)" class="cls-mm" aria-label="Close Icon"> <span id="icon-close-mobile" class="icon-close"></span>
+          </a>
+        </div>
+      `;
+      navSections.insertBefore(mobileContainer, navSections.firstChild);
+      // Add close event for mobile close button
+      const closeBtn = mobileContainer.querySelector('.cls-mm');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          // Find the nav element and navSections
+          const nav = mobileContainer.closest('nav');
+          const navSections = nav ? nav.querySelector('.nav-sections') : null;
+          if (nav && navSections) {
+            toggleMenu(nav, navSections, false);
+          }
+        });
+      }
+    }
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
@@ -163,4 +198,21 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  const menuItems = document.querySelectorAll('.sectionlast .default-content-wrapper ul li');
+    menuItems.forEach((li, index) => {
+      li.id = `fragment-item-${index + 1}`;
+    });
+
+  // document.querySelector('.sectionlast ul li').addEventListener("mouseenter", () => {
+  //     console.log("Clicked");
+  //     document.querySelector('.fragment-wrapper').style.display = "block";
+  //   });
+  
+  //    document.querySelector('.sectionlast ul li').addEventListener("mouseleave", () => {
+  //     document.querySelector('.fragment-wrapper').style.display = "none";
+  //   });
 }
+
+
+
