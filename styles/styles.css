@@ -330,7 +330,8 @@ main .section.highlight {
 }
 
 .section.personalloanbenefits h2,
-.section.typeofpersonalloan h2{
+.section.typeofpersonalloan h2,
+section.faq-accordion-container h4{
   color: #25243B;
     font-size: 24px;
     font-style: normal;
@@ -382,4 +383,8 @@ main .section.highlight {
   padding: 30px 0 56px;
   background-color: rgba(239, 223, 211, 0.3);
   width: 100%;
+}
+
+.section.faq-accordion-container h4{
+
 }
