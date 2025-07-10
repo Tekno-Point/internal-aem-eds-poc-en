@@ -20,7 +20,6 @@
       "accordions",
       "form",
       "carousel",
-      "form",
       "table"
     ]
   },
@@ -28,12 +27,6 @@
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tab"
     ]
   },
   {
@@ -55,12 +48,6 @@
       "image",
       "button",
       "title"
-    ]
-  },
-  {
-    "id": "carousel",
-    "components": [
-      "carousel-item"
     ]
   },
   {
