@@ -25,7 +25,8 @@
       "pl-swipper-blogs",
       "pl-blogs",
       "faq-accordion",
-      "overview-rte"
+      "overview-rte",
+      "nav-list"
     ]
   },
   {
@@ -106,5 +107,11 @@
   {
     "id":"overview-rte",
     "components":["overview-rte-item"]
+  },
+  {
+    "id": "nav-list",
+    "components": [
+      "nav-item"
+    ]
   }
 ]

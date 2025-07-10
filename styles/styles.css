@@ -10,6 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
+
 :root {
   /* colors */
   --background-color: white;
@@ -97,7 +98,6 @@ header .header[data-block-status="loaded"],
 footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
-
 
 h1,
 h2,
