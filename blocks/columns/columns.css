@@ -34,11 +34,9 @@
   }
 }
 
-.columns.block.feature-cards > div > div div{
+.columns.block.feature-cards > div > div{
   display: flex;
   align-items: center;
-}
-.columns.block.feature-cards > div > div{
   gap: 6px;
   border-radius: 8px;
   background: #FFF;
@@ -46,15 +44,49 @@
   height: 82px;
   flex: unset;
 }
-.columns.block.feature-cards div div div p{
+.columns.block.feature-cards div div p{
     color: #25243B;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
-    margin-left: 10px;
+    padding: 0 10px;
 }
-.columns.block.feature-cards div div div p .icon{
+.columns.block.feature-cards div div p .icon{
   width: 100%;
   height: 100%;
+}
+
+.columns.block.feature-cards{
+  position: absolute;
+  top: 80%;
+}
+@media (max-width:767px){
+  .columns.block.feature-cards > div > div{
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  background: #FFF;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.columns.block.feature-cards div div p{
+    color: #25243B;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0 10px;
+}
+.columns.block.feature-cards div div p .icon{
+  width: 100%;
+  height: 100%;
+}
+
+.columns.block.feature-cards{
+  position: absolute;
+  top: 93%;
+  margin-right: 24px;
+}
 }
