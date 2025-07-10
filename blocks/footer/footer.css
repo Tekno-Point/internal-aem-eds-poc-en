@@ -207,6 +207,7 @@ footer .footer ul {
   padding-bottom: 27px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .footer>div>div:nth-child(3)>div {
@@ -219,6 +220,7 @@ footer .footer ul {
   padding: 0;
   position: absolute;
   right: 210px;
+  top: 52px;
 }
 
 .footer>div>div:nth-child(3) .default-content-wrapper h1 {
@@ -229,9 +231,9 @@ footer .footer ul {
   font: 400 24px / 1.25rem 'Roboto', sans-serif;
 }
 
-.footer>div>div:nth-child(3) .accordion {
+/* .footer>div>div:nth-child(3) .accordion {
   width: 15%;
-}
+} */
 
 
 .footer>div>div:nth-child(3) .accordion-wrapper .accordion>div,
@@ -244,6 +246,14 @@ footer .footer>div .section:nth-child(4) {
   background-color: #FFFFFF;
   color: #0D0D0D;
   padding-bottom: 30px;
+}
+
+.footer>div>div:nth-child(3) .accordion-wrapper .accordion .accordion-item .accordion-item-label::after {
+  left: 115px;
+}
+
+.footer .accordion-wrapper .accordion .accordion-item[open] .accordion-item-label {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.21);
 }
 
 footer .footer>div .section:nth-child(4)>div {
