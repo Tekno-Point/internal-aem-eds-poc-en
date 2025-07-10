@@ -168,4 +168,12 @@
         margin:0 0 12px;
     }
     
+    .prodCard .prodTextDiv .button-container .button{
+        font-size: 12px;
+        position: absolute; 
+        margin: 0;
+        bottom: 5px;
+        width: 130px;
+    }
+    
 }

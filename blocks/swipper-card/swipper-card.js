@@ -1,9 +1,26 @@
 import Swiper from "../swipper/swipper-bundle.min.js";
 
 export default function decorate(block) {
-  const innerDivs = Array.from(block.children);
+  const allChildren = Array.from(block.children);
 
-  innerDivs.forEach((item) => {
+  // Filter out empty or malformed cards
+  const validCards = allChildren.filter((item) => {
+    const children = item.children;
+    if (!children || children.length < 2) return false;
+
+    const hasImage = children[0].querySelector("img") || children[0].querySelector("picture");
+    const hasText = children[1].textContent.trim().length > 0;
+
+    return hasImage && hasText;
+  });
+
+  if (!validCards.length) {
+    block.innerHTML = ''; // If no valid cards, clean up block
+    return;
+  }
+
+  // Assign classes to image and text containers
+  validCards.forEach((item) => {
     item.classList.add("prodCard");
 
     const [imgDiv, textDiv] = item.children;
@@ -11,10 +28,11 @@ export default function decorate(block) {
     if (textDiv) textDiv.classList.add("prodTextDiv");
   });
 
+  // Build Swiper structure
   const wrapper = document.createElement("div");
   wrapper.classList.add("swiper-wrapper");
 
-  innerDivs.forEach((card) => {
+  validCards.forEach((card) => {
     card.classList.add("swiper-slide");
     wrapper.appendChild(card);
   });
@@ -23,9 +41,11 @@ export default function decorate(block) {
   swiperContainer.classList.add("swiper");
   swiperContainer.appendChild(wrapper);
 
+  // Replace content with swiper
   block.innerHTML = "";
   block.appendChild(swiperContainer);
 
+  // Initialize Swiper
   new Swiper(swiperContainer, {
     slidesPerView: 2.2,
     spaceBetween: 16,

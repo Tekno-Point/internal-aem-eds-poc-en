@@ -398,6 +398,20 @@
         "value": ""
       },
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "value": ""
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
@@ -481,36 +495,32 @@
     ]
   },
   {
-    "id": "nav-item",
-    "fields": [
+    "id":"secondary-navbar-item",
+    "fields":[
       {
         "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Title",
-        "description": "Title of the navigation item."
+        "name": "linkText",
+        "label": "Text"
       },
       {
         "component": "text",
-        "valueType": "string",
-        "name": "link",
-        "label": "Link",
-        "description": "URL for the navigation item."
+        "name": "linkTitle",
+        "label": "Title"
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "sub-title",
-        "label": "Sub Title",
-        "description": "Sub Title of the navigation item."
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "value": "",
-        "label": "Description",
-        "valueType": "string",
-        "description": "Description or additional details for the navigation item."
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "cta",
+            "value": "true"
+          }
+        ]
       }
     ]
   }

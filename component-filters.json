@@ -26,6 +26,7 @@
       "pl-blogs",
       "faq-accordion",
       "overview-rte",
+      "secondary-navbar",
       "nav-list"
     ]
   },
@@ -107,6 +108,10 @@
   {
     "id":"overview-rte",
     "components":["overview-rte-item"]
+  },
+  {
+    "id":"secondary-navbar",
+    "components":["secondary-navbar-item"]
   },
   {
     "id": "nav-list",
