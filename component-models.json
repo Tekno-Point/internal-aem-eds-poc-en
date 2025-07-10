@@ -397,7 +397,7 @@
     "id": "price-listing",
     "fields": [
       {
-        "component": "reference",
+        "component": "text",
         "valueType": "string",
         "name": "api url",
         "label": "url",
