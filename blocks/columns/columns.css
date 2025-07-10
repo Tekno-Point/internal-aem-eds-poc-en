@@ -42,9 +42,10 @@
   gap: 6px;
   border-radius: 8px;
   background: #FFF;
-  padding: 14px 24px 14px 7px;
+  padding: 10px;
   width: 253px;
-  height: 82px
+  height: 82px;
+  flex: unset;
 }
 .columns.block.feature-cards div div div p{
     color: #25243B;

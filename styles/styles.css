@@ -303,9 +303,6 @@ main .section.highlight {
     margin: 0;
 }
 
-.section.banner-image{
-  background: url("/content/dam/internal-aem-eds-poc/idfcfirstbank/card-banner-bg.webp") no-repeat;
-}
 
 .section.banner-image .default-content-wrapper > div ol{
   display: flex;
@@ -322,7 +319,7 @@ main .section.highlight {
     width: 400px;
 }
 .section.banner-image .default-content-wrapper > div ol li{
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .section.banner-image .default-content-wrapper .button-container a{
   background-color: #9B1E26;
