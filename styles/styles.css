@@ -302,15 +302,10 @@ main .section.highlight {
     padding: 32px 0;
     margin: 0;
 }
-/* .section.banner-image{
-  position: relative;
+
+.section.banner-image{
+  background: url("/content/dam/internal-aem-eds-poc/idfcfirstbank/card-banner-bg.webp") no-repeat;
 }
-.section.banner-image .default-content-wrapper img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-} */
 
 .section.banner-image .default-content-wrapper > div ol{
   display: flex;
@@ -325,6 +320,9 @@ main .section.highlight {
     line-height: 16px;
     color: #767676;
     width: 400px;
+}
+.section.banner-image .default-content-wrapper > div ol li{
+  margin-right: 10px;
 }
 .section.banner-image .default-content-wrapper .button-container a{
   background-color: #9B1E26;
