@@ -16,15 +16,13 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
-  // Array.from(document.querySelector(".footer div").children).forEach((el,index) => {
-  //   el.classList.add("subSection"+(index+1))
-  // })
-  // const isMobile = window.matchMedia('(max-width: 767px)').matches;
-  // if (!isMobile) {
-  //   [...document.querySelectorAll(".subSection1.accordion-container details")].forEach((el,index) => {
-  //     el.setAttribute('open',"")
-  //   })
-  // }
+
+  const details = block.querySelectorAll(".footer-accordion details");
+  if (window.innerWidth > 768) {
+    details.forEach(detail => {
+      detail.open = true;
+    });
+  }
 
 }
 
