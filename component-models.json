@@ -359,7 +359,7 @@
     "id": "price-listing",
     "fields": [
       {
-        "component": "reference",
+        "component": "aem-content",
         "valueType": "string",
         "name": "api url",
         "label": "url",
@@ -390,6 +390,25 @@
         "name": "api-url",
         "label": "api-url",
         "value": ""
+      }
+    ]
+  },
+  {
+    "id": "price-listing",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "api url",
+        "label": "url",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }
