@@ -22,7 +22,7 @@ header nav {
   font-family: var(--body-font-family);
 }
 
-header nav[aria-expanded='true'] {
+header nav:hover {
   grid-template:
     'hamburger brand' var(--nav-height) 'sections sections' 1fr
     'tools tools' var(--nav-height) / auto 1fr;
@@ -66,7 +66,7 @@ header nav[aria-expanded='true'] {
     padding: 0 32px;
   }
 
-  header nav[aria-expanded='true'] {
+  header nav:hover {
     min-height: 0;
     overflow: visible;
   }
@@ -118,28 +118,28 @@ header nav .nav-hamburger-icon::after {
   background: currentcolor;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon,
-header nav[aria-expanded='false'] .nav-hamburger-icon::before,
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+header nav .nav-hamburger-icon,
+header nav .nav-hamburger-icon::before,
+header nav .nav-hamburger-icon::after {
   height: 2px;
   border-radius: 2px;
   background: currentcolor;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::before {
+header nav .nav-hamburger-icon::before {
   top: -6px;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
+header nav .nav-hamburger-icon::after {
   top: 6px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon {
+header nav:hover .nav-hamburger-icon {
   height: 22px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::before,
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+header nav:hover .nav-hamburger-icon::before,
+header nav:hover .nav-hamburger-icon::after {
   top: 3px;
   left: 1px;
   transform: rotate(45deg);
@@ -149,7 +149,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   border-radius: 2px;
 }
 
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
+header nav:hover .nav-hamburger-icon::after {
   top: unset;
   bottom: 3px;
   transform: rotate(-45deg);
@@ -191,7 +191,7 @@ header nav .nav-sections {
   visibility: hidden;
 }
 
-header nav[aria-expanded='true'] .nav-sections {
+header nav:hover .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
@@ -226,7 +226,7 @@ header nav .nav-sections ul>li>ul>li {
     white-space: nowrap;
   }
 
-  header nav[aria-expanded='true'] .nav-sections {
+  header nav:hover .nav-sections {
     align-self: unset;
   }
 
@@ -236,7 +236,7 @@ header nav .nav-sections ul>li>ul>li {
     cursor: pointer;
   }
 
-  header nav .nav-sections .nav-drop[aria-expanded='true']>p>a {
+  header nav .nav-sections .nav-drop:hover>p>a {
     color: #0056b3;
   }
 
@@ -267,7 +267,7 @@ header nav .nav-sections ul>li>ul>li {
     rotate: 135deg;
   }
 
-  header nav .nav-sections .nav-drop[aria-expanded='true']::after {
+  header nav .nav-sections .nav-drop:hover::after {
     top: unset;
     bottom: 0.5em;
     /* transform: rotate(315deg); */
@@ -302,7 +302,7 @@ header nav .nav-sections ul>li>ul>li {
     display: block;
   }
 
-  header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded='true']>ul {
+  header nav .nav-sections .default-content-wrapper>ul>li:hover>ul {
     display: block;
     position: absolute;
     left: -24px;
@@ -660,9 +660,6 @@ header nav .nav-tools {
   max-width: 1230px;
   margin: 0 auto;
 }
-
-/* /// */
-
 
 .login-bx .login-top .tab-pane {
   text-align: center;
