@@ -15,21 +15,21 @@ main>.section>div.image-banner-wrapper {
   max-width: unset;
 }
 
-.image-banner-container .image-banner>div:nth-child(1) {
+.bannerdefault .image-banner>div:nth-child(1) {
   width: 40%;
 }
 
-.image-banner-container .image-banner>div:nth-child(1) img {
+.bannerdefault .image-banner>div:nth-child(1) img {
   max-width: 432px;
   height: 258px;
 }
 
-.image-banner-container .image-banner>div:nth-child(2) {
+.bannerdefault .image-banner>div:nth-child(2) {
   width: 60%;
 
 }
 
-.image-banner-container .image-banner>div:nth-child(2) h1 {
+.bannerdefault .image-banner>div:nth-child(2) h1 {
   color: #282828;
   font-weight: 700;
   font-size: 3.6rem;
@@ -40,7 +40,7 @@ main>.section>div.image-banner-wrapper {
 }
 
 
-.image-banner-container .image-banner>div:nth-child(2) p {
+.bannerdefault .image-banner>div:nth-child(2) p {
   color: #282828;
   font-weight: 400;
   font-size: 1.6rem;
@@ -63,7 +63,7 @@ main>.section>div.image-banner-wrapper {
     width: 100%;
   }
 
-  .image-banner-container .image-banner>div:nth-child(2) h1 {
+  .bannerdefault .image-banner>div:nth-child(2) h1 {
     font-size: 2.4rem;
     line-height: 30px;
     padding-bottom: 2rem;
@@ -71,11 +71,83 @@ main>.section>div.image-banner-wrapper {
 
   }
 
-  .image-banner-container .image-banner>div:nth-child(2) p {
+  .bannerdefault .image-banner>div:nth-child(2) p {
     padding: 0;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 24px;
 
   }
+}
+
+/* second blue banner */
+main>.section.imagebannerblue {
+  background-color: #00305B;
+  padding: 80px 0px 90px;
+  max-width: unset;
+}
+
+main>.section.imagebannerblue .image-banner-wrapper {
+  max-width: 1280px;
+  padding: 0;
+  margin: auto auto;
+}
+
+.imagebannerblue .image-banner {
+  flex-direction: row-reverse;
+}
+
+.imagebannerblue .image-banner>div:nth-child(1) {
+  width: 40%;
+}
+
+.imagebannerblue .image-banner>div:nth-child(2) {
+  width: 60%;
+}
+
+.imagebannerblue .image-banner>div:nth-child(2) h2 {
+  margin: unset;
+  padding-bottom: 3rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 45px;
+}
+
+.imagebannerblue .image-banner>div:nth-child(2) p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  padding: 0 1rem 2rem 0;
+  margin: unset;
+}
+.imagebannerblue .image-banner>div:nth-child(2) ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+.imagebannerblue .image-banner>div:nth-child(2) li {
+
+  margin: unset;
+  list-style: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 0 1rem 3rem;
+  color: #ffffff;
+  margin-bottom: 0;
+
+}
+.imagebannerblue .image-banner>div:nth-child(2) li::before {
+  content: "•";
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  position: absolute;
+  margin-left: -2rem;
+
 }
