@@ -120,6 +120,10 @@
           {
             "name": "hero-footer-icon",
             "value": "hero-footer-icon"
+          },
+           {
+            "name": "hero-footer-Policy",
+            "value": "hero-footer-Policy"
           }
         ]
       }

@@ -78,3 +78,31 @@ footer .footer p {
   line-height: 22.4px;
   font-size: 16px;
 }
+
+
+/*footer-icon*/
+
+.hero-footer-icon>.default-content-wrapper>ul{
+padding: 0px;
+list-style: none;
+display: flex;
+justify-content: space-between;
+}
+
+.hero-footer-icon>.default-content-wrapper>ul>li>ul{
+  padding: 0px;
+  list-style: none;
+}
+.hero-footer-icon>.default-content-wrapper>ul>li:nth-child(1)>ul{
+  display: flex;
+  gap: 20px;
+}
+
+.hero-footer-icon>.default-content-wrapper>ul>li:nth-child(1)>ul>li{
+  cursor: pointer;
+}
+
+.hero-footer-icon{
+  padding-bottom: 55px;
+  border-bottom: 1px solid white;
+}
