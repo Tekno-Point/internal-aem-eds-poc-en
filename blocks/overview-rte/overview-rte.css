@@ -24,9 +24,9 @@
 }
 .overview-rte .overview-rte-readMore {
   margin-top: 1rem;
+  font-size: 14px;
   font-weight: 600;
   color: #54565B;
-  text-decoration: underline;
   cursor: pointer;
   background-color: transparent!important;
   padding: 0px;

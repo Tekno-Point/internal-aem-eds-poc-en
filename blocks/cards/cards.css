@@ -100,14 +100,29 @@
 /* MOBILE VIEW: SINGLE COLUMN + toggleable */
 @media (max-width: 768px) {
   .cards .benefit-cards {
-    width: 100%;
+    /* width: 100%;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: center; */
+    gap: 8px;
+    margin-bottom: 0;
+    width: 100%;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 0px 8px 0px rgba(37, 36, 59, 0.15);
+  }
+
+  .cards .benefit-cards .cards-card-body h3{
+    font-size: 14px;
+  }
+
+  .cards .benefit-cards .cards-card-body p{
+    font-size: 12px;
+    line-height: normal;
   }
 
   .cards .benefit-cards .cards-card-image img {
-    width: 100%;
+    width: 120px;
     height: auto;
   }
 

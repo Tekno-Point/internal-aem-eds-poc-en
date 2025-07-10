@@ -1,61 +1,34 @@
 export default function decorate(block) {
-  const allRows = [...block.children];
-  const validRows = allRows.filter((row) => row.children.length === 2);
-
-  // Clear block content first
-  block.innerHTML = '';
-
-  const detailsList = validRows.map((row) => {
-    const label = row.children[0];
-    const summary = document.createElement('summary');
-    summary.className = 'accordion-item-label';
-    summary.append(...label.childNodes);
-
-    const body = row.children[1];
-    body.className = 'accordion-item-body';
-
-    const details = document.createElement('details');
-    details.className = 'accordion-item';
-    details.append(summary, body);
-
-    return details;
+  // const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  // if (!isMobile) return; // Skip accordion transformation on desktop
+  [...block.children].forEach((row) => {
+    const children = [...row.children];
+    // only process rows with exactly 2 children (question + answer)
+    if (children.length === 2) {
+      const label = children[0];
+      const summary = document.createElement('summary');
+      summary.className = 'accordion-item-label';
+      summary.append(...label.childNodes);
+      const body = children[1];
+      body.className = 'accordion-item-body';
+      const details = document.createElement('details');
+      details.className = 'accordion-item';
+      details.append(summary, body);
+      row.replaceWith(details);
+    } else {
+      // remove or ignore malformed rows (like dummy divs)
+      row.remove();
+    }
   });
-
-  // Append only the first 3 items initially
-  const visibleCount = 3;
-  detailsList.forEach((item, i) => {
-    if (i < visibleCount) item.classList.add('visible');
-    block.appendChild(item);
-  });
-
-  // Create More/Less Button
-  const toggleBtn = document.createElement('button');
-  toggleBtn.className = 'accordion-toggle-btn';
-  toggleBtn.textContent = 'More FAQs';
-  block.appendChild(toggleBtn);
-
-  let expanded = false;
-
-  toggleBtn.addEventListener('click', () => {
-    expanded = !expanded;
-    detailsList.forEach((item, i) => {
-      if (expanded || i < visibleCount) {
-        item.classList.add('visible');
-      } else {
-        item.classList.remove('visible');
-      }
-    });
-    toggleBtn.textContent = expanded ? 'Less FAQs' : 'More FAQs';
-  });
-
-  // Only one open at a time
+  // Optional: Only one open at a time
+  const footerAccordion = document.querySelector(".footer-accordion")
   block.querySelectorAll('details').forEach((detail) => {
     detail.addEventListener('toggle', () => {
-      if (detail.open) {
-        block.querySelectorAll('details').forEach((el) => {
-          if (el !== detail) el.removeAttribute('open');
-        });
-      }
+      // if (detail.open) {
+      //   block.querySelectorAll('details').forEach((el) => {
+      //     if (el !== detail) el.removeAttribute('open');
+      //   });
+      // }
     });
   });
 }
