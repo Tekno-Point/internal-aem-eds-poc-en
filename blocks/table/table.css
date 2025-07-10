@@ -1,0 +1,109 @@
+.insurance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-m, 1rem) 0;
+}
+
+.insurance-table th,
+.insurance-table td {
+  border: 1px solid var(--border-color, #ddd);
+  padding: var(--spacing-s, 0.5rem);
+  text-align: left;
+}
+
+.insurance-table th {
+  background-color: var(--header-bg, #f9f9f9);
+  font-weight: bold;
+}
+
+.insurance-table tr:nth-child(even) {
+  background-color: var(--row-bg-even, #f1f1f1);
+}
+
+.insurance-table tr:nth-child(odd) {
+  background-color: var(--row-bg-odd, #fff);
+}
+
+.table-container > .table-wrapper > .table{
+  width: 72%;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 40px auto 0;
+  overflow-x: auto;
+    
+}
+
+.table-container > .table-wrapper > .table > .dynamic-table{
+  color: #000000;
+    width: 100%;
+    border: 1px solid #ECE9E9;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-spacing: 0px;
+    border-collapse: inherit !important;
+}
+
+.table-container > .table-wrapper > .table > .dynamic-table > tr{
+  border-right: none !important;
+}
+
+.table-container > .table-wrapper > .table > .dynamic-table > tr > th:first-child, 
+.table-container > .table-wrapper > .table > .dynamic-table > tr > td:first-child{
+  width: 35%;
+}
+
+.table-container > .table-wrapper > .table > .dynamic-table > tr > th:nth-child(2), 
+.table-container > .table-wrapper > .table > .dynamic-table > tr > td:nth-child(2){
+  width: 25%;
+}
+
+.table-container > .table-wrapper > .table > .dynamic-table > tr > th:last-child, 
+.table-container > .table-wrapper > .table > .dynamic-table > tr > td:last-child{
+  width: 40%;
+}
+
+
+.table-container > .table-wrapper > .table > .dynamic-table > tr > th{
+  padding: 2.6rem 3rem 2.5rem;
+  border-right: 1px solid #ECE9E9;
+  border-bottom: 1px solid #ECE9E9;
+  background: #DDDCCB;
+    text-align: left;
+}
+
+.table-container > .table-wrapper > .table > .dynamic-table > tr > td{
+  padding: 1.4rem 3rem 1.5rem;
+  border-right: none !important;
+}
+
+@media screen and (max-width : 767.99px) {
+
+  .section.table-container  > div{
+    padding: 0;
+  } 
+
+  .table-container > .table-wrapper > .table{
+    border-top-right-radius: 0; 
+    width: 100%;
+  }
+
+  .table-container > .table-wrapper > .table > .dynamic-table{
+    width: 100%;
+        display: block;
+  }
+
+  .table-container > .table-wrapper > .table > .dynamic-table > tr > th{
+    padding: 2.6rem 10px 2.5rem;
+    font-size: 14px;
+  }
+
+  .table-container > .table-wrapper > .table > .dynamic-table > tr > td {
+    padding: 2.6rem 10px 2.5rem;
+    font-size: 14px;
+  }
+  
+
+}
