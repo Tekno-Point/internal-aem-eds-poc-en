@@ -311,3 +311,27 @@ main .section.highlight {
   left: 0;
   background-repeat: no-repeat;
 } */
+
+.section.banner-image .default-content-wrapper > div ol{
+  display: flex;
+  align-items: center;
+  /* position: absolute;
+    top: 0; */
+    /* z-index: 1; */
+    border-radius: 12px;
+    background: #F6F6F6 !important;
+    padding: 4px 13px;
+    font-size: 11px;
+    line-height: 16px;
+    color: #767676;
+}
+.section.banner-image .default-content-wrapper > div ol:nth-child(1) li:before{
+  content: '\e902';
+    color: #9D1D27;
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}
