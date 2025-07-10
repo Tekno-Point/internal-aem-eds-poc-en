@@ -164,10 +164,18 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 
+  const menuItems = document.querySelectorAll('.sectionlast .default-content-wrapper ul li');
+    menuItems.forEach((li, index) => {
+      li.id = `fragment-item-${index + 1}`;
+    });
 
   document.querySelector('.sectionlast ul li').addEventListener("mouseenter", () => {
       console.log("Clicked");
       document.querySelector('.fragment-wrapper').style.display = "block";
+    });
+  
+     document.querySelector('.sectionlast ul li').addEventListener("mouseleave", () => {
+      document.querySelector('.fragment-wrapper').style.display = "none";
     });
 }
 
