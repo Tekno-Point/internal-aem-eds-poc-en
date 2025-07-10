@@ -112,6 +112,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "hero-footer",
+            "value": "hero-footer"
           }
         ]
       }

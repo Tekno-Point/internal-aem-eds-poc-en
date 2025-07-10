@@ -1,20 +1,76 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+    background-color: var(--light-color);
+    font-size: var(--body-font-size-xs);
 }
 
 footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+    margin: auto;
+    max-width: 1200px;
+    padding: 40px 24px 24px;
 }
 
 footer .footer p {
-  margin: 0;
+    margin: 0;
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+    footer .footer > div {
+        padding: 40px 32px 24px;
+    }
+}
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+.footer > div > div > .default-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.footer > div > div > .default-content-wrapper > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+}
+.footer > div > div > .default-content-wrapper > ul > li {
+    text-align: left;
+}
+.footer > div > div > .default-content-wrapper > ul > li > p > a {
+    background: none;
+    color: #f3f3f3;
+    font-family: "TSTAR-PRO-Bold";
+    font-size: 19px;
+    line-height: 22.4px ;
+    padding: 0px;
+    margin: 0px;
+}
+.footer > div > div > .default-content-wrapper > ul > li > ul {
+    list-style: none;
+    padding: 0px;
+}
+.footer > div > div > .default-content-wrapper > ul > li > ul > li {
+    text-align: start;
+}
+
+.footer > div > div > .default-content-wrapper > ul > li > ul > li > a {
+    color: white;
+}
+
+.footer > div > div > .default-content-wrapper > ul > li > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer > div > div > .default-content-wrapper > ul > li > ul>li>a{
+  font-family: "TSTAR-PRO-Medium";
+  color: #f3f3f3;
+  line-height: 22.4px;
+  font-size: 16px;
 }
