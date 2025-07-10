@@ -140,6 +140,10 @@
           {
             "name": "PL Faqs",
             "value": "pl-faqs"
+          },
+          {
+            "name": "footer-accordion",
+            "value": "footer-accordion"
           }
         ]
       }

@@ -199,7 +199,7 @@ footer .footer ul {
 
 .footer>div>div:nth-child(3) {
   padding: 50px 0;
-  /* padding-top: 0; */
+  padding-bottom: 27px;
 }
 
 .footer>div>div:nth-child(3) .accordion-wrapper .accordion>div,
