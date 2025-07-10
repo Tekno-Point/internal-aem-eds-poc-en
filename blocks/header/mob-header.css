@@ -1,0 +1,65 @@
+@media (width < 900px) {
+  
+  .nav-sections .container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .nav-sections .mm-top-in {
+    height: 70px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .07);
+  }
+  
+  .nav-sections .mm-top-in .logo img {
+    height: 34px;
+    width: auto;
+  }
+}
+
+.nav-sections .cls-mm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.nav-sections .icon-close {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.nav-sections .icon-close:before,
+.nav-sections .icon-close:after {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 4px;
+  width: 2px;
+  height: 16px;
+  background: #AF0000;
+  border-radius: 2px;
+}
+
+.nav-sections .icon-close:before {
+  transform: rotate(45deg);
+}
+
+.nav-sections .icon-close:after {
+  transform: rotate(-45deg);
+}
