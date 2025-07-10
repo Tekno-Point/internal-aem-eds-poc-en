@@ -46,6 +46,7 @@ header nav:[aria-expanded="true"] {
   letter-spacing: -0.6px;
 }
 
+
 .header nav .nav-sections .default-content-wrapper>ul>li a {
   border-radius: 20px;
   background: #FFF;
@@ -306,12 +307,26 @@ header nav .nav-sections ul>li>ul>li {
   header nav .nav-sections .default-content-wrapper>ul>li:hover>ul {
     display: block;
     position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
+    min-width: 200px;
+    margin-top: 16px;
     padding: 16px;
     background-color: var(--light-color);
     white-space: initial;
+    z-index: 99;
+    border-radius: 8px;
+  }
+
+  header nav .nav-sections .default-content-wrapper>ul>li:first-child a {
+    display: block;
+    color: #9d1d27;
+    font-weight: 700;
+    background: #f1f1f1;
+    border-radius: 4px;
+    border-bottom: 1px solid #f1f1f1;
+    line-height: normal;
+    font-size: 14px;
+    padding: 12px 11px;
+    width: 200px;
   }
 
   header nav .nav-sections .default-content-wrapper>ul>li:hover p a {
