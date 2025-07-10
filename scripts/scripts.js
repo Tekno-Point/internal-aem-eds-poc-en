@@ -613,6 +613,7 @@ async function setSessionStorage() {
 
   getUserLocation();
 
+
   await fetch('https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.state-and-city.json')
     .then(response => {
       if (!response.ok) {
@@ -623,6 +624,25 @@ async function setSessionStorage() {
     .then(apiData => {
       dataMapping.state_city_master.apiData = apiData.data.stateCity;
       sessionStorage.setItem('dataMapping', JSON.stringify(dataMapping));
+
+      // Parse and store reverse mapping for easier access
+      var dataMappingParsed = JSON.parse(sessionStorage.getItem("dataMapping"));
+      dataMappingParsed.state_city_master_rev = {};
+      dataMappingParsed.state_city_master_rev.state = [];
+      dataMappingParsed.state_city_master.apiData.filter(item => {
+        if(!dataMappingParsed.state_city_master_rev[item.label]){
+          dataMappingParsed.state_city_master_rev.state.push(item.label);
+          dataMappingParsed.state_city_master_rev[item.label] = {};
+        }
+        item.cities.forEach(city => {
+          dataMappingParsed.state_city_master_rev[item.label][city.code] = {
+            ...city,
+            stateCode: item.code
+          };
+        });
+      });
+      sessionStorage.setItem('dataMapping', JSON.stringify(dataMappingParsed));
+      console.log(dataMappingParsed);
     })
     .catch(error => {
       console.error('Error fetching or storing data:', error);
