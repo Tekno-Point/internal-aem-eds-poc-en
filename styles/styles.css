@@ -262,20 +262,63 @@ main .section.highlight {
 }
 /* IDFC */
 
+.section.secondary-navbar-container {
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  background: #FFFFFF;
+  box-shadow: 0 4px 8px rgba(37, 36, 59, 0.1);
+  padding: 0 1rem;
+}
+.secondary-navbar-wrapper{
+  width: 100%;
+}
+@media (max-width:767px) {
+  .secondary-navbar-wrapper{
+  width: auto;
+}
+}
+
 .section.overview-rte-container{
   background-color: #F5F5F5;
+  margin-top: 0;
   padding: 42px 0 23px 0;
 }
 
+.section.columns-container h2{
+  color: #25243B;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 14px;
+  letter-spacing: -0.6px;
+}
+
 .section.personalloanbenefits h2, 
-.section.swipper-card-container h2{
+.section.swipper-card-container h2,
+.section.pl-blogs-container h2{
   color: #25243B;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   letter-spacing: -0.686px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+}
+
+.section.swipper-card-container h2{
+  margin-top: 0;
 }
 
 .section.git-block-container h3{
@@ -300,7 +343,8 @@ main .section.highlight {
 
 @media (max-width:767px) {
   .section.personalloanbenefits h2,
-  .section.typeofpersonalloan h2{
+  .section.typeofpersonalloan h2,
+  .section.pl-blogs-container h2{
     font-size: 20px;
     line-height: normal;
     margin-bottom: 13px;
@@ -312,7 +356,15 @@ main .section.highlight {
     padding: 32px 0;
     margin: 0;
 }
+.section.swipper-card-container{
+  padding: 20px 0 0;
+  background-color: rgba(239, 223, 211, 0.5);
+  margin: 0;
+}
 
+.section.bankproducts{
+  background-color: #fff;
+}
 .section.rte-block-container{
     padding: 80px 0;
     background-color: #F5F5F5;

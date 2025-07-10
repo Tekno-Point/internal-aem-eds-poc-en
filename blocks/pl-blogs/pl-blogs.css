@@ -118,8 +118,8 @@
 
 /* Default grey dots */
 .pl-blogs .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   background-color: #ccc;
   opacity: 1;
   border-radius: 50%;
@@ -131,7 +131,7 @@
 /* Active bullet = grey rectangle */
 .pl-blogs .swiper-pagination-bullet-active {
   width: 24px;
-  height: 10px;
+  height: 6px;
   border-radius: 6px;
   background-color: #888;
 }
