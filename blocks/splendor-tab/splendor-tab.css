@@ -143,6 +143,9 @@
     .tab-slide > ul > li:last-child {
         position: static;
     }
+    .tab-slide > ul > li:last-child >p{
+       width: 300px;
+    }
     .tabs-panel > .tab-slide {
         background-image: none;
     }
@@ -162,4 +165,15 @@
     .section.splendor-tab-container>.default-content-wrapper > h2 {
          font-size: 1.75rem;
     }
+
+    .tab-slide > ul {
+    max-width: 683px;
+    width: 100%;
+}
+
+.tab-slide > ul > li {
+    max-width: 146px;
+    width: 100%;
+  
+}
 }

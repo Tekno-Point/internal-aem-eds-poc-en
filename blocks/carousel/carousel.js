@@ -180,29 +180,50 @@ export default function decorate(block) {
     },
     freeMode: true,
     scrollOnFocus: true,
-    on: {
-      init: function () {
-        updateNavButtons(this);
-      },
-      slideChange: function () {
-        updateNavButtons(this);
-        const activeTab = block.querySelector(".swiper-pagination-bullet-active");
-        if (activeTab) {
-          activeTab.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-      },
-    },
+    // on: {
+    //   init: function () {
+    //     updateNavButtons(this);
+    //   },
+    //   slideChange: function () {
+    //     updateNavButtons(this);
+    //     const activeTab = block.querySelector(".swiper-pagination-bullet-active");
+    //     if (activeTab) {
+    //       activeTab.scrollIntoView({ behavior: "smooth", block: "center" });
+    //     }
+    //   },
+    // },
   });
 
   // Scroll bullet into view on click
+  // [prevBtn, nextBtn].forEach((btn) => {
+  //   btn.addEventListener("click", () => {
+  //     const activeTab = block.querySelector(".swiper-pagination-bullet-active");
+  //     if (activeTab) {
+  //       activeTab.scrollIntoView({ behavior: "smooth", block: "center" });
+  //     }
+  //   });
+  // });
+
+
   [prevBtn, nextBtn].forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const activeTab = block.querySelector(".swiper-pagination-bullet-active");
-      if (activeTab) {
-        activeTab.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    });
+  btn.addEventListener("click", () => {
+    const activeBullet = block.querySelector(".swiper-pagination-bullet-active");
+    const paginationContainer = block.querySelector(".swiper-pagination");
+
+    if (activeBullet && paginationContainer) {
+      const bulletLeft = activeBullet.offsetLeft;
+      const containerWidth = paginationContainer.offsetWidth;
+      const bulletWidth = activeBullet.offsetWidth;
+
+      // Scroll the pagination container so the active bullet is centered
+      paginationContainer.scrollTo({
+        left: bulletLeft - (containerWidth / 2) + (bulletWidth / 2),
+        behavior: "smooth"
+      });
+    }
   });
+});
+
 
   // Update button states
   function updateNavButtons(swiper) {
