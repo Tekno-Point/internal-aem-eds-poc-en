@@ -112,8 +112,76 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+           {
+            "name": "Banner Image",
+            "value": "banner-image"
+          },
+          {
+            "name": "Hero Banner",
+            "value": "hero-banner"
+          },
+          {
+            "name": "Benefits PL Calculator",
+            "value": "personalLoanBenefits"
+          },
+          {
+            "name": "Types of Personal loan",
+            "value": "typeOfPersonalLoan"
+          },
+          {
+            "name": "Bank Products",
+            "value": "bankProducts"
+          },
+          {
+            "name": "Mid Banner",
+            "value": "mid-banner"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
+          },
+          {
+            "name": "PL Faqs",
+            "value": "pl-faqs"
+          },
+          {
+            "name": "Banner Breadcrumb",
+            "value": "banner-breadcrumb"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
       }
     ]
   },
@@ -128,6 +196,11 @@
         "multi": false
       },
       {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
@@ -137,8 +210,77 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "FAQs Calculator",
+            "value": "faqs-calculator"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col_head",
+        "label": "Accordion Head"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_body",
+        "label": "Accordion Body"
+      }
+    ]
+  },
+  {
+    "id": "faq-accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col_head",
+        "label": "Accordion Head"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "col1_body",
+        "label": "Accordion Body"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Hero Banner",
+            "value": "hero-banner"
+          },
+          {
+            "name": "Feature Cards",
+            "value": "feature-cards"
+          },
+          {
+            "name": "Table",
+            "value": "table"
+          }
+        ]
+      },
       {
         "component": "text",
         "valueType": "number",
@@ -222,6 +364,175 @@
         "label": "Description",
         "valueType": "string",
         "description": "Description or additional details for the navigation item."
+      }
+    ]
+  },
+  
+  {
+    "id": "swipper-card-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "rte-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "git-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "personal-loan-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "mid-banner-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pl-blogs-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "pl-swipper-blogs-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   }

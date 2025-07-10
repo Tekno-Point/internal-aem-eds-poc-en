@@ -1,5 +1,4 @@
-export default function decorate(block) {
-  // Clone the original block so we can keep the classnames
+export function decorateTable(block) {
   const originalClassList = Array.from(block.classList);
 
   const rows = Array.from(block.children).map((row) =>
@@ -25,3 +24,26 @@ export default function decorate(block) {
   tableWrapper.appendChild(table);
   block.replaceWith(tableWrapper);
 }
+export default function decorate(block) {
+  if(block.classList.contains('table')){
+    decorateTable(block)
+    return block;
+  }
+  const cols = [...block.firstElementChild.children];
+  block.classList.add(`columns-${cols.length}-cols`);
+
+  // setup image columns
+  [...block.children].forEach((row) => {
+    [...row.children].forEach((col) => {
+      const pic = col.querySelector('picture');
+      if (pic) {
+        const picWrapper = pic.closest('div');
+        if (picWrapper && picWrapper.children.length === 1) {
+          // picture is only content in column
+          picWrapper.classList.add('columns-img-col');
+        }
+      }
+    });
+  });
+}
+

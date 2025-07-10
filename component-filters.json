@@ -15,7 +15,17 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "swipper-card",
+      "rte-block",
+      "git-block",
+      "personal-loan-block",
+      "mid-banner",
+      "pl-swipper-blogs",
+      "pl-blogs",
+      "faq-accordion",
+      "overview-rte",
+      "cf-fragment"
     ]
   },
   {
