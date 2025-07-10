@@ -290,27 +290,21 @@ input[type="date"] {
 }
 
 .section.tabs-container>.card-wrapper {
-  padding: 85px 12px 0;
+  padding: 100px 12px 30px;
   max-width: 1140px;
   overflow: hidden;
   position: relative;
 }
 
-/* .section.tabs-container>.card-wrapper .swiper-button-prev {
-  left: 0;
-}
-
-.section.tabs-container>.card-wrapper .swiper-button-next {
-  right: 0;
-} */
-
 .section.tabs-container>.card-wrapper .swiper-pagination {
-  top: 305px;
+  top: 335px;
 }
 
-.section.tabs-container>.card-wrapper .swiper-pagination
+.section.tabs-container>.card-wrapper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #0088dd;
+}
 
-.tabs.form-tabs>div>.flight-card,
+.section.tabs-container>.card-wrapper .swiper-pagination .tabs.form-tabs>div>.flight-card,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card {
   min-height: 220px;
   display: flex;
@@ -318,44 +312,85 @@ input[type="date"] {
   justify-content: center;
   gap: 32px;
   background: linear-gradient(180deg, #ffffff 0%, #ecf2ff 100%);
-  box-shadow: 0px 4px 4px 0px #0640ad33;
+  box-shadow: 0px 4px 4px 2px #0640ad33;
   border-radius: 10px;
   font-family: "roboto";
   color: #0088dd;
   font-size: 12px;
 }
 
+
 .tabs.form-tabs>div>.flight-card>.flight-info,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info {
-  max-width: 500px;
+  max-width: 540px;
   width: 100%;
   min-height: 180px;
   border-right: 0.5px solid #0088dd;
   display: flex;
   gap: 30px;
-  justify-content: center;
+  padding-right: 20px;
+  /* justify-content: center; */
   align-items: center;
 }
 
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.from-info>.city,
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.to-info>.city {
+  color: #0088dd;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  font-weight: 500;
+}
+
 .tabs.form-tabs>div>.flight-card>.flight-info>.from-info>strong,
-.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>strong {
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.from-info>.city>strong,
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.to-info>.city>strong {
   color: white;
-  background: #0f1e7d;
-  padding: 2px;
+  background: #0088dd;
+  padding: 2px 7px;
   border-radius: 2px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.from-info>.terminal,
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.to-info>.terminal {
+  margin: 10px 0 0;
+}
+
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.from-info>.date,
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.to-info>.date {
+  margin: 0;
 }
 
 .tabs.form-tabs>div>.flight-card>.airline-details,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details {
-  max-width: 309px;
+  max-width: 400px;
   width: 100%;
 }
 
 .tabs.form-tabs>div>.flight-card>.airline-details,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details {
   display: flex;
-  flex-direction: column;
-  gap: 9px;
+  align-items: center;
+}
+
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details .airline-details-left {
+  flex: 2;
+}
+
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details .airline-details-left button {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0.11px;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  background: #0088dd;
+  margin: 20px 0 0;
+  width: 80%;
 }
 
 .tabs.form-tabs>div>.flight-card>.airline-details>h4,
@@ -375,6 +410,12 @@ input[type="date"] {
 .tabs.form-tabs>div>.flight-card>.airline-details>div,
 .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details>div {
   font-weight: 600;
+  font-size: 12px;
+}
+
+.section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details .Price {
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .card-wrapper {

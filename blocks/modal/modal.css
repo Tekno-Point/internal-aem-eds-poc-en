@@ -138,10 +138,6 @@ body.modal-open {
     text-align: center;
   }
 
-  .modal-content .section.login-modal-wrapper form > div .field-wrapper.submit-wrapper:last-child {
-    display: none;
-  }
-
   .modal-content .section.login-modal-wrapper form .field-wrapper.submit-wrapper button {
     margin: 35px 0 0;
     padding: 16px;
@@ -150,7 +146,7 @@ body.modal-open {
     background-color: #0088dd;
     border-color: #0088dd;
     line-height: 1.5;
-    border-radius: .25rem;
+    border-radius: 8px;
     font-weight: 400;   
     font-size: 14px;
     width: 40%;
