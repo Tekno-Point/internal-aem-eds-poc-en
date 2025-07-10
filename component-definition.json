@@ -158,7 +158,7 @@
           }
         },
         {
-          "title": "ImageBanner",
+          "title": "Image Banner",
           "id": "imagebanner",
           "plugins": {
             "xwalk": {
