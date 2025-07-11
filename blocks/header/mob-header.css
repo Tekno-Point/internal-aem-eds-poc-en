@@ -51,12 +51,13 @@
   .header .main-link a {
     color: #9d1d27 !important;
     font-size: 14px !important;
+    font-weight: bold !important;
     background: transparent !important;
     font-weight: 700 !important;
     padding: 0 !important;
   }
 
-  #nav > div.section.nav-sections > div.default-content-wrapper > ul > li:nth-child(3) > div > div.fragment-wrapper > div > div.default-content-wrapper {
+  #nav>div.section.nav-sections>div.default-content-wrapper>ul>li:nth-child(3)>div>div.fragment-wrapper>div>div.default-content-wrapper {
     display: block;
   }
 
@@ -122,6 +123,8 @@
 
   .nav-tools>div>p:first-child strong {
     opacity: 0.6;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .nav-tools>div>p:nth-child(2) {
@@ -221,6 +224,11 @@
     max-height: var(--scroll-height);
   }
 
+  header nav .nav-sections .default-content-wrapper .tab-pane .top-nav-left>li[aria-expanded='true']>a {
+    color: #9d1d27;
+    font-weight: bold;
+  }
+
   header nav .nav-sections .default-content-wrapper .tab-pane .top-nav-left>li>a {
     padding: 20px 15px;
     position: relative;
@@ -231,6 +239,8 @@
     border-radius: 0;
     height: unset;
     pointer-events: none;
+    color: #000;
+    font-weight: 400;
   }
 
   .nav-list-wrapper .dropdown-content {
@@ -291,10 +301,23 @@
     color: #801c1e;
     font-size: 12px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
     padding: 0 10px 0 0;
     margin: 0 5px;
+  }
+
+  .header nav .nav-sections .default-content-wrapper .dropdown-content .link::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    vertical-align: middle;
+    border: solid #9d1d27;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(315deg);
+    transition: transform 0.3s ease;
   }
 
   .nav-sections .grdiantCard .icon-Right {
@@ -340,6 +363,7 @@
   }
 
   header nav .nav-sections .nav-drop[aria-expanded='true']>ul {
+    padding-top: 25px;
     max-height: var(--scroll-height);
   }
 
