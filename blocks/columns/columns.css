@@ -59,7 +59,7 @@
 
 .columns.block.feature-cards{
   position: absolute;
-  top: 80%;
+  margin-top: -7% ;
 }
 @media (max-width:767px){
   .columns.block.feature-cards > div > div{
@@ -88,6 +88,7 @@
   position: absolute;
   top: 93%;
   margin-right: 24px;
+  margin-top: 0;
 }
 }
 
