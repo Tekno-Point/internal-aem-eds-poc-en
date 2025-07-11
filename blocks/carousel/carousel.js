@@ -82,13 +82,14 @@ function wrapImageInLink(block) {
     if (block.classList.contains('services-carousel') || block.classList.contains('experience-carousel')) {
         const slides = block.querySelectorAll('.swiper-slide');
         slides.forEach(slide => {
-            const anchor = slide.querySelectorAll('p.button-container a');
-            const link = anchor.href;
+            const anchor = slide.querySelector('p.button-container a');
+            if (!anchor) return;
+            const link = anchor?.href;
             const newAnchor = document.createElement('a');
             newAnchor.href = link;
 
             const picture = slide.querySelector('picture');
-            const imgWrapper = picture.parentElement;
+            const imgWrapper = picture?.parentElement;
             newAnchor.append(picture);
             imgWrapper.append(newAnchor);
         })
