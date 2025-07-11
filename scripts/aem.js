@@ -301,6 +301,9 @@ function createOptimizedPicture(
   eager = false,
   breakpoints = [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }],
 ) {
+  if (src == '/idfcfirstbank/media_1c92866e42c352a55d94ed9c8ad6b882232ce065e.webp') {
+    console.log("yes")
+  }
   const url = new URL(src, window.location.href);
   const picture = document.createElement('picture');
   const { pathname } = url;
@@ -673,16 +676,35 @@ async function loadFooter(footer) {
  * @param {Element} section section element
  */
 async function waitForFirstImage(section) {
-  const lcpCandidate = section.querySelector('img');
-  await new Promise((resolve) => {
-    if (lcpCandidate && !lcpCandidate.complete) {
-      lcpCandidate.setAttribute('loading', 'eager');
-      lcpCandidate.addEventListener('load', resolve);
-      lcpCandidate.addEventListener('error', resolve);
-    } else {
-      resolve();
-    }
-  });
+  let lcpCandidate;
+  let isFirstSection = section?.classList?.contains("highlight")
+  if (isFirstSection) {
+    lcpCandidate = section.querySelectorAll("picture >img")
+    lcpCandidate.forEach(async (lcp) => {
+      await new Promise((resolve) => {
+        if (lcp && !lcp.complete) {
+          lcp.setAttribute('loading', 'eager');
+          lcp.addEventListener('load', resolve);
+          lcp.addEventListener('error', resolve);
+        } else {
+          resolve();
+        }
+      });
+    })
+  }
+  else {
+    lcpCandidate = section.querySelector('img');
+    await new Promise((resolve) => {
+      if (lcpCandidate && !lcpCandidate.complete) {
+        lcpCandidate.setAttribute('loading', 'eager');
+        lcpCandidate.addEventListener('load', resolve);
+        lcpCandidate.addEventListener('error', resolve);
+      } else {
+        resolve();
+      }
+    });
+  }
+
 }
 
 /**

@@ -389,12 +389,12 @@ button:focus {
 }
 
 body {
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
 
 @media (max-width: 991px) {
   body {
-    padding-top: 120px;
+    /* padding-top: 120px; */
   }
 }
 
@@ -519,7 +519,7 @@ h6 {
   mix-blend-mode: multiply;
 }
 
-header {
+header .header{
   position: fixed;
   width: 100%;
   top: 0;
