@@ -548,106 +548,52 @@ async function loadPage() {
   await loadLazy(document);
   loadDelayed();
 }
-
-
-async function setSessionStorage() {
-  const dataMapping = {};
-
-  dataMapping.state_city_master = {
-    state: "Delhi",
-    city: "Delhi"
-  };
-
-  function updateStateAndCity(state, city) {
-    dataMapping.state_city_master.state = state;
-    dataMapping.state_city_master.city = city;
-    sessionStorage.setItem('dataMapping', JSON.stringify(dataMapping));
-  }
-
-  function getUserLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const lat = position.coords.latitude;
-          const lng = position.coords.longitude;
-          getStateInfo(lat, lng);
-        },
-        (error) => {
-          updateStateAndCity("Delhi", "Delhi");
-        },
-        // {
-        //   timeout: 10000, 
-        //   maximumAge: 60000, 
-        //   enableHighAccuracy: true 
-        // }
-      );
-    } else {
-      updateStateAndCity("Delhi", "Delhi");
-    }
-  }
-
-  function getStateInfo(lat, lng) {
-    const url = `https://apis.mappls.com/advancedmaps/v1/5b8424bdaf84cda4fccf61d669d85f5a/rev_geocode?lat=${lat}&lng=${lng}`;
-
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(mapplsData => {
-        if (mapplsData.responseCode === 200 && mapplsData.results && mapplsData.results.length > 0) {
-          const result = mapplsData.results[0];
-          const state = result.state || "Delhi";
-          const city = result.city || "Delhi";
-          updateStateAndCity(state, city);
-        } else {
-          updateStateAndCity("Delhi", "Delhi");
-        }
-      })
-      .catch(error => {
-        updateStateAndCity("Delhi", "Delhi");
-      });
-  }
-
-  getUserLocation();
-
-
-  await fetch('https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.state-and-city.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(` Errorr while Fetching Data ${response.status}`);
+// --- Global Data Mapping Loader ---
+if (!window.dataMappingPromise) {
+  window.dataMappingPromise = (async function loadDataMapping() {
+    // Try sessionStorage first
+    let dataMapping = null;
+    try {
+      const cached = sessionStorage.getItem('dataMapping');
+      if (cached) {
+        dataMapping = JSON.parse(cached);
       }
-      return response.json();
-    })
-    .then(apiData => {
-      dataMapping.state_city_master.apiData = apiData.data.stateCity;
-      sessionStorage.setItem('dataMapping', JSON.stringify(dataMapping));
-
-      // Parse and store reverse mapping for easier access
-      var dataMappingParsed = JSON.parse(sessionStorage.getItem("dataMapping"));
-      dataMappingParsed.state_city_master_rev = {};
-      dataMappingParsed.state_city_master_rev.state = [];
-      dataMappingParsed.state_city_master.apiData.filter(item => {
-        if(!dataMappingParsed.state_city_master_rev[item.label]){
-          dataMappingParsed.state_city_master_rev.state.push(item.label);
-          dataMappingParsed.state_city_master_rev[item.label] = {};
-        }
-        item.cities.forEach(city => {
-          dataMappingParsed.state_city_master_rev[item.label][city.code] = {
-            ...city,
-            stateCode: item.code
-          };
+    } catch (e) {}
+    if (!dataMapping) {
+      // Fallback: fetch and build dataMapping
+      try {
+        // Inline fetchAPI and fetchStateCityMaster logic from common.js
+        const stateCityAPI = 'https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.state-and-city.json';
+        const resp = await fetch(stateCityAPI);
+        if (!resp.ok) throw new Error('API error');
+        const data = await resp.json();
+        dataMapping = { state_city_master: {} };
+        dataMapping.state_city_master.state = [];
+        data.data.stateCity.filter(item => {
+          if (!dataMapping.state_city_master[item.label]) {
+            dataMapping.state_city_master.state.push(item.label);
+            dataMapping.state_city_master[item.label] = {};
+          }
+          item.cities.forEach(city => {
+            dataMapping.state_city_master[item.label][city.code] = {
+              ...city,
+              stateCode: item.code
+            };
+          });
         });
-      });
-      sessionStorage.setItem('dataMapping', JSON.stringify(dataMappingParsed));
-      console.log(dataMappingParsed);
-    })
-    .catch(error => {
-      console.error('Error fetching or storing data:', error);
-    });
-
+        // Build reverse mapping for easier access in blocks
+        dataMapping.state_city_master_rev = { state: dataMapping.state_city_master.state };
+        dataMapping.state_city_master.state.forEach(state => {
+          dataMapping.state_city_master_rev[state] = dataMapping.state_city_master[state];
+        });
+        sessionStorage.setItem('dataMapping', JSON.stringify(dataMapping));
+      } catch (e) {
+        dataMapping = null;
+      }
+    }
+    window.dataMapping = dataMapping;
+    return dataMapping;
+  })();
 }
-setSessionStorage();
+
 loadPage();
