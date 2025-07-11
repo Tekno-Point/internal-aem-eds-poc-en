@@ -513,8 +513,9 @@ section.faq-accordion-container h4 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 580px;
+    /* height: 580px; */
     object-fit: cover;
+    margin: unset;
   }
 
   .section.banner-image .default-content-wrapper ol {
