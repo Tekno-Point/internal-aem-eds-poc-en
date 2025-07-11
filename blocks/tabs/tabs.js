@@ -15,8 +15,8 @@ async function getAccessToken() {
       authToken: '',
     },
     body: {
-      clientId: 'ZJRz6bDFxfRPaABeZOShvesqoatIx0AS',
-      clientSecret: 'UNXbe2JgHEJ5BFsp',
+      clientId: '90mlxAxxDduGLaL584G1WYMGs1xsVQJL',
+      clientSecret: 'fK99sDAvUij7GakT',
       grantType: 'client_credentials',
     },
   });
