@@ -56,6 +56,10 @@
     padding: 0 !important;
   }
 
+  #nav > div.section.nav-sections > div.default-content-wrapper > ul > li:nth-child(3) > div > div.fragment-wrapper > div > div.default-content-wrapper {
+    display: block;
+  }
+
   #nav>div.section.nav-sections>div.default-content-wrapper>ul>li:nth-child(3)>div>div.fragment-wrapper>div>div.default-content-wrapper>ul>li {
     padding: 20px 15px;
     background: #d8d8d8;
