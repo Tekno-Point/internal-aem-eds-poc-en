@@ -538,6 +538,11 @@ section.faq-accordion-container h4{
 *{
   font-family: "inter-normal";
 }
+@media (width>=900px) {
+  .section.highlight.hero-banner.banner-image.columns-container{
+    margin-top: 60px;
+  }
+}
 .section.highlight.hero-banner.banner-image.columns-container {
   position: relative;    /* This is critical for absolute positioning */
   width: 100%;
