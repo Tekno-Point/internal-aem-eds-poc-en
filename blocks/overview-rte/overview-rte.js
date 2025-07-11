@@ -1,5 +1,6 @@
 /*eslint-disable */
 export default function decorate(block) {
+  block.id = "overview";
   const heading = block.querySelector('h2');
   const paragraphs = block.querySelectorAll('p');
   // Apply class to heading and first paragraph

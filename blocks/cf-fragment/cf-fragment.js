@@ -114,49 +114,19 @@ export default async function decorate(block) {
             <div class="emi-content">
                 <div class="emi-summary">
                 <div class="emi-header">
-                <p class="emi-title">${title}</p>
-                <h1 class="emi-heading">${heading}</h1>
+                <p class="emi-title">Calculate EMI for Your Personal Loan</p>
             </div>
             <div class="sec-wrapper">
-                    <div class="circle-chart-container">
-                        <div class="circle-chart">
-                            <div class="circle-text-label">${circletext}</div>
-                            <div class="circle-value" id="monthly-payable-amount">₹ 0</div>
-                        </div>
-                    </div>
-                    <div class="legend">
-                        <div class="legend-item">
-                            <span class="legend-color principal"></span>
-                            <div class = "value-wrapper">
-                            <span class="legend-label">PRINCIPAL AMOUNT</span>
-                            <span class="legend-value" id="principal-amount-display">₹ 0</span>
-                            </div>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color interest"></span>
-                            <div class = "value-wrapper">
-                            <span class="legend-label">INTEREST PAYABLE</span>
-                            <span class="legend-value" id="interest-payable-display">₹ 0</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 </div>
                 <div class="emi-controls">
-                    <div class="control-group loan-type">
-                        <label for="loanType">${loanTypeTittle}</label>
-                        <select id="loanType" class="custom-select">
-                            <option value="personal">${loanTypeText}</option>
-                        </select>
-                    </div>
-
                     <div class="control-group loan-amount">
-                        <label for="loanAmountRange">${loanAmountText}</label>
                         <div class="value-txt-wrapper">
                         <div class="amount-words"></div>
                         <div class="input-display-wrapper">
                             <input type="text" id="loanAmountDisplay" class="value-display" value="₹ ${Number(currentLoanAmount).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}">
                         </div>
+                        <div class="amount-text">Amounts</div>
                         </div>
                         <input type="range" id="loanAmountRange" min="${parsedLoanAmountMin}" max="${parsedLoanAmountMax}" value="${currentLoanAmount}">
                         <div class="range-labels">
@@ -167,10 +137,10 @@ export default async function decorate(block) {
 
                     <div class="control-group interest-rate">
                     <div class="value-txt-wrapper">
-                        <label for="interestRateRange">${interestRateText}</label>
                         <div class="input-display-wrapper">
                             <input type="text" id="interestRateDisplay" class="value-display" value="${currentInterestRate} %">
                         </div>
+                        <label for="interestRateRange">${interestRateText}</label>
                     </div>
                         <input type="range" id="interestRateRange" min="${parsedInterestRateMin}" max="${parsedInterestRateMax}" step="0.01" value="${currentInterestRate}">
                         <div class="range-labels">
@@ -181,10 +151,10 @@ export default async function decorate(block) {
 
                     <div class="control-group loan-tenure">
                     <div class="value-txt-wrapper">
-                        <label for="loanTenureRange">${loanTenure}</label>
                         <div class="input-display-wrapper">
                             <input type="text" id="loanTenureDisplay" class="value-display" value="${currentLoanTenure} Months">
                         </div>
+                        <label for="loanTenureRange">Period</label>
                     </div>
                         <input type="range" id="loanTenureRange" min="${parsedLoanTenureMin}" max="${parsedLoanTenureMax}" value="${currentLoanTenure}">
                         <div class="range-labels">
@@ -193,7 +163,8 @@ export default async function decorate(block) {
                         </div>
                     </div>
                     <div class="btn-wrap">
-                     <a href="${buttonUrl}" class="apply-button">${button}</a> 
+                        <p class="btn-wrap-text">You will pay EMI of only,</p>
+                        <p class="btn-wrap-desc">₹212/ Month</p>
                      </div>
                 </div>
             </div>

@@ -59,7 +59,7 @@
 
 .columns.block.feature-cards{
   position: absolute;
-  top: 80%;
+  bottom: 2% ;
 }
 @media (max-width:767px){
   .columns.block.feature-cards > div > div{
@@ -86,8 +86,9 @@
 
 .columns.block.feature-cards{
   position: absolute;
-  top: 93%;
+  top: 56%;
   margin-right: 24px;
+  margin-top: 0;
 }
 }
 
@@ -98,12 +99,18 @@
   border: 1px solid #ddd;
   border-radius: 12px;
 }
-
-.amortization-table {
+.amortization-table.columns.table.block{
+    border: 1px solid red;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.amortization-table.block {
   width: 100%;
   border-collapse: collapse;
   min-width: 600px;
   font-family: Arial, sans-serif;
+  border-radius: 100px;
 }
 
 .amortization-table p{
