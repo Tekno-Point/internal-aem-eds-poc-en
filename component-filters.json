@@ -15,7 +15,12 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "content-fragment",
+      "carousel",
+      "tabs",
+      "search",
+      "form"
     ]
   },
   {
@@ -38,5 +43,21 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "content-fragment",
+    "components": [
+      "content-fragment-item"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": ["tab"]
   }
 ]

@@ -3,7 +3,7 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
-footer .footer > div {
+footer .footer>div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
@@ -13,8 +13,354 @@ footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
+@media (width >=900px) {
+  footer .footer>div {
     padding: 40px 32px 24px;
+  }
+}
+
+
+.footer.block {
+  background-color: #222;
+}
+
+footer .footer.block>div {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer.block>div .section:not(:last-of-type) {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.footer.block .section:first-of-type .default-content-wrapper>ul {
+  padding: 0 15px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  padding: 24px 0;
+}
+
+.footer.block .section:first-of-type .default-content-wrapper>ul>li {
+  display: block;
+  /* max-width: 25%; */
+  max-width: 255px;
+  width: 100%;
+}
+
+.footer.block .section:first-of-type .default-content-wrapper>ul>li h6 {
+  margin: 24px 0;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer.block .section:first-of-type .default-content-wrapper>ul>li>ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.footer.block .section:first-of-type .default-content-wrapper>ul>li>ul>li a {
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.footer.block .section:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+/* .footer.block .section:nth-child(2) {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 30px;
+  gap: 3%;
+  padding: 0 15px 48px;
+} */
+
+.footer.block .section:nth-child(2) .form-wrapper {
+  max-width: 72.37%;
+  width: 100%;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .heading-wrapper,
+.footer.block .section:nth-child(2) .form-wrapper form .heading-wrapper h2 {
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .heading-wrapper {
+  margin: 0 0 8px;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .text-wrapper,
+.footer.block .section:nth-child(2) .form-wrapper form .select-wrapper {
+  margin: 0;
+  max-width: 255px;
+  width: 100%;
+  display: block;
+  margin-right: 30px;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .text-wrapper label,
+.footer.block .section:nth-child(2) .form-wrapper form .select-wrapper label {
+  display: none;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .text-wrapper input,
+.footer.block .section:nth-child(2) .form-wrapper form .select-wrapper select {
+  padding: 8px;
+  margin: 0 0 7px;
+  color: #495057;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .select-wrapper select {
+  appearance: none;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .text-wrapper input:focus,
+.footer.block .section:nth-child(2) .form-wrapper form .select-wrapper select:focus {
+  box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .submit-wrapper {
+  margin: 0;
+  max-width: 141px;
+  width: 100%;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .submit-wrapper .button {
+  margin: 0;
+  max-width: initial;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  background-color: #0088dd;
+  border-radius: 4.8px;
+  transition: all 0.3s ease;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .submit-wrapper .button:hover {
+  background-color: #153d8a;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .selection-wrapper {
+  margin: 7px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .selection-wrapper input {
+  outline: none;
+}
+
+.footer.block .section:nth-child(2) .form-wrapper form .selection-wrapper label {
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.footer.block .section:nth-child(2) .default-content-wrapper {
+  max-width: 27.63%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer.block .section:nth-child(2) .default-content-wrapper ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer.block .section:nth-child(2) .default-content-wrapper ul li h6 {
+  font-size: 14px;
+  line-height: 17px;
+  font-family: sans-serif;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer.block .section:nth-child(2) .default-content-wrapper ul li ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer.block .section:nth-child(2) .default-content-wrapper ul li ul li {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.footer.block .section:nth-child(2) .default-content-wrapper ul li ul li:hover {
+  background-color: #0088dd;
+  border-radius: 50%;
+}
+
+.footer.block .section:nth-child(2) .default-content-wrapper ul li ul li .icon {
+  max-height: 24px;
+  height: 100%;
+  max-width: 40px;
+}
+
+.footer.block .section:last-of-type {
+  max-width: 100%;
+  background-color: #333;
+  margin-top: 48px;
+}
+
+.footer.block .section:last-of-type .default-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.footer.block .section:last-of-type .default-content-wrapper ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 64.04%;
+  width: 100%;
+}
+
+.footer.block .section:last-of-type .default-content-wrapper ul li {
+  max-width: 26.04%;
+  width: 100%;
+}
+
+.footer.block .section:last-of-type .default-content-wrapper ul li a,
+.footer.block .section:last-of-type .default-content-wrapper p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer.block .section:last-of-type .default-content-wrapper p {
+  max-width: 34%;
+  width: 100%;
+  text-align: right;
+  text-transform: none;
+  font-weight: 400;
+}
+
+@media screen and (max-width:768px) {
+
+  footer .footer.block>div .section:first-of-type,
+  .footer.block .section:last-of-type .default-content-wrapper {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .footer.block .section:last-of-type .default-content-wrapper {
+    flex-direction: column;
+  }
+
+  .footer.block .section:first-of-type .default-content-wrapper>ul {
+    flex-direction: column;
+    gap: 8px;
+    padding: 32px 15px 24px;
+  }
+
+  .footer.block .section:first-of-type .default-content-wrapper>ul>li {
+    max-width: 100%;
+  }
+
+  .footer.block .section:nth-child(2):not(:last-of-type) {
+    align-items: start;
+    flex-direction: column;
+    padding: 0 15px;
+    box-sizing: border-box;
+    gap: 24px;
+  }
+
+  .footer.block .section:nth-child(2) .form-wrapper {
+    max-width: 100%;
+  }
+
+  .footer.block .section:nth-child(2) .form-wrapper form {
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+  }
+
+  .footer.block .section:nth-child(2) .form-wrapper form .text-wrapper,
+  .footer.block .section:nth-child(2) .form-wrapper form .select-wrapper {
+    margin: 0 0 16px;
+    max-width: 100%;
+  }
+
+  .footer.block .section:nth-child(2) .form-wrapper form .selection-wrapper {
+    align-items: start;
+  }
+
+  .footer.block .section:nth-child(2) .default-content-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer.block .section:nth-child(2) .default-content-wrapper p,
+  .footer.block .section:nth-child(2) .default-content-wrapper ul {
+    max-width: 100%;
+  }
+
+  .footer.block .section:last-of-type .default-content-wrapper ul,
+  .footer.block .section:last-of-type .default-content-wrapper p {
+    max-width: 100%;
+  }
+
+  .footer.block .section:last-of-type .default-content-wrapper ul li {
+    max-width: 24.04%;
   }
 }

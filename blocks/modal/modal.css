@@ -1,0 +1,153 @@
+body.modal-open {
+    overflow: hidden;
+  }
+  
+  .modal dialog::backdrop {
+    background-color: rgb(19 19 19 / 75%);
+  }
+  
+  .modal dialog {
+    overscroll-behavior: none;
+    overflow-y: hidden;
+    width: calc(100vw - 48px);
+    max-width: 900px;
+    max-height: calc(100dvh - (2 * var(--header-height)));
+    padding: 0;
+    border: 1px solid var(--dark-color);
+  }
+  
+  .modal dialog .modal-content {
+    box-sizing: border-box;
+    overflow-y: auto;
+    overscroll-behavior: none;
+    width: 100%;
+    max-height: calc(100dvh - (2 * var(--header-height)) - 48px);
+    padding: 24px;
+    padding-top: 0;
+    margin-top: 44px;
+  }
+  
+  @media (width >= 900px) {
+    .modal dialog {
+      width: calc(100vw - 64px);
+    }
+    
+    .modal dialog .modal-content {
+      max-height: calc(100dvh - (2 * var(--header-height)) - 64px);
+      padding: 32px;
+      padding-top: 0;
+    }
+  }
+  
+  .modal .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+    color: var(--text-color);
+    line-height: 0;
+  }
+  
+  .modal .close-button .icon.icon-close {
+    content: '';
+    width: 24px;
+    height: 24px;
+  }
+  
+  .modal .close-button .icon.icon-close::before,
+  .modal .close-button .icon.icon-close::after {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 24px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: currentcolor;
+  }
+  
+  .modal .close-button .icon.icon-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg)
+  }
+  
+  .modal dialog .section {
+    padding: 0;
+  }
+
+
+  /* Login modal css */
+  dialog:has(.modal-content .section.login-modal-wrapper) {
+    max-width: 500px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  .modal-content:has(.section.login-modal-wrapper) {
+
+  }
+
+  .modal-content .section.login-modal-wrapper form .field-wrapper.input-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-content .section.login-modal-wrapper form label {
+    font-size: 18px;
+    line-height: 1.42857;
+    color: #333;
+    font-weight: 400;
+  }
+
+  .modal-content .section.login-modal-wrapper form input,
+  .modal-content .section.login-modal-wrapper form select {
+    height: 28px;
+    font-size: 14px;
+    line-height: 1.42857;
+    font-weight: 400;
+    padding: 8px;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+  }
+
+  .modal-content .section.login-modal-wrapper form input:focus,
+  .modal-content .section.login-modal-wrapper form select:focus {
+    outline: unset;
+  }
+
+  .modal-content .section.login-modal-wrapper form select {
+    height: 46px;
+  }
+
+  .modal-content .section.login-modal-wrapper form .field-wrapper.select-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .modal-content .section.login-modal-wrapper form .field-wrapper.submit-wrapper {
+    text-align: center;
+  }
+
+  .modal-content .section.login-modal-wrapper form .field-wrapper.submit-wrapper button {
+    margin: 35px 0 0;
+    padding: 16px;
+    box-shadow: 0 2px 2px 0 rgba(0, 136, 221, 0.14), 0 3px 1px -2px rgba(0, 136, 221, 0.2), 0 1px 5px 0 rgba(0, 136, 221, 0.12);
+    color: #fff;
+    background-color: #0088dd;
+    border-color: #0088dd;
+    line-height: 1.5;
+    border-radius: 8px;
+    font-weight: 400;   
+    font-size: 14px;
+    width: 40%;
+  }

@@ -1,5 +1,29 @@
 [
   {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "keywords",
+        "multi": true,
+        "label": "Keywords"
+      }
+    ]
+  },
+  {
     "id": "image",
     "fields": [
       {
@@ -110,8 +134,32 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Primary Button",
+            "value": "btn-primary"
+          },
+          {
+            "name": "Text Center",
+            "value": "text-center"
+          },
+          {
+            "name": "Hero Banner Carousel",
+            "value": "hero-banner-carousel"
+          },
+          {
+            "name": "CF Wrapper",
+            "value": "cf-wrapper"
+          },
+          {
+            "name": "Login Modal",
+            "value": "login-modal-wrapper"
+          },
+          {
+            "name": "Marque Conatainer",
+            "value": "marque-container"
+          },
+          {
+            "name": "Experience Carousel Container",
+            "value": "exp-carousel-container"
           }
         ]
       }
@@ -187,6 +235,151 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+   {
+    "id": "content-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          },
+          {
+            "name": "Marque",
+            "value": "marque"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "content-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
+      }
+    ]
+  },
+  {
+    "id":"form",
+    "fields":[
+      {
+        "component": "aem-content",
+        "name": "form_url",
+        "label": "Form URL"
+      },
+      {
+        "component": "text",
+        "name": "form_api",
+        "label": "Form API"
+      }
+    ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Pagination",
+            "value": "pagination"
+          },
+          {
+            "name": "Services Carousel",
+            "value": "services-carousel"
+          },
+          {
+            "name": "Deals Carousel",
+            "value": "deals-carousel"
+          },
+          {
+            "name": "Banner Carousel",
+            "value": "banner-carousel"
+          },
+          {
+            "name": "Experience Carousel",
+            "value": "experience-carousel"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Form Tab Style",
+        "options": [
+          {
+            "name": "Form Tabs",
+            "value": "form-tabs"
+          },
+          {
+            "name": "Form Absolute",
+            "value": "form-absolute"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Tab Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Tab Content",
         "valueType": "string"
       }
     ]

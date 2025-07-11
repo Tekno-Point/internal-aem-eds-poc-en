@@ -358,21 +358,28 @@ async function createForm(formHref, submitHref) {
 
   const form = document.createElement('form');
   form.dataset.action = submitHref;
+  const formWrapper = document.createElement('div');
+  form.append(formWrapper);
 
   const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
-  fields.forEach((field) => {
-    if (field) {
-      form.append(field);
-    }
-  });
-
-  // group fields into fieldsets
-  const fieldsets = form.querySelectorAll('fieldset');
-  fieldsets.forEach((fieldset) => {
-    form.querySelectorAll(`[data-fieldset="${fieldset.name}"`).forEach((field) => {
-      fieldset.append(field);
+    fields.forEach((field) => {
+      if (field.dataset.fieldset != 'tripfs') {
+        formWrapper.append(field);
+      }else{
+        form.append(field);
+      }
     });
-  });
+  
+    // group fields into fieldsets
+    const fieldsets = form.querySelectorAll('fieldset');
+    fieldsets.forEach((fieldset) => {
+      form.querySelectorAll(`[data-fieldset="${fieldset.name}"`).forEach((field) => {
+        fieldset.append(field);
+        if(fieldset.name == 'tripfs'){
+          form.append(fieldset);
+        }
+      });
+    });
 
   return form;
 }
@@ -400,31 +407,31 @@ async function handleSubmit(form) {
   const submit = form.querySelector('button[type="submit"]');
   try {
     form.setAttribute('data-submitting', 'true');
-    submit.disabled = true;
+    // submit.disabled = true;
 
-    // create payload
-    const payload = generatePayload(form);
-    const response = await fetch(form.dataset.action, {
-      method: 'POST',
-      body: JSON.stringify({ data: payload }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    if (response.ok) {
-      if (form.dataset.confirmation) {
-        window.location.href = form.dataset.confirmation;
-      }
-    } else {
-      const error = await response.text();
-      throw new Error(error);
-    }
+    // // create payload
+    // const payload = generatePayload(form);
+    // const response = await fetch(form.dataset.action, {
+    //   method: 'POST',
+    //   body: JSON.stringify({ data: payload }),
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // });
+    // if (response.ok) {
+    //   if (form.dataset.confirmation) {
+    //     window.location.href = form.dataset.confirmation;
+    //   }
+    // } else {
+    //   const error = await response.text();
+    //   throw new Error(error);
+    // }
   } catch (e) {
     // eslint-disable-next-line no-console
     console.error(e);
   } finally {
     form.setAttribute('data-submitting', 'false');
-    submit.disabled = false;
+    // submit.disabled = false;
   }
 }
 

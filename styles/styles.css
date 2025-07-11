@@ -53,7 +53,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -112,12 +112,33 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 40px;
+  color: #0088dd;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -142,7 +163,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -228,22 +249,22 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }
@@ -254,4 +275,28 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+.section.btn-primary .default-content-wrapper > p.button-container a {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 18px 36px;
+  background-color: #0088dd;
+  color: #FFFFFF;
+  border-radius: 4.8px;
+  margin: 30px 0 0;
+  text-transform: uppercase;
+}
+
+.section.btn-primary .default-content-wrapper > p.button-container a:hover {
+  background: #153d8a;
+}
+
+.section.btn-primary.text-center .default-content-wrapper{
+  text-align: center;
+}
+
+header nav {
+  height: var(--nav-height);
 }
