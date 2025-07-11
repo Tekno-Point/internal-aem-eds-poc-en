@@ -400,7 +400,7 @@ section.faq-accordion-container h4{
   background-color: #9B1E26;
 }
 .section.banner-image .default-content-wrapper{
-  position: relative;
+  width: 100%;
 }
   .section.banner-image > div > ol{
     position: absolute;
@@ -436,10 +436,7 @@ section.faq-accordion-container h4{
     display: none;
   }
 
-    .section.banner-image .default-content-wrapper p:nth-child(2){
-    margin: 0 -200px;
-   }
-      .section.banner-image .default-content-wrapper p img{
+  .section.banner-image .default-content-wrapper p img{
     width: 100%;
    }
 
@@ -458,9 +455,9 @@ section.faq-accordion-container h4{
   display: None;
 }
 
-.section.banner-image .default-content-wrapper{
+/* .section.banner-image .default-content-wrapper{
   position: relative;
-}
+} */
    .section.banner-image h1{
     top: 1%;
     font-size: 24px;
@@ -475,23 +472,23 @@ section.faq-accordion-container h4{
         font-weight: 300;
         line-height: 18px;
         letter-spacing: 1.3px;
-        top: 4%;
+        top: 5%;
         padding: 0 10px;
     }
 
   .section.banner-image .default-content-wrapper .button-container{
     position: absolute;
-    top: 6%;
+    top: 7%;
     text-align: center;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
   }
+  .section.banner-image .default-content-wrapper .button-container a{
+     padding: 14px 34px;
+  }
 }
-
-
-
 
 .section.swipper-card-container{
   padding: 20px 0 0;
@@ -538,6 +535,29 @@ section.faq-accordion-container h4{
   margin-bottom: 28px;
 }
 
+<<<<<<< HEAD
 *{
   font-family: "inter-normal";
 }
+=======
+.section.highlight.hero-banner.banner-image.columns-container {
+  position: relative;    /* This is critical for absolute positioning */
+  width: 100%;
+  height: 580px;
+}
+
+.section.highlight.hero-banner.banner-image.columns-container picture,
+.section.highlight.hero-banner.banner-image.columns-container picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;        /* Full viewport width */
+  height: auto;        /* Maintain aspect ratio */
+  object-fit: cover;   /* Ensures cropping if necessary */
+}
+@media (max-width:767px) {
+  .section.highlight.hero-banner.banner-image.columns-container{
+    height: 1250px;
+  }
+}
+>>>>>>> 5509c346c7478abbc991ea9e9e67a46b2b3d4249
