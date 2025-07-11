@@ -244,7 +244,7 @@ header nav .nav-sections ul>li>ul>li {
     color: #0056b3;
   }
 
-  header nav .nav-sections .default-content-wrapper >ul >li.nav-drop:first-child:after {
+  header nav .nav-sections .default-content-wrapper>ul>li.nav-drop:first-child:after {
     /* content: '';
     display: inline-block;
     position: absolute;
@@ -310,7 +310,7 @@ header nav .nav-sections ul>li>ul>li {
   header nav .nav-sections .default-content-wrapper>ul>li:hover>ul {
     display: block;
     position: absolute;
-    width: 200px;
+    width: 260px;
     margin-top: 16px;
     padding: 16px;
     padding: 12px 11px;
@@ -318,9 +318,9 @@ header nav .nav-sections ul>li>ul>li {
     white-space: initial;
     z-index: 99;
     top: 20px;
-    
+
   }
-  
+
   header nav .nav-sections .default-content-wrapper>ul>li:hover p a {
     border-radius: 8px 8px 0px 0px;
     background: #f7f7f7;
@@ -330,7 +330,8 @@ header nav .nav-sections ul>li>ul>li {
     font-weight: bold;
     cursor: pointer;
   }
-   header nav .nav-sections .default-content-wrapper>ul>li:nth-child(4):hover p {
+
+  header nav .nav-sections .default-content-wrapper>ul>li:nth-child(4):hover p {
     border-radius: 8px 8px 0px 0px;
     background: #f7f7f7;
     height: 28px;
@@ -339,7 +340,8 @@ header nav .nav-sections ul>li>ul>li {
     font-weight: bold;
     cursor: pointer;
   }
-    header nav .nav-sections .default-content-wrapper>ul>li:nth-child(5):hover p {
+
+  header nav .nav-sections .default-content-wrapper>ul>li:nth-child(5):hover p {
     border-radius: 8px 8px 0px 0px;
     background: #f7f7f7;
     height: 28px;
@@ -369,20 +371,22 @@ header nav .nav-sections ul>li>ul>li {
 
   header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
     /* padding: 4px 0; */
-    padding: 12px 11px;
+    /* padding: 12px 11px; */
     color: #353535;
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
     border-bottom: 1px solid #f1f1f1;
   }
- header nav .nav-sections .default-content-wrapper>ul>li>ul>li :hover {
+
+  header nav .nav-sections .default-content-wrapper>ul>li>ul>li :hover {
     color: #9d1d27;
     font-weight: 700;
     background: #f1f1f1;
     border-radius: 4px;
     width: 100%;
   }
+
   .nav-tools {
     flex-grow: 1;
     flex-basis: 100%;
@@ -462,6 +466,7 @@ header nav .nav-sections ul>li>ul>li {
     list-style: none;
     padding: unset;
   }
+
   .nav-tools>div>ul>li>ul {
     list-style: none;
     padding: unset;
@@ -730,72 +735,118 @@ header nav .nav-tools {
   }
 }
 
-.sectionlast{
-      background: #f5f5f5;
-    padding: 0 70px;
-    height: 50px;
-    align-items: center;
-    width: 100%;
-    box-shadow: 0px 4px 8px rgba(37, 36, 59, .1);
-    display: flex;
-    justify-content: space-between;
-}
-.nav-tools>div>ul>li:first-child{
-  border: 1px solid #353535;
-    border-radius: 50px;
-    background: rgba(0, 0, 0, 0);
-    margin-left: 3px;
-    align-items: center;
-    min-width: 150px;
-    padding: 0px 40px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    letter-spacing: -0.6px;
-    padding: 7px 22px;
-    height: fit-content;
-}
-.nav-tools>div>ul>li:last-child{
+.sectionlast {
+  position: relative;
+  background: #f5f5f5;
+  padding: 0 70px;
+  height: 50px;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(37, 36, 59, .1);
   display: flex;
-    min-width: 101px;
-    padding: 7px 22px;
-    font-weight: 500;
-    font-size: 14px;
-    color: #fff;
-    background-color: #902a2c;
-    border-radius: 50px;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
 }
 
-.icon-login_header{
-    height: 15px;
-    width: 14px;
+.sectionlast::after {
+  content: "";
+  position: absolute;
+  width: 152px;
+  height: 50px;
+  left: -149px;
+  background-color: #f5f5f5;
+  z-index: 0;
+  box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
 }
-.all-drop-down .grdiantCard a .title span {
-    width: 18px;
-    height: 18px;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    border-radius: 20px;
-    box-shadow: 0px 1px 2.5px rgba(145, 42, 44, .24);
-    top: 0;
-    position: relative;
+
+.sectionlast::before {
+  content: "";
+  position: absolute;
+  width: 152px;
+  height: 50px;
+  right: -149px;
+  background-color: #f5f5f5;
+  z-index: 0;
+  box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
 }
-.grdiantCard a span {
-    background: #fff;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+
+.nav-tools>div>ul>li:first-child {
+  border: 1px solid #353535;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0);
+  margin-left: 3px;
+  align-items: center;
+  min-width: 150px;
+  padding: 0px 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.6px;
+  padding: 7px 22px;
+  height: fit-content;
 }
-.grdiantCard .title{
+
+.nav-tools>div>ul>li:last-child {
   display: flex;
-    justify-content: space-between;
-    width: 100%;
+  min-width: 101px;
+  padding: 7px 22px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  background-color: #902a2c;
+  border-radius: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-login_header {
+  height: 15px;
+  width: 14px;
+}
+
+.all-drop-down .grdiantCard a .title span {
+  width: 18px;
+  height: 18px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 20px;
+  box-shadow: 0px 1px 2.5px rgba(145, 42, 44, .24);
+  top: 0;
+  position: relative;
+}
+
+.grdiantCard a span {
+  background: #fff;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.grdiantCard .title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header nav .nav-sections .default-content-wrapper>ul>li:nth-child(6)>ul {
+  top: 28px;
+  right: 0px;
+  /* width: 300px; */
+}
+
+.header nav .nav-sections .default-content-wrapper>ul>li:nth-child(6)>ul::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 140px;
+  width: 20px;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--light-color);
 }

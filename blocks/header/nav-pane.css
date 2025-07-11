@@ -8,13 +8,6 @@
     display: block;
 }
 }
-
-/*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
  :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -51,10 +44,6 @@
 *::after {
     box-sizing: border-box;
 }
-
-
-
-
 .clearfix {
   display: inline-block;
 }
@@ -240,7 +229,7 @@ button:focus {
 }
 
 .p0 {
-  padding: 0px !important;
+  padding: 0px ;
 }
 
 .relative {
@@ -536,13 +525,13 @@ header {
   top: 0;
   left: 0;
   z-index: 4;
-  height: 100px;
+  height: 110px;
   background: #fff;
   transition: all .1s ease
 }
 
 header.zindex {
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 
@@ -1774,7 +1763,7 @@ header.d-lg-none .top-nav-right ul li:last-child {
 
 @media(max-width: 767px) {
     .top-nav-container .top-nav .btn-box .btn-white {
-        border: solid 1px #9d1d27 !important;
+        border: solid 1px #9d1d27;
         padding: 8px 15px;
         margin-left: 15px;
         font-size: 14px;
@@ -1786,7 +1775,7 @@ header.d-lg-none .top-nav-right ul li:last-child {
     .top-nav-container .top-nav .btn-box .btn-white#dropdownMenuHelp {
         background-color: rgba(0, 0, 0, 0);
         color: #353535;
-        border-color: #353535 !important;
+        border-color: #353535 ;
     }
 }
 
