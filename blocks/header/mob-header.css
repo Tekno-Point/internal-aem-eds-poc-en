@@ -7,10 +7,6 @@
     height: unset;
   }
 
-  header nav#nav p {
-    padding: 0;
-  }
-
   #nav>div.section.nav-sections>div.default-content-wrapper>ul>li:nth-child(3)>div>div.fragment-wrapper {
     width: 100%;
   }
@@ -74,6 +70,9 @@
     background: transparent;
   }
 
+  .nav-sections .nav-drop .button-container {
+    padding: 0;
+  }
 
   .nav-brand {
     padding-left: 15px;
@@ -381,7 +380,11 @@
     height: 14px;
   }
 
-  #nav > div.section.nav-sections > div.default-content-wrapper > ul > li:nth-child(1) > ul > li:nth-child(1) > a {
+  header .nav-sections .nav-drop>ul>li>.button-container {
+    padding: 0;
+  }
+
+  #nav>div.section.nav-sections>div.default-content-wrapper>ul>li:nth-child(1)>ul>li:nth-child(1)>a {
     background: linear-gradient(135deg, #9d1d27 0.12%, #6e0a0f 100%);
   }
 
