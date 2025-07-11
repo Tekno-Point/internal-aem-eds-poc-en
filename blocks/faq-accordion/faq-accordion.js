@@ -70,7 +70,6 @@ export default function decorate(block) {
 
       if (!isOpen) {
         item.classList.add('open');
-
         answer.style.maxHeight = 'none'; // temporarily unset
         // const height = answer.scrollHeight + 'px';
         answer.style.maxHeight = '0';     // reset before transition

@@ -13,10 +13,9 @@ header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'brand brand hamburger' var(--nav-height) 'tools tools tools' 1fr / auto 1fr auto;
-  grid-template-columns: 1fr 1fr 1fr;
+    'brand cust-service hamburger' var(--nav-height) 'tools tools tools' 1fr / auto 1fr auto;
+  grid-template-columns: 1fr 1fr 0.3fr;
   align-items: center;
-  gap: 0 24px;
   margin: auto;
   max-width: 1248px;
   height: var(--nav-height);
@@ -47,6 +46,9 @@ header nav[aria-expanded="true"] {
   letter-spacing: -0.6px;
 }
 
+#nav > div.section.sectionlast.fragment-container > div.fragment-wrapper > div > div.default-content-wrapper {
+  display: none;
+}
 
 .header nav .nav-sections .default-content-wrapper>ul>li a {
   border-radius: 20px;
@@ -69,10 +71,6 @@ header nav[aria-expanded="true"] {
     padding: 0 32px;
   }
 
-  header nav[aria-expanded='true'] {
-    min-height: 0;
-    overflow: visible;
-  }
   .sectionlast::after {
   content: "";
   position: absolute;
@@ -416,6 +414,7 @@ header nav .nav-sections ul>li>ul>li {
     border-radius: 4px;
     width: 100%;
   }
+
   .nav-tools {
     flex-grow: 1;
     flex-basis: 100%;

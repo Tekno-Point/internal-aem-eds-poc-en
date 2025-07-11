@@ -253,12 +253,40 @@ export default async function decorate(block) {
     });
   }
 
+  // Insert 'Explore Personal Banking' as second li in nav-sections
+  const navSectionsUl = nav.querySelector('#nav > div.section.nav-sections > div.default-content-wrapper > ul');
+  if (navSectionsUl) {
+    const newLi = document.createElement('li');
+    newLi.innerHTML = '<div class="main-link"><a href="//www.idfcfirstbank.com">Explore Personal Banking</a></div>';
+    if (navSectionsUl.children.length > 0) {
+      navSectionsUl.insertBefore(newLi, navSectionsUl.children[1] || null);
+    } else {
+      navSectionsUl.appendChild(newLi);
+    }
+  }
+
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
+
+  // Move nav-tools li:nth-child(1) into hamburger in mobile view
+  if (!isDesktop.matches) {
+    const navToolsLi1 = nav.querySelector('#nav > div.section.nav-tools > div > ul > li:nth-child(1)');
+    if (navToolsLi1) {
+      // Convert li to button
+      const button = document.createElement('button');
+      
+      button.textContent = navToolsLi1.textContent;
+      // Copy classes (optional, or set your own)
+      button.id = 'cust-service';
+
+      // Append as first child
+      nav.insertBefore(button, nav.firstChild);
+    }
+  }
   hamburger.addEventListener('click', () => {
     toggleMenu(nav, navSections);
     // Add click event listeners to .drop-down elements inside .sectionlast, only once
