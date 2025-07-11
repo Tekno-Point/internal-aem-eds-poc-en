@@ -269,6 +269,12 @@ main>.section:first-of-type {
   }
 }
 
+@media (width <=768px) {
+  h3 {
+    font-size: 25px;
+  }
+}
+
 /* section metadata */
 main .section.light,
 main .section.highlight {

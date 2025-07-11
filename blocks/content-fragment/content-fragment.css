@@ -228,17 +228,41 @@
         flex-direction: column;
     }
 
-    .section.cf-wrapper {
-        padding-top: 440px;
-        margin: 0px 25px 0 25px;
-    }
-
     .section.cf-wrapper .content-fragment .carousel {
         padding: 10px 2px 18px;
     }
 
     .section.cf-wrapper .content-fragment .carousel .swiper-button-next {
         right: 0;
+    }
+
+    .section.cf-wrapper {
+        padding-top: 50px;
+        padding: 50px 20px 0 20px;
+    }
+
+    .section.cf-wrapper .content-fragment .carousel {
+        padding: 10px 2px 65px;
+    }
+
+    .section.cf-wrapper .content-fragment .carousel .swiper-button-next {
+        right: 0;
+    }
+
+    .content-fragment>div>div>.fares-carousel-container>.fares-carousel-content>.fr-secondary-filters>.fr-d-inline-block>.fr-filters-left {
+        justify-content: left;
+    }
+
+    .popover-fields-wrapper>.popover-fields-row {
+        flex-direction: column;
+    }
+
+    .fr-d-inline-block>.fr-filters-left>.filter-group>.filter-item {
+        padding: 0 32px 0 20px;
+    }
+
+    .fr-d-inline-block>.fr-filters-left>.filter-group>.filter-item::after {
+        top: 9px;
     }
 }
 
@@ -353,6 +377,12 @@
     border-bottom: 1px solid rgb(212, 212, 212);
 }
 
+@media (width <=768px) {
+    .route-popover>.popover-body-content {
+        padding: 20px;
+    }
+}
+
 .popover-header>.popover-title {
     display: none;
 }
@@ -452,6 +482,12 @@
     font-size: 15px;
 }
 
+@media (width <=768px) {
+    .popover-body {
+        left: 18px !important;
+    }
+}
+
 .fr-sr-only {
     display: none;
 }
@@ -479,6 +515,12 @@
     border-radius: 10px;
 }
 
+@media (width <=768px) {
+    .fr-sortby-wrapper>div {
+        padding: 20px 10px 0;
+    }
+}
+
 .fr-sortby-wrapper>div:hover {
     color: rgb(6, 6, 99);
 }
@@ -504,7 +546,7 @@
         content: "";
         display: inline-block;
         position: absolute;
-        top: 12px;
+        top: 25px;
         transform: rotate(135deg);
         width: 6px;
         height: 6px;
@@ -512,7 +554,7 @@
         border-radius: 0 1px 0 0;
         border-width: 3px 3px 0 0;
         color: #0088dd;
-        left: 93px;
+        left: 75px;
     }
 
     .fr-sortby-wrapper>div {

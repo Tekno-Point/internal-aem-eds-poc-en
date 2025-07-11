@@ -46,4 +46,9 @@
     .section.carousel-container {
         margin: 50px 20px 0 35px;
     }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
 }

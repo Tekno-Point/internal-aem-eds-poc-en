@@ -160,6 +160,10 @@
           {
             "name": "Experience Carousel Container",
             "value": "exp-carousel-container"
+          },
+          {
+            "name": "Stcky Navigation",
+            "value": "sticky navigation"
           }
         ]
       }
