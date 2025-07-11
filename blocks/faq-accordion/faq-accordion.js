@@ -1,46 +1,53 @@
-export default function decorate(block) {
+import "../accordion/accordion.js"
 
-  block.id = "faqs"
+export default function decorate(block) {
+  block.id = 'faqs';
+
   const items = [...block.children].filter(
     (item) => item.querySelectorAll('div').length >= 2
   );
 
-  // Clear block
+  // Clear block and re-structure
   block.innerHTML = '';
 
   const visibleCount = 3;
+
   items.forEach((item, index) => {
     item.classList.add('faq-accordion-item');
+
     const question = item.children[0];
     const answer = item.children[1];
 
     question.classList.add('faq-accordion-label');
     answer.classList.add('faq-accordion-body');
 
-    // Hide body by default
+    // Hide content by default
     answer.style.maxHeight = '0px';
     answer.style.overflow = 'hidden';
 
     if (index < visibleCount) item.classList.add('visible');
+
     block.appendChild(item);
   });
 
-  // Add More/Less Button
+  // Add toggle button
   const toggleBtn = document.createElement('button');
   toggleBtn.className = 'faq-accordion-toggle-btn';
   toggleBtn.textContent = 'More FAQs';
   block.appendChild(toggleBtn);
 
   let expanded = false;
+
   toggleBtn.addEventListener('click', () => {
     expanded = !expanded;
     items.forEach((item, i) => {
+      const answer = item.querySelector('.faq-accordion-body');
       if (expanded || i < visibleCount) {
         item.classList.add('visible');
       } else {
         item.classList.remove('visible');
         item.classList.remove('open');
-        item.querySelector('.faq-accordion-body').style.maxHeight = '0px';
+        answer.style.maxHeight = '0px';
       }
     });
     toggleBtn.textContent = expanded ? 'Less FAQs' : 'More FAQs';
@@ -54,16 +61,21 @@ export default function decorate(block) {
     question.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
 
-      // Close all others
+      // Close all open items
       items.forEach((el) => {
         el.classList.remove('open');
-        el.querySelector('.faq-accordion-body').style.maxHeight = '0px';
+        const body = el.querySelector('.faq-accordion-body');
+        body.style.maxHeight = '0px';
       });
 
-      // Open clicked one
       if (!isOpen) {
         item.classList.add('open');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
+
+        answer.style.maxHeight = 'none'; // temporarily unset
+        // const height = answer.scrollHeight + 'px';
+        answer.style.maxHeight = '0';     // reset before transition
+        void answer.offsetHeight;         // force reflow
+        answer.style.maxHeight = "fit-content";  // animate to actual height
       }
     });
   });

@@ -6,7 +6,7 @@ export function decorateTable(block) {
   );
 
   const tableWrapper = document.createElement('div');
-  // tableWrapper.classList.add('amortization-table-wrapper');
+  tableWrapper.classList.add('amortization-table-wrapper');
 
   const table = document.createElement('table');
   table.classList.add('amortization-table', ...originalClassList);
