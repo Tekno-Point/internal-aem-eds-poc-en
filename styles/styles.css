@@ -535,11 +535,9 @@ section.faq-accordion-container h4{
   margin-bottom: 28px;
 }
 
-<<<<<<< HEAD
 *{
   font-family: "inter-normal";
 }
-=======
 .section.highlight.hero-banner.banner-image.columns-container {
   position: relative;    /* This is critical for absolute positioning */
   width: 100%;
@@ -560,4 +558,3 @@ section.faq-accordion-container h4{
     height: 1250px;
   }
 }
->>>>>>> 5509c346c7478abbc991ea9e9e67a46b2b3d4249
