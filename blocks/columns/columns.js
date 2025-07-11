@@ -7,7 +7,7 @@ export default function decorate(block) {
   );
 
   const tableWrapper = document.createElement('div');
-  tableWrapper.classList.add('amortization-table-wrapper');
+  // tableWrapper.classList.add('amortization-table-wrapper');
 
   const table = document.createElement('table');
   table.classList.add('amortization-table', ...originalClassList);
@@ -23,5 +23,5 @@ export default function decorate(block) {
   });
 
   tableWrapper.appendChild(table);
-  block.replaceWith(tableWrapper);
+  // block.replaceWith(tableWrapper);
 }

@@ -364,7 +364,6 @@ section.faq-accordion-container h4{
     font-size: 13px;
     line-height: 16px;
     color: #767676;
-    width: 430px;
 }
 .section.banner-image .default-content-wrapper ol li{
   list-style: none;
@@ -405,7 +404,7 @@ section.faq-accordion-container h4{
   }
    .section.banner-image h1{
     position: absolute;
-    top: 6%;
+    top: 9%;
     color: #25243B;
     font-size: 40px;
     font-style: normal;
@@ -434,7 +433,7 @@ section.faq-accordion-container h4{
   }
 
     .section.banner-image .default-content-wrapper p:nth-child(2){
-    margin: 0 -160px;
+    margin: 0 -200px;
    }
       .section.banner-image .default-content-wrapper p img{
     width: 100%;
@@ -459,7 +458,7 @@ section.faq-accordion-container h4{
   position: relative;
 }
    .section.banner-image h1{
-    top: 0%;
+    top: 1%;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: normal;
@@ -472,13 +471,13 @@ section.faq-accordion-container h4{
         font-weight: 300;
         line-height: 18px;
         letter-spacing: 1.3px;
-        top: 5%;
+        top: 4%;
         padding: 0 10px;
     }
 
   .section.banner-image .default-content-wrapper .button-container{
     position: absolute;
-    top: 8%;
+    top: 6%;
     text-align: center;
     font-size: 16px;
     font-style: normal;
