@@ -409,6 +409,13 @@ header nav .nav-sections ul>li>ul>li {
     width: 100%;
   }
 
+   header nav .nav-sections .default-content-wrapper>ul>li:first-child>ul>li:first-child a{
+    color: #9d1d27;
+    font-weight: 700;
+    background: #f1f1f1;
+    border-radius: 4px;
+    width: 100%;
+  }
   .nav-tools {
     flex-grow: 1;
     flex-basis: 100%;
