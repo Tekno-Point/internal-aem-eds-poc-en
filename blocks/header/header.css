@@ -13,7 +13,8 @@ header nav {
   box-sizing: border-box;
   display: grid;
   grid-template:
-    'hamburger brand tools' var(--nav-height) 'sections sections sections' 1fr / auto 1fr auto;
+    'brand brand hamburger' var(--nav-height) 'tools tools tools' 1fr / auto 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   gap: 0 24px;
   margin: auto;
@@ -154,7 +155,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   transform: rotate(-45deg);
 }
 
-@media (width >=901px) {
+@media (width >=900px) {
   header nav .nav-hamburger {
     display: none;
     visibility: hidden;
