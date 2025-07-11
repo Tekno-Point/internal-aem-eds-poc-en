@@ -519,13 +519,13 @@ h6 {
   mix-blend-mode: multiply;
 }
 
-header {
+header .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 4;
-  height: 110px;
+  /* height: 110px; */
   background: #fff;
   transition: all .1s ease
 }
