@@ -24,6 +24,11 @@ export default function decorate(block) {
     topLink.textContent = title;
     li.appendChild(topLink);
 
+    // Add dropdown icon
+    const dropdownIcon = document.createElement('span');
+    dropdownIcon.className = 'dropdown-arrow';
+    li.appendChild(dropdownIcon);
+
     // Dropdown content
     const dropdown = document.createElement('div');
     dropdown.className = 'dropdown-content animated fadeIn menu-cardList-cnt';

@@ -9,13 +9,13 @@
     margin-bottom: 50px;
 }
 
-.mb-card .mb-img img {
+.mid-banner .mb-card .mb-img img {
     width: auto;
     height: auto;
     object-fit: contain;
 }
 
-.mb-card .mb-text {
+.mid-banner .mb-card .mb-text {
     color: #000;
     font-size: 30px;
     font-style: normal;
@@ -24,7 +24,7 @@
     margin-bottom: 12px;
 }
 
-.mb-card .mb-text .button-container a {
+.mid-banner .mb-card .mb-text .button-container a {
     color: #9B1E26;
     font-size: 16px;
     font-style: normal;
@@ -39,32 +39,49 @@
 }
 
 @media (max-width: 767px) {
-    .mb-card {
-        /* display: flex;
+    .mid-banner .mb-card {
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #EBAFAA 0%, #F3D1C9 83.44%, #F4D8CF 100%);
+        display: flex;
         flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-        justify-content: flex-start;
-        padding: 12px;
-        margin-bottom: 24px; */
-        padding: 0;
+        padding: 0 11px 0 58px;
+        margin-bottom: 50px;
+        /* padding: 0; */
     }
 
-    .mb-card .mb-img img {
-        width: 80px;
-        margin-right: 12px;
+    .mid-banner .mb-card .mb-img img {
+        /* width: 80px;
+        margin-right: 12px; */
+        width: 129px;
+        position: absolute;
+        /* padding: 10px; */
+        margin-right: 15px;
+        top: 33px;
+        left: -40px;
     }
 
-    .mb-card .mb-text {
+    .mid-banner .mb-card .mb-text {
         padding: 18px 0 17px 38px;
+        margin: 0;
+        overflow: hidden;
+
     }
 
-    .mb-card .mb-text h2 {
+    .mid-banner .mb-card .mb-text h2 {
         font-size: 16px;
         line-height: 22px;
         margin: 0 0 6px;
     }
 
-    .mb-card .mb-text .button-container a {
+    .mid-banner .mb-card .mb-text p{
+        margin: 0;
+    }
+
+    .mid-banner .mb-card .mb-text .button-container a {
         font-size: 14px;
         line-height: 20px;
     }

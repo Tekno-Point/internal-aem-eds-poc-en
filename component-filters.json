@@ -14,7 +14,6 @@
       "title",
       "hero",
       "cards",
-      "accordion",
       "columns",
       "fragment",
       "swipper-card",
@@ -26,19 +25,13 @@
       "pl-blogs",
       "faq-accordion",
       "overview-rte",
-      "nav-list"
+      "cf-fragment"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
-    ]
-  },
-  {
-    "id": "accordion",
-    "components": [
-      "accordion-item"
     ]
   },
   {
@@ -55,58 +48,6 @@
       "button",
       "title"
     ]
-  },
-  {
-    "id": "swipper-card",
-    "components": [
-      "swipper-card-item"
-    ]
-  },
-  {
-    "id": "rte-block",
-    "components": [
-      "rte-item"
-    ]
-  },
-  {
-    "id": "git-block",
-    "components": [
-      "git-item"
-    ]
-  },
-  {
-    "id": "personal-loan-block",
-    "components": [
-      "personal-loan-item"
-    ]
-  },
-  {
-    "id": "mid-banner",
-    "components": [
-      "mid-banner-item"
-    ]
-  },
-  {
-    "id": "pl-blogs",
-    "components": [
-      "pl-blogs-item"
-    ]
-  },
-  {
-    "id": "pl-swipper-blogs",
-    "components": [
-      "pl-swipper-blogs-item"
-    ]
-  },
-  {
-    "id": "faq-accordion",
-    "components": [
-      "faq-accordion-item"
-    ]
-  },
-  {
-    "id":"overview-rte",
-    "components":["overview-rte-item"]
   },
   {
     "id": "nav-list",

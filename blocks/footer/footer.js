@@ -16,4 +16,13 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+
+  const details = block.querySelectorAll(".footer-accordion details");
+  if (window.innerWidth > 768) {
+    details.forEach(detail => {
+      detail.open = true;
+    });
+  }
+
 }
+
