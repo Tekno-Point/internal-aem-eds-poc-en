@@ -377,7 +377,7 @@ input[type="range"]::-ms-track {
 }
 .cf-fragment-wrapper{
     position: absolute;
-    top: 25%;
+    top: 6%;
     right: 4%;
 }
 @media (max-width: 768px) {
@@ -457,12 +457,15 @@ input[type="range"]::-ms-track {
     }
     .cf-fragment-wrapper{
     position: absolute;
-    top: 37%;
+    top: 16%;
     right: 0%;
     width: 100%;
 }
 .emi-header{
     text-align: center;
+}
+.btn-wrap{
+    margin-top: 10px;
 }
 }
 
