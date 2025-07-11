@@ -60,15 +60,18 @@ export async function fetchStateCity() {
     const { state, city } = (data.results[0]);
     return { state, city }
 }
-export async function fetchProdcut() {
-    const { state, city } = await fetchStateCity();
-    const dataMapping = await getDataMapping();
-    const codeData = dataMapping.state_city_master[state.toUpperCase()][city.toUpperCase()]
-    console.log(codeData);
+export async function fetchProdcut(stateLabel, cityCode) {
+  const dataMapping = await getDataMapping();
+  const stateData = dataMapping.state_city_master[stateLabel];
+  if (!stateData || !stateData[cityCode]) return {};
+
+  const { stateCode } = stateData[cityCode];
+  const url = prodcutAPI
+    .replace('{stateCode}', stateCode)
+    .replace('{cityCode}', cityCode);
     
-    const data = await fetchAPI('GET', prodcutAPI.replace('{stateCode}', codeData.stateCode).replace('{cityCode}', codeData.code));
-    console.log(data);
-    return data;
+  const data = await fetchAPI('GET', url);
+  return data;
 }
 
 function processDataMapping(data) {
