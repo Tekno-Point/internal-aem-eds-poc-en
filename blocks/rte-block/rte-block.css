@@ -27,6 +27,7 @@
 
 @media (max-width:767px) {
     .rte-block h2{
+        margin-top: 24px;
         font-size: 24px;
         line-height: 32px;
         text-align: center;

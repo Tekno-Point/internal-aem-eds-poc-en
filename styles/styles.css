@@ -518,6 +518,12 @@ section.faq-accordion-container h4{
   width: 100%;
 }
 
+@media (max-width:767px) {
+  .section.personalloanbenefits{
+    padding: 30px 0;
+  }
+}
+
 .section.faq-accordion-container h4{
   color: #25243B;
   font-size: 24px;
