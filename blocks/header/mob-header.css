@@ -15,6 +15,11 @@
     padding-left: 15px;
   }
 
+  nav .nav-brand img {
+    width: 96px;
+    height: 34px;
+  }
+
   .nav-hamburger {
     padding-right: 15px;
     justify-content: flex-end;
@@ -24,6 +29,11 @@
     width: 100%;
     margin-top: 5px;
     padding-inline: 15px;
+  }
+
+  header .nav-sections .cls-mm {
+    width: unset;
+    height: unset;
   }
 
   .nav-tools>div>p:first-child {
@@ -56,14 +66,23 @@
   }
 
   header nav .nav-sections {
+    display: unset !important;
     position: fixed;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
+    top: -50px;
+    max-height: 0px;
+    overflow-y: hidden;
     background: white;
     z-index: 100;
     padding-bottom: 40px;
+    transition: max-height 0.3s ease, top 0.3s ease;
   }
+
+  header nav[aria-expanded='true'] .nav-sections {
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
 
   .nav-sections .container {
     width: 100%;
@@ -293,12 +312,12 @@
     transform: rotate(-135deg);
   }
 
-  #nav > div.section.nav-tools > div > ul > li:nth-child(2) > span {
+  #nav>div.section.nav-tools>div>ul>li:nth-child(2)>span {
     widows: 15px;
     height: 14px;
   }
 
-  #nav > div.section.nav-tools > div {
+  #nav>div.section.nav-tools>div {
     display: flex;
     align-items: center;
   }
