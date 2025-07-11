@@ -1,6 +1,7 @@
 import Swiper from "../swipper/swipper-bundle.min.js";
 
 export default function decorate(block) {
+  block.id = "blogs";
   const children = Array.from(block.children);
 
   // Create swiper elements

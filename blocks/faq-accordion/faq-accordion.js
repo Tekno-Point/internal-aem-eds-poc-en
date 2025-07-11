@@ -1,4 +1,6 @@
 export default function decorate(block) {
+
+  block.id = "faqs"
   const items = [...block.children].filter(
     (item) => item.querySelectorAll('div').length >= 2
   );

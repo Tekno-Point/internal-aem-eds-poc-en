@@ -18,8 +18,15 @@
     margin-bottom: 14px;
 }
 
+.prodCard .prodImgDiv img{
+    max-width: 100%;
+    width: auto;
+    height: 100%;
+}
+
 .prodCard .prodTextDiv{
     position: relative;
+    padding: 13px 57px 0px 0px;
 }
 .prodCard .prodTextDiv p:nth-child(1) strong{
     color: #25243B;
@@ -132,6 +139,9 @@
     .prodCard .prodImgDiv img{
         width: 100px;
         height: 120px;
+    }
+    .prodCard .prodTextDiv{
+        padding: 0;
     }
     .prodCard .prodTextDiv p:nth-child(1){
         margin: 0 0 12px;
