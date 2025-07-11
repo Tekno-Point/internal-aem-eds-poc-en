@@ -73,6 +73,28 @@ header nav[aria-expanded="true"] {
     min-height: 0;
     overflow: visible;
   }
+  .sectionlast::after {
+  content: "";
+  position: absolute;
+  width: 152px;
+  height: 50px;
+  left: -149px;
+  background-color: #f5f5f5;
+  z-index: 0;
+  box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
+}
+
+.sectionlast::before {
+  content: "";
+  position: absolute;
+  width: 152px;
+  height: 50px;
+  right: -149px;
+  background-color: #f5f5f5;
+  z-index: 0;
+  box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
+}
+
 }
 
 header nav p {
@@ -747,28 +769,6 @@ header nav .nav-tools {
   justify-content: space-between;
 }
 
-.sectionlast::after {
-  content: "";
-  position: absolute;
-  width: 152px;
-  height: 50px;
-  left: -149px;
-  background-color: #f5f5f5;
-  z-index: 0;
-  box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
-}
-
-.sectionlast::before {
-  content: "";
-  position: absolute;
-  width: 152px;
-  height: 50px;
-  right: -149px;
-  background-color: #f5f5f5;
-  z-index: 0;
-  box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
-}
-
 .nav-tools>div>ul>li:first-child {
   border: 1px solid #353535;
   border-radius: 50px;
@@ -850,3 +850,4 @@ header nav .nav-tools {
   border-right: 8px solid transparent;
   border-bottom: 8px solid var(--light-color);
 }
+
