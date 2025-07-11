@@ -174,6 +174,7 @@ export default async function decorate(block) {
     const monthlyPayableAmountEl = block.querySelector('#monthly-payable-amount');
     const principalAmountDisplayEl = block.querySelector('#principal-amount-display');
     const interestPayableDisplayEl = block.querySelector('#interest-payable-display');
+    const btn = block.querySelector('.btn-wrap-desc');
 
     const loanAmountRange = block.querySelector('#loanAmountRange');
     const loanAmountDisplay = block.querySelector('#loanAmountDisplay');
@@ -192,10 +193,13 @@ export default async function decorate(block) {
         const emi = calculateEMI(principal, interestRate, tenure);
         const totalPayable = emi * tenure;
         const totalInterest = totalPayable - principal;
+        btn.textContent = '₹' + Math.round(emi).toLocaleString("en-IN") + '/ Month';
+        // console.log(totalInterest);
+        
 
-        monthlyPayableAmountEl.textContent ="₹  "+ Number(emi).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-        principalAmountDisplayEl.textContent = "₹  "+ Number(principal).toLocaleString('en-IN', {  minimumFractionDigits: 0, maximumFractionDigits: 0 });
-        interestPayableDisplayEl.textContent = "₹  "+ Number(totalInterest).toLocaleString('en-IN', {  minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        // monthlyPayableAmountEl.textContent ="₹  "+ Number(emi).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        // principalAmountDisplayEl.textContent = "₹  "+ Number(principal).toLocaleString('en-IN', {  minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        // interestPayableDisplayEl.textContent = "₹  "+ Number(totalInterest).toLocaleString('en-IN', {  minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
         updateRangeSliderFill(loanAmountRange);
         updateRangeSliderFill(interestRateRange);
