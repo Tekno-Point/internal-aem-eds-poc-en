@@ -22,7 +22,7 @@ export function decorateTable(block) {
   });
 
   tableWrapper.appendChild(table);
-  // block.replaceWith(tableWrapper);
+  block.replaceWith(tableWrapper);
 }
 export default function decorate(block) {
   if(block.classList.contains('table')){
