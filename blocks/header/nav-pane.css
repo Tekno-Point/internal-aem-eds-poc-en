@@ -8,13 +8,6 @@
     display: block;
 }
 }
-
-/*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
  :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -51,10 +44,6 @@
 *::after {
     box-sizing: border-box;
 }
-
-
-
-
 .clearfix {
   display: inline-block;
 }
@@ -240,7 +229,7 @@ button:focus {
 }
 
 .p0 {
-  padding: 0px !important;
+  padding: 0px ;
 }
 
 .relative {
@@ -400,12 +389,12 @@ button:focus {
 }
 
 body {
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
 
 @media (max-width: 991px) {
   body {
-    padding-top: 120px;
+    /* padding-top: 120px; */
   }
 }
 
@@ -530,19 +519,19 @@ h6 {
   mix-blend-mode: multiply;
 }
 
-header {
+header .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 4;
-  height: 100px;
+  /* height: 110px; */
   background: #fff;
   transition: all .1s ease
 }
 
 header.zindex {
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 
@@ -1155,8 +1144,20 @@ header.sticky .login a {
 }
 
 .grdiantCard a span:before {
-  color: #9d1d27;
-  font-weight: 600
+ color: #9d1d27;
+    font-weight: 600;
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    /* margin-left: 8px; */
+    vertical-align: middle;
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: rotate(-44deg);
+    /* transform: translateX(10px); */
+    transition: transform 0.3s ease;
 }
 
 @media (max-width:991px) {
@@ -1774,7 +1775,7 @@ header.d-lg-none .top-nav-right ul li:last-child {
 
 @media(max-width: 767px) {
     .top-nav-container .top-nav .btn-box .btn-white {
-        border: solid 1px #9d1d27 !important;
+        border: solid 1px #9d1d27;
         padding: 8px 15px;
         margin-left: 15px;
         font-size: 14px;
@@ -1786,7 +1787,7 @@ header.d-lg-none .top-nav-right ul li:last-child {
     .top-nav-container .top-nav .btn-box .btn-white#dropdownMenuHelp {
         background-color: rgba(0, 0, 0, 0);
         color: #353535;
-        border-color: #353535 !important;
+        border-color: #353535 ;
     }
 }
 
