@@ -40,6 +40,12 @@
   font-size: 14px;
 }
 
+@media (max-width:767px) {
+  .faq-accordion .faq-accordion-item .faq-accordion-label p strong {
+    font-size: 12px;
+  }
+}
+
 /* Arrow */
 .faq-accordion .faq-accordion-label::after {
   content: '';
@@ -77,6 +83,11 @@
 .faq-accordion .faq-accordion-body p {
   margin: 0;
 }
+@media (max-width:767px) {
+  .faq-accordion .faq-accordion-body p{
+    font-size: 12px;
+  }
+}
 
 /* Toggle Button */
 .faq-accordion .faq-accordion-toggle-btn {
@@ -97,7 +108,7 @@
   color: #b70000;
   font-weight: 600;
   font-size: 14px;
-  margin-top: 24px;
+  margin-top: 14px;
   cursor: pointer;
   float: right;
   padding: 8px;

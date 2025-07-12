@@ -383,10 +383,14 @@ section.faq-accordion-container h4 {
 
   .section.personalloanbenefits h2,
   .section.typeofpersonalloan h2,
-  .section.pl-blogs-container h2 {
+  .section.pl-blogs-container h2,
+  .section.swipper-card-container h2 {
     font-size: 20px;
     line-height: normal;
     margin-bottom: 13px;
+  }
+  .section.swipper-card-container h6{
+    font-size: 16px;
   }
 }
 
@@ -607,6 +611,12 @@ section.faq-accordion-container h4 {
   line-height: 36px;
   letter-spacing: -0.923px;
   margin-bottom: 28px;
+}
+
+@media (max-width:767px) {
+  .section.faq-accordion-container h4{
+    font-size: 20px;
+  }
 }
 
 *{
