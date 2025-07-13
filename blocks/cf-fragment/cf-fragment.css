@@ -1,3 +1,7 @@
+.cf-fragment.block a{
+    display: none;
+}
+
 .section.cf-fragment-container {
     overflow: hidden;
 }

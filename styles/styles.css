@@ -654,4 +654,8 @@ section.faq-accordion-container h4 {
   .section.highlight.hero-banner.banner-image.columns-container {
     height: 1250px;
   }
+
+  .section.columns-container .columns-wrapper{
+    padding-right: 0;
+  }
 }

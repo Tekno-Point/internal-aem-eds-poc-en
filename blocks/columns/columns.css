@@ -147,6 +147,7 @@
 @media (max-width: 768px) {
   .amortization-table-wrapper {
     overflow-x: scroll;
+    border-top-right-radius: 0;
   }
 
   .amortization-table-wrapper::-webkit-scrollbar {
