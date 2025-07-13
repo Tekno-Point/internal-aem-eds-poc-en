@@ -463,7 +463,7 @@
         },
         {
             "component": "richtext",
-            "name": "title",
+            "name": "col2_title",
             "value": "",
             "label": "Thank You Content",
             "valueType": "string"
