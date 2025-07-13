@@ -243,7 +243,7 @@ export default async function decorate(block) {
         }
 
         if (!isDesktop.matches) {
-            const scrollHeight = navSection.querySelector('ul').scrollHeight;
+            const scrollHeight = navSection.querySelector('ul').scrollHeight + 59;
             navSection.style.setProperty('--scroll-height', `${scrollHeight}px`);
             const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
