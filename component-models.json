@@ -429,5 +429,45 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id":"ride-thankyou",
+    "fields":[
+        {
+            "component": "reference",
+            "valueType": "string",
+            "name": "col1_loader",
+            "label": "Image",
+            "multi": false
+        },
+        {
+            "component": "text",
+            "valueType": "string",
+            "name": "col1_loaderAlt",
+            "label": "Alt",
+            "value": ""
+        },
+        {
+            "component": "reference",
+            "valueType": "string",
+            "name": "col2_thankyou",
+            "label": "Image",
+            "multi": false
+        },
+        {
+            "component": "text",
+            "valueType": "string",
+            "name": "col2_thankyouAlt",
+            "label": "Alt",
+            "value": ""
+        },
+        {
+            "component": "richtext",
+            "name": "title",
+            "value": "",
+            "label": "Thank You Content",
+            "valueType": "string"
+        }
+    ]
   }
 ]
