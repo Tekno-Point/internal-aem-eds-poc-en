@@ -563,3 +563,7 @@ section.faq-accordion-container h4{
     height: 1250px;
   }
 }
+
+.display-none{
+  display: none;
+}
