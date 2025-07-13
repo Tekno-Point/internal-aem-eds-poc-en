@@ -22,6 +22,7 @@ footer .footer p {
 
 .footer.block {
   background-color: #222;
+  display: none;
 }
 
 footer .footer.block>div {
@@ -70,7 +71,6 @@ footer .footer.block>div .section:not(:last-of-type) {
   display: flex;
   flex-direction: column;
   gap: 8px;
-
 }
 
 .footer.block .section:first-of-type .default-content-wrapper>ul>li>ul>li a {

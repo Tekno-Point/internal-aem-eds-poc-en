@@ -540,28 +540,6 @@ header nav .nav-tools {
   font-weight: 700;
 }
 
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button:before,
-.block .nav-wrapper nav .nav-sections .default-content-wrapper .button::before {
-  content: '';
-  background: url('../../icons/in_flag.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 16px;
-  height: 16px;
-  display: block;
-  margin-right: 4px;
-}
-
-.block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button:after,
-.block .nav-wrapper nav .nav-sections .default-content-wrapper .button::after {
-  content: '';
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #000;
-  margin-left: 5px;
-  transition: all 0.3s ease;
-}
 
 .block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:nth-child(2) .button-container.active .button:after,
 .block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container.active .button::after {
@@ -600,18 +578,16 @@ header nav .nav-tools {
 
 @media screen and (max-width:900px) {
   .block .nav-wrapper nav {
-    height: 74px;
+    height: 90px;
     padding: 12px 0;
-    gap: 15px;
+    gap: 0;
     align-items: center;
-    grid-template: 'hamburger brand tools' 50px 'sections sections sections' 1fr / 1fr 4fr 1fr;
+    justify-content: space-between;
+    grid-template: 'brand tools''sections sections';
   }
 
   .block .nav-wrapper nav .nav-hamburger {
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
 
   .block .nav-wrapper nav .nav-hamburger button {
@@ -650,21 +626,62 @@ header nav .nav-tools {
 
   .block .nav-wrapper nav .nav-brand {
     padding: 0;
-    width: 80%;
+  }
+
+  .block .nav-wrapper nav .nav-brand > div {
+    display: flex;
+  }
+
+  .block .nav-wrapper nav .nav-brand img {
+    width: 200px;
+    height: 40px;
+  }
+
+  .block .nav-wrapper nav .nav-brand .default-content-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .block .nav-wrapper nav .nav-brand .default-content-wrapper p:first-child img{
+    width: 200px;
+    height: 40px;
+  }
+
+  .block .nav-wrapper nav .nav-brand .default-content-wrapper p:last-child img{
+    width: 30px;
+    height: 30px;
+  }
+
+  .block .nav-wrapper nav .nav-tools .default-content-wrapper span.icon {
+    height: 20px;
+    width: 20px; 
   }
 
   .block .nav-wrapper nav .nav-sections {
-    width: 72%;
-    flex-direction: column;
     box-sizing: border-box;
     margin: 0 auto;
     gap: 15px;
+    visibility: visible;
+    width: 100%;
+    justify-content: unset;
   }
 
   .block .nav-wrapper nav .nav-sections .default-content-wrapper:first-of-type {
-    flex-direction: column;
     width: 100%;
+    justify-content: space-between;
   }
+
+  .block .nav-wrapper nav .nav-sections .default-content-wrapper p:first-of-type {
+    font-size: 16px;
+    color: #000000;
+    font-style: italic;
+  }
+
+  .block .nav-wrapper nav .nav-sections .default-content-wrapper p.button-container a{
+    color: #0088dd;
+    font-size: 16px;
+  }
+
 
   .block .nav-wrapper nav .nav-sections .search-wrapper {
     display: block;
@@ -678,11 +695,6 @@ header nav .nav-tools {
 
   .block .nav-wrapper nav .nav-sections .default-content-wrapper p {
     display: block;
-  }
-
-  .block .nav-wrapper nav .nav-sections .default-content-wrapper p:first-of-type {
-    margin-top: 15px;
-    color: #0088dd;
   }
 
   .block .nav-wrapper nav .nav-sections .default-content-wrapper .button-container .langStructure {
@@ -752,4 +764,43 @@ header nav .nav-tools {
   .block .nav-wrapper nav .nav-tools .default-content-wrapper ul li:not(:last-of-type) {
     display: none;
   }
+}
+
+
+
+/* sticky navigation css */
+.section.sticky-navigation {
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.section.sticky-navigation .default-content-wrapper {
+  padding: 15px 32px;
+}
+
+.section.sticky-navigation .default-content-wrapper ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.section.sticky-navigation .default-content-wrapper ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  gap: 5px;
+  color: #777777;
+}
+
+.section.sticky-navigation .default-content-wrapper ul li span {
+  width: 20px;
+  height: 20px;
 }
