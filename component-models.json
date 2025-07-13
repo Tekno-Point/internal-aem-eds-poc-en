@@ -152,6 +152,10 @@
           {
             "name": "Banner Breadcrumb",
             "value": "banner-breadcrumb"
+          },
+          {
+            "name": "Display None",
+            "value": "display-none"
           }
         ]
       }
