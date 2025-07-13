@@ -46,7 +46,7 @@ header nav[aria-expanded="true"] {
   letter-spacing: -0.6px;
 }
 
-#nav > div.section.sectionlast.fragment-container > div.fragment-wrapper > div > div.default-content-wrapper {
+#nav>div.section.sectionlast.fragment-container>div.fragment-wrapper>div>div.default-content-wrapper {
   display: none;
 }
 
@@ -72,26 +72,26 @@ header nav[aria-expanded="true"] {
   }
 
   .sectionlast::after {
-  content: "";
-  position: absolute;
-  width: 152px;
-  height: 50px;
-  left: -149px;
-  background-color: #f5f5f5;
-  z-index: 0;
-  box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
-}
+    content: "";
+    position: absolute;
+    width: 152px;
+    height: 50px;
+    left: -149px;
+    background-color: #f5f5f5;
+    z-index: 0;
+    box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
+  }
 
-.sectionlast::before {
-  content: "";
-  position: absolute;
-  width: 152px;
-  height: 50px;
-  right: -149px;
-  background-color: #f5f5f5;
-  z-index: 0;
-  box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
-}
+  .sectionlast::before {
+    content: "";
+    position: absolute;
+    width: 152px;
+    height: 50px;
+    right: -149px;
+    background-color: #f5f5f5;
+    z-index: 0;
+    box-shadow: 0px 6px 6px -4px rgba(37, 36, 59, 0.1);
+  }
 
 }
 
@@ -248,6 +248,10 @@ header nav .nav-sections ul>li>ul>li {
     display: block;
     visibility: visible;
     white-space: nowrap;
+  }
+
+  #nav>div.section.nav-sections>div>ul:nth-child(2) {
+    display: none;
   }
 
   header nav[aria-expanded='true'] .nav-sections {
@@ -407,7 +411,7 @@ header nav .nav-sections ul>li>ul>li {
     width: 100%;
   }
 
-   header nav .nav-sections .default-content-wrapper>ul>li:first-child>ul>li:first-child a{
+  header nav .nav-sections .default-content-wrapper>ul>li:first-child>ul>li:first-child a {
     color: #9d1d27;
     font-weight: 700;
     background: #f1f1f1;
@@ -552,6 +556,10 @@ header nav .nav-sections ul>li>ul>li {
     width: 15px;
     height: 14px;
   }
+}
+
+#nav>div.section.nav-sections>div>ul:nth-child(2) {
+  display: none;
 }
 
 .top-nav-left .drop-down.rgt .dropdown-content {
@@ -856,4 +864,3 @@ header nav .nav-tools {
   border-right: 8px solid transparent;
   border-bottom: 8px solid var(--light-color);
 }
-
