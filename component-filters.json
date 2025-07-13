@@ -68,6 +68,10 @@
   {
     "id": "block-card",
     "components": ["block-card-item"]
+  },
+  {
+    "id": "ride-thankyou",
+    "components": ["ride-thankyou-content"]
   }
 ]
 

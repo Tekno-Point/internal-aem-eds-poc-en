@@ -431,7 +431,7 @@
     ]
   },
   {
-    "id":"ride-thankyou",
+    "id":"ride-thankyou-content",
     "fields":[
         {
             "component": "reference",
