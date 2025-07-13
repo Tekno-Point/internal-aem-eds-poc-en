@@ -469,5 +469,15 @@
             "valueType": "string"
         }
     ]
+  },
+  {
+    "id": "thankyou-popup-item",
+    "fields":[
+      {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Enter Modal path"
+      }
+    ]
   }
 ]

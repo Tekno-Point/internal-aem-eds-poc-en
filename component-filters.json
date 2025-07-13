@@ -26,7 +26,8 @@
       "blogs-swiper",
       "form",
       "price-listing",
-      "ride-thankyou"
+      "ride-thankyou",
+      "thankyou-popup"
     ]
   },
   {
@@ -72,6 +73,10 @@
   {
     "id": "ride-thankyou",
     "components": ["ride-thankyou-content"]
+  },
+  {
+    "id": "thankyou-popup",
+    "components": ["thankyou-popup-item"]
   }
 ]
 
