@@ -494,6 +494,18 @@
         "valueType": "string",
         "name": "Value",
         "label": "value"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "Min",
+        "label": "min"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "Max",
+        "label": "Max"
       }
     ]
   }
