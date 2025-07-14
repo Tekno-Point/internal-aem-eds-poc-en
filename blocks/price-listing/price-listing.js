@@ -92,7 +92,7 @@ export default async function decorate(block) {
         div({ class: 'col-6' },
           div({ class: 'price-details-col pb-6 pb-sm-12 ps-6 pe-6' },
             div({ class: 'price-details-col__text' },
-              p({ class: 'body2 weight-medium' }, variant.price ? `₹ ${variant.price}` : '-')
+              p({ class: 'body2 weight-medium' }, variant.price ? ` ${variant.price}` : '-')
             )
           )
         )
