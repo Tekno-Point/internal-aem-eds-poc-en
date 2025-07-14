@@ -474,6 +474,10 @@
             "value": "range"
           },
           {
+            "name": "Input",
+            "value": "input"
+          },
+          {
             "name": "Submit",
             "value": "submit"
           }
