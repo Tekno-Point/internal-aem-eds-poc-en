@@ -116,6 +116,18 @@
           {
             "name": "Book Ride",
             "value": "book-ride"
+          },
+          {
+            "name": "hero-footer",
+            "value": "hero-footer"
+          },
+          {
+            "name": "hero-footer-icon",
+            "value": "hero-footer-icon"
+          },
+          {
+            "name": "hero-footer-policy",
+            "value": "hero-footer-policy"
           }
         ]
       }
