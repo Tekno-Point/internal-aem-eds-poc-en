@@ -2,6 +2,7 @@ const geoLocationAPI = `https://apis.mappls.com/advancedmaps/v1/5b8424bdaf84cda4
 const stateCityAPI = `https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.state-and-city.json`;
 const prodcutAPI = `https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.product.practical.splendor-plus.{stateCode}.{cityCode}.json`;
 const sendOTPAPI = `https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/executive/jcr:content.send-msg.json`;
+const dealerAPI = 'https://www.heromotocorp.com/content/hero-commerce/in/en/dealer-locator/jcr:content.dealers.{stateCode}.{cityCode}.json';
 const dataMapping = {
   state_city_master: {},
 };
@@ -171,6 +172,15 @@ function hashCode(s) {
   if (l > 0) while (i < l) h = ((h << 5) - h + s.charCodeAt(i++)) | 0;
   return h;
 }
+
+export async function fetchDealers(stateCode, cityCode) {
+  const url = dealerAPI
+    .replace('{stateCode}', stateCode)
+    .replace('{cityCode}', cityCode);
+  const data = await fetchAPI("GET", url);
+  return data;
+}
+
 
 // const dm = await getDataMapping();
 // console.log(dm);
