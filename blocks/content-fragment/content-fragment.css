@@ -569,7 +569,8 @@
 
 /* Marque css */
 .section.marque-container {
-    margin: 26px 0 0;
+    padding-top: 26px;
+    margin: 0;
     background-color: #282828;
     padding-left: 20px;
     height: 40px;
