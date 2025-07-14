@@ -260,6 +260,13 @@ main>.section>div {
   padding: 0 24px;
 }
 
+@media (width <= 900px) {
+  .section.highlight.hero-banner.banner-image.columns-container .default-content-wrapper{
+    max-width: unset;
+    padding-left: calc((100% - 1117px) / 2);
+}
+}
+
 main>.section:first-of-type {
   margin-top: 0;
 }
