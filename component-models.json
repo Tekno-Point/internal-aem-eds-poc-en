@@ -505,5 +505,24 @@
             "label": "Enter Modal path"
         }
     ]
+  },
+   {
+    "id": "product-banner",
+    "fields":[
+        {
+            "component": "richtext",
+            "valueType": "string",
+            "name": "heading",
+            "label": "Heading",
+            "multi": false
+        },
+        {
+            "component": "richtext",
+            "valueType": "string",
+            "name": "description",
+            "label": "Description",
+            "value": ""
+        }
+    ]
   }
 ]
