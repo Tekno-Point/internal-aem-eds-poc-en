@@ -211,6 +211,10 @@
           },{
             "name": "trip Form Modal",
             "value": "trip-form-modal"
+          },
+          {
+            "name": "Review Carousel",
+            "value": "review-carousel"
           }
         ]
       }
@@ -325,6 +329,38 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Pagination",
+            "value": "pagination"
+          },
+          {
+            "name": "Services Carousel",
+            "value": "services-carousel"
+          },
+          {
+            "name": "Deals Carousel",
+            "value": "deals-carousel"
+          },
+          {
+            "name": "Banner Carousel",
+            "value": "banner-carousel"
+          },
+          {
+            "name": "Experience Carousel",
+            "value": "experience-carousel"
+          }
+        ]
       }
     ]
   },
