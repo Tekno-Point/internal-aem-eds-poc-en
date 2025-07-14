@@ -350,10 +350,10 @@ export default async function decorate(block) {
 
   // State and city validation
   const stateCityInp = block.querySelectorAll(".book-ride #form-f1 input");
-  stateCityInp.forEach((inp)=>{
-    const optionField = inp.closest('.field-wrapper');
+  stateCityInp.forEach((inp) => {
+    const optionField = inp.closest(".field-wrapper");
     const optionError = optionField.querySelector(".error-msg");
-    inp.addEventListener('input', function () {
+    inp.addEventListener("input", function () {
       const value = inp.value.trim();
       if (optionError) {
         optionError.remove();
@@ -361,8 +361,8 @@ export default async function decorate(block) {
       if (value == "") {
         optionField.appendChild(errorField("Field is required"));
       }
-    })
-  })
+    });
+  });
 
   // Submit Click
   submitBtn.addEventListener("click", function () {
@@ -383,7 +383,7 @@ export default async function decorate(block) {
         fieldWrapper.append(errorField("Please enter a valid mobile no."));
       } else if (inpName == "email" && !emailRegex.test(inpVal)) {
         fieldWrapper.append(errorField("Please enter a valid email"));
-      }else{
+      } else {
         if (error) {
           error.remove();
         }
@@ -391,7 +391,7 @@ export default async function decorate(block) {
     });
 
     if (!block.querySelector(".error-msg")) {
-      alert('Form Valid...You can call Submit API here')
+      alert("Form Valid...You can call Submit API here");
     }
   });
 }
