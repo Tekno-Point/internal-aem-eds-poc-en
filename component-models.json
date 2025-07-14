@@ -492,12 +492,6 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "Placeholder",
-        "label": "Placeholder"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
         "name": "Value",
         "label": "value"
       }
