@@ -1,6 +1,5 @@
 import createField from "./form-fields.js";
-import { div, ul, li } from "../../scripts/dom-helpers.js";
-// import { sendotp } from "./api.js";
+import { div, ul, li, p } from "../../scripts/dom-helpers.js";
 
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
@@ -112,12 +111,22 @@ export default async function decorate(block) {
   });
 
   // Book a ride form start
-  const state_inp = document.querySelector("#form-state");
+  const state_inp = block.querySelector("#form-state");
   const state_field = state_inp.closest(".field-wrapper");
-  const city_inp = document.querySelector("#form-city");
+  const city_inp = block.querySelector("#form-city");
   const city_field = city_inp.closest(".field-wrapper");
-  const city_input = document.querySelector("#form-city");
+  const submitBtn = block.querySelector(".submit-btn");
 
+  const errorField = function (message) {
+    return p({ class: "error-msg" }, message);
+  };
+
+  // Set autoComplete - off to all input and set disable to city field on "Load"
+  block
+    .querySelectorAll(".book-ride input")
+    .forEach((inp) => inp.setAttribute("autocomplete", "off"));
+
+  // Function for creating state/city list
   const stateOptions = function (mainClass, ulClass, liClass, dataList) {
     return div(
       { class: mainClass },
@@ -137,18 +146,6 @@ export default async function decorate(block) {
     );
   };
 
-  function toggleCityInputState() {
-    if (state_inp.value.trim() === "") {
-      city_input.style.pointerEvents = "none";
-      city_input.style.cursor = "no-drop";
-      city_input.value = "";
-    } else {
-      city_input.style.pointerEvents = "unset";
-      city_input.style.cursor = "unset";
-    }
-  }
-  toggleCityInputState();
-
   state_inp.addEventListener("focus", function () {
     // Avoid adding it again
     if (!state_field.querySelector(".state")) {
@@ -156,16 +153,20 @@ export default async function decorate(block) {
       state_field.appendChild(
         stateOptions("state", "state-list", "state-name", states)
       );
-      document.querySelectorAll(".state-name").forEach((ele) => {
+      city_field.querySelector(".city").classList.add("dsp-none");
+      block.querySelectorAll(".state-name").forEach((ele) => {
         ele.addEventListener("click", function () {
-          document.querySelectorAll(".state-name").forEach((ele) => {
+          block.querySelectorAll(".state-name").forEach((ele) => {
             ele.classList.remove("active");
           });
           ele.classList.add("active");
           state_inp.value = ele.textContent;
+          state_field.querySelector(".state").classList.add("dsp-none");
+          if (state_field.querySelector(".error-msg")) {
+            state_field.querySelector(".error-msg").remove();
+          }
           toggleCityInputState();
           city_field.querySelectorAll(".city").forEach((ele) => {
-            console.log(ele);
             ele.remove();
           });
           const cities = dataMapping.state_city_master[state_inp.value];
@@ -173,13 +174,75 @@ export default async function decorate(block) {
             cityOptions("city", "city-list", "city-name", cities)
           );
           city_inp.value = "";
+          city_field.querySelector(".city").classList.add("dsp-none");
+          city_field.appendChild(errorField("Field is required"));
         });
       });
       toggleCityInputState();
     }
   });
 
-  state_inp.addEventListener("input", toggleCityInputState);
+  // on load city append for by default state (DELHI)
+  const cities = dataMapping.state_city_master[state_inp.value];
+  city_field.appendChild(cityOptions("city", "city-list", "city-name", cities));
+  city_field.querySelector(".city").classList.add("dsp-none");
+  city_inp.addEventListener("focus", function () {
+    if (city_field.querySelector(".city")) {
+      city_field.querySelector(".city").classList.remove("dsp-none");
+    }
+    block.querySelectorAll(".city-name").forEach((ele) => {
+      ele.addEventListener("click", function () {
+        block.querySelectorAll(".city-name").forEach((ele) => {
+          ele.classList.remove("active");
+        });
+        ele.classList.add("active");
+        city_inp.value = ele.textContent;
+        city_field.querySelector(".city").classList.add("dsp-none");
+        city_field.querySelector(".error-msg").remove();
+      });
+    });
+  });
+
+  // Filtering Logic for state/City
+  function filterHandler(fieldWrapper, inputName, inputField, ulClass) {
+    let anyListVisibe = false;
+    fieldWrapper.querySelectorAll(inputName).forEach((list) => {
+      inputField.value = inputField.value.toUpperCase();
+      const inp_val = inputField.value.toUpperCase();
+      const ListName = list.textContent;
+      if (inp_val == "" || ListName.includes(inp_val)) {
+        list.classList.remove("dsp-none");
+        anyListVisibe = true;
+      } else {
+        list.classList.add("dsp-none");
+      }
+    });
+    // Handle No options
+    const existingNoOption = block
+      .querySelector(ulClass)
+      .querySelector(".noOption");
+    if (!anyListVisibe) {
+      if (!existingNoOption) {
+        const noOptionList = div({ class: "noOption" }, "No options");
+        block.querySelector(ulClass).append(noOptionList);
+      }
+    } else {
+      if (existingNoOption) {
+        existingNoOption.remove();
+      }
+    }
+  }
+
+  // State filter
+  state_inp.addEventListener("input", function () {
+    filterHandler(state_field, ".state-name", state_inp, ".state-list");
+    toggleCityInputState();
+  });
+
+  // City filter
+  city_inp.addEventListener("input", function () {
+    filterHandler(city_field, ".city-name", city_inp, ".city-list");
+  });
 
   // Hide dropdown if clicked outside input or dropdown
   document.addEventListener("click", function (e) {
@@ -188,10 +251,147 @@ export default async function decorate(block) {
       if (dropdown) dropdown.remove();
     }
   });
+
+  // City disabled if state is empty
+  function toggleCityInputState() {
+    if (state_inp.value.trim() === "") {
+      city_inp.setAttribute("disabled", true);
+      city_inp.style.cursor = "not-allowed";
+      city_inp.value = "";
+      city_field.querySelector(".city").classList.add("dsp-none");
+    } else {
+      city_inp.removeAttribute("disabled", true);
+      city_inp.style.cursor = "unset";
+    }
+  }
+  toggleCityInputState();
+
+  // Send OTP click start
+  block.querySelector(".sendOTP-btn").addEventListener("click", function () {
+    console.log("Hi Send otp");
+    try {
+      fetchOTP("8169850484");
+      block.querySelector(".sendOTP-btn").classList.add("dsp-none");
+      block.querySelector(".resendOTP-btn").classList.remove("dsp-none");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      console.log("working");
+    }
+  });
+
+  block.querySelector(".resendOTP-btn").addEventListener("click", function () {
+    debugger;
+    console.log("Hi Send otp");
+    try {
+      fetchOTP("8169850484");
+    } catch (error) {
+      console.log(error);
+    } finally {
+      console.log("working");
+    }
+  });
+
+  // Validation Start
+  // Name validation
+  const nameRegex = /^[a-z]+(?: [a-z]+)?$/;
+  const nameInp = block.querySelector("#form-name");
+  const nameField = nameInp.closest(".text-wrapper");
+  nameInp.addEventListener("input", function () {
+    const nameError = nameField.querySelector(".error-msg");
+    const value = nameInp.value.trim();
+    if (nameError) {
+      nameError.remove();
+    }
+    if (value == "") {
+      nameField.appendChild(errorField("Field is required"));
+    } else if (!nameRegex.test(value)) {
+      nameField.appendChild(errorField("Please enter a valid name"));
+    }
+  });
+
+  // Mobile validation
+  // const mobRegex = /^[6-9]\d{9}$/;
+  const mobRegex = /^[6-9][0-9]{9}$/;
+  const mobInp = block.querySelector("#form-mobile");
+  const mobField = mobInp.closest(".tel-wrapper");
+  mobInp.addEventListener("input", function () {
+    const mobError = mobField.querySelector(".error-msg");
+    const value = mobInp.value.trim();
+    if (mobError) {
+      mobError.remove();
+    }
+    if (value == "") {
+      mobField.appendChild(errorField("Field is required"));
+    } else if (value.length !== 10 && !mobRegex.test(value)) {
+      block.querySelector(".sendOTP-btn").classList.add("dsp-none");
+      mobField.appendChild(errorField("Please enter a valid mobile no."));
+    } else {
+      block.querySelector(".sendOTP-btn").classList.remove("dsp-none");
+    }
+  });
+
+  // Email Validation
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailInp = block.querySelector("#form-email");
+  const emailField = emailInp.closest(".email-wrapper");
+  emailInp.addEventListener("input", function () {
+    const emailError = emailField.querySelector(".error-msg");
+    const value = emailInp.value.trim();
+    if (emailError) {
+      emailError.remove();
+    }
+    if (value == "") {
+      emailField.appendChild(errorField("Field is required"));
+    } else if (!emailRegex.test(value)) {
+      emailField.appendChild(errorField("Please enter a valid email"));
+    }
+  });
+
+  // State and city validation
+  const stateCityInp = block.querySelectorAll(".book-ride #form-f1 input");
+  stateCityInp.forEach((inp)=>{
+    const optionField = inp.closest('.field-wrapper');
+    const optionError = optionField.querySelector(".error-msg");
+    inp.addEventListener('input', function () {
+      const value = inp.value.trim();
+      if (optionError) {
+        optionError.remove();
+      }
+      if (value == "") {
+        optionField.appendChild(errorField("Field is required"));
+      }
+    })
+  })
+
+  // Submit Click
+  submitBtn.addEventListener("click", function () {
+    const allInp = block.querySelectorAll(".book-ride input");
+    allInp.forEach((inp) => {
+      const fieldWrapper = inp.closest(".field-wrapper");
+      const error = fieldWrapper.querySelector(".error-msg");
+      const inpVal = inp.value;
+      const inpName = inp.name;
+      if (error) {
+        error.remove();
+      }
+      if (inpVal == "") {
+        fieldWrapper.append(errorField("Field is required"));
+      } else if (inpName == "name" && !nameRegex.test(inpVal)) {
+        fieldWrapper.append(errorField("Please enter a valid name"));
+      } else if (inpName == "mobile" && !mobRegex.test(inpVal)) {
+        fieldWrapper.append(errorField("Please enter a valid mobile no."));
+      } else if (inpName == "email" && !emailRegex.test(inpVal)) {
+        fieldWrapper.append(errorField("Please enter a valid email"));
+      }else{
+        if (error) {
+          error.remove();
+        }
+      }
+    });
+
+    if (!block.querySelector(".error-msg")) {
+      alert('Form Valid...You can call Submit API here')
+    }
+  });
 }
-
-// const sendOtpBtn = document.querySelector(".sendOTP-btn");
-
-// sendOtpBtn.addEventListener("click", function () {
-//   sendotp();
-// });
