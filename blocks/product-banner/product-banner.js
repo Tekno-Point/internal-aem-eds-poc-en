@@ -12,9 +12,14 @@ export default async function decorate(block) {
     let variantsDetails = getProducts.data.products.items[0].variants.filter((ele) => ele[selectedSku])
     // let variantsDetails = data.products.items[0].variants["HSPUNIRSCFIMAG"];
 
-    let sessionMap = JSON.parse(sessionStorage.getItem("dataMapping"));
-    sessionMap.sku = selectedSku;
-    sessionStorage.setItem("dataMapping", JSON.stringify(sessionMap));
+    let activeVarientColor = Variants[0].colors;
+
+    let dataMapping = JSON.parse(sessionStorage.getItem("dataMapping"));
+    dataMapping.sku = selectedSku;
+    dataMapping.currentlocation = {};
+    dataMapping.currentlocation.state = selectedCityState.state;
+    dataMapping.currentlocation.city = selectedCityState.city;
+    sessionStorage.setItem("dataMapping", JSON.stringify(dataMapping));
 
     function setVariants() {
 
@@ -24,11 +29,11 @@ export default async function decorate(block) {
         return `
              <div class="form-control p-1">
                  <div class="mb-12 body text-uppercase weight-heavy">
-                <input class="position-absolute" type="radio" id="1201" name="variants" value="${varient[ind].value_index}">
+                <input class="position-absolute" type="radio" id="1201" name="variants" value="${varient.value_index}">
                 <label for="1201" class="d-flex pe-lg-10">
-                    <span>${varient[ind].label}</span>
+                    <span>${varient.label}</span>
                 </label>
-        <div class="ps-11 mt-2"><span>${varient[ind].variant_price}</span></div>
+        <div class="ps-11 mt-2"><span>${varient.variant_price}</span></div>
     </div>
 </div>
         `
@@ -37,7 +42,7 @@ export default async function decorate(block) {
     let variantsDOM = `<div class="variants-wrap">
                             <h4 class="text">Variants</h4>
                        <div class="radio-wrap">
-              ${radioDOM.outerHTML}
+              ${radioDOM}
     </div>
 </div>`
 
@@ -55,5 +60,19 @@ export default async function decorate(block) {
     <div class="hero-360__"></div>
 </div>`
 
+
+    let swatchColorsDom = activeVarientColor.map((color) => {
+        return `
+            <div class="product-">
+             <h4 class="mb-8 weight">Colours</h4>
+            <div class="product-">
+                <div class="color-option">
+                    <span>${color.label}</span>
+                <img class="ms-7 " loading="lazy" src="${color.color_swatch_url}" alt="MATT GREY">
+        </div>
+    </div>
+</div>  
+    `
+    }).join("")
 
 }
