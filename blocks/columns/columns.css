@@ -69,7 +69,7 @@
   background: #FFF;
   width: 100%;
   height: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .columns.block.feature-cards div div p{
     color: #25243B;
@@ -86,7 +86,8 @@
 
 .columns.block.feature-cards{
   position: absolute;
-  top: 56%;
+  /* top: 56%; */
+  top: 83%;
   margin-right: 24px;
   margin-top: 0;
 }
@@ -146,6 +147,7 @@
 @media (max-width: 768px) {
   .amortization-table-wrapper {
     overflow-x: scroll;
+    border-top-right-radius: 0;
   }
 
   .amortization-table-wrapper::-webkit-scrollbar {

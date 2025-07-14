@@ -29,6 +29,7 @@ header nav[aria-expanded="true"] {
     'tools tools' var(--nav-height) / auto 1fr;
   /* overflow-y: auto;
   min-height: 100dvh; */
+  height: 160px;
 }
 
 .header nav .nav-sections .default-content-wrapper>ul>li:first-child p {
