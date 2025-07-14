@@ -54,7 +54,7 @@ function applyPagination(block, swiperConfig) {
 
 function applyBreakpoints(block, swiperConfig) {
     if (block.classList.contains('deals-carousel')) {
-        swiperConfig.loop = true;
+        swiperConfig.loop = false;
         swiperConfig.autoplay = {
             delay: 3000
         };
