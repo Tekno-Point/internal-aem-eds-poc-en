@@ -25,7 +25,8 @@
       "block-card",
       "blogs-swiper",
       "form",
-      "price-listing"
+      "price-listing",
+      "emi-calc"
     ]
   },
   {
@@ -67,5 +68,9 @@
   {
     "id": "block-card",
     "components": ["block-card-item"]
+  },
+  {
+    "id": "emi-calc",
+    "components": ["emi-calc-item"]
   }
 ]
