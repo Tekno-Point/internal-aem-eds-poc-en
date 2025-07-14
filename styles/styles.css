@@ -358,6 +358,10 @@ main .section.highlight {
   margin-top: 0;
 }
 
+.section.git-block-container{
+  margin-top: 80px;
+}
+
 .section.git-block-container h3 {
   color: #25243B;
   font-size: 20px;
