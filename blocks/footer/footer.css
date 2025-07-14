@@ -120,7 +120,7 @@ footer .footer ul {
 .footer>div>div .accordion-wrapper .accordion .accordion-item-label p {
   font-size: 14px;
   font-weight: 700;
-  font: 700 1rem / 1.25rem 'Roboto', sans-serif;
+  font: 700 1rem / 1.25rem 'Inter', sans-serif;
 }
 
 .footer>div>div .accordion-wrapper .accordion>div>div:nth-child(2) ul,
@@ -142,7 +142,7 @@ footer .footer ul {
   color: #FFFFFF;
   font-size: 14px;
   /* font-weight: 300; */
-  font: 500 1rem / 1.25rem 'Roboto', sans-serif;
+  font: 500 1rem / 1.25rem 'Inter', sans-serif;
 }
 
 .footer>div>div:nth-child(2),
@@ -184,7 +184,7 @@ footer .footer ul {
 .footer>div>div:nth-child(2)>div>ul li>p {
   padding-bottom: 16px;
   letter-spacing: .5px;
-  font: 700 1rem / 1.25rem Roboto, sans-serif;
+  font: 700 1rem / 1.25rem 'Inter', sans-serif;
 }
 
 .footer>div>div:nth-child(2)>div>ul>li>ul {
@@ -228,7 +228,7 @@ footer .footer ul {
   padding: 0;
   font-size: 24px;
   line-height: 1;
-  font: 400 24px / 1.25rem 'Roboto', sans-serif;
+  font: 400 24px / 1.25rem 'Inter', sans-serif;
 }
 
 /* .footer>div>div:nth-child(3) .accordion {
@@ -262,14 +262,14 @@ footer .footer>div .section:nth-child(4)>div {
 }
 
 footer .footer>div .section:nth-child(4)>div ul li {
-  font: 300 1rem / 1.25rem Roboto, sans-serif;
+  font: 300 1rem / 1.25rem 'Inter', sans-serif;
   line-height: 23px;
   padding-bottom: 16px;
   color: #0D0D0D;
 }
 
 footer .footer>div .section:nth-child(4)>div p a {
-  font: 300 1rem / 1.25rem Roboto, sans-serif;
+  font: 300 1rem / 1.25rem 'Inter', sans-serif;
   line-height: 23px;
   padding-bottom: 16px;
   color: #0D0D0D;
@@ -388,7 +388,7 @@ footer .footer>div .section:nth-child(4)>div p a {
   }
 
   .footer>div>div .accordion-wrapper .accordion .accordion-item-body ul li a {
-    font: 400 14px / 14px 'Roboto', sans-serif;
+    font: 400 14px / 14px 'Inter', sans-serif;
   }
 
   .footer>div>div .accordion-wrapper .accordion .accordion-item-body ul {
@@ -401,13 +401,13 @@ footer .footer>div .section:nth-child(4)>div p a {
   }
 
   footer .footer>div .section:nth-child(4)>div ul li {
-    font: 300 14px / 14px Roboto, sans-serif;
+    font: 300 14px / 14px 'Inter', sans-serif;
     line-height: 20px;
     word-break: break-word;
   }
 
   footer .footer>div .section:nth-child(4)>div p a {
-    font: 300 14px / 14px Roboto, sans-serif;
+    font: 300 14px / 14px 'Inter', sans-serif;
     line-height: 18px;
   }
 
@@ -425,7 +425,7 @@ footer .footer>div .section:nth-child(4)>div p a {
 
   .footer>div>div:nth-child(2)>div>ul li>p {
 
-    font: 700 14px / 20px Roboto, sans-serif;
+    font: 700 14px / 20px 'Inter', sans-serif;
   }
 
   .footer>div>div:nth-child(2)>div>ul>li:nth-child(2)>ul>li:nth-child(2) {

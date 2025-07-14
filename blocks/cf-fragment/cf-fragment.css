@@ -6,6 +6,16 @@
     overflow: hidden;
 }
 
+.section.cf-fragment-container .cf-fragment-wrapper{
+    max-width: 393px;
+}
+
+.cf-fragment-wrapper{
+    position: absolute;
+    top: 6%;
+    right: 4%;
+}
+
 .emi-calculator-container {
     background: #fff;
     color:white;
@@ -15,6 +25,7 @@
     width: 392px;
     padding: 10px 24px 30px;
     border-radius: 18px;
+    max-width: 392px;
 }
 
 .emi-header {
@@ -378,11 +389,6 @@ input[type="range"]::-ms-track {
     line-height: 26px;
     letter-spacing: -0.5px;
     margin: 0;
-}
-.cf-fragment-wrapper{
-    position: absolute;
-    top: 6%;
-    right: 4%;
 }
 @media (max-width: 768px) {
     .emi-content {
