@@ -62,7 +62,7 @@
 .section.carousel-container .carousel-wrapper {
     position: relative;
     max-width: 1200px;
-    padding: 10px;
+    padding: 10px 10px 70px 10px;
     margin-top: 50px;
     overflow-x: hidden;
 }
@@ -184,6 +184,11 @@
     left: 35px !important;
     top: 150px;
 }
+.swiper-pagination-bullet-active {
+        background: #db6b0b;
+        width: 15px;
+}
+
 @media (width <=900px) {
     .section.carousel-container {
         margin: 50px 20px 0 35px;
@@ -274,8 +279,25 @@
     .swiper-slide:nth-child(6) >div:nth-child(2)::after{ top: 18px; left: 303px;}
     .swiper-wrapper .swiper-slide:nth-child(1){ padding-left: 16px;}
     .swiper-wrapper .swiper-slide:nth-child(2){ padding-left: 23px;}    
-    .swiper-wrapper .swiper-slide:nth-child(3){ padding-left: 23px;}
+    .swiper-wrapper .swiper-slide:nth-child(3){ padding-left: 18px;}
     .swiper-wrapper .swiper-slide:nth-child(5){ padding-left: 23px;}
-    .swiper-wrapper .swiper-slide:nth-child(4){ padding-left: 23px;}
-    .swiper-wrapper .swiper-slide:nth-child(6){ padding-left: 23px;}
+    .swiper-wrapper .swiper-slide:nth-child(4){ padding-left: 18px;}
+    .swiper-wrapper .swiper-slide:nth-child(6){ padding-left: 19px;}
+
+    .carousel.deals-carousel .swiper-slide {
+        min-height: 55px !important;
+    }
+    .section.carousel-container .carousel-wrapper {
+        padding: 10px 10px 25px 10px;
+    }
+    .carousel.deals-carousel .swiper-pagination {
+        top: unset;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        display: none;
+    }
+    .swiper-pagination-bullet-active {
+        background: #db6b0b;
+        width: 15px;
+    }
 }

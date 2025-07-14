@@ -41,7 +41,7 @@ function swiperInit(block) {
 }
 
 function applyPagination(block, swiperConfig) {
-    if (block.classList.contains('pagination')) {
+    // if (block.classList.contains('pagination')) {
         const swiperPagination = document.createElement('div');
         swiperPagination.classList.add('swiper-pagination');
         block.append(swiperPagination);
@@ -49,14 +49,14 @@ function applyPagination(block, swiperConfig) {
             el: '.carousel.block.pagination .swiper-pagination',
             clickable: true,
         }
-    }
+    // }
 }
 
 function applyBreakpoints(block, swiperConfig) {
     if (block.classList.contains('deals-carousel')) {
         swiperConfig.breakpoints = {
             320: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 15 },
-            1024: { slidesPerView: 1, slidesPerGroup: 2, spaceBetween: 15 }
+            1024: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 15 }
         }
     }
 
@@ -73,7 +73,7 @@ function applyBreakpoints(block, swiperConfig) {
     if (block.classList.contains('services-carousel')) {
         swiperConfig.loop = true;
         swiperConfig.autoplay = {
-            delay: 3000
+            delay: 1000
         };
         swiperConfig.breakpoints = {
             320: { slidesPerView: 1, spaceBetween: 15 },
@@ -131,8 +131,8 @@ export function initSwiperOnly(block) {
         breakpoints: {
             320: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 15 },
             600: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 15 },
-            900: { slidesPerView: 1, slidesPerGroup: 2, spaceBetween: 16 },
-            1200: { slidesPerView: 1, slidesPerGroup: 2, spaceBetween: 16 }
+            900: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 16 },
+            1200: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 16 }
         },
         loop: false,
         observer: true,
@@ -142,7 +142,7 @@ export function initSwiperOnly(block) {
 }
 
 
-export default function decorate(block) {
+export default function decorate(block) {   
     const isDesktop = window.matchMedia('(min-width: 900px)');
 
     createSwiper(block);
