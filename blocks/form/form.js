@@ -175,7 +175,6 @@ export default async function decorate(block) {
           );
           city_inp.value = "";
           city_field.querySelector(".city").classList.add("dsp-none");
-          city_field.appendChild(errorField("Field is required"));
         });
       });
       toggleCityInputState();
@@ -242,6 +241,9 @@ export default async function decorate(block) {
   // City filter
   city_inp.addEventListener("input", function () {
     filterHandler(city_field, ".city-name", city_inp, ".city-list");
+    if (city_field.querySelector(".error-msg")) {
+      city_field.querySelector(".error-msg").remove();
+    }
   });
 
   // Hide dropdown if clicked outside input or dropdown
