@@ -673,16 +673,35 @@ async function loadFooter(footer) {
  * @param {Element} section section element
  */
 async function waitForFirstImage(section) {
-  const lcpCandidate = section.querySelector('img');
-  await new Promise((resolve) => {
-    if (lcpCandidate && !lcpCandidate.complete) {
-      lcpCandidate.setAttribute('loading', 'eager');
-      lcpCandidate.addEventListener('load', resolve);
-      lcpCandidate.addEventListener('error', resolve);
-    } else {
-      resolve();
+  const isHighlight = section?.classList?.contains("highlight");
+  if (isHighlight) {
+    const imgs = section?.querySelectorAll("img");
+    if (imgs) {
+      imgs.forEach(async (img) => {
+        await new Promise((resolve) => {
+          if (img && !img.complete) {
+            img.setAttribute('loading', 'eager');
+            img.addEventListener('load', resolve);
+            img.addEventListener('error', resolve);
+          } else {
+            resolve();
+          }
+        });
+      })
     }
-  });
+  }
+  else {
+    const lcpCandidate = section.querySelector('img');
+    await new Promise((resolve) => {
+      if (lcpCandidate && !lcpCandidate.complete) {
+        lcpCandidate.setAttribute('loading', 'eager');
+        lcpCandidate.addEventListener('load', resolve);
+        lcpCandidate.addEventListener('error', resolve);
+      } else {
+        resolve();
+      }
+    });
+  }
 }
 
 /**
