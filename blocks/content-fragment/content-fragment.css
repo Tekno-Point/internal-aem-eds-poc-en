@@ -238,7 +238,7 @@
 
     .section.cf-wrapper {
         padding-top: 50px;
-        padding: 70px 20px 0 20px;
+        padding: 50px 20px 0 20px;
     }
 
     .section.cf-wrapper .content-fragment .carousel {
@@ -569,7 +569,7 @@
 
 /* Marque css */
 .section.marque-container {
-    margin: 0;
+    margin: 26px 0 0;
     background-color: #282828;
     padding-left: 20px;
     height: 40px;
@@ -619,4 +619,12 @@
     margin: 0;
     font-size: 14px;
     color: #FFFFFF;
+}
+
+
+/* accessibility css */
+@media (width <= 900px) {
+    #tpawContainer {
+        display: none;
+    }
 }
