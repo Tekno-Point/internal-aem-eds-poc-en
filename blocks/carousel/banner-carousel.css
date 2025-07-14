@@ -21,7 +21,8 @@
     left: 14%;
 }
 
-.carousel.banner-carousel .swiper-slide div:nth-child(n+2)>p>a {
+.carousel.banner-carousel .swiper-slide div:nth-child(n+2)>p>a,
+.carousel.banner-carousel .swiper-slide div:nth-child(n+2) a {
     all: unset;
     margin: unset;
     background-color: #0088dd;
