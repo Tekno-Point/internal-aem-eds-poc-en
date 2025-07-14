@@ -1,0 +1,134 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.emi-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.emi-controls {
+    flex: 1;
+    padding: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* .slider-group {
+  margin-bottom: 30px;
+} */
+
+/* Show value above label+input */
+.value-row {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.input-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Label and number input side by side */
+.label-input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.label-input-row label {
+    font-size: 18px;
+    font-family: "TSTAR-PRO-Heavy";
+    font-weight: 900;
+}
+
+.label-input-row input.number-box {
+    margin-left: 20px;
+    padding: 0px 8px 0px 8px;
+    font-size: 15px;
+    width: 120px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Slider bar */
+.slider-row {
+    display: flex;
+    align-items: center;
+}
+
+input[type="range"] {
+    flex: 1;
+    height: 6px;
+    background: #aaa;
+    accent-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Min/Max labels under slider */
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #555;
+    margin-top: 6px;
+}
+
+/* EMI result box */
+.emi-output {
+    flex: 1;
+    background: #303030;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.emi-output .emi-title {
+    font-size: 32px;
+    font-family: "TSTAR-PRO-Bold";
+    font-weight: 700;
+    color: #fff;
+    line-height: 3rem;
+}
+
+.emi-output .emi-value {
+    font-size:52px;
+    margin: 16px 0;
+    font-family: "TSTAR-PRO-Heavy";
+    font-weight: 900;
+    color: #fff;
+    line-height: 4rem;
+}
+
+.emi-output button {
+    width: 50%;
+    background-image: linear-gradient(
+        160.69deg,
+        #b50000 22.35%,
+        #ff0000 68.47%,
+        #b50000 114.59%
+    );
+    color: white;
+    font-family: "TSTAR-PRO-Heavy";
+    font-weight: 900;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
