@@ -349,6 +349,38 @@
     ]
   },
   {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Carousel Style",
+        "options": [
+          {
+            "name": "Pagination",
+            "value": "pagination"
+          },
+          {
+            "name": "Services Carousel",
+            "value": "services-carousel"
+          },
+          {
+            "name": "Deals Carousel",
+            "value": "deals-carousel"
+          },
+          {
+            "name": "Banner Carousel",
+            "value": "banner-carousel"
+          },
+          {
+            "name": "Experience Carousel",
+            "value": "experience-carousel"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "carousel-item",
     "fields": [
       {
