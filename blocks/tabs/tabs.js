@@ -203,6 +203,10 @@ export default async function decorate(block) {
       const departureTime = departure.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
       const departureDate = departure.toLocaleDateString('en-GB');
 
+      const arrival = new Date(toSegment.departure.at);
+      const arrivalTime = arrival.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      const arrivalDate = arrival.toLocaleDateString('en-GB');
+
       const totalPrice = parseFloat(flight.price.grandTotal).toLocaleString(
         "en-US",
         { style: "currency", currency: "USD" }
@@ -239,7 +243,7 @@ export default async function decorate(block) {
       toDiv.innerHTML = `
         <p class="city"><strong>${to}</strong> ${toCity}, ${toCountry}</p>
         <p class="terminal">Terminal ${toTerminal}</p>
-        <p class="date">${departureDate}</p>
+        <p class="date">${arrivalDate}</p>
       `;
 
       flightInfo.append(fromDiv, arrowDiv, toDiv);
