@@ -169,3 +169,26 @@
 .form .toggle-wrapper input:checked + .slider::before {
   transform: translateX(24px);
 }
+
+
+/* .trip-form-modal{
+  display: contents;
+    height: 532px;
+}
+
+.trip-form-modal > .tabs-wrapper{
+  width: 500px;
+  max-width: max-content;
+  margin: unset;
+  padding: 0;
+  position: absolute;
+  right: 0;
+}
+
+.trip-form-modal > .tabs-wrapper > .hero-wrapper{
+  height: 532px;
+}
+
+.trip-form-modal > .tabs-wrapper > .hero{
+  height: 100%;
+} */

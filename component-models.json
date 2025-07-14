@@ -208,6 +208,9 @@
           {
             "name": "Login Form Modal",
             "value": "login-form-modal"
+          },{
+            "name": "trip Form Modal",
+            "value": "trip-form-modal"
           },
           {
             "name": "Review Carousel",

@@ -6,7 +6,7 @@ async function createForm(formHref, submitHref) {
   const json = await resp.json();
 
   const form = document.createElement('form');
-  form.dataset.action = submitHref;
+  form.dataset.action = submitHref; 
 
   const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
   fields.forEach((field) => {
