@@ -63,5 +63,11 @@
   font-display: swap;
   src: url('../fonts/TSTAR-PRO-Bold.ttf') format('woff2');
 }
+@font-face {
+  font-family: "TRANSDUCER-Bold";
+  font-style: "Bold";
+  font-display: swap;
+  src: url('../fonts/TRANSDUCER-Bold.otf') format('woff2');
+}
 
 

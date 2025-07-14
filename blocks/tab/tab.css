@@ -44,7 +44,9 @@
 .splendor-tab .tabs-list button[aria-selected='true'] {
   border-bottom: 1px solid var(--background-color);
   /* background-color: var(--background-color); */
-  background-color: red;
+  /* background-color: red; */
+
+      background-image: linear-gradient(160.69deg, #b50000 22.35%, #ff0000 68.47%, #b50000 114.59%);
   color: white;
   cursor: initial;
 }

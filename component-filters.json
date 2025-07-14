@@ -25,7 +25,9 @@
       "block-card",
       "blogs-swiper",
       "form",
-      "price-listing"
+      "price-listing",
+      "ride-thankyou",
+      "thankyou-popup"
     ]
   },
   {
@@ -67,5 +69,14 @@
   {
     "id": "block-card",
     "components": ["block-card-item"]
+  },
+  {
+    "id": "ride-thankyou",
+    "components": ["ride-thankyou-content"]
+  },
+  {
+    "id": "thankyou-popup",
+    "components": ["thankyou-popup-item"]
   }
 ]
+
