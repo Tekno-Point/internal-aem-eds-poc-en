@@ -25,7 +25,7 @@
 .carousel.banner-carousel .swiper-slide div:nth-child(n+2) a {
     all: unset;
     margin: unset;
-    background-color: red;
+    background-color: #0088dd;
     color: #FFFFFF;
     box-shadow: 0 2px 2px 0 rgba(0, 136, 221, 0.14), 0 3px 1px -2px rgba(0, 136, 221, 0.2), 0 1px 5px 0 rgba(0, 136, 221, 0.12);
     border: 1px solid transparent;
