@@ -27,6 +27,15 @@ function createLabel(fd) {
   if (fd.Mandatory.toLowerCase() === 'true' || fd.Mandatory.toLowerCase() === 'x') {
     label.dataset.required = true;
   }
+  
+  if(fd.Icon) {
+    const imgWrapper = document.createElement('div');
+    const img = document.createElement('img'); 
+    img.src = '/icons' + fd.icon; 
+    imgWrapper.append(img);
+    label.append(imgWrapper);
+  }
+
   return label;
 }
 
