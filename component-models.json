@@ -259,6 +259,10 @@
           {
             "name": "Marque",
             "value": "marque"
+          },
+          {
+            "name": "Asset API",
+            "value": "asset-api"
           }
         ]
       }
