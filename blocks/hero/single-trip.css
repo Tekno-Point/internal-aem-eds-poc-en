@@ -1,0 +1,42 @@
+#tabpanel-single-trip>div {
+    grid-template-columns: none;
+}
+
+#form-wrap-geography {
+    display: flex;
+}
+
+#form-wrap-geography .field-wrapper {
+    flex: 1;
+    display: block;
+}
+
+#form-wrap-geography input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+}
+
+#form-wrap-geography label {
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    line-height: 16px;
+    font-weight: 600;
+    color: #282828;
+}
+
+#form-wrap-geography label>div {
+    width: 50px;
+    height: 55px;
+    padding: 1rem 1.3rem;
+    box-sizing: content-box;
+    background-color: transparent;
+    border: 2px solid #c9c9c9;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#form-wrap-geography .focus-active label>div {
+    background-color: #ec6625;
+    border: 2px solid #ec6625;
+}

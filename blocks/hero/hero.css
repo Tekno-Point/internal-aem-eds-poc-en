@@ -1,3 +1,5 @@
+@import url('single-trip.css');
+
 .hero-container .hero-wrapper {
     max-width: unset;
     padding: 0;
@@ -32,7 +34,7 @@
     height: 100%;
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
     .hero {
         padding: 40px 32px;
     }
@@ -49,11 +51,11 @@
     height: 532px;
 }
 
-.trip-form-modal > .tabs-wrapper { 
+.trip-form-modal>.tabs-wrapper {
     position: absolute;
     right: 100px;
     right: calc((100% - 1270px) / 2);
-    z-index: 2; 
+    z-index: 2;
     width: 100%;
     background: #fff;
     padding: 3rem;
@@ -64,49 +66,48 @@
     box-shadow: 3px 4px 23px 0 #0000000f;
 }
 
-.trip-form-modal > .tabs-wrapper > .tabs > .tabs-list{
-  display: block;
+.trip-form-modal>.tabs-wrapper>.tabs>.tabs-list {
+    display: block;
     border-bottom: 1px solid #e4e3e3;
     border: 1px solid #c9c9c9;
 }
 
-.trip-form-modal > .tabs-wrapper > .tabs > .tabs-list > button{
-  width: 50%;
+.trip-form-modal>.tabs-wrapper>.tabs>.tabs-list>button {
+    width: 50%;
 }
 
-.trip-form-modal > .tabs-wrapper > .hero-wrapper {
+.trip-form-modal>.tabs-wrapper>.hero-wrapper {
     height: 532px;
 }
 
-.trip-form-modal > .tabs-wrapper > .hero {
+.trip-form-modal>.tabs-wrapper>.hero {
     height: 100%;
 }
 
-.hero-container .hero-wrapper > .hero > div:nth-child(n + 2){
-  padding: 0 calc((100% - 1270px) / 2);
-} 
-
-.hero-container .hero-wrapper > .hero > div:nth-child(n + 2) > div {
-  width: 58.33333333%;
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 2) {
+    padding: 0 calc((100% - 1270px) / 2);
 }
 
-.hero-container .hero-wrapper > .hero > div:nth-child(n + 2) > div > h2{
-  font-size: 48px;
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 2)>div {
+    width: 58.33333333%;
+}
+
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 2)>div>h2 {
+    font-size: 48px;
     font-weight: 900;
     line-height: 60px;
     margin-bottom: 20px;
 
 }
 
-
-.hero-container .hero-wrapper > .hero > div:nth-child(n + 2) > div > ul {
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 2)>div>ul {
     display: flex;
     list-style: none;
-} 
+}
 
-.hero-container .hero-wrapper > .hero > div:nth-child(n + 2) > div > ul > li{
-  position: relative; 
-  width: 33%; 
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 2)>div>ul>li {
+    position: relative;
+    width: 33%;
     font-size: 1.4rem;
     font-weight: 600;
     color: #282828;
@@ -116,67 +117,60 @@
     border-radius: 10px;
     padding: 12px 10px 12px 18px;
     padding-left: 52px;
-  margin-right: 1.5rem;
-  transition: 0.3s;
+    margin-right: 1.5rem;
+    transition: 0.3s;
 }
 
-.hero-container .hero-wrapper > .hero > div:nth-child(n + 2) > div > ul > li  > span{
-  position: absolute;
-  left: 10px; 
-  width: 37px;
-  height: 38px; 
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 2)>div>ul>li>span {
+    position: absolute;
+    left: 10px;
+    width: 37px;
+    height: 38px;
 }
 
-.hero-container .hero-wrapper > .hero > div:nth-child(n + 1) > div:first-child > picture > img{
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 1)>div:first-child>picture>img {
     object-fit: unset;
 }
 
-.hero-container .hero-wrapper > .hero > div:nth-child(n + 2) > div > ul > li  > span > img{
-  object-fit: contain;
-} 
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 2)>div>ul>li>span>img {
+    object-fit: contain;
+}
 
-.hero-container .hero-wrapper > .hero > div:nth-child(n + 2) > div > p {
-  font-size: 2.8rem;
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 2)>div>p {
+    font-size: 2.8rem;
     font-weight: 600;
-    margin: 1rem 0 2rem; 
+    margin: 1rem 0 2rem;
 }
 
 
-.hero-container .hero-wrapper > .hero > div:first-child > div > picture {
+.hero-container .hero-wrapper>.hero>div:first-child>div>picture {
     top: 300px;
 }
 
-.hero-container
-    .hero-wrapper
-    > .hero
-    > div:nth-child(n + 2)
-    > div
-    > ul
-    > li:last-child {
+.hero-container .hero-wrapper>.hero>div:nth-child(n + 2)>div>ul>li:last-child {
     width: 22%;
-} 
-
-#tabpanel-multi-trip{
-  padding: 2rem;
-  border: 1px solid #c9c9c9;
-  border-top: none;
-  border-radius: 0 0 1rem 1rem;
 }
 
-#tabpanel-multi-trip > .form-container > .form-wrapper >
-.form > form > div > p {
-  font-size: 1.6rem;
-  padding-bottom: 2rem;
-  font-weight: 700;
+#tabpanel-multi-trip {
+    padding: 2rem;
+    border: 1px solid #c9c9c9;
+    border-top: none;
+    border-radius: 0 0 1rem 1rem;
 }
 
-#tabpanel-multi-trip #form-wrapage > div.field-wrapper.plaintext-wrapper,
-#tabpanel-multi-trip #form-wrapday > div.field-wrapper.plaintext-wrapper {
-  grid-column: 1 / -1;
-} 
+#tabpanel-multi-trip>.form-container>.form-wrapper>.form>form>div>p {
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+    font-weight: 700;
+}
 
-#tabpanel-multi-trip #form-wrapage > div.field-wrapper.radio-weapper > input[type="radio"],
-#tabpanel-multi-trip #form-wrapday > div.field-wrapper.radio-wrapper > input[type="radio"]{
+#tabpanel-multi-trip #form-wrapage>div.field-wrapper.plaintext-wrapper,
+#tabpanel-multi-trip #form-wrapday>div.field-wrapper.plaintext-wrapper {
+    grid-column: 1 / -1;
+}
+
+#tabpanel-multi-trip #form-wrapage>div.field-wrapper.radio-weapper>input[type="radio"],
+#tabpanel-multi-trip #form-wrapday>div.field-wrapper.radio-wrapper>input[type="radio"] {
     display: none;
 }
 
@@ -198,9 +192,8 @@
   cursor: pointer;
 } */
 
-#tabpanel-multi-trip > .form-container > .form-wrapper >
-.form > form > div > fieldset > div > input[type="radio"]{
-  display: none;
+#tabpanel-multi-trip>.form-container>.form-wrapper>.form>form>div>fieldset>div>input[type="radio"] {
+    display: none;
 }
 
 /* #tabpanel-multi-trip > .form-container > .form-wrapper >
