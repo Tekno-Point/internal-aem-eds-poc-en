@@ -199,7 +199,6 @@ export async function updateDataMapping(dataMapping) {
 
 const dm = await getDataMapping();
 console.log(dm);
-debugger;
 // await fetchStateCity();
 // const { state, city } = await fetchStateCity();
 // await fetchProduct()
