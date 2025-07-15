@@ -225,6 +225,18 @@ const createRadio = (fd) => {
   return { field, fieldWrapper };
 };
 
+const createLink = (fd) => {
+  const fieldWrapper = createFieldWrapper(fd);
+  const link = document.createElement('a');
+  link.href = fd.Value;
+  link.textContent = fd.Label;
+  link.id = fd.Id;
+  link.target = fd.target || "_blank"; 
+  fieldWrapper.append(link);
+
+  return { field: link, fieldWrapper };
+};
+
 const FIELD_CREATOR_FUNCTIONS = {
   select: createSelect,
   heading: createHeading,
@@ -236,6 +248,7 @@ const FIELD_CREATOR_FUNCTIONS = {
   fieldset: createFieldset,
   checkbox: createCheckbox,
   radio: createRadio,
+  link: createLink
 };
 
 export default async function createField(fd, form) {
