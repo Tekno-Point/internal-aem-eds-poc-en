@@ -1,7 +1,11 @@
+const endpoint = "https://www.heromotocorp.com";
+
 const geoLocationAPI = `https://apis.mappls.com/advancedmaps/v1/5b8424bdaf84cda4fccf61d669d85f5a/rev_geocode?lat={lat}&lng={long}`;
-const stateCityAPI = `https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.state-and-city.json`;
-const prodcutAPI = `https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.product.practical.splendor-plus.{stateCode}.{cityCode}.json`;
-const sendOTPAPI = `https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/executive/jcr:content.send-msg.json`;
+const stateCityAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/practical/jcr:content.state-and-city.json`;
+const prodcutAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/practical/jcr:content.product.practical.splendor-plus.{stateCode}.{cityCode}.json`;
+const sendOTPAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/executive/jcr:content.send-msg.json`;
+
+
 const dataMapping = {
   state_city_master: {},
 };
@@ -154,6 +158,8 @@ export async function fetchOTP(phoneNum) {
   });
   console.log(data);
 }
+
+//OTP value should be dynamic and should be passed.
 fetchOTP("8169850484");
 export function verifyOtp(phoneNum, otp) {
   return (
@@ -164,6 +170,7 @@ export function verifyOtp(phoneNum, otp) {
   );
 }
 
+//Verify OTP at frontend
 function hashCode(s) {
   var h = 0,
     l = s.length,
