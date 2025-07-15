@@ -2,6 +2,24 @@
     grid-template-columns: none;
 }
 
+#tabpanel-single-trip #form-wrapradio {
+    padding: 2rem;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #c9c9c9;
+}
+
+#tabpanel-single-trip #form-wrapradio input {
+    transform: scale(1.4);
+    accent-color: #f26624;
+}
+
+#tabpanel-single-trip #form-wrapradio label {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
 #form-wrap-geography {
     display: flex;
 }
@@ -36,7 +54,7 @@
     margin-bottom: 1rem;
 }
 
-#form-wrap-geography .focus-active label>div {
+#form-wrap-geography input[type='radio']:checked+label>div {
     background-color: #ec6625;
     border: 2px solid #ec6625;
 }
