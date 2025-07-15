@@ -5,8 +5,7 @@ const stateCityAPI = `${endpoint}/content/hero-commerce/in/en/products/product-p
 const prodcutAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/practical/jcr:content.product.practical.splendor-plus.{stateCode}.{cityCode}.json`;
 const sendOTPAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/executive/jcr:content.send-msg.json`;
 
-
-const dataMapping = {
+export let dataMapping = {
   state_city_master: {},
 };
 import { getMetadata } from "./aem.js";
@@ -129,7 +128,6 @@ export async function useDataMapping() {
 
 }
 async function setSkuAndStateCity() {
-
   let getProducts = await fetchProduct();
   let selectedCityState = await fetchStateCity()
   dataMapping.sku = getProducts.data.products.items[0].variant_to_colors[0].colors[0].sku;
@@ -138,9 +136,9 @@ async function setSkuAndStateCity() {
 
   dataMapping.products.variant = getProducts.data.products.items[0].variant_to_colors;
   dataMapping.currentlocation = {};
-  dataMapping.currentlocation.state = selectedCityState.state;
-  dataMapping.currentlocation.city = selectedCityState.city;
-  dataMapping.currentlocation.stateCode = dataMapping.state_city_master[dataMapping.currentlocation.state.toUpperCase()][dataMapping.currentlocation.city.toUpperCase()].stateCode;
+  dataMapping.currentlocation.state = selectedCityState.state.toUpperCase();
+  dataMapping.currentlocation.city = selectedCityState.city.toUpperCase();
+  dataMapping.currentlocation.stateCode = dataMapping.state_city_master[dataMapping.currentlocation.state][dataMapping.currentlocation.city].stateCode;
 
   updateDataMapping(dataMapping);
 }
@@ -193,7 +191,7 @@ export async function fetchOTP(phoneNum) {
 }
 
 //OTP value should be dynamic and should be passed.
-fetchOTP("8169850484");
+//fetchOTP("8169850484");
 export function verifyOtp(phoneNum, otp) {
   return (
     otp ===

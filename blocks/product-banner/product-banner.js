@@ -1,9 +1,9 @@
-import { fetchProdcut, fetchStateCity, getDataMapping } from "../../scripts/common.js";
+import { fetchProduct, fetchStateCity, getDataMapping } from "../../scripts/common.js";
 
 export default async function decorate(block) {
     let datamapingobj = await getDataMapping();
     let selectedCityState = await fetchStateCity();
-    let getProducts = await fetchProdcut()
+    let getProducts = await fetchProduct()
     let props = Array.from(block.children).map((ele) => ele.children)
     // let Variants = data.products.items[0].configurable_options[1].values;
     let Variants = getProducts.data.products.items[0].variant_to_colors;

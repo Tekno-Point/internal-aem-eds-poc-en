@@ -1,7 +1,9 @@
-import { getDataMapping, fetchStateCityMaster } from '../../scripts/common.js';
+import { getDataMapping, fetchStateCityMaster, dataMapping } from '../../scripts/common.js';
+// import dataMapping from '../../scripts/common.js'
 import { fetchDealers } from './dealer-render.js';
 
 export default function decorate(block) {
+  dataMapping = getDataMapping();
   const stateSelect = document.createElement('select');
   const citySelect = document.createElement('select');
 
@@ -22,7 +24,7 @@ export default function decorate(block) {
       cities: item.cities,
     }));
 
-    // Populate state dropdown
+    // Populate state dropdown`
     states.forEach(state => {
       const opt = document.createElement('option');
       opt.value = state.label;
@@ -41,19 +43,16 @@ export default function decorate(block) {
       });
     }
 
-    // Set initial values
     stateSelect.value = 'MAHARASHTRA';
     updateCityDropdown('MAHARASHTRA');
     citySelect.value = 'MUMBAI';
 
     // Render dealer data (just logs to console)
     async function renderDealers(stateLabel, cityLabel) {
-      const mapping = await getDataMapping();
-      const codeData = mapping.city_state_master[stateLabel][cityLabel];
-      const dealerData = await fetchDealers(mapping.sku, codeData.stateCode, codeData.code);
+      const dealerData = await fetchDealers(dataMapping.sku, dataMapping.currentlocation.stateCode, dataMapping.currentlocation.city.toUpperCase());
       console.log("RAW DEALER DATA:", dealerData);
     }
-
+    debugger
     // Initial render
     renderDealers(stateSelect.value, citySelect.value);
 

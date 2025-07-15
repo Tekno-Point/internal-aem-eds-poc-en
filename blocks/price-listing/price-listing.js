@@ -1,4 +1,4 @@
-import { fetchStateCityMaster, fetchProdcut } from "../../scripts/common.js";
+import { fetchStateCityMaster, fetchProduct } from "../../scripts/common.js";
 import { div, label, select, option, fieldset, p } from "../../scripts/dom-helpers.js";
 
 export default async function decorate(block) {
@@ -111,7 +111,7 @@ export default async function decorate(block) {
     const city = state.cities.find(c => c.code === cityCode);
     if (!city) return;
 
-    const productData = await fetchProdcut(state.label, city.code);
+    const productData = await fetchProduct(state.label, city.code);
     const variants = productData?.data?.products?.items?.[0]?.variant_to_colors || [];
 
     variants.forEach(v => {
