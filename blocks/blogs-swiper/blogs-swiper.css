@@ -117,10 +117,13 @@
     > a {
     background-color: white;
     color: #009fda;
-    font-weight: 700;
+    font-weight: 500;
     padding: 10px 0px 0px 0px;
     margin: 0px;
     border-radius: 0px;
+    font-size: 1.125rem;
+    letter-spacing:normal;
+    line-height: 1.5rem;
 }
 
 .blogs-swiper .swiper-slide > div:nth-child(2) {
