@@ -241,7 +241,7 @@ input[type="date"] {
   line-height: 19px;
   color: #ffffff;
   padding: 15px 33px;
-  background-color: #0088dd;
+  background-color: red;
   border-radius: 8.43px;
 }
 
