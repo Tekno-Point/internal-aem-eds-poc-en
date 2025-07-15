@@ -42,7 +42,7 @@ export default async function decorate(block) {
                 method: "GET"
             });
             const respData = await response.json();
-            console.log(respData);
+            // console.log(respData);
 
             const marqueewrapper = document.createElement('div');
             marqueewrapper.classList.add("marque-wrapper")
@@ -82,34 +82,89 @@ export default async function decorate(block) {
         const response = await fetch((url), {
             method: "GET"
         });
-        const respData = await response.json();
-        // console.log(respData)
-        // Render the carousel markup
-        let carousel = renderUI(respData?.data?.cfListByPath?.item?.contentFragment);
+        let respData = await response.json();
+        // console.log(respData);
 
-        // If renderUI returns an array, wrap it in a div
-        if (Array.isArray(carousel)) {
-            const wrapper = document.createElement('div');
-            carousel.forEach(el => wrapper.appendChild(el));
-            carousel = wrapper;
-        }
-        // Remove all children before appending carousel
-        // while (block.firstChild) block.removeChild(block.firstChild);
-        row.firstElementChild.firstElementChild.remove()
-        if (carousel instanceof HTMLElement) {
-            // block.appendChild(carousel);
-            row.firstElementChild.append(carousel);
-        }
-        // Only initialize Swiper (do not re-wrap slides)
-        if (carousel instanceof HTMLElement) {
-            initSwiperOnly(carousel);
-        }
+        const data = respData.properties.elements.contentFragment.value;
+        // console.log(data)
+        // debugger;
 
-        showCards(respData?.data?.cfListByPath?.item?.contentFragment);
-        window.addEventListener('userDataSave', (e) => {
-            showCards(respData?.data?.cfListByPath?.item?.contentFragment);
+        respData = await CallInternalData(data);
+        console.log("resp data", respData);
+
+        respData.forEach(elem => {
+            console.log("elem", elem);
+            // Render the carousel markup
+            let carousel = renderUI(elem);
+
+            // If renderUI returns an array, wrap it in a div
+            if (Array.isArray(carousel)) {
+                const wrapper = document.createElement('div');
+                carousel.forEach(el => wrapper.appendChild(el));
+                carousel = wrapper;
+            }
+            // Remove all children before appending carousel
+            // while (block.firstChild) block.removeChild(block.firstChild);
+            row.firstElementChild.firstElementChild.remove()
+            if (carousel instanceof HTMLElement) {
+                // block.appendChild(carousel);
+                row.firstElementChild.append(carousel);
+            }
+            // Only initialize Swiper (do not re-wrap slides)
+            if (carousel instanceof HTMLElement) {
+                initSwiperOnly(carousel);
+            }
+
+            showCards(elem?.properties?.elements);
+            window.addEventListener('userDataSave', (e) => {
+                showCards(elem?.properties?.elements);
+            })
         })
     });
+}
+
+
+async function CallInternalData(data) {
+    // Map each item to a fetch call and collect promises
+    const fetchPromises = data.map(async (item) => {
+        let modifiedUrl = item.replace("/content/dam", "/api/assets");
+        modifiedUrl = "https://publish-p48457-e1275402.adobeaemcloud.com" + modifiedUrl + ".json";
+        console.log("Modified URL:", modifiedUrl);
+
+        try {
+            const response = await fetch(modifiedUrl, {
+                method: "GET"
+            });
+
+            const respData = await response.json();
+            console.log("Original URL:", item);
+            console.log("Response Data:", respData);
+            return {
+                "departureCity": "Bangalore - India (BLR)",
+                "departureDate": "2025-07-14",
+                "destinationCity": "Colombo - Sri Lanka (CMB)",
+                "destinationDate": "2025-07-15",
+                "price": 18000,
+                "type": "popular",
+                "image": {
+                  "_publishUrl": "https://publish-p48457-e1275402.adobeaemcloud.com/content/dam/internal-aem-eds-poc/srilankan-airlines/trending-airlines/colombo-CMB.jpg"
+                },
+                "tripType": [
+                  "economy",
+                  "round-trip"
+                ],
+                "description": {
+                  "html": "<p><a href=\"#\">Book Now</a></p>\n"
+                }
+              }
+        } catch (error) {
+            console.error("Error fetching URL:", modifiedUrl, error);
+            return null; // or some fallback
+        }
+    });
+
+    // Wait for all fetch calls to finish and return the responses
+    return Promise.all(fetchPromises);
 }
 
 function renderUI(data = []) {
