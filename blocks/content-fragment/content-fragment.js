@@ -29,20 +29,25 @@ export default async function decorate(block) {
         const formurl = new URL(item.href)?.pathname.replace('.html', '');
         const searchpara = new URL(item.href).search;
         // const searchpara = '?id='+ (Math.random()*10);
-        let url = `${origin}/graphql/execute.json/internal-aem-eds-poc/trending-destination-list;path=${formurl}${searchpara}`
-        if (block.classList.contains('marque')) {
-            url = `${origin}/graphql/execute.json/internal-aem-eds-poc/marque;path=${formurl}${searchpara}`;
+   //     let url = `${origin}/graphql/execute.json/internal-aem-eds-poc/trending-destination-list;path=${formurl}${searchpara}`
+   let url = "https://publish-p48457-e1275402.adobeaemcloud.com/api/assets/internal-aem-eds-poc/cf/srilankan-airlines/marque.json";
+   if (block.classList.contains('marque')) {
+            //url = `${origin}/graphql/execute.json/internal-aem-eds-poc/marque;path=${formurl}${searchpara}`;
+            url = "https://publish-p48457-e1275402.adobeaemcloud.com/api/assets/internal-aem-eds-poc/cf/srilankan-airlines/marque.json";
             const response = await fetch((url), {
                 method: "GET"
             });
             const respData = await response.json();
-            const marqueData = respData?.data?.srilankaMarqueByPath?.item;
+            console.log(respData.properties.elements.head.value)
+            console.log(respData.properties.elements.description.value)
+
+         //   const marqueData = respData?.data?.srilankaMarqueByPath?.item;
 
             const marqueewrapper = document.createElement('div');
             marqueewrapper.classList.add("marque-wrapper")
             marqueewrapper.innerHTML = `
-               <h3 class='marque-heading'>${marqueData.head}</h3>
-               <div class='marque-description'>${marqueData.description.html}</div>
+               <h3 class='marque-heading'>${respData.properties.elements.head.value}</h3>
+               <div class='marque-description'>${respData.properties.elements.description.value}</div>
             `
             row.firstElementChild.firstElementChild.remove()
             row.firstElementChild.append(marqueewrapper);
