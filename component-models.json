@@ -398,7 +398,7 @@
         "valueType": "string",
         "name": "form-url",
         "label": "form path",
-        "value":""
+        "value": ""
       },
       {
         "component": "text",
@@ -436,67 +436,67 @@
     ]
   },
   {
-    "id":"ride-thankyou-content",
-    "fields":[
-        {
-            "component": "reference",
-            "valueType": "string",
-            "name": "col1_loader",
-            "label": "Image",
-            "multi": false
-        },
-        {
-            "component": "text",
-            "valueType": "string",
-            "name": "col1_loaderAlt",
-            "label": "Alt",
-            "value": ""
-        },
-        {
-            "component": "reference",
-            "valueType": "string",
-            "name": "col2_thankyou",
-            "label": "Image",
-            "multi": false
-        },
-        {
-            "component": "text",
-            "valueType": "string",
-            "name": "col2_thankyouAlt",
-            "label": "Alt",
-            "value": ""
-        },
-        {
-            "component": "richtext",
-            "name": "col2_title",
-            "value": "",
-            "label": "Thank You Content",
-            "valueType": "string"
-        }
+    "id": "ride-thankyou-content",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_loader",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_loaderAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_thankyou",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_thankyouAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_title",
+        "value": "",
+        "label": "Thank You Content",
+        "valueType": "string"
+      }
     ]
   },
   {
     "id": "thankyou-popup-item",
-    "fields":[
-        {
-            "component": "reference",
-            "valueType": "string",
-            "name": "image",
-            "label": "Image",
-            "multi": false
-        },
-        {
-            "component": "text",
-            "valueType": "string",
-            "name": "imageAlt",
-            "label": "Alt",
-            "value": ""
-        },
-        {
-            "component": "aem-content",
-            "name": "link",
-            "label": "Enter Modal path"
-        }
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Enter Modal path"
+      }
     ]
   },
   {
@@ -515,6 +515,24 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "product-banner",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
       }
     ]
   }
