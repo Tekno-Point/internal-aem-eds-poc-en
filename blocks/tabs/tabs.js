@@ -3,6 +3,7 @@ import { toClassName } from '../../scripts/aem.js';
 import { clickDropdown, dateDisable, inputFilter, showData } from '../form/booking-form.js';
 import Swiper from '../carousel/swiper-bundle.min.js';
 import { dData } from './dummy-data.js';
+import { div, span } from '../../scripts/dom-helper.js';
 
 const dummyData = dData;
 
@@ -49,7 +50,7 @@ async function getData(auth, data = {
   departureDate: '2025-07-16',
   returnDate: '2025-07-30',
   adults: '1',
-  includedAirlineCodes: 'TG',
+  includedAirlineCodes: 'UL',
   max: '10',
 }) {
   const myHeaders = new Headers();
@@ -84,6 +85,7 @@ function convertEurToInr(eurAmount, rate = 90) {
   const inr = eurAmount * rate;
   return `₹${Math.round(inr).toLocaleString('en-IN', { maximumFractionDigits: 2 })}`;
 }
+var loader = div({class : ['loader-wrapper','hide']},span({class : ['loader']}));
 
 export default async function decorate(block) {
   // build tablist
@@ -91,7 +93,6 @@ export default async function decorate(block) {
   const tablist = document.createElement('div');
   tablist.className = 'tabs-list';
   tablist.setAttribute('role', 'tablist');
-
   // decorate tabs and tabpanels
   const tabs = [...block.children].map((child) => child.firstElementChild);
   tabs.forEach((tab, i) => {
@@ -135,6 +136,7 @@ export default async function decorate(block) {
   clickDropdown(block);
   dateDisable(block);
 
+  block.appendChild(loader);
   window.addEventListener("datafetched", () => {
     inputFilter(block, '.from-input', 'source', '.to-input');
     inputFilter(block, '.to-input', 'destination', '.from-input');
@@ -146,6 +148,7 @@ export default async function decorate(block) {
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
     submit.classList.add('disabled');
+    load(true)
 
     const auth = await getAccessToken();
     const data = await getData(auth, {
@@ -154,7 +157,7 @@ export default async function decorate(block) {
       departureDate: this.departure.value,
       returnDate: this.return.value,
       adults: '1',
-      includedAirlineCodes: 'TG',
+      includedAirlineCodes: 'UL',
       max: '10',
     });
 
@@ -296,6 +299,7 @@ export default async function decorate(block) {
       block.appendChild(cardWrapper);
     }
     submit.classList.remove('disabled');
+  load(false);
   });
 }
 
@@ -327,4 +331,11 @@ function swiperInit() {
       clickable: true,
     },
   })
+}
+function load(status) {
+  if(status){
+    return  loader.classList.remove('hide')
+  }else {
+    return  loader.classList.add('hide')
+  }
 }

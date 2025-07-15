@@ -300,3 +300,9 @@ main .section.highlight {
 header nav {
   height: var(--nav-height);
 }
+
+@media (width <= 900px) {
+  header nav {
+    height: var(--nav-height);
+  }
+}
