@@ -93,21 +93,23 @@ function generateFieldId(fd, suffix = '') {
 
 function createLabel(fd) {
   const label = document.createElement('label');
-  label.id = generateFieldId(fd, '-label'); 
-  label.textContent = fd.Label || fd.Name;
+  label.id = generateFieldId(fd, '-label');
   label.setAttribute('for', fd.Id);
   if (fd.Mandatory.toLowerCase() === 'true' || fd.Mandatory.toLowerCase() === 'x') {
     label.dataset.required = true;
   }
 
-  if(fd.Icon) {
+  if (fd.Icon) {
     const imgWrapper = document.createElement('div');
-    const img = document.createElement('img'); 
-    img.src = '/icons' + fd.icon; 
+    const img = document.createElement('img');
+    img.src = '/icons/' + fd.Icon;
     imgWrapper.append(img);
     label.append(imgWrapper);
   }
-  
+
+  const textNode = document.createTextNode(fd.Label || fd.Name);
+  label.append(textNode);
+
   return label;
 }
 
@@ -294,6 +296,18 @@ const createRadio = (fd) => {
   return { field, fieldWrapper };
 };
 
+const createLink = (fd) => {
+  const fieldWrapper = createFieldWrapper(fd);
+  const link = document.createElement('a');
+  link.href = fd.Value;
+  link.textContent = fd.Label;
+  link.id = fd.Id;
+  link.target = fd.target || "_blank"; 
+  fieldWrapper.append(link);
+
+  return { field: link, fieldWrapper };
+};
+
 const FIELD_CREATOR_FUNCTIONS = {
   select: createSelect,
   heading: createHeading,
@@ -305,6 +319,7 @@ const FIELD_CREATOR_FUNCTIONS = {
   fieldset: createFieldset,
   checkbox: createCheckbox,
   radio: createRadio,
+  link: createLink
 };
 
 export async function createField(fd, form) {
@@ -347,7 +362,7 @@ export async function loadFragment(path) {
   return null;
 }
 
-export default async function decorateFragment(block) { 
+export async function decorateFragment(block) {
   const link = block.querySelector('a');
   const path = link ? link.getAttribute('href') : block.textContent.trim();
   const fragment = await loadFragment(path); 

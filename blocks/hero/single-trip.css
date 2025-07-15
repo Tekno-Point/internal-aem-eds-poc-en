@@ -1,0 +1,84 @@
+#tabpanel-single-trip>div {
+    grid-template-columns: none;
+}
+
+#tabpanel-single-trip #form-wrapradio {
+    padding: 2rem;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #c9c9c9;
+}
+
+#tabpanel-single-trip #form-wrapradio input {
+    transform: scale(1.4);
+    accent-color: #f26624;
+}
+
+#tabpanel-single-trip #form-wrapradio label {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+#form-wrap-geography {
+    display: flex;
+    gap: 10px;
+    padding: 2rem;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #c9c9c9;
+}
+
+#form-wrap-geography .field-wrapper {
+    flex: 1;
+    display: block;
+}
+
+#form-wrap-geography input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+}
+
+#form-wrap-geography label {
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    line-height: 16px;
+    font-weight: 600;
+    color: #282828;
+}
+
+#form-wrap-geography label>div {
+    width: 50px;
+    height: 55px;
+    padding: 1rem 1.3rem;
+    box-sizing: content-box;
+    background-color: transparent;
+    border: 2px solid #c9c9c9;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#form-wrap-geography input[type='radio']:checked+label>div {
+    background-color: #ec6625;
+    border: 2px solid #ec6625;
+}
+
+#form-geographical-scope-label {
+    display: none;
+}
+
+#form-geographical-scope {
+    font-size: 1.2rem;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    font-weight: 700;
+    color: #6c6c6c;
+    text-decoration: underline;
+    border: none;
+    text-underline-offset: 2px;
+}
+
+#form-geographical-scope:hover {
+    color: #928f8e;
+}
