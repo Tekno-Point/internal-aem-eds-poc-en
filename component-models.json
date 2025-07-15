@@ -506,6 +506,17 @@
         "valueType": "string",
         "name": "Max",
         "label": "Max"
+      },
+       {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
       }
     ]
   }

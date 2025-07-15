@@ -11,7 +11,7 @@
     margin-top: 40px;
 }
 
-.emi-controls {
+ .emi-container .emi-controls {
     flex: 1;
     padding: 20px;
     padding: 20px;
@@ -25,34 +25,34 @@
 } */
 
 /* Show value above label+input */
-.value-row {
+.emi-container .value-row {
     display: flex;
     justify-content: end;
     align-items: center;
     margin-bottom: 6px;
 }
 
-.input-value {
+.emi-container.input-value {
     font-size: 16px;
     font-weight: 500;
     color: #333;
 }
 
 /* Label and number input side by side */
-.label-input-row {
+.emi-container .label-input-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
 }
 
-.label-input-row label {
+.emi-container .label-input-row label {
     font-size: 18px;
     font-family: "TSTAR-PRO-Heavy";
     font-weight: 900;
 }
 
-.label-input-row input.number-box {
+.emi-container .label-input-row input.number-box {
     margin-left: 20px;
     padding: 0px 8px 0px 8px;
     font-size: 15px;
@@ -62,22 +62,29 @@
 }
 
 /* Slider bar */
-.slider-row {
+.emi-container .slider-row {
     display: flex;
     align-items: center;
 }
 
-input[type="range"] {
+.emi-container input[type="range"] {
+    /* -webkit-appearance: none; */
     flex: 1;
-    height: 6px;
-    background: #aaa;
+    height: 9px;
+    background: #a5a5a5;
     accent-color: red;
     border-radius: 5px;
     cursor: pointer;
 }
 
+/*  changes for thumb*/
+
+
+
+
+
 /* Min/Max labels under slider */
-.range-labels {
+.emi-container .range-labels {
     display: flex;
     justify-content: space-between;
     font-size: 15px;
@@ -86,7 +93,7 @@ input[type="range"] {
 }
 
 /* EMI result box */
-.emi-output {
+.emi-container .emi-output {
     flex: 1;
     background: #303030;
     color: white;
@@ -99,7 +106,7 @@ input[type="range"] {
     /* align-items: center; */
 }
 
-.emi-output .emi-title {
+.emi-container .emi-output .emi-title {
     font-size: 32px;
     font-family: "TSTAR-PRO-Bold";
     font-weight: 700;
@@ -107,7 +114,7 @@ input[type="range"] {
     line-height: 3rem;
 }
 
-.emi-output .emi-value {
+.emi-container .emi-output .emi-value {
     font-size:52px;
     margin: 16px 0;
     font-family: "TSTAR-PRO-Heavy";
@@ -116,7 +123,7 @@ input[type="range"] {
     line-height: 4rem;
 }
 
-.emi-output button {
+.emi-container .emi-output button {
     width: 50%;
     background-image: linear-gradient(
         160.69deg,
