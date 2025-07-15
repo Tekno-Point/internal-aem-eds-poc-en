@@ -1,3 +1,6 @@
+@import url('/blocks/cards/cards.css');
+
+
 @font-face {
     font-family: "TSTAR-PRO-Normal";
     src: url("/fonts/TSTAR-PRO-Regular.ttf") format("truetype");
