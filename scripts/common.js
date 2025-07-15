@@ -79,7 +79,7 @@ export async function fetchStateCity() {
   const { state, city } = data.results[0];
   return { state, city };
 }
-export async function fetchProdcut() {
+export async function fetchProduct() {
   const { state, city } = await fetchStateCity();
   const dataMapping = await getDataMapping();
   const codeData =
@@ -114,17 +114,34 @@ function processDataMapping(data) {
   sessionStorage.setItem("dataMapping", JSON.stringify(dataMapping));
 }
 
+async function setSkuAndStateCity() {
+
+  let getProducts = await fetchProduct();
+  let selectedCityState = await fetchStateCity()
+  dataMapping.sku = getProducts.data.products.items[0].variant_to_colors[0].colors[0].sku;
+  dataMapping.currentlocation = {};
+  dataMapping.currentlocation.state = selectedCityState.state;
+  dataMapping.currentlocation.city = selectedCityState.city;
+
+  updateDataMapping(dataMapping);
+}
+
+// processDataMapping()
+
 export async function getDataMapping() {
+  // debugger
   let data = sessionStorage.getItem("dataMapping");
   if (!data) {
-    const data = await fetchStateCityMaster();
-    processDataMapping(data);
+    let cityMaster = await fetchStateCityMaster();
+    processDataMapping(cityMaster);
     sessionStorage.setItem("dataMapping", JSON.stringify(dataMapping));
     data = sessionStorage.getItem("dataMapping");
+    setSkuAndStateCity();
   }
   data = JSON.parse(data);
   return data;
 }
+
 
 
 function getRandomId() {
@@ -140,6 +157,7 @@ function generateRandomId() {
   sessionStorage.setItem("booktestridekey", id);
   return getRandomId();
 }
+
 export async function fetchOTP(phoneNum) {
   const reqID = generateRandomId();
   const vehicleName = getMetadata("vehicle-name");
@@ -154,7 +172,9 @@ export async function fetchOTP(phoneNum) {
   });
   console.log(data);
 }
-fetchOTP("8169850484");
+
+//fetchOTP("8169850484");
+
 export function verifyOtp(phoneNum, otp) {
   return (
     otp ===
@@ -172,8 +192,17 @@ function hashCode(s) {
   return h;
 }
 
-// const dm = await getDataMapping();
-// console.log(dm);
+
+export async function updateDataMapping(dataMapping) {
+  dataMapping = sessionStorage.setItem("dataMapping", JSON.stringify(dataMapping));
+}
+
+const dm = await getDataMapping();
+console.log(dm);
+debugger;
 // await fetchStateCity();
 // const { state, city } = await fetchStateCity();
-// await fetchProdcut()
+// await fetchProduct()
+
+
+// await getDataMapping();
