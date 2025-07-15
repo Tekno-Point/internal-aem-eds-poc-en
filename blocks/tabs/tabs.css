@@ -710,7 +710,7 @@ input[type="date"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .hide {
@@ -720,7 +720,7 @@ input[type="date"] {
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #FFF;
+  border: 5px solid #F4F5F5;
   border-bottom-color: #0088dd;
   border-radius: 50%;
   display: inline-block;

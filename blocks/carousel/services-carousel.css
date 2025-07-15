@@ -110,7 +110,7 @@
     .carousel.services-carousel .swiper-slide div:has(picture),
     .carousel.services-carousel .swiper-slide div picture,
     .carousel.services-carousel .swiper-slide div>a {
-        height: 336px;
+        height: 309px;
     }
 
     .carousel.services-carousel .swiper-pagination-bullet {
