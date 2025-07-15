@@ -231,11 +231,46 @@ const createLink = (fd) => {
   link.href = fd.Value;
   link.textContent = fd.Label;
   link.id = fd.Id;
-  link.target = fd.target || "_blank"; 
+  link.target = fd.target || "_blank";
   fieldWrapper.append(link);
 
   return { field: link, fieldWrapper };
 };
+
+const createCounter = (fd) => {
+  const fieldWrapper = createFieldWrapper(fd);
+
+  const counterWrapper = document.createElement('div');
+  const incCounter = document.createElement('button');
+  const decCounter = document.createElement('button');
+
+  incCounter.classList.add('incrementer');
+  decCounter.classList.add('decrementer');
+
+  const field = document.createElement('input');
+  field.value = 0;
+  field.readOnly = 'readOnly';
+  field.min = 0;
+  setCommonAttributes(field, fd);
+
+  incCounter.addEventListener('click', () => {
+    field.value = parseInt(field.value) + 1;
+  })
+
+  decCounter.addEventListener('click', () => {
+    field.value = parseInt(field.value) - 1;
+  })
+
+  counterWrapper.append(decCounter, field, incCounter);
+
+  const label = createLabel(fd);
+  field.setAttribute('aria-labelledby', label.id);
+  fieldWrapper.prepend(label);
+
+  fieldWrapper.append(counterWrapper);
+
+  return { field, fieldWrapper };
+}
 
 const FIELD_CREATOR_FUNCTIONS = {
   select: createSelect,
@@ -248,7 +283,8 @@ const FIELD_CREATOR_FUNCTIONS = {
   fieldset: createFieldset,
   checkbox: createCheckbox,
   radio: createRadio,
-  link: createLink
+  link: createLink,
+  counter: createCounter
 };
 
 export default async function createField(fd, form) {
