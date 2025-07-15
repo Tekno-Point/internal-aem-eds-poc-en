@@ -1,3 +1,4 @@
+import tripForm from '../blocks/tabs/utility/tripForm.js';
 import {
   loadHeader,
   loadFooter,
@@ -346,18 +347,18 @@ export async function loadFragment(path) {
   return null;
 }
 
-export default async function decorateFragment(block) {
+export default async function decorateFragment(block) { 
   const link = block.querySelector('a');
   const path = link ? link.getAttribute('href') : block.textContent.trim();
-  const fragment = await loadFragment(path);
-  if (fragment) {
+  const fragment = await loadFragment(path); 
+  if (fragment) { 
     const fragmentSection = fragment.querySelector(':scope .section');
     if (fragmentSection) {
       block.classList.add(...fragmentSection.classList);
       block.classList.remove('section');
       block.replaceChildren(...fragmentSection.childNodes);
     }
-  }
+  } 
 }
 
 async function createForm(formHref, submitHref) {
