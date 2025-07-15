@@ -56,18 +56,20 @@ export async function getUserLatLong() {
           resolve({ lat, long });
         },
         (error) => {
-          // resolve({ state_city_master.default.state, state_city_master.default.city });
+          // set delhi lat log
         }
       );
     } else {
-      // resolve({ "Delhi", "Delhi"});
+      // set delhi lat log
     }
   });
 }
+
 export async function fetchStateCityMaster() {
   const data = await fetchAPI("GET", stateCityAPI);
   return data;
 }
+
 export async function fetchStateCity() {
   const geolocation = await getUserLatLong();
   const data = await fetchAPI(
@@ -114,14 +116,27 @@ function processDataMapping(data) {
   sessionStorage.setItem("dataMapping", JSON.stringify(dataMapping));
 }
 
+export async function useDataMapping() {
+  const data = getDataMapping();
+  function setDataMapping(newData) {
+    sessionStorage.setItem("dataMapping", JSON.stringify(newData));
+  }
+  return [data, setDataMapping]
+
+}
 async function setSkuAndStateCity() {
 
   let getProducts = await fetchProduct();
   let selectedCityState = await fetchStateCity()
   dataMapping.sku = getProducts.data.products.items[0].variant_to_colors[0].colors[0].sku;
+  dataMapping.products = {}
+  dataMapping.products.variant = {};
+
+  dataMapping.products.variant = getProducts.data.products.items[0].variant_to_colors;
   dataMapping.currentlocation = {};
   dataMapping.currentlocation.state = selectedCityState.state;
   dataMapping.currentlocation.city = selectedCityState.city;
+  dataMapping.currentlocation.stateCode = dataMapping.state_city_master[dataMapping.currentlocation.state.toUpperCase()][dataMapping.currentlocation.city.toUpperCase()].stateCode;
 
   updateDataMapping(dataMapping);
 }
