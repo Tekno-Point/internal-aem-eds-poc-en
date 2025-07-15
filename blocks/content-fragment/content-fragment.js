@@ -13,10 +13,10 @@ import { showCards } from "../modal/modal.js";
 })();
 
 function getAssetsAPI(url) {
-    return url.replace('/content/dam','/api/assets')
-    
+    return url.replace('/content/dam', '/api/assets')
+
 }
-const exclude = ['author-p48457-e1275402.adobeaemcloud.com'];
+const exclude = ['author-p48457-e1275402.adobeaemcloud.com', 'localhost:3000'];
 export default async function decorate(block) {
     if (!block.textContent.trim()) {
         return block;
@@ -25,7 +25,7 @@ export default async function decorate(block) {
     const config = await configResp.json();
     let origin = config.data[0].value
     if (exclude.includes(window.location.host)) {
-        origin = 'https://author-p48457-e1275402.adobeaemcloud.com';
+        origin = 'https://publish-p48457-e1275402.adobeaemcloud.com';
     }
 
     Array.from(block.children).forEach(async (row, i) => {
@@ -34,24 +34,15 @@ export default async function decorate(block) {
         const searchpara = new URL(item.href).search;
         // const searchpara = '?id='+ (Math.random()*10);
         let url = `${origin}/graphql/execute.json/internal-aem-eds-poc/trending-destination-list;path=${formurl}${searchpara}`
-        if(block.classList.contains('asset-api')){
-            url = origin + getAssetsAPI(formurl);
-            console.log(url);
-            
-
-        }
-        //    let url = "https://publish-p48457-e1275402.adobeaemcloud.com/api/assets/internal-aem-eds-poc/cf/srilankan-airlines/marque.json";
+        // if(block.classList.contains('asset-api')){
+        url = origin + getAssetsAPI(formurl) + '.json';
+        console.log(url);
         if (block.classList.contains('marque')) {
-            url = `${origin}/graphql/execute.json/internal-aem-eds-poc/marque;path=${formurl}${searchpara}`;
-            // url = "https://publish-p48457-e1275402.adobeaemcloud.com/api/assets/internal-aem-eds-poc/cf/srilankan-airlines/marque.json";
             const response = await fetch((url), {
                 method: "GET"
             });
             const respData = await response.json();
-            console.log(respData.properties.elements.head.value)
-            console.log(respData.properties.elements.description.value)
-
-            //   const marqueData = respData?.data?.srilankaMarqueByPath?.item;
+            console.log(respData);
 
             const marqueewrapper = document.createElement('div');
             marqueewrapper.classList.add("marque-wrapper")
@@ -63,6 +54,31 @@ export default async function decorate(block) {
             row.firstElementChild.append(marqueewrapper);
             return
         }
+
+        // }
+        //    let url = "https://publish-p48457-e1275402.adobeaemcloud.com/api/assets/internal-aem-eds-poc/cf/srilankan-airlines/marque.json";
+        // if (block.classList.contains('marque')) {
+        //     url = `${origin}/graphql/execute.json/internal-aem-eds-poc/marque;path=${formurl}${searchpara}`;
+        //     // url = "https://publish-p48457-e1275402.adobeaemcloud.com/api/assets/internal-aem-eds-poc/cf/srilankan-airlines/marque.json";
+        //     const response = await fetch((url), {
+        //         method: "GET"
+        //     });
+        //     const respData = await response.json();
+        //     console.log(respData.properties.elements.head.value)
+        //     console.log(respData.properties.elements.description.value)
+
+        //     //   const marqueData = respData?.data?.srilankaMarqueByPath?.item;
+
+        //     const marqueewrapper = document.createElement('div');
+        //     marqueewrapper.classList.add("marque-wrapper")
+        //     marqueewrapper.innerHTML = `
+        //        <h3 class='marque-heading'>${respData.properties.elements.head.value}</h3>
+        //        <div class='marque-description'>${respData.properties.elements.description.value}</div>
+        //     `
+        //     row.firstElementChild.firstElementChild.remove()
+        //     row.firstElementChild.append(marqueewrapper);
+        //     return
+        // }
         const response = await fetch((url), {
             method: "GET"
         });
