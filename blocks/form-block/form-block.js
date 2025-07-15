@@ -1,6 +1,3 @@
-
-
-
 import { div, p, input, span, label, button } from '../../scripts/dom-helpers.js';
 
 export default function decorate(block) {
@@ -32,19 +29,21 @@ export default function decorate(block) {
   const monthsVal = p({ class: 'input-value' }, `${monthsMin} months`);
   const monthsInput = input({ type: 'number', value: monthsMin, class: 'number-box' });
 
+  // Only add value-row for Amount group
   function createSliderGroup(labelText, valP, inputEl, slider, minLabel, maxLabel) {
-    const valueRow = div({ class: 'value-row' }, valP);
     const labelInputRow = div({ class: 'label-input-row' },
       label({}, labelText),
       inputEl
     );
 
-    return div({ class: 'slider-group' },
-      valueRow,
+    const sliderElements = [
+      labelText === 'Amount Needed (₹)' ? div({ class: 'value-row' }, valP) : null,
       labelInputRow,
       div({ class: 'slider-row' }, slider),
-      div({ class: 'range-labels' }, p({}, minLabel), p({}, maxLabel))
-    );
+      div({ class: 'range-labels' }, p({}, minLabel), p({}, maxLabel)),
+    ].filter(Boolean); // removes null entries
+
+    return div({ class: 'slider-group' }, ...sliderElements);
   }
 
   const amountGroup = createSliderGroup('Amount Needed (₹)', amountVal, amountInput, amountSlider, '₹ 10 Thousand', '₹ 1 Lakh');
@@ -122,4 +121,20 @@ export default function decorate(block) {
 
   // Initial render
   updateUI();
+
+// Slider filling function
+  function updateFill(range) {
+  const min = range.min;
+  const max = range.max;
+  const val = range.value;
+  const getPercentage = ((val - min) / (max - min)) * 100;
+  range.style.setProperty('--progress', `${getPercentage}%`);
+};
+
+const rangeInput = block.querySelectorAll('.slider-row input')
+rangeInput.forEach((inp)=>{
+    inp.addEventListener('input', function () {
+        updateFill(inp)
+    })
+})
 }
