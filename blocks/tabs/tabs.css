@@ -18,6 +18,12 @@
   }
 }
 
+@media (width <=900px) {
+  .tabs .tabs-list {
+    padding: 0 10px;
+  }
+}
+
 .tabs .tabs-list button {
   flex: 0 0 max-content;
   margin: 0;
@@ -111,7 +117,7 @@
   display: flex;
   align-items: center;
   border: 1px solid #cccccc;
-  padding: 20px 16px;
+  padding: 20px 10px;
   margin-top: 17px;
   border-radius: 8px;
   /* gap: 10px; */
@@ -474,7 +480,7 @@ input[type="date"] {
 
   .tabs.form-tabs .tabs-panel form {
     flex-direction: column-reverse;
-    padding: 10px 0;
+    padding: 15px 10px 10px;
   }
 
   .tabs.form-tabs .tabs-panel form>div {
@@ -502,6 +508,7 @@ input[type="date"] {
   .tabs.form-tabs .tabs-panel form>div .field-wrapper.date-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
   .tabs.form-tabs .tabs-panel form>div .field-wrapper.date-wrapper input {
@@ -695,3 +702,37 @@ input[type="date"] {
   border: 1px solid black;
   border-radius: 8px;
 }
+
+
+
+/* loader css */
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.hide {
+  display: none ;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #0088dd;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 

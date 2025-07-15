@@ -600,7 +600,7 @@ header nav .nav-tools {
 
 @media screen and (max-width:900px) {
   .block .nav-wrapper nav {
-    height: 74px;
+    /* height: 74px; */
     padding: 12px 0;
     gap: 15px;
     align-items: center;

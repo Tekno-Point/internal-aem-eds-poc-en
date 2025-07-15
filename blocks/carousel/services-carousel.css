@@ -112,6 +112,11 @@
     .carousel.services-carousel .swiper-slide div>a {
         height: 336px;
     }
+
+    .carousel.services-carousel .swiper-pagination-bullet {
+        height: 10px;
+        width: 10px;
+    }
 }
 
 
@@ -128,5 +133,15 @@
     .carousel.experience-carousel .swiper-slide {
         width: 246px;
         margin-right: 30px;
+    }
+}
+
+@media (width <=900px) {
+    .section.carousel-container.exp-carousel-container {
+        margin: 0 20px 0 35px;
+    }
+
+    .section.exp-carousel-container .default-content-wrapper h3 {
+        padding-top: 0;
     }
 }
