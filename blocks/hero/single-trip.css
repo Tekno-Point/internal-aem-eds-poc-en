@@ -9,8 +9,8 @@
     margin-top: 0;
 }
 
-#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div:nth-child(5),
-#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div:nth-child(6) {
+#single-trip>div:nth-child(5),
+#single-trip>div:nth-child(6) {
     padding-left: 2px;
 }
 
