@@ -82,6 +82,10 @@
   {
     "id": "form-block",
     "components": ["form-field"]
+  },
+  {
+    "id": "blogs-swiper",
+    "components": ["blogs-item"]
   }
 ]
 
