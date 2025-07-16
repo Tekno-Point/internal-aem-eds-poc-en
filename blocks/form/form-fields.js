@@ -245,21 +245,36 @@ const createCounter = (fd) => {
   const decCounter = document.createElement('button');
 
   incCounter.classList.add('incrementer');
+  incCounter.textContent = '+';
+  incCounter.type = 'button';
+
   decCounter.classList.add('decrementer');
+  decCounter.textContent = '-';
+  decCounter.type = 'button';
 
   const field = document.createElement('input');
-  field.value = 0;
-  field.readOnly = 'readOnly';
-  field.min = 0;
   setCommonAttributes(field, fd);
+  field.value = 0;
+  field.readOnly = true;
+  field.type = 'number';
+  field.min = 0;
 
   incCounter.addEventListener('click', () => {
     field.value = parseInt(field.value) + 1;
-  })
+    decCounter.disabled = false;
+  });
 
   decCounter.addEventListener('click', () => {
-    field.value = parseInt(field.value) - 1;
-  })
+    const currentValue = parseInt(field.value);
+    if (currentValue > parseInt(field.min)) {
+      field.value = currentValue - 1;
+    }
+    if (parseInt(field.value) <= parseInt(field.min)) {
+      decCounter.disabled = true;
+    }
+  });
+
+  decCounter.disabled = true;
 
   counterWrapper.append(decCounter, field, incCounter);
 
