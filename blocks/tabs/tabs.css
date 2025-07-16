@@ -435,17 +435,36 @@ input[type="date"] {
   .tabs.form-tabs>div>.flight-card,
   .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card {
     flex-direction: column;
-    padding: 10px;
   }
 
   .tabs.form-tabs>div>.flight-card>.flight-info,
   .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info {
     border: none;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.from-info {
+    padding-left: 10px;
+  }
+
+  .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.flight-info>.to-info {
+    padding-right: 10px;
   }
 
   .tabs.form-tabs>div>.flight-card>.airline-details,
   .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details {
     align-items: center;
+  }
+
+  .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details .airline-details-left {
+    padding-left: 10px;
+    padding-bottom: 20px;
+  }
+
+  .section.tabs-container>.card-wrapper>.swiper-wrapper>.flight-card>.airline-details .airline-details-right {
+    padding-right: 10px;
+    padding-bottom: 20px;
   }
 
   .tabs.form-tabs .tabs-panel form .field-wrapper.submit-wrapper button {
@@ -467,6 +486,14 @@ input[type="date"] {
   .tabs.form-tabs .tabs-panel form>fieldset {
     /* flex-direction: column; */
   }
+
+  .section.tabs-container>.card-wrapper {
+    padding: 450px 12px 30px;
+  }
+
+  .section.tabs-container>.card-wrapper .swiper-pagination {
+    top: 860px;
+}
 }
 
 @media (width <=900px) {
@@ -736,3 +763,9 @@ input[type="date"] {
       transform: rotate(360deg);
   }
   } 
+
+  @media (width <= 768px) {
+    .loader-wrapper {
+      padding-top: 20px;
+    }
+  }
