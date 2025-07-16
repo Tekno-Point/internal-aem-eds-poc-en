@@ -293,10 +293,14 @@ export default async function decorate(block) {
       const tabsContainer = document.querySelector('.section.tabs-container');
       tabsContainer.querySelector('.card-wrapper')?.remove();
       tabsContainer.appendChild(cardWrapper);
+      let cfWrapper = document.querySelector('.cf-wrapper');
+      cfWrapper.classList.add("padding-remove");
       swiperInit();
     }
     else {
       block.appendChild(cardWrapper);
+      let cfWrapper = document.querySelector('.cf-wrapper');
+      cfWrapper.classList.add("padding-remove");
     }
     submit.classList.remove('disabled');
   load(false);

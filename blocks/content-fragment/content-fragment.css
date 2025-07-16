@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+.section.cf-wrapper.padding-remove {
+    padding-top: 20px;
+}
+
 .section.cf-wrapper .default-content-wrapper h3 {
     text-align: left;
     margin: 0 0 30px;
@@ -225,8 +229,12 @@
     }
 
     .section.cf-wrapper {
-        padding-top: 460px;
+        padding-top: 490px;
         margin: 0px 25px 0 25px;
+    }
+
+    .section.cf-wrapper.padding-remove {
+        padding-top: 0;
     }
 
     .section.cf-wrapper .content-fragment .carousel {
