@@ -219,9 +219,30 @@
       },
       {
         "component": "reference",
-        "name": "youtubeVideoThumbnailDamPath",
+        "valueType": "string",
+        "name": "cols1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cols1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "cols1_Bordertext",
         "value": "",
-        "label": "youtubeVideoThumbnailDamPath",
+        "label": "Boder Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "cols2_richtext",
+        "value": "",
+        "label": "Text",
         "valueType": "string"
       }
     ]
@@ -497,6 +518,65 @@
             "name": "link",
             "label": "Enter Modal path"
         }
+    ]
+  },
+  {
+    "id": "compare-item1",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "img1_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "img1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "img1_imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_imageAlt",
+        "label": "Alt",
+        "value": ""
+      }
+    ]
+  },
+   {
+    "id": "compare-item2",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
     ]
   }
 ]
