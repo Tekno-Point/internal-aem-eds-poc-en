@@ -1,6 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
 import { toClassName } from '../../scripts/aem.js';
-import tripForm from './utility/tripForm.js';
 
 export default async function decorate(block) {
   // build tablist 
@@ -50,5 +49,5 @@ export default async function decorate(block) {
 
   block.prepend(tablist);
 
-  tripForm(block)
+
 }
