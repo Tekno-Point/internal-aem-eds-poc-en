@@ -96,6 +96,40 @@
     width: max-content;
 }
 
+.date-wrapper {}
+
+.date-wrapper label {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #838383;
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    background-color: #fff;
+    transition: .3s;
+    pointer-events: none;
+}
+
+.date-wrapper.focus-active label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    top: -10px;
+    left: 11px;
+    padding: 0 7px;
+    transition: .3s;
+}
+
+input[type='date'] {
+    border: solid #c9c9c9;
+    border-radius: 5px;
+    background: #fff;
+    padding: 1.7rem;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
 @media (width >=600px) {
 
     .form input,
