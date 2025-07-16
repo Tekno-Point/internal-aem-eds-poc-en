@@ -1,9 +1,9 @@
 // eslint-disable-next-line import/no-unresolved
 import { toClassName } from '../../scripts/aem.js';
+import tripForm from './utility/tripForm.js';
 
 export default async function decorate(block) {
   // build tablist 
-
   const tablist = document.createElement('div');
   tablist.className = 'tabs-list';
   tablist.setAttribute('role', 'tablist'); 
@@ -32,7 +32,7 @@ export default async function decorate(block) {
     button.setAttribute('aria-selected', !i);
     button.setAttribute('role', 'tab');
     button.setAttribute('type', 'button');
-    button.addEventListener('click', () => {
+    button.addEventListener('click', () => { 
       block.querySelectorAll('[role=tabpanel]').forEach((panel) => {
         panel.setAttribute('aria-hidden', true);
       });
@@ -46,7 +46,9 @@ export default async function decorate(block) {
     });
     tablist.append(button);
     tab.remove();
-  });
+  }); 
 
   block.prepend(tablist);
+
+  tripForm(block)
 }
