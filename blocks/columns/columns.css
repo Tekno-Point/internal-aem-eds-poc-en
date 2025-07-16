@@ -33,7 +33,10 @@
 }
 
 .columns.info-cards{
-  width: 382px;
+  width: 468px;
+}
+.columns.info-cards div{
+  gap: 0;
 }
 .columns.info-cards div div{
   background: #e1eefa;
@@ -46,6 +49,7 @@
   width: 224px;
   margin-bottom: 16px;
   padding: 0 5px;
+  margin-right: 10px;
 }
 .columns.info-cards div:nth-child(1) div:nth-child(1){
   height: 187px;
@@ -68,6 +72,7 @@
     font-size: 1.125rem;
     line-height: normal;
     margin: 0;
+    font-weight: 600;
 }
 .columns.info-cards div p:nth-child(1){
   color: #004c8f;
@@ -75,4 +80,45 @@
     line-height: 3.75rem;
     margin: 0;
     font-weight: 800;
+}
+
+@media screen and (max-width: 768px){
+  .columns.info-cards{
+  width: 100%;
+  margin-top: 16px;
+}
+.columns.info-cards div{
+  display: flex;
+  flex-direction: row;
+}
+.columns.info-cards div div{
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 5px;
+  margin-right: 10px;
+}
+.columns.info-cards div:nth-child(1) div:nth-child(1){
+  height: 178px;
+}
+.columns.info-cards div:nth-child(1) div:nth-child(2){
+  height: 131px; 
+}
+.columns.info-cards div:nth-child(2) div:nth-child(1){
+  height: 131px;
+}
+.columns.info-cards div:nth-child(2) div:nth-child(2){ 
+  height: 178px;
+  margin-top: -40px;
+}
+.columns.info-cards div p:nth-child(2){
+    font-size: 16px;
+}
+.columns.info-cards div p:nth-child(1){
+  color: #004c8f;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+}
+.columns.info-cards div:nth-child(2){
+  margin-top: 0px;
+}
 }
