@@ -1,7 +1,6 @@
 import Swiper from '../carousel/swiper-bundle.min.js'
 
 function createSwiper(block) {
-    // Only wrap if not already Swiper markup
     if (!block.classList.contains('swiper')) {
         const rows = Array.from(block.children);
         const swiperWrapper = document.createElement('div');
@@ -37,11 +36,9 @@ function swiperInit(block) {
     applyPagination(block, swiperConfig);
     applyBreakpoints(block, swiperConfig);
     const swiperone = applyBreakpoints(block, swiperConfig);
-    console.log(swiperone)
 }
 
 function applyPagination(block, swiperConfig) {
-    // if (block.classList.contains('pagination')) {
         const swiperPagination = document.createElement('div');
         swiperPagination.classList.add('swiper-pagination');
         block.append(swiperPagination);
@@ -49,7 +46,6 @@ function applyPagination(block, swiperConfig) {
             el: '.carousel.block.pagination .swiper-pagination',
             clickable: true,
         }
-    // }
 }
 
 function applyBreakpoints(block, swiperConfig) {
