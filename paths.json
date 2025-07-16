@@ -39,6 +39,8 @@
     "/content/internal-aem-eds-poc/srilankan-airlines/forms/login-form:/srilankan-airlines/forms/login-form.json",
     "/content/internal-aem-eds-poc/icicilombard/forms/trip/single-trip:/icicilombard/forms/trip/single-trip.json" ,
     "/content/internal-aem-eds-poc/icicilombard/forms/trip/multi-trip:/icicilombard/forms/trip/multi-trip.json",
+    "/content/internal-aem-eds-poc/icicilombard/forms/trip/extend-policy:/icicilombard/forms/trip/extend-policy.json",
+    "/content/internal-aem-eds-poc/icicilombard/forms/trip/travel-details:/icicilombard/forms/trip/travel-details.json",
     "/content/internal-aem-eds-poc/icicilombard/forms/login:/icicilombard/forms/login.json",
     "/content/internal-aem-eds-poc/icicilombard/forms/group-companies:/icicilombard/forms/group-companies.json",
     "/content/internal-aem-eds-poc/hero-splinder-page/form/splendor:/hero-splinder-page/form/splendor.json"
