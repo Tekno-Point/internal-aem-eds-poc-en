@@ -1,4 +1,4 @@
-import { fetchDealers, useDataMapping } from '../../scripts/common.js';
+import { fetchDealers, useDataMapping , pubsub } from '../../scripts/common.js';
 import { div, p } from '../../scripts/dom-helpers.js';
 import Swiper from '../carousel/swiper.min.js';
 
@@ -38,6 +38,7 @@ function createCustomDropdown(labelText, optionsList, onSelect, defaultValue = '
                 dropdown.style.display = 'none';
                 clearBtn.style.display = 'block';
                 onSelect(value);
+                pubsub.publish('fire', document.querySelector('.product-banner'), {test : true})
             });
             dropdown.appendChild(li);
         });
@@ -71,7 +72,7 @@ function createCustomDropdown(labelText, optionsList, onSelect, defaultValue = '
 export default async function decorate(block) {
     const [dataMapping] = await useDataMapping();
 
-    const sku = dataMapping.product?.sku;
+    const sku = dataMapping?.sku;
     const current = dataMapping.current_location || {};
     const states = dataMapping.state_city_master.state;
     const cityMap = dataMapping.state_city_master;

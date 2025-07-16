@@ -5,6 +5,27 @@ const stateCityAPI = `${endpoint}/content/hero-commerce/in/en/products/product-p
 const prodcutAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/practical/jcr:content.product.practical.splendor-plus.{stateCode}.{cityCode}.json`;
 const sendOTPAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/executive/jcr:content.send-msg.json`;
 const dealerAPI = 'https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.dealers.{sku}.{stateCode}.{cityCode}.json';
+function PubSub() {
+  this.events = {};
+}
+
+PubSub.prototype.subscribe = function (eventName, callback) {
+  if (!this.events[eventName]) {
+    this.events[eventName] = [];
+  }
+  this.events[eventName].push(callback);
+};
+
+PubSub.prototype.publish = function (eventName, data) {
+  if (!this.events[eventName]) return;
+
+  this.events[eventName].forEach(function (callback) {
+    callback(data);
+  });
+};
+
+// Create a global pubsub instance
+export var pubsub = new PubSub();
 
 
 export let dataMapping = {
@@ -178,10 +199,10 @@ async function getDataMapping() {
     processDataMapping(cityMaster);
     let { city, state } = await fetchStateCity();
     const code =
-    dataMapping.state_city_master[state.toUpperCase()][city.toUpperCase()];
+      dataMapping.state_city_master[state.toUpperCase()][city.toUpperCase()];
     console.log(code);
     dataMapping.current_location = {
-      stateCode: code.stateCode, cityCode: code.code , city, state
+      stateCode: code.stateCode, cityCode: code.code, city, state
     }
     sessionStorage.setItem("dataMapping", JSON.stringify(dataMapping));
     data = sessionStorage.getItem("dataMapping");
