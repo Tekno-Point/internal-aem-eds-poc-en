@@ -43,16 +43,19 @@
 .section.trip-form-modal {
     height: 812px;
     display: block;
-    /* padding: 0 calc((100% - 1270px) / 2); */
+    position: relative;
 }
 
 .trip-form-modal {
+    position: relative;
     display: contents;
     height: 532px;
 }
 
-.trip-form-modal>.tabs-wrapper {
+.trip-form-modal>.tabs-wrapper,
+.trip-form-modal>div.form-wrapper {
     position: absolute;
+    top: 50px;
     right: 100px;
     right: calc((100% - 1270px) / 2);
     z-index: 2;
@@ -66,9 +69,9 @@
     box-shadow: 3px 4px 23px 0 #0000000f;
 }
 
-.section.trip-form-modal > .tabs-wrapper > .tabs{
-  border-bottom: none;
-} 
+.section.trip-form-modal>.tabs-wrapper>.tabs {
+    border-bottom: none;
+}
 
 .trip-form-modal>.tabs-wrapper>.tabs>.tabs-list {
     display: block;
@@ -155,20 +158,19 @@
     width: 22%;
 }
 
-#tabpanel-multi-trip > .form-container > .form-wrapper >
-.form > form > div > p {
-  font-size: 1.6rem;
-  padding-bottom: 2rem;
-  font-weight: 700;
-} 
+#tabpanel-multi-trip>.form-container>.form-wrapper>.form>form>div>p {
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+    font-weight: 700;
+}
 
-#tabpanel-multi-trip #form-wrapage > div.field-wrapper.radio-wrapper,
-#tabpanel-multi-trip #form-wrapday > div.field-wrapper.radio-wrapper{
-  background: #f5f6f6;
-  border-radius: 6px;
-  line-height: normal;
-  border: 2px solid #f5f6f6;
-  width: fit-content; 
+#tabpanel-multi-trip #form-wrapage>div.field-wrapper.radio-wrapper,
+#tabpanel-multi-trip #form-wrapday>div.field-wrapper.radio-wrapper {
+    background: #f5f6f6;
+    border-radius: 6px;
+    line-height: normal;
+    border: 2px solid #f5f6f6;
+    width: fit-content;
 }
 
 /* .radio-wrapper input[type="radio"] + label {
@@ -180,11 +182,11 @@
   transition: all 0.2s ease;
 } */
 
-#tabpanel-multi-trip #form-wrapage > div.field-wrapper.radio-wrapper input[type="radio"]:checked + label,
-#tabpanel-multi-trip #form-wrapday > div.field-wrapper.radio-wrapper input[type="radio"]:checked + label {
-  border: 2px solid #ec6625;
-  background: #fff2eb;
-  border-radius: 6px;
+#tabpanel-multi-trip #form-wrapage>div.field-wrapper.radio-wrapper input[type="radio"]:checked+label,
+#tabpanel-multi-trip #form-wrapday>div.field-wrapper.radio-wrapper input[type="radio"]:checked+label {
+    border: 2px solid #ec6625;
+    background: #fff2eb;
+    border-radius: 6px;
 
 }
 
@@ -201,64 +203,65 @@
     font-weight: 700;
 }
 
-#tabpanel-multi-trip #form-wrapage > div.field-wrapper.plaintext-wrapper,
-#tabpanel-multi-trip #form-wrapday > div.field-wrapper.plaintext-wrapper{
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #282828; 
-  grid-column: 1 / -1;
-} 
+#tabpanel-multi-trip #form-wrapage>div.field-wrapper.plaintext-wrapper,
+#tabpanel-multi-trip #form-wrapday>div.field-wrapper.plaintext-wrapper {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #282828;
+    grid-column: 1 / -1;
+}
 
 #tabpanel-multi-trip #form-wrapage>div.field-wrapper.radio-weapper>input[type="radio"],
-#tabpanel-multi-trip #form-wrapday>div.field-wrapper.radio-wrapper>input[type="radio"]{
+#tabpanel-multi-trip #form-wrapday>div.field-wrapper.radio-wrapper>input[type="radio"] {
     display: none;
 }
 
-#tabpanel-multi-trip #form-wrapage > div.field-wrapper.radio-wrapper > label,
-#tabpanel-multi-trip #form-wrapday > div.field-wrapper.radio-wrapper > label{
-  color: #575757;
+#tabpanel-multi-trip #form-wrapage>div.field-wrapper.radio-wrapper>label,
+#tabpanel-multi-trip #form-wrapday>div.field-wrapper.radio-wrapper>label {
+    color: #575757;
     font-weight: 600;
     font-size: 1.4rem;
     padding: 1rem;
     cursor: pointer;
-} 
-
-#tabpanel-multi-trip .form-container > .form-wrapper > .form > form > div.submit-wrapper{
-  display: block;
 }
+
+#tabpanel-multi-trip .form-container>.form-wrapper>.form>form>div.submit-wrapper {
+    display: block;
+}
+
 #tabpanel-multi-trip>.form-container>.form-wrapper>.form>form>div>fieldset>div>input[type="radio"] {
     display: none;
 }
 
-#tabpanel-multi-trip .form-container > .form-wrapper > .form > form > div.submit-wrapper > button{
-  color: #fff;
-  padding: 1.1rem 2.4rem;
-  font-size: 1.6rem;
-  background: #ec6625;
-  border-radius: 5px;
-  border: 3px solid transparent;
-  max-width: 100%;
-  display: block;
-  width: 100%;
-} 
+#tabpanel-multi-trip .form-container>.form-wrapper>.form>form>div.submit-wrapper>button {
+    color: #fff;
+    padding: 1.1rem 2.4rem;
+    font-size: 1.6rem;
+    background: #ec6625;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    max-width: 100%;
+    display: block;
+    width: 100%;
+}
 
-#tabpanel-multi-trip > div > div > div > form > div:nth-child(2){
-  margin-top: unset;
+#tabpanel-multi-trip>div>div>div>form>div:nth-child(2) {
+    margin-top: unset;
 }
 
 #form-multi-trip-link-wrapper,
-#form-single-trip-link-wrapper{
+#form-single-trip-link-wrapper {
     display: flex;
     align-items: center;
     gap: 0;
 }
 
-#form-single-trip-link-wrapper>.link-wrapper > a,
-#form-multi-trip-link-wrapper>.link-wrapper > a {
-  color: #ec6625;
-  text-decoration: underline;
-  border: 1px solid transparent;
-  font-weight: 700;
+#form-single-trip-link-wrapper>.link-wrapper>a,
+#form-multi-trip-link-wrapper>.link-wrapper>a {
+    color: #ec6625;
+    text-decoration: underline;
+    border: 1px solid transparent;
+    font-weight: 700;
     font-size: 1.4rem;
     line-height: 18px;
     outline: 0;
@@ -268,9 +271,9 @@
     margin-right: 20px;
 }
 
-#form-single-trip-link-wrapper>.link-wrapper > a::after,
-#form-multi-trip-link-wrapper>.link-wrapper > a::after {
-  content: "";
+#form-single-trip-link-wrapper>.link-wrapper>a::after,
+#form-multi-trip-link-wrapper>.link-wrapper>a::after {
+    content: "";
     background: #838383;
     height: 10px;
     display: block;
@@ -281,20 +284,20 @@
 }
 
 #form-multi-trip-link-wrapper>.link-wrapper,
-#form-single-trip-link-wrapper>.link-wrapper{
-  display: block;
+#form-single-trip-link-wrapper>.link-wrapper {
+    display: block;
 }
 
 #form-multi-trip-link-wrapper>.button-wrapper,
-#form-single-trip-link-wrapper>.button-wrapper{
-  display: block;
+#form-single-trip-link-wrapper>.button-wrapper {
+    display: block;
 }
 
 #form-multi-trip-link-wrapper>.button-wrapper>input[type="button"],
-#form-single-trip-link-wrapper>.button-wrapper>input[type="button"]{
-  border: none;
-  padding: unset;
-  color: #ec6625;
+#form-single-trip-link-wrapper>.button-wrapper>input[type="button"] {
+    border: none;
+    padding: unset;
+    color: #ec6625;
     text-decoration: underline;
     border: 1px solid transparent;
     font-weight: 700;
@@ -305,5 +308,5 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
-  
+
 }
