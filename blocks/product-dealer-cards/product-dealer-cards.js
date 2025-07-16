@@ -1,75 +1,120 @@
-import { getDataMapping, fetchStateCityMaster, dataMapping } from '../../scripts/common.js';
-// import dataMapping from '../../scripts/common.js'
-import { fetchDealers } from './dealer-render.js';
+import { fetchDealers, getDataMapping } from '../../scripts/common.js';
 
-export default function decorate(block) {
-  dataMapping = getDataMapping();
-  const stateSelect = document.createElement('select');
-  const citySelect = document.createElement('select');
+export default async function decorate(block) {
+    let fullDataMapping = null;
+    let attempts = 0;
+    const maxAttempts = 20;
+    const delay = 300; // milliseconds
 
-  // Create dropdown containers
-  const dropdownsContainer = document.createElement('div');
-  dropdownsContainer.className = 'dealers__dropdowns d-flex mb-8';
-  dropdownsContainer.appendChild(stateSelect);
-  dropdownsContainer.appendChild(citySelect);
-  block.textContent = '';
-  block.appendChild(dropdownsContainer);
+    // Wait for fullDataMapping to be populated in sessionStorage by common.js
+    while (attempts < maxAttempts) {
+        fullDataMapping = await getDataMapping();
 
-  // Load states and cities
-  (async () => {
-    const stateCityData = await fetchStateCityMaster();
-    const states = stateCityData.data.stateCity.map(item => ({
-      code: item.code,
-      label: item.label,
-      cities: item.cities,
-    }));
+        // Check if essential data is available and structured as expected
+        if (fullDataMapping?.state_city_master?.state?.length > 0 &&
+            fullDataMapping.sku &&
+            fullDataMapping.currentlocation?.state &&
+            fullDataMapping.currentlocation?.city &&
+            fullDataMapping.state_city_master[fullDataMapping.currentlocation.state.toUpperCase()] &&
+            fullDataMapping.state_city_master[fullDataMapping.currentlocation.state.toUpperCase()][fullDataMapping.currentlocation.city.toUpperCase()]
+        ) {
+            break; // Data is ready
+        }
 
-    // Populate state dropdown`
-    states.forEach(state => {
-      const opt = document.createElement('option');
-      opt.value = state.label;
-      opt.textContent = state.label;
-      stateSelect.appendChild(opt);
+        attempts++;
+        await new Promise(resolve => setTimeout(resolve, delay)); // Wait
+    }
+
+    if (!fullDataMapping?.state_city_master?.state?.length || attempts >= maxAttempts) {
+        block.innerHTML = '<p>Error: Could not load location data or product information.</p>';
+        return; // Stop execution
+    }
+
+    const stateCityData = fullDataMapping.state_city_master;
+    const currentLoc = fullDataMapping.currentlocation;
+    const productSku = fullDataMapping.sku;
+
+    let dropdownsContainer = block.querySelector('.dealers__dropdowns');
+    let stateSelect = dropdownsContainer?.querySelector('select:first-child');
+    let citySelect = dropdownsContainer?.querySelector('select:last-child');
+
+    if (!dropdownsContainer) {
+        dropdownsContainer = document.createElement('div');
+        dropdownsContainer.className = 'dealers__dropdowns d-flex mb-8';
+        block.appendChild(dropdownsContainer);
+    }
+    if (!stateSelect) {
+        stateSelect = document.createElement('select');
+        dropdownsContainer.appendChild(stateSelect);
+    }
+    if (!citySelect) {
+        citySelect = document.createElement('select');
+        dropdownsContainer.appendChild(citySelect);
+    }
+
+    stateSelect.id = 'state-select';
+    citySelect.id = 'city-select';
+
+    stateSelect.innerHTML = '';
+    citySelect.innerHTML = '';
+
+    // Populate State Dropdown
+    stateSelect.add(new Option('Select State', ''));
+    stateCityData.state.forEach(stateLabel => {
+        stateSelect.add(new Option(stateLabel, stateLabel));
     });
 
-    function updateCityDropdown(stateLabel) {
-      const state = states.find(s => s.label === stateLabel);
-      citySelect.innerHTML = '';
-      state?.cities?.forEach(city => {
-        const opt = document.createElement('option');
-        opt.value = city.label; // Use label here
-        opt.textContent = city.label;
-        citySelect.appendChild(opt);
-      });
+    // Function to Update City Dropdown
+    function updateCityDropdown(selectedStateLabel) {
+        citySelect.innerHTML = '';
+        citySelect.add(new Option('Select City', ''));
+
+        if (selectedStateLabel && stateCityData[selectedStateLabel]) {
+            const citiesInState = stateCityData[selectedStateLabel];
+            for (const cityCode in citiesInState) {
+                if (Object.hasOwnProperty.call(citiesInState, cityCode)) {
+                    const city = citiesInState[cityCode];
+                    citySelect.add(new Option(city.label, city.code));
+                }
+            }
+        }
     }
 
-    stateSelect.value = 'MAHARASHTRA';
-    updateCityDropdown('MAHARASHTRA');
-    citySelect.value = 'MUMBAI';
+    // Function to Render Dealers
+    async function renderDealers(selectedStateLabel, selectedCityCode) {
+        let stateCode = '';
+        if (selectedStateLabel && selectedCityCode && stateCityData[selectedStateLabel] && stateCityData[selectedStateLabel][selectedCityCode]) {
+            stateCode = stateCityData[selectedStateLabel][selectedCityCode].stateCode;
+        }
 
-    // Render dealer data (just logs to console)
-    async function renderDealers(stateLabel, cityLabel) {
-      const dealerData = await fetchDealers(dataMapping.sku, dataMapping.currentlocation.stateCode, dataMapping.currentlocation.city.toUpperCase());
-      console.log("RAW DEALER DATA:", dealerData);
+        if (productSku && stateCode && selectedCityCode) {
+            const dealerData = await fetchDealers(productSku, stateCode, selectedCityCode);
+            console.log("FETCHED DEALER DATA:", dealerData);
+            // TODO: Add logic here to display the dealerData on your page
+        } else {
+            console.log("Invalid selection or missing SKU for fetching dealers.");
+        }
     }
-    debugger
-    // Initial render
-    renderDealers(stateSelect.value, citySelect.value);
 
-    // Add listeners
+    // Initial Load Logic (using data from currentlocation if available)
+    const initialSelectedStateLabel = currentLoc.state.toUpperCase();
+    const initialSelectedCityCode = currentLoc.city.toUpperCase();
+
+    stateSelect.value = initialSelectedStateLabel;
+    updateCityDropdown(initialSelectedStateLabel);
+    citySelect.value = initialSelectedCityCode;
+    renderDealers(initialSelectedStateLabel, initialSelectedCityCode);
+
+    // Event Listeners
     stateSelect.addEventListener('change', () => {
-      updateCityDropdown(stateSelect.value);
-      const selectedCity = citySelect.options[0]?.text;
-      citySelect.value = selectedCity;
-      renderDealers(stateSelect.value, selectedCity);
+        const selectedStateLabel = stateSelect.value;
+        updateCityDropdown(selectedStateLabel);
+        const firstRealCityOptionValue = citySelect.options.length > 1 ? citySelect.options[1].value : '';
+        citySelect.value = firstRealCityOptionValue;
+        renderDealers(selectedStateLabel, firstRealCityOptionValue);
     });
 
     citySelect.addEventListener('change', () => {
-      const selectedCity = citySelect.options[citySelect.selectedIndex].text;
-      renderDealers(stateSelect.value, selectedCity);
+        renderDealers(stateSelect.value, citySelect.value);
     });
-  })();
 }
-
-
-
