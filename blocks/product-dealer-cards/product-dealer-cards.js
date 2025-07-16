@@ -1,38 +1,12 @@
-import { fetchDealers, getDataMapping } from '../../scripts/common.js';
+import { fetchDealers, useDataMapping } from '../../scripts/common.js';
 
 export default async function decorate(block) {
-    let fullDataMapping = null;
-    let attempts = 0;
-    const maxAttempts = 20;
-    const delay = 300; // milliseconds
+    const [dataMapping, setDataMapping] = await useDataMapping();    
 
-    // Wait for fullDataMapping to be populated in sessionStorage by common.js
-    while (attempts < maxAttempts) {
-        fullDataMapping = await getDataMapping();
-
-        // Check if essential data is available and structured as expected
-        if (fullDataMapping?.state_city_master?.state?.length > 0 &&
-            fullDataMapping.sku &&
-            fullDataMapping.currentlocation?.state &&
-            fullDataMapping.currentlocation?.city &&
-            fullDataMapping.state_city_master[fullDataMapping.currentlocation.state.toUpperCase()] &&
-            fullDataMapping.state_city_master[fullDataMapping.currentlocation.state.toUpperCase()][fullDataMapping.currentlocation.city.toUpperCase()]
-        ) {
-            break; // Data is ready
-        }
-
-        attempts++;
-        await new Promise(resolve => setTimeout(resolve, delay)); // Wait
-    }
-
-    if (!fullDataMapping?.state_city_master?.state?.length || attempts >= maxAttempts) {
-        block.innerHTML = '<p>Error: Could not load location data or product information.</p>';
-        return; // Stop execution
-    }
-
-    const stateCityData = fullDataMapping.state_city_master;
-    const currentLoc = fullDataMapping.currentlocation;
-    const productSku = fullDataMapping.sku;
+    const stateCityData = dataMapping.state_city_master;
+    debugger;
+    const currentLoc = dataMapping.current_location;
+    const productSku = dataMapping.sku;
 
     let dropdownsContainer = block.querySelector('.dealers__dropdowns');
     let stateSelect = dropdownsContainer?.querySelector('select:first-child');

@@ -7,9 +7,12 @@ export default async function decorate(block) {
     const product = await fetchProduct();
     const [dataMapping, setDataMapping] = await useDataMapping();
     const props = Array.from(block.children).map((ele) => ele.children);
-
     const variants = product.data.products.items[0].variant_to_colors;
     const selectedSku = variants[0].colors[0].sku;
+    dataMapping.product = {
+        sku : selectedSku
+    }
+    setDataMapping(dataMapping);
 
     const variantsDetails = product.data.products.items[0].variants.filter((ele) => ele[selectedSku]);
     const activeVariantColor = variants[0].colors;
