@@ -548,7 +548,7 @@ async function loadPage() {
   await loadLazy(document);
   loadDelayed();
 }
-// --- Global Data Mapping Loader ---
+
 if (!window.dataMappingPromise) {
   window.dataMappingPromise = (async function loadDataMapping() {
     // Try sessionStorage first
@@ -558,7 +558,7 @@ if (!window.dataMappingPromise) {
       if (cached) {
         dataMapping = JSON.parse(cached);
       }
-    } catch (e) {}
+    } catch (e) { }
     if (!dataMapping) {
       // Fallback: fetch and build dataMapping
       try {

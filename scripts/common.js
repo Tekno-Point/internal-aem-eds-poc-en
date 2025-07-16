@@ -1,8 +1,13 @@
+const endpoint = "https://www.heromotocorp.com";
+
 const geoLocationAPI = `https://apis.mappls.com/advancedmaps/v1/5b8424bdaf84cda4fccf61d669d85f5a/rev_geocode?lat={lat}&lng={long}`;
-const stateCityAPI = `https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.state-and-city.json`;
-const prodcutAPI = `https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.product.practical.splendor-plus.{stateCode}.{cityCode}.json`;
-const sendOTPAPI = `https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/executive/jcr:content.send-msg.json`;
-const dataMapping = {
+const stateCityAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/practical/jcr:content.state-and-city.json`;
+const prodcutAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/practical/jcr:content.product.practical.splendor-plus.{stateCode}.{cityCode}.json`;
+const sendOTPAPI = `${endpoint}/content/hero-commerce/in/en/products/product-page/executive/jcr:content.send-msg.json`;
+const dealerAPI = 'https://www.heromotocorp.com/content/hero-commerce/in/en/products/product-page/practical/jcr:content.dealers.{sku}.{stateCode}.{cityCode}.json';
+
+
+export let dataMapping = {
   state_city_master: {},
 };
 import { getMetadata } from "./aem.js";
@@ -104,6 +109,17 @@ export async function fetchProduct() {
   return data;
 }
 
+export async function fetchDealers(sku, stateCode, cityCode) {
+  const url = dealerAPI
+    .replace('{sku}', sku)
+    .replace('{stateCode}', stateCode)
+    .replace('{cityCode}', cityCode);
+
+  const data = await fetchAPI("GET", url);
+  return data;
+}
+
+
 function processDataMapping(data) {
   dataMapping.state_city_master = {};
   dataMapping.state_city_master.state = [];
@@ -132,7 +148,6 @@ export async function useDataMapping() {
 }
 
 async function setSkuAndStateCity() {
-
   let getProducts = await fetchProduct();
   let selectedCityState = await fetchStateCity()
   dataMapping.sku = getProducts.data.products.items[0].variant_to_colors[0].colors[0].sku;
@@ -195,8 +210,8 @@ export async function fetchOTP(phoneNum) {
   console.log(data);
 }
 
+//OTP value should be dynamic and should be passed.
 //fetchOTP("8169850484");
-
 export function verifyOtp(phoneNum, otp) {
   return (
     otp ===
@@ -206,6 +221,7 @@ export function verifyOtp(phoneNum, otp) {
   );
 }
 
+//Verify OTP at frontend
 function hashCode(s) {
   var h = 0,
     l = s.length,
