@@ -165,6 +165,10 @@
           {
             "name": "Info Card Head",
             "value": "info-card-head"
+          },
+                  {
+            "name": "Demo Text",
+            "value": "demo-text"
           }
         ]
       }
