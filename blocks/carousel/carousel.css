@@ -185,8 +185,23 @@
     top: 150px;
 }
 .swiper-pagination-bullet-active {
-        background: #db6b0b;
-        width: 15px;
+    background: #db6b0b;
+}
+.carousel-container div:nth-child(3) p{
+    margin: 25px auto 5px;
+}
+.carousel-container div:nth-child(3) p a{
+    background: white;
+    padding: 15px;
+    color: #ec6625 !important;
+    font-size: 16px;
+    font-weight: 700 !important;
+    border: 1px solid #ec6625 !important;
+    border-radius: 5px;
+    margin-top: 0;
+}
+.carousel-container div:nth-child(3) p a:hover{
+    background: #fff2eb;
 }
 
 @media (width <=900px) {
@@ -298,6 +313,5 @@
     }
     .swiper-pagination-bullet-active {
         background: #db6b0b;
-        width: 15px;
     }
 }

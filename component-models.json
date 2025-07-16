@@ -319,6 +319,11 @@
         "component": "text",
         "name": "form_api",
         "label": "Form API"
+      },
+      {
+        "component": "text",
+        "name": "form_id",
+        "label": "Form ID"
       }
     ]
   },

@@ -1,9 +1,25 @@
+#tabpanel-single-trip {
+    padding: 0;
+}
+
+#tabpanel-single-trip>div>div>div>form>div:nth-child(2),
+#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div:nth-child(2),
+#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div.field-wrapper.button-wrapper,
+#tabpanel-single-trip>div>div>div>form>div.field-wrapper.button-wrapper {
+    margin-top: 0;
+}
+
+#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div:nth-child(5),
+#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div:nth-child(6) {
+    padding-left: 2px;
+}
+
 #tabpanel-single-trip>div {
     grid-template-columns: none;
 }
 
 #tabpanel-single-trip #form-wrapradio {
-    padding: 2rem;
+    padding: 3.3rem 2rem 2rem;
     border-width: 0 1px;
     border-style: solid;
     border-color: #c9c9c9;
@@ -77,6 +93,11 @@
     text-decoration: underline;
     border: none;
     text-underline-offset: 2px;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #c9c9c9;
+    border-radius: 0 0 1rem 1rem;
+    padding-bottom: 2rem;
 }
 
 #form-geographical-scope:hover {

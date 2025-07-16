@@ -183,6 +183,13 @@ button {
     font: inherit;
 }
 
+input[type='radio'],
+input[type='checkbox'] {
+    accent-color: #ec6625;
+    transform: scale(1.4);
+    outline: none;
+}
+
 /* links */
 a {
     color: #6c6c6c;
