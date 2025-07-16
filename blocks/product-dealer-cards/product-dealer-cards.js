@@ -1,10 +1,10 @@
-import { fetchDealers, useDataMapping } from '../../scripts/common.js';
+import { fetchDealers, useDataMapping , pubsub } from '../../scripts/common.js';
 
 export default async function decorate(block) {
     const [dataMapping, setDataMapping] = await useDataMapping();    
 
     const stateCityData = dataMapping.state_city_master;
-    debugger;
+    // debugger;
     const currentLoc = dataMapping.current_location;
     const productSku = dataMapping.sku;
 
@@ -81,6 +81,7 @@ export default async function decorate(block) {
 
     // Event Listeners
     stateSelect.addEventListener('change', () => {
+    pubsub.publish('fire' , document.querySelector('.product-banner'), {test : true})
         const selectedStateLabel = stateSelect.value;
         updateCityDropdown(selectedStateLabel);
         const firstRealCityOptionValue = citySelect.options.length > 1 ? citySelect.options[1].value : '';
