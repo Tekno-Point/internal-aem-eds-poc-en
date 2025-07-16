@@ -6,13 +6,18 @@ const dataMapping = {
   state_city_master: {},
 };
 import { getMetadata } from "./aem.js";
-
+const apiProxy = {};
 export async function fetchAPI(
   method,
   url,
   payload = { headerJSON: {}, requestJSON: {} }
 ) {
   return new Promise(async function (resolve, reject) {
+    const key = url + method;
+    if (apiProxy[key]) {
+      resolve(apiProxy[key]);
+      return apiProxy[key]
+    }
     const { headerJSON, requestJSON } = payload;
 
     const headers = new Headers();
@@ -40,6 +45,7 @@ export async function fetchAPI(
     if (resp.ok) {
       const data = await resp.json();
       resolve(data);
+      apiProxy[key] = data;
     } else {
       resolve({ error: resp.text() });
     }
@@ -117,13 +123,14 @@ function processDataMapping(data) {
 }
 
 export async function useDataMapping() {
-  const data = getDataMapping();
+  const data = await getDataMapping();
   function setDataMapping(newData) {
     sessionStorage.setItem("dataMapping", JSON.stringify(newData));
   }
   return [data, setDataMapping]
 
 }
+
 async function setSkuAndStateCity() {
 
   let getProducts = await fetchProduct();
@@ -134,16 +141,16 @@ async function setSkuAndStateCity() {
 
   dataMapping.products.variant = getProducts.data.products.items[0].variant_to_colors;
   dataMapping.currentlocation = {};
-  dataMapping.currentlocation.state = selectedCityState.state;
-  dataMapping.currentlocation.city = selectedCityState.city;
-  dataMapping.currentlocation.stateCode = dataMapping.state_city_master[dataMapping.currentlocation.state.toUpperCase()][dataMapping.currentlocation.city.toUpperCase()].stateCode;
+  dataMapping.currentlocation.state = selectedCityState.state.toUpperCase();
+  dataMapping.currentlocation.city = selectedCityState.city.toUpperCase();
+  dataMapping.currentlocation.stateCode = dataMapping.state_city_master[dataMapping.currentlocation.state][dataMapping.currentlocation.city].stateCode;
 
   updateDataMapping(dataMapping);
 }
 
 // processDataMapping()
 
-export async function getDataMapping() {
+async function getDataMapping() {
   // debugger
   let data = sessionStorage.getItem("dataMapping");
   if (!data) {
@@ -151,7 +158,7 @@ export async function getDataMapping() {
     processDataMapping(cityMaster);
     sessionStorage.setItem("dataMapping", JSON.stringify(dataMapping));
     data = sessionStorage.getItem("dataMapping");
-    setSkuAndStateCity();
+    // setSkuAndStateCity();
   }
   data = JSON.parse(data);
   return data;
@@ -208,12 +215,12 @@ function hashCode(s) {
 }
 
 
-export async function updateDataMapping(dataMapping) {
-  dataMapping = sessionStorage.setItem("dataMapping", JSON.stringify(dataMapping));
-}
+// export async function updateDataMapping(dataMapping) {
+//   dataMapping = sessionStorage.setItem("dataMapping", JSON.stringify(dataMapping));
+// }
 
-const dm = await getDataMapping();
-console.log(dm);
+// const dm = await getDataMapping();
+// console.log(dm);
 // await fetchStateCity();
 // const { state, city } = await fetchStateCity();
 // await fetchProduct()
