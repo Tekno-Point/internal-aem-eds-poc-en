@@ -260,6 +260,22 @@
     ]
   },
   {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "breadcrumb",
     "fields": [
       {
