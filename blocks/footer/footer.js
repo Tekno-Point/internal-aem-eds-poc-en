@@ -1,8 +1,7 @@
 import { getMetadata } from "../../scripts/aem.js";
-import { loadFragment } from "../fragment/fragment.js";
 import accordionBlock from "../accordion/accordion.js";
 import { select, option, div, p, a, input } from "../../scripts/dom-helpers.js";
-
+import { loadFragment } from '../../scripts/scripts.js';
 /**
  * loads and decorates the footer
  * @param {Element} block The footer block element

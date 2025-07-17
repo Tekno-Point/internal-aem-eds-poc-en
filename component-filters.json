@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "tab",
-      "breadcrumb"
+      "breadcrumb",
+      "carousel"
     ]
   },
   {
@@ -30,6 +31,12 @@
     "id": "tab",
     "components": [
       "tab-item"
+    ]
+  },
+    {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
     ]
   },
   {

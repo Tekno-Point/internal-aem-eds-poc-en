@@ -28,7 +28,22 @@
     "/content/internal-aem-eds-poc/concordia/ch/en/forms/agency-search:/concordia/ch/en/forms/agency-search.json",
     "/content/internal-aem-eds-poc/concordia/forms/rate-calculator:/concordia/forms/rate-calculator.json",
     "/content/internal-aem-eds-poc/concordia/forms/agency-search:/concordia/forms/agency-search.json",
-    "/content/internal-aem-eds-poc/poonawallafincorp/form/subscription:/poonawallafincorp/form/subscription.json"
+    "/content/internal-aem-eds-poc/poonawallafincorp/form/subscription:/poonawallafincorp/form/subscription.json",
+    "/content/internal-aem-eds-poc/poonawallafincorp/form/form-email:/poonawallafincorp/form/form-email.json",
+    "/content/internal-aem-eds-poc/srilankan-airlines/footer-form:/srilankan-airlines/footer-form.json",
+    "/content/internal-aem-eds-poc/srilankan-airlines/forms/booking-form:/srilankan-airlines/forms/booking-form.json",
+    "/content/internal-aem-eds-poc/srilankan-airlines/api/iata:/srilankan-airlines/api/iata.json",
+    "/content/internal-aem-eds-poc/tataaia/forms/banner-form:/tataaia/forms/banner-form.json",
+    "/content/internal-aem-eds-poc/tataaia/forms/insurance-plan-form:/tataaia/forms/insurance-plan-form.json",
+    "/content/internal-aem-eds-poc/icicilombard/forms/contanct:/icicilombard/forms/contanct.json",
+    "/content/internal-aem-eds-poc/srilankan-airlines/forms/login-form:/srilankan-airlines/forms/login-form.json",
+    "/content/internal-aem-eds-poc/icicilombard/forms/trip/single-trip:/icicilombard/forms/trip/single-trip.json" ,
+    "/content/internal-aem-eds-poc/icicilombard/forms/trip/multi-trip:/icicilombard/forms/trip/multi-trip.json",
+    "/content/internal-aem-eds-poc/icicilombard/forms/trip/extend-policy:/icicilombard/forms/trip/extend-policy.json",
+    "/content/internal-aem-eds-poc/icicilombard/forms/trip/travel-details:/icicilombard/forms/trip/travel-details.json",
+    "/content/internal-aem-eds-poc/icicilombard/forms/login:/icicilombard/forms/login.json",
+    "/content/internal-aem-eds-poc/icicilombard/forms/group-companies:/icicilombard/forms/group-companies.json",
+    "/content/internal-aem-eds-poc/hero-splinder-page/form/splendor:/hero-splinder-page/form/splendor.json"
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
