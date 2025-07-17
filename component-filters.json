@@ -27,6 +27,12 @@
     ]
   },
   {
+    "id": "tab",
+    "components": [
+      "tab-item"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"

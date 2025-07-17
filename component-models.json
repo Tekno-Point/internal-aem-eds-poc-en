@@ -126,7 +126,7 @@
             "name": "footer-sec1",
             "value": "footer-sec1"
           },
-           {
+          {
             "name": "footer-sec2",
             "value": "footer-sec2"
           },
@@ -166,7 +166,7 @@
             "name": "Info Card Head",
             "value": "info-card-head"
           },
-                  {
+          {
             "name": "Demo Text",
             "value": "demo-text"
           }
@@ -272,6 +272,39 @@
             "value": "primary"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "tab-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Head Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Head Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Head Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Body Content",
+        "valueType": "string"
       }
     ]
   },
