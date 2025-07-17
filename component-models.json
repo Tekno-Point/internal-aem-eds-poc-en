@@ -268,8 +268,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "Primary",
-            "value": "primary"
+            "name": "Tab Style",
+            "value": "tab-style"
           }
         ]
       }
