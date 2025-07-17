@@ -347,3 +347,23 @@
       font-size: 14px;
     }
 }
+
+.carousel.carousel-style .swiper-slide{
+    display: block;
+    background: #f9fafb;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    height: auto;
+    margin-right: 1.625rem;
+    min-height: 409px;
+    padding: 1rem 1rem 1.625rem;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    width: 328px !important;
+    height: 409px !important;
+}
+.carousel.carousel-style .swiper-slide div:nth-child(1){
+    width: 294px;
+    height: 198px;
+}
+
