@@ -341,12 +341,19 @@
         "label": "Head Image Alt",
         "value": ""
       },
-      {
-        "component": "richtext",
-        "name": "col1_text",
-        "value": "",
-        "label": "Head Title",
-        "valueType": "string"
+       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_brandImage",
+        "label": "Brand Image",
+        "multi": false
+      },
+       {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_brandImageAlt",
+        "label": "Brand Image Alt",
+        "value": ""
       },
       {
         "component": "richtext",
