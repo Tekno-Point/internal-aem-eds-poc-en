@@ -330,28 +330,28 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "head_image",
+        "name": "col1_image",
         "label": "Head Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "head_imageAlt",
+        "name": "col1_imageAlt",
         "label": "Head Image Alt",
         "value": ""
       },
        {
         "component": "reference",
         "valueType": "string",
-        "name": "brand_Image",
+        "name": "col1_brandImage",
         "label": "Brand Image",
         "multi": false
       },
        {
         "component": "text",
         "valueType": "string",
-        "name": "brand_imageAlt",
+        "name": "col1_brandImageAlt",
         "label": "Brand Image Alt",
         "value": ""
       },
@@ -363,7 +363,7 @@
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "col2_details",
         "value": "",
         "label": "Additional Details",
