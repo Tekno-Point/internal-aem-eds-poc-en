@@ -259,20 +259,20 @@ const createCounter = (fd) => {
   field.type = 'number';
   field.min = 0;
 
-  incCounter.addEventListener('click', () => {
-    field.value = parseInt(field.value) + 1;
-    decCounter.disabled = false;
-  });
+  // incCounter.addEventListener('click', () => {
+  //   field.value = parseInt(field.value) + 1;
+  //   decCounter.disabled = false;
+  // });
 
-  decCounter.addEventListener('click', () => {
-    const currentValue = parseInt(field.value);
-    if (currentValue > parseInt(field.min)) {
-      field.value = currentValue - 1;
-    }
-    if (parseInt(field.value) <= parseInt(field.min)) {
-      decCounter.disabled = true;
-    }
-  });
+  // decCounter.addEventListener('click', () => {
+  //   const currentValue = parseInt(field.value);
+  //   if (currentValue > parseInt(field.min)) {
+  //     field.value = currentValue - 1;
+  //   }
+  //   if (parseInt(field.value) <= parseInt(field.min)) {
+  //     decCounter.disabled = true;
+  //   }
+  // });
 
   decCounter.disabled = true;
 
