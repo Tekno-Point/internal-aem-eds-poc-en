@@ -120,7 +120,6 @@ export default async function decorate(block) {
   if (formId) form.id = formId;
 
   block.replaceChildren(form);
-  debugger;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
