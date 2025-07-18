@@ -59,10 +59,10 @@ export default function decorate(block) {
   // Initialize and store Swiper instance
   const swiperInstance = new Swiper(block, {
     loop: false,
-    navigation: {
-      nextEl: rightArrow,
-      prevEl: leftArrow,
-    },
+    // navigation: {
+    //   nextEl: rightArrow,
+    //   prevEl: leftArrow,
+    // },
     pagination: {
       el: divPagination,
       clickable: true,
@@ -113,3 +113,7 @@ export default function decorate(block) {
     }
   }
 }
+
+// document.getElementsByClassName('carousel-style')[0].parentElement('.carousel-wrapper').parentElement('.carousel-container').style.marginTop= '0px'
+
+

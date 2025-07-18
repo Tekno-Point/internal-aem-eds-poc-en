@@ -29,16 +29,30 @@ export default async function decorate(block) {
     button.setAttribute('aria-selected', !i);
     button.setAttribute('role', 'tab');
     button.setAttribute('type', 'button');
+
+     if (i === 0) {
+      button.classList.add('btn-active');
+    }
+
+    // click event to toggle tab
     button.addEventListener('click', () => {
+      // Hide all tabpanels
       block.querySelectorAll('[role=tabpanel]').forEach((panel) => {
         panel.setAttribute('aria-hidden', true);
       });
+
+      // Deselect all tab buttons
       tablist.querySelectorAll('button').forEach((btn) => {
         btn.setAttribute('aria-selected', false);
+        btn.classList.remove('btn-active'); // Remove class from all
       });
+
+      // Show selected tabpanel and activate button
       tabpanel.setAttribute('aria-hidden', false);
       button.setAttribute('aria-selected', true);
+      button.classList.add('btn-active'); // Add class to clicked button
     });
+
     tablist.append(button);
     tab.remove();
   });

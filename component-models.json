@@ -330,7 +330,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col1_image",
+        "name": "head_image",
         "label": "Head Image",
         "multi": false
       },
