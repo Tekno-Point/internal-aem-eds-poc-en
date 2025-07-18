@@ -331,14 +331,14 @@
         "component": "reference",
         "valueType": "string",
         "name": "head_image",
-        "label": "Head Image",
+        "label": "Head Carousel Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "col1_imageAlt",
-        "label": "Head Image Alt",
+        "label": "Head Carousel Image Alt",
         "value": ""
       },
        {
