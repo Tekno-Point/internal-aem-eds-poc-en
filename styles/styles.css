@@ -38,7 +38,7 @@
     --heading-font-size-xs: 22px;
 
     /* nav height */
-    --nav-height: 64px;
+    --nav-height: 95px;
 
     @media (width >=900px) {
         --nav-height: 102px;
