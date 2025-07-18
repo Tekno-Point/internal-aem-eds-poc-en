@@ -249,10 +249,8 @@
     }
     .swiper-slide >div:nth-child(2) >ul >li:nth-child(2) > ul{
         position: relative;
-        /* display: inline-block; */
     }
     .swiper-slide >div:nth-child(2) >ul >li:nth-child(2) > ul >li {
-        /* position: absolute; */
         top: -10px;
     }
     
