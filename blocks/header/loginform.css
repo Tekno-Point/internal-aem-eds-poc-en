@@ -1,0 +1,124 @@
+/* login-form-modal */
+
+.modal dialog:has(.login-form-modal) {
+    max-width: 475px;
+    border-radius: 2rem;
+    inset-block-end: 32%;
+}
+
+@media (width < 900px) {
+    .modal dialog:has(.login-form-modal) {
+        width: 95%;
+    }
+}
+
+.login-form-modal {}
+
+.login-form-modal h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #282828;
+    margin: 0;
+}
+
+.login-form-modal p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #282828;
+    padding: 1rem 0 2rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.login-form-modal .field-wrapper input {
+    cursor: auto;
+    border: none;
+    color: #282828;
+    border-bottom: 1px solid #d1d1d1;
+    outline: 0;
+    background: 0 0;
+    width: 100%;
+    padding: 1.7rem;
+    border-radius: 5px;
+    border: solid 1px #c9c9c9;
+    background-color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2rem;
+    outline: none;
+}
+
+
+.login-form-modal .field-wrapper input:focus {
+    border: 2px solid #ec6625;
+    outline: none;
+}
+
+.login-form-modal .field-wrapper label {
+    cursor: auto;
+    display: inline-flex;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #d1d1d1;
+    font-weight: 400;
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    transition: 0.3s ease;
+    color: #838383;
+    background: #fff;
+    pointer-events: none;
+    letter-spacing: 0.05rem;
+}
+
+
+.login-form-modal .field-wrapper.focus-active label {
+    font-size: 1.2rem;
+    top: -7px;
+    line-height: 15.06px;
+    font-weight: 600;
+    padding: 0 5px;
+    margin-left: -4px;
+}
+
+
+.login-form-modal .form div.field-wrapper.submit-wrapper {
+    margin-top: 38px;
+}
+
+.login-form-modal .submit-wrapper .button {
+    background: #ec6625;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+.login-form-modal .submit-wrapper .button:hover {
+    color: #fff;
+    background: #fd7b20;
+}
+
+.modal:has(.login-form-modal) .close-button {
+    top: 1rem;
+    right: 8px;
+}
+
+.modal:has(.login-form-modal) .close-button .icon.icon-close {
+    border: 1px solid #f0efee;
+    border-radius: 5px;
+}
+
+.modal:has(.login-form-modal) .close-button .icon.icon-close::before,
+.modal:has(.login-form-modal) .close-button .icon.icon-close::after {
+    color: #282828;
+    width: 16px;
+    height: 1.5px;
+}

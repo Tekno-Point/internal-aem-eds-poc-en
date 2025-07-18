@@ -1,0 +1,132 @@
+.carousel.services-carousel {
+    margin-top: 30px;
+    padding: 0 15px 20px 10px;
+    overflow: hidden
+}
+
+.carousel.services-carousel .swiper-slide {
+    border-radius: 16px;
+    box-shadow: 6px 8px 12px rgba(0, 135, 219, 0.24);
+    /* border: 1px solid rgba(0, 136, 221, 0.08); */
+    background-color: #fff;
+}
+
+.carousel.services-carousel .swiper-slide div picture,
+.carousel.services-carousel .swiper-slide div>a {
+    display: block;
+}
+
+.carousel.services-carousel .swiper-slide div:has(picture),
+.carousel.services-carousel .swiper-slide div picture,
+.carousel.services-carousel .swiper-slide div>a {
+    height: 246px;
+    width: 100%;
+}
+
+.carousel.services-carousel .swiper-slide div img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.carousel.services-carousel .swiper-slide h4 {
+    text-align: center;
+    padding: 20px 20px 0;
+}
+
+.carousel.services-carousel .swiper-slide h4,
+.carousel.services-carousel .swiper-slide h4 a {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #0088dd;
+    margin: 0;
+}
+
+.carousel.services-carousel .swiper-slide h4 a:hover {
+    color: #153d8a;
+}
+
+.carousel.services-carousel .swiper-slide h4 a {
+    text-decoration: none;
+}
+
+.carousel.services-carousel .swiper-slide p {
+    text-align: center;
+    font-size: 15px;
+    color: #676767;
+    line-height: 24px;
+    margin: 0 0 14px;
+    padding: 20px 20px 0;
+    max-height: 96px;
+    min-height: 72px;
+}
+
+.carousel.services-carousel .swiper-slide p.button-container {
+    padding: 0;
+    margin: 0 0 20px;
+    max-height: unset;
+    min-height: unset;
+}
+
+.carousel.services-carousel .swiper-slide p.button-container a {
+    margin: 0;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: #0088dd;
+    border-radius: 8px;
+    transition: all 0.30s linear;
+}
+
+.carousel.services-carousel .swiper-slide p.button-container a:hover {
+    background: #153d8a;
+}
+
+.carousel.services-carousel .swiper-pagination {
+    top: 100%;
+}
+
+.carousel.services-carousel .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+}
+
+.carousel.services-carousel .swiper-button-next {
+    right: -5px;
+}
+
+.carousel.services-carousel .swiper-button-prev {
+    left: -25px;
+}
+
+@media (width <=900px) {
+    .carousel.services-carousel {
+        padding: 0 15px 20px 0;
+    }
+
+    .carousel.services-carousel .swiper-slide div:has(picture),
+    .carousel.services-carousel .swiper-slide div picture,
+    .carousel.services-carousel .swiper-slide div>a {
+        height: 336px;
+    }
+}
+
+
+/* Experience Carosel css */
+.section.exp-carousel-container {
+    margin: 0;
+}
+
+.section.exp-carousel-container .default-content-wrapper h3 {
+    padding-top: 50px;
+}
+
+@media (width >=900px) {
+    .carousel.experience-carousel .swiper-slide {
+        width: 246px;
+        margin-right: 30px;
+    }
+}
