@@ -1,8 +1,19 @@
+
 function SINGLE_TRIP(block) {
     let formRadioWrapper = block.querySelector("#form-wrapradio");
     formRadioWrapper.children[0].querySelector("#form-trip-radio").checked = true;
 
-    const selectedRadioWrapper = formRadioWrapper.querySelectorAll('.radio-wrapper');
+    const selectedRadioWrapper = formRadioWrapper.querySelectorAll('.radio-wrapper'); 
+
+    let geographyContainer = block.querySelector("#form-wrap-geography")
+
+    let geographyContry = geographyContainer.querySelectorAll(".selection-wrapper")
+
+    let getDateInputField = block.querySelector("#form-wrapdate");
+    let inputField = getDateInputField.querySelector("input");
+    
+
+    console.log(geographyContry)
 
     selectedRadioWrapper.forEach((element) => {
         element.addEventListener('click', function () {
@@ -22,7 +33,7 @@ function SINGLE_TRIP(block) {
                     if (nextSibling2) nextSibling2.style.display = 'block';
 
                     removeExistingCountryBlock(outerWrapper);
-                } else if (value === "country") {
+                } else if (value === "country") { 
                     if (nextSibling1) nextSibling1.style.display = 'none';
                     if (nextSibling2) nextSibling2.style.display = 'none';
 
@@ -34,39 +45,41 @@ function SINGLE_TRIP(block) {
         });
     });
 
-    function generateSelectCountryCom(referenceElement) { 
+    function generateSelectCountryCom(referenceElement) {
         removeExistingCountryBlock(referenceElement);
-        
+    
         const container = document.createElement("div");
         container.className = "il-selctcountry-block";
+    
+        
+        const inputBlock = document.createElement("div");
+        inputBlock.className = "il-input-block";
+    
+        const label = document.createElement("label");
+        label.textContent = "Travelling to:";
+    
+        const input = document.createElement("input");
+        input.type = "text";
+        input.placeholder = "Add countries";
+        input.className = "search-country-input";
+    
+        inputBlock.appendChild(input);
+        inputBlock.appendChild(label);
+    
+        container.appendChild(inputBlock);
+    
+        const defaultContainer = referenceElement
+            .closest(".tabs-panel")
+            .querySelector(".default-content-wrapper");
+    
+        if (defaultContainer) {
+            const clonedContainer = defaultContainer.cloneNode(true);
+            container.appendChild(clonedContainer);
+        }
+    
 
-        container.innerHTML = `
-            <div class="il-input-block country-search-input-block">
-                <label>Travelling to</label>
-                <div class="il-country-list">
-                    <input type="text" placeholder="Add countries" class="search-country-input ng-pristine ng-valid ng-touched">
-                </div>
-            </div>
-            <div class="il-pop-country">
-                <h3>Popular countries</h3>
-                <ul class="pop-country-list">
-                    <li><a>Australia</a></li>
-                    <li><a>Canada</a></li>
-                    <li><a>Germany</a></li>
-                    <li><a>Indonesia</a></li>
-                    <li><a>Italy</a></li>
-                    <li><a>Malaysia</a></li>
-                    <li><a>Singapore</a></li>
-                    <li><a>Switzerland</a></li>
-                    <li><a>Thailand</a></li>
-                    <li><a>UK</a></li>
-                    <li><a>USA</a></li>
-                </ul>
-            </div>
-        `;
-
-        referenceElement.parentNode.insertBefore(container, referenceElement.nextSibling);
-    }
+        referenceElement.parentNode.insertBefore(container, referenceElement.nextElementSibling);
+    } 
 
     function removeExistingCountryBlock(referenceElement) {
         const next = referenceElement.nextElementSibling;
@@ -74,6 +87,18 @@ function SINGLE_TRIP(block) {
             next.remove();
         }
     }
+
+    geographyContry.forEach((element)=>{
+        element.addEventListener('click', function(e){
+            if(e.target.checked){
+                inputField.showPicker?.()
+                inputField.focus()
+            }
+        })
+    })
+
+
+
 }
 
 export { SINGLE_TRIP };

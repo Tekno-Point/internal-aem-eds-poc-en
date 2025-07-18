@@ -1,4 +1,3 @@
-import { ADD_TRAVELLERS } from './add-travellers.js';
 import createField from './form-fields.js';
 import { SINGLE_TRIP } from './single-trip.js';
 
@@ -120,8 +119,6 @@ export default async function decorate(block) {
   formMatcher(form, formId);
 
   SINGLE_TRIP(block)
-
-  ADD_TRAVELLERS(block)
-} 
+}
 
 export const decorateForm = decorate

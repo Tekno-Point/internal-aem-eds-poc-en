@@ -185,7 +185,7 @@
 }
 
 /* stylelint-disable-next-line CssSyntaxError */
-#single-trip > div.field-wrapper.checkbox-wrapper.selection-wrapper{
+.section#single-trip > div.field-wrapper.checkbox-wrapper.selection-wrapper{
     margin-top: 15px;
 } 
 
@@ -195,6 +195,14 @@
     color: #575757;
     line-height: normal;
     padding: 0 3rem 3rem;
+}
+
+form#single-trip>div:nth-child(6){
+    margin-top: 15px !important;
+}
+
+form#single-trip>div.selection-wrapper {
+    margin-top: 15px !important;
 }
 
 #single-trip > div.field-wrapper.submit-wrapper{
@@ -235,35 +243,35 @@
     padding-top: unset;
 }
 
-#single-trip > .il-selctcountry-block> .il-pop-country{
+#single-trip > .il-selctcountry-block> .default-content-wrapper{
     width: 100%;
 }
 
-#single-trip > .il-selctcountry-block> .il-pop-country > h3{
+#single-trip > .il-selctcountry-block> .default-content-wrapper > h3{
     padding: 0 0 1.5rem;
     font-size: 1.6rem;
     font-weight: 700;
     color: #282828;
 }
 
-#single-trip > .il-selctcountry-block> .il-pop-country > ul{
+#single-trip > .il-selctcountry-block> .default-content-wrapper > ul{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     list-style: none;
 }
 
-#single-trip > .il-selctcountry-block> .il-pop-country > ul > li{
+#single-trip > .il-selctcountry-block> .default-content-wrapper > ul > li{
     background: #f5f6f6; 
     border-radius: 5px;
     cursor: pointer;
+    padding: .6rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #282828;
 }
 
 #single-trip > .il-selctcountry-block> .il-input-block{
-    position: relative;
-}
-
-#single-trip > .il-selctcountry-block> .il-input-block > .il-country-list{
     border: 1px solid #c9c9c9;
     border-radius: 5px;
     min-height: 54px;
@@ -289,8 +297,17 @@
     width: 90%;
 }
 
-#single-trip > .il-selctcountry-block> .il-input-block > .il-country-list > input{
-    outline: 0 !important; 
+#single-trip > .il-selctcountry-block > .il-input-block > .search-country-input:focus + label,
+#single-trip > .il-selctcountry-block > .il-input-block > .search-country-input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 1.2rem;
+    color: #000;
+    background: #fff;
+    padding: 0 5px;
+    width: fit-content;
+}
+
+#single-trip > .il-selctcountry-block> .il-input-block > .search-country-input{ 
     padding: 7px 0 0;
     display: inline-block; 
     /* border: 1px solid #c9c9c9; */
@@ -301,12 +318,14 @@
     font-weight: 600;
     color: #282828;
     border: none;
+    outline: none;
+
+} 
+
+
+
+#tabpanel-single-trip > div > div.default-content-wrapper{
+    display: none;
 }
 
-#single-trip > .il-selctcountry-block> .il-pop-country > ul > li>a{
-    padding: .6rem 1rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #282828;
-}
 

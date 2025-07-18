@@ -1,4 +1,4 @@
-function ADD_TRAVELLERS(block) {
+function ADD_TRAVELLERS(block) { 
         const counterWrappers = Array.from(block.querySelectorAll(".counter-wrapper"));
         const lastIndex = counterWrappers.length - 1;
         const monitoredWrappers = counterWrappers.slice(0, lastIndex);
@@ -7,6 +7,9 @@ function ADD_TRAVELLERS(block) {
         const mobileInput = block.querySelector('input#form-mobile-number[type="tel"]');
         const emailInput = block.querySelector('input[type="email"]');
         const formContainer = block.querySelector("#travel-details");
+
+
+        console.log(counterWrappers, lastIndex, monitoredWrappers, lastWrapper, mobileInput, emailInput, formContainer)
 
         let inputFieldContainer = formContainer.querySelector(".traveller-input-container");
         if (!inputFieldContainer) {

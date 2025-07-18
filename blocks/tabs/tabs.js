@@ -47,7 +47,7 @@ export default async function decorate(block) {
     tab.remove();
   }); 
 
-  block.prepend(tablist);
+  block.prepend(tablist); 
 
 
 }

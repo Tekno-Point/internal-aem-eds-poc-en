@@ -1,4 +1,5 @@
 import { toClassName } from '../../scripts/aem.js';
+import {ADD_TRAVELLERS} from './add-travellers.js'
 
 function createFieldWrapper(fd) {
   const fieldWrapper = document.createElement('div');
@@ -274,7 +275,9 @@ const createCounter = (fd) => {
   //   }
   // });
 
-  decCounter.disabled = true;
+  // ADD_TRAVELLERS(fd)
+
+  // decCounter.disabled = true;
 
   counterWrapper.append(decCounter, field, incCounter);
 

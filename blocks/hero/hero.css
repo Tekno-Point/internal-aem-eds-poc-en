@@ -286,6 +286,7 @@
 #form-multi-trip-link-wrapper>.link-wrapper,
 #form-single-trip-link-wrapper>.link-wrapper {
     display: block;
+    margin-bottom: unset;
 }
 
 #form-multi-trip-link-wrapper>.button-wrapper,
@@ -309,4 +310,9 @@
     display: inline-block;
     cursor: pointer;
 
+}
+
+
+.section.trip-form-modal.tabs-container.hero-container.form-container > .form-wrapper{
+    display: none;
 }
