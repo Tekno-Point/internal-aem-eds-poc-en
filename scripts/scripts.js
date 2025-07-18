@@ -10,8 +10,10 @@ import {
   loadSection,
   loadSections,
   loadCSS,
-  toClassName,
+  toClassName
 } from './aem.js';
+
+import { decorateForm } from '../blocks/form/form.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.

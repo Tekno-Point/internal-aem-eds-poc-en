@@ -1,4 +1,6 @@
+import { ADD_TRAVELLERS } from './add-travellers.js';
 import createField from './form-fields.js';
+import { SINGLE_TRIP } from './single-trip.js';
 
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
@@ -80,7 +82,7 @@ async function handleSubmit(form) {
 const formMatcher = (form, id) => {
   switch (id) {
     case 'single-trip':
-      singleTripForm(form)
+      // singleTripForm(form)
       break;
     default:
       console.warn('no-mathching form');
@@ -116,4 +118,10 @@ export default async function decorate(block) {
   block.replaceChildren(form);
 
   formMatcher(form, formId);
+
+  SINGLE_TRIP(block)
+
+  ADD_TRAVELLERS(block)
 } 
+
+export const decorateForm = decorate

@@ -2,10 +2,31 @@
     padding: 0;
 }
 
-#tabpanel-single-trip>div>div>div>form>div:nth-child(2),
-#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div:nth-child(2),
-#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div.field-wrapper.button-wrapper,
-#tabpanel-single-trip>div>div>div>form>div.field-wrapper.button-wrapper {
+#tabpanel-single-trip > div > div > div > form > div:nth-child(2),
+#tabpanel-single-trip
+    > div
+    > div
+    > div
+    > div
+    > div
+    > p:nth-child(1)
+    > form
+    > div:nth-child(2),
+#tabpanel-single-trip
+    > div
+    > div
+    > div
+    > div
+    > div
+    > p:nth-child(1)
+    > form
+    > div.field-wrapper.button-wrapper,
+#tabpanel-single-trip
+    > div
+    > div
+    > div
+    > form
+    > div.field-wrapper.button-wrapper {
     margin-top: 0;
 }
 
@@ -14,7 +35,7 @@
     padding-left: 2px;
 }
 
-#tabpanel-single-trip>div {
+#tabpanel-single-trip > div {
     grid-template-columns: none;
 }
 
@@ -50,7 +71,7 @@
     display: block;
 }
 
-#form-wrap-geography input[type='radio'] {
+#form-wrap-geography input[type="radio"] {
     position: absolute;
     opacity: 0;
 }
@@ -64,7 +85,7 @@
     color: #282828;
 }
 
-#form-wrap-geography label>div {
+#form-wrap-geography label > div {
     width: 50px;
     height: 55px;
     padding: 1rem 1.3rem;
@@ -75,7 +96,7 @@
     margin-bottom: 1rem;
 }
 
-#form-wrap-geography input[type='radio']:checked+label>div {
+#form-wrap-geography input[type="radio"]:checked + label > div {
     background-color: #ec6625;
     border: 2px solid #ec6625;
 }
@@ -98,11 +119,76 @@
     border-color: #c9c9c9;
     border-radius: 0 0 1rem 1rem;
     padding-bottom: 2rem;
+    outline: none;
 }
 
 #form-geographical-scope:hover {
     color: #928f8e;
 }
+
+#single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate {
+    display: flex;
+}
+
+#single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate > div {
+    border: none;
+    border-radius: 5px;
+    height: auto;
+    padding-top: 0;
+    /* margin-right: 2rem; */
+    padding-left: 0;
+    position: relative;
+    width: 100%;
+}
+
+#single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate > div > label {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #838383;
+    position: absolute;
+    left: 17px;
+    background-color: #fff;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+#single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate > div > input {
+    border: 1px solid #c9c9c9;
+    color: #282828;
+    width: 100%;
+    outline: none;
+}
+
+#single-trip
+    > .field-wrapper.fieldset-wrapper
+    > #form-wrapdate
+    > div
+    > input[type="date"]::-webkit-datetime-edit {
+    color: transparent;
+}
+
+#single-trip
+    > .field-wrapper.fieldset-wrapper
+    > #form-wrapdate
+    > div
+    > input[type="date"]:focus::-webkit-datetime-edit {
+    color: black;
+}
+
+#single-trip > .field-wrapper.checkbox-wrapper {
+    margin-left: 3px;
+} 
+
+#single-trip > .field-wrapper.checkbox-wrapper > label {
+    font-size: 1.4rem;
+}
+
+/* stylelint-disable-next-line CssSyntaxError */
+#single-trip > div.field-wrapper.checkbox-wrapper.selection-wrapper{
+    margin-top: 15px;
+} 
+
 
 #single-trip>div.field-wrapper.plaintext-wrapper {
     font-size: 1.2rem;
@@ -111,6 +197,15 @@
     padding: 0 3rem 3rem;
 }
 
+#single-trip > div.field-wrapper.submit-wrapper{
+    margin-top: unset;
+    display: block;
+    
+}
+
+#single-trip > div.field-wrapper.submit-wrapper > button{
+    color: #fff;
+}
 #single-trip>div.field-wrapper.submit-wrapper {
     margin: 0;
 }
@@ -124,4 +219,94 @@
     background: #ec6625;
     border-radius: 5px;
     border: 3px solid transparent;
+    margin: unset;
+    width: 100%;
+    max-width: 100%;
 }
+
+#single-trip > .il-selctcountry-block{
+    display: flex;
+    gap: 10px;
+    padding: 2rem; 
+    flex-direction: column;
+    border: 1px solid #c9c9c9;
+    border-top: none;
+    border-radius: 0 0 1rem 1rem;
+    padding-top: unset;
+}
+
+#single-trip > .il-selctcountry-block> .il-pop-country{
+    width: 100%;
+}
+
+#single-trip > .il-selctcountry-block> .il-pop-country > h3{
+    padding: 0 0 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #282828;
+}
+
+#single-trip > .il-selctcountry-block> .il-pop-country > ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+#single-trip > .il-selctcountry-block> .il-pop-country > ul > li{
+    background: #f5f6f6; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#single-trip > .il-selctcountry-block> .il-input-block{
+    position: relative;
+}
+
+#single-trip > .il-selctcountry-block> .il-input-block > .il-country-list{
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+    min-height: 54px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7px 12px 13px 17px;
+    position: relative;
+} 
+
+#single-trip > .il-selctcountry-block> .il-input-block > label{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #838383;
+    position: absolute;
+    left: 17px;
+    top: 17px;
+    background-color: #fff;
+    transition: .3s;
+    pointer-events: none;
+    z-index: 5;
+    width: 90%;
+}
+
+#single-trip > .il-selctcountry-block> .il-input-block > .il-country-list > input{
+    outline: 0 !important; 
+    padding: 7px 0 0;
+    display: inline-block; 
+    /* border: 1px solid #c9c9c9; */
+    border-radius: 5px;
+    background: #fff; 
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #282828;
+    border: none;
+}
+
+#single-trip > .il-selctcountry-block> .il-pop-country > ul > li>a{
+    padding: .6rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #282828;
+}
+
