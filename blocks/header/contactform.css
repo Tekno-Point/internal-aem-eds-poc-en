@@ -77,7 +77,7 @@
 
 .header-contact-modal {
     width: 100%;
-    max-width: 65rem;
+    max-width: 100rem;
     margin: 0 auto;
     text-align: center;
     padding: 3rem 0 4rem;
@@ -170,7 +170,7 @@
 
 .header-contact-modal h3 {
     font-size: 1.7rem;
-    text-align: left;
+    text-align: center;
     font-weight: 600;
     letter-spacing: 0.3px;
     padding-bottom: 2rem;
