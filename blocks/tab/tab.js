@@ -58,4 +58,20 @@ export default async function decorate(block) {
   });
 
   block.prepend(tablist);
+
+    const tabList = document.querySelector(".tab-list");
+  const tabs = tabList.querySelectorAll(".tab-tab");
+
+  tabs.forEach((tab, index) => {
+    if (index === 0) return; // Skip first tab
+
+    tab.addEventListener("click", () => {
+      tabList.scrollTo({
+        left: tabList.scrollWidth, // Scroll to the rightmost
+        behavior: "smooth",
+      });
+    });
+  });
 }
+
+

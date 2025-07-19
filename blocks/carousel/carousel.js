@@ -59,43 +59,30 @@ export default function decorate(block) {
   // Initialize and store Swiper instance
   const swiperInstance = new Swiper(block, {
     loop: false,
-    // navigation: {
-    //   nextEl: rightArrow,
-    //   prevEl: leftArrow,
-    // },
+    slidesPerView: 3,
+    spaceBetween: 20,
+  //   autoplay: {
+  //   delay: 3000, // 3 seconds between slides
+  //   disableOnInteraction: false, // continues autoplay after user interaction
+  // },
     pagination: {
       el: divPagination,
       clickable: true,
-      renderBullet: function (index, className) {
-        const el = paginationTexts[index];
-        if (!el) return `<span class="${className}">•</span>`;
-        const clone = el.cloneNode(true);
-        clone.classList.add("swiper-pagination-bullet");
-        return clone.outerHTML;
-      },
     },
     freeMode: true,
     scrollOnFocus: true,
-  });
-
-  [prevBtn, nextBtn].forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const activeBullet = block.querySelector(".swiper-pagination-bullet-active");
-    const paginationContainer = block.querySelector(".swiper-pagination");
-
-    if (activeBullet && paginationContainer) {
-      const bulletLeft = activeBullet.offsetLeft;
-      const containerWidth = paginationContainer.offsetWidth;
-      const bulletWidth = activeBullet.offsetWidth;
-
-      // Scroll the pagination container so the active bullet is centered
-      paginationContainer.scrollTo({
-        left: bulletLeft - (containerWidth / 2) + (bulletWidth / 2),
-        behavior: "smooth"
-      });
+    breakpoints: {
+    0: {
+      slidesPerView: 1, // Mobile
+    },
+    768: {
+      slidesPerView: 2, // Tablet (optional)
+    },
+    1024: {
+      slidesPerView: 3, // Desktop
     }
+  }
   });
-});
 
 
   // Update button states
@@ -113,7 +100,4 @@ export default function decorate(block) {
     }
   }
 }
-
-// document.getElementsByClassName('carousel-style')[0].parentElement('.carousel-wrapper').parentElement('.carousel-container').style.marginTop= '0px'
-
 

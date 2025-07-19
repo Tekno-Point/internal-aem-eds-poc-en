@@ -281,7 +281,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col_image",
+        "name": "col1_image",
         "label": "Head Image",
         "multi": false
       },
