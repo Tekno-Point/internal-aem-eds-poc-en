@@ -300,7 +300,7 @@
         "valueType": "string"
       },
       {
-        "component": "richtext",
+        "component": "reference",
         "name": "col2_text",
         "value": "",
         "label": "Body Content",
