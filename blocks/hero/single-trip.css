@@ -32,7 +32,7 @@
 
 #single-trip>div:nth-child(5),
 #single-trip>div:nth-child(6) {
-    padding-left: 2px;
+    /* padding-left: 2px; */
 }
 
 #tabpanel-single-trip > div {
@@ -177,7 +177,7 @@
 }
 
 #single-trip > .field-wrapper.checkbox-wrapper {
-    margin-left: 3px;
+    /* margin-left: 3px; */
 } 
 
 #single-trip > .field-wrapper.checkbox-wrapper > label {
@@ -202,7 +202,7 @@ form#single-trip>div:nth-child(6){
 }
 
 form#single-trip>div.selection-wrapper {
-    margin-top: 15px !important;
+    margin-top: 15px;
 }
 
 #single-trip > div.field-wrapper.submit-wrapper{
