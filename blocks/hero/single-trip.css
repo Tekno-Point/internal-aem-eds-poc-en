@@ -43,15 +43,23 @@
 
 #form-wrap-geography {
     display: flex;
+    align-items: stretch;
     gap: 10px;
     padding: 2rem;
     border-width: 0 1px;
     border-style: solid;
     border-color: #c9c9c9;
+
+    @media (width < 900px) {
+        justify-content: space-between;
+        gap: 2px;
+        padding: 2rem 1.2rem;
+    }
 }
 
 #form-wrap-geography .field-wrapper {
-    flex: 1;
+    align-items: stretch;
+    width: min-content;
     display: block;
 }
 
@@ -67,6 +75,12 @@
     line-height: 16px;
     font-weight: 600;
     color: #282828;
+    height: 120px;
+}
+
+#form-wrap-geography label img {
+    width: 50px;
+    height: 55px;
 }
 
 #form-wrap-geography label>div {
@@ -78,6 +92,10 @@
     border: 2px solid #c9c9c9;
     border-radius: 1rem;
     margin-bottom: 1rem;
+
+    @media (width < 900px) {
+        padding: 8px;
+    }
 }
 
 #form-wrap-geography input[type="radio"]:checked+label>div {
@@ -112,6 +130,10 @@
 
 #single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate {
     display: flex;
+
+    @media (width < 900px) {
+        display: initial;
+    }
 }
 
 #single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div {
@@ -123,6 +145,11 @@
     padding-left: 0;
     position: relative;
     width: 100%;
+
+    @media (width < 900px) {
+        width: 50%;
+        display: inline-block;
+    }
 }
 
 #single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div>label {
@@ -142,6 +169,10 @@
     color: #282828;
     width: 100%;
     outline: none;
+
+    @media (width < 900px) {
+        width: 88%;
+    }
 }
 
 #single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div>input[type="date"]::-webkit-datetime-edit {

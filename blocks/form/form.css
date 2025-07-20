@@ -23,25 +23,29 @@
     margin-top: 0.25em;
 }
 
-.heading-wrapper h2{   
+.heading-wrapper h2 {
     margin-top: 24px;
     padding: 0 0;
     font-size: 1.6rem;
     font-weight: 700;
     color: #282828;
 }
-#form-mobile-number-wrapper{
+
+#form-mobile-number-wrapper {
     display: flex;
     flex-direction: column;
 }
-.tel-wrapper{
+
+.tel-wrapper {
     position: relative;
 }
-.email-wrapper{
+
+.email-wrapper {
     margin-top: 30px !important;
 }
+
 .tel-wrapper label,
-.email-wrapper label{
+.email-wrapper label {
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 500;
@@ -53,8 +57,9 @@
     transition: .3s;
     pointer-events: none;
 }
+
 .tel-wrapper input,
-.email-wrapper input{
+.email-wrapper input {
     border: 1px solid #c9c9c9;
     border-radius: 5px;
     background: #fff;
@@ -64,16 +69,19 @@
     font-weight: 600;
     color: #282828;
 }
-.checkbox-wrapper input{
+
+.checkbox-wrapper input {
     margin-left: 3px !important;
 }
-.checkbox-wrapper label{
+
+.checkbox-wrapper label {
     font-size: 1.2rem !important;
     color: #575757;
     font-weight: 500;
     line-height: normal;
 }
-.counter-wrapper{
+
+.counter-wrapper {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
@@ -81,21 +89,24 @@
     width: 100%;
     margin-top: 5px !important;
 }
-.counter-wrapper > label{
+
+.counter-wrapper>label {
     font-size: 1.4rem !important;
     font-weight: 600;
     color: #282828;
 }
-.form-container .form-wrapper:nth-child(2){
+
+.form-container .form-wrapper:nth-child(2) {
     padding: 3rem 5rem;
 }
-    
-.counter-wrapper >div{
+
+.counter-wrapper>div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.counter-wrapper >div >input{
+
+.counter-wrapper>div>input {
     width: 40px;
     height: 20px;
     border: none;
@@ -108,10 +119,12 @@
     font-weight: 600;
     color: #282828;
 }
-.counter-wrapper >div >input:hover{
+
+.counter-wrapper>div>input:hover {
     border: none;
 }
-.counter-wrapper >div >button{
+
+.counter-wrapper>div>button {
     width: 27px;
     height: 27px;
     border-radius: 5px;
@@ -122,37 +135,45 @@
     background: #ffeee3;
     text-align: center;
 }
-.field-wrapper:nth-child(6){
+
+.field-wrapper:nth-child(6) {
     margin-top: 0 !important;
 }
-.field-wrapper:nth-child(10){
+
+.field-wrapper:nth-child(10) {
     margin-top: 5px !important;
     border-bottom: 1px solid #eaeaea;
 }
-.field-wrapper:nth-child(10) >#form-traveller-dob >div:nth-child(1){
+
+.field-wrapper:nth-child(10)>#form-traveller-dob>div:nth-child(1) {
     border-bottom: unset;
 }
-#form-traveller-dob >div:nth-child(2){
+
+#form-traveller-dob>div:nth-child(2) {
     position: unset !important;
 }
-#form-traveller-dob{
+
+#form-traveller-dob {
     display: flex;
     flex-direction: column;
     position: relative;
     margin-bottom: 50px;
 }
-.plaintext-wrapper{
+
+.plaintext-wrapper {
     position: unset;
 }
-#form-10{
+
+#form-10 {
     font-size: 11px;
     line-height: 1.6;
     width: 62%;
     position: absolute;
     top: 50px;
 }
+
 .tel-wrapper.focus-active label,
-.email-wrapper.focus-active label{
+.email-wrapper.focus-active label {
     font-size: 12px;
     top: -15%;
     left: 3%;
@@ -162,8 +183,9 @@
     color: #ec6625;
     outline: none;
 }
-#extend-policy >div:nth-child(2) >label,
-#extend-policy >div:nth-child(4) >label{
+
+#extend-policy>div:nth-child(2)>label,
+#extend-policy>div:nth-child(4)>label {
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 500;
@@ -175,8 +197,9 @@
     transition: .3s;
     pointer-events: none;
 }
-#extend-policy >div:nth-child(4).focus-active label,
-#extend-policy >div:nth-child(2).focus-active label{
+
+#extend-policy>div:nth-child(4).focus-active label,
+#extend-policy>div:nth-child(2).focus-active label {
     /* font-size: 14px;
     line-height: 2rem;
     font-weight: 500;
@@ -190,7 +213,8 @@
     transition: 0.3s;
     color: #ec6625;
 }
-#extend-policy >div:nth-child(4) >input{
+
+#extend-policy>div:nth-child(4)>input {
     border: 1px solid #c9c9c9;
     border-radius: 5px;
     background: #fff;
@@ -203,16 +227,16 @@
 
 .tel-wrapper.focus-active input,
 .email-wrapper.focus-active input,
-#extend-policy >div:nth-child(2).focus-active >input,
-#extend-policy >div:nth-child(3).focus-active >input,
-#extend-policy >div:nth-child(4).focus-active >input{
+#extend-policy>div:nth-child(2).focus-active>input,
+#extend-policy>div:nth-child(3).focus-active>input,
+#extend-policy>div:nth-child(4).focus-active>input {
     border: 2px solid #ec6625 !important;
     outline: none !important;
     outline-offset: unset;
 }
 
 
-#extend-policy .submit-wrapper button{
+#extend-policy .submit-wrapper button {
     max-width: unset;
     color: #fff;
     padding: 1.1rem 2.4rem;
@@ -221,15 +245,18 @@
     border-radius: 5px;
     border: 3px solid transparent;
 }
-#form-buy-trip-wrapper{
+
+#form-buy-trip-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#form-buy-trip-wrapper .button-wrapper{
+
+#form-buy-trip-wrapper .button-wrapper {
     width: 48%;
 }
-#form-buy-trip-wrapper > .button-wrapper > input{
+
+#form-buy-trip-wrapper>.button-wrapper>input {
     border-radius: 5px;
     border: 1px solid #ec6625;
     background: #fff;
@@ -237,14 +264,17 @@
     cursor: pointer;
     padding: 10px;
 }
-#form-buy-trip-wrapper > .button-wrapper > input:hover{
+
+#form-buy-trip-wrapper>.button-wrapper>input:hover {
     background-color: #fff2eb;
     border: 1px solid #ec6625;
     color: #ec6625;
 }
-#form-buy-trip-wrapper > .button-wrapper > label{
+
+#form-buy-trip-wrapper>.button-wrapper>label {
     display: none;
 }
+
 @media (width >=600px) {
     .form fieldset {
         grid-template-columns: repeat(2, auto);
@@ -259,7 +289,7 @@
 }
 
 
-#form-hadline{
+#form-hadline {
     font-size: 1.6rem;
     padding-bottom: 2rem;
     font-weight: 700;
@@ -267,7 +297,7 @@
 }
 
 
-#form-policy-number-label{
+#form-policy-number-label {
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 500;
@@ -279,7 +309,8 @@
     transition: .3s;
     pointer-events: none;
 }
-#form-policy-number{
+
+#form-policy-number {
     border: 1px solid #c9c9c9;
     border-radius: 5px;
     background: #fff;
@@ -289,7 +320,8 @@
     font-weight: 600;
     color: #282828;
 }
-#form-8{
+
+#form-8 {
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 18px;
@@ -301,13 +333,16 @@
     color: #6c6c6c;
     cursor: pointer;
 }
-#form-8:hover{
+
+#form-8:hover {
     color: #928f8e;
     text-decoration: none;
 }
-.link-wrapper{
+
+.link-wrapper {
     margin-bottom: 35px;
 }
+
 @media (width >=900px) {
     .form fieldset {
         grid-template-columns: repeat(3, auto);
@@ -368,7 +403,7 @@
     width: max-content;
 }
 
-.date-wrapper input:hover{
+.date-wrapper input:hover {
     border: solid #c9c9c9;
 
 }
@@ -395,7 +430,8 @@
     transition: .3s;
     color: #ec6625;
 }
-.date-wrapper.focus-active input[type='date']{
+
+.date-wrapper.focus-active input[type='date'] {
     color: unset;
 }
 
@@ -409,7 +445,7 @@ input[type='date'] {
     font-weight: 600;
 }
 
-input[type='date']::-webkit-datetime-edit{
+input[type='date']::-webkit-datetime-edit {
     color: transparent;
 }
 
@@ -517,6 +553,3 @@ input[type='date']::-webkit-datetime-edit{
 .trip-form-modal > .tabs-wrapper > .hero{
   height: 100%;
 } */
-
-
-
