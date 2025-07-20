@@ -103,24 +103,27 @@
     border: 2px solid #ec6625;
 }
 
+#single-trip>div.field-wrapper.button-wrapper {
+    border-bottom: 1px solid;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #c9c9c9;
+    border-radius: 0 0 1rem 1rem;
+    padding-bottom: 2rem;
+}
+
 #form-geographical-scope-label {
     display: none;
 }
 
 #form-geographical-scope {
     font-size: 1.2rem;
-    border-bottom: 1px solid;
     cursor: pointer;
     font-weight: 700;
     color: #6c6c6c;
     text-decoration: underline;
     border: none;
     text-underline-offset: 2px;
-    border-width: 0 1px 1px;
-    border-style: solid;
-    border-color: #c9c9c9;
-    border-radius: 0 0 1rem 1rem;
-    padding-bottom: 2rem;
     outline: none;
 }
 
