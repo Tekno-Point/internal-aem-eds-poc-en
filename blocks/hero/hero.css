@@ -419,6 +419,7 @@
     }
 
     #single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate{
+        display: flex;
         gap: 20px;
     }
 
