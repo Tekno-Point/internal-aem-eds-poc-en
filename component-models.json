@@ -1,4 +1,4 @@
-[
+
   {
     "id": "image",
     "fields": [
@@ -220,6 +220,10 @@
           {
             "name": "Travel Insurance Benefits",
             "value": "travel-insurance-benefits"
+          },
+          {
+            "name": "Ria Live Chat",
+            "value": "ria-live-chat"
           }
         ]
       }
