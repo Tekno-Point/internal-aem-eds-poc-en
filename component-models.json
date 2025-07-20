@@ -169,7 +169,12 @@
           {
             "name": "Demo Text",
             "value": "demo-text"
+          },
+          {
+            "name": "Tab Section",
+            "value": "tab-section"
           }
+          
         ]
       }
     ]

@@ -766,20 +766,22 @@ padding: 0;
       position: relative;
       height: 710px;
 }
-.section.demo-text .default-content-wrapper h2{
+.section.demo-text .default-content-wrapper{
+  display: flex;
+  flex-direction: column;
   position: absolute;
+  right: 10%;
+  top: 5%;
+}
+.section.demo-text .default-content-wrapper h2{
   font-size: 3rem;
     line-height: 3.62rem;
-    right: 20%;
     margin: 0;
-    top: 18%;
     width: 500px;
 }
 .section.demo-text .default-content-wrapper p:nth-child(2){
-  position: absolute;
   font-size: 16px;
-  right: 26%;
-  top: 36%;
+  margin-top: 15px;
 }
 .section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(1){
   border-color: #1e429f;
@@ -799,9 +801,7 @@ padding: 0;
   border: 1px solid transparent;
 }
 .section.demo-text .default-content-wrapper p:nth-child(3){
-  position: absolute;
-  right: 24%;
-  top: 41%;
+ margin-top: 15px;
 }
 .section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(2){
   background-color: #feecdc;
@@ -819,56 +819,47 @@ padding: 0;
   color: #fff;
 }
 .section.demo-text .default-content-wrapper p:nth-child(4){
-  position: absolute;
   font-size: 16px;
-  right: 15%;
-  top: 50%;
+  margin-top: 15px;
 }
 .section.demo-text .default-content-wrapper p{
   margin:0 10px 0 0;
 }
 .section.demo-text .default-content-wrapper p:nth-child(5){
   position: absolute;
-  left: 16%;
+  left: -60%;
   margin: 0;
-  bottom: 0;
 }
-.section.demo-text .default-content-wrapper p:nth-child(6){
-  position: absolute;
-  right: 42%;
-  top: 57%;
+.wrapped-paragraph{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
 }
-.section.demo-text .default-content-wrapper p:nth-child(7){
-  position: absolute;
-  right: 30%;
-  top: 57%;
+.wrapped-paragraph p{
+  margin-top: 0 !important;
 }
 
 @media screen and (max-width: 768px){
     .section.demo-text{
       background: linear-gradient(178deg, #bee8ff -26.26%, #d9f1ff 71.01%, #fff 106.38%);
       position: relative;
-      height: 1050px;
+      height: 800px;
 }
 .section.demo-text .default-content-wrapper h2{
   font-size: 28px;
     line-height: 2.37rem;
-    right: auto;
     margin: 0;
-    top: 1%;
     width: auto;
     text-align: center;
 }
 .section.demo-text .default-content-wrapper{
   padding: 0;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  right: auto;
+  width: 100%;
 }
 .section.demo-text .default-content-wrapper p:nth-child(2){
   font-size: 16px;
-  right: auto  ;
-  top: 10%;
   text-align: center;
 }
 .section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(1){
@@ -877,8 +868,6 @@ padding: 0;
   background: #e1effe;
 }
 .section.demo-text .default-content-wrapper p:nth-child(3){
-  right: auto;
-  top: 14%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -894,23 +883,17 @@ display: none;
   margin:0;
 }
 .section.demo-text .default-content-wrapper p:nth-child(5){
-  left: auto;
   margin: 0;
-  bottom: 0%;
+  left: auto;
+  height: 460px;
+  overflow: hidden;
+  top: 120%;
 }
-.section.demo-text .default-content-wrapper p:nth-child(6){
-  right: auto;
-  top: 24%;
-  left: 18%;
+.wrapped-paragraph p{
+  margin-top: 0 !important;
   width: 108px;
   height: 33px;
-}
-.section.demo-text .default-content-wrapper p:nth-child(7){
-  top: 24%;
-  left: 51%;
-  right: auto;
-  width: 108px;
-  height: 33px;
+  margin-right: 10px !important;
 }
 
 }
