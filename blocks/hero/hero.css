@@ -12,6 +12,7 @@
 
     @media (width < 900px) {
         min-height: initial;
+        padding: 0;
     }
 }
 
@@ -177,6 +178,7 @@
     @media (width < 900px) {
         display: flex;
         flex: 0 0 75%;
+        background: linear-gradient(47.68deg, #fff3f3 8.88%, #fff2eb 23.35%, #fffef3 107.4%);
     }
 }
 
@@ -189,6 +191,13 @@
 
 .hero-container .hero-wrapper>.hero>div:nth-child(n + 1)>div:first-child>picture>img {
     object-fit: unset;
+
+    @media (width < 900px) {
+        height: 200px;
+        object-fit: cover;
+        object-position: 16% 0;
+        padding-top: 20px;
+    }
 }
 
 .travel-insurance-benefits>div>ul>li>span>img {

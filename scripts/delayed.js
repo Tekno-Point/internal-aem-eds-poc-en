@@ -311,3 +311,5 @@ WebFontConfig = {
   })();
 `;
 
+HEAD.appendChild(FONTS);
+
