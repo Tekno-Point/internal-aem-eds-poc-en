@@ -1,4 +1,6 @@
+import { ADD_TRAVELLERS } from './add-travellers.js';
 import createField from './form-fields.js';
+import formToggler, { getParentFromChildId } from './formToggler.js';
 import { SINGLE_TRIP } from './single-trip.js';
 
 async function createForm(formHref, submitHref) {
@@ -81,24 +83,27 @@ async function handleSubmit(form) {
 const formMatcher = (form, id) => {
   switch (id) {
     case 'single-trip':
-      // singleTripForm(form)
+      formToggler('travel-details');
+      ADD_TRAVELLERS(getParentFromChildId('travel-details', '.form-wrapper'));
+      break;
+    case 'travel-details':
+      formToggler(id)
+      break;
+    case 'extend-policy':
+      formToggler(id)
       break;
     default:
       console.warn('no-mathching form');
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const valid = form.checkValidity();
-        if (valid) {
-          handleSubmit(form);
-        } else {
-          const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
-          if (firstInvalidEl) {
-            firstInvalidEl.focus();
-            firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
-          }
+      const valid = form.checkValidity();
+      if (valid) {
+        handleSubmit(form);
+      } else {
+        const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
+        if (firstInvalidEl) {
+          firstInvalidEl.focus();
+          firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
         }
-      });
+      }
   }
 }
 
@@ -116,7 +121,10 @@ export default async function decorate(block) {
 
   block.replaceChildren(form);
 
-  formMatcher(form, formId);
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formMatcher(form, formId);
+  });
 
   SINGLE_TRIP(block)
 }

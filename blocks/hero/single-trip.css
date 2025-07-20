@@ -2,31 +2,10 @@
     padding: 0;
 }
 
-#tabpanel-single-trip > div > div > div > form > div:nth-child(2),
-#tabpanel-single-trip
-    > div
-    > div
-    > div
-    > div
-    > div
-    > p:nth-child(1)
-    > form
-    > div:nth-child(2),
-#tabpanel-single-trip
-    > div
-    > div
-    > div
-    > div
-    > div
-    > p:nth-child(1)
-    > form
-    > div.field-wrapper.button-wrapper,
-#tabpanel-single-trip
-    > div
-    > div
-    > div
-    > form
-    > div.field-wrapper.button-wrapper {
+#tabpanel-single-trip>div>div>div>form>div:nth-child(2),
+#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div:nth-child(2),
+#tabpanel-single-trip>div>div>div>div>div>p:nth-child(1)>form>div.field-wrapper.button-wrapper,
+#tabpanel-single-trip>div>div>div>form>div.field-wrapper.button-wrapper {
     margin-top: 0;
 }
 
@@ -35,7 +14,7 @@
     /* padding-left: 2px; */
 }
 
-#tabpanel-single-trip > div {
+#tabpanel-single-trip>div {
     grid-template-columns: none;
 }
 
@@ -44,6 +23,7 @@
     border-width: 0 1px;
     border-style: solid;
     border-color: #c9c9c9;
+    grid-template-columns: repeat(3, auto);
 }
 
 #tabpanel-single-trip #form-wrapradio input {
@@ -55,19 +35,31 @@
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 2rem;
+
+    @media (width < 900px) {
+        font-size: 1.3rem;
+    }
 }
 
 #form-wrap-geography {
     display: flex;
+    align-items: stretch;
     gap: 10px;
     padding: 2rem;
     border-width: 0 1px;
     border-style: solid;
     border-color: #c9c9c9;
+
+    @media (width < 900px) {
+        justify-content: space-between;
+        gap: 2px;
+        padding: 2rem 1.2rem;
+    }
 }
 
 #form-wrap-geography .field-wrapper {
-    flex: 1;
+    align-items: stretch;
+    width: min-content;
     display: block;
 }
 
@@ -83,9 +75,15 @@
     line-height: 16px;
     font-weight: 600;
     color: #282828;
+    height: 120px;
 }
 
-#form-wrap-geography label > div {
+#form-wrap-geography label img {
+    width: 50px;
+    height: 55px;
+}
+
+#form-wrap-geography label>div {
     width: 50px;
     height: 55px;
     padding: 1rem 1.3rem;
@@ -94,11 +92,24 @@
     border: 2px solid #c9c9c9;
     border-radius: 1rem;
     margin-bottom: 1rem;
+
+    @media (width < 900px) {
+        padding: 8px;
+    }
 }
 
-#form-wrap-geography input[type="radio"]:checked + label > div {
+#form-wrap-geography input[type="radio"]:checked+label>div {
     background-color: #ec6625;
     border: 2px solid #ec6625;
+}
+
+#single-trip>div.field-wrapper.button-wrapper {
+    border-bottom: 1px solid;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #c9c9c9;
+    border-radius: 0 0 1rem 1rem;
+    padding-bottom: 2rem;
 }
 
 #form-geographical-scope-label {
@@ -107,18 +118,12 @@
 
 #form-geographical-scope {
     font-size: 1.2rem;
-    border-bottom: 1px solid;
     cursor: pointer;
     font-weight: 700;
     color: #6c6c6c;
     text-decoration: underline;
     border: none;
     text-underline-offset: 2px;
-    border-width: 0 1px 1px;
-    border-style: solid;
-    border-color: #c9c9c9;
-    border-radius: 0 0 1rem 1rem;
-    padding-bottom: 2rem;
     outline: none;
 }
 
@@ -126,11 +131,15 @@
     color: #928f8e;
 }
 
-#single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate {
+#single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate {
     display: flex;
+
+    @media (width < 900px) {
+        display: initial;
+    }
 }
 
-#single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate > div {
+#single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div {
     border: none;
     border-radius: 5px;
     height: auto;
@@ -139,9 +148,14 @@
     padding-left: 0;
     position: relative;
     width: 100%;
+
+    @media (width < 900px) {
+        width: 50%;
+        display: inline-block;
+    }
 }
 
-#single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate > div > label {
+#single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div>label {
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 500;
@@ -153,26 +167,22 @@
     pointer-events: none;
 }
 
-#single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate > div > input {
+#single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div>input {
     border: 1px solid #c9c9c9;
     color: #282828;
     width: 100%;
     outline: none;
+
+    @media (width < 900px) {
+        width: 88%;
+    }
 }
 
-#single-trip
-    > .field-wrapper.fieldset-wrapper
-    > #form-wrapdate
-    > div
-    > input[type="date"]::-webkit-datetime-edit {
+#single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div>input[type="date"]::-webkit-datetime-edit {
     color: transparent;
 }
 
-#single-trip
-    > .field-wrapper.fieldset-wrapper
-    > #form-wrapdate
-    > div
-    > input[type="date"]:focus::-webkit-datetime-edit {
+#single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div>input[type="date"]:focus::-webkit-datetime-edit {
     color: black;
 }
 
@@ -180,14 +190,14 @@
     /* margin-left: 3px; */
 } 
 
-#single-trip > .field-wrapper.checkbox-wrapper > label {
+#single-trip>.field-wrapper.checkbox-wrapper>label {
     font-size: 1.4rem;
 }
 
 /* stylelint-disable-next-line CssSyntaxError */
-.section#single-trip > div.field-wrapper.checkbox-wrapper.selection-wrapper{
+.section#single-trip>div.field-wrapper.checkbox-wrapper.selection-wrapper {
     margin-top: 15px;
-} 
+}
 
 
 #single-trip>div.field-wrapper.plaintext-wrapper {
@@ -197,7 +207,7 @@
     padding: 0 3rem 3rem;
 }
 
-form#single-trip>div:nth-child(6){
+form#single-trip>div:nth-child(6) {
     margin-top: 15px !important;
 }
 
@@ -205,15 +215,16 @@ form#single-trip>div.selection-wrapper {
     margin-top: 15px;
 }
 
-#single-trip > div.field-wrapper.submit-wrapper{
+#single-trip>div.field-wrapper.submit-wrapper {
     margin-top: unset;
     display: block;
-    
+
 }
 
-#single-trip > div.field-wrapper.submit-wrapper > button{
+#single-trip>div.field-wrapper.submit-wrapper>button {
     color: #fff;
 }
+
 #single-trip>div.field-wrapper.submit-wrapper {
     margin: 0;
 }
@@ -232,10 +243,10 @@ form#single-trip>div.selection-wrapper {
     max-width: 100%;
 }
 
-#single-trip > .il-selctcountry-block{
+#single-trip>.il-selctcountry-block {
     display: flex;
     gap: 10px;
-    padding: 2rem; 
+    padding: 2rem;
     flex-direction: column;
     border: 1px solid #c9c9c9;
     border-top: none;
@@ -243,26 +254,26 @@ form#single-trip>div.selection-wrapper {
     padding-top: unset;
 }
 
-#single-trip > .il-selctcountry-block> .default-content-wrapper{
+#single-trip>.il-selctcountry-block>.default-content-wrapper {
     width: 100%;
 }
 
-#single-trip > .il-selctcountry-block> .default-content-wrapper > h3{
+#single-trip>.il-selctcountry-block>.default-content-wrapper>h3 {
     padding: 0 0 1.5rem;
     font-size: 1.6rem;
     font-weight: 700;
     color: #282828;
 }
 
-#single-trip > .il-selctcountry-block> .default-content-wrapper > ul{
+#single-trip>.il-selctcountry-block>.default-content-wrapper>ul {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     list-style: none;
 }
 
-#single-trip > .il-selctcountry-block> .default-content-wrapper > ul > li{
-    background: #f5f6f6; 
+#single-trip>.il-selctcountry-block>.default-content-wrapper>ul>li {
+    background: #f5f6f6;
     border-radius: 5px;
     cursor: pointer;
     padding: .6rem 1rem;
@@ -271,7 +282,7 @@ form#single-trip>div.selection-wrapper {
     color: #282828;
 }
 
-#single-trip > .il-selctcountry-block> .il-input-block{
+#single-trip>.il-selctcountry-block>.il-input-block {
     border: 1px solid #c9c9c9;
     border-radius: 5px;
     min-height: 54px;
@@ -280,9 +291,9 @@ form#single-trip>div.selection-wrapper {
     flex-wrap: wrap;
     padding: 7px 12px 13px 17px;
     position: relative;
-} 
+}
 
-#single-trip > .il-selctcountry-block> .il-input-block > label{
+#single-trip>.il-selctcountry-block>.il-input-block>label {
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 500;
@@ -297,8 +308,8 @@ form#single-trip>div.selection-wrapper {
     width: 90%;
 }
 
-#single-trip > .il-selctcountry-block > .il-input-block > .search-country-input:focus + label,
-#single-trip > .il-selctcountry-block > .il-input-block > .search-country-input:not(:placeholder-shown) + label {
+#single-trip>.il-selctcountry-block>.il-input-block>.search-country-input:focus+label,
+#single-trip>.il-selctcountry-block>.il-input-block>.search-country-input:not(:placeholder-shown)+label {
     top: -8px;
     font-size: 1.2rem;
     color: #000;
@@ -307,12 +318,12 @@ form#single-trip>div.selection-wrapper {
     width: fit-content;
 }
 
-#single-trip > .il-selctcountry-block> .il-input-block > .search-country-input{ 
+#single-trip>.il-selctcountry-block>.il-input-block>.search-country-input {
     padding: 7px 0 0;
-    display: inline-block; 
+    display: inline-block;
     /* border: 1px solid #c9c9c9; */
     border-radius: 5px;
-    background: #fff; 
+    background: #fff;
     width: 100%;
     font-size: 1.6rem;
     font-weight: 600;
@@ -320,12 +331,10 @@ form#single-trip>div.selection-wrapper {
     border: none;
     outline: none;
 
-} 
-
-
-
-#tabpanel-single-trip > div > div.default-content-wrapper{
-    display: none;
 }
 
 
+
+#tabpanel-single-trip>div>div.default-content-wrapper {
+    display: none;
+}
