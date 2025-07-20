@@ -212,6 +212,21 @@ WebFontConfig = {
 `;
 HEAD.appendChild(FONTS);
 
+const onChatBotClick = () => {
+  let chatBotOGClick = document.getElementById("ymDivBar")
+  const els = [...document.querySelectorAll(`.ria-live-chat .default-content-wrapper,
+#nav > .nav-tools > div`)].filter(e => e);
+  els.forEach(el => {
+    el.addEventListener("click", function() {
+      if (!chatBotOGClick) {
+        chatBotOGClick = document.getElementById("ymDivBar")
+      }
+      chatBotOGClick.click();
+    });
+  });
+}
+onChatBotClick();
+
 function createMockDOMForTracking() {
   // Prevent duplicate insertion
   if (document.getElementById("dummy-container")) return;
