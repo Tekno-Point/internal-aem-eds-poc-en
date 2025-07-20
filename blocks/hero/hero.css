@@ -377,6 +377,63 @@
     display: none;
 }
 
+
+@media screen and (max-width:769px) {
+
+    .trip-form-modal>.tabs-wrapper>.tabs>.tabs-list>button{
+        padding: 1rem 1.5rem; 
+    }
+
+    #tabpanel-single-trip > .form-container{
+        display: block;
+    }
+    
+    #single-trip > div.field-wrapper.fieldset-wrapper{
+        display: block;
+    }
+    
+    .trip-form-modal>.tabs-wrapper, .trip-form-modal>div.form-wrapper{
+        right: 0;
+        padding: 0 15px 30px;
+    }
+
+    #tabpanel-single-trip #form-wrapradio {
+        padding: 2rem 1.2rem;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    #tabpanel-single-trip #form-wrapradio label{
+        font-size: 1.3rem;
+    }
+
+    #form-wrap-geography{
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        gap: 6px;
+    }
+
+    #form-wrap-geography label > div{
+        padding: 7px;
+    }
+
+    #single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate{
+        display: flex;
+        gap: 20px;
+    }
+
+    #single-trip > .field-wrapper.fieldset-wrapper > #form-wrapdate > div > input{
+        max-width: 161px;
+        width: 100%;
+    }
+
+    #single-trip>div:last-child{
+        margin-top: 20px;
+    }
+
+    
+}
 @media (width >=900px) {
     .trip-form-modal>.fragment-wrapper {
         display: none;
