@@ -85,7 +85,7 @@
     position: relative;
 }
 
-.section.callback-submit-feedback {
+.modal dialog .section.callback-submit-feedback {
     display: none;
     padding: 6rem 0;
 }
