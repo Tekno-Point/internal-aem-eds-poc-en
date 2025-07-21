@@ -36,7 +36,8 @@
     flex-direction: column;
 }
 
-.tel-wrapper, .traveller-dob-field {
+.tel-wrapper,
+.traveller-dob-field {
     position: relative;
 }
 
@@ -45,8 +46,8 @@
 }
 
 .tel-wrapper label,
-.email-wrapper label ,
-.traveller-dob-field label{
+.email-wrapper label,
+.traveller-dob-field label {
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 500;
@@ -455,68 +456,80 @@ input[type='date'] {
 input[type='date']::-webkit-datetime-edit {
     color: transparent;
 }
-#form-travel-details-header >div:nth-child(1){
+
+#form-travel-details-header>div:nth-child(1) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: unset;
 }
-#form-2{
+
+#form-2 {
     width: 65%;
     line-height: normal;
     font-size: 1.1rem;
     text-align: left;
 }
-#form-label-1{
+
+#form-label-1 {
     margin-bottom: 0;
 }
-#form-label-2{
+
+#form-label-2 {
     margin-bottom: 0;
 }
-#form-label-2 >div{
+
+#form-label-2>div {
     width: 31px;
     height: 30px;
     border: 1px solid #C9C9C9;
     border-radius: 5px;
 }
-#form-3{
-    width: 400px;
-}
+
 /* #form-travel-details-header >div:nth-child(2){
     border: 1px solid grey;
     height: 30px;
     width: 377px;
 } */
-#form-travel-details-header{
+#form-travel-details-header {
     gap: unset;
 }
-#form-8{
+
+#form-8 {
     display: none;
 }
-.traveller-input-container{
+
+.traveller-input-container {
     display: flex !important;
     gap: 10px;
     flex-wrap: wrap;
 
 }
-.traveller-dob-field input{
-        outline: none !important;
+
+.traveller-dob-field input {
+    outline: none !important;
 }
-.traveller-dob-field label{
+
+.traveller-dob-field label {
     font-size: 14px;
 }
+
 @media (width <=767px) {
-    #form-radio-button-fieldset{
+    #form-radio-button-fieldset {
         display: flex;
         gap: 25px;
     }
-    #form-traveller-dob >div:nth-child(1) {
+
+    #form-traveller-dob>div:nth-child(1) {
         height: 50px;
     }
-    #form-mobile-number-wrapper >div:nth-child(2){
+
+    #form-mobile-number-wrapper>div:nth-child(2) {
         margin-top: 5px;
     }
-    .tel-wrapper input, .email-wrapper input {
+
+    .tel-wrapper input,
+    .email-wrapper input {
         border: 1px solid #c9c9c9;
         border-radius: 5px;
         background: #fff;
@@ -526,10 +539,13 @@ input[type='date']::-webkit-datetime-edit {
         font-weight: 600;
         color: #282828;
     }
-    .tel-wrapper label, .email-wrapper label{
+
+    .tel-wrapper label,
+    .email-wrapper label {
         font-size: 17px;
     }
-    .traveller-dob-field input{
+
+    .traveller-dob-field input {
         border: 1px solid #c9c9c9;
         border-radius: 5px;
         background: #fff;
@@ -540,10 +556,12 @@ input[type='date']::-webkit-datetime-edit {
         color: #282828;
         outline: none;
     }
-    #form-travel-details-header > div:nth-child(1) > input {
+
+    #form-travel-details-header>div:nth-child(1)>input {
         display: none;
     }
-    #form-travel-details-header > div:nth-child(2){
+
+    #form-travel-details-header>div:nth-child(2) {
         display: none;
     }
 }
@@ -628,23 +646,27 @@ input[type='date']::-webkit-datetime-edit {
 .form .toggle-wrapper input:checked+.slider::before {
     transform: translateX(24px);
 }
-#form-radio-button-fieldset{
+
+#form-radio-button-fieldset {
     width: 35%;
 }
-#form-radio-button-fieldset > div{
+
+#form-radio-button-fieldset>div {
     gap: 5px;
 }
-#form-radio-button-fieldset > div > label{
+
+#form-radio-button-fieldset>div>label {
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 2rem;
 }
-    
 
-#travel-details >div:nth-child(12){
+
+#travel-details>div:nth-child(12) {
     margin-top: 12px;
 }
-#form-headline-2{
+
+#form-headline-2 {
     color: #575757;
     font-size: 1.4rem;
     font-weight: 600;
@@ -652,6 +674,7 @@ input[type='date']::-webkit-datetime-edit {
     padding: 0;
     margin-top: unset;
 }
+
 #travel-details .submit-wrapper button {
     max-width: unset;
     color: #fff;
@@ -661,9 +684,11 @@ input[type='date']::-webkit-datetime-edit {
     border-radius: 5px;
     border: 3px solid transparent;
 }
-#travel-details .submit-wrapper button:hover{
-   background-color: #fd7b20; 
+
+#travel-details .submit-wrapper button:hover {
+    background-color: #fd7b20;
 }
+
 /* .trip-form-modal>.tabs-wrapper, .trip-form-modal>div.form-wrapper {
     padding: 0 !important;
 } */
@@ -677,22 +702,22 @@ input[type='date']::-webkit-datetime-edit {
 /* #travel-details >div:not(:nth-child(1)){
      padding: 3rem;
 } */
-.checkbox-field-container{
+.checkbox-field-container {
     margin-top: 30px;
-    
+
 }
 
-.checkbox-field-container > .disease-group-container{
+.checkbox-field-container>.disease-group-container {
     background: #f5f6f6;
     padding: 1rem 2rem;
     margin-bottom: 3rem;
-    position: relative; 
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.checkbox-field-container>.disease-group-container > p{
+.checkbox-field-container>.disease-group-container>p {
     border: 1px solid #d8d8d8;
     background: #fff;
     font-size: 1.2rem;
@@ -707,18 +732,18 @@ input[type='date']::-webkit-datetime-edit {
     left: 16px;
 }
 
-.checkbox-field-container > .disease-group-container > .checkbox-traveller-wrapper{
-    display: flex; 
+.checkbox-field-container>.disease-group-container>.checkbox-traveller-wrapper {
+    display: flex;
     align-items: center;
     gap: 10px;
     padding: 1.5rem 0 0;
 }
 
-.checkbox-field-container> .disease-group-container > .checkbox-traveller-wrapper > input[type="checkbox"]{
+.checkbox-field-container>.disease-group-container>.checkbox-traveller-wrapper>input[type="checkbox"] {
     width: fit-content;
 }
 
-.checkbox-field-container> .disease-group-container > .checkbox-traveller-wrapper > label{
+.checkbox-field-container>.disease-group-container>.checkbox-traveller-wrapper>label {
     font-size: 1.4rem;
     position: relative;
     cursor: pointer;

@@ -119,6 +119,15 @@ const formMatcher = (form, id) => {
   }
 }
 
+function onExtendPolicyClick(form) {
+  const extendPolicyButtons = form.querySelectorAll('#form-multi-trip-link-wrapper>div:nth-child(2) input, #form-single-trip-link-wrapper>div:nth-child(2) input');
+  extendPolicyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      formToggler('extend-policy');
+    });
+  });
+}
+
 export default async function decorate(block) {
   const links = [...block.querySelectorAll('a')].map((a) => a.href);
   const formLink = links.find((link) => link.startsWith(window.location.origin) && link.endsWith('.json'));
@@ -138,7 +147,11 @@ export default async function decorate(block) {
     formMatcher(form, formId);
   });
 
+  onExtendPolicyClick(form);
+
   SINGLE_TRIP(block)
+
 }
+
 
 export const decorateForm = decorate
