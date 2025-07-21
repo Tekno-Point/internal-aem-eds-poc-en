@@ -99,8 +99,9 @@
 }
 
 .accordions details[open] .accordion-item-body {
+  padding-top: 5px;
   border-top: 1px solid #dadada;
-  background-color: var(--background-color);
+  background-color: var(--light-color);
 }
 .accordion-item-body p{
     font-size: 16px;

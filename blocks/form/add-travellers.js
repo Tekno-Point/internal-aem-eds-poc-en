@@ -1,4 +1,4 @@
-function ADD_TRAVELLERS(block) { 
+function ADD_TRAVELLERS(block) {
         const counterWrappers = Array.from(block.querySelectorAll(".counter-wrapper"));
         const lastIndex = counterWrappers.length - 1;
         const monitoredWrappers = counterWrappers.slice(0, lastIndex);
@@ -8,8 +8,7 @@ function ADD_TRAVELLERS(block) {
         const emailInput = block.querySelector('input[type="email"]');
         const formContainer = block.querySelector("#travel-details");
 
-
-        console.log(counterWrappers, lastIndex, monitoredWrappers, lastWrapper, mobileInput, emailInput, formContainer)
+        const preExistingDisease = document.querySelectorAll("#form-radio-button-fieldset input[type='radio']");
 
         let inputFieldContainer = formContainer.querySelector(".traveller-input-container");
         if (!inputFieldContainer) {
@@ -75,6 +74,7 @@ function ADD_TRAVELLERS(block) {
                         decrementBtn.disabled = value <= 0;
 
                         updateIncrementButtons();
+                        // generateCheckboxField()
 
                         if (index === lastIndex) {
                                 generateDateField(value);
@@ -142,7 +142,62 @@ function ADD_TRAVELLERS(block) {
                 }
         }
 
+        function generateCheckboxField() {
+                let checkboxFieldContainer = document.querySelector(".checkbox-field-container");
+            
+                if (!checkboxFieldContainer) {
+                    checkboxFieldContainer = document.createElement("div");
+                    checkboxFieldContainer.className = "checkbox-field-container field-wrapper fieldset-wrapper";
+            
+                    const diseaseFieldset = document.querySelector("#form-radio-button-fieldset");
+                    diseaseFieldset.parentNode.insertBefore(checkboxFieldContainer, diseaseFieldset.nextSibling);
+                }
+            
+                checkboxFieldContainer.innerHTML = "";
+            
+                const isYesSelected = Array.from(preExistingDisease).some(el => el.checked && el.value === "Yes");
+                if (!isYesSelected) return;
+            
+                Object.entries(storeTravellerData.travellers).forEach(([ageGroup, count]) => {
+                    if (count <= 0) return;
+            
+                    const groupContainer = document.createElement("div");
+                    groupContainer.className = "disease-group-container"; 
+            
+                    
+                    const heading = document.createElement("p");
+                    heading.textContent = `${ageGroup}`;
+                    heading.style.fontWeight = "bold"; 
+                    groupContainer.appendChild(heading);
+            
+                
+                    for (let i = 1; i <= count; i++) {
+                        const wrapper = document.createElement("div");
+                        wrapper.className = "checkbox-traveller-wrapper"; 
+            
+                        const checkbox = document.createElement("input");
+                        checkbox.type = "checkbox";
+                        checkbox.name = `disease-${ageGroup}-${i}`;
+                        checkbox.value = "hasDisease";
+            
+                        const label = document.createElement("label");
+                        label.textContent = `Traveller ${i}`;
+                        // label.style.marginLeft = "15px";
+            
+                        wrapper.appendChild(checkbox);
+                        wrapper.appendChild(label);
+                        groupContainer.appendChild(wrapper);
+                    }
+            
+                    checkboxFieldContainer.appendChild(groupContainer);
+                });
+            }
+            
+            
+            
+
         function updateTravellerData() {
+                // Store all monitored wrappers (0-70)
                 monitoredWrappers.forEach(wrapper => {
                         const input = wrapper.querySelector("input[type='number']");
                         if (input.name) {
@@ -150,12 +205,24 @@ function ADD_TRAVELLERS(block) {
                         }
                 });
 
+                // Add this block to store last age group (71-85)
+                const lastInput = lastWrapper.querySelector("input[type='number']");
+                if (lastInput && lastInput.name) {
+                        storeTravellerData.travellers[lastInput.name] = parseInt(lastInput.value) || 0;
+                }
+
+                generateCheckboxField()
+
                 console.log(storeTravellerData, "storeTravellerData");
         }
+
 
         const initialLastCount = parseInt(lastWrapper.querySelector("input").value) || 0;
         updateIncrementButtons();
         generateDateField(initialLastCount);
+        preExistingDisease.forEach((radio) => {
+                radio.addEventListener("change", generateCheckboxField);
+        });
 }
 
 export { ADD_TRAVELLERS };
