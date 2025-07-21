@@ -392,6 +392,7 @@
 }
 .carousel.carousel-style{
     margin-bottom: 60px;
+    background: transparent;
 }
 .carousel.carousel-style .btnWrapper{
     bottom: -8%;
@@ -405,6 +406,8 @@
 }
 .carousel.carousel-style .swiper-wrapper{
     margin-top: 0 !important;
+    justify-content: center;
+    margin-left: 11px;
 }
 .carousel.carousel-style .swiper-pagination-bullet{
     background: #b1d5f4;
@@ -437,5 +440,6 @@ html, body {
     margin-left: 0;
 }
   .carousel.carousel-style .swiper-wrapper {
+    justify-content: unset;
   }
 }
