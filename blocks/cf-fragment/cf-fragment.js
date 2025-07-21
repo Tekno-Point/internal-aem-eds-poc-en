@@ -87,8 +87,8 @@ export default async function decorate(block) {
         loanAmountMin = '100000',
         loanAmountMax = '5000000',
         interestRateText = '',
-        interestRateMin = '9.99%',
-        interestRateMax = '30%',
+        interestRateMin = '10.5%',
+        interestRateMax = '21%',
         loanTenure = 'loan Tenure',
         loanTenureMin = '12',
         loanTenureMax = '84',
@@ -112,21 +112,14 @@ export default async function decorate(block) {
         <div class="emi-calculator-container">
 
             <div class="emi-content">
-                <div class="emi-summary">
-                <div class="emi-header">
-                <p class="emi-title">Calculate EMI for Your Personal Loan</p>
-            </div>
-            <div class="sec-wrapper">
-                </div>
-                </div>
                 <div class="emi-controls">
                     <div class="control-group loan-amount">
                         <div class="value-txt-wrapper">
                         <div class="amount-words"></div>
                         <div class="input-display-wrapper">
+                            <div class="amount-text">Loan Amount</div>
                             <input type="text" id="loanAmountDisplay" class="value-display" value="₹ ${Number(currentLoanAmount).toLocaleString('en-IN', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}">
                         </div>
-                        <div class="amount-text">Amounts</div>
                         </div>
                         <input type="range" id="loanAmountRange" min="${parsedLoanAmountMin}" max="${parsedLoanAmountMax}" value="${currentLoanAmount}">
                         <div class="range-labels">
@@ -135,12 +128,26 @@ export default async function decorate(block) {
                         </div>
                     </div>
 
+                    <div class="control-group loan-tenure">
+                    <div class="value-txt-wrapper">
+                        <div class="input-display-wrapper">
+                            <label for="loanTenureRange">Loan Tenure</label>
+                            <input type="text" id="loanTenureDisplay" class="value-display" value="${currentLoanTenure} Months">
+                        </div>
+                    </div>
+                        <input type="range" id="loanTenureRange" min="${parsedLoanTenureMin}" max="${parsedLoanTenureMax}" value="${currentLoanTenure}">
+                        <div class="range-labels">
+                            <span>${parsedLoanTenureMin} Months</span>
+                            <span>${parsedLoanTenureMax} Months</span>
+                        </div>
+                    </div>
+
                     <div class="control-group interest-rate">
                     <div class="value-txt-wrapper">
                         <div class="input-display-wrapper">
+                            <label for="interestRateRange">Interest Rate</label>
                             <input type="text" id="interestRateDisplay" class="value-display" value="${currentInterestRate} %">
                         </div>
-                        <label for="interestRateRange">${interestRateText}</label>
                     </div>
                         <input type="range" id="interestRateRange" min="${parsedInterestRateMin}" max="${parsedInterestRateMax}" step="0.01" value="${currentInterestRate}">
                         <div class="range-labels">
@@ -149,27 +156,49 @@ export default async function decorate(block) {
                         </div>
                     </div>
 
-                    <div class="control-group loan-tenure">
-                    <div class="value-txt-wrapper">
-                        <div class="input-display-wrapper">
-                            <input type="text" id="loanTenureDisplay" class="value-display" value="${currentLoanTenure} Months">
-                        </div>
-                        <label for="loanTenureRange">Period</label>
+                </div>
+            </div>
+            <div class="emi-result">
+                <div class="emi-value">
+                    <p class="emi-text">Your Monthly EMI will be</p>
+                    <p class="emi-value-txt">₹27,831</p>
+                </div>
+                <div class="emi-cnt">
+                    <div class="emi-par-val">
+                        <p class="emi-par-text">Amount Payable</p>
+                        <p class="emi-amt">₹13,35,876</p>
                     </div>
-                        <input type="range" id="loanTenureRange" min="${parsedLoanTenureMin}" max="${parsedLoanTenureMax}" value="${currentLoanTenure}">
-                        <div class="range-labels">
-                            <span>${parsedLoanTenureMin} Months</span>
-                            <span>${parsedLoanTenureMax} Months</span>
-                        </div>
+                    <div class="emi-par-val">
+                        <p class="emi-par-text">Interest Amount</p>
+                        <p class="emi-amt">₹3,35,876</p>
                     </div>
-                    <div class="btn-wrap">
-                        <p class="btn-wrap-text">You will pay EMI of only,</p>
-                        <p class="btn-wrap-desc">₹212/ Month</p>
-                     </div>
+                    <div class="emi-par-val">
+                        <p class="emi-par-text">Principle Amount</p>
+                        <p class="emi-amt">₹10,00,000</p>
+                    </div>
+                </div>
+                <div class="emi-btn-wrap">
+                    <div class="emi-btn active">
+                    <p>Apply Now</p>
+                         <span></span>
+                    </div>
+                    <div class="emi-btn">
+                         <p>Know More</p>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </div>
     `;
+
+    document.querySelectorAll('.emi-btn').forEach((btn) => {
+  btn.addEventListener('mouseenter', () => {
+    btn.classList.add('active');
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.classList.remove('active');
+  });
+});
 
     const monthlyPayableAmountEl = block.querySelector('#monthly-payable-amount');
     const principalAmountDisplayEl = block.querySelector('#principal-amount-display');
