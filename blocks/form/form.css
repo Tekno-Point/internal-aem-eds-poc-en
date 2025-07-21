@@ -535,6 +535,57 @@ input[type='date']::-webkit-datetime-edit {
     transform: translateX(24px);
 }
 
+.checkbox-field-container{
+    margin-top: 30px;
+    
+}
+
+.checkbox-field-container > .disease-group-container{
+    background: #f5f6f6;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    position: relative; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-field-container>.disease-group-container > p{
+    border: 1px solid #d8d8d8;
+    background: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: absolute;
+    /* top: -9px; */
+    padding: 4px;
+    border-radius: .5rem;
+    line-height: normal;
+    width: fit-content;
+    top: -15px;
+    left: 16px;
+}
+
+.checkbox-field-container > .disease-group-container > .checkbox-traveller-wrapper{
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+    padding: 1.5rem 0 0;
+}
+
+.checkbox-field-container> .disease-group-container > .checkbox-traveller-wrapper > input[type="checkbox"]{
+    width: fit-content;
+}
+
+.checkbox-field-container> .disease-group-container > .checkbox-traveller-wrapper > label{
+    font-size: 1.4rem;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    color: #282828;
+    margin: unset;
+}
+
 
 /* .trip-form-modal{
   display: contents;
