@@ -97,6 +97,7 @@ const formMatcher = (form, id) => {
       callBackSubmit(form).then((res) => {
         const result = JSON.parse(res.callbackSubmitResult);
         if (result.success) {
+          document.body.classList.add('callback-submitted');
           console.log("✅ Submission successful!");
         } else {
           console.error("❌ Submission failed:", result.errorMessage);

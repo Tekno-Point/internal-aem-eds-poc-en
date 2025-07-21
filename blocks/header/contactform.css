@@ -21,6 +21,11 @@
     -moz-box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.19);
 }
 
+.modal .close-button {
+    top: 2%;
+    right: 22%;
+}
+
 .modal:has(.header-contact-modal) dialog::before {
     border-color: #eaeaea #eaeaea transparent transparent;
     width: 0;
@@ -85,9 +90,29 @@
     position: relative;
 }
 
+.callback-submitted .header-contact-modal {
+    display: none;
+}
+
+.callback-submitted .modal dialog .section.callback-submit-feedback {
+    display: block;
+}
+
 .modal dialog .section.callback-submit-feedback {
     display: none;
-    padding: 6rem 0;
+    padding: 4.5rem 0;
+}
+
+.callback-submit-feedback h3 {
+    @media (width < 900px) {
+        font-size: 2.5rem;
+    }
+}
+
+.callback-submit-feedback p {
+    @media (width < 900px) {
+        font-size: 1.6rem;
+    }
 }
 
 .header-contact-modal .default-content-wrapper {}
