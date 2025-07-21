@@ -194,7 +194,7 @@ VWO_SCRIPT.textContent = `
     code.init();
   })();
 `;
-BODY.appendChild(VWO_SCRIPT);
+// BODY.appendChild(VWO_SCRIPT);
 
 const FONTS = document.createElement('script');
 FONTS.type = 'text/javascript';
