@@ -129,7 +129,7 @@ function ADD_TRAVELLERS(block) {
                         div.className = "field-wrapper traveller-dob-field";
 
                         const label = document.createElement("label");
-                        label.textContent = `Traveller ${i} Date of birth`;
+                        label.textContent = `Date of birth`;
 
                         const input = document.createElement("input");
                         input.type = "date";

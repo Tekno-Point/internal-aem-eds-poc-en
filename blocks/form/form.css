@@ -36,7 +36,7 @@
     flex-direction: column;
 }
 
-.tel-wrapper {
+.tel-wrapper, .traveller-dob-field {
     position: relative;
 }
 
@@ -45,7 +45,8 @@
 }
 
 .tel-wrapper label,
-.email-wrapper label {
+.email-wrapper label ,
+.traveller-dob-field label{
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 500;
@@ -59,7 +60,8 @@
 }
 
 .tel-wrapper input,
-.email-wrapper input {
+.email-wrapper input,
+.traveller-dob-field input {
     border: 1px solid #c9c9c9;
     border-radius: 5px;
     background: #fff;
@@ -177,7 +179,8 @@
 }
 
 .tel-wrapper.focus-active label,
-.email-wrapper.focus-active label {
+.email-wrapper.focus-active label,
+.traveller-dob-field.focus-active label {
     font-size: 12px;
     top: -15%;
     left: 3%;
@@ -452,7 +455,98 @@ input[type='date'] {
 input[type='date']::-webkit-datetime-edit {
     color: transparent;
 }
+#form-travel-details-header >div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: unset;
+}
+#form-2{
+    width: 65%;
+    line-height: normal;
+    font-size: 1.1rem;
+    text-align: left;
+}
+#form-label-1{
+    margin-bottom: 0;
+}
+#form-label-2{
+    margin-bottom: 0;
+}
+#form-label-2 >div{
+    width: 31px;
+    height: 30px;
+    border: 1px solid #C9C9C9;
+    border-radius: 5px;
+}
+#form-3{
+    width: 400px;
+}
+/* #form-travel-details-header >div:nth-child(2){
+    border: 1px solid grey;
+    height: 30px;
+    width: 377px;
+} */
+#form-travel-details-header{
+    gap: unset;
+}
+#form-8{
+    display: none;
+}
+.traveller-input-container{
+    display: flex !important;
+    gap: 10px;
+    flex-wrap: wrap;
 
+}
+.traveller-dob-field input{
+        outline: none !important;
+}
+.traveller-dob-field label{
+    font-size: 14px;
+}
+@media (width <=767px) {
+    #form-radio-button-fieldset{
+        display: flex;
+        gap: 25px;
+    }
+    #form-traveller-dob >div:nth-child(1) {
+        height: 50px;
+    }
+    #form-mobile-number-wrapper >div:nth-child(2){
+        margin-top: 5px;
+    }
+    .tel-wrapper input, .email-wrapper input {
+        border: 1px solid #c9c9c9;
+        border-radius: 5px;
+        background: #fff;
+        padding: 1.7rem;
+        width: 100%;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #282828;
+    }
+    .tel-wrapper label, .email-wrapper label{
+        font-size: 17px;
+    }
+    .traveller-dob-field input{
+        border: 1px solid #c9c9c9;
+        border-radius: 5px;
+        background: #fff;
+        padding: 1.7rem;
+        width: 100%;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #282828;
+        outline: none;
+    }
+    #form-travel-details-header > div:nth-child(1) > input {
+        display: none;
+    }
+    #form-travel-details-header > div:nth-child(2){
+        display: none;
+    }
+}
 
 @media (width >=600px) {
 
@@ -534,7 +628,55 @@ input[type='date']::-webkit-datetime-edit {
 .form .toggle-wrapper input:checked+.slider::before {
     transform: translateX(24px);
 }
+#form-radio-button-fieldset{
+    width: 35%;
+}
+#form-radio-button-fieldset > div{
+    gap: 5px;
+}
+#form-radio-button-fieldset > div > label{
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+    
 
+#travel-details >div:nth-child(12){
+    margin-top: 12px;
+}
+#form-headline-2{
+    color: #575757;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0;
+    margin-top: unset;
+}
+#travel-details .submit-wrapper button {
+    max-width: unset;
+    color: #fff;
+    padding: 1.1rem 2.4rem;
+    font-size: 1.6rem;
+    background: #ec6625;
+    border-radius: 5px;
+    border: 3px solid transparent;
+}
+#travel-details .submit-wrapper button:hover{
+   background-color: #fd7b20; 
+}
+/* .trip-form-modal>.tabs-wrapper, .trip-form-modal>div.form-wrapper {
+    padding: 0 !important;
+} */
+
+/* #form-travel-details-header{
+    padding: 1.2rem 2rem;
+    background: #f0efee;
+    border-radius: 1rem 1rem 0 0;
+} */
+
+/* #travel-details >div:not(:nth-child(1)){
+     padding: 3rem;
+} */
 .checkbox-field-container{
     margin-top: 30px;
     
