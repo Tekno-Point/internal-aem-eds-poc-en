@@ -1,4 +1,5 @@
 import { ADD_TRAVELLERS } from './add-travellers.js';
+import callBackSubmit from './callback-submit.js';
 import createField from './form-fields.js';
 import formToggler, { getParentFromChildId } from './formToggler.js';
 import { SINGLE_TRIP } from './single-trip.js';
@@ -91,6 +92,16 @@ const formMatcher = (form, id) => {
       break;
     case 'extend-policy':
       formToggler(id)
+      break;
+    case 'callback-submit':
+      callBackSubmit(form).then((res) => {
+        const result = JSON.parse(res.callbackSubmitResult);
+        if (result.success) {
+          console.log("✅ Submission successful!");
+        } else {
+          console.error("❌ Submission failed:", result.errorMessage);
+        }
+      });
       break;
     default:
       console.warn('no-mathching form');

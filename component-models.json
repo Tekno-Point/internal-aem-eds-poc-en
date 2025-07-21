@@ -224,6 +224,10 @@
           {
             "name": "Ria Live Chat",
             "value": "ria-live-chat"
+          },
+          {
+            "name": "CallBack Submit Feedback",
+            "value": "callback-submit-feedback"
           }
         ]
       }

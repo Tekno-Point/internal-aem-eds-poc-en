@@ -75,13 +75,18 @@
     margin-top: 2.2rem;
 }
 
-.header-contact-modal {
+.header-contact-modal,
+.callback-submit-feedback {
     width: 100%;
     max-width: 100rem;
     margin: 0 auto;
     text-align: center;
     padding: 3rem 0 4rem;
     position: relative;
+}
+
+.callback-submit-feedback {
+    display: none;
 }
 
 .header-contact-modal .default-content-wrapper {}
