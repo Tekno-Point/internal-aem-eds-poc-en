@@ -231,7 +231,7 @@ input[type="date"] {
 .tabs.form-tabs .tabs-panel form label {
   font-size: 14px;
   line-height: 14px;
-  color: red;
+  color: #0088dd;
   ;
 }
 
@@ -241,7 +241,7 @@ input[type="date"] {
   line-height: 19px;
   color: #ffffff;
   padding: 15px 33px;
-  background-color: blue;
+  background-color: red;
   border-radius: 8.43px;
 }
 
