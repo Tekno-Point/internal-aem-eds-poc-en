@@ -363,7 +363,7 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "head_image",
+        "name": "col1_image",
         "label": "Head Carousel Image",
         "multi": false
       },
