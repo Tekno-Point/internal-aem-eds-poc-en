@@ -1,3 +1,4 @@
+import('./tpaw-plugin.js');
 // add delayed functionality here
 createMockDOMForTracking();
 const HEAD = document.head;
