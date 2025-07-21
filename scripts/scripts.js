@@ -605,3 +605,39 @@ async function loadPage() {
 }
 
 loadPage();
+
+const targetP = document.querySelector('.section.demo-text .default-content-wrapper p:nth-child(6)');
+const nextP = document.querySelector('.section.demo-text .default-content-wrapper p:nth-child(7)');
+
+if (targetP) {
+  // Create a new <div> wrapper
+  const wrapperDiv = document.createElement('div');
+
+  // Optionally, add a class to the wrapper
+  wrapperDiv.classList.add('wrapped-paragraph');
+
+  // Insert the wrapper before the <p> element
+  targetP.parentNode.insertBefore(wrapperDiv, targetP);
+
+  // Move the <p> inside the new wrapper
+  wrapperDiv.appendChild(targetP);
+  wrapperDiv.appendChild(nextP);
+}
+
+const links = document.querySelectorAll('.section.demo-text .default-content-wrapper p:nth-child(3) a');
+
+// Add "active" class to the first one by default
+if (links.length > 0) {
+  links[0].classList.add('active');
+}
+
+// Loop through and add hover listeners
+links.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    // Remove "active" from all
+    links.forEach(l => l.classList.remove('active'));
+    // Add "active" to hovered one
+    link.classList.add('active');
+  });
+});
+
