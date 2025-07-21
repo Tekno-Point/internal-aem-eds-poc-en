@@ -426,3 +426,8 @@ main .section.highlight {
     margin: 0;
     cursor: pointer;
 }
+
+/* dummy-container (used for gtm) */
+#dummy-container {
+    display: none;
+}

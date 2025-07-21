@@ -194,9 +194,16 @@ header .nav-top-menu .default-content-wrapper>ul {
     align-items: center;
 }
 
+header .nav-top-menu .default-content-wrapper>ul li:first-child a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 @media (width < 900px) {
     header .nav-top-menu .default-content-wrapper>ul {
         justify-content: space-between;
+        gap: 1rem;
         padding: 2.5px 15px;
     }
 

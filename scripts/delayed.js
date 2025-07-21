@@ -215,9 +215,10 @@ HEAD.appendChild(FONTS);
 const onChatBotClick = () => {
   let chatBotOGClick = document.getElementById("ymDivBar")
   const els = [...document.querySelectorAll(`.ria-live-chat .default-content-wrapper,
-#nav > .nav-tools > div`)].filter(e => e);
+#nav > .nav-tools > div, header .nav-top-menu .default-content-wrapper>ul:first-child li:nth-child(3) a`)].filter(e => e);
   els.forEach(el => {
-    el.addEventListener("click", function() {
+    el.addEventListener("click", function(e) {
+      e.preventDefault();
       if (!chatBotOGClick) {
         chatBotOGClick = document.getElementById("ymDivBar")
       }
