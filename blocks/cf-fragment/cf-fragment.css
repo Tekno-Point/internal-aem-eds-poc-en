@@ -246,16 +246,10 @@ input[type='number'] {
 input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
-    background: linear-gradient(
-        to right,
-        #004c8f 0%, 
-        #004c8f var(--progress-percent),
-        #e1e1e1 var(--progress-percent),
-        #e1e1e1 100%
-    );
     width: 100%;
     height: 8px;
     border-radius: 6px;
+    background:#fff;
     outline: none;
     padding: 0;
     margin: 18px 0;
@@ -267,50 +261,25 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    background: #004c8f;
     border: none;
     cursor: pointer;
     margin-top: 0px;
+    background: #004c8f;
 }
 
 input[type="range"]::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #004c8f;
     cursor: pointer;
+    background: #004c8f;
 }
 
 input[type="range"]::-ms-thumb {
     width: 20px;
     height: 20px;
-    background: #004c8f;
     cursor: pointer;
+    background: #004c8f;
 }
-
-/* Track styling */
-input[type="range"]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8px;
-    background: #fff;
-    border-radius: 6px;
-}
-
-input[type="range"]::-moz-range-track {
-    width: 100%;
-    height: 8px;
-    background: #fff;
-    border-radius: 6px;
-}
-
-input[type="range"]::-ms-track {
-    width: 100%;
-    height: 8px;
-    background: #fff;
-    border-radius: 6px;
-    border-color: transparent;
-    color: transparent;
-}
-
 
 .range-labels {
     display: flex;
@@ -323,22 +292,6 @@ input[type="range"]::-ms-track {
     /* Adjust spacing */
 }
 
-.custom-select {
-    font-size: 16px;
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ecf0f1" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    cursor: pointer;
-    outline: none;
-    background: rgb(255 255 255 / .1);
-    width: 100%;
-    color: #fff;
-    border-radius: 8px;
-    border: unset;
-    padding: 12px 24px;
-}
-
 .btn-wrap {
     text-align: center;
     width: 100%;
@@ -347,48 +300,6 @@ input[type="range"]::-ms-track {
     border-radius: 8px;
 
 }
-
-.apply-button {
-    background-color: #fff;
-    color: #034EA2;
-    margin-top: 20px;
-    padding: 10px 60px;
-    font-size: 14px;
-    border-radius: 8px;
-    text-align: center;
-    font-family: Montserrat-Bold;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.apply-button:hover {
-    background-color: #034EA2;
-    color: #fff;
-    text-decoration: none;
-}
-.btn-wrap-text{
-    color: #FFF;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.35px;
-    margin-bottom: 8px;
-    margin-top: 0;
-}
-.btn-wrap-desc{
-    color: #FFF;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 26px;
-    letter-spacing: -0.5px;
-    margin: 0;
-}
-/* .cf-fragment-wrapper{
-background-color: #ebf5ff;
-} */
 
 @media (max-width: 768px) {
     .emi-content {
@@ -470,96 +381,30 @@ background-color: #ebf5ff;
 }
 }
 
-/* emi-calculator.css additions/modifications */
-
 /* Range Slider Thumb Styling */
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    /* Override default appearance */
     width: 23px;
-    /* Width of the square thumb */
     height: 23px;
-    /* Height of the square thumb */
-    /* background: #9B1E26; */
-    /* White background as seen in the image */
-    /* border: 1px solid #7f8c8d; */
-    /* Subtle gray border for definition */
-    /* border-radius: 50%; */
-    /* Rounded corners for the square before rotation */
-    /* transform: rotate(45deg); */
-    /* Rotate the square by 45 degrees to make it a diamond */
-    cursor: grab;
-    /* Cursor indicates it's draggable */
-    margin-top: -7px;
-    /* Adjust vertical position to center it on the track */
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
-    /* Subtle shadow for depth */
-
-    /* Add SVG as background for the three vertical lines with counter-rotation */
+    cursor: pointer;
+    margin-top: 1px;
     background-image: url('/icons/hdfcsliderfavicon.ico');
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* Center the SVG within the thumb */
     background-size: 23px 23px;
-    /* Adjust size to fit nicely within the 20x20 diamond */
 }
 
 input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    /* background: #9B1E26; */
-    border: 1px solid #7f8c8d;
-    /* border-radius: 50%; */
-    /* transform: rotate(45deg); */
-    cursor: grab;
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
-    /* Add SVG as background for the three vertical lines with counter-rotation */
-    /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20" fill="none"><g transform="rotate(-45 5 10)"><rect x="0" y="2" width="1" height="16" fill="%232c3e50"/><rect x="4" y="2" width="1" height="16" fill="%232c3e50"/><rect x="8" y="2" width="1" height="16" fill="%232c3e50"/></g></svg>');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 10px 16px; */
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    background-size: 23px 23px;
 }
 
 input[type="range"]::-ms-thumb {
-    width: 20px;
-    height: 20px;
-    /* background: #9B1E26; */
-    border: 1px solid #7f8c8d;
-    /* border-radius: 50%; */
-    /* transform: rotate(45deg); */
-    cursor: grab;
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
-    /* Add SVG as background for the three vertical lines with counter-rotation */
-    /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20" fill="none"><g transform="rotate(-45 5 10)"><rect x="0" y="2" width="1" height="16" fill="%232c3e50"/><rect x="4" y="2" width="1" height="16" fill="%232c3e50"/><rect x="8" y="2" width="1" height="16" fill="%232c3e50"/></g></svg>');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 10px 16px; */
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+     background-size: 23px 23px;
 }
-
-/* Optional: Improve active state if needed */
-input[type="range"]:active::-webkit-slider-thumb,
-input[type="range"]:focus::-webkit-slider-thumb {
-    cursor: grabbing;
-    /* box-shadow: 0 0 8px rgba(255, 102, 0, 0.6); */
-    /* Orange glow on active/focus */
-}
-
-/* input[type="range"]:active::-moz-range-thumb,
-input[type="range"]:focus::-moz-range-thumb {
-    cursor: grabbing;
-    box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
-}
-
-input[type="range"]:active::-ms-thumb,
-input[type="range"]:focus::-ms-thumb {
-    cursor: grabbing;
-    box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
-} */
-
-/* No changes to the track styling, which is handled by JS linear-gradient */
-/* input[type="range"]::-webkit-slider-runnable-track { ... } */
-/* input[type="range"]::-moz-range-track { ... } */
-/* input[type="range"]::-ms-track { ... } */
 
 /* New CSS */
 .emi-value{

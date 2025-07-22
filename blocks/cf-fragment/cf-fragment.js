@@ -166,15 +166,15 @@ export default async function decorate(block) {
                 <div class="emi-cnt">
                     <div class="emi-par-val">
                         <p class="emi-par-text">Amount Payable</p>
-                        <p class="emi-amt">₹13,35,876</p>
+                        <p class="emi-amt amt-pay">₹13,35,876</p>
                     </div>
                     <div class="emi-par-val">
                         <p class="emi-par-text">Interest Amount</p>
-                        <p class="emi-amt">₹3,35,876</p>
+                        <p class="emi-amt int-amt">₹3,35,876</p>
                     </div>
                     <div class="emi-par-val">
                         <p class="emi-par-text">Principle Amount</p>
-                        <p class="emi-amt">₹10,00,000</p>
+                        <p class="emi-amt og-amt">₹10,00,000</p>
                     </div>
                 </div>
                 <div class="emi-btn-wrap">
@@ -203,7 +203,10 @@ export default async function decorate(block) {
     const monthlyPayableAmountEl = block.querySelector('#monthly-payable-amount');
     const principalAmountDisplayEl = block.querySelector('#principal-amount-display');
     const interestPayableDisplayEl = block.querySelector('#interest-payable-display');
-    const btn = block.querySelector('.btn-wrap-desc');
+    const btn = block.querySelector('.emi-value-txt');
+    const amtPay = block.querySelector('.amt-pay');
+    const intPay=block.querySelector('.int-amt');
+    const ogAmt=block.querySelector('.og-amt');
 
     const loanAmountRange = block.querySelector('#loanAmountRange');
     const loanAmountDisplay = block.querySelector('#loanAmountDisplay');
@@ -222,7 +225,12 @@ export default async function decorate(block) {
         const emi = calculateEMI(principal, interestRate, tenure);
         const totalPayable = emi * tenure;
         const totalInterest = totalPayable - principal;
-        btn.textContent = '₹' + Math.round(emi).toLocaleString("en-IN") + '/ Month';
+        btn.textContent = '₹' + Math.round(emi).toLocaleString("en-IN");
+        amtPay.textContent='₹' + Math.round(totalPayable).toLocaleString("en-IN");
+        intPay.textContent='₹' + Math.round(totalInterest).toLocaleString("en-IN");
+        ogAmt.textContent='₹' + Math.round(principal).toLocaleString("en-IN");
+
+
         // console.log(totalInterest);
         
 
@@ -276,4 +284,18 @@ export default async function decorate(block) {
     });
 
     updateCalculator();
+
+    function updateSliderBackground(slider) {
+    const min = slider.min ? parseFloat(slider.min) : 0;
+    const max = slider.max ? parseFloat(slider.max) : 100;
+    const value = parseFloat(slider.value);
+    const percent = ((value - min) / (max - min)) * 100;
+
+    slider.style.background = `linear-gradient(to right, #004c8f ${percent}%, #ffffff ${percent}%)`;
+  }
+
+  document.querySelectorAll('input[type="range"]').forEach((slider) => {
+    updateSliderBackground(slider);
+    slider.addEventListener('input', () => updateSliderBackground(slider));
+  });
 }
