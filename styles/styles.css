@@ -21,7 +21,8 @@
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --heading-font-family: roboto-condensed, roboto-condensed-fallback,
+    sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -37,23 +38,50 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 55px;
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url('../fonts/OpenSans-ExtraBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-SamiBold';
+  src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* fallback fonts */
 @font-face {
   font-family: roboto-condensed-fallback;
   size-adjust: 88.82%;
-  src: local('Arial');
+  src: local("Arial");
 }
 
 @font-face {
   font-family: roboto-fallback;
   size-adjust: 99.529%;
-  src: local('Arial');
+  src: local("Arial");
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -79,6 +107,11 @@ body {
   font-size: var(--body-font-size-m);
   line-height: 1.6;
 }
+
+*{
+  font-family: "OpenSans-Regular";
+}
+
 
 body.appear {
   display: block;
@@ -112,12 +145,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -142,7 +192,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -228,22 +278,22 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+/* main > .section:first-of-type {
   margin-top: 0;
-}
+} */
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }
@@ -254,4 +304,608 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+.dp-none {
+  display: none;
+}
+
+.dp-show {
+  display: block !important;
+}
+/* === 2. PAGE-LEVEL GRID (article + sidebar) ===================== */
+.section.wrapperright {
+  margin: 0;
+}
+.wrapperright {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 5px;
+  margin: 0;
+  padding: 0 20px;
+   font-size: 16px;
+    h2{
+      font-size: 1rem;
+    }
+    h1{
+      font-size: 1.7rem;
+    }
+}
+#overview{
+  font-size: 1.75rem;
+}
+
+/* make sure every inner .section stays in its intended column */
+.wrapperright>.section:not([data-id="tableofcontent"]) {
+  grid-column: 1;
+}
+
+.wrapperright>.section[data-id="tableofcontent"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.wrapperright>.section {
+  text-align: left;
+  max-width: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+[data-id="overview"] h2,
+[data-id="mastertheStockMarketEasySteps"] h2,
+[data-id="openaDematandTradingAccount"] h2 {
+  color: #292929;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+[data-id="overview"] p {
+  color: #535353;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+[data-id="mastertheStockMarketEasySteps"] ul li  p {
+  color: #535353;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 22px;
+}
+
+[data-id="openaDematandTradingAccount"] p {
+  color: #535353;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+[data-id="openaDematandTradingAccount"] p a {
+  color: #004c8f;
+}
+
+/* === 3. TABLE-OF-CONTENT CARD =================================== */
+[data-id="tableofcontent"] .default-content-wrapper {
+  background: #f2f8fd;
+  border-radius: 8px;
+  /* padding: 24px; */
+  padding: 1.5rem 1.5rem 1.5rem 1.875rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  font-size: 16px;
+  margin-top: 90px;
+  position: absolute;
+  top: 85px;
+  right: 100px;
+  width: max-content;
+}
+
+[data-id="tableofcontent"] h3 {
+  margin-bottom: 36px;
+  font-size: 18px;
+  color: #292929;
+  position: relative;
+}
+
+[data-id="tableofcontent"] h3::before {
+  background: linear-gradient(90deg, rgba(0, 0, 0, .04), rgba(0, 0, 0, .2) 61.23%, transparent 105.29%);
+  bottom: -9pt;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+[data-id="tableofcontent"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[data-id="tableofcontent"] li {
+  margin-bottom: 20px;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  border-left: 3px solid transparent;
+  transition: all 0.25s ease;
+}
+
+[data-id="tableofcontent"] li a {
+  text-decoration: none;
+  color: #535353;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  transition: color 0.25s;
+  text-decoration: none;
+}
+
+/* hover-state */
+[data-id="tableofcontent"] li:hover {
+  border-left-color: #005bbb;
+}
+
+[data-id="tableofcontent"] li:hover a {
+  color: #005bbb;
+}
+
+/* active-state helper class you can toggle with JS if desired */
+[data-id="tableofcontent"] li.active {
+  border-left-color: #005bbb;
+}
+
+[data-id="tableofcontent"] li.active a {
+  color: #005bbb;
+}
+
+/* === 4. SYNOPSIS CALLOUT BOX ==================================== */
+[data-id="synopsis"] .default-content-wrapper {
+  background: #fff5f5;
+  border-radius: 6px;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+[data-id="synopsis"] h2 {
+  margin-top: 0;
+  color: #292929;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+[data-id="synopsis"] ul li p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #535353;
+}
+
+/* === 5. BULLET LISTS ============================================ */
+.section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.section ul li::marker {
+  color: #005bbb;
+  /* blue bullet like the brand */
+}
+
+/* === 7. RESPONSIVE (SIDEBAR DROPS BELOW) ======================== */
+
+#how-to-learn-about-the-stock-market-in-nine-easy-steps {
+  padding-bottom: 30px;
+  font-size: 38px;
+  line-height: normal;
+  margin: 0;
+}
+#master-the-stock-market-in-9-easy-steps{
+  font-size: 1.75rem;
+}
+#open-a-demat-and-trading-account-with-hdfc-bank{
+  font-size: 1.75rem;
+}
+[data-id="howtolernaboutstock"] p {
+  padding-bottom: 40px;
+}
+
+[data-id="accountsharebtn"] div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 16px 0;
+}
+
+[data-id="accountsharebtn"] div>p:nth-child(1) {
+  background-color: #e8f2fc;
+  /* light blue */
+  color: #004785;
+  /* HDFC dark blue */
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+[data-id="accountsharebtn"] div>p:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #004785;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.icon-iconshare {
+  width: 16px;
+  height: 16px;
+}
+
+.section[data-id="scroll-progress-bar"] {
+  margin: 0;
+}
+
+[data-id="scroll-progress-bar"] {
+  position: sticky;
+  top: 116px;
+  left: 115px;
+  right: 28px;
+  width: 0%;
+  height: 5px;
+  background-color: #004785;
+  z-index:1;
+  transition: width 0.25s ease-out;
+  position: sticky;
+  border-radius: 10px;
+}
+.footer-wrapper{
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+   .wrapperright >.section {
+    margin: 0;
+    /* width: unset; */
+    }
+  .wrapperright {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+   
+    [data-id="accountsharebtn"] {
+      order: 1;
+      width: 100%;
+      padding: 0;
+    }
+
+    [data-id="accountsharebtn"] div {
+      margin: 16px 20px;
+    }
+
+    [data-id="tableofcontent"] {
+      order: 4;
+    }
+
+    [data-id="howtolernaboutstock"] {
+      order: 2;
+    }
+
+    [data-id="synopsis"] {
+      order: 3;
+    }
+
+    [data-id="overview"] {
+      order: 5;
+    }
+
+    [data-id="mastertheStockMarketEasySteps"] {
+      order: 6;
+    }
+
+    [data-id="openaDematandTradingAccount"] {
+      order: 7;
+    }
+  }
+
+  [data-id="tableofcontent"] .default-content-wrapper {
+    position: unset;
+    width: auto;
+    margin-top: 10px;
+    padding: 16px 12px;
+  }
+
+  [data-id="tableofcontent"] h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  [data-id="tableofcontent"] ul li {
+    padding-left: 0;
+  }
+
+  [data-id="overview"] h2,
+  [data-id="mastertheStockMarketEasySteps"] h2,
+  [data-id="openaDematandTradingAccount"] h2{
+    font-size: 24px;
+    margin-top: 40px;
+  }
+
+  [data-id="overview"] p {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  [data-id="mastertheStockMarketEasySteps"] ul {
+    padding-left: 20px;
+  }
+
+  [data-id="mastertheStockMarketEasySteps"] ul li p,
+  [data-id="openaDematandTradingAccount"] p {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  [data-id="openaDematandTradingAccount"] p a {
+    color: #004c8f;
+  }
+
+  [data-id="synopsis"] .default-content-wrapper {
+    padding: 12px;
+  }
+
+  [data-id="scroll-progress-bar"]{
+    top: 56px;
+    left: 0;
+  }
+
+  [data-id="howtolernaboutstock"] p {
+    padding-bottom: 30px;
+    margin: 0;
+    color: #4b5563;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  [data-id="synopsis"] ul {
+    padding-left: 24px;
+  }
+
+  [data-id="synopsis"] ul li p {
+    font-size: 14px;
+    line-height: normal;
+    color: #535353;
+  }
+
+  #how-to-learn-about-the-stock-market-in-nine-easy-steps {
+    margin: 0;
+    font-size: 24px;
+  }
+}
+
+.overlay {
+  background: rgba(0, 0, 0, .5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all .5s ease-in-out;
+  width: 100%;
+  z-index: 4;
+}
+
+header nav {
+  height: var(--nav-height);
+}
+
+.section.info-card-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.section.info-card-head .default-content-wrapper{
+  /* margin: 0; */
+  padding: 0 0 0 62px;
+}
+.section.info-card-head .columns-wrapper{
+  /* margin: 0; */
+  padding: 0 62px 0 0;
+}
+.section.info-card-head .default-content-wrapper h3{
+  font-size: 48px;
+  letter-spacing: 5px;
+  margin: 0 0 9px 0;
+}
+.section.info-card-head .default-content-wrapper p{
+  font-size: 20px;
+  margin: 0;
+}
+.icon.icon-grow-arrow-1{
+  width: 400px;
+  height: 549px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 768px){
+  .section.info-card-head{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px;
+}
+.section.info-card-head .default-content-wrapper{
+  padding: 0;
+}
+.section.info-card-head .columns-wrapper{
+padding: 0;
+}
+.section.info-card-head .default-content-wrapper h3{
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin: 0 0 9px 0;
+}
+.section.info-card-head .default-content-wrapper p{
+  text-align: center;
+  font-size: 16px;
+}
+.icon.icon-grow-arrow-1{
+  width: 120px;
+  height: 164px;
+}
+}
+
+/* Component 2 */
+
+.section.demo-text{
+      background: linear-gradient(178deg, #bee8ff -26.26%, #d9f1ff 71.01%, #fff 106.38%);
+      position: relative;
+      height: 710px;
+}
+.section.demo-text .default-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  margin-top: 100px;
+}
+.section.demo-text .default-content-wrapper h2{
+  font-size: 3rem;
+    line-height: 3.62rem;
+    margin: 0;
+    width: 500px;
+}
+.section.demo-text .default-content-wrapper p:nth-child(2){
+  font-size: 16px;
+  margin-top: 15px;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(1){
+  color: #1e429f;
+  background: #e1effe;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(1).active{
+  border-color: #1e429f;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a{
+      font-size: .75rem;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1rem;
+    margin-right: .625rem;
+    padding: .3125rem .75rem;
+    text-align: center;
+    text-decoration: none;
+  border-radius: .375rem;
+  border: 1px solid transparent;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3){
+ margin-top: 15px;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(2){
+  background-color: #feecdc;
+  border-color: #feecdc;
+  color: #8a2c0d;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(2).active{
+  border-color: #8a2c0d;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(3).active{
+  border-color: #05505c;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(3){
+  background-color: #def7ec;
+  border-color: #def7ec;
+  color: #05505c;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(4){
+  background-color: #004c8f;
+  border: 1px solid #004c8f;
+  color: #fff;
+}
+.section.demo-text .default-content-wrapper p:nth-child(4){
+  font-size: 16px;
+  margin-top: 15px;
+}
+.section.demo-text .default-content-wrapper p{
+  margin:0 10px 0 0;
+}
+.section.demo-text .default-content-wrapper p:nth-child(5){
+  position: absolute;
+  left: -77%;
+  margin: 0;
+  top: -32%;
+}
+.wrapped-paragraph{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.wrapped-paragraph p{
+  margin-top: 0 !important;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .section.demo-text{
+      background: linear-gradient(178deg, #bee8ff -26.26%, #d9f1ff 71.01%, #fff 106.38%);
+      position: relative;
+      height: 800px;
+}
+.section.demo-text .default-content-wrapper h2{
+  font-size: 28px;
+    line-height: 2.37rem;
+    margin: 0;
+    width: auto;
+    text-align: center;
+}
+.section.demo-text .default-content-wrapper{
+  padding: 0;
+  align-items: center;
+  right: auto;
+  width: 100%;
+  margin-top: 0;
+}
+.section.demo-text .default-content-wrapper p:nth-child(2){
+  font-size: 16px;
+  text-align: center;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a:nth-child(1){
+  border-color: #1e429f;
+  color: #1e429f;
+  background: #e1effe;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3){
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 20px;
+}
+.section.demo-text .default-content-wrapper p:nth-child(3) a{
+  margin-top: 15px;
+}
+.section.demo-text .default-content-wrapper p:nth-child(4){
+display: none;
+}
+.section.demo-text .default-content-wrapper p{
+  margin:0;
+}
+.section.demo-text .default-content-wrapper p:nth-child(5){
+  margin: 0;
+  left: auto;
+  height: 460px;
+  overflow: hidden;
+  top: 100%;
+}
+.wrapped-paragraph p{
+  margin-top: 0 !important;
+  width: 108px;
+  height: 33px;
+  margin-right: 10px !important;
+}
+
 }

@@ -95,6 +95,34 @@
       }
     ]
   },
+   {
+    "id": "cf-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cf-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
+      }
+    ]
+  },
   {
     "id": "section",
     "fields": [
@@ -105,6 +133,11 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "text",
+        "name": "id",
+        "label": "Id"
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
@@ -112,7 +145,64 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "footers",
+            "value": "footers"
+          },
+          {
+            "name": "footer-sec1",
+            "value": "footer-sec1"
+          },
+          {
+            "name": "footer-sec2",
+            "value": "footer-sec2"
+          },
+          {
+            "name": "footer-sec3",
+            "value": "footer-sec3"
+          },
+          {
+            "name": "footer-sec4",
+            "value": "footer-sec4"
+          },
+          {
+            "name": "footer-sec5",
+            "value": "footer-sec5"
+          },
+          {
+            "name": "footer-sec6",
+            "value": "footer-sec6"
+          },
+          {
+            "name": "footer-white",
+            "value": "footer-white"
+          },
+          {
+            "name": "Wrapper left",
+            "value": "wrapperleft"
+          },
+          {
+            "name": "Wrapper right",
+            "value": "wrapperRight"
+          },
+          {
+            "name": "Login Modal",
+            "value": "login-modal"
+          },
+          {
+            "name": "Info Card Head",
+            "value": "info-card-head"
+          },
+          {
+            "name": "Demo Text",
+            "value": "demo-text"
+          },
+          {
+            "name": "Tab Section",
+            "value": "tab-section"
           }
+          
         ]
       }
     ]
@@ -152,6 +242,17 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Info Cards",
+            "value": "info-cards"
+          }
+        ]
       }
     ]
   },
@@ -188,6 +289,130 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Tab Style",
+            "value": "tab-style"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Head Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Head Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col1_text",
+        "value": "",
+        "label": "Head Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Body Content",
+        "valueType": "string"
+      }
+    ]
+  },
+   {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Carousel Style",
+            "value": "carousel-style"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Head Carousel Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Head Carousel Image Alt",
+        "value": ""
+      },
+       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_brandImage",
+        "label": "Brand Image",
+        "multi": false
+      },
+       {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_brandImageAlt",
+        "label": "Brand Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Card Description",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_details",
+        "value": "",
+        "label": "Additional Details",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "number",
+        "name": "breadcrumb",
+        "value": "",
+        "label": "breadcrumb"
       }
     ]
   }
