@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "hero-model-view"
+      "fragment"
     ]
   },
   {
@@ -44,6 +43,12 @@
     "id": "hero-model-view",
     "components": [
       "hero-model-view-item"
+    ]
+  },
+  {
+    "id": "service-counter",
+    "components": [
+      "service-item"
     ]
   }
 ]
