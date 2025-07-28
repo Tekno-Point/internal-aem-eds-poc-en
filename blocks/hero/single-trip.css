@@ -178,17 +178,17 @@
     }
 }
 
+#single-trip .field-wrapper.focus-active input[type="date"]::-webkit-datetime-edit {
+    color: black !important;
+}
+
 #single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div>input[type="date"]::-webkit-datetime-edit {
     color: transparent;
 }
 
-#single-trip>.field-wrapper.fieldset-wrapper>#form-wrapdate>div>input[type="date"]:focus::-webkit-datetime-edit {
-    color: black;
-}
-
-#single-trip > .field-wrapper.checkbox-wrapper {
+#single-trip>.field-wrapper.checkbox-wrapper {
     /* margin-left: 3px; */
-} 
+}
 
 #single-trip>.field-wrapper.checkbox-wrapper>label {
     font-size: 1.4rem;

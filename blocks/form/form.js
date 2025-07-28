@@ -1,4 +1,4 @@
-import { ADD_TRAVELLERS } from './add-travellers.js';
+import { ADD_TRAVELLERS, onTravelDetailsSubmit } from './add-travellers.js';
 import callBackSubmit from './callback-submit.js';
 import createField from './form-fields.js';
 import formToggler, { getParentFromChildId } from './formToggler.js';
@@ -85,10 +85,12 @@ const formMatcher = (form, id) => {
   switch (id) {
     case 'single-trip':
       formToggler('travel-details');
+      form.dataset.tripForm = JSON.stringify(new FormData(form));
       ADD_TRAVELLERS(getParentFromChildId('travel-details', '.form-wrapper'));
       break;
     case 'travel-details':
       formToggler(id)
+      onTravelDetailsSubmit(form);
       break;
     case 'extend-policy':
       formToggler(id)

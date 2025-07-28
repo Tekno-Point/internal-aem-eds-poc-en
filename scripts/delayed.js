@@ -213,6 +213,10 @@ WebFontConfig = {
 `;
 HEAD.appendChild(FONTS);
 
+const ANALYTICS_SCRIPT = document.createElement('script');
+ANALYTICS_SCRIPT.src = 'https://assets.adobedtm.com/56086c44eca3/d8373932335e/launch-66ebbffc250d-development.min.js';
+HEAD.appendChild(ANALYTICS_SCRIPT);
+
 const onChatBotClick = () => {
   let chatBotOGClick = document.getElementById("ymDivBar")
   const els = [...document.querySelectorAll(`.ria-live-chat .default-content-wrapper,
