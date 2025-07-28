@@ -234,24 +234,5 @@ function ADD_TRAVELLERS(block) {
   });
 }
 
-function onTravelDetailsSubmit(form) {
-  const tripFormData = new FormData(document.getElementById("single-trip"))
-  const travelFormData = new FormData(form);
-
-  travelinsurancecontinueClick('single-trip', 'lead-id',
-    tripFormData.get("geography-location"), "selectedCountry",
-    tripFormData.get("start date"), tripFormData.get("return date"),
-    form.dataset.travellersAgeGroup, getDuration(tripFormData.get("start date"), tripFormData.get("return date")),
-    travelFormData.get("productId") || "travelinsurance"
-  );
-}
-
-function getDuration(startDate, returnDate) {
-  const start = new Date(startDate);
-  const end = new Date(returnDate);
-  const diff = end - start;
-  return Math.ceil(diff / (1000 * 60 * 60 * 24));
-}
-
-export { ADD_TRAVELLERS, onTravelDetailsSubmit };
+export { ADD_TRAVELLERS };
 

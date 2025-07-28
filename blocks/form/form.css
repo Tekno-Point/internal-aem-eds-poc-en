@@ -453,7 +453,7 @@ input[type='date'] {
     font-weight: 600;
 }
 
-input[type='date']::-webkit-datetime-edit {
+.date-wrapper .focus-active input[type='date']::-webkit-datetime-edit {
     color: transparent;
 }
 

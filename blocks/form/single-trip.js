@@ -76,6 +76,13 @@ function SINGLE_TRIP(block) {
       container.appendChild(clonedContainer);
     }
 
+    container.querySelectorAll("div.default-content-wrapper > ul li").forEach(i => {
+      i.addEventListener('click', () => {
+        const input = container.querySelector("div.il-input-block > input");
+        input.value = i.textContent;
+      })
+    });
+
     referenceElement.parentNode.insertBefore(container, referenceElement.nextElementSibling);
   }
 
@@ -94,6 +101,7 @@ function SINGLE_TRIP(block) {
       }
     })
   })
+
 }
 
 export { SINGLE_TRIP };
