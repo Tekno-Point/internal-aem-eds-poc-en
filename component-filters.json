@@ -16,7 +16,14 @@
       "cards",
       "columns",
       "fragment",
-      "esaf-swiper"
+      "esaf-swiper",
+      "about-us"
+    ]
+  },
+  {
+    "id": "about-us",
+    "components": [
+      "about-us-item"
     ]
   },
   {
