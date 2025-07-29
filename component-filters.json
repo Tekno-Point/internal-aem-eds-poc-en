@@ -15,7 +15,14 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "about-us"
+    ]
+  },
+  {
+    "id": "about-us",
+    "components": [
+      "about-us-item"
     ]
   },
   {

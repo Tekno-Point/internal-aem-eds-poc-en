@@ -118,6 +118,79 @@
     ]
   },
   {
+    "id": "about-us",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt",
+        "description": "Alternative text for the image"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonText",
+        "label": "Button Text",
+        "description": "Text for the button"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "buttonLink",
+        "label": "Button Link",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "about-us-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "count",
+        "label": "Count",
+        "description": "Numeric count value"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label",
+        "description": "Label for the count"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "iconAlt",
+        "label": "Icon Alt",
+        "description": "Alternative text for the icon"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
