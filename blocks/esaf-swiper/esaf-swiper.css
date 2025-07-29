@@ -1,27 +1,26 @@
+@import url("../swiper/swiper.min.css");
 
-@import url('../swiper/swiper.min.css');
-
-
-.esaf-swiper>.swiper-wrapper{
-min-height: 309px;
-height: 100%;
-border-radius: 10px;
+.esaf-swiper > .swiper-wrapper {
+    min-height: 309px;
+    height: 100%;
+    border-radius: 10px;
 }
 
-
-.esaf-swiper>.swiper-wrapper>.swiper-slide>div:nth-child(1)>picture>img{
-border-radius: 10px;
-max-height: 309px;
-height: 100%;
+.esaf-swiper
+    > .swiper-wrapper
+    > .swiper-slide
+    > div:nth-child(1)
+    > picture
+    > img {
+    border-radius: 25px;
+    max-height: 309px;
+    height: 100%;
 }
 
-
-
-
-.esaf-swiper>.btnWrapper>.swiper-button-prev,
-.esaf-swiper>.btnWrapper>.swiper-button-next{
-      font-size: 18px;
-    color:#fff;
+.esaf-swiper > .btnWrapper > .swiper-button-prev,
+.esaf-swiper > .btnWrapper > .swiper-button-next {
+    font-size: 18px;
+    color: #fff;
     position: absolute;
     right: 8%;
     top: 55%;
@@ -33,22 +32,41 @@ height: 100%;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
-    border: 1px solid #D7D7D7;
-    transition: 0.4s ease-in-out
+    border: 1px solid #d7d7d7;
+    transition: 0.4s ease-in-out;
+}
+
+.esaf-swiper > .btnWrapper > .swiper-button-next::after {
+    content: "\f178";
+    font-family: "FontAwesome";
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.esaf-swiper > .btnWrapper > .swiper-button-prev::after {
+    content: "\f177";
+    font-family: "FontAwesome";
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.esaf-swiper > .btnWrapper > .swiper-button-prev,
+.esaf-swiper > .btnWrapper > .swiper-button-next {
+    right:30px;
 }
 
 
-.esaf-swiper>.btnWrapper>.swiper-button-next::after{
-content: "\f178";
+.esaf-swiper > .btnWrapper > .swiper-button-prev:hover,
+.esaf-swiper > .btnWrapper > .swiper-button-next:hover{
+      background-color: #002A69;
+    color: #fff;
+    border: 1px solid transparent;
 }
 
 
-.esaf-swiper>.btnWrapper>.swiper-button-prev::after{
-  content: "\f177";
+@media(max-width :  420px){
+  .esaf-swiper > .btnWrapper > .swiper-button-prev,
+.esaf-swiper > .btnWrapper > .swiper-button-next{
+  display: none;
 }
-
-
-.esaf-swiper>.btnWrapper>.swiper-button-prev, 
-.esaf-swiper>.btnWrapper>.swiper-button-next{
-  right: 10px;
 }
