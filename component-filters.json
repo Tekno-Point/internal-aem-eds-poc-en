@@ -19,6 +19,12 @@
     ]
   },
   {
+    "id": "about-us",
+    "components": [
+      "about-us-item"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
