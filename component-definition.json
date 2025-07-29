@@ -204,7 +204,7 @@
             }
           }
         },
-          {
+        {
           "title": "ESAF Swiper Item",
           "id": "esaf-swiper-item",
           "plugins": {
