@@ -1,0 +1,54 @@
+
+@import url('../swiper/swiper.min.css');
+
+
+.esaf-swiper>.swiper-wrapper{
+min-height: 309px;
+height: 100%;
+border-radius: 10px;
+}
+
+
+.esaf-swiper>.swiper-wrapper>.swiper-slide>div:nth-child(1)>picture>img{
+border-radius: 10px;
+max-height: 309px;
+height: 100%;
+}
+
+
+
+
+.esaf-swiper>.btnWrapper>.swiper-button-prev,
+.esaf-swiper>.btnWrapper>.swiper-button-next{
+      font-size: 18px;
+    color:#fff;
+    position: absolute;
+    right: 8%;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 9;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #D7D7D7;
+    transition: 0.4s ease-in-out
+}
+
+
+.esaf-swiper>.btnWrapper>.swiper-button-next::after{
+content: "\f178";
+}
+
+
+.esaf-swiper>.btnWrapper>.swiper-button-prev::after{
+  content: "\f177";
+}
+
+
+.esaf-swiper>.btnWrapper>.swiper-button-prev, 
+.esaf-swiper>.btnWrapper>.swiper-button-next{
+  right: 10px;
+}
