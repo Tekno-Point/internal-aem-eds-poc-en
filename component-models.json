@@ -713,21 +713,21 @@
       },
       {
         "component": "richtext",
-        "name": "image",
+        "name": "col1-image",
         "label": "Product Image",
         "valueType": "string",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "productname",
+        "name": "col1-name",
         "label": "Product Name",
         "valueType": "string",
         "value": ""
       },
             {
         "component": "richtext",
-        "name": "desc",
+        "name": "col1-desc",
         "label": "Product Description",
         "valueType": "string",
         "value": ""
