@@ -720,7 +720,7 @@
       },
       {
         "component": "richtext",
-        "name": "name",
+        "name": "productname",
         "label": "Product Name",
         "valueType": "string",
         "value": ""
