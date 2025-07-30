@@ -161,7 +161,7 @@
     "id": "about-us-item",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
         "name": "count",
         "label": "Count",
