@@ -1,4 +1,137 @@
+.section.about-us-container {
+    max-width: 1314px;
+    margin: auto;
+    background-image: var(--aboutus-bg);
+    background-size: 100% 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .about-wrapper {
     position: relative;
     display: flex;
+    max-width: 1154px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.about-wrapper .about-us-description,
+.about-wrapper .about-us-image {
+    flex-basis: 50%;
+}
+
+.about-wrapper .about-content .button-container {
+    margin: 0;
+    padding: 0;
+}
+
+.about-wrapper .about-content .button-container .button {
+    background-color: #cd171d;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.about-us-counter {
+    display: flex;
+    justify-content: center;
+    max-width: 1122px;
+    background: #fff;
+    border-radius: 11px;
+    margin: 0 auto;
+    padding: 55px 38px;
+}
+
+.about-us-counter>div {
+    flex-basis: 25%;
+}
+
+.about-us-counter .counter-items {
+    position: relative;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.about-us-counter .counter-items:last-child {
+    border-right: none;
+}
+
+.about-us-counter .counter-items .content p {
+    color: var(--theme2);
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.about-us-counter .hover-icons {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+}
+
+.about-us-counter .hover-icons img {
+    position: absolute;
+    max-width: unset;
+    width: 42px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    /* adjust the background color to your needs */
+    transform: scale(0);
+    /* scale the icons to 0 initially */
+    transition: transform 0.5s;
+    /* add a transition effect */
+}
+
+.about-us-counter .counter-items:hover .hover-icons img {
+    transform: scale(1);
+}
+
+/* position the icons around the red icon */
+.about-us-counter .hover-icons img:nth-child(1) {
+    top: -52px;
+    left: -85px;
+}
+
+.about-us-counter .hover-icons img:nth-child(2) {
+    top: -96px;
+    right: 34px;
+
+}
+
+.about-us-counter .hover-icons img:nth-child(3) {
+    bottom: 57px;
+    left: 36px;
+}
+
+.about-us-counter .hover-icons img:nth-child(4) {
+    bottom: 8px;
+    right: -83px;
+}
+
+.about-us-counter .hover-icons img:nth-child(5) {
+    top: -120px;
+    left: -15px;
+}
+
+
+.about-us-counter .counter-items h2 {
+    font-size: 30px;
+    color: var(--theme2);
+    font-weight: 600;
+}
+
+.about-us-counter .counter-icon {
+    position: relative;
+    text-align: center;
+}
+
+.about-us-counter .counter-icon img {
+    width: 62px;
+    height: 62px;
+}
+
+.about-us-counter .counter-icon .hover-icons img {
+    width: 42px;
+    height: 40px;
 }
