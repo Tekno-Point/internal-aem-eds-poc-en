@@ -717,6 +717,20 @@
         "label": "Product Image",
         "valueType": "string",
         "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_name",
+        "label": "Product Name",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_desc",
+        "label": "Product Description",
+        "valueType": "string",
+        "value": ""
       }
     ]
   },
