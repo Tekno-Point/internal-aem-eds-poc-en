@@ -196,17 +196,14 @@
     "fields": [
       {
         "component": "reference",
-        "valueType": "string",
-        "name": "col1_image",
+        "name": "image",
         "label": "Image",
         "multi": false
       },
       {
         "component": "richtext",
-        "name": "col1_text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "name": "url",
+        "label": "url"
       }
     ]
   }
