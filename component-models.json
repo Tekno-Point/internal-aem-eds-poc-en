@@ -130,6 +130,10 @@
             "value": "variant-focused-view-container"
           },
           {
+            "name": "Header Accordion",
+            "value": "header-accordion"
+          },
+          {
             "name": "Theme",
             "children": [
               {
