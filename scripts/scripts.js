@@ -571,6 +571,10 @@ function loadAutoBlock(doc) {
       decorateFragment(a.parentElement);
     } else if (a && a.href && a.href.includes('.youtube.')) {
       decorateEmbed(a.parentElement);
+    } else if (a && a.href && a.href.includes('x.com')) {
+      decorateEmbed(a.parentElement);
+    } else if (a && a.href && a.href.includes('vimeo.com')) {
+      decorateEmbed(a.parentElement);
     } else if (a && a.href && a.href.includes('/forms/')) {
       decorateForm(a.parentElement);
     }
