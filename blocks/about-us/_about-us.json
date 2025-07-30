@@ -39,6 +39,13 @@
         {
           "component": "reference",
           "valueType": "string",
+          "name": "bgimage",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
           "name": "image",
           "label": "Image",
           "multi": false
@@ -116,4 +123,3 @@
     }
   ]
 }
-  
