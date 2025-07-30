@@ -15,6 +15,7 @@ export default async function decorate(block) {
     const btn = eleBtn?.children[0]?.children[0];
 
     const cityPrices = await renderDataFromAPI(cityUrl);
+    // const uniqueVariantSkus = [...new Set(cityPrices.data.map(item => item.variant_sku))];
 
     const filteredCity = cityPrices.data.filter((city) => city.variant_sf_id == 'a24OX000000WsenYAC');
 
@@ -31,11 +32,10 @@ export default async function decorate(block) {
         btn.classList.add("buy-btn");
     }
 
-
-
-    let dropdown = filteredCity
-        .map((city) => `<div class="city-option" data-effectiveprice=${Number(city.effectivePrice).toLocaleString('en-IN')} value=${city.city_state_id.split("~")[0]}>${city.city_state_id.split("~")[0]}</div>`).join("")
-
+//Number(city.effectivePrice).toLocaleString('en-IN')
+    let dropdown = cityPrices.data
+        .map((city) => `<div class="city-option" data-effectiveprice=${city.variant_name.split(' ').slice(-1).join()} value=${city.city_state_id.split("~")[0]}>${city.city_state_id.split("~")[0]}</div>`).join("")
+        
     block.innerHTML = '';
 
     let boxContainer = document.createElement("div")
@@ -136,6 +136,7 @@ const togglecityDrop = (e) => {
 }
 
 const selectCity = (e, cityContainer) => {
+    debugger
     const selectedCity = e.target.textContent.trim();
     const effectivePrice = e.target.dataset.effectiveprice;
     cityContainer.textContent = selectedCity;
@@ -146,18 +147,19 @@ const selectCity = (e, cityContainer) => {
     price.firstChild.nodeValue = "₹" + effectivePrice;
 }
 
+const selectColour = (e, cityContainer) => {
+    const selectedCity = e.target.textContent.trim();
+    const effectivePrice = e.target.dataset.effectiveprice;
+    cityContainer.textContent = selectedCity;
+    const block = e.target.closest(".box-container");
+    const price = block.querySelector(".amount");
+
+    e.target.closest(".city-option-container").classList.add("dp-none");
+    price.firstChild.nodeValue = "₹" + effectivePrice;
+}
+
+
 const showPopup = (e, popup) => {
     popup.style.visibility = "visible";
 }
 
-// const toolbar1 = document.querySelector(".toolbar");
-
-// if (isMobile && toolbar1) {
-
-//   const whatsIncludedFun = (e) => {
-// //   let includedContainer = document.querySelector(".whats-included-container");
-// //   let parentContHeight = e.currentTarget.closest(".citypricedropdown-wrapper")
-// }
-
-//   toolbar.addEventListener("click", (e) => { whatsIncludedFun(e); });
-// }

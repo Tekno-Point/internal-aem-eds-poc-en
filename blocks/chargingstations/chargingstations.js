@@ -127,10 +127,13 @@ export default async function decorate(block) {
 
             const map = new MapmyIndia.Map(mapDiv, {
                 center: [19.0760, 72.8777],
-                zoom: 4,
-                traffic: true,
+                zoom: 15,
+                // traffic: true,
                 scrollWheelZoom: true,
+                mapTypeId: "satellite"
             });
+            
+            
 
             let currentMarkersLayer = L.layerGroup().addTo(map);
 
@@ -162,9 +165,18 @@ export default async function decorate(block) {
                     const lng = parseFloat(station.longitude);
 
                     if (!isNaN(lat) && !isNaN(lng)) {
+                        // const marker = new L.Marker([lat, lng], {
+                        //     icon: L.icon({
+                        //         iconUrl: "https://maps.mapmyindia.com/images/2.png",
+                        //         iconSize: [25, 41],
+                        //         iconAnchor: [12, 41],
+                        //         popupAnchor: [1, -34],
+                        //     }),
+                        // }).addTo(currentMarkersLayer);
+                        const iconSvg = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="47" height="58" viewBox="0 0 512 512"><circle cx="256" cy="256" r="240" fill="white" stroke="%23FF5C00" stroke-width="32"/><path d="M229.4 48L122.8 256H224v208l128-240H288L341.4 48H229.4Z" fill="%23FF5C00"/></svg>';
                         const marker = new L.Marker([lat, lng], {
                             icon: L.icon({
-                                iconUrl: "https://maps.mapmyindia.com/images/2.png",
+                                iconUrl:iconSvg,
                                 iconSize: [25, 41],
                                 iconAnchor: [12, 41],
                                 popupAnchor: [1, -34],
