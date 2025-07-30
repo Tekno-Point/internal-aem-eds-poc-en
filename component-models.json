@@ -112,6 +112,14 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "loan-offer",
+            "value": "loan-offer"
+          },
+          {
+            "name": "video-carousel",
+            "value": "video-carousel"
           }
         ]
       }
@@ -262,6 +270,44 @@
         "label": "Alt",
         "value": ""
       },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "esaf-swiper-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+   {
+    "id": "carousel-item",
+    "fields": [
       {
         "component": "richtext",
         "name": "text",

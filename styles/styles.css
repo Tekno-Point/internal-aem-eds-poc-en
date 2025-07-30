@@ -9,6 +9,11 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+ *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ }
 
 :root {
     /* colors */
@@ -262,7 +267,14 @@ main>.section:first-of-type {
 }
 
 @media (width >=900px) {
-    main>.section>div {}
+    main>.section>div {
+    }
+}
+
+@media (width <=900px) {
+    main>.section>div {
+        padding:0rem  0.75rem;
+    }
 }
 
 /* section metadata */

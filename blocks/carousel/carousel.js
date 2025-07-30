@@ -1,4 +1,5 @@
 
+
 import SwiperText from "../swiper/swiper.min.js";
 
 export default function decorate(block) {
