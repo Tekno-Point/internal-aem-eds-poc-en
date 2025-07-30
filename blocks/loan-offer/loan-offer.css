@@ -1,0 +1,247 @@
+.loan-offer > .cards-wrapper>.cards {
+    max-width: 1116px;
+    width: 100%;
+    background-color: #002a69;
+    padding: 15px;
+    margin: 0px auto;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.loan-offer > .cards-wrapper > .cards > ul {
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    margin-top: calc(-1 * 1rem);
+    margin-right: calc(-0.5 * 1rem);
+    margin-left: calc(-0.5 * 1rem);
+}
+
+.loan-offer > .cards-wrapper > .cards > ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.loan-offer > .cards-wrapper > .cards > ul > li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    visibility: visible;
+    animation-delay: 0.3s;
+    animation-name: fadeInUp;
+    position: relative;
+    margin-top: 0px;
+    background-color: transparent;
+    box-shadow: transparent;
+    /* padding: 9px 17px; */
+    padding: 0px 17px;
+    z-index: 9;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    /* border-left: 1px solid white; */
+    /* border-right: 1px solid white; */
+    cursor: pointer;
+    height: 128px;
+    position: relative;
+}
+
+.loan-offer > .cards-wrapper > .cards > ul > li::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 1px; /* Border thickness */
+    height: 100%;
+    background-color: white;
+    /* transition: height 0.4s ease; */
+}
+.loan-offer > .cards-wrapper > .cards > ul > li:last-child:after {
+    display: none;
+}
+
+.loan-offer
+    > .cards-wrapper
+    > .cards
+    > ul
+    > li
+    > .cards-card-body
+    > .button-container
+    > a
+    > span {
+    transform: rotate(-50deg);
+    display: inline-block;
+    color: var(--white);
+    margin-top: 13px;
+    transition: 0.4s ease-in-out;
+}
+
+.loan-offer > .cards-wrapper > .cards > ul > li:last-child {
+    border: none;
+}
+.loan-offer > .cards-wrapper > .cards > ul > li:hover::before {
+    transform: scale(1, 1);
+    transform-origin: center top;
+}
+
+.loan-offer > .cards-wrapper > .cards > ul > li:hover > .cards-card-image {
+    color: white;
+    transform: rotateY(1turn);
+    transition: 1300ms;
+}
+.loan-offer
+    > .cards-wrapper
+    > .cards
+    > ul
+    > li:hover
+    > .cards-card-body
+    > .button-container
+    > a
+    > span {
+    transform: rotate(0deg);
+}
+
+.loan-offer > .cards-wrapper > .cards > ul > li::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #ca0608;
+    transform: scale(1, 0);
+    transform-origin: center bottom;
+    z-index: -1;
+    transition: transform 500ms;
+}
+
+/* .loan-offer > .cards-wrapper > .cards > ul > li > .cards-card-image:hover {
+    color: white;
+    transform: rotateY(1turn);
+    transition: 1300ms;
+} */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loan-offer
+    > .cards-wrapper
+    > .cards
+    > ul
+    > li
+    > .cards-card-body
+    > .button-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.loan-offer
+    > .cards-wrapper
+    > .cards
+    > ul
+    > li
+    > .cards-card-body
+    > .button-container
+    > a {
+    background: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.loan-offer > .cards-wrapper > .cards > ul > li > .cards-card-body > h3 > a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 600;
+    line-height: 121%;
+}
+
+.loan-offer > .cards-wrapper > .cards > ul > li > .cards-card-body > h3 {
+    max-width: 96px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* .cards-card-body{
+
+    margin: 0px;
+
+} */
+
+.loan-offer
+    > .cards-wrapper
+    > .cards
+    > ul
+    > li
+    > .cards-card-image
+    > picture
+    > img {
+    aspect-ratio: 4 / 4 !important;
+    object-fit: fill !important;
+    margin: 20px 0px 0px 0px;
+}
+
+/* .loan-offer
+    > .cards-wrapper
+    > .cards
+    > ul
+    > li
+    > .cards-card-body
+    > .button-container
+    > a
+    > span:hover {
+    transform: rotate(0deg);
+} */
+
+@media (max-width: 475px) {
+    .loan-offer > .cards-wrapper > .cards > ul {
+        flex-direction: column;
+    }
+
+    .loan-offer > .cards-wrapper > .cards > ul > li::after {
+        content: "";
+        position: absolute;
+        top: unset; /* 🔽 Positioned at the bottom */
+        left: 0;
+        bottom: 0;
+        width: 100%; /* Full width */
+        height: 1px; /* Thickness of the border */
+        background-color: white;
+        /* transition: width 0.3s ease; */
+    }
+    .loan-offer > .cards-wrapper > .cards > ul > li > .cards-card-body > h3{
+        max-width: 100%;
+    }
+    .loan-offer > .cards-wrapper > .cards > ul > li > .cards-card-image > picture > img{
+        margin: 0px;
+    }
+    .loan-offer > .cards-wrapper > .cards > ul > li{
+        justify-content: space-between;
+    }
+    .loan-offer > .cards-wrapper > .cards > ul > li{
+        height: unset;
+        padding: 10px;
+    }
+    .loan-offer > .cards-wrapper > .cards > ul > li > .cards-card-body{
+        margin: 0 16px;
+    }
+
+}
