@@ -720,14 +720,14 @@
       },
       {
         "component": "richtext",
-        "name": "col2_name",
+        "name": "col1_name",
         "label": "Product Name",
         "valueType": "string",
         "value": ""
       },
       {
         "component": "richtext",
-        "name": "col2_desc",
+        "name": "col1_nameDesc",
         "label": "Product Description",
         "valueType": "string",
         "value": ""
