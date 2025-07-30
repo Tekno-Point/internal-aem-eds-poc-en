@@ -573,7 +573,7 @@
 
 }
 .leaflet-control-container .leaflet-top.leaflet-right,
-.leaflet-control-container .leaflet-bottom.leaflet-right {
+.leaflet-control-container .leaflet-bottom.leaflet-right,.leaflet-control {
   display: none;
 }
 .expand-map-control{
