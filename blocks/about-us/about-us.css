@@ -11,6 +11,8 @@
 .about-us-counter {
     display: flex;
     justify-content: center;
+    max-width: 1122px;
+    margin: 0 auto  ;
     padding: 55px 38px;
 }
 
@@ -21,6 +23,11 @@
 .about-us-counter .counter-items {
     position: relative;
     text-align: center;
+    border-right: 1px solid black;
+}
+
+.about-us-counter .counter-items:last-child {
+    border-right: none;
 }
 
 .about-us-counter .counter-items .content p{
@@ -31,7 +38,6 @@
 
 .about-us-counter .hover-icons {
     position: absolute;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* display: none; */
@@ -97,4 +103,9 @@
 .about-us-counter .counter-icon img {
     width: 62px;
     height: 62px;
+}
+
+.about-us-counter .counter-icon .hover-icons img {
+    width: 42px;
+    height: 40px;
 }
