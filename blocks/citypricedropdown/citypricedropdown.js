@@ -1,5 +1,6 @@
 import { renderDataFromAPI } from "../../scripts/scripts.js";
 
+
 export default async function decorate(block) {
   const props = Array.from(block.children).map((ele) => ele);
   // props
@@ -176,7 +177,6 @@ const togglecityDrop = (e) => {
 };
 
 const selectCity = (e, cityContainer, filteredCityTemp) => {
-  debugger;
   const selectedCity = e.target.textContent.trim();
   const effectivePrice = e.target.dataset.effectiveprice;
   const colourselected = e.target.dataset.colour;
@@ -186,6 +186,8 @@ const selectCity = (e, cityContainer, filteredCityTemp) => {
   const filteredColour = filteredCitycol.filter(
     (citycolor) => citycolor.variant_name.split(" ")[2] === "PRO"
   );
+  
+  
 document.querySelector('.colors').innerHTML=''
   filteredColour.forEach(function (e) {
     const colorName = e.variant_name.split(" ").slice(-1).join();
@@ -193,6 +195,7 @@ document.querySelector('.colors').innerHTML=''
     // Create a div element
     const colorDiv = document.createElement("div");
     colorDiv.className = "colour";
+    colorDiv.dataset.price=e.effectivePrice
     colorDiv.style.backgroundColor = colorName;
     // colorDiv.textContent = colorName;
 
@@ -202,12 +205,34 @@ document.querySelector('.colors').innerHTML=''
 
   cityContainer.textContent = selectedCity;
   const block = e.target.closest(".box-container");
-  const price = block.querySelector(".amount");
+ // const price = block.querySelector(".amount");
 
   e.target.closest(".city-option-container").classList.add("dp-none");
-  price.firstChild.nodeValue = "₹" + effectivePrice;
+//   price.firstChild.nodeValue = "₹" + effectivePrice;
 };
+document.querySelector('.colors').addEventListener('click',(e)=>{
+    // debugger
+    const price = document.querySelector(".amount");
+    price.firstChild.nodeValue = "₹" + e.target.dataset.price;
 
+    //  let colorDiv = document.querySelectorAll(".color");
+    // let activeIndex = 0;
+
+    // colorDiv.forEach((div, ind) => {
+    //     div.addEventListener("click", () => {
+    //         changeActiveClr(colorDiv);
+    //         selectedScooterClr(div, ind);
+    //         activeIndex = ind;
+    //     });
+    // });
+})
+const changeActiveClr = (colorDiv) => {
+    colorDiv.forEach((eachDiv) => {
+        if (eachDiv.classList.contains("active")) {
+            eachDiv.classList.remove("active");
+        }
+    });
+};
 const selectColour = (e, cityContainer) => {
   const selectedCity = e.target.textContent.trim();
   const effectivePrice = e.target.dataset.effectiveprice;
@@ -218,7 +243,13 @@ const selectColour = (e, cityContainer) => {
   e.target.closest(".city-option-container").classList.add("dp-none");
   price.firstChild.nodeValue = "₹" + effectivePrice;
 };
-
+const selectedScooterClr = (div, ind) => {
+        div.classList.add("active");
+        let selImage = modelWrapper.querySelector(".image");
+        selImage.src = isMobile
+            ? arrayImagesDet[ind].mob_img_urls.split(",")[0]
+            : arrayImagesDet[ind].desk_img_urls.split(",")[0];
+    };
 const showPopup = (e, popup) => {
   popup.style.visibility = "visible";
 };
