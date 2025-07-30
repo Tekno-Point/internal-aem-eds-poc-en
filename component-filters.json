@@ -19,6 +19,7 @@
       "carousel",
       "product-details",
       "accordion",
+      "header-accordion-item",
       "image-accordion",
       "dealership-locator",
       "warranty-card",
@@ -58,5 +59,9 @@
   {
     "id": "image-accordion",
     "components": ["image-accordion-item"]
+  },
+    {
+    "id": "header-accordion",
+    "components": ["header-accordion-item"]
   }
 ]

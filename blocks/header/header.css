@@ -500,3 +500,13 @@ header nav .nav-tools {
 }
 
 /* New Header CSS */
+
+.head-accordion .accordion-item-body{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head-accordion .accordion-item-body p span{
+  width: 196px;
+  height: 135px;
+}

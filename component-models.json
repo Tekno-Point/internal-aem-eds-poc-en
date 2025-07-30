@@ -702,6 +702,39 @@
     ]
   },
   {
+    "id": "header-accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "head",
+        "label": "Accordion Heading",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "image",
+        "label": "Product Image",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "name",
+        "label": "Product Name",
+        "valueType": "string",
+        "value": ""
+      },
+            {
+        "component": "richtext",
+        "name": "desc",
+        "label": "Product Description",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "image-accordion-item",
     "fields": [
       {
