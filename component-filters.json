@@ -53,5 +53,11 @@
     "components": [
       "esaf-swiper-item"
     ]
+  },
+   {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
+    ]
   }
 ]
