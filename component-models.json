@@ -116,6 +116,10 @@
           {
             "name": "loan-offer",
             "value": "loan-offer"
+          },
+          {
+            "name": "video-carousel",
+            "value": "video-carousel"
           }
         ]
       }
