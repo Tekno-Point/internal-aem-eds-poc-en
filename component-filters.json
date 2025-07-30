@@ -15,13 +15,29 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "tab",
+      "breadcrumb",
+      "carousel",
+      "cf-fragment"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tab-item"
+    ]
+  },
+    {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
     ]
   },
   {

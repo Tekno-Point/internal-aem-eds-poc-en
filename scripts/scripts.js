@@ -43,7 +43,10 @@ export function moveInstrumentation(from, to) {
     to,
     [...from.attributes]
       .map(({ nodeName }) => nodeName)
-      .filter((attr) => attr.startsWith('data-aue-') || attr.startsWith('data-richtext-')),
+      .filter(
+        (attr) =>
+          attr.startsWith("data-aue-") || attr.startsWith("data-richtext-")
+      )
   );
 }
 
@@ -53,7 +56,8 @@ export function moveInstrumentation(from, to) {
 async function loadFonts() {
   await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
   try {
-    if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
+    if (!window.location.hostname.includes("localhost"))
+      sessionStorage.setItem("fonts-loaded", "true");
   } catch (e) {
     // do nothing
   }
@@ -470,7 +474,7 @@ function buildAutoBlocks(main) {
     loadAutoBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('Auto Blocking failed', error);
+    console.error("Auto Blocking failed", error);
   }
 }
 
@@ -486,6 +490,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  // wrapImgsInLinks(main)
 }
 
 /**
@@ -493,18 +498,18 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  document.documentElement.lang = "en";
   decorateTemplateAndTheme();
-  const main = doc.querySelector('main');
+  const main = doc.querySelector("main");
   if (main) {
     decorateMain(main);
-    document.body.classList.add('appear');
-    await loadSection(main.querySelector('.section'), waitForFirstImage);
+    document.body.classList.add("appear");
+    await loadSection(main.querySelector(".section"), waitForFirstImage);
   }
 
   try {
     /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
-    if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
+    if (window.innerWidth >= 900 || sessionStorage.getItem("fonts-loaded")) {
       loadFonts();
     }
   } catch (e) {
@@ -525,8 +530,8 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  loadHeader(doc.querySelector("header"));
+  loadFooter(doc.querySelector("footer"));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
@@ -539,14 +544,100 @@ async function loadLazy(doc) {
  */
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+  window.setTimeout(() => import("./delayed.js"), 3000);
   // load anything that can be postponed to the latest here
 }
 
+function appendNextElements(container, nextElement) {
+  container.append(nextElement);
+}
+export default function decorateWrapper(main) {
+  // debugger;
+  main.querySelectorAll(".wrapperleft").forEach((block) => {
+    // wrapper.classList.remove('wrapper');
+    console.log("Decorating wrapper", block);
+    const blockWrapper = block;
+    let nextElement = blockWrapper.nextElementSibling;
+    while (nextElement && !nextElement.classList.contains("wrapperleft")) {
+      appendNextElements(block, nextElement);
+      nextElement = blockWrapper.nextElementSibling;
+    }
+  });
+  // block.innerHTML = '';
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  let scrollBar = document.querySelector('[data-id="scroll-progress-bar"]');
+  window.addEventListener("scroll", () => {
+    const scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+    scrollBar.style.width = scrollPercent + "%";
+  });
+
+  const scrollMap = {
+    overview: "overview",
+    mastertheStockMarketEasySteps: "mastertheStockMarketEasySteps",
+    openaDematandTradingAccount: "openaDematandTradingAccount",
+  };
+
+  document
+    .querySelectorAll('.section[data-id="tableofcontent"] li a')
+    .forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = scrollMap[link.getAttribute("href")];
+        const target = document.querySelector(
+          `.section[data-id="${targetId}"]`
+        );
+        target?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+});
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  decorateWrapper(document.querySelector("main"));
 }
 
 loadPage();
+
+const targetP = document.querySelector('.section.demo-text .default-content-wrapper p:nth-child(6)');
+const nextP = document.querySelector('.section.demo-text .default-content-wrapper p:nth-child(7)');
+
+if (targetP) {
+  // Create a new <div> wrapper
+  const wrapperDiv = document.createElement('div');
+
+  // Optionally, add a class to the wrapper
+  wrapperDiv.classList.add('wrapped-paragraph');
+
+  // Insert the wrapper before the <p> element
+  targetP.parentNode.insertBefore(wrapperDiv, targetP);
+
+  // Move the <p> inside the new wrapper
+  wrapperDiv.appendChild(targetP);
+  wrapperDiv.appendChild(nextP);
+}
+
+const links = document.querySelectorAll('.section.demo-text .default-content-wrapper p:nth-child(3) a');
+
+// Add "active" class to the first one by default
+if (links.length > 0) {
+  links[0].classList.add('active');
+}
+
+// Loop through and add hover listeners
+links.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    // Remove "active" from all
+    links.forEach(l => l.classList.remove('active'));
+    // Add "active" to hovered one
+    link.classList.add('active');
+  });
+});
+

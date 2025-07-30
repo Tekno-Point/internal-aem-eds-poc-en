@@ -1,0 +1,189 @@
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal dialog::backdrop {
+  background-color: rgb(19 19 19 / 75%);
+}
+
+.modal dialog {
+  overscroll-behavior: none;
+  overflow-y: hidden;
+  width: calc(100vw - 48px);
+  max-width: 900px;
+  max-height: calc(100dvh - (2 * var(--header-height)));
+  padding: 0;
+  border: 1px solid var(--dark-color);
+}
+
+.modal dialog .modal-content {
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: none;
+  width: 100%;
+  max-height: calc(100dvh - (2 * var(--header-height)) - 48px);
+  padding: 24px;
+  padding-top: 0;
+  margin-top: 44px;
+}
+
+@media (width >=900px) {
+  .modal dialog {
+    width: calc(100vw - 64px);
+  }
+
+  .modal dialog .modal-content {
+    max-height: calc(100dvh - (2 * var(--header-height)) - 64px);
+    padding: 32px;
+    padding-top: 0;
+  }
+}
+
+.modal .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--text-color);
+  line-height: 0;
+}
+
+.modal .close-button .icon.icon-close {
+  content: '';
+  width: 24px;
+  height: 24px;
+}
+
+.modal .close-button .icon.icon-close::before,
+.modal .close-button .icon.icon-close::after {
+  content: '';
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentcolor;
+}
+
+.modal .close-button .icon.icon-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg)
+}
+
+.modal dialog .section {
+  padding: 0;
+}
+
+
+/* Login modal css */
+.modal dialog:has(.modal-content .section.login-modal) {
+  width: 368px;
+  margin: 0;
+  left: 70%;
+  top: 110px;
+  border-radius: 5px;
+}
+
+.modal dialog:has(.modal-content .section.login-modal)::before {
+  border: .5rem solid transparent;
+  border-bottom-color: #fff;
+  content: "";
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  right: .45rem;
+  top: -.975rem;
+  width: 0;
+}
+
+.modal dialog .modal-content:has(.section.login-modal) {
+  max-height: 540px;
+  overflow-y: scroll;
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+}
+
+.modal dialog .modal-content:has(.section.login-modal) .default-content-wrapper>ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal dialog .modal-content:has(.section.login-modal) .default-content-wrapper>ul>li {
+  padding: 16px 24px 16px 12px;
+  margin: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal dialog .modal-content:has(.section.login-modal) .default-content-wrapper ul>li>p {
+  margin: 0;
+}
+
+.modal dialog .modal-content:has(.section.login-modal) .default-content-wrapper ul>li>p>a {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0;
+  color: #141414;
+  font-weight: 700;
+  background: unset;
+  margin: 0;
+  overflow: unset;
+  text-decoration: none;
+  border: unset;
+  border-radius: unset;
+}
+
+.modal dialog .modal-content:has(.section.login-modal) .default-content-wrapper ul>li>ul>li>a {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #004083;
+  margin: 0;
+  padding: 0;
+  overflow: unset;
+  text-decoration: none;
+  position: relative;
+  margin-right: 31px;
+}
+
+.modal dialog .modal-content:has(.section.login-modal) .default-content-wrapper ul>li>ul>li>a::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0.4em;
+  right: -15px;
+  transform: rotate(45deg);
+  width: 5.5px;
+  height: 5.5px;
+  border: 2px solid currentcolor;
+  border-radius: 0 1px 0 0;
+  border-width: 3.5px 3.5px 0 0;
+  color: #e02424;
+}
+
+.modal dialog .modal-content:has(.section.login-modal) .default-content-wrapper ul>li>ul>li {
+  margin: 0;
+}
+
+.modal dialog .modal-content:has(.section.login-modal) .default-content-wrapper ul>li>ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.modal .close-button {
+  display: none;
+}
