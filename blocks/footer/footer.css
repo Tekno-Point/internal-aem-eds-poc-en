@@ -3,6 +3,12 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
+footer .columns > div {
+  @media (width >= 900px) {
+    align-items: start;
+  }
+}
+
 footer .footer > div {
   margin: auto;
   max-width: 1200px;

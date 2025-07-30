@@ -4,10 +4,13 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
     // Parse the main block fields
-    const imageWrapper = block.children[0]?.children[0];
-    const textContent = block.children[1]?.children[0]?.innerHTML || '';
-    const buttonText = block.children[2]?.children[0]?.textContent?.trim() || '';
-    const buttonLink = block.children[3]?.children[0]?.textContent?.trim() || '#';
+    const bgImage = block.children[0]?.children[0].querySelector('img')?.src || '';
+    const imageWrapper = block.children[1]?.children[0];
+    const textContent = block.children[2]?.children[0]?.innerHTML || '';
+    const buttonText = block.children[3]?.children[0]?.textContent?.trim() || '';
+    const buttonLink = block.children[4]?.children[0]?.textContent?.trim() || '#';
+
+    document.documentElement.style.setProperty('--aboutus-bg', 'url(' + bgImage + ')');
 
     // Create the main section
     const aboutSection = document.createElement('div');
@@ -21,7 +24,7 @@ export default function decorate(block) {
 
     // Create the content column
     const contentCol = document.createElement('div');
-    contentCol.className = 'col-lg-6 mt-5 mt-lg-0';
+    contentCol.className = 'about-us-description';
 
     const aboutContent = document.createElement('div');
     aboutContent.className = 'about-content';
@@ -29,41 +32,18 @@ export default function decorate(block) {
     const titleDiv = document.createElement('div');
     titleDiv.className = 'div-title text-white';
 
-    const titleSpan = document.createElement('span');
-    titleSpan.className = 'wow fadeInUp';
-    titleSpan.textContent = 'About Us';
-    titleDiv.appendChild(titleSpan);
-
     const titleHeading = document.createElement('h2');
     titleHeading.className = 'wow fadeInUp text-white';
     titleHeading.setAttribute('data-wow-delay', '.3s');
     titleHeading.innerHTML = textContent;
     titleDiv.appendChild(titleHeading);
 
-    const buttonWrapper = document.createElement('a');
-    buttonWrapper.className = 'btn-main';
-    buttonWrapper.href = buttonLink;
-
-    const buttonDiv = document.createElement('div');
-    buttonDiv.className = 'button-2';
-
-    const buttonEffect = document.createElement('div');
-    buttonEffect.className = 'eff-2';
-    buttonEffect.textContent = buttonText;
-    buttonDiv.appendChild(buttonEffect);
-
-    const buttonTextSpan = document.createElement('span');
-    buttonTextSpan.textContent = 'Click Here';
-    buttonDiv.appendChild(buttonTextSpan);
-
-    buttonWrapper.appendChild(buttonDiv);
-
-    aboutContent.append(titleDiv, buttonWrapper);
+    aboutContent.append(titleDiv);
     contentCol.appendChild(aboutContent);
 
     // Create the image column
     const imageCol = document.createElement('div');
-    imageCol.className = 'col-lg-6';
+    imageCol.className = 'about-us-image';
 
     const aboutImageItems = document.createElement('div');
     aboutImageItems.className = 'about-image-items';
@@ -94,16 +74,10 @@ export default function decorate(block) {
     aboutSection.appendChild(aboutWrapper);
 
     // Parse the counter items
-    const counterItems = Array.from(block.children).slice(4);
+    const counterItems = Array.from(block.children).slice(5);
     if (counterItems.length > 0) {
         const counterSection = document.createElement('div');
-        counterSection.className = 'counter-section-2';
-
-        const counterContainer = document.createElement('div');
-        counterContainer.className = 'container';
-
-        const counterRow = document.createElement('div');
-        counterRow.className = 'row row-cols-lg-4 row-cols-sm-4 row-cols-1 counter-wrapper-2';
+        counterSection.className = 'about-us-counter';
 
         counterItems.forEach((item, index) => {
             const count = item.children[0]?.children[0]?.textContent?.trim() || '';
@@ -112,9 +86,25 @@ export default function decorate(block) {
             const iconAlt = item.children[3]?.children[0]?.textContent?.trim() || '';
 
             const counterItem = document.createElement('div');
-            counterItem.className = 'col counter-items wow fadeInUp';
-            counterItem.setAttribute('data-wow-delay', `${0.3 + (index * 0.2)}s`);
+            counterItem.className = 'counter-items';
+            // counterItem.setAttribute('data-wow-delay', `${0.3 + (index * 0.2)}s`);
 
+            const iconDiv = document.createElement('div');
+            iconDiv.className = 'counter-icon';
+
+            if (iconWrapper) {
+                const iconImg = iconWrapper.querySelector('img');
+                if (iconImg) {
+                    const optimizedIcon = createOptimizedPicture(
+                        iconImg.src,
+                        iconAlt,
+                        false,
+                        [{ width: '48' }]
+                    );
+                    iconDiv.appendChild(optimizedIcon);
+                }
+            }
+            
             const hoverIcons = document.createElement('div');
             hoverIcons.className = `hover-icons hover-icons-${index + 1}`;
 
@@ -150,22 +140,6 @@ export default function decorate(block) {
                 hoverIcons.appendChild(iconImg);
             });
 
-            const iconDiv = document.createElement('div');
-            iconDiv.className = 'icon';
-
-            if (iconWrapper) {
-                const iconImg = iconWrapper.querySelector('img');
-                if (iconImg) {
-                    const optimizedIcon = createOptimizedPicture(
-                        iconImg.src,
-                        iconAlt,
-                        false,
-                        [{ width: '48' }]
-                    );
-                    iconDiv.appendChild(optimizedIcon);
-                }
-            }
-
             const contentDiv = document.createElement('div');
             contentDiv.className = 'content';
 
@@ -176,12 +150,11 @@ export default function decorate(block) {
             labelParagraph.textContent = label;
 
             contentDiv.append(countHeading, labelParagraph);
-            counterItem.append(hoverIcons, iconDiv, contentDiv);
-            counterRow.appendChild(counterItem);
+            iconDiv.append(hoverIcons);
+            counterItem.append(iconDiv, contentDiv);
+            counterSection.appendChild(counterItem);
         });
 
-        counterContainer.appendChild(counterRow);
-        counterSection.appendChild(counterContainer);
         aboutSection.appendChild(counterSection);
     }
 
@@ -198,15 +171,15 @@ export default function decorate(block) {
     }, 100);
 
     // Initialize animations on scroll
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
+    // const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.classList.add('animate');
+    //             observer.unobserve(entry.target);
+    //         }
+    //     });
+    // }, { threshold: 0.1 });
 
-    const animatableElements = aboutSection.querySelectorAll('.wow');
-    animatableElements.forEach(el => observer.observe(el));
+    // const animatableElements = aboutSection.querySelectorAll('.wow');
+    // animatableElements.forEach(el => observer.observe(el));
 }
