@@ -6,7 +6,7 @@ export default function decorate(block) {
     // Parse the main block fields
     const bgImage = block.children[0]?.children[0].querySelector('img')?.src || '';
     const imageWrapper = block.children[1]?.children[0];
-    const textContent = block.children[2]?.children[0]?.innerHTML || '';
+    const aboutContentRichText = block.children[2]?.children[0]?.innerHTML || '';
     const buttonText = block.children[3]?.children[0]?.textContent?.trim() || '';
     const buttonLink = block.children[4]?.children[0]?.textContent?.trim() || '#';
 
@@ -29,16 +29,7 @@ export default function decorate(block) {
     const aboutContent = document.createElement('div');
     aboutContent.className = 'about-content';
 
-    const titleDiv = document.createElement('div');
-    titleDiv.className = 'div-title text-white';
-
-    const titleHeading = document.createElement('h2');
-    titleHeading.className = 'wow fadeInUp text-white';
-    titleHeading.setAttribute('data-wow-delay', '.3s');
-    titleHeading.innerHTML = textContent;
-    titleDiv.appendChild(titleHeading);
-
-    aboutContent.append(titleDiv);
+    aboutContent.innerHTML = aboutContentRichText;
     contentCol.appendChild(aboutContent);
 
     // Create the image column
