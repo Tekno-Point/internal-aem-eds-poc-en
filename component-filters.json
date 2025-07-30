@@ -15,7 +15,9 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "esaf-swiper",
+      "about-us"
     ]
   },
   {
@@ -43,6 +45,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+   {
+    "id": "esaf-swiper",
+    "components": [
+      "esaf-swiper-item"
     ]
   }
 ]
