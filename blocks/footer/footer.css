@@ -3,13 +3,13 @@ footer {
   font-size: var(--body-font-size-xs);
 }
 
-footer .columns > div {
-  @media (width >= 900px) {
+footer .columns>div {
+  @media (width >=900px) {
     align-items: start;
   }
 }
 
-footer .footer > div {
+footer .footer>div {
   margin: auto;
 }
 
@@ -17,11 +17,24 @@ footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-  }
+@media (width >=900px) {
+  footer .footer>div {}
 }
 
 footer ul {
   list-style: none;
+}
+
+footer .footer-primary>div {
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 24px 0 31px 0;
+}
+
+footer .footer-primary h3 {
+  font-size: 16px;
+  line-height: 121%;
+  font-weight: 600;
+  color: #0a3677;
+  margin: 0 0 5px;
 }
