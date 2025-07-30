@@ -132,6 +132,14 @@
           {
             "name": "video-carousel",
             "value": "video-carousel"
+          },
+          {
+            "name": "Footer Primary",
+            "value": "footer-primary"
+          },
+          {
+            "name": "Footer Secondary",
+            "value": "footer-secondary"
           }
         ]
       }
