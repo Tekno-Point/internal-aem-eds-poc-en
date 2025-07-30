@@ -974,5 +974,82 @@
         "value": ""
       }
     ]
+  },
+   {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Tab Style",
+            "value": "tab-style"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Body Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "content",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "content Style",
+            "value": "content-style"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "content-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Content Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Content Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Card Description",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_details",
+        "value": "",
+        "label": "Additional Details",
+        "valueType": "string"
+      }
+    ]
   }
 ]

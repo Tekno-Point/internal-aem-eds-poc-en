@@ -23,7 +23,9 @@
       "dealership-locator",
       "warranty-card",
       "chargingstations",
-      "form"
+      "form",
+      "tab",
+      "content"
     ]
   },
   {
@@ -37,6 +39,18 @@
   {
     "id": "carousel",
     "components": ["carousel-item"]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tab-item"
+    ]
+  },
+    {
+    "id": "content",
+    "components": [
+      "content-item"
+    ]
   },
   {
     "id": "column",
