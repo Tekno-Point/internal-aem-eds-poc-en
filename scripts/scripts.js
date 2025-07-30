@@ -149,7 +149,7 @@ const loadEmbed = (block, link, autoplay) => {
 };
 
 export default function decorateEmbed(block) {
-  const placeholder = block.querySelector('picture');
+  const placeholder = block.querySelector('picture') || block.previousElementSibling?.querySelector('picture');
   const link = block.querySelector('a').href;
   block.textContent = '';
 
