@@ -118,6 +118,18 @@
             "value": "loan-offer"
           },
           {
+            "name": "Bg Platinum",
+            "value": "bg-platinum"
+          },
+          {
+            "name": "Bg Light Gray",
+            "value": "bg-light-gray"
+          },
+          {
+            "name": "Bg Jet Stream",
+            "value": "bg-jet-stream"
+          },
+          {
             "name": "video-carousel",
             "value": "video-carousel"
           }
@@ -305,7 +317,7 @@
       }
     ]
   },
-   {
+  {
     "id": "carousel-item",
     "fields": [
       {
