@@ -1,5 +1,4 @@
-
-import SwiperText from "../swiper/swiper.min.js";
+import SwiperText from "../swiper/swiper.min.js"; 
 
 export default function decorate(block) {
   const paginationTexts = [];
@@ -36,28 +35,29 @@ export default function decorate(block) {
   // Right Arrow with SVG
   const RightArrow = document.createElement("div");
   RightArrow.classList.add("swiper-button-next");
-
   btnWrapper.appendChild(RightArrow);
 
   block.append(btnWrapper);
 
-  // Initialize Swiper
+  // Initialize Swiper with fade effect
   const swiper = new SwiperText(block, {
-  spaceBetween: 30,
-  loop: true, // enables infinite loop
-  autoplay: {
-    delay: 3000, // ⏱ time in ms between slides (e.g., 3000 = 3 seconds)
-    disableOnInteraction: false, // keeps autoplay running after user interactions
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-
+    spaceBetween: 30,
+    loop: true,
+    effect: "fade", // 👈 fade effect enabled here
+    fadeEffect: {
+      crossFade: true, // optional: allows fading between slides instead of just fading in/out
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 }
