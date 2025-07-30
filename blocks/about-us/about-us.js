@@ -4,10 +4,13 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
     // Parse the main block fields
-    const imageWrapper = block.children[0]?.children[0];
-    const textContent = block.children[1]?.children[0]?.innerHTML || '';
-    const buttonText = block.children[2]?.children[0]?.textContent?.trim() || '';
-    const buttonLink = block.children[3]?.children[0]?.textContent?.trim() || '#';
+    const bgImage = block.children[0]?.children[0].querySelector('img')?.src || '';
+    const imageWrapper = block.children[1]?.children[0];
+    const textContent = block.children[2]?.children[0]?.innerHTML || '';
+    const buttonText = block.children[3]?.children[0]?.textContent?.trim() || '';
+    const buttonLink = block.children[4]?.children[0]?.textContent?.trim() || '#';
+
+    document.documentElement.style.setProperty('--aboutus-bg', 'url(' + bgImage + ')');
 
     // Create the main section
     const aboutSection = document.createElement('div');
