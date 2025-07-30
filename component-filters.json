@@ -54,7 +54,7 @@
   },
   {
     "id": "accordion",
-    "components": ["accordion-item"]
+    "components": ["accordion-item","header-accordion-item"]
   },
   {
     "id": "image-accordion",
