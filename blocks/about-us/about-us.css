@@ -1,6 +1,18 @@
+.section.about-us-container {
+    max-width: 1314px;
+    margin: auto;
+    background-image: var(--aboutus-bg);
+    background-size: 100% 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 .about-wrapper {
     position: relative;
     display: flex;
+    max-width: 1154px;
+    margin: 0 auto;
+    color: #fff;
 }
 
 .about-wrapper .about-us-description,
@@ -8,11 +20,25 @@
     flex-basis: 50%;
 }
 
+.about-wrapper .about-content .button-container {
+    margin: 0;
+    padding: 0;
+}
+
+.about-wrapper .about-content .button-container .button {
+    background-color: #cd171d;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
 .about-us-counter {
     display: flex;
     justify-content: center;
     max-width: 1122px;
-    margin: 0 auto  ;
+    background: #fff;
+    border-radius: 11px;
+    margin: 0 auto;
     padding: 55px 38px;
 }
 
@@ -30,7 +56,7 @@
     border-right: none;
 }
 
-.about-us-counter .counter-items .content p{
+.about-us-counter .counter-items .content p {
     color: var(--theme2);
     margin-top: 10px;
     font-size: 18px;

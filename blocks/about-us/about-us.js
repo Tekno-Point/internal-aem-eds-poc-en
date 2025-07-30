@@ -74,7 +74,7 @@ export default function decorate(block) {
     aboutSection.appendChild(aboutWrapper);
 
     // Parse the counter items
-    const counterItems = Array.from(block.children).slice(4);
+    const counterItems = Array.from(block.children).slice(5);
     if (counterItems.length > 0) {
         const counterSection = document.createElement('div');
         counterSection.className = 'about-us-counter';
