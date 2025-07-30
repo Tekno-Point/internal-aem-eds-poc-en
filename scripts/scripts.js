@@ -228,7 +228,7 @@ function loadAutoBlock(doc) {
   doc.querySelectorAll('a').forEach((a) => {
     if (a && a.href && a.href.includes('/fragments/')) {
       decorateFragment(a.parentElement);
-    } else if (a && a.href && a.href.includes('/www.youtube.com/')) {
+    } else if (a && a.href && a.href.includes('/youtube/')) {
       decorateEmbed(a.parentElement);
     } else if (a && a.href && a.href.includes('/forms/')) {
       decorateForm(a.parentElement);
