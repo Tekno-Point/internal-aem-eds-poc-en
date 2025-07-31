@@ -9,7 +9,6 @@ const pixelsPerDegree = 1.5;
 const isMobile = window.matchMedia("(max-width: 760px)").matches;
 
 export default async function decorate(block) {
-    debugger
   let props = Array.from(block.children).map((div) => div);
   const imagesURL = props[1].textContent.trim();
   let heading = props[2].children[0].children[0];
@@ -78,39 +77,6 @@ export default async function decorate(block) {
       activeIndex = ind;
     });
   });
-
-//   function test2() {
-//     // ak11
-//     const selectedCity = "NEW DELHI";
-//     const effectivePrice = "1500";
-//     const colourselected = "orange";
-//     const price = document.querySelector(".amount");
-//     // price.firstChild.nodeValue = "₹" + e.target.dataset.price;
-//     price.firstChild.nodeValue = "₹" + effectivePrice;
-
-//     const filteredCitycol = filteredCityTemp.filter(
-//       (citypro) => citypro.city_state_id.split("~")[0] === selectedCity
-//     );
-//     debugger
-//     const filteredColour = filteredCitycol.filter(
-//       (citycolor) => citycolor.item_name === "V2 PRO"
-//     );
-
-//      filteredColour.forEach(function (e, index) {
-//     const colorName = e.variant_name.split(" ").slice(-1).join();
-
-//     // Create a div element
-//     const colorDiv = document.createElement("div");
-//     colorDiv.className = "color";
-//     colorDiv.dataset.price = e.effectivePrice;
-//     colorDiv.style.backgroundColor = colorName;
-//     colorDiv.dataset.id = e.variant_sf_id;
-//     // colorDiv.textContent = colorName;
-
-//     // Append to the parent container
-//    document.querySelector(".colors").appendChild(colorDiv);
-//   });
-//   }
 
   const mainImage = modelWrapper.querySelector(".image");
   mainImage.addEventListener("mousedown", (e) => {
