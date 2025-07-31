@@ -1,8 +1,5 @@
 {
-  "project": "AEM XWalk Boilerplate",
-  "editUrlLabel": "AEM  Editor",
-  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open",
-  "contentSourceUrl": "https://author-p48457-e1275402.adobeaemcloud.com/bin/franklin.delivery/Tekno-Point/internal-aem-eds-poc-en/main",
+  "project": "EDS Accessibility Mode Sidekick Extension",
   "plugins": [
     {
       "id": "accessibility-mode",
@@ -12,21 +9,6 @@
         "dev"
       ],
       "event": "accessibility-mode"
-    },
-    {
-      "id": "tools",
-      "title": "Tools",
-      "isContainer": true
-    },
-    {
-      "containerId": "tools",
-      "id": "seo-check",
-      "title": "SEO Check",
-      "palette": true,
-      "environments": ["*"],
-      "url": "data:text/html,<script>location.href='https://web.dev/measure/?url=' + encodeURIComponent(location.href);</script>",
-      "passReferrer": false,
-      "passConfig": false
     }
   ]
 }
