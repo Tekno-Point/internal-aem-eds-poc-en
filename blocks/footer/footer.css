@@ -28,7 +28,7 @@ footer ul {
 footer .footer-primary>div {
   max-width: 1290px;
   margin: 0 auto;
-  padding: 24px 0 31px 0;
+  padding: 48px 0 31px 0;
 }
 
 footer .footer-primary h3 {
@@ -37,4 +37,46 @@ footer .footer-primary h3 {
   font-weight: 600;
   color: #0a3677;
   margin: 0 0 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  line-height: 121%;
+}
+
+footer .footer-primary a{
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0 2px 0 0;
+    width: auto;
+    font-size: 13px;
+    line-height: 18px;
+    color: #231F20;
+    font-weight: 300;
+    line-height: 121%;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    text-wrap: nowrap
+
+}
+
+
+.footer-secondary .default-content-wrapper{
+display: flex
+;
+    justify-content: space-around;
+}
+
+.footer-secondary .default-content-wrapper ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-secondary .default-content-wrapper ul li{
+    padding: 0;
+    margin: 0;
+    width: auto;
+    font-size: 12px;
+    line-height: 38px;
+    color: #231F20;
+    font-weight: 300;
 }
