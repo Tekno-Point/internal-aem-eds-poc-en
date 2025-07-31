@@ -140,6 +140,10 @@
           {
             "name": "Footer Secondary",
             "value": "footer-secondary"
+          },
+          {
+            "name": "block-card",
+            "value": "block-card"
           }
         ]
       }
