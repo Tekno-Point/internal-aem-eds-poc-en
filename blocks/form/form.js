@@ -1,7 +1,7 @@
 import { ADD_TRAVELLERS } from './add-travellers.js';
 import callBackSubmit from './callback-submit.js';
 import createField from './form-fields.js';
-import { onMultiTripSubmit, onTravelDetailsSubmit } from './form-submits.js';
+import { onCustomerDetailsSubmit, onLoanDetailsSubmit, onMultiTripSubmit, onOccupationDetailsSubmit, onTravelDetailsSubmit } from './form-submits.js';
 import formToggler, { getParentFromChildId } from './formToggler.js';
 import { SINGLE_TRIP } from './single-trip.js';
 
@@ -98,6 +98,15 @@ const formMatcher = (form, id) => {
       break;
     case 'extend-policy':
       formToggler(id)
+      break;
+    case 'customer-form':
+      onCustomerDetailsSubmit(form);
+      break;
+    case 'occupation-form':
+      onOccupationDetailsSubmit(form);
+      break;
+    case 'loan-form':
+      onLoanDetailsSubmit(form);
       break;
     case 'callback-submit':
       callBackSubmit(form).then((res) => {

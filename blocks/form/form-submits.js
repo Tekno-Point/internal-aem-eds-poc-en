@@ -1,5 +1,4 @@
-import { travelinsurancecontinueClick } from "./analytics-script.js";
-
+import { travelinsurancebasicdetailSubmit, travelinsurancecontinueClick, travelinsuranceloandetailSubmit, travelinsuranceoccupationdetailSubmit } from "./analytics-script.js";
 
 function onTravelDetailsSubmit(form) {
   const tripFormData = new FormData(document.getElementById("single-trip"))
@@ -25,7 +24,6 @@ function onTravelDetailsSubmit(form) {
   )
 }
 
-
 const onMultiTripSubmit = (form) => {
   const multiTripFormData = new FormData(form);
 
@@ -48,6 +46,48 @@ const onMultiTripSubmit = (form) => {
   )
 }
 
+const onCustomerDetailsSubmit = (form) => {
+  const customerFormData = new FormData(form);
+  
+  travelinsurancebasicdetailSubmit(
+    "lead-id",
+    customerFormData.get("date-of-birth"),
+    "travelinsurance",
+    "",//"crmId"
+    customerFormData.get("email"),
+    customerFormData.get("mobile-number"),
+    "",//"Consent"
+  )
+}
+
+const onOccupationDetailsSubmit = (form) => {
+  const occupationFormData = new FormData(form);
+
+  travelinsuranceoccupationdetailSubmit(
+    "lead-id",
+    occupationFormData.get("employment-type"),
+    occupationFormData.get("occupation"),
+    occupationFormData.get("employer-name"),
+    occupationFormData.get("monthly-income"),
+    "",//"Consent"
+    "travelinsurance",
+    "",//"crmId"
+  )
+}
+
+const onLoanDetailsSubmit = (form) => {
+  const loanFormData = new FormData(form);
+
+  travelinsuranceloandetailSubmit(
+    "lead-id",
+    loanFormData.get("loan-type"),
+    loanFormData.get("loan-tenure-value"),
+    loanFormData.get("loan-amount-requested"),
+    "",//"Consent"
+    "travelinsurance",
+    "",//"crmId"
+  )
+}
 
 function getDuration(startDate, returnDate) {
   const start = new Date(startDate);
@@ -56,5 +96,4 @@ function getDuration(startDate, returnDate) {
   return Math.ceil(diff / (1000 * 60 * 60 * 24));
 }
 
-export { onTravelDetailsSubmit, onMultiTripSubmit };
-
+export { onTravelDetailsSubmit, onMultiTripSubmit, onCustomerDetailsSubmit, onOccupationDetailsSubmit, onLoanDetailsSubmit };
