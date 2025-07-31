@@ -103,7 +103,7 @@ display: flex
 text-decoration: none;
 background: none;
 border: 1px solid #000;
-    border-radius: 50%;
+    border-radius: 100%;
     height: 20px;
     width: 20px;
     text-align: center;
@@ -150,6 +150,9 @@ color: #5d5d5d;
   footer .footer-primary>div{
     padding: 48px 20px 31px 20px;
   }
+  .columns > div>div{
+    padding-bottom:48px ;
+  }
  
 }
 
@@ -175,4 +178,9 @@ object-fit: contain;
 
 .columns>div>div:nth-child(1)>p img{
   object-fit: contain;
+}
+
+.footer-secondary .default-content-wrapper ul li >a>span{
+  width: 15px;
+  height: 15px;
 }
