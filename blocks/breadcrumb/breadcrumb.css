@@ -1,0 +1,38 @@
+.breadcrumb-container {
+  background-color: #e9f0f8;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.breadcrumb-wrapper ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+
+.breadcrumb-wrapper li {
+  color: #333;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+}
+
+/* .breadcrumb-wrapper li:not(:last-child)::after {
+  content: "›";
+  font-size: 14px;
+  color: #888;
+  margin: 0 8px;
+} */
+
+.breadcrumb-wrapper li:last-child {
+  font-weight: bold;
+  color: #000;
+}
+
+.icon img{
+    height: 83%;
+    width: 84%;
+}
