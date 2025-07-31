@@ -23,7 +23,8 @@
       "dealership-locator",
       "warranty-card",
       "chargingstations",
-      "form"
+      "form",
+      "breadcrumb"
     ]
   },
   {

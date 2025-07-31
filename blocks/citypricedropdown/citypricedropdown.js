@@ -32,6 +32,7 @@ export default async function decorate(block) {
   const filteredCity = cityPrices.data.filter(
     (city) => city.variant_sf_id == "a24OX000000WsenYAC"
   );
+  
   const filteredCityTemp = cityPrices.data;
 
   filteredCity.sort((a, b) => {
