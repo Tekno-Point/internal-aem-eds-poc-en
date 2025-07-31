@@ -57,21 +57,29 @@ footer .footer-primary a{
     text-wrap: nowrap
 
 }
+footer .footer-primary a:hover{
+  color: rgb(206, 24, 30)
+;
+}
 
 
 .footer-secondary .default-content-wrapper{
-display: flex
+display: flex;
+flex-wrap: wrap
 ;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 100px;
 }
 
 .footer-secondary .default-content-wrapper ul{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .footer-secondary .default-content-wrapper ul li{
+   font-family: "Open Sans", sans-serif;
     padding: 0;
     margin: 0;
     width: auto;
@@ -79,4 +87,92 @@ display: flex
     line-height: 38px;
     color: #231F20;
     font-weight: 300;
+}
+
+
+.footer-tertiary .default-content-wrapper{
+display: flex
+;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 120px;
+}
+
+.footer-tertiary .default-content-wrapper>p:nth-child(2)>a{
+   font-family: "Open Sans", sans-serif;
+text-decoration: none;
+background: none;
+border: 1px solid #000;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .2;
+}
+
+.footer-tertiary .default-content-wrapper>p:nth-child(1){
+  text-align: center;
+    font-size: 13px;
+    color: #727273;
+     font-family: "Open Sans", sans-serif;
+}
+
+.footer-tertiary .default-content-wrapper>p:nth-child(1)>a{
+color: #5d5d5d;
+    text-decoration: underline;
+     font-family: "Open Sans", sans-serif;
+}
+
+.bg-light-gray>.default-content-wrapper{
+  padding: 10px 20px;
+}
+
+@media(max-width : 786px){
+  footer .footer-primary a{
+    text-wrap: wrap;
+  }
+
+  .footer-secondary .default-content-wrapper{
+    padding: 5px;
+    justify-content: center;
+  }
+  .footer-tertiary .default-content-wrapper{
+    padding: 5px ;
+    flex-direction: column;
+  }
+  footer .footer-primary>div{
+    padding: 48px 20px 31px 20px;
+  }
+ 
+}
+
+.columns>div>div:nth-child(1)>ul:nth-child(5){
+  display: flex;
+  gap: 10px;
+
+}
+
+.columns>div>div:nth-child(1)>ul:nth-child(5)>li>span{
+width: 128px;
+height: 38px;
+}
+.columns>div>div:nth-child(1)>ul:nth-child(5)>li>span img{
+object-fit: contain;
+}
+
+.columns>div>div:nth-child(1)>p{
+  max-width: 292px;
+  width: 100%;
+  height: 109px;
+}
+
+.columns>div>div:nth-child(1)>p img{
+  object-fit: contain;
 }
