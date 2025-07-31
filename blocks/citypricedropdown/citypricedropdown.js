@@ -48,7 +48,6 @@ export default async function decorate(block) {
     btn.classList.add("buy-btn");
   }
 
-  //Number(city.effectivePrice).toLocaleString('en-IN')
   let dropdown = filteredCity
     .map(
       (city) =>
@@ -137,6 +136,7 @@ export default async function decorate(block) {
   btn ? block.appendChild(btn) : "";
   //ak
   document.querySelector(".colors").addEventListener("click", (e) => {
+    if(!e.target.dataset.price) return false;
     const price = document.querySelector(".amount");
     price.firstChild.nodeValue = "₹" + Number(e.target.dataset.price).toLocaleString("en-IN")
     const indexid = e.target.dataset.id;
@@ -151,10 +151,6 @@ export default async function decorate(block) {
           : testData[i].desk_img_urls.split(",")[0];
       }
     });
-
-    // selImage.src = isMobile
-    //   ? testData[indexid].mob_img_urls.split(",")[0]
-    //   : testData[indexid].desk_img_urls.split(",")[0];
   });
 }
 
@@ -239,22 +235,6 @@ const selectCity = (e, cityContainer, filteredCityTemp) => {
   });
 
   //ak2
-  // document.querySelector(".colors").innerHTML = "";
- 
-//   filteredColour.forEach(function (e, index) {
-//     const colorName = e.variant_name.split(" ").slice(-1).join();
-//     // Create a div element
-//     const colorDiv = document.createElement("div");
-//     colorDiv.className = "color";
-//     colorDiv.dataset.price = e.effectivePrice;
-//     colorDiv.style.backgroundColor = colorName;
-//     colorDiv.dataset.id = e.variant_sf_id;
-//     // colorDiv.textContent = colorName;
-
-//     // Append to the parent container
-//     // document.querySelector(".colors").appendChild(colorDiv);
-//   });
-
   cityContainer.textContent = selectedCity;
   const block = e.target.closest(".box-container");
   // const price = block.querySelector(".amount");
@@ -269,30 +249,6 @@ async function renderDataFromAPIimg(url) {
   const data = await resp.json();
   return data;
 }
-// document.querySelector('.colors').addEventListener('click',(e)=>{
-//     // debugger
-//     const price = document.querySelector(".amount");
-//     price.firstChild.nodeValue = "₹" + e.target.dataset.price;
-//     const isMobile = window.matchMedia("(max-width: 760px)").matches;
-//     e.target.classList.add('active')
-
-//         let selImage = document.querySelector(".image");
-//         selImage.src = isMobile
-//             ? arrayImagesDet[ind].mob_img_urls.split(",")[0]
-//             : arrayImagesDet[ind].desk_img_urls.split(",")[0];
-
-//     //  let colorDiv = document.querySelectorAll(".color");
-//     // let activeIndex = 0;
-
-//     // colorDiv.forEach((div, ind) => {
-//     //     div.addEventListener("click", () => {
-//     //         changeActiveClr(colorDiv);
-//     //         selectedScooterClr(div, ind);
-//     //         activeIndex = ind;
-//     //     });
-//     // });
-// })
-
 const showPopup = (e, popup) => {
   popup.style.visibility = "visible";
 };

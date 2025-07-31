@@ -1,6 +1,3 @@
-// import { loadScript } from "../../scripts/aem.js";
-// import '../../styles/charging-map.css'; // Assuming CSS is in styles folder
-
 import { renderDataFromAPI } from "../../scripts/scripts.js";
 
 export default async function decorate(block) {
@@ -165,14 +162,6 @@ export default async function decorate(block) {
                     const lng = parseFloat(station.longitude);
 
                     if (!isNaN(lat) && !isNaN(lng)) {
-                        // const marker = new L.Marker([lat, lng], {
-                        //     icon: L.icon({
-                        //         iconUrl: "https://maps.mapmyindia.com/images/2.png",
-                        //         iconSize: [25, 41],
-                        //         iconAnchor: [12, 41],
-                        //         popupAnchor: [1, -34],
-                        //     }),
-                        // }).addTo(currentMarkersLayer);
                         const iconSvg = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="47" height="58" viewBox="0 0 512 512"><circle cx="256" cy="256" r="240" fill="white" stroke="%23FF5C00" stroke-width="32"/><path d="M229.4 48L122.8 256H224v208l128-240H288L341.4 48H229.4Z" fill="%23FF5C00"/></svg>';
                         const marker = new L.Marker([lat, lng], {
                             icon: L.icon({
@@ -375,19 +364,6 @@ export default async function decorate(block) {
             const accordionContent = block.querySelector(".charging-accordian-content");
             const mapContainer = block.querySelector(".map-container");
             const toggleButton = block.querySelector(".accordion-toggle-button");
-
-            // accordionHeader.addEventListener('click', (event) => {
-            //     if (event.target.closest('.search-input-container') || event.target.closest('.accordion-toggle-button')) {
-            //         return;
-            //     }
-            //     accordionContent.classList.toggle('collapsed');
-            //     toggleButton.textContent = accordionContent.classList.contains('collapsed') ? '+' : '-';
-            //     if (!accordionContent.classList.contains('collapsed')) {
-            //         setTimeout(() => {
-            //             map.invalidateSize();
-            //         }, 300);
-            //     }
-            // });
             mapContainer.style.height = "0px";
             toggleButton.addEventListener('click', (event) => {
                 event.stopPropagation();
