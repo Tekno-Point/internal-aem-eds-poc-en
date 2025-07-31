@@ -9,6 +9,7 @@ const pixelsPerDegree = 1.5;
 const isMobile = window.matchMedia("(max-width: 760px)").matches;
 
 export default async function decorate(block) {
+    debugger
   let props = Array.from(block.children).map((div) => div);
   const imagesURL = props[1].textContent.trim();
   let heading = props[2].children[0].children[0];
@@ -19,13 +20,6 @@ export default async function decorate(block) {
   let modelWrapper = document.createElement("div");
   modelWrapper.classList.add("model-wrapper");
 
-  //ak11 ---api data 
-//   const cityPrices = await renderDataFromAPI("/vida-v2-pro/api/citymodelprice.json");
-//   const filteredCity = cityPrices.data.filter(
-//     (city) => city.variant_sf_id == "a24OX000000WsenYAC"
-//   );
-//   const filteredCityTemp = cityPrices.data;
-////end
   let colors = document.createElement("div");
   colors.classList.add("colors");
 
@@ -41,6 +35,8 @@ export default async function decorate(block) {
     let div = document.createElement("div");
     div.style.backgroundColor = modelObj.color;
     div.setAttribute("id", modelObj.color_id);
+    div.dataset.price = modelObj.price; 
+
     ind == 0
       ? div.classList.add("active", "color")
       : div.classList.add("color");

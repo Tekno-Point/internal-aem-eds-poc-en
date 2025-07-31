@@ -137,9 +137,8 @@ export default async function decorate(block) {
   btn ? block.appendChild(btn) : "";
   //ak
   document.querySelector(".colors").addEventListener("click", (e) => {
-    debugger;
     const price = document.querySelector(".amount");
-    price.firstChild.nodeValue = "₹" + e.target.dataset.price;
+    price.firstChild.nodeValue = "₹" + Number(e.target.dataset.price).toLocaleString("en-IN")
     const indexid = e.target.dataset.id;
     const isMobile = window.matchMedia("(max-width: 760px)").matches;
     e.target.classList.add("active");
@@ -241,32 +240,29 @@ const selectCity = (e, cityContainer, filteredCityTemp) => {
 
   //ak2
   // document.querySelector(".colors").innerHTML = "";
-  debugger;
-  filteredColour.forEach(function (e, index) {
-    // if (colourselected != e.variant_sf_id) {
-    //   document.getElementById(e.variant_sf_id).style.display = "none";
-    // } else {
-    //   document.getElementById(e.variant_sf_id).style.display = "block";
-    // }
-    const colorName = e.variant_name.split(" ").slice(-1).join();
-    // Create a div element
-    const colorDiv = document.createElement("div");
-    colorDiv.className = "color";
-    colorDiv.dataset.price = e.effectivePrice;
-    colorDiv.style.backgroundColor = colorName;
-    colorDiv.dataset.id = e.variant_sf_id;
-    // colorDiv.textContent = colorName;
+ 
+//   filteredColour.forEach(function (e, index) {
+//     const colorName = e.variant_name.split(" ").slice(-1).join();
+//     // Create a div element
+//     const colorDiv = document.createElement("div");
+//     colorDiv.className = "color";
+//     colorDiv.dataset.price = e.effectivePrice;
+//     colorDiv.style.backgroundColor = colorName;
+//     colorDiv.dataset.id = e.variant_sf_id;
+//     // colorDiv.textContent = colorName;
 
-    // Append to the parent container
-    // document.querySelector(".colors").appendChild(colorDiv);
-  });
+//     // Append to the parent container
+//     // document.querySelector(".colors").appendChild(colorDiv);
+//   });
 
   cityContainer.textContent = selectedCity;
   const block = e.target.closest(".box-container");
   // const price = block.querySelector(".amount");
 
   e.target.closest(".city-option-container").classList.add("dp-none");
-  //   price.firstChild.nodeValue = "₹" + effectivePrice;
+  const price = block.querySelector(".amount");
+    price.firstChild.nodeValue = "₹" + effectivePrice
+
 };
 async function renderDataFromAPIimg(url) {
   const resp = await fetchAPI("GET", url);
