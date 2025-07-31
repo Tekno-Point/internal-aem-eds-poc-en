@@ -5,6 +5,15 @@
   "contentSourceUrl": "https://author-p48457-e1275402.adobeaemcloud.com/bin/franklin.delivery/Tekno-Point/internal-aem-eds-poc-en/main",
   "plugins": [
     {
+      "id": "accessibility-mode",
+      "title": "Accessibility Mode",
+      "environments": [
+        "preview",
+        "dev"
+      ],
+      "event": "accessibility-mode"
+    },
+    {
       "id": "tools",
       "title": "Tools",
       "isContainer": true
