@@ -273,6 +273,7 @@ header nav .nav-tools {
     grid-area: tools;
 }
 
+/*nav-top-nav  start*/
 .nav-top-nav {
     background: linear-gradient(
         0.25turn,
@@ -320,11 +321,11 @@ header nav .nav-tools {
     transition: all 0.4s ease-in-out;
 }
 
-.nav-top-nav > .default-content-wrapper > ul > li>a{
-  text-decoration: none;
+.nav-top-nav > .default-content-wrapper > ul > li > a {
+    text-decoration: none;
 }
-.nav-top-nav > .default-content-wrapper > ul > li:hover{
-   background-size: 100% 1px;
+.nav-top-nav > .default-content-wrapper > ul > li:hover {
+    background-size: 100% 1px;
 }
 
 .nav-top-nav > .default-content-wrapper > ul:nth-child(1) > li > a {
@@ -345,9 +346,40 @@ header nav .nav-tools {
     text-decoration: none;
 }
 
-.nav-top-nav > .default-content-wrapper > ul:nth-child(1) > li > a:hover{
-      background-size: 100% 1px;
+.nav-top-nav > .default-content-wrapper > ul:nth-child(1) > li > a:hover {
+    background-size: 100% 1px;
 }
 .nav-top-nav > .default-content-wrapper > ul:nth-child(1) > li:last-child > a {
     border-right: none;
+}
+
+/*nav-top-nav  end */
+
+/*start   nav-sections */
+
+.nav-sections > .default-content-wrapper > ul > li > p > a {
+    background: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #002a69;
+    padding: 4px 19px;
+    text-align: left;
+    position: relative;
+    text-transform: capitalize;
+    transition: all 0.4s ease-in-out;
+    border-radius: 24px;
+    margin: 0px;
+}
+
+header nav .nav-sections ul > .nav-drop > ul {
+    padding: 30px;
+    background-color: #002a69;
+    color: white;
+}
+
+.button-container > p > a {
+    background: none;
+    list-style: none;
+    text-decoration: none;
 }
