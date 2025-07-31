@@ -57,6 +57,7 @@ export function moveAttributes(from, to, attributes) {
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
  */
+
 export function moveInstrumentation(from, to) {
   moveAttributes(
     from,
@@ -66,7 +67,45 @@ export function moveInstrumentation(from, to) {
       .filter((attr) => attr.startsWith('data-aue-') || attr.startsWith('data-richtext-')),
   );
 }
+/**
+ * Creates an element with the given tag name and properties.
+ * @param {string} tagName The tag name of the element to create.
+ * @param {object} props The properties to set on the element.
+ * @param {string|Element|Array} html The HTML content to append to the element.
+ * @returns {HTMLElement} The created element.
+ */
+export function createElement(tagName, props, html) {
+  const elem = document.createElement(tagName);
+  if (props) {
+    Object.keys(props).forEach((propName) => {
+      const val = props[propName];
+      if (propName === 'class') {
+        const classesArr = (typeof val === 'string') ? [val] : val;
+        elem.classList.add(...classesArr);
+      } else {
+        elem.setAttribute(propName, val);
+      }
+    });
+  }
 
+  if (html) {
+    const appendEl = (el) => {
+      if (el instanceof HTMLElement || el instanceof SVGElement) {
+        elem.append(el);
+      } else {
+        elem.insertAdjacentHTML('beforeend', el);
+      }
+    };
+
+    if (Array.isArray(html)) {
+      html.forEach(appendEl);
+    } else {
+      appendEl(html);
+    }
+  }
+
+  return elem;
+}
 /**
  * load fonts.css and set a session storage flag
  */
