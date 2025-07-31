@@ -142,8 +142,8 @@
             "value": "footer-secondary"
           },
           {
-            "name": "block-card",
-            "value": "block-card"
+            "name": "blog-card",
+            "value": "blog-card"
           }
         ]
       }
