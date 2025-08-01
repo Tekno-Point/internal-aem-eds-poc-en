@@ -10,7 +10,9 @@ header nav {
     box-sizing: border-box;
     display: grid;
     grid-template:
-        "hamburger brand tools" var(--nav-height) "sections sections sections" 1fr / auto 1fr auto;
+        "nav-marquee nav-marquee nav-marquee"
+        "brand brand brand"
+        "tools tools hamburger";
     gap: 0 24px;
     margin: auto;
     height: var(--nav-height);
@@ -30,7 +32,7 @@ header nav[aria-expanded="true"] {
 
     header nav[aria-expanded="true"] {
         display: grid;
-        gap: 0px 0px;
+        gap: 0;
         grid-template:
             "nav-top nav-top nav-top"
             "nav-marquee nav-marquee nav-marquee"
