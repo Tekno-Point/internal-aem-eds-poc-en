@@ -170,3 +170,19 @@
     width: 42px;
     height: 40px;
 }
+
+@media(max-width : 786px){
+    .about-us-counter{
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .about-us-counter .counter-items{
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    .about-us-counter .counter-items{
+        padding-bottom: 15px;
+    }
+}

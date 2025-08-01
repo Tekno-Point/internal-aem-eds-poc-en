@@ -1,7 +1,7 @@
 @import url("../swiper/swiper.min.css");
 
 .esaf-swiper > .swiper-wrapper {
-    min-height: 309px;
+    /* min-height: 309px; */
     height: 100%;
     border-radius: 10px;
 }
