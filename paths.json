@@ -48,7 +48,7 @@
     "/content/internal-aem-eds-poc/icicilombard/forms/test-forms/loan:/icicilombard/forms/test-forms/loan.json",
     "/content/internal-aem-eds-poc/hero-splinder-page/form/splendor:/hero-splinder-page/form/splendor.json",
     "/content/internal-aem-eds-poc/esafbank/forms/nav/search:/esafbank/forms/nav/search.json",
-    "/content/internal-aem-eds-poc/esafbank/forms/nav/login-dropdown:/esafbank/forms/nav/login-dropdown.json",
+    "/content/internal-aem-eds-poc/esafbank/forms/nav/login-dropdown:/esafbank/forms/nav/login-dropdown.json"
   ],
   "includes": [
     "/content/internal-aem-eds-poc/"
