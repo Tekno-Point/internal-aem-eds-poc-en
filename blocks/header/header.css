@@ -31,10 +31,10 @@ header nav[aria-expanded="true"] {
     header nav[aria-expanded="true"] {
         display: grid;
         gap: 0px 0px;
-        grid-template-areas:
+        grid-template:
             "nav-top nav-top nav-top"
             "nav-marquee nav-marquee nav-marquee"
-            "brand sections nav-tools";
+            "brand sections tools";
         min-height: 0;
         overflow: visible;
     }
