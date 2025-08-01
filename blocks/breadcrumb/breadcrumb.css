@@ -36,3 +36,7 @@
     height: 83%;
     width: 84%;
 }
+a:any-link {
+    color: #000;
+    text-decoration: none;
+}
