@@ -60,5 +60,11 @@
     "components": [
       "carousel-item"
     ]
+  },
+  {
+    "id": "content-fragment",
+    "components": [
+      "content-fragment-item"
+    ]
   }
 ]
