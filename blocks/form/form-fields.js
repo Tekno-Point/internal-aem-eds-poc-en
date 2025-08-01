@@ -1,5 +1,4 @@
 import { toClassName } from '../../scripts/aem.js';
-import {ADD_TRAVELLERS} from './add-travellers.js'
 
 function createFieldWrapper(fd) {
   const fieldWrapper = document.createElement('div');

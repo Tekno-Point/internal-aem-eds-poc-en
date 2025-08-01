@@ -1,9 +1,4 @@
-import { ADD_TRAVELLERS } from './add-travellers.js';
-import callBackSubmit from './callback-submit.js';
 import createField from './form-fields.js';
-import { onCustomerDetailsSubmit, onLoanDetailsSubmit, onMultiTripSubmit, onOccupationDetailsSubmit, onTravelDetailsSubmit } from './form-submits.js';
-import formToggler, { getParentFromChildId } from './formToggler.js';
-import { SINGLE_TRIP } from './single-trip.js';
 
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
@@ -82,91 +77,26 @@ async function handleSubmit(form) {
   }
 }
 
-const formMatcher = (form, id) => {
-  switch (id) {
-    case 'single-trip':
-      formToggler('travel-details');
-      form.dataset.tripForm = JSON.stringify(new FormData(form));
-      ADD_TRAVELLERS(getParentFromChildId('travel-details', '.form-wrapper'));
-      break;
-    case 'multi-trip':
-      onMultiTripSubmit(form);
-      break;
-    case 'travel-details':
-      formToggler(id)
-      onTravelDetailsSubmit(form);
-      break;
-    case 'extend-policy':
-      formToggler(id)
-      break;
-    case 'customer-form':
-      onCustomerDetailsSubmit(form);
-      break;
-    case 'occupation-form':
-      onOccupationDetailsSubmit(form);
-      break;
-    case 'loan-form':
-      onLoanDetailsSubmit(form);
-      break;
-    case 'callback-submit':
-      callBackSubmit(form).then((res) => {
-        const result = JSON.parse(res.callbackSubmitResult);
-        if (result.success) {
-          document.body.classList.add('callback-submitted');
-          console.log("✅ Submission successful!");
-        } else {
-          console.error("❌ Submission failed:", result.errorMessage);
-        }
-      });
-      break;
-    default:
-      console.warn('no-mathching form');
-      const valid = form.checkValidity();
-      if (valid) {
-        handleSubmit(form);
-      } else {
-        const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
-        if (firstInvalidEl) {
-          firstInvalidEl.focus();
-          firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-  }
-}
-
-function onExtendPolicyClick(form) {
-  const extendPolicyButtons = form.querySelectorAll('#form-multi-trip-link-wrapper>div:nth-child(2) input, #form-single-trip-link-wrapper>div:nth-child(2) input');
-  extendPolicyButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      formToggler('extend-policy');
-    });
-  });
-}
-
 export default async function decorate(block) {
   const links = [...block.querySelectorAll('a')].map((a) => a.href);
   const formLink = links.find((link) => link.startsWith(window.location.origin) && link.endsWith('.json'));
   const submitLink = links.find((link) => link !== formLink);
   if (!formLink || !submitLink) return;
 
-  const formId = block.querySelector('div > div > p:nth-child(3)')?.textContent;
-
   const form = await createForm(formLink, submitLink);
-
-  if (formId) form.id = formId;
-
   block.replaceChildren(form);
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    formMatcher(form, formId);
+    const valid = form.checkValidity();
+    if (valid) {
+      handleSubmit(form);
+    } else {
+      const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
+      if (firstInvalidEl) {
+        firstInvalidEl.focus();
+        firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   });
-
-  onExtendPolicyClick(form);
-
-  SINGLE_TRIP(block)
-
 }
-
-
-export const decorateForm = decorate
