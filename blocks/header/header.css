@@ -9,10 +9,7 @@ header .nav-wrapper {
 header nav {
     box-sizing: border-box;
     display: grid;
-    grid-template:
-        "nav-marquee nav-marquee nav-marquee"
-        "brand brand brand"
-        "tools tools hamburger";
+    grid-template: "hamburger brand tools" var(--nav-height) "sections sections sections" 1fr / auto 1fr auto;
     gap: 0 24px;
     margin: auto;
     height: var(--nav-height);
@@ -28,11 +25,12 @@ header nav[aria-expanded="true"] {
 }
 
 @media (width >=900px) {
-    header nav {}
+    header nav {
+    }
 
     header nav[aria-expanded="true"] {
         display: grid;
-        gap: 0;
+        gap: 0px 0px;
         grid-template:
             "nav-top nav-top nav-top"
             "nav-marquee nav-marquee nav-marquee"
@@ -178,15 +176,15 @@ header nav .nav-sections ul {
     font-size: var(--body-font-size-s);
 }
 
-header nav .nav-sections ul>li {
+header nav .nav-sections ul > li {
     font-weight: 500;
 }
 
-header nav .nav-sections ul>li>ul {
+header nav .nav-sections ul > li > ul {
     margin-top: 0;
 }
 
-header nav .nav-sections ul>li>ul>li {
+header nav .nav-sections ul > li > ul > li {
     font-weight: 400;
 }
 
@@ -233,17 +231,23 @@ header nav .nav-sections ul>li>ul>li {
         margin: 0;
     }
 
-    header nav .nav-sections .default-content-wrapper>ul>li {
+    header nav .nav-sections .default-content-wrapper > ul > li {
         flex: 0 1 auto;
         position: relative;
     }
 
-    header nav .nav-sections .default-content-wrapper>ul>li>ul {
+    header nav .nav-sections .default-content-wrapper > ul > li > ul {
         display: none;
         position: relative;
     }
 
-    header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded="true"]>ul {
+    header
+        nav
+        .nav-sections
+        .default-content-wrapper
+        > ul
+        > li[aria-expanded="true"]
+        > ul {
         display: block;
         position: absolute;
         left: -24px;
@@ -254,7 +258,7 @@ header nav .nav-sections ul>li>ul>li {
         white-space: initial;
     }
 
-    header nav .nav-sections .default-content-wrapper>ul>li>ul::before {
+    header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
         content: "";
         position: absolute;
         top: -8px;
@@ -266,10 +270,35 @@ header nav .nav-sections ul>li>ul>li {
         border-bottom: 8px solid var(--light-color);
     }
 
-    header nav .nav-sections .default-content-wrapper>ul>li>ul>li {
+    header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
         padding: 8px 0;
     }
 }
+
+/*nav-sections*/
+
+.nav-sections>.default-content-wrapper>ul>.nav-drop>ul{
+    background-color: #002A69 !important;
+    color: white;
+    border-radius: 24px;
+    
+}
+.nav-sections>.default-content-wrapper>ul .nav-drop>ul li{
+    margin: 0px;
+    padding: 5px;
+}
+.nav-sections>.default-content-wrapper>ul .nav-drop>ul li p a{
+    background:none;
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 0px;
+}
+
+.nav-sections>.default-content-wrapper>ul .nav-drop ul li ul{
+    display: none;
+}
+
 
 /* tools */
 header nav .nav-tools {
@@ -278,22 +307,24 @@ header nav .nav-tools {
 
 /* .nav-top  start*/
 .nav-top {
-    background: linear-gradient(0.25turn,
-            rgb(195, 25, 34),
-            70%,
-            rgb(0, 54, 124)) !important;
+    background: linear-gradient(
+        0.25turn,
+        rgb(195, 25, 34),
+        70%,
+        rgb(0, 54, 124)
+    ) !important;
     color: white;
     /* display: contents; */
 }
 
-.nav-top>.default-content-wrapper {
+.nav-top > .default-content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
 }
 
-.nav-top>.default-content-wrapper>ul {
+.nav-top > .default-content-wrapper > ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
@@ -301,7 +332,7 @@ header nav .nav-tools {
     gap: 20px;
 }
 
-.nav-top>.default-content-wrapper>ul:nth-child(1) {
+.nav-top > .default-content-wrapper > ul:nth-child(1) {
     display: flex;
     gap: 20px;
     list-style: none;
@@ -311,7 +342,7 @@ header nav .nav-tools {
     padding: 15px 6px;
 }
 
-.nav-top>.default-content-wrapper>ul>li {
+.nav-top > .default-content-wrapper > ul > li {
     font-size: 15px;
     color: #fff;
     font-weight: 500;
@@ -323,15 +354,15 @@ header nav .nav-tools {
     transition: all 0.4s ease-in-out;
 }
 
-.nav-top>.default-content-wrapper>ul>li>a {
+.nav-top > .default-content-wrapper > ul > li > a {
     text-decoration: none;
 }
 
-.nav-top>.default-content-wrapper>ul>li:hover {
+.nav-top > .default-content-wrapper > ul > li:hover {
     background-size: 100% 1px;
 }
 
-.nav-top>.default-content-wrapper>ul:nth-child(1)>li>a {
+.nav-top > .default-content-wrapper > ul:nth-child(1) > li > a {
     border-right: 1px solid white;
     padding-right: 5px;
     color: #fff;
@@ -349,11 +380,11 @@ header nav .nav-tools {
     text-decoration: none;
 }
 
-.nav-top>.default-content-wrapper>ul:nth-child(1)>li>a:hover {
+.nav-top > .default-content-wrapper > ul:nth-child(1) > li > a:hover {
     background-size: 100% 1px;
 }
 
-.nav-top>.default-content-wrapper>ul:nth-child(1)>li:last-child>a {
+.nav-top > .default-content-wrapper > ul:nth-child(1) > li:last-child > a {
     border-right: none;
 }
 
@@ -361,7 +392,7 @@ header nav .nav-tools {
 
 /*start   nav-sections */
 
-.nav-sections>.default-content-wrapper>ul>li>p>a {
+.nav-sections > .default-content-wrapper > ul > li > p > a {
     background: none;
     display: inline-block;
     font-size: 15px;
@@ -376,13 +407,13 @@ header nav .nav-tools {
     margin: 0px;
 }
 
-header nav .nav-sections ul>.nav-drop>ul {
+header nav .nav-sections ul > .nav-drop > ul {
     padding: 30px;
     background-color: #002a69;
     color: white;
 }
 
-.button-container>p>a {
+.button-container > p > a {
     background: none;
     list-style: none;
     text-decoration: none;
@@ -393,23 +424,23 @@ header nav .nav-sections ul>.nav-drop>ul {
     grid-area: nav-tools;
 }
 
-#search-form{
-display: flex;
-justify-content: center;
-align-items: center;
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#search-form>.field-wrapper>label{
-display: none;
+#search-form > .field-wrapper > label {
+    display: none;
 }
 
-#search-form>.field-wrapper>.button{
+#search-form > .field-wrapper > .button {
     background: none;
     color: black;
 }
 
-#search-form>.field-wrapper>input{
-    background-color: #F5F5F5;
+#search-form > .field-wrapper > input {
+    background-color: #f5f5f5;
     font-size: 15px;
     height: 44px;
     padding: 2px 0px 2px 74px;
@@ -417,30 +448,31 @@ display: none;
     border-radius: 30px;
     border: none;
     text-transform: capitalize;
-    color: #B3B3B3;
+    color: #b3b3b3;
     min-width: 300px;
 }
+
+.search-form>
 
 
 /*login*/
 
-form>.field-wrapper>label{
-display: none;
+form>.field-wrapper>label {
+    display: none;
 }
 
-
-form>.field-wrapper>select{
+form > .field-wrapper > select {
     max-width: 140px;
     width: 100%;
-    padding: 10px 10px 10px 15px;
+    padding: 7px 10px 7px 15px;
     background: transparent;
     border: none;
     text-align: center;
     margin: 0 auto;
     position: relative;
     z-index: 1;
-    background:#CA0608;;
-    color:#fff;;
+    background: #ca0608;
+    color: #fff;
     border-radius: 20px;
     outline: none;
     cursor: pointer;
@@ -448,14 +480,29 @@ form>.field-wrapper>select{
     font-weight: 500;
     text-transform: capitalize;
     text-align: start;
+    appearance: none; /* Remove default styling (works in most browsers) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
-form>.field-wrapper>select:hover{
+
+form > .field-wrapper > select > option[disabled]{
+    display: none;
+}
+
+form > .field-wrapper > select:hover {
     border: none;
 }
 
-.form-container{
+.form-container {
     display: flex;
-justify-content: center;
-align-items: center
-;}
+    justify-content: center;
+    align-items: center;
+}
 
+.form-container > div:nth-child(2) > .form > div > div > p:nth-child(2) {
+    display: none;
+}
+
+.form-container > div:nth-child(2) > .form > div > div > p:nth-child(3) {
+    display: none;
+}
