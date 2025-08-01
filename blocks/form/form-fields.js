@@ -131,14 +131,29 @@ const createConfirmation = (fd, form) => {
 
 const createSubmit = (fd) => {
   const button = document.createElement('button');
-  button.textContent = fd.Label || fd.Name;
   button.classList.add('button');
   button.type = 'submit';
+
+  // If fd.Icon exists, add image to button
+  if (fd.Icon) {
+    const img = document.createElement('img');
+    img.src = '/icons/' + fd.Icon;
+    img.alt = fd.Label || fd.Name || 'icon';
+    img.classList.add('button-icon'); // Optional: for styling
+
+    button.appendChild(img);
+  }
+
+  // Add label text after icon (or just text if no icon)
+  const span = document.createElement('span');
+  span.textContent = fd.Label || fd.Name;
+  button.appendChild(span);
 
   const fieldWrapper = createFieldWrapper(fd);
   fieldWrapper.append(button);
   return { field: button, fieldWrapper };
 };
+
 
 const createTextArea = (fd) => {
   const field = document.createElement('textarea');
