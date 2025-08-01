@@ -83,7 +83,12 @@ export default async function decorate(block) {
   const submitLink = links.find((link) => link !== formLink);
   if (!formLink || !submitLink) return;
 
+  const formId = block.querySelector('div > div > p:nth-child(3)')?.textContent;
+
   const form = await createForm(formLink, submitLink);
+
+  if (formId) form.id = formId;
+
   block.replaceChildren(form);
 
   form.addEventListener('submit', (e) => {
