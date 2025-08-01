@@ -17,6 +17,10 @@ header nav {
     margin: auto;
     height: var(--nav-height);
     font-family: var(--body-font-family);
+
+    @media (width<900px) {
+        gap: 0;
+    }
 }
 
 header nav[aria-expanded="true"] {
@@ -57,6 +61,7 @@ header nav .nav-hamburger {
     height: 22px;
     display: flex;
     align-items: center;
+    place-self: center;
 }
 
 header nav .nav-hamburger button {
@@ -308,6 +313,14 @@ header nav .nav-sections ul>li>ul>li {
 /* tools */
 header nav .nav-tools {
     grid-area: tools;
+
+    @media (width<900px) {
+        padding-inline: 12px;
+    }
+}
+
+#nav > div.section.form-container.nav-tools > div:nth-child(1) {
+    flex-basis: 46%;
 }
 
 /* .nav-top  start*/
@@ -439,6 +452,9 @@ header nav .nav-sections ul>.nav-drop>ul {
 
     @media (width<900px) {
         width: 35px;
+        padding-left: 12px;
+        border-radius: 50%;
+        background-color: unset;
     }
 }
 
@@ -446,6 +462,10 @@ header nav .nav-sections ul>.nav-drop>ul {
     padding: 0px;
     margin: 0px;
     border-right: 1px solid #B3B3B3;
+
+    @media (width<900px) {
+        border: none;
+    }
 }
 
 #search-form>div:nth-child(1)>.button {
@@ -455,6 +475,12 @@ header nav .nav-sections ul>.nav-drop>ul {
     margin: 0px;
     padding-inline: 25px;
 
+    @media (width<900px) {
+        background-color: #eae8e8;
+        margin: 0px;
+        padding-inline: 20px;
+        height: 44px;
+    }
 }
 
 #search-form>.text-wrapper {
@@ -484,7 +510,7 @@ header nav .nav-sections ul>.nav-drop>ul {
     border-bottom-right-radius: 30px;
     border: none;
     text-transform: capitalize;
-   color: #b3b3b3;
+    color: #b3b3b3;
     min-width: 300px;
 
     @media (width<900px) {
