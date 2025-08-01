@@ -3,7 +3,7 @@ const HEAD = document.head;
 
 const fontAwesomeLink = document.createElement('link');
 fontAwesomeLink.rel = 'stylesheet';
-fontAwesomeLink.href = 'https://www.esafbank.com/wp-content/themes/esaf/css/homepage/font-awesome.css';
+fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css';
 HEAD.appendChild(fontAwesomeLink);
 
 const fontLink = document.createElement('link');

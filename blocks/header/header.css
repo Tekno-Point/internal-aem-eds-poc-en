@@ -281,6 +281,7 @@ header nav .nav-sections ul > li > ul > li {
     background-color: #002a69 !important;
     color: white;
     border-radius: 24px;
+    opacity: 0.9;
 }
 .nav-sections > .default-content-wrapper > ul .nav-drop > ul li {
     margin: 0px;
@@ -424,7 +425,7 @@ header nav .nav-sections ul > .nav-drop > ul {
 
 #search-form {
     display: flex;
-     height: 53px;
+    height: 53px;
     justify-content: center;
     align-items: center;
     border-radius: 40px;
@@ -432,21 +433,20 @@ header nav .nav-sections ul > .nav-drop > ul {
     margin: 0px;
     background-color: #f5f5f5;
 }
-#search-form >div:nth-child(1) {
+#search-form > div:nth-child(1) {
     padding: 0px;
     margin: 0px;
-        border-right: 1px solid #B3B3B3;
+    border-right: 1px solid #b3b3b3;
 }
 #search-form > div:nth-child(1) > .button {
     display: flex;
     justify-content: center;
     background-color: #f5f5f5;
-        margin: 0px;
-        padding-inline: 25px;
-    
+    margin: 0px;
+    padding-inline: 25px;
 }
 
-#search-form>.text-wrapper{
+#search-form > .text-wrapper {
     margin: 0px;
 }
 
@@ -473,8 +473,9 @@ header nav .nav-sections ul > .nav-drop > ul {
     border-bottom-right-radius: 30px;
     border: none;
     text-transform: capitalize;
-    color: #b3b3b3;
+    color: #002a69;
     min-width: 300px;
+    outline: none;
 }
 
 .search-form>
@@ -487,8 +488,7 @@ header nav .nav-sections ul > .nav-drop > ul {
 }
 
 #login-dropdown-form > .field-wrapper > select {
-    max-width: 140px;
-    width: 100%;
+    width: 140px;
     padding: 7px 10px 7px 15px;
     background: transparent;
     border: none;
@@ -508,8 +508,31 @@ header nav .nav-sections ul > .nav-drop > ul {
     appearance: none; /* Remove default styling (works in most browsers) */
     -webkit-appearance: none;
     -moz-appearance: none;
+    position: relative;
 }
 
+#login-dropdown-form > .field-wrapper {
+    position: relative;
+}
+
+#login-dropdown-form > .field-wrapper::after {
+    content: "\f078";
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 8px;
+    right: 28px;
+    font-size: 12px;
+    background-color: white;
+    color: red;
+    z-index: 1;
+    padding: 0px 4px;
+    border-radius: 100%;
+    cursor: pointer;
+    pointer-events: none
+}
+#login-dropdown-form > .field-wrapper > select > option:hover{
+    background-color: rgb(5, 5, 81);
+}
 #login-dropdown-form > .field-wrapper > select > option[disabled] {
     display: none;
 }
