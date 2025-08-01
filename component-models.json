@@ -142,13 +142,12 @@
             "value": "footer-secondary"
           },
           {
-<<<<<<< HEAD
             "name": "blog-card",
             "value": "blog-card"
-=======
+          },
+          {
             "name": "Footer Tertiary",
             "value": "footer-tertiary"
->>>>>>> 6d160bfc30c9df8bd230e4e2863067031933bd21
           }
         ]
       }
