@@ -40,7 +40,7 @@
     height: 5px;
     background: linear-gradient(to right, #cd171d 80%, #00377b 20%);
     bottom: -12px;
-    left: 0px;
+    left: 0;
 }
 
 .about-wrapper .about-content h2 {
@@ -97,6 +97,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+
     /* display: none; */
 }
 
@@ -107,10 +108,13 @@
     height: 40px;
     border-radius: 50%;
     background-color: #fff;
+
     /* adjust the background color to your needs */
     transform: scale(0);
+
     /* scale the icons to 0 initially */
     transition: transform 0.5s;
+
     /* add a transition effect */
 }
 
@@ -165,4 +169,20 @@
 .about-us-counter .counter-icon .hover-icons img {
     width: 42px;
     height: 40px;
+}
+
+@media(max-width : 786px){
+    .about-us-counter{
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .about-us-counter .counter-items{
+        border: none;
+        border-bottom: 1px solid black;
+    }
+
+    .about-us-counter .counter-items{
+        padding-bottom: 15px;
+    }
 }

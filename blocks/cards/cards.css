@@ -1,4 +1,5 @@
 @import url("../loan-offer/loan-offer.css");
+@import url("../blog-card/blog-card.css");
 
 .cards > ul {
   list-style: none;

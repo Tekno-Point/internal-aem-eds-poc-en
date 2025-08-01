@@ -173,7 +173,6 @@ export default function decorateEmbed(block) {
   }
 }
 
-
 function autolinkModals(element) {
   element.addEventListener('click', async (e) => {
     const origin = e.target.closest('a');
@@ -466,7 +465,6 @@ export async function decorateFragment(block) {
   }
 }
 
-
 async function createForm(formHref, submitHref) {
   const { pathname } = new URL(formHref);
   const resp = await fetch(pathname);
@@ -588,7 +586,7 @@ function buildAutoBlocks(main) {
     loadAutoBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error("Auto Blocking failed", error);
+    console.error('Auto Blocking failed', error);
   }
 }
 
