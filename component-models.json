@@ -345,6 +345,42 @@
       }
     ]
   },
+ {
+    "id": "content-fragment",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Frag",
+            "value": "individual-insurance-teaser"
+          },
+          {
+            "name": "Marque",
+            "value": "marque"
+          },
+          {
+            "name": "Asset API",
+            "value": "asset-api"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "content-fragment-item",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "variationName": "contentFragmentVariation",
+        "label": "CF Reference"
+      }
+    ]
+  },
   {
     "id": "form",
     "fields": [

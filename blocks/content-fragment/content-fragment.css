@@ -1,0 +1,48 @@
+
+.content-fragment > div > div >.marque-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+}
+
+.content-fragment .marque-wrapper>.marque-description {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.content-fragment > div > div > .marque-wrapper > .marque-description > p > a {
+  color: #d0262d;
+  font-family: "Arial";
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 10px;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+
+.marque-wrapper:hover .marque-description {
+  animation-play-state: paused;
+}
+
+
+@media(max-width : 786px){
+    .content-fragment .marque-wrapper>.marque-description {
+
+  animation: marquee 20s linear infinite;
+}
+}
