@@ -10,8 +10,8 @@
  * governing permissions and limitations under the License.
  */
  *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
  }
 
@@ -267,14 +267,11 @@ main>.section:first-of-type {
     margin-top: 0;
 }
 
-@media (width >=900px) {
-    main>.section>div {
-    }
-}
+
 
 @media (width <=900px) {
     main>.section>div {
-        padding:0rem  0.75rem;
+        padding:0  0.75rem;
     }
 }
 
