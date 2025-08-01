@@ -4,6 +4,10 @@
   overflow: hidden;
   padding: 10px 0;
   position: relative;
+
+  @media (width<900px) {
+    max-width: 100vw;
+  }
 }
 
 .content-fragment .marque-wrapper>.marque-description {
