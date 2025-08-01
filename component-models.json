@@ -142,13 +142,12 @@
             "value": "footer-secondary"
           },
           {
-<<<<<<< HEAD
             "name": "blog-card",
             "value": "blog-card"
-=======
+          },
+          {
             "name": "Footer Tertiary",
             "value": "footer-tertiary"
->>>>>>> 6d160bfc30c9df8bd230e4e2863067031933bd21
           }
         ]
       }
@@ -343,6 +342,37 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "form Style",
+        "options": [
+          {
+            "name": "Pagination",
+            "value": "pagination"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "form_url",
+        "label": "Form URL"
+      },
+      {
+        "component": "text",
+        "name": "form_api",
+        "label": "Form API"
+      },
+      {
+        "component": "text",
+        "name": "form_id",
+        "label": "Form ID"
       }
     ]
   }
