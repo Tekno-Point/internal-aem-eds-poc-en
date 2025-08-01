@@ -40,9 +40,10 @@ header nav[aria-expanded="true"] {
         grid-template:
             "nav-top nav-top nav-top"
             "nav-marquee nav-marquee nav-marquee"
-            "brand sections tools";
+            "brand sections tools" / 0.5fr auto auto;
         min-height: 0;
         overflow: visible;
+          box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -75,6 +76,7 @@ header nav .nav-hamburger button {
     overflow: initial;
     text-overflow: initial;
     white-space: initial;
+    pointer-events: none;
 }
 
 header nav .nav-hamburger-icon,
@@ -156,6 +158,12 @@ header .nav-brand {
     font-size: var(--heading-font-size-s);
     font-weight: 700;
     line-height: 1;
+    text-align: right;
+
+    @media (width>=900px) {
+        margin-right: 16%;
+        ;
+    }
 
     @media (width<900px) {
         text-align: center;
@@ -212,7 +220,7 @@ header nav .nav-sections ul>li>ul>li {
     }
 
     header nav[aria-expanded="true"] .nav-sections {
-        align-self: unset;
+        place-self: center;
     }
 
     header nav .nav-sections .nav-drop {
@@ -320,7 +328,7 @@ header nav .nav-tools {
     }
 }
 
-#nav > div.section.form-container.nav-tools > div:nth-child(1) {
+#nav>div.section.form-container.nav-tools>div:nth-child(1) {
     flex-basis: 46%;
 }
 
@@ -476,7 +484,7 @@ header nav .nav-sections ul>.nav-drop>ul {
     margin: 0px;
     padding-inline: 25px;
 
-      @media (width<900px) {
+    @media (width<900px) {
         background-color: #eae8e8;
         margin: 0px;
         padding-inline: 20px;
@@ -527,7 +535,7 @@ form>.field-wrapper>label {
     display: none;
 }
 
-#login-dropdown-form > .field-wrapper > select {
+#login-dropdown-form>.field-wrapper>select {
     width: 140px;
     padding: 7px 10px 7px 15px;
     background: transparent;
@@ -552,11 +560,11 @@ form>.field-wrapper>label {
     position: relative;
 }
 
-#login-dropdown-form > .field-wrapper {
+#login-dropdown-form>.field-wrapper {
     position: relative;
 }
 
-#login-dropdown-form > .field-wrapper::after {
+#login-dropdown-form>.field-wrapper::after {
     content: "\f078";
     font-family: "FontAwesome";
     position: absolute;
@@ -571,15 +579,17 @@ form>.field-wrapper>label {
     cursor: pointer;
     pointer-events: none;
 
-     @media (width<900px) {
-         top: 23%;
-    right: 23%;
+    @media (width<900px) {
+        top: 23%;
+        right: 23%;
     }
 }
-#login-dropdown-form > .field-wrapper > select > option:hover{
+
+#login-dropdown-form>.field-wrapper>select>option:hover {
     background-color: rgb(5, 5, 81);
 }
-#login-dropdown-form > .field-wrapper > select > option[disabled] {
+
+#login-dropdown-form>.field-wrapper>select>option[disabled] {
     display: none;
 }
 
