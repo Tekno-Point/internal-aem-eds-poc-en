@@ -132,6 +132,10 @@
           {
             "name": "Header Accordion",
             "value": "head-accordion"
+          },
+             {
+            "name": "Header Accordion 2",
+            "value": "head-accordion2"
           }
         ]
       }
@@ -696,39 +700,6 @@
         "component": "richtext",
         "name": "knowmore",
         "label": "Know More Button",
-        "valueType": "string",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "header-accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "head",
-        "label": "Accordion Heading",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "col1_image",
-        "label": "Product Image",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "col1_name",
-        "label": "Product Name",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "col1_nameDesc",
-        "label": "Product Description",
         "valueType": "string",
         "value": ""
       }
