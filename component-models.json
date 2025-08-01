@@ -340,5 +340,36 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "form Style",
+        "options": [
+          {
+            "name": "Pagination",
+            "value": "pagination"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "form_url",
+        "label": "Form URL"
+      },
+      {
+        "component": "text",
+        "name": "form_api",
+        "label": "Form API"
+      },
+      {
+        "component": "text",
+        "name": "form_id",
+        "label": "Form ID"
+      }
+    ]
   }
 ]

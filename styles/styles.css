@@ -9,11 +9,11 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
- *{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
- }
+}
 
 :root {
     /* colors */
@@ -46,7 +46,7 @@
     --heading-font-size-xs: 22px;
 
     /* nav height */
-    --nav-height: 64px;
+    --nav-height: 190px;
 }
 
 /* fallback fonts */
@@ -258,9 +258,14 @@ main>.section {
     margin: 40px 0;
 }
 
+nav>.section>div,
 main>.section>div {
     max-width: 1314px;
-    margin: auto;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 main>.section:first-of-type {
@@ -268,13 +273,16 @@ main>.section:first-of-type {
 }
 
 @media (width >=900px) {
+    nav>.section>div,
     main>.section>div {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
     }
 }
 
 @media (width <=900px) {
     main>.section>div {
-        padding:0rem  0.75rem;
+        padding: 0rem 0.75rem;
     }
 }
 
@@ -290,10 +298,10 @@ main .section.highlight {
     background: #e6e6e6;
 }
 
-.bg-light-gray{
+.bg-light-gray {
     background: #D3D3D3;
 }
 
-.bg-jet-stream{
+.bg-jet-stream {
     background: #BECCD3;
 }
