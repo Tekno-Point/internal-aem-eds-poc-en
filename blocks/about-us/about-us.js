@@ -131,7 +131,7 @@ export default function decorate(block) {
       contentDiv.className = 'content';
 
       const countHeading = document.createElement('h2');
-      countHeading.innerHTML = `<span class="count">${count}</span>+`;
+      countHeading.innerHTML = `<span class="count">${count}</span>`;
 
       const labelParagraph = document.createElement('p');
       labelParagraph.textContent = label;
