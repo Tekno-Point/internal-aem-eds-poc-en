@@ -53,103 +53,11 @@ export default async function decorate(block) {
             const marqueewrapper = document.createElement('div');
             marqueewrapper.classList.add('marque-wrapper');
             marqueewrapper.innerHTML = `
-               <h3 class='marque-heading'>${respData.properties.elements.head.value}</h3>
                <div class='marque-description'>${respData.properties.elements.description.value}</div>
             `;
             row.firstElementChild.firstElementChild.remove();
             row.firstElementChild.append(marqueewrapper);
             return;
         }
-
-        // }
-        //    let url = "https://publish-p48457-e1275402.adobeaemcloud.com/api/assets/internal-aem-eds-poc/cf/srilankan-airlines/marque.json";
-        // if (block.classList.contains('marque')) {
-        //     url = `${origin}/graphql/execute.json/internal-aem-eds-poc/marque;path=${formurl}${searchpara}`;
-        //     // url = "https://publish-p48457-e1275402.adobeaemcloud.com/api/assets/internal-aem-eds-poc/cf/srilankan-airlines/marque.json";
-        //     const response = await fetch((url), {
-        //         method: "GET"
-        //     });
-        //     const respData = await response.json();
-        //     console.log(respData.properties.elements.head.value)
-        //     console.log(respData.properties.elements.description.value)
-
-        //     //   const marqueData = respData?.data?.srilankaMarqueByPath?.item;
-
-        //     const marqueewrapper = document.createElement('div');
-        //     marqueewrapper.classList.add("marque-wrapper")
-        //     marqueewrapper.innerHTML = `
-        //        <h3 class='marque-heading'>${respData.properties.elements.head.value}</h3>
-        //        <div class='marque-description'>${respData.properties.elements.description.value}</div>
-        //     `
-        //     row.firstElementChild.firstElementChild.remove()
-        //     row.firstElementChild.append(marqueewrapper);
-        //     return
-        // }
-        url = `${origin + getAssetsAPI(formurl)}.json`;
-        const response = await fetch((url), {
-            method: 'GET',
-        });
-        const respData = await response.json();
-        const data = respData.properties.elements.contentFragment.value.filter(el => el).map(async function (eachPath) {
-            const eachurl = `${origin + getAssetsAPI(eachPath)}.json`;
-            const response = await fetch((eachurl), {
-                method: 'GET',
-            });
-            const respData = await response.json();
-            // console.log(respData.properties.elements);
-
-            const data = {
-                "departureCity": respData.properties.elements.departureCity.value,
-                "departureDate": respData.properties.elements.departureDate.value,
-                "destinationCity": respData.properties.elements.destinationCity.value,
-                "destinationDate": respData.properties.elements.destinationDate.value,
-                "price": respData.properties.elements.price.value,
-                "type": respData.properties.elements.type.value,
-                "image": {
-                    "_publishUrl": origin + respData.properties.elements.image.value
-                },
-                "tripType": respData.properties.elements.tripType.value,
-                "description": {
-                    "html": respData.properties.elements.description.value
-                }
-            }
-            // console.log(data);
-
-            return data
-
-        })
-        // console.log("data :: ", data);
-        const allData = await Promise.all(data)
-        console.log(allData);
-
-        // const respData = await fetchGraphQL((url), { path: formurl });
-        // const respData = await response.json();
-        // console.log(respData)
-        // Render the carousel markup
-        // let carousel = renderUI(respData?.data?.cfListByPath?.item?.contentFragment);
-        let carousel = renderUI(allData);
-
-        // If renderUI returns an array, wrap it in a div
-        if (Array.isArray(carousel)) {
-            const wrapper = document.createElement('div');
-            carousel.forEach((el) => wrapper.appendChild(el));
-            carousel = wrapper;
-        }
-        // Remove all children before appending carousel
-        // while (block.firstChild) block.removeChild(block.firstChild);
-        row.firstElementChild.firstElementChild.remove();
-        if (carousel instanceof HTMLElement) {
-            // block.appendChild(carousel);
-            row.firstElementChild.append(carousel);
-        }
-        // Only initialize Swiper (do not re-wrap slides)
-        if (carousel instanceof HTMLElement) {
-            initSwiperOnly(carousel);
-        }
-
-        showCards(allData);
-        window.addEventListener('userDataSave', (e) => {
-            showCards(allData);
-        });
     });
 }
