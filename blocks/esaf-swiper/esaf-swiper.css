@@ -55,21 +55,20 @@
 /* stylelint-disable-next-line no-duplicate-selectors */
 .esaf-swiper > .btn-wrapper > .swiper-button-prev,
 .esaf-swiper > .btn-wrapper > .swiper-button-next {
-    right:30px;
+    right: 30px;
 }
 
-
 .esaf-swiper > .btn-wrapper > .swiper-button-prev:hover,
-.esaf-swiper > .btn-wrapper > .swiper-button-next:hover{
-      background-color: #002A69;
+.esaf-swiper > .btn-wrapper > .swiper-button-next:hover {
+    background-color: #002a69;
     color: #fff;
     border: 1px solid transparent;
 }
 
-
-@media(width <=  420px){
-  .esaf-swiper > .btn-wrapper > .swiper-button-prev,
-.esaf-swiper > .btn-wrapper > .swiper-button-next{
-  display: none;
-}
+@media (max-width: 900px) {
+    .esaf-swiper > .btn-wrapper > .swiper-button-prev,
+    
+    .esaf-swiper > .btn-wrapper > .swiper-button-next {
+        display: none;
+    }
 }
