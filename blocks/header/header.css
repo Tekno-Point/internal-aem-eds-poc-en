@@ -2,7 +2,7 @@
 header .nav-wrapper {
     background-color: var(--background-color);
     width: 100%;
-    z-index: 2;
+    z-index: 10;
     position: fixed;
 }
 
@@ -151,11 +151,20 @@ header .nav-brand {
     font-size: var(--heading-font-size-s);
     font-weight: 700;
     line-height: 1;
+
+    @media (width<900px) {
+        text-align: center;
+    }
 }
 
 header nav .nav-brand img {
     width: 128px;
     height: auto;
+
+    @media (width<900px) {
+        width: 162px;
+        height: 70px;
+    }
 }
 
 /* sections */
