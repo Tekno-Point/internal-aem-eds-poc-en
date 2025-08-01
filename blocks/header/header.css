@@ -500,38 +500,58 @@ header nav .nav-tools {
 }
 
 /* New Header CSS */
-.section.head-accordion2{
-  margin-bottom: 15px;
+.section.head-accordion .accordion-item-label p{
+  margin:0;
+  font-size: 1pc;
+    font-weight: 500;
+    letter-spacing: .25px;
+    color: #3f3d3d;
+    cursor: pointer;
 }
-.section.head-accordion1{
-  margin-bottom: 15px;
+.head-accordion .accordion-item-body{
+  display: flex;
+  justify-content: center;
 }
-.head-accordion .accordion-item-body ul{
+.head-accordion .accordion-container:nth-child(1) .accordion-item-body > ul{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0;
   padding: 0;
+  margin: 0 auto;
+  gap: 60px;
 }
-.head-accordion .accordion-item-body ul li ul{
+.head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul{
   display: flex;
   flex-direction: column;
   align-items: center ;
+  padding: 0;
 }
-.head-accordion .accordion-item-body ul li,.head-accordion2 .accordion-item-body ul li{
+.head-accordion .accordion-item-body ul li{
  list-style: none;
 }
-.head-accordion .accordion-item-body p span{
+.head-accordion .accordion-container:nth-child(1) .accordion-item-body > ul > li{
+  flex: 1;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  cursor: pointer;
+}
+.head-accordion .accordion-container:nth-child(1) .accordion-item-body > ul > li:hover{
+  transform: translateY(-5px);
+}
+.head-accordion .accordion-container:nth-child(1) .accordion-item-body p span{
   width: 196px;
   height: 135px;
 }
-.head-accordion .accordion-item-body ul li ul li:nth-child(1){
+.head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul li{
+  padding: 0;
+}
+.head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul li:nth-child(1){
     color: #000;
     font-size: 14px;
     font-weight: 530;
     line-height: normal;
 }
-.head-accordion .accordion-item-body ul li ul li:nth-child(2){
+.head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul li:nth-child(2){
   font-size: 12px;
   letter-spacing: .4px;
     line-height: 14px;
@@ -540,8 +560,17 @@ header nav .nav-tools {
     font-weight: 450;
     margin-top: 4px;
 }
-.section.head-accordion .accordion-item-body,.section.head-accordion2 .accordion-item-body{
+.section.head-accordion .accordion-container:nth-child(1) .accordion-item-body{
   background-color: #f9f5ee;
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+}
+.section.head-accordion .accordion-container:nth-child(2) .accordion-item-body{
+  background-color: white;
   border-radius: 0 0 8px 8px;
   position: absolute;
   top: 100%;
@@ -554,20 +583,15 @@ main{
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding: 16px 24px;
 }
-.section.head-accordion .accordion-item-label{
-  list-style: none;
-}
-.section.head-accordion2 .accordion-item-label{
-  list-style: none;
-}
-.section.head-accordion2 .accordion-item-body{
+.section.head-accordion .accordion-container:nth-child(2) .accordion-item-body{
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.head-accordion2 .accordion-item-body > ul{
+.head-accordion .accordion-container:nth-child(2) .accordion-item-body > ul{
   display: flex;
   align-items: center;
    margin: 0;
@@ -576,7 +600,7 @@ main{
   gap: 20px;
   width: 828px;
 }
-.section.head-accordion2 ul > li{
+.section.head-accordion .accordion-container:nth-child(2) .accordion-item-body >  ul > li{
   box-sizing: border-box;
   width: 240px;
     font-size: 1pc;
@@ -584,22 +608,27 @@ main{
     letter-spacing: .25px;
     color: #1d1b1b;
     margin-bottom: 4px;
+    cursor: pointer;
 }
-.section.head-accordion2 ul li ul li{
+.section.head-accordion .accordion-container:nth-child(2) .accordion-item-body >  ul > li:hover{
+  color: #ff5310;
+}
+.section.head-accordion .accordion-container:nth-child(2) ul li ul li{
   font-size: 14px;
     font-weight: 400;
     letter-spacing: .25px;
     color: #696767;
     margin-top: 10px;
 }
-.head-accordion2 .accordion-item-body ul li ul{
+.head-accordion .accordion-container:nth-child(2) .accordion-item-body ul li ul{
   padding: 0;
+  margin: 0;
 }
-.section.head-accordion2 ol{
+.section.head-accordion .accordion-container:nth-child(2) ol{
   border-left: 1px solid black;
   list-style: none;
 }
-.section.head-accordion2 ol li{
+.section.head-accordion .accordion-container:nth-child(2) ol li{
   font-size: 1pc;
     font-weight: 500;
     letter-spacing: .25px;
@@ -607,4 +636,73 @@ main{
     color: #5c5a5a;
     text-decoration: none;
     margin-bottom: 20px;
+    cursor: pointer;
 }
+.section.head-accordion .accordion-container:nth-child(2) ol li:hover{
+  color: #ff5310;
+}
+.section.buy-style .default-content-wrapper{
+  display: flex;
+  align-items: center;
+}
+.section.buy-style .default-content-wrapper p:nth-child(1){
+  font-size: 1pc;
+    font-weight: 500;
+    letter-spacing: .25px;
+    color: #3f3d3d;
+    text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+}
+.section.buy-style .default-content-wrapper p:nth-child(1):hover{
+    color: #ff5310;
+}
+.section.buy-style .default-content-wrapper p:nth-child(2){
+  background-color: #1d1b1b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    line-height: 18px;
+    padding: 8px 10px;
+        border-radius: 50px;
+        margin: 0;
+        margin-left: 30px;
+        cursor: pointer;
+}
+.section.buy-style .default-content-wrapper p:nth-child(2):hover{
+  background-color: #696767;
+}
+.section.head-accordion .accordion-item-label{
+  position: relative;
+  list-style: none;
+}
+.section.head-accordion .accordion-item-label p:hover{
+  color: #ff5310;
+}
+.section.head-accordion .accordion-item-label p::before{
+  content: '';
+  position: absolute;
+  right: -25px;
+  top: 5px;
+    content: '';
+      display: inline-block;
+      width: 0.5em; /* Adjust size as needed */
+      height: 0.5em; /* Adjust size as needed */
+      border-top: 0.1em solid currentColor;
+      border-right: 0.1em solid currentColor;
+      transform: rotate(135deg);
+      margin-left: 0.2em;
+} 
+.section.head-accordion .accordion-item-label p:hover::before{
+      transform: rotate(315deg);
+      top: 10px;
+}
+.section.head-accordion .accordion{
+  display: flex;
+  align-items: center;
+}
+.section.head-accordion .accordion-container:nth-child(2){
+  margin-left: 60px;
+}
+
