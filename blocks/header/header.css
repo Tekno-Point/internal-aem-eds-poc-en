@@ -277,28 +277,26 @@ header nav .nav-sections ul > li > ul > li {
 
 /*nav-sections*/
 
-.nav-sections>.default-content-wrapper>ul>.nav-drop>ul{
-    background-color: #002A69 !important;
+.nav-sections > .default-content-wrapper > ul > .nav-drop > ul {
+    background-color: #002a69 !important;
     color: white;
     border-radius: 24px;
-    
 }
-.nav-sections>.default-content-wrapper>ul .nav-drop>ul li{
+.nav-sections > .default-content-wrapper > ul .nav-drop > ul li {
     margin: 0px;
     padding: 5px;
 }
-.nav-sections>.default-content-wrapper>ul .nav-drop>ul li p a{
-    background:none;
+.nav-sections > .default-content-wrapper > ul .nav-drop > ul li p a {
+    background: none;
     color: white;
     text-decoration: none;
     padding: 10px 10px;
     margin: 0px;
 }
 
-.nav-sections>.default-content-wrapper>ul .nav-drop ul li ul{
+.nav-sections > .default-content-wrapper > ul .nav-drop ul li ul {
     display: none;
 }
-
 
 /* tools */
 header nav .nav-tools {
@@ -426,8 +424,34 @@ header nav .nav-sections ul > .nav-drop > ul {
 
 #search-form {
     display: flex;
+     height: 53px;
     justify-content: center;
     align-items: center;
+    border-radius: 40px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #f5f5f5;
+}
+#search-form >div:nth-child(1) {
+    padding: 0px;
+    margin: 0px;
+        border-right: 1px solid #B3B3B3;
+}
+#search-form > div:nth-child(1) > .button {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+        margin: 0px;
+        padding-inline: 25px;
+    
+}
+
+#search-form>.text-wrapper{
+    margin: 0px;
+}
+
+#search-form > div.field-wrapper.submit-wrapper > button > span {
+    display: none;
 }
 
 #search-form > .field-wrapper > label {
@@ -443,9 +467,10 @@ header nav .nav-sections ul > .nav-drop > ul {
     background-color: #f5f5f5;
     font-size: 15px;
     height: 44px;
-    padding: 2px 0px 2px 74px;
+    padding: 2px 0px 2px 53px;
     width: 100%;
-    border-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     border: none;
     text-transform: capitalize;
     color: #b3b3b3;
@@ -457,11 +482,11 @@ header nav .nav-sections ul > .nav-drop > ul {
 
 /*login*/
 
-form>.field-wrapper>label {
+#login-dropdown-form>.field-wrapper>label {
     display: none;
 }
 
-form > .field-wrapper > select {
+#login-dropdown-form > .field-wrapper > select {
     max-width: 140px;
     width: 100%;
     padding: 7px 10px 7px 15px;
@@ -485,15 +510,21 @@ form > .field-wrapper > select {
     -moz-appearance: none;
 }
 
-form > .field-wrapper > select > option[disabled]{
+#login-dropdown-form > .field-wrapper > select > option[disabled] {
     display: none;
 }
 
-form > .field-wrapper > select:hover {
+#login-dropdown-form > .field-wrapper > select:hover {
     border: none;
 }
 
+#login-dropdown-form > .field-wrapper > label {
+    display: none;
+}
+
 .form-container {
+    max-width: 470px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
