@@ -1,9 +1,11 @@
 .blog-card {
     padding: 0;
 }
+
 .blog-card>.cards-wrapper>.cards > ul {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .blog-card > .cards-wrapper > .cards > ul > li {
