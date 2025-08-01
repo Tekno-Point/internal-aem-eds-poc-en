@@ -28,7 +28,7 @@ function closeOnFocusLost(e) {
     const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
     if (navSectionExpanded && isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
-      toggleAllNavSections(navSections, false);
+      // toggleAllNavSections(navSections, false);
     } else if (!isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
       toggleMenu(nav, navSections, false);
