@@ -500,8 +500,13 @@ header nav .nav-tools {
 }
 
 /* New Header CSS */
-
-.head-accordion .accordion-item-body ul,.head-accordion2 .accordion-item-body ul{
+.section.head-accordion2{
+  margin-bottom: 15px;
+}
+.section.head-accordion1{
+  margin-bottom: 15px;
+}
+.head-accordion .accordion-item-body ul{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -558,14 +563,48 @@ main{
 }
 .section.head-accordion2 .accordion-item-body{
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-.section.head-accordion2 ul li{
-  flex: 0 0 calc(33.333% - 10.66px);
+.head-accordion2 .accordion-item-body > ul{
+  display: flex;
+  align-items: center;
+   margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 828px;
+}
+.section.head-accordion2 ul > li{
   box-sizing: border-box;
   width: 240px;
+    font-size: 1pc;
+    font-weight: 500;
+    letter-spacing: .25px;
+    color: #1d1b1b;
+    margin-bottom: 4px;
 }
-.head-accordion2 .accordion-item-body ul{
-  max-width: 100vw;
-  flex-wrap: wrap;
-  margin: 0 auto;
+.section.head-accordion2 ul li ul li{
+  font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .25px;
+    color: #696767;
+    margin-top: 10px;
+}
+.head-accordion2 .accordion-item-body ul li ul{
+  padding: 0;
+}
+.section.head-accordion2 ol{
+  border-left: 1px solid black;
+  list-style: none;
+}
+.section.head-accordion2 ol li{
+  font-size: 1pc;
+    font-weight: 500;
+    letter-spacing: .25px;
+    line-height: 20px;
+    color: #5c5a5a;
+    text-decoration: none;
+    margin-bottom: 20px;
 }

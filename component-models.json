@@ -136,6 +136,10 @@
              {
             "name": "Header Accordion 2",
             "value": "head-accordion2"
+          },
+          {
+            "name": "buy style",
+            "value": "buy-style"
           }
         ]
       }
