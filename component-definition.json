@@ -189,108 +189,30 @@
           }
         },
         {
-          "title": "ESAF Swiper",
-          "id": "esaf-swiper",
+          "title": "Slider",
+          "id": "slider",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "ESAF Swiper",
-                  "model": "esaf-swiper",
-                  "filter": "esaf-swiper"
+                  "name": "Slider",
+                  "filter": "slider"
                 }
               }
             }
           }
         },
         {
-          "title": "ESAF Swiper Item",
-          "id": "esaf-swiper-item",
+          "title": "Slide",
+          "id": "slide",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "ESAF Swiper Item",
-                  "model": "esaf-swiper-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Carousel",
-          "id": "carousel",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Carousel",
-                  "model": "carousel",
-                  "filter": "carousel"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Carousel Item",
-          "id": "carousel-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Carousel Item",
-                  "model": "carousel-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Content Fragment",
-          "id": "content-fragment",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Content Fragment",
-                  "model": "content-fragment",
-                  "filter": "content-fragment"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Content Fragment Item",
-          "id": "content-fragment-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Content Fragment Item",
-                  "model": "content-fragment-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Form",
-          "id": "form",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Form",
-                  "model": "form"
+                  "name": "Slide",
+                  "model": "slide"
                 }
               }
             }

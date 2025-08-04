@@ -112,42 +112,6 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "loan-offer",
-            "value": "loan-offer"
-          },
-          {
-            "name": "Bg Platinum",
-            "value": "bg-platinum"
-          },
-          {
-            "name": "Bg Light Gray",
-            "value": "bg-light-gray"
-          },
-          {
-            "name": "Bg Jet Stream",
-            "value": "bg-jet-stream"
-          },
-          {
-            "name": "video-carousel",
-            "value": "video-carousel"
-          },
-          {
-            "name": "Footer Primary",
-            "value": "footer-primary"
-          },
-          {
-            "name": "Footer Secondary",
-            "value": "footer-secondary"
-          },
-          {
-            "name": "blog-card",
-            "value": "blog-card"
-          },
-          {
-            "name": "Footer Tertiary",
-            "value": "footer-tertiary"
           }
         ]
       }
@@ -308,107 +272,29 @@
     ]
   },
   {
-    "id": "esaf-swiper-item",
+    "id": "slide",
     "fields": [
       {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image",
+        "description": "Slide image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
         "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
+        "label": "Image Alt Text",
+        "description": "Alternative text for the slide image"
       },
       {
         "component": "richtext",
-        "name": "text",
+        "name": "content",
         "value": "",
-        "label": "Text",
+        "label": "Content",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "carousel-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
- {
-    "id": "content-fragment",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "Style",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Frag",
-            "value": "individual-insurance-teaser"
-          },
-          {
-            "name": "Marque",
-            "value": "marque"
-          },
-          {
-            "name": "Asset API",
-            "value": "asset-api"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "content-fragment-item",
-    "fields": [
-      {
-        "component": "aem-content-fragment",
-        "name": "reference",
-        "variationName": "contentFragmentVariation",
-        "label": "CF Reference"
-      }
-    ]
-  },
-  {
-    "id": "form",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "classes",
-        "label": "form Style",
-        "options": [
-          {
-            "name": "Pagination",
-            "value": "pagination"
-          }
-        ]
-      },
-      {
-        "component": "aem-content",
-        "name": "form_url",
-        "label": "Form URL"
-      },
-      {
-        "component": "text",
-        "name": "form_api",
-        "label": "Form API"
-      },
-      {
-        "component": "text",
-        "name": "form_id",
-        "label": "Form ID"
       }
     ]
   }
