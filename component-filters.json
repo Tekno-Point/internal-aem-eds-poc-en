@@ -53,10 +53,16 @@
   },
   {
     "id": "accordion",
-    "components": ["accordion-item","header-accordion-item"]
+    "components": ["accordion-item"]
   },
   {
     "id": "image-accordion",
     "components": ["image-accordion-item"]
+  },
+  {
+    "id": "tab",
+    "components": [
+      "tab-item","accordion-item"
+    ]
   }
 ]

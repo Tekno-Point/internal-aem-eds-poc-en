@@ -507,6 +507,7 @@ header nav .nav-tools {
     letter-spacing: .25px;
     color: #3f3d3d;
     cursor: pointer;
+    padding-right: 10px;
 }
 .head-accordion .accordion-item-body{
   display: flex;
@@ -683,7 +684,7 @@ main{
 .section.head-accordion .accordion-item-label p::before{
   content: '';
   position: absolute;
-  right: -25px;
+  right: -7px;
   top: 5px;
     content: '';
       display: inline-block;

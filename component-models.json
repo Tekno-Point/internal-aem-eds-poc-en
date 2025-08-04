@@ -145,6 +145,62 @@
       }
     ]
   },
+   {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Tab Style",
+            "value": "tab-style"
+          }
+        ]
+      }
+    ]
+  },
+   {
+    "id": "tab-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Hamburger Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_imageAlt",
+        "label": "Head Image Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image2",
+        "label": "Cross Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_image2Alt",
+        "label": "Cross Image Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Body Content",
+        "valueType": "string"
+      }
+    ]
+  },
   {
     "id": "card",
     "fields": [
