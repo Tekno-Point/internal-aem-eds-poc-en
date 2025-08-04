@@ -1,6 +1,5 @@
 import { getMetadata } from '../../scripts/aem.js';
-import { isMobile } from '../../scripts/scripts.js';
-import { loadFragment } from '../fragment/fragment.js';
+import { loadFragment } from '../../scripts/scripts.js';
 
 // media query match that indicates mobile/tablet width
 export const isDesktop = window.matchMedia('(min-width: 900px)');

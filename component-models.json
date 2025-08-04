@@ -144,6 +144,10 @@
           {
             "name": "Tab Container Style",
             "value": "tab-cnt-style"
+          },
+           {
+            "name": "Mobile Header Accordion",
+            "value": "mob-head-accordion"
           }
         ]
       }

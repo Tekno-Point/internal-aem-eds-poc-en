@@ -98,6 +98,7 @@ main{
 }
 .block.tab-style .tab-panel > div{
     position: relative;
+    padding-bottom: 60px;
 }
 .section.tab-cnt-style .tab-style .tab-panel ul,.section.tab-cnt-style .tab-style .tab-panel ol{
     list-style: none;
