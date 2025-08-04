@@ -63,7 +63,7 @@
   {
     "id": "tab",
     "components": [
-      "tab-item","accordion-item"
+      "tab-item"
     ]
   }
 ]
