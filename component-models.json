@@ -140,6 +140,10 @@
           {
             "name": "buy style",
             "value": "buy-style"
+          },
+          {
+            "name": "Tab Container Style",
+            "value": "tab-cnt-style"
           }
         ]
       }
