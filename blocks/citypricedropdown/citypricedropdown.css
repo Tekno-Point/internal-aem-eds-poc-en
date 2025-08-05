@@ -75,7 +75,7 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    z-index: 2;
+    z-index: -1;
 }
 
 
@@ -203,6 +203,7 @@
         height: auto;
         max-width: unset;
         padding: 0;
+        z-index: 3;
     }
 
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .price-text {
@@ -228,6 +229,8 @@
         width: 11.25rem;
         overflow: scroll;
         scrollbar-width: none;
+        background:none;
+        cursor: pointer;
     }
 
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .amount {

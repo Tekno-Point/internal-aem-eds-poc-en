@@ -1,35 +1,44 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background: rgba(34, 34, 34, .5);
   backdrop-filter: blur(25px);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
   width: 100%;
   z-index: 100;
   position: fixed;
-  height: 65px;
+  top: 0;
+  left: 0;
 }
-
+header .nav-wrapper{
+  /* max-width: 1256px;
+  margin: 0 auto;
+  padding: 0 24px; */
+}
 header nav {
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   display: grid;
   grid-template:
-    'brand tools hamburger' var(--nav-height);
+    'brand tools hamburger' var(--nav-height); */
   align-items: center;
-  gap: 0 24px;
-  margin: auto;
+  
   max-width: 1400px;
-  height: var(--nav-height);
-  padding: 0 24px;
-  font-family: var(--body-font-family);
+  /* height: var(--nav-height); */
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  /* font-family: var(--body-font-family); */ */
 }
 
-header nav[aria-expanded='true'],
+/* header nav[aria-expanded='true'],
 header nav {
   grid-template:
     'brand tools hamburger' var(--nav-height);
   grid-template-columns: 5fr 5fr 1fr;
   overflow-y: auto;
   /* min-height: 100dvh; */
-}
+} */
 
 @media (width >=900px) {
   header nav[aria-expanded='true'] {
@@ -44,12 +53,12 @@ header nav {
       'brand hamburger' var(--nav-height);
   }
 
-  header nav[aria-expanded='true'],
+  /* header nav[aria-expanded='true'],
   header nav {
     grid-template:
       'brand hamburger' var(--nav-height);
     grid-template-columns: unset;
-  }
+  } */
 }
 
 header nav p {
@@ -151,9 +160,9 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
     display: block;
   }
 
-  header nav[aria-expanded='true'] .nav-sections {
+  /* header nav[aria-expanded='true'] .nav-sections {
     display: none;
-  }
+  } */
 }
 
 @media (width <=900px) {
@@ -171,13 +180,13 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
 }
 
 /* brand */
-header .nav-brand {
+/* header .nav-brand {
   grid-area: brand;
   flex-basis: 128px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
-}
+} */
 
 .section.nav-brand .default-content-wrapper span {
   display: inline-block;
@@ -195,9 +204,9 @@ header .nav-brand {
 }
 
 @media (width <=900px) {
-  .section.nav-brand .default-content-wrapper p:first-child {
+  /* .section.nav-brand .default-content-wrapper p:first-child {
     display: none;
-  }
+  } */
 
   .section.nav-brand .default-content-wrapper p:nth-child(2) {
     display: flex;
@@ -222,7 +231,7 @@ header .nav-brand {
 }
 
 /* sections */
-header nav .nav-sections {
+/* header nav .nav-sections {
   grid-area: sections;
   display: block;
   visibility: visible;
@@ -232,7 +241,7 @@ header nav .nav-sections {
   top: 4rem;
   width: 70%;
   height: calc(100vh - 6pc);
-}
+} */
 
 .navsection-wrapper {
   background: rgba(0, 0, 0, .6);
@@ -457,9 +466,9 @@ header nav .nav-sections .default-content-wrapper ol li a {
 }
 
 /* tools */
-header nav .nav-tools {
+/* header nav .nav-tools {
   grid-area: tools;
-}
+} */
 
 .section.nav-tools ul {
   display: flex;
@@ -494,9 +503,9 @@ header nav .nav-tools {
 }
 
 @media (width <=900px) {
-  header nav .nav-tools {
+  /* header nav .nav-tools {
     display: none;
-  }
+  } */
 }
 
 /* New Header CSS */
@@ -578,13 +587,6 @@ header nav .nav-tools {
   left: 0;
   width: 100%;
   padding: 10px 0px 10px 0px;
-}
-main{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  padding: 16px 24px;
 }
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body{
   background-color: white;
@@ -684,8 +686,8 @@ main{
 .section.head-accordion .accordion-item-label p::before{
   content: '';
   position: absolute;
-  right: -7px;
-  top: 5px;
+  right: -10px;
+  top: 0px;
     content: '';
       display: inline-block;
       width: 0.5em; /* Adjust size as needed */
@@ -697,7 +699,7 @@ main{
 } 
 .section.head-accordion .accordion-item.active .accordion-item-label p:before{
       transform: rotate(315deg);
-      top: 10px;
+      top: 6px;
 }
 .section.head-accordion .accordion{
   display: flex;
@@ -705,5 +707,14 @@ main{
 }
 .section.head-accordion .accordion-container:nth-child(2){
   margin-left: 60px;
+}
+
+@media (width < 768px){
+  .header nav{
+    display: block;
+    max-width: -webkit-fill-available;
+    margin: 0;
+    width: 100%;
+  }
 }
 

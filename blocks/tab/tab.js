@@ -33,6 +33,7 @@ export default async function decorate(block) {
     // click event to toggle tab
     button.addEventListener('click', () => {
         const isActive = button.classList.contains('btn-active');
+        const body = document.querySelector("body")
         if (!isActive){
         button.classList.remove('btn-active');
         button.setAttribute('aria-selected', 'false');
@@ -45,6 +46,7 @@ export default async function decorate(block) {
         tabpanel.setAttribute('aria-hidden', 'false');
         button.querySelectorAll("p")[0].style.display="none"
         button.querySelectorAll("p")[1].style.display="block"
+        body.style.overflow="hidden"
         }
         else{
         button.classList.remove('btn-active');
@@ -52,6 +54,7 @@ export default async function decorate(block) {
         tabpanel.setAttribute('aria-hidden', 'true');
         button.querySelectorAll("p")[0].style.display="block"
         button.querySelectorAll("p")[1].style.display="none"
+        body.style.overflow="auto"
         }
     });
 
