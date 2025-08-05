@@ -49,7 +49,7 @@
   {
     "id": "multicardspecs",
     "components": [
-      "item"
+      "multicardspecs-item"
     ]
   },
   {

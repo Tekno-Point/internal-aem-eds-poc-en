@@ -606,7 +606,7 @@
     ]
   },
   {
-    "id": "item",
+    "id": "multicardspecs-item",
     "fields": [
       {
         "component": "text",
