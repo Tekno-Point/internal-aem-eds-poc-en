@@ -198,7 +198,7 @@
                 "template": {
                   "name": "multicardspecs",
                   "model": "multicardspecs",
-                  "filter": "multicardspecs"
+                  "filter": "multicardspecs-item"
                 }
               }
             }
