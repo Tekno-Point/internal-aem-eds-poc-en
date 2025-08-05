@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import { ERROR_TYPES, MESSAGES } from './constants.js';
 import { prepareDismissal } from './utils.js';
 

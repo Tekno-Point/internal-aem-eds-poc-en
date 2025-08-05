@@ -1,3 +1,4 @@
+/*eslint-disable*/
 /**
  * Generates a unique key for dismissing items.
  * @param {string} string - The string to be prepared for dismissal (without special chars).

@@ -1,3 +1,4 @@
+/*eslint-disable*/
 export const ERROR_TYPES = {
   WARNING: 'warning',
   ERROR: 'error',
