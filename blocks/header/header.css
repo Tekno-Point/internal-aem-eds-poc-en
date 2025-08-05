@@ -678,7 +678,7 @@ main{
   position: relative;
   list-style: none;
 }
-.section.head-accordion .accordion-item-label p:hover{
+.section.head-accordion .accordion-item.active .accordion-item-label p{
   color: #ff5310;
 }
 .section.head-accordion .accordion-item-label p::before{
@@ -695,7 +695,7 @@ main{
       transform: rotate(135deg);
       margin-left: 0.2em;
 } 
-.section.head-accordion .accordion-item-label p:hover::before{
+.section.head-accordion .accordion-item.active .accordion-item-label p:before{
       transform: rotate(315deg);
       top: 10px;
 }

@@ -65,8 +65,13 @@ main{
     width: 40px;
     height: 34px;
 }
+.block.tab-style .tab-list .tab-tab p:nth-child(1){
+    margin-bottom: 8px;
+}
 .block.tab-style .tab-list .tab-tab p:nth-child(2){
     display: none;
+    text-align: center;
+    margin-top: 10px;
 }
 .block.tab-style .tab-tab{
     all: unset;
@@ -167,4 +172,38 @@ main{
     box-sizing: border-box;
     width: 126px;
     text-align: center;
+}
+.tab-cnt-style .tab-style .tab-panel .accordion-item-label{
+    list-style: none;
+    position: relative;
+}
+.tab-cnt-style .tab-style .tab-panel .accordion-item-label p{
+    font-family: PP Neue Montreal Variable, sans-serif;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    color: #1d1b1b !important;
+    letter-spacing: .1px;
+    padding: 5px 0px !important;
+}
+.tab-cnt-style .tab-style .tab-panel .accordion-item-label p::before{
+      content: '';
+  position: absolute;
+  right: -7px;
+  top: 5px;
+    content: '';
+      display: inline-block;
+      width: 0.5em; /* Adjust size as needed */
+      height: 0.5em; /* Adjust size as needed */
+      border-top: 0.1em solid currentColor;
+      border-right: 0.1em solid currentColor;
+      transform: rotate(135deg);
+      margin-left: 0.2em;
+}
+
+.section .tab-style .accordion-item.active .accordion-item-label p{
+  color: #ff5310 !important;
+}
+.section .tab-style .accordion-item.active .accordion-item-label p:before{
+      transform: rotate(315deg);
+      top: 15px;
 }

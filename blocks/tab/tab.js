@@ -37,31 +37,22 @@ export default async function decorate(block) {
         button.classList.remove('btn-active');
         button.setAttribute('aria-selected', 'false');
         tabpanel.setAttribute('aria-hidden', 'true');
+        button.querySelectorAll("p")[0].style.display="block"
+        button.querySelectorAll("p")[1].style.display="none"
         
         button.classList.add('btn-active');
         button.setAttribute('aria-selected', 'true');
         tabpanel.setAttribute('aria-hidden', 'false');
+        button.querySelectorAll("p")[0].style.display="none"
+        button.querySelectorAll("p")[1].style.display="block"
         }
         else{
         button.classList.remove('btn-active');
         button.setAttribute('aria-selected', 'false');
         tabpanel.setAttribute('aria-hidden', 'true');
+        button.querySelectorAll("p")[0].style.display="block"
+        button.querySelectorAll("p")[1].style.display="none"
         }
-      // Hide all tabpanels
-    //   block.querySelectorAll('[role=tabpanel]').forEach((panel) => {
-    //     panel.setAttribute('aria-hidden', true);
-    //   });
-
-      // Deselect all tab buttons
-    //   tablist.querySelectorAll('button').forEach((btn) => {
-    //     btn.setAttribute('aria-selected', false);
-    //     btn.classList.remove('btn-active'); // Remove class from all
-    //   });
-
-      // Show selected tabpanel and activate button
-    //   tabpanel.setAttribute('aria-hidden', false);
-    //   button.setAttribute('aria-selected', true);
-    //   button.classList.add('btn-active'); // Add class to clicked button
     });
 
     tablist.append(button);
