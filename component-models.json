@@ -272,6 +272,674 @@
     ]
   },
   {
+    "id": "multicardspecs",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftText",
+        "label": "Left Text",
+        "description": "Left text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leader",
+        "label": "Leader",
+        "description": "Leader text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "description": "Icon image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "iconAlt",
+        "label": "Icon Alt",
+        "description": "Alternative text for the icon"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ccValue",
+        "label": "CC Value",
+        "description": "CC value text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ccUnit",
+        "label": "CC Unit",
+        "description": "CC unit text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "centerText",
+        "label": "Center Text",
+        "description": "Center text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "centerSubText",
+        "label": "Center Sub Text",
+        "description": "Center sub text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "centerImage",
+        "label": "Center Image",
+        "description": "Center image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "centerImageAlt",
+        "label": "Center Image Alt",
+        "description": "Alternative text for the center image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "centerMobileImage",
+        "label": "Center Mobile Image",
+        "description": "Center mobile image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "centerMobileImageAlt",
+        "label": "Center Mobile Image Alt",
+        "description": "Alternative text for the center mobile image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightText",
+        "label": "Right Text",
+        "description": "Right text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "design",
+        "label": "Design",
+        "description": "Design text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightImage",
+        "label": "Right Image",
+        "description": "Right image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightImageAlt",
+        "label": "Right Image Alt",
+        "description": "Alternative text for the right image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightMobileImage",
+        "label": "Right Mobile Image",
+        "description": "Right mobile image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightMobileImageAlt",
+        "label": "Right Mobile Image Alt",
+        "description": "Alternative text for the right mobile image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightDescText",
+        "label": "Right Desc Text",
+        "description": "Right description text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightDescIcon",
+        "label": "Right Desc Icon",
+        "description": "Right description icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightDescIconAlt",
+        "label": "Right Desc Icon Alt",
+        "description": "Alternative text for the right description icon"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerText",
+        "label": "Left Lower Text",
+        "description": "Left lower text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "comfort",
+        "label": "Comfort",
+        "description": "Comfort text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "leftLowerIcon1",
+        "label": "Left Lower Icon 1",
+        "description": "Left lower icon 1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerIcon1Alt",
+        "label": "Left Lower Icon 1 Alt",
+        "description": "Alternative text for the left lower icon 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerText1",
+        "label": "Left Lower Text 1",
+        "description": "Left lower text 1 content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "leftLowerIcon2",
+        "label": "Left Lower Icon 2",
+        "description": "Left lower icon 2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerIcon2Alt",
+        "label": "Left Lower Icon 2 Alt",
+        "description": "Alternative text for the left lower icon 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerText2",
+        "label": "Left Lower Text 2",
+        "description": "Left lower text 2 content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "leftLowerImage",
+        "label": "Left Lower Image",
+        "description": "Left lower image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerImageAlt",
+        "label": "Left Lower Image Alt",
+        "description": "Alternative text for the left lower image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "leftLowerMobileImage",
+        "label": "Left Lower Mobile Image",
+        "description": "Left lower mobile image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerMobileImageAlt",
+        "label": "Left Lower Mobile Image Alt",
+        "description": "Alternative text for the left lower mobile image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerText",
+        "label": "Right Lower Text",
+        "description": "Right lower text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "style",
+        "label": "Style",
+        "description": "Style text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightLowerIcon1",
+        "label": "Right Lower Icon 1",
+        "description": "Right lower icon 1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerIcon1Alt",
+        "label": "Right Lower Icon 1 Alt",
+        "description": "Alternative text for the right lower icon 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerText1",
+        "label": "Right Lower Text 1",
+        "description": "Right lower text 1 content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightLowerIcon2",
+        "label": "Right Lower Icon 2",
+        "description": "Right lower icon 2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerIcon2Alt",
+        "label": "Right Lower Icon 2 Alt",
+        "description": "Alternative text for the right lower icon 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerText2",
+        "label": "Right Lower Text 2",
+        "description": "Right lower text 2 content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightLowerImage",
+        "label": "Right Lower Image",
+        "description": "Right lower image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerImageAlt",
+        "label": "Right Lower Image Alt",
+        "description": "Alternative text for the right lower image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightLowerMobileImage",
+        "label": "Right Lower Mobile Image",
+        "description": "Right lower mobile image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerMobileImageAlt",
+        "label": "Right Lower Mobile Image Alt",
+        "description": "Alternative text for the right lower mobile image"
+      }
+    ]
+  },
+  {
+    "id": "item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftText",
+        "label": "Left Text",
+        "description": "Left text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leader",
+        "label": "Leader",
+        "description": "Leader text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "description": "Icon image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "iconAlt",
+        "label": "Icon Alt",
+        "description": "Alternative text for the icon"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ccValue",
+        "label": "CC Value",
+        "description": "CC value text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ccUnit",
+        "label": "CC Unit",
+        "description": "CC unit text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "centerText",
+        "label": "Center Text",
+        "description": "Center text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "centerSubText",
+        "label": "Center Sub Text",
+        "description": "Center sub text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "centerImage",
+        "label": "Center Image",
+        "description": "Center image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "centerImageAlt",
+        "label": "Center Image Alt",
+        "description": "Alternative text for the center image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "centerMobileImage",
+        "label": "Center Mobile Image",
+        "description": "Center mobile image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "centerMobileImageAlt",
+        "label": "Center Mobile Image Alt",
+        "description": "Alternative text for the center mobile image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightText",
+        "label": "Right Text",
+        "description": "Right text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "design",
+        "label": "Design",
+        "description": "Design text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightImage",
+        "label": "Right Image",
+        "description": "Right image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightImageAlt",
+        "label": "Right Image Alt",
+        "description": "Alternative text for the right image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightMobileImage",
+        "label": "Right Mobile Image",
+        "description": "Right mobile image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightMobileImageAlt",
+        "label": "Right Mobile Image Alt",
+        "description": "Alternative text for the right mobile image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightDescText",
+        "label": "Right Desc Text",
+        "description": "Right description text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightDescIcon",
+        "label": "Right Desc Icon",
+        "description": "Right description icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightDescIconAlt",
+        "label": "Right Desc Icon Alt",
+        "description": "Alternative text for the right description icon"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerText",
+        "label": "Left Lower Text",
+        "description": "Left lower text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "comfort",
+        "label": "Comfort",
+        "description": "Comfort text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "leftLowerIcon1",
+        "label": "Left Lower Icon 1",
+        "description": "Left lower icon 1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerIcon1Alt",
+        "label": "Left Lower Icon 1 Alt",
+        "description": "Alternative text for the left lower icon 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerText1",
+        "label": "Left Lower Text 1",
+        "description": "Left lower text 1 content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "leftLowerIcon2",
+        "label": "Left Lower Icon 2",
+        "description": "Left lower icon 2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerIcon2Alt",
+        "label": "Left Lower Icon 2 Alt",
+        "description": "Alternative text for the left lower icon 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerText2",
+        "label": "Left Lower Text 2",
+        "description": "Left lower text 2 content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "leftLowerImage",
+        "label": "Left Lower Image",
+        "description": "Left lower image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerImageAlt",
+        "label": "Left Lower Image Alt",
+        "description": "Alternative text for the left lower image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "leftLowerMobileImage",
+        "label": "Left Lower Mobile Image",
+        "description": "Left lower mobile image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "leftLowerMobileImageAlt",
+        "label": "Left Lower Mobile Image Alt",
+        "description": "Alternative text for the left lower mobile image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerText",
+        "label": "Right Lower Text",
+        "description": "Right lower text content"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "style",
+        "label": "Style",
+        "description": "Style text content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightLowerIcon1",
+        "label": "Right Lower Icon 1",
+        "description": "Right lower icon 1",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerIcon1Alt",
+        "label": "Right Lower Icon 1 Alt",
+        "description": "Alternative text for the right lower icon 1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerText1",
+        "label": "Right Lower Text 1",
+        "description": "Right lower text 1 content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightLowerIcon2",
+        "label": "Right Lower Icon 2",
+        "description": "Right lower icon 2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerIcon2Alt",
+        "label": "Right Lower Icon 2 Alt",
+        "description": "Alternative text for the right lower icon 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerText2",
+        "label": "Right Lower Text 2",
+        "description": "Right lower text 2 content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightLowerImage",
+        "label": "Right Lower Image",
+        "description": "Right lower image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerImageAlt",
+        "label": "Right Lower Image Alt",
+        "description": "Alternative text for the right lower image"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "rightLowerMobileImage",
+        "label": "Right Lower Mobile Image",
+        "description": "Right lower mobile image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rightLowerMobileImageAlt",
+        "label": "Right Lower Mobile Image Alt",
+        "description": "Alternative text for the right lower mobile image"
+      }
+    ]
+  },
+  {
     "id": "slide",
     "fields": [
       {
