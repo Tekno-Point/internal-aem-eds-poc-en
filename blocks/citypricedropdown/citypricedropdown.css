@@ -67,6 +67,7 @@
     padding: .5rem;
     position: relative;
     margin-top: 8px;
+    z-index: 3;
 }
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .arrow {
@@ -256,7 +257,21 @@
         color: #fff;
         height: 4.5rem;
     }
+    .citypricedropdown-wrapper{
+        padding: 0;
+    }
 
-    .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .city-option-container .city-option {}
+}
+@media (width < 768px){
+    .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .arrow{
+        width: 21px;
+        height: 21px;
+    }
+    .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .input-city{
+        margin-top: 9px;
+    }
+        .citypricedropdown-wrapper{
+        padding: 0 !important;
+    }
 
 }

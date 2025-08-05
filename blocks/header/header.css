@@ -37,9 +37,7 @@ header nav {
     'brand tools hamburger' var(--nav-height);
   grid-template-columns: 5fr 5fr 1fr;
   overflow-y: auto;
-  /* min-height: 100dvh; */
-} */
-
+  /* min-height: 100dvh; }*/
 @media (width >=900px) {
   header nav[aria-expanded='true'] {
     min-height: 0;
@@ -715,6 +713,6 @@ header nav .nav-sections .default-content-wrapper ol li a {
     max-width: -webkit-fill-available;
     margin: 0;
     width: 100%;
+    padding: 12px 24px;
   }
 }
-

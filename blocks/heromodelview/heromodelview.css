@@ -102,6 +102,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    padding: 0;
 }
 
 
@@ -170,12 +171,13 @@
     padding: .5rem;
     position: relative;
     margin-top: 8px;
+    z-index: 3;
 }
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow {
     position: absolute;
     right: .5rem;
-    top: 50%;
+    top: 55%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: -1;
@@ -195,13 +197,13 @@
     color: #1d1b1b;
     font-size: 13px;
     max-width: 289px;
-    z-index: 2;
+    z-index: 4;
 }
 
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .city-option-container {
     position: absolute;
-    top: 64px;
+    top: 55px;
     background-color: #fff;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -213,6 +215,8 @@
     height: calc(89vh - 250px);
     scrollbar-width: thin;
     overflow-x: hidden;
+    border: .0625rem solid #85888c;
+    cursor: pointer;
 }
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .city-option-container .city-option {
@@ -285,6 +289,7 @@
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .buy-btn .button {
     all: unset;
+    
 }
 
 
@@ -409,4 +414,16 @@
         height: 4.5rem;
     }
 
+}
+@media (width < 768px){
+   .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow{
+    width: 21px;
+    height: 21px;
+   }
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .input-city{
+    margin-top: 9px;
+}
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left{
+    font-size: 14px;
+}
 }

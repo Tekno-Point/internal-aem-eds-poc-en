@@ -313,3 +313,9 @@
     }
 
 }
+
+@media (width<786px) {
+    .section.essential-carousel.carousel-container .text-wrapper{
+        min-height: 53px;
+    }
+}

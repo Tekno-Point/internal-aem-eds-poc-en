@@ -1,0 +1,39 @@
+.section.breadcrumb-container .breadcrumb ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+.section.breadcrumb-container .breadcrumb-wrapper{
+    background-color:#e4eaf1;
+    max-width: none;
+    padding: 8px 88px;
+}
+.section.breadcrumb-container .breadcrumb ul li{
+    all: unset;
+    font-family: PP Neue Montreal;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
+.section.breadcrumb-container .breadcrumb ul li a{
+    all: unset;
+}
+
+.section.breadcrumb-container .breadcrumb ul li:last-child{
+    color: #222;
+        font-family: PP Neue Montreal;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+}
+
+@media  (width<768px) {
+    .section.breadcrumb-container .breadcrumb-wrapper{
+    padding: 8px 20px;
+}
+}

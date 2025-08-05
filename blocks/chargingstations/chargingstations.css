@@ -39,7 +39,7 @@
 .section.chargingstations-container .find-charging-station-content-container .find-charging-station-title {
     color: #222;
     font-family: PP Neue Montreal;
-    font-size: 3pc;
+    font-size: 49px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -52,6 +52,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-top: 44px;
 }
 
 .section.chargingstations-container .find-charging-station-content-container .charging-station-info-list {
@@ -62,7 +63,7 @@
 
 .section.chargingstations-container .find-charging-station-content-container .charging-station-info-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
 }
 
@@ -79,14 +80,17 @@
 
 .section.chargingstations-container .find-charging-station-content-container .charging-station-info-title-text {
     font-size: 1em;
-    color: #666;
+    color: #222;
     margin: 0;
+    font-family: PP Neue Montreal;
+    font-weight: 400;
 }
 
 .section.chargingstations-container .find-charging-station-content-container .charging-station-info-number-text {
-    font-size: 1.5em;
+    color: #222;
+    font-family: PP Neue Montreal;
+    font-size: 36px;
     font-weight: bold;
-    color: #333;
     margin: 0;
 }
 
@@ -109,9 +113,11 @@
 }
 
 .section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon {
-    flex: .2;
+    flex: 0 0 15%;
 }
-
+.section.chargingstations-container .charging-accordian-container .charging-accordian-title{
+    flex: 0 0 65%;
+}
 /* 
 .section.chargingstations-container .charging-accordian-container {
     flex: 1;
@@ -138,8 +144,8 @@
 }
 
 .section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon img {
-    width: 60px;
-    height: 60px;
+    width: 91px;
+    height: 55px;
     object-fit: contain;
 }
 
