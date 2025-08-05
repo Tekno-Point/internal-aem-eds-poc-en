@@ -12,6 +12,7 @@
     "/content/internal-aem-eds-poc/configuration:/.helix/config.json",
     "/content/internal-aem-eds-poc/redirects:/redirects.json",
     "/content/internal-aem-eds-poc/metadata:/metadata.json",
+    "/content/internal-aem-eds-poc/placeholders:/placeholders.json",
     "/content/internal-aem-eds-poc/experiment-metadata:/experiment-metadata.json",
     "/content/internal-aem-eds-poc/api/test:/api/test.json",
     "/content/internal-aem-eds-poc/dept-best-practice/form/contact-form:/dept-best-practice/form/contact-form.json",
