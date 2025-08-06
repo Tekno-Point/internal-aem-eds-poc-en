@@ -105,7 +105,7 @@ export default async function decorate(block) {
     block.innerHTML = html;
 
     const mapContainer = document.getElementById('map');
-    // let mapLoaded = false;
+    let mapLoaded = false;
 
     const loadMapScript = () => {
         const mapScript = document.createElement("script");

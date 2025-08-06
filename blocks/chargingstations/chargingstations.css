@@ -219,8 +219,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 26px;
     font-size: 1.2em;
     color: #888;
     cursor: pointer;
@@ -337,8 +337,8 @@
     cursor: pointer;
     padding: 0;
     margin-left: 8px;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 26px;
     background-image: url("/images/loc.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -377,6 +377,12 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    position: relative;
+}
+.count-item .label{
+    font-size: 18px;
+    color: #222;
+    text-align: start;
 }
 
 .charger-icon {
@@ -386,11 +392,14 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 5px;
+    position: absolute;
+    left: 4px;
+    top: 14px;
 }
 
 #charging-stations-city-count,
 #charging-stations-near-you-count {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     color: #333;
     font-family: 'PP Montreal Bold';
