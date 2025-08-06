@@ -57,9 +57,15 @@
     text-align: center;
 }
 
+.color{
+    width: 24px !important;
+    height: 24px !important;
+    cursor: pointer;
+}
 .colors>div.active {
     border: .75px solid #222;
-
+    width: 24px !important;
+    height: 24px !important;
 }
 
 .colors>div {
@@ -199,6 +205,8 @@
     font-size: 13px;
     max-width: 289px;
     z-index: 4;
+    letter-spacing: 0.75px;
+    font-family: "PP Montreal Thin";
 }
 
 
@@ -438,5 +446,13 @@
 }
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow{
     top: 50%;
+}
+.colors>div.active{
+    width: 22px !important;
+    height: 22px !important;
+}
+.color{
+    width: 14px !important;
+    height: 14px !important;
 }
 }
