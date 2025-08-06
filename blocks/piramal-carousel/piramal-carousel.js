@@ -3,7 +3,7 @@
  * Replicates the carousel functionality with smooth transitions and responsive design.
  */
 
-import { createOptimizedPicture } from '../../scripts/aem.js';
+// import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
@@ -278,7 +278,7 @@ function initializeCarousel(panelContainer, prevButton, nextButton, dotContainer
   updateSlideVisibility();
 
   // Auto-initialize move instrumentation
-  moveInstrumentation(itemDiv, item);
+  // moveInstrumentation(itemDiv, item);
 }
 
 /**

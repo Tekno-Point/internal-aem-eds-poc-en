@@ -189,6 +189,36 @@
           }
         },
         {
+          "title": "Loan Products",
+          "id": "loan-products",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Loan Products",
+                  "filter": "loan-products"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Loan Product",
+          "id": "loan-product",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Loan Product",
+                  "model": "loan-product"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "multicardspecs",
           "id": "multicardspecs",
           "plugins": {

@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "piramal-carousel"
+      "fragment"
     ]
   },
   {
@@ -44,6 +43,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "loan-products",
+    "components": [
+      "loan-product"
     ]
   },
   {
