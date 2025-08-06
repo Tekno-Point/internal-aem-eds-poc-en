@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import SwipperText from "../swiper/swiper-bundle.min.js";
 export default function decorate(block) {
   block.classList.add("swiper");

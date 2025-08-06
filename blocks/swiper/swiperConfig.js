@@ -1,3 +1,4 @@
+/*eslint-disable*/
 let objClassSwipper = {
   default: {
     loop: true,
