@@ -376,6 +376,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+<<<<<<< HEAD
     text-align: center;
     position: relative;
 }
@@ -383,33 +384,53 @@
     font-size: 18px;
     color: #222;
     text-align: start;
+=======
+    /* text-align: center; */
+    position: relative;
+>>>>>>> 99650ace9eadbcf9a7e6a46cc655d8348643cf1b
 }
 
 .charger-icon {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 25px;
     background-image: url('/images/station_icon.svg');
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 5px;
     position: absolute;
+<<<<<<< HEAD
     left: 4px;
     top: 14px;
+=======
+    right: 104%;
+    top: 22%;
+>>>>>>> 99650ace9eadbcf9a7e6a46cc655d8348643cf1b
 }
 
 #charging-stations-city-count,
 #charging-stations-near-you-count {
     font-size: 36px;
+<<<<<<< HEAD
     font-weight: bold;
     color: #333;
     font-family: 'PP Montreal Bold';
+=======
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    right: 37%;
+>>>>>>> 99650ace9eadbcf9a7e6a46cc655d8348643cf1b
 }
 
 .label {
     font-size: 14px;
     color: #666;
     margin-top: 5px;
+<<<<<<< HEAD
     font-family: 'PP Montreal Book';
+=======
+    line-height: normal;
+>>>>>>> 99650ace9eadbcf9a7e6a46cc655d8348643cf1b
 }
 
 #map {
@@ -588,22 +609,11 @@
     }
 
 }
+.leaflet-control-container .leaflet-top.leaflet-right,
+.leaflet-control-container .leaflet-bottom.leaflet-right,.leaflet-control {
+  display: none;
+}
+.expand-map-control{
+    display: none !important;
+}
 
-@media (width<768px) {
-    .section.chargingstations-container .charging-accordian-container{
-        padding: 32px 16px;
-    }
-    .section.chargingstations-container .charging-accordian-container .accordion-toggle-button{
-        margin: 0;
-        padding: 0;
-        width: 18px;
-    }
-.section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon{
-    width: 40px;
-    height: 40px;
-}
- .section.chargingstations-container .charging-accordian-container .charging-accordian-header,
-    .section.chargingstations-container .charging-accordian-container .charging-accordian-content {
-        width: 95%;
-    }
-}

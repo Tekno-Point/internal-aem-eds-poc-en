@@ -1,57 +1,81 @@
 import { renderDataFromAPI } from "../../scripts/scripts.js";
+import { fetchAPI } from "../heromodelview/heromodelview.js";
 
 export default async function decorate(block) {
+  const props = Array.from(block.children).map((ele) => ele);
+  // props
 
-    const props = Array.from(block.children).map((ele) => ele)
-    // props
+  const [
+    eleHeading,
+    eleCityUrl,
+    eleModalText,
+    elePriceLabel,
+    eleIncluded,
+    eleIncDescription,
+    eleBtn,
+  ] = props;
+  const heading = eleHeading?.children[0]?.children[0];
+  const cityUrl = eleCityUrl?.textContent.trim();
+  const popupText = eleModalText?.textContent.trim();
+  const priceLabel = elePriceLabel?.textContent.trim();
+  const included = eleIncluded?.textContent.trim();
+  const incDescription = eleIncDescription?.children[0];
+  const btn = eleBtn?.children[0]?.children[0];
+  // let props = Array.from(block.children).map((div) => div);
+  const imagesURL = "/vida-v2-pro/model-images.json"; //props[1].textContent.trim();
+  let imagesDetails = await renderDataFromAPIimg(imagesURL);
+  const testData = imagesDetails.data;
 
-    const [eleHeading, eleCityUrl, eleModalText, elePriceLabel, eleIncluded, eleIncDescription, eleBtn] = props;
-    const heading = eleHeading?.children[0]?.children[0];
-    const cityUrl = eleCityUrl?.textContent.trim();
-    const popupText = eleModalText?.textContent.trim();
-    const priceLabel = elePriceLabel?.textContent.trim();
-    const included = eleIncluded?.textContent.trim();
-    const incDescription = eleIncDescription?.children[0];
-    const btn = eleBtn?.children[0]?.children[0];
+  const cityPrices = await renderDataFromAPI(cityUrl);
+  // const uniqueVariantSkus = [...new Set(cityPrices.data.map(item => item.variant_sku))];
 
-    const cityPrices = await renderDataFromAPI(cityUrl);
+  const filteredCity = cityPrices.data.filter(
+    (city) => city.variant_sf_id == "a24OX000000WsenYAC"
+  );
+  
+  const filteredCityTemp = cityPrices.data;
 
-    const filteredCity = cityPrices.data.filter((city) => city.variant_sf_id == 'a24OX000000WsenYAC');
+  filteredCity.sort((a, b) => {
+    const cityA = a.city_state_id.split("~")[0].toUpperCase();
+    const cityB = b.city_state_id.split("~")[0].toUpperCase();
+    return cityA.localeCompare(cityB);
+  });
 
-    filteredCity.sort((a, b) => {
-        const cityA = a.city_state_id.split("~")[0].toUpperCase();
-        const cityB = b.city_state_id.split("~")[0].toUpperCase();
-        return cityA.localeCompare(cityB);
-    });
+  incDescription
+    ? incDescription.classList.add("whats-included-container", "dp-none")
+    : "";
 
+  if (btn) {
+    btn.classList.add("buy-btn");
+  }
 
-    incDescription ? incDescription.classList.add("whats-included-container", "dp-none") : "";
+  let dropdown = filteredCity
+    .map(
+      (city) =>
+        `<div class="city-option" data-effectiveprice=${Number(
+          city.effectivePrice
+        ).toLocaleString("en-IN")} data-colour=${city.variant_sf_id} value=${
+          city.city_state_id.split("~")[0]
+        }>${city.city_state_id.split("~")[0]}</div>`
+    )
+    .join("");
 
-    if (btn) {
-        btn.classList.add("buy-btn");
-    }
+  block.innerHTML = "";
 
+  let boxContainer = document.createElement("div");
+  boxContainer.classList.add("box-container");
+  let city = "new delhi";
+  const defaultCity = filteredCity.find((item) =>
+    item.city_state_id.includes(city.toUpperCase())
+  );
 
-
-    let dropdown = filteredCity
-        .map((city) => `<div class="city-option" data-effectiveprice=${Number(city.effectivePrice).toLocaleString('en-IN')} value=${city.city_state_id.split("~")[0]}>${city.city_state_id.split("~")[0]}</div>`).join("")
-
-    block.innerHTML = '';
-
-    let boxContainer = document.createElement("div")
-    boxContainer.classList.add("box-container")
-    let city = 'new delhi';
-    const defaultCity = filteredCity.find(item =>
-        item.city_state_id.includes(city.toUpperCase())
-    );
-
-    let toolTipHTML = `<span class="global-tooltip">
+  let toolTipHTML = `<span class="global-tooltip">
                     <img src="/icons/tooltip.svg" data-tip="true" data-for="modelVariant"
                     alt="modelVariant" currentitem="false">
                 </span>
-                <span class="popup">${popupText}</span>`
+                <span class="popup">${popupText}</span>`;
 
-    boxContainer.innerHTML = `
+  boxContainer.innerHTML = `
     
      <div class="left">
         ${heading.outerHTML}
@@ -67,97 +91,165 @@ export default async function decorate(block) {
     </div>
     <div class="right">
         <div class="price">
-            <p class="amount">₹${Number(defaultCity.effectivePrice).toLocaleString('en-IN')}
-                ${popupText ? toolTipHTML : ''}
+            <p class="amount">₹${Number(
+              defaultCity.effectivePrice
+            ).toLocaleString("en-IN")}
+                ${popupText ? toolTipHTML : ""}
             </p >
     <p class="price-text">${priceLabel}</p>
         </div >
     <div class="toolbar">${included}</div>
     </div >
 
-    `
-    let tooltip = boxContainer.querySelector(".global-tooltip");
-    let popup = boxContainer.querySelector(".popup");
+    `;
+  let tooltip = boxContainer.querySelector(".global-tooltip");
+  let popup = boxContainer.querySelector(".popup");
 
-    if (tooltip) {
-        tooltip.addEventListener("mouseenter", (e) => showPopup(e, popup))
-        tooltip.addEventListener("mouseleave", (e) => popup.style.visibility = "hidden")
-    }
+  if (tooltip) {
+    tooltip.addEventListener("mouseenter", (e) => showPopup(e, popup));
+    tooltip.addEventListener(
+      "mouseleave",
+      (e) => (popup.style.visibility = "hidden")
+    );
+  }
 
-    let toolbar = boxContainer.querySelector(".toolbar");
-    [toolbar, incDescription].forEach(el => {
-        el.addEventListener("click", () => hideShowIncluded(toolbar, incDescription,el));
+  let toolbar = boxContainer.querySelector(".toolbar");
+  [toolbar, incDescription].forEach((el) => {
+    el.addEventListener("click", () =>
+      hideShowIncluded(toolbar, incDescription, el)
+    );
+  });
+
+  let cityContainer = boxContainer.querySelector(".input-city");
+
+  // cityContainer.textContent =
+
+  let cityOptions = boxContainer.querySelectorAll(".city-option");
+
+  cityContainer.addEventListener("click", (e) => togglecityDrop(e));
+  cityOptions.forEach((city) => {
+    city.addEventListener("click", (e) =>
+      selectCity(e, cityContainer, filteredCityTemp)
+    );
+  });
+  boxContainer ? block.appendChild(boxContainer) : "";
+  incDescription ? block.appendChild(incDescription) : "";
+  btn ? block.appendChild(btn) : "";
+  //ak
+  document.querySelector(".colors").addEventListener("click", (e) => {
+    if(!e.target.dataset.price) return false;
+    const price = document.querySelector(".amount");
+    price.firstChild.nodeValue = "₹" + Number(e.target.dataset.price).toLocaleString("en-IN")
+    const indexid = e.target.dataset.id;
+    const isMobile = window.matchMedia("(max-width: 760px)").matches;
+    e.target.classList.add("active");
+    e.target.s;
+    let selImage = document.querySelector(".image");
+    testData.forEach((e, i) => {
+      if (e.color_id === indexid) {
+        selImage.src = isMobile
+          ? testData[i].mob_img_urls.split(",")[0]
+          : testData[i].desk_img_urls.split(",")[0];
+      }
     });
-
-    let cityContainer = boxContainer.querySelector(".input-city");
-
-    // cityContainer.textContent = 
-
-    let cityOptions = boxContainer.querySelectorAll(".city-option");
-
-    cityContainer.addEventListener("click", (e) => togglecityDrop(e))
-    cityOptions.forEach((city) => {
-        city.addEventListener("click", (e) => selectCity(e, cityContainer))
-    })
-    boxContainer ? block.appendChild(boxContainer) : '';
-    incDescription ? block.appendChild(incDescription) : '';
-    btn ? block.appendChild(btn) : '';
-
+  });
 }
- 
+
 const hideShowIncluded = (toolbar, incDescription, el) => {
-        let befparentContHeight = el.closest(".citypricedropdown-wrapper").clientHeight;
-        let heromodelviewWrapper =  el.closest(".section").querySelector(".heromodelview-wrapper")
-    if (incDescription.classList.contains("dp-none")) {
-        incDescription.classList.remove("dp-none");
-        toolbar.classList.add("dp-none");
-        let parentContHeight = el.closest(".citypricedropdown-wrapper").clientHeight;
-        // let wrapper =  el.closest(".section").querySelector(".heromodelview-wrapper").clientHeight;
-        heromodelviewWrapper.style.height = heromodelviewWrapper.clientHeight + (parentContHeight - befparentContHeight) + "px";
-    }
-    else {
-        incDescription.classList.add("dp-none");
-        toolbar.classList.remove("dp-none");
-        let parentContHeight = el.closest(".citypricedropdown-wrapper").clientHeight;
-        // let wrapper =  el.closest(".section").querySelector(".heromodelview-wrapper").clientHeight;
-        heromodelviewWrapper.style.height = heromodelviewWrapper.clientHeight - ( -parentContHeight + befparentContHeight) + "px";
-
-    }
-}
+  let befparentContHeight = el.closest(
+    ".citypricedropdown-wrapper"
+  ).clientHeight;
+  let heromodelviewWrapper = el
+    .closest(".section")
+    .querySelector(".heromodelview-wrapper");
+  if (incDescription.classList.contains("dp-none")) {
+    incDescription.classList.remove("dp-none");
+    toolbar.classList.add("dp-none");
+    let parentContHeight = el.closest(
+      ".citypricedropdown-wrapper"
+    ).clientHeight;
+    // let wrapper =  el.closest(".section").querySelector(".heromodelview-wrapper").clientHeight;
+    heromodelviewWrapper.style.height =
+      heromodelviewWrapper.clientHeight +
+      (parentContHeight - befparentContHeight) +
+      "px";
+  } else {
+    incDescription.classList.add("dp-none");
+    toolbar.classList.remove("dp-none");
+    let parentContHeight = el.closest(
+      ".citypricedropdown-wrapper"
+    ).clientHeight;
+    // let wrapper =  el.closest(".section").querySelector(".heromodelview-wrapper").clientHeight;
+    heromodelviewWrapper.style.height =
+      heromodelviewWrapper.clientHeight -
+      (-parentContHeight + befparentContHeight) +
+      "px";
+  }
+};
 
 const togglecityDrop = (e) => {
-    let cityOptionContainer = e.target.parentElement.querySelector(".city-option-container");
-    if (cityOptionContainer.classList.contains("dp-none")) {
-        cityOptionContainer.classList.remove("dp-none");
+  let cityOptionContainer = e.target.parentElement.querySelector(
+    ".city-option-container"
+  );
+  if (cityOptionContainer.classList.contains("dp-none")) {
+    cityOptionContainer.classList.remove("dp-none");
+  } else {
+    cityOptionContainer.classList.add("dp-none");
+  }
+};
+
+const selectCity = (e, cityContainer, filteredCityTemp) => {
+  const selectedCity = e.target.textContent.trim();
+  const effectivePrice = e.target.dataset.effectiveprice;
+  const colourselected = e.target.dataset.colour;
+  // const colourselectedid = e.target.id;
+  const filteredCitycol = filteredCityTemp.filter(
+    (citypro) => citypro.city_state_id.split("~")[0] === selectedCity
+  );
+  const filteredColour = filteredCitycol.filter(
+    (citycolor) => citycolor.item_name === "V2 PRO"
+  );
+
+  const filteredColourArr = [];
+  const filteredPriceArr = [];
+  filteredColour.forEach((item) => {
+    filteredColourArr.push(item.variant_sf_id);
+    filteredPriceArr.push(item.effectivePrice);
+  });
+
+  const filteredColourArrAuth = [];
+  Array.from(document.querySelectorAll(".color")).forEach(function (item) {
+    console.log(item);
+    filteredColourArrAuth.push(item.id);
+  });
+
+  filteredColourArrAuth.forEach((sku , index) => {
+            document.getElementById(sku).dataset.price = filteredPriceArr[index];
+    if (!filteredColourArr.includes(sku)) {
+      const colorDiv = document.getElementById(sku);
+      if (colorDiv) {
+        colorDiv.style.display = "none";
+      } else {
+        colorDiv.style.display = "block";
+      }
     }
-    else {
-        cityOptionContainer.classList.add("dp-none");
-    }
+  });
+
+  //ak2
+  cityContainer.textContent = selectedCity;
+  const block = e.target.closest(".box-container");
+  // const price = block.querySelector(".amount");
+
+  e.target.closest(".city-option-container").classList.add("dp-none");
+  const price = block.querySelector(".amount");
+    price.firstChild.nodeValue = "₹" + effectivePrice
+
+};
+async function renderDataFromAPIimg(url) {
+  const resp = await fetchAPI("GET", url);
+  const data = await resp.json();
+  return data;
 }
-
-const selectCity = (e, cityContainer) => {
-    const selectedCity = e.target.textContent.trim();
-    const effectivePrice = e.target.dataset.effectiveprice;
-    cityContainer.textContent = selectedCity;
-    const block = e.target.closest(".box-container");
-    const price = block.querySelector(".amount");
-
-    e.target.closest(".city-option-container").classList.add("dp-none");
-    price.firstChild.nodeValue = "₹" + effectivePrice;
-}
-
 const showPopup = (e, popup) => {
-    popup.style.visibility = "visible";
-}
-
-// const toolbar1 = document.querySelector(".toolbar");
-
-// if (isMobile && toolbar1) {
-
-//   const whatsIncludedFun = (e) => {
-// //   let includedContainer = document.querySelector(".whats-included-container");
-// //   let parentContHeight = e.currentTarget.closest(".citypricedropdown-wrapper")
-// }
-
-//   toolbar.addEventListener("click", (e) => { whatsIncludedFun(e); });
-// }
+  popup.style.visibility = "visible";
+};
