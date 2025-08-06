@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "multicardspecs"
+      "fragment"
     ]
   },
   {
@@ -49,7 +48,13 @@
   {
     "id": "multicardspecs",
     "components": [
-      "multicardspecs-item"
+      "item"
+    ]
+  },
+  {
+    "id": "piramal-carousel",
+    "components": [
+      "piramal-carousel-item"
     ]
   },
   {

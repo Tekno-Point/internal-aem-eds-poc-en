@@ -1,0 +1,518 @@
+/*
+ * Piramal Carousel Block Styles
+ * Replicates the visual design and responsive behavior of the provided HTML/CSS.
+ */
+
+.piramal-carousel {
+  margin-bottom: var(--spacing-xl, 48px);
+  max-width: unset;
+  margin-left: calc(-1 * var(--spacing-xs, 16px));
+  margin-right: calc(-1 * var(--spacing-xs, 16px));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.piramal-carousel.loaded {
+  opacity: 1;
+}
+
+.piramal-carousel .carousel-container {
+  position: relative;
+}
+
+.piramal-carousel .panel-container {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow: auto;
+  scroll-behavior: smooth;
+  margin: auto;
+  align-items: stretch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.piramal-carousel .panel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.piramal-carousel .carousel-item {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  height: auto;
+  min-height: 529px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-m, 24px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.piramal-carousel .carousel-item .background {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.piramal-carousel .carousel-item .front-picture {
+  position: absolute;
+  right: 2px;
+  bottom: 0;
+}
+
+.piramal-carousel .carousel-item .front-picture img {
+  height: 334px;
+  width: 394px;
+  display: block;
+  object-fit: contain;
+}
+
+.piramal-carousel .carousel-item .foreground {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 62.5%;
+}
+
+.piramal-carousel .carousel-item .text {
+  position: relative;
+  z-index: 1;
+}
+
+.piramal-carousel .carousel-item .eyebrow {
+  color: var(--text-color, #333);
+  font-family: var(--font-bold, sans-serif);
+  font-size: var(--font-size-s, 1.5rem);
+  font-weight: 700;
+  line-height: var(--line-height-s, 32px);
+  margin-bottom: var(--spacing-xs, 16px);
+}
+
+.piramal-carousel .carousel-item .title {
+  margin-bottom: var(--spacing-s, 24px);
+}
+
+.piramal-carousel .carousel-item .title h1,
+.piramal-carousel .carousel-item .title h2,
+.piramal-carousel .carousel-item .title h3,
+.piramal-carousel .carousel-item .title h4,
+.piramal-carousel .carousel-item .title h5,
+.piramal-carousel .carousel-item .title h6 {
+  color: var(--heading-color, #000);
+  font-family: var(--font-extrabold, sans-serif);
+  font-size: var(--font-size-xl, 3rem);
+  font-weight: 800;
+  line-height: var(--line-height-xl, 60px);
+  margin: 0;
+}
+
+.piramal-carousel .carousel-item .long-description {
+  color: var(--text-color-secondary, #666);
+  font-family: var(--font-regular, sans-serif);
+  font-size: var(--font-size-m, 1.5rem);
+  font-weight: 400;
+  line-height: var(--line-height-m, 32px);
+  margin-bottom: var(--spacing-m, 24px);
+}
+
+.piramal-carousel .carousel-item .long-description p {
+  margin: 0;
+}
+
+.piramal-carousel .carousel-item .cta {
+  position: unset;
+  margin-top: var(--spacing-l, 32px);
+}
+
+.piramal-carousel .carousel-item .cta .button {
+  background: var(--accent-color, #ff6f61);
+  border-radius: var(--border-radius-s, 8px);
+  color: var(--button-text-color, #fff);
+  font-family: var(--font-bold, sans-serif);
+  font-size: var(--font-size-sm, 1.125rem);
+  font-weight: 700;
+  line-height: var(--line-height-sm, 20px);
+  padding: var(--spacing-s, 18px) var(--spacing-l, 34.65px);
+  width: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.piramal-carousel .carousel-item .cta .button:hover {
+  background: var(--accent-color-hover, #e05f52);
+  transform: translateY(-2px);
+}
+
+.piramal-carousel .carousel-item .cta .button:focus {
+  outline: 2px solid var(--focus-color, #005fcc);
+  outline-offset: 2px;
+}
+
+.piramal-carousel .carousel-navigation-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--spacing-m, 24px);
+  z-index: 2;
+}
+
+.piramal-carousel .carousel-navigation-buttons button {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--border-color, #ccc);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.piramal-carousel .carousel-navigation-buttons button div {
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--text-color, #333);
+  border-right: 2px solid var(--text-color, #333);
+  transform: rotate(45deg);
+}
+
+.piramal-carousel .carousel-navigation-buttons button.slide-next div {
+  transform: rotate(-135deg);
+}
+
+.piramal-carousel .carousel-navigation-buttons button:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: var(--accent-color, #ff6f61);
+}
+
+.piramal-carousel .carousel-navigation-buttons button:focus {
+  outline: 2px solid var(--focus-color, #005fcc);
+  outline-offset: 2px;
+}
+
+.piramal-carousel .carousel-navigation-buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.piramal-carousel .button-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xs, 8px);
+  padding-top: var(--spacing-l, 32px);
+  margin-top: var(--spacing-m, 24px);
+}
+
+.piramal-carousel .button-container button {
+  display: block;
+  height: 8px;
+  width: 8px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-color, #ccc);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.piramal-carousel .button-container button.selected {
+  width: 24px;
+  background-color: var(--accent-color, #ff6f61);
+  border-color: var(--accent-color, #ff6f61);
+}
+
+.piramal-carousel .button-container button:hover {
+  border-color: var(--accent-color-hover, #e05f52);
+}
+
+.piramal-carousel .button-container button:focus {
+  outline: 2px solid var(--focus-color, #005fcc);
+  outline-offset: 2px;
+}
+
+/* Background image variants */
+.piramal-carousel .carousel-item.slide-background-light-green {
+  background-image: url('/images/WhatsAppBannerDesktop.webp');
+}
+
+.piramal-carousel .carousel-item.slide-background-light-blue {
+  background-image: url('/images/banner2-background-image-desktop.png');
+}
+
+.piramal-carousel .carousel-item.slide-background-violet {
+  background-image: url('/images/banner3-background-image-desktop.png');
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .piramal-carousel {
+    margin-left: calc(-1 * var(--spacing-xl, 32px));
+    margin-right: calc(-1 * var(--spacing-xl, 32px));
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .piramal-carousel .carousel-item .front-picture img {
+    width: 312px;
+    height: 265px;
+  }
+
+  .piramal-carousel .carousel-item .foreground {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .piramal-carousel .carousel-item {
+    min-height: 440px;
+    padding: 0 var(--spacing-s, 16px);
+  }
+
+  .piramal-carousel .carousel-item .background {
+    max-width: 100%;
+  }
+
+  .piramal-carousel .carousel-item .foreground {
+    width: 100%;
+    min-height: 440px;
+  }
+
+  .piramal-carousel .carousel-item .title h1,
+  .piramal-carousel .carousel-item .title h2,
+  .piramal-carousel .carousel-item .title h3,
+  .piramal-carousel .carousel-item .title h4,
+  .piramal-carousel .carousel-item .title h5,
+  .piramal-carousel .carousel-item .title h6 {
+    font-size: var(--font-size-m, 1.5rem);
+    line-height: var(--line-height-m, 32px);
+  }
+
+  .piramal-carousel .carousel-item .long-description {
+    font-size: var(--font-size-sm, 0.875rem);
+    line-height: var(--line-height-sm, 20px);
+  }
+
+  .piramal-carousel .carousel-item .cta {
+    margin-top: var(--spacing-m, 24px);
+  }
+
+  .piramal-carousel .carousel-item .cta .button {
+    font-size: var(--font-size-xs, 0.875rem);
+    line-height: var(--line-height-xs, 17px);
+    padding: var(--spacing-xs, 14px) var(--spacing-s, 16px);
+  }
+
+  .piramal-carousel .carousel-item .front-picture img {
+    height: 170px;
+    width: 200px;
+  }
+
+  .piramal-carousel .carousel-item .front-picture {
+    right: var(--spacing-s, 16px);
+  }
+
+  .piramal-carousel .button-container {
+    left: var(--spacing-s, 16px);
+    padding-top: var(--spacing-m, 24px);
+  }
+
+  .piramal-carousel .button-container button {
+    height: 5px;
+    width: 5px;
+  }
+
+  .piramal-carousel .button-container button.selected {
+    width: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .piramal-carousel .carousel-item {
+    min-height: 440px;
+  }
+
+  .piramal-carousel .carousel-item .foreground {
+    width: 100%;
+    min-height: 440px;
+    padding-top: var(--spacing-l, 40px);
+  }
+
+  .piramal-carousel .carousel-item .front-picture img {
+    width: 240px;
+    height: 200px;
+  }
+
+  .piramal-carousel .carousel-item .front-picture {
+    right: var(--spacing-s, 16px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .piramal-carousel .carousel-item {
+    min-height: 440px;
+  }
+
+  .piramal-carousel .carousel-item .foreground {
+    width: 50%;
+  }
+
+  .piramal-carousel .carousel-item .front-picture img {
+    width: 312px;
+    height: 265px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .piramal-carousel .carousel-item .background {
+    max-width: 81.25%;
+    background-size: cover;
+  }
+
+  .piramal-carousel .carousel-item .front-picture img {
+    height: 335px;
+    width: 394px;
+  }
+
+  .piramal-carousel .carousel-item .foreground {
+    width: 64%;
+  }
+
+  .piramal-carousel .carousel-navigation-buttons {
+    padding: 0 var(--spacing-l, 48px);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .piramal-carousel .carousel-item .eyebrow {
+    color: var(--text-color-dark, #f5f5f5);
+  }
+
+  .piramal-carousel .carousel-item .title h1,
+  .piramal-carousel .carousel-item .title h2,
+  .piramal-carousel .carousel-item .title h3,
+  .piramal-carousel .carousel-item .title h4,
+  .piramal-carousel .carousel-item .title h5,
+  .piramal-carousel .carousel-item .title h6 {
+    color: var(--heading-color-dark, #fff);
+  }
+
+  .piramal-carousel .carousel-item .long-description {
+    color: var(--text-color-secondary-dark, #ccc);
+  }
+
+  .piramal-carousel .carousel-navigation-buttons button {
+    background: rgba(30, 30, 30, 0.8);
+    border-color: var(--border-color-dark, #666);
+  }
+
+  .piramal-carousel .carousel-navigation-buttons button div {
+    border-color: var(--text-color-dark, #f5f5f5);
+  }
+
+  .piramal-carousel .button-container button {
+    border-color: var(--border-color-dark, #666);
+  }
+
+  .piramal-carousel .button-container button.selected {
+    background-color: var(--accent-color-dark, #e05f52);
+    border-color: var(--accent-color-dark, #e05f52);
+  }
+}
+
+/* Animation and hover effects */
+.piramal-carousel .carousel-item .cta .button {
+  transform: translateY(0);
+}
+
+.piramal-carousel .carousel-item .cta .button:hover {
+  transform: translateY(-2px);
+}
+
+.piramal-carousel .carousel-item .cta .button:focus {
+  transform: translateY(-1px);
+}
+
+.piramal-carousel .carousel-navigation-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.piramal-carousel .button-container button:hover {
+  transform: scale(1.1);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .piramal-carousel {
+    transition: none;
+  }
+
+  .piramal-carousel .carousel-item .cta .button {
+    transition: none;
+  }
+
+  .piramal-carousel .carousel-navigation-buttons button {
+    transition: none;
+  }
+
+  .piramal-carousel .button-container button {
+    transition: none;
+  }
+
+  .piramal-carousel .carousel-item .cta .button:hover,
+  .piramal-carousel .carousel-item .cta .button:focus,
+  .piramal-carousel .carousel-navigation-buttons button:hover,
+  .piramal-carousel .button-container button:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .piramal-carousel .carousel-item .eyebrow {
+    color: #000;
+  }
+
+  .piramal-carousel .carousel-item .title h1,
+  .piramal-carousel .carousel-item .title h2,
+  .piramal-carousel .carousel-item .title h3,
+  .piramal-carousel .carousel-item .title h4,
+  .piramal-carousel .carousel-item .title h5,
+  .piramal-carousel .carousel-item .title h6 {
+    color: #000;
+  }
+
+  .piramal-carousel .carousel-item .long-description {
+    color: #000;
+  }
+
+  .piramal-carousel .carousel-navigation-buttons button {
+    background: #fff;
+    border-color: #000;
+  }
+
+  .piramal-carousel .carousel-navigation-buttons button div {
+    border-color: #000;
+  }
+
+  .piramal-carousel .button-container button {
+    border-color: #000;
+  }
+
+  .piramal-carousel .button-container button.selected {
+    background-color: #000;
+    border-color: #000;
+  }
+}
