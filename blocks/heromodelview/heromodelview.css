@@ -247,6 +247,11 @@
     margin: 0;
 
 }
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .amount .global-tooltip{
+    width: 13px;
+    height: 13px;
+    margin-left: 3px;
+}
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .toolbar {
     color: var(--Primary-Vida-Orange, #ff5310);

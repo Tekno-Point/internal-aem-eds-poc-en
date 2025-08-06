@@ -83,12 +83,12 @@ export default async function decorate(block) {
             <div class="count-item">
                 <span class="charger-icon"></span>
                 <span id="charging-stations-city-count">89</span>
-                <span class="label">charging stations in your city</span>
+                <span class="label">Charging stations in your city</span>
             </div>
             <div class="count-item">
                 <span class="charger-icon"></span>
                 <span id="charging-stations-near-you-count">89</span>
-                <span class="label">charging stations near you</span>
+                <span class="label">Charging stations near you</span>
             </div>
         </div>
     </div>

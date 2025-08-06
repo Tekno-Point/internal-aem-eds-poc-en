@@ -46,7 +46,7 @@ export default async function decorate(block) {
     );
 
     let toolTipHTML = `<span class="global-tooltip">
-                    <img src="/icons/chevron-down.svg" data-tip="true" data-for="modelVariant"
+                    <img src="/icons/tooltip.svg" data-tip="true" data-for="modelVariant"
                     alt="modelVariant" currentitem="false">
                 </span>
                 <span class="popup">${popupText}</span>`

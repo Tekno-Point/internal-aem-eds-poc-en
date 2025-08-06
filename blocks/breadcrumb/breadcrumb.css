@@ -31,6 +31,14 @@
         font-weight: 600;
         line-height: normal;
 }
+.section.breadcrumb-container .breadcrumb ul li:nth-child(2){
+    width: 16px;
+    height: 18px;
+}
+.section.breadcrumb-container .breadcrumb ul li:nth-child(2) span{
+    width: 16px;
+    height: 18px;
+}
 
 @media  (width<768px) {
     .section.breadcrumb-container .breadcrumb-wrapper{
