@@ -596,9 +596,14 @@
     .section.chargingstations-container .charging-accordian-container .accordion-toggle-button{
         margin: 0;
         padding: 0;
+        width: 18px;
     }
 .section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon{
     width: 40px;
     height: 40px;
 }
+ .section.chargingstations-container .charging-accordian-container .charging-accordian-header,
+    .section.chargingstations-container .charging-accordian-container .charging-accordian-content {
+        width: 95%;
+    }
 }
