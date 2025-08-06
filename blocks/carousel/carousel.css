@@ -80,7 +80,7 @@
 
 .section.essential-carousel.carousel-container .default-content-wrapper>p {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Book';
     font-size: 9pt;
     font-style: normal;
     font-weight: 400;
@@ -90,7 +90,7 @@
 
 .section.essential-carousel.carousel-container .default-content-wrapper>h2 {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Bold';
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -169,7 +169,7 @@
 
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide .text-wrapper>div>h2 {
     color: var(--Neutral-Dark-Grey, #222);
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Bold';
     font-size: 1pc;
     font-style: normal;
     font-weight: 600;
@@ -190,7 +190,7 @@
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>div>p>a {
     all: unset;
     color: var(--Primary-Vida-Orange, #ff5310);
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Medium';
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -224,7 +224,7 @@
 
 .section.essential-carousel.carousel-container .default-content-wrapper:last-child>p>a {
     all: unset;
-    font-family: "PP Neue Montreal";
+    font-family: 'PP Montreal Bold';
     font-size: 1pc;
     font-style: normal;
     font-weight: 600;
@@ -235,7 +235,7 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
     display: flex;
-    height: 3rem;
+    height: auto;
     -webkit-box-pack: center;
     justify-content: center;
     width: fit-content;
@@ -255,7 +255,7 @@
 
     .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide .text-wrapper>div>h2 {
         color: var(--Vida-Black, #222);
-        font-family: PP Neue Montreal;
+        font-family: 'PP Montreal Bold';
         font-size: 28px;
         font-style: normal;
         font-weight: 600;
@@ -269,7 +269,7 @@
 
     .section.essential-carousel.carousel-container .default-content-wrapper>p {
         color: #222;
-        font-family: PP Neue Montreal;
+        font-family: 'PP Montreal Book';
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -288,7 +288,7 @@
 
     .section.essential-carousel.carousel-container .default-content-wrapper>h2 {
         color: #222;
-        font-family: PP Neue Montreal;
+        font-family:'PP Montreal Bold';
         font-size: 3pc;
         font-style: normal;
         font-weight: 600;
@@ -301,18 +301,23 @@
     }
 
     .section.essential-carousel.carousel-container .default-content-wrapper:last-child>p>a {
-        font-family: "PP Neue Montreal";
+        font-family: 'PP Montreal Bold';
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0.46875rem 0.9375rem 0px;
         color: rgb(255, 255, 255);
-        height: 3.5rem;
+        height: auto;
         min-width: 9.75rem;
+        margin-bottom: 30px;
     }
 
 }
+
+.section.essential-carousel.carousel-container .text-wrapper{
+        min-height: 53px;
+    }
 
 @media (width<786px) {
     .section.essential-carousel.carousel-container .text-wrapper{

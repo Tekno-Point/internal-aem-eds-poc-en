@@ -66,6 +66,7 @@
   font-weight: 600;
   line-height: normal;
   margin: 0;
+  font-family: 'PP Montreal Bold';
 }
 
 .section.variant-focused-view-container .cards-wrapper .cards.block ul li p {
@@ -75,6 +76,7 @@
   font-weight: 400;
   line-height: normal;
   padding-top: 32px;
+  font-family: 'PP Montreal Book';
 }
 
 .section.variant-focused-view-container .cards-wrapper .cards.block ul li:first-child .cards-card-body h3,
@@ -366,6 +368,7 @@
   line-height: normal;
   color: #222;
   padding-bottom: 16px;
+  font-family: 'PP Montreal Book';
 }
 
 .section.offer-cards .cards-wrapper ul li .cards-card-body h3 {
@@ -375,6 +378,7 @@
   color: #222;
   margin: 0;
   padding-bottom: 16px;
+    font-family: 'PP Montreal Bold';
 }
 
 .section.offer-cards .cards-wrapper ul li .cards-card-body p.button-container {
@@ -392,6 +396,8 @@
   margin: 0;
   padding: 0;
   display: unset;
+    font-family: 'PP Montreal Medium';
+
 }
 
 @media (width <=900px) {

@@ -13,7 +13,7 @@
 }
 .section.breadcrumb-container .breadcrumb ul li{
     all: unset;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Book';
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -25,7 +25,7 @@
 
 .section.breadcrumb-container .breadcrumb ul li:last-child{
     color: #222;
-        font-family: PP Neue Montreal;
+        font-family: 'PP Montreal Bold';
         font-size: 18px;
         font-style: normal;
         font-weight: 600;

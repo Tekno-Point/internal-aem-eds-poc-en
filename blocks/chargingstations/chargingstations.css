@@ -38,7 +38,7 @@
 
 .section.chargingstations-container .find-charging-station-content-container .find-charging-station-title {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Bold';
     font-size: 49px;
     font-style: normal;
     font-weight: 600;
@@ -82,13 +82,13 @@
     font-size: 1em;
     color: #222;
     margin: 0;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Book';
     font-weight: 400;
 }
 
 .section.chargingstations-container .find-charging-station-content-container .charging-station-info-number-text {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Bold';
     font-size: 36px;
     font-weight: bold;
     margin: 0;
@@ -151,7 +151,7 @@
 
 .section.chargingstations-container .charging-accordian-container .charging-accordian-title-text {
     color: var(--Vida-Black, #222);
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Bold';
     font-size: 28px;
     font-style: normal;
     font-weight: 600;
@@ -185,7 +185,7 @@
 .section.chargingstations-container .charging-accordian-container .search-input-container {
     padding: 10px 5px;
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Medium';
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -314,7 +314,7 @@
     padding: 2px 0;
     max-width: 100%;
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Medium';
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -387,12 +387,14 @@
     font-size: 24px;
     font-weight: bold;
     color: #333;
+    font-family: 'PP Montreal Bold';
 }
 
 .label {
     font-size: 14px;
     color: #666;
     margin-top: 5px;
+    font-family: 'PP Montreal Book';
 }
 
 #map {
@@ -498,7 +500,7 @@
     .section.chargingstations-container .find-charging-station-content-container .find-charging-station-title {
         font-size: 2em;
         color: #222;
-        font-family: PP Neue Montreal;
+        font-family: 'PP Montreal Bold';
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
@@ -507,7 +509,7 @@
 
     .section.chargingstations-container .find-charging-station-content-container .charging-station-info-title-text {
         color: #222;
-        font-family: PP Neue Montreal;
+        font-family: 'PP Montreal Book';
         font-size: 9pt;
         font-style: normal;
         font-weight: 400;
@@ -516,7 +518,7 @@
 
     .section.chargingstations-container .find-charging-station-content-container .charging-station-info-number-text {
         color: #222;
-        font-family: PP Neue Montreal;
+        font-family: 'PP Montreal Medium';
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
@@ -545,7 +547,7 @@
 
     .section.chargingstations-container .charging-accordian-container .charging-accordian-title-text {
         color: var(--Neutral-Dark-Grey, #222);
-        font-family: PP Neue Montreal;
+        font-family: 'PP Montreal Bold';
         font-size: 1pc;
         font-style: normal;
         font-weight: 600;

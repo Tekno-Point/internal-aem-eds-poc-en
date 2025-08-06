@@ -43,6 +43,7 @@
     font-weight: 600;
     line-height: normal;
     color: #fff;
+    font-family: 'PP Montreal Bold';
 }
 
 .section.vida-warranty-card .warranty-card.block .warranty-card a .warranty-card-images span {
@@ -95,6 +96,7 @@
         font-size: 20px;
         font-weight: 500;
         text-align: left;
+        font-family: 'PP Montreal Medium';
     }
 
     .section.vida-warranty-card .warranty-card.block .warranty-card a .warranty-card-images,
@@ -154,6 +156,7 @@
     color: #000;
     margin: 0;
     text-align: left;
+    font-family: 'PP Montreal Bold';
 }
 
 .section.cost-calculator-card .warranty-card.block .warranty-card a .warranty-card-title > div span {

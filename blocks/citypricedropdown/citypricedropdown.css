@@ -28,7 +28,7 @@
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Book';
     font-size: 9pt;
     font-style: normal;
     font-weight: 400;
@@ -107,7 +107,7 @@
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .amount {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Bold';
     font-size: 24px;
     font-style: normal;
     line-height: normal;
@@ -121,7 +121,7 @@
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .toolbar {
     color: var(--Primary-Vida-Orange, #ff5310);
-    font-family: PP Neue Montreal;
+    font-family:'PP Montreal Medium';
     font-size: 1pc;
     font-style: normal;
     font-weight: 500;
@@ -161,7 +161,7 @@
     color: #fff;
     cursor: pointer;
     display: flex;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Bold';
     height: 3.25rem;
     justify-content: center;
     width: 100%;
@@ -214,11 +214,12 @@
         font-weight: 400;
         line-height: normal;
         margin: unset;
+        font-family: 'PP Montreal Book';
     }
 
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .input-city {
         color: #222;
-        font-family: PP Neue Montreal;
+        font-family: 'PP Montreal Medium';
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
@@ -248,7 +249,7 @@
     }
 
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .buy-btn {
-        font-family: PP Neue Montreal;
+        font-family: 'PP Montreal Bold';
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -273,5 +274,10 @@
         .citypricedropdown-wrapper{
         padding: 0 !important;
     }
+    .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .city-option-container .city-option {
+    border-bottom: none;
+    max-width: 100%;
+    padding: 1rem;
+}
 
 }

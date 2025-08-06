@@ -60,6 +60,7 @@ footer .footer>div {
   line-height: 16px;
   font-weight: 500;
   text-decoration: underline;
+  font-family: "PP Montreal Medium";
 }
 
 .section.footer-address-conatiner .columns.block>div>div ul {
@@ -74,6 +75,7 @@ footer .footer>div {
   line-height: 16px;
   font-weight: 400;
   padding-top: 16px;
+  font-family: "PP Montreal Book";
 }
 
 .section.footer-address-conatiner .columns.block>div>div ul li ul {
@@ -116,6 +118,7 @@ footer .footer>div {
   font-weight: 600;
   line-height: normal;
   padding: 0;
+  font-family: "PP Montreal Bold";
 }
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ul li ul {
@@ -134,6 +137,7 @@ footer .footer>div {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
+  font-family: "PP Montreal Book";
 }
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ul li ul li a:hover {
@@ -155,6 +159,7 @@ footer .footer>div {
   max-width: unset;
   margin: 0;
   padding-bottom: 10px;
+  font-family: "PP Montreal Bold";
 }
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ol li ol {
@@ -168,6 +173,7 @@ footer .footer>div {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
+  font-family: "PP Montreal Book";
 }
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ol li ol li a:hover {

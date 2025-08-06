@@ -47,7 +47,7 @@
 
 .visualizer-color-text-wrapper .color-text {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Book';
     font-size: 9pt;
     font-style: normal;
     font-weight: 400;
@@ -84,11 +84,12 @@
     /* padding-left: 1.5625rem; */
     padding-top: 3.25rem;
     margin: 0;
+    font-family: "PP Montreal Medium";
 }
 
 .section.heromodelview-container.citypricedropdown-container .model-wrapper>p {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: "PP Montreal Bold";
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
@@ -132,7 +133,7 @@
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: 'PP Montreal Book';
     font-size: 9pt;
     font-style: normal;
     font-weight: 400;
@@ -235,7 +236,7 @@
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .amount {
     color: #222;
-    font-family: PP Neue Montreal;
+    font-family: "PP Montreal Bold";
     font-size: 24px;
     font-style: normal;
     line-height: normal;
@@ -249,7 +250,7 @@
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .toolbar {
     color: var(--Primary-Vida-Orange, #ff5310);
-    font-family: PP Neue Montreal;
+    font-family: "PP Montreal Medium";
     font-size: 1pc;
     font-style: normal;
     font-weight: 500;
@@ -266,6 +267,7 @@
     font-weight: 400;
     line-height: normal;
     margin: unset;
+    font-family: 'PP Montreal Book';
 }
 
 
@@ -280,7 +282,7 @@
     color: #fff;
     cursor: pointer;
     display: flex;
-    font-family: PP Neue Montreal;
+    font-family: "PP Montreal Bold";
     height: 3.25rem;
     justify-content: center;
     width: 100%;
@@ -333,7 +335,7 @@
 
     .section.heromodelview-container.citypricedropdown-container .model-wrapper>p {
         color: #222;
-        font-family: PP Neue Montreal;
+        font-family: "PP Montreal Bold";
         font-size: 60px;
         font-style: normal;
         font-weight: 600;
@@ -376,7 +378,7 @@
 
     .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .input-city {
         color: #222;
-        font-family: PP Neue Montreal;
+        font-family: "PP Montreal Medium";
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
@@ -404,7 +406,7 @@
     }
 
     .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .buy-btn {
-        font-family: PP Neue Montreal;
+        font-family: "PP Montreal Bold";
         font-size: 20px;
         font-style: normal;
         font-weight: 600;

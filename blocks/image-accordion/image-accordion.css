@@ -14,6 +14,8 @@
     line-height: normal;
     color: #222;
     margin: 0;
+    font-family: 'PP Montreal Book';
+    
 }
 
 .section.vida-service-container .default-content-wrapper p strong {
@@ -23,6 +25,8 @@
     line-height: normal;
     color: #222;
     padding-top: 5.4px;
+    font-family: 'PP Montreal Bold';
+    
 }
 
 .section.vida-service-container .image-accordion-wrapper {
@@ -49,6 +53,8 @@
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+    font-family: 'PP Montreal Book';
+    cursor: pointer;
 }
 
 .section.vida-service-container .image-accordion-wrapper .accordion-item.active summary p {

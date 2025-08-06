@@ -515,6 +515,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
     color: #3f3d3d;
     cursor: pointer;
     padding-right: 10px;
+    font-family: "PP Montreal Medium";
 }
 .head-accordion .accordion-item-body{
   display: flex;
@@ -558,6 +559,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
     font-size: 14px;
     font-weight: 530;
     line-height: normal;
+    font-family: "PP Montreal Medium";
 }
 .head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul li:nth-child(2){
   font-size: 12px;
@@ -567,6 +569,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
     font-style: normal;
     font-weight: 450;
     margin-top: 4px;
+    font-family: "PP Montreal Medium";
 }
 .section.head-accordion .accordion-container:nth-child(1) .accordion-item-body{
   background-color: #f9f5ee;
@@ -610,6 +613,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
     color: #1d1b1b;
     margin-bottom: 4px;
     cursor: pointer;
+    font-family: "PP Montreal Medium";
 }
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body >  ul > li:hover{
   color: #ff5310;
@@ -620,6 +624,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
     letter-spacing: .25px;
     color: #696767;
     margin-top: 10px;
+    font-family: "PP Montreal Book";
 }
 .head-accordion .accordion-container:nth-child(2) .accordion-item-body ul li ul{
   padding: 0;
@@ -638,6 +643,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
     text-decoration: none;
     margin-bottom: 20px;
     cursor: pointer;
+    font-family: "PP Montreal Medium";
 }
 .section.head-accordion .accordion-container:nth-child(2) ol li:hover{
   color: #ff5310;
@@ -654,6 +660,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
     text-decoration: none;
     margin: 0;
     cursor: pointer;
+    font-family: "PP Montreal Medium";
 }
 .section.buy-style .default-content-wrapper p:nth-child(1):hover{
     color: #ff5310;
@@ -670,6 +677,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
         margin: 0;
         margin-left: 30px;
         cursor: pointer;
+    font-family: "PP Montreal Medium";
 }
 .section.buy-style .default-content-wrapper p:nth-child(2):hover{
   background-color: #696767;
