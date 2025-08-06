@@ -28,6 +28,7 @@ function updateRangeSliderFill(rangeInput) {
 
 
 export default async function decorate(block) {
+    block.style.display = 'none';
 
     if (window.location.href.includes("author-p48457-e1275402.adobeaemcloud.com")) return block;
     if (!block.textContent.trim()) {
@@ -272,4 +273,5 @@ export default async function decorate(block) {
     });
 
     updateCalculator();
+    block.style.display = 'block';
 }
