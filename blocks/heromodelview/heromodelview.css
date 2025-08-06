@@ -428,4 +428,10 @@
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left{
     font-size: 14px;
 }
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown {
+    margin-bottom: 0;
+}
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow{
+    top: 50%;
+}
 }

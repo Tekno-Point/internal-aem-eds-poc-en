@@ -12,7 +12,7 @@
 
 .section.vida-warranty-card .warranty-card.block {
     background-color: #ff5310;
-    clip-path: polygon(0 0, 100% 0, 100% 72%, 94% 100%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 72%, 94% 100%, 0 100%); */
     border-radius: 1rem;
     max-height: 10.75rem;
     max-width: 38.875rem;
@@ -118,7 +118,7 @@
 .section.cost-calculator-card .warranty-card.block {
     background-color: #00edff;
     box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, .1);
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 95% 100%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 70%, 95% 100%, 0 100%); */
     border-radius: 1rem;
     height: 10.75rem;
     width: 36.5rem;

@@ -403,7 +403,7 @@ export default async function decorate(block) {
             if (entry.isIntersecting) {
                 loadMapScript();
                 observer.unobserve(entry.target);
-                mapLoaded = true
+                mapLoaded = true;
             }
         })
     }, {

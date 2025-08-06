@@ -143,10 +143,14 @@
     padding: 3rem 1.5rem; */
 }
 
-.section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon img {
+.section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon{
     width: 91px;
     height: 55px;
     object-fit: contain;
+}
+.section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon{
+    width: 100%;
+    height: 100%;
 }
 
 .section.chargingstations-container .charging-accordian-container .charging-accordian-title-text {
@@ -166,7 +170,8 @@
     font-weight: bold;
     color: #555;
     cursor: pointer;
-    padding: 0 5px;
+    padding: 0;
+    margin: 0;
 }
 
 .section.chargingstations-container .charging-accordian-container .charging-accordian-content {
@@ -364,6 +369,7 @@
     justify-content: space-around;
     padding: 15px;
     background-color: #fff;
+    gap: 10px;
 }
 
 .count-item {
@@ -542,7 +548,7 @@
     }
 
     .section.chargingstations-container .charging-accordian-container .charging-accordian-title-container {
-        padding: 0 10px;
+        /* padding: 0 10px; */
     }
 
     .section.chargingstations-container .charging-accordian-container .charging-accordian-title-text {
@@ -572,4 +578,18 @@
         max-width: 188px;
     }
 
+}
+
+@media (width<768px) {
+    .section.chargingstations-container .charging-accordian-container{
+        padding: 32px 16px;
+    }
+    .section.chargingstations-container .charging-accordian-container .accordion-toggle-button{
+        margin: 0;
+        padding: 0;
+    }
+.section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon{
+    width: 40px;
+    height: 40px;
+}
 }

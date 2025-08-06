@@ -86,6 +86,7 @@
     font-weight: 400;
     line-height: normal;
     margin: unset;
+    padding-top: 64px;
 }
 
 .section.essential-carousel.carousel-container .default-content-wrapper>h2 {
@@ -322,5 +323,8 @@
 @media (width<786px) {
     .section.essential-carousel.carousel-container .text-wrapper{
         min-height: 53px;
+    }
+    .section.essential-carousel.carousel-container .default-content-wrapper>p{
+        padding-top: 0;
     }
 }

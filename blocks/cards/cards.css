@@ -340,7 +340,7 @@
   flex: 1;
 }
 
-.section.offer-cards .cards-wrapper ul li .cards-card-body {
+.section.offer-cards .cards-wrapper ul li .cards-card-body:nth-child(2) {
   margin: 0;
 }
 
@@ -442,4 +442,14 @@
   .section.offer-cards .cards-wrapper ul li .cards-card-body p {
     font-size: 16px;
   }
+  .section.offer-cards .cards-wrapper ul li .cards-card-body:nth-child(2){
+    position: relative;
+    height: 100%;
+    min-height: 240px;
+  }
+.section.offer-cards .cards-wrapper ul li .cards-card-body p.button-container {
+  position: absolute;
+  bottom: 0;
+}
+
 }

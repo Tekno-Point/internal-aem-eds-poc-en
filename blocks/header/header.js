@@ -186,4 +186,49 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  const head = document.querySelector('.head-accordion');
+  
+  if (head) {
+    const accordionItems = head.querySelectorAll('.accordion-item');
+  
+    accordionItems.forEach((item) => {
+      const label = item.querySelector('.accordion-item-label');
+      const body = item.querySelector('.accordion-item-body');
+      const details = item.closest('details');
+  
+      let isHovering = false;
+  
+      function openAccordion() {
+        details.setAttribute('open', '');
+        item.classList.add('active');
+      }
+  
+      function closeAccordion() {
+        details.removeAttribute('open');
+        item.classList.remove('active');
+      }
+  
+      function onEnter() {
+        isHovering = true;
+      }
+  
+      function onLeave() {
+        isHovering = false;
+        setTimeout(() => {
+          if (!isHovering) closeAccordion();
+        }, 300);
+      }
+  
+      label.addEventListener('mouseenter', () => {
+        openAccordion();
+        onEnter();
+      });
+  
+      label.addEventListener('mouseleave', onLeave);
+      body.addEventListener('mouseenter', onEnter);
+      body.addEventListener('mouseleave', onLeave);
+    })
+  };
 }
+
+  
