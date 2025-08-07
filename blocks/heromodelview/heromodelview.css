@@ -335,7 +335,7 @@
     .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper {
         position: absolute;
         right: 95px;
-        top: 33%;
+        top: 29%;
         margin: 0;
         padding: 0;
         height: auto;
@@ -442,6 +442,7 @@
     font-size: 20px;
     color: #ff5310;
     font-family: "PP Montreal Medium";
+    margin: 0;
 }
 .whats-included-container ul{
     padding-left: 20px;
@@ -488,5 +489,16 @@
     padding-top: 0px;
     font-size: 12px;
     padding-bottom: 10px;
+}
+.section.heromodelview-container .heromodelview-wrapper{
+    height: 850px;
+}
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper{
+    bottom: 3%;
+}
+.images{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 }

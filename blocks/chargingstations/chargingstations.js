@@ -366,7 +366,7 @@ export default async function decorate(block) {
             const toggleButton = block.querySelector(".accordion-toggle-button");
             mapContainer.style.height = "0px";
             toggleButton.addEventListener('click', (event) => {
-                event.stopPropagation();
+                // event.stopPropagation();
                 mapContainer.classList.toggle('collapsed');
                 toggleButton.textContent = mapContainer.classList.contains('collapsed') ? '-' : '+';
                 if (!mapContainer.classList.contains('collapsed')) {

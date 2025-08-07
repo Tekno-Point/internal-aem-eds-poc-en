@@ -108,7 +108,7 @@
     height: max-content;
     box-shadow: 0 0 .9375rem 0 rgba(0, 0, 0, .2);
     border-radius: .75rem;
-    padding: 3rem 1.5rem;
+    padding: 1.5rem 1.5rem;
 
 }
 
@@ -352,6 +352,7 @@
     cursor: pointer;
     margin-left: 15px;
     color: #333;
+    width: 18px;
 }
 
 .charging-accordian-content {
@@ -376,61 +377,39 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-<<<<<<< HEAD
     text-align: center;
     position: relative;
 }
-.count-item .label{
-    font-size: 18px;
-    color: #222;
-    text-align: start;
-=======
-    /* text-align: center; */
-    position: relative;
->>>>>>> 99650ace9eadbcf9a7e6a46cc655d8348643cf1b
-}
 
 .charger-icon {
-    width: 20px;
+    width: 30px;
     height: 25px;
     background-image: url('/images/station_icon.svg');
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 5px;
     position: absolute;
-<<<<<<< HEAD
-    left: 4px;
-    top: 14px;
-=======
-    right: 104%;
-    top: 22%;
->>>>>>> 99650ace9eadbcf9a7e6a46cc655d8348643cf1b
+    left: 15px;
+    top: 18px;
 }
 
 #charging-stations-city-count,
 #charging-stations-near-you-count {
     font-size: 36px;
-<<<<<<< HEAD
     font-weight: bold;
     color: #333;
     font-family: 'PP Montreal Bold';
-=======
     font-weight: 500;
     color: #333;
     position: relative;
-    right: 37%;
->>>>>>> 99650ace9eadbcf9a7e6a46cc655d8348643cf1b
 }
 
-.label {
+.count-item .label {
     font-size: 14px;
     color: #666;
     margin-top: 5px;
-<<<<<<< HEAD
     font-family: 'PP Montreal Book';
-=======
     line-height: normal;
->>>>>>> 99650ace9eadbcf9a7e6a46cc655d8348643cf1b
 }
 
 #map {
@@ -615,5 +594,24 @@
 }
 .expand-map-control{
     display: none !important;
+}
+
+@media (width<768px){
+    .count-item .label{
+        font-size: 12px;
+        margin-top: 0;
+    }
+    .charging-accordian-container{
+        padding-right: 24px !important;
+    }
+    .section.chargingstations-container .charging-accordian-container .charging-accordian-header, .section.chargingstations-container .charging-accordian-container .charging-accordian-content{
+        width: 100%;
+    }
+    .section.chargingstations-container .find-charging-station-content-container .charging-station-info-container{
+        padding-top: 20px;
+    }
+    .charging-accordian-header{
+        padding: 0;
+    }
 }
 
