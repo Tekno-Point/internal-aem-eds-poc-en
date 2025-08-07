@@ -609,7 +609,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   top: 100%;
   left: 0;
   width: 100%;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
   padding: 10px 0px 20px 0px;
 }
 

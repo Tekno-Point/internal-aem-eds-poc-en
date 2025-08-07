@@ -62,9 +62,6 @@ export default async function decorate(block) {
     tab.remove();
   });
 
-  block.prepend(tablist);
-
-    const tabList = document.querySelector(".tab-list");
-  const tabs = tabList.querySelectorAll(".tab-tab");
+  block.prepend(tablist)
 
 }

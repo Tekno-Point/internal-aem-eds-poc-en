@@ -335,7 +335,7 @@
     .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper {
         position: absolute;
         right: 95px;
-        top: 37%;
+        top: 33%;
         margin: 0;
         padding: 0;
         height: auto;
@@ -430,6 +430,26 @@
     }
 
 }
+
+.whats-included-container{
+    background-color: #f1f5f8;
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.whats-included-container p{
+    font-size: 20px;
+    color: #ff5310;
+    font-family: "PP Montreal Medium";
+}
+.whats-included-container ul{
+    padding-left: 20px;
+}
+.whats-included-container ul li{
+    padding-top: 20px;
+    font-family: "PP Montreal Book";
+}
 @media (width < 768px){
    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow{
     width: 21px;
@@ -454,5 +474,19 @@
 .color{
     width: 14px !important;
     height: 14px !important;
+}
+.whats-included-container{
+    padding: 16px;
+}
+.whats-included-container p{
+    font-size: 16px;
+}
+.whats-included-container ul{
+    padding-left: 20px;
+}
+.whats-included-container ul li{
+    padding-top: 0px;
+    font-size: 12px;
+    padding-bottom: 10px;
 }
 }
