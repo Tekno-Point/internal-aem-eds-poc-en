@@ -229,6 +229,14 @@ export default async function decorate(block) {
       body.addEventListener('mouseleave', onLeave);
     })
   };
+        const panel= document.querySelector(".tab-panel")
+      if(isMobile.matches){
+         panel.querySelectorAll(".accordion-item").forEach(index =>{
+          index.addEventListener('click',()=>{
+            index.classList.toggle('active')
+          })
+        }
+)};  
 }
 
   

@@ -207,7 +207,7 @@
         z-index: 3;
     }
 
-    .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .price-text {
+    .section.pc-container.citypricedropdown-container .citypricedropdown.block .box-container .right .price-text {
         color: #222;
         font-size: .75rem;
         font-style: normal;
@@ -280,5 +280,13 @@
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .toolbar{
         padding: 0;
     }
-
+    .section.pc-container.citypricedropdown-container .citypricedropdown.block .box-container .right .price-text {
+          color: #222;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: unset;
+        font-family: 'PP Montreal Book';
+    }
 }
