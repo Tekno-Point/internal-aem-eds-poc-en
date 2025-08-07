@@ -125,7 +125,6 @@
     cursor: pointer;
     font-style: normal;
     padding: 0;
-    text-transform: uppercase;
     width: 100%;
     margin: 0;
     font-family: 'PP Montreal Medium', sans-serif;
@@ -197,6 +196,13 @@ header .nav .tab-cnt-style{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.tab-cnt-style .tab-panel .accordion-item-label p strong{
+      background-color: rgb(0, 179, 72);
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 2px;
 }
 
 }
