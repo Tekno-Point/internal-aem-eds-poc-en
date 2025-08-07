@@ -336,7 +336,7 @@
     .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper {
         position: absolute;
         right: 95px;
-        top: 29%;
+        top: 37%;
         margin: 0;
         padding: 0;
         height: auto;
@@ -501,5 +501,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.section.heromodelview-container.citypricedropdown-container{
+    height: auto;
 }
 }
