@@ -611,7 +611,8 @@ header nav .nav-sections .default-content-wrapper ol li a {
   left: 0;
   width: 100%;
   box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
-  padding: 10px 0px 20px 0px;
+  padding: 30px 0px 20px 0px;
+  border-top: 1px solid lightgray;
 }
 
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body {

@@ -19,6 +19,9 @@
         font-weight: 400;
         line-height: normal;
 }
+.section.breadcrumb-container .breadcrumb ul li:first-child{
+    cursor: pointer;
+}
 .section.breadcrumb-container .breadcrumb ul li a{
     all: unset;
 }
