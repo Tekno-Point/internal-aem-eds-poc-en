@@ -15,9 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "standout-features",
-      "product-overview"
+      "fragment"
     ]
   },
   {
@@ -39,6 +37,13 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "product-overview",
+    "components": [
+      "feature-section",
+      "feature-item"
     ]
   },
   {

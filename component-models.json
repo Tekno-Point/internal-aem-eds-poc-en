@@ -166,6 +166,46 @@
     ]
   },
   {
+    "id": "feature-section",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Section Title",
+        "description": "The main title for the section, including both lines."
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Section Image",
+        "description": "The image for the section."
+      },
+      {
+        "component": "reference",
+        "name": "mobileImage",
+        "label": "Mobile Image",
+        "description": "The mobile-specific image for the section."
+      }
+    ]
+  },
+  {
+    "id": "feature-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "icon",
+        "label": "Feature Icon",
+        "description": "The icon for the feature."
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Feature Description",
+        "description": "The full description of the feature."
+      }
+    ]
+  },
+  {
     "id": "standout-features",
     "fields": [
       {
