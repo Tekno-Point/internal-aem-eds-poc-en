@@ -1,8 +1,7 @@
 .section.pc-container.citypricedropdown-container .block.citypricedropdown {
     align-items: center;
     backdrop-filter: blur(2.5px);
-    background: hsla(0, 0%, 100%, .5);
-    border-radius: 1pc;
+    background: hsl(0deg 0% 100% / 50%);
     bottom: 2.3125rem;
     display: flex;
     flex-direction: column;
@@ -28,7 +27,7 @@
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left {
     color: #222;
-    font-family: 'PP Montreal Book';
+    font-family: 'PP Montreal Book',sans-serif;
     font-size: 9pt;
     font-style: normal;
     font-weight: 400;
@@ -41,6 +40,7 @@
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search {
     /* background-image: url("../../icons/chevron-down.svg"); */
+
     /* align-items: center;
     appearance: none;
     background-position: right 5px center;
@@ -74,7 +74,6 @@
     position: absolute;
     right: 3px;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: -1;
 }
@@ -89,11 +88,11 @@
     left: 0;
     width: 89%;
     padding: 0 1rem 1rem;
-    overflow-y: scroll;
+    overflow: hidden scroll;
+
     /* max-height: 100%; */
     max-height: 180px;
     scrollbar-width: thin;
-    overflow-x: hidden;
 }
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .input-city {
@@ -107,12 +106,12 @@
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .amount {
     color: #222;
-    font-family: 'PP Montreal Bold';
+    font-family: 'PP Montreal Bold',sans-serif;
     font-size: 24px;
     font-style: normal;
     line-height: normal;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     font-weight: 600;
     margin: 0;
@@ -121,7 +120,7 @@
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .toolbar {
     color: var(--Primary-Vida-Orange, #ff5310);
-    font-family:'PP Montreal Medium';
+    font-family:'PP Montreal Medium',sans-serif;
     font-size: 1pc;
     font-style: normal;
     font-weight: 500;
@@ -137,9 +136,7 @@
     top: 0;
     background: #fff;
     padding: 16px;
-    border: 1px solid;
-    border-radius: 15px;
-    box-shadow: 1px 3px 4px 0 rgba(0, 0, 0, .2901960784);
+    box-shadow: 1px 3px 4px 0 rgb(0 0 0 / 29%);
     border: 1px solid #969696 !important;
     border-radius: .75rem !important;
     color: #1d1b1b;
@@ -151,17 +148,16 @@
 
 
 .section.pc-container.citypricedropdown-container .block.citypricedropdown .buy-btn {
-    color: var(--Neutral-Dark-Grey, #222);
     font-size: 1pc;
     font-weight: 600;
     align-items: center;
     background: #ff5310;
     border-radius: .5rem;
-    box-shadow: 0 .46875rem .9375rem 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 .46875rem .9375rem 0 rgb(0 0 0 / 10%);
     color: #fff;
     cursor: pointer;
     display: flex;
-    font-family: 'PP Montreal Bold';
+    font-family: 'PP Montreal Bold',sans-serif;
     height: 3.25rem;
     justify-content: center;
     width: 100%;
@@ -179,7 +175,6 @@
 }
 
 @media (width > 900px) {
-
     .section.pc-container.citypricedropdown-container .block.citypricedropdown {
         max-width: 28.1875rem;
         min-width: 28.1875rem;
@@ -214,18 +209,18 @@
         font-weight: 400;
         line-height: normal;
         margin: unset;
-        font-family: 'PP Montreal Book';
+        font-family: 'PP Montreal Book',sans-serif;
     }
 
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .input-city {
         color: #222;
-        font-family: 'PP Montreal Medium';
+        font-family: 'PP Montreal Medium',sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        background: #fff;
         border: 1px solid #85888c;
+
         /* height: 54px; */
         padding: 17px 16px;
         width: 11.25rem;
@@ -240,7 +235,6 @@
     }
 
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .price-text {
-
         font-size: 1rem;
     }
 
@@ -249,7 +243,7 @@
     }
 
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .buy-btn {
-        font-family: 'PP Montreal Bold';
+        font-family: 'PP Montreal Bold',sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -258,28 +252,35 @@
         color: #fff;
         height: 4.5rem;
     }
+
     .citypricedropdown-wrapper{
         padding: 0;
     }
 
 }
+
 @media (width < 768px){
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search{
         padding: 4px 8px;
     }
+
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .arrow{
         width: 21px;
         height: 21px;
     }
+
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .left .input-search .input-city{
         margin-top: 9px;
     }
+
         .citypricedropdown-wrapper{
         padding: 0 !important;
     }
+
     .section.pc-container.citypricedropdown-container .block.citypricedropdown .box-container .right .toolbar{
         padding: 0;
     }
+
     .section.pc-container.citypricedropdown-container .citypricedropdown.block .box-container .right .price-text {
           color: #222;
         font-size: 12px;
@@ -287,6 +288,6 @@
         font-weight: 400;
         line-height: normal;
         margin: unset;
-        font-family: 'PP Montreal Book';
+        font-family: 'PP Montreal Book',sans-serif;
     }
 }

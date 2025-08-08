@@ -18,7 +18,7 @@
 
 .platform {
     background-color: #fff;
-    border: .0625rem dashed rgba(0, 0, 0, .4);
+    border: .0625rem dashed rgb(0 0 0 / 40%);
     border-radius: 231.75px / 46.51px;
     height: 3.75rem;
     margin-top: -4.6875rem;
@@ -29,7 +29,6 @@
 
 .image {
     min-height: 13.125rem;
-    -o-object-fit: none;
     object-fit: none;
     position: relative;
     width: 18.75rem;
@@ -47,7 +46,7 @@
 
 .visualizer-color-text-wrapper .color-text {
     color: #222;
-    font-family: 'PP Montreal Book';
+    font-family: 'PP Montreal Book',sans-serif;
     font-size: 9pt;
     font-style: normal;
     font-weight: 400;
@@ -62,6 +61,7 @@
     height: 24px !important;
     cursor: pointer;
 }
+
 .colors>div.active {
     border: .75px solid #222;
     width: 24px !important;
@@ -88,15 +88,16 @@
     font-weight: 500;
     line-height: normal;
     padding-bottom: 1.5rem;
+
     /* padding-left: 1.5625rem; */
     padding-top: 3.25rem;
     margin: 0;
-    font-family: "PP Montreal Medium";
+    font-family: "PP Montreal Medium",sans-serif;
 }
 
 .section.heromodelview-container.citypricedropdown-container .model-wrapper>p {
     color: #222;
-    font-family: "PP Montreal Bold";
+    font-family: "PP Montreal Bold",sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
@@ -117,7 +118,7 @@
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown {
     align-items: center;
     backdrop-filter: blur(2.5px);
-    background: hsla(0, 0%, 100%, .5);
+    background: hsl(0deg 0% 100% / 50%);
     border-radius: 1pc;
     bottom: 2.3125rem;
     display: flex;
@@ -140,7 +141,7 @@
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left {
     color: #222;
-    font-family: 'PP Montreal Book';
+    font-family: 'PP Montreal Book',sans-serif;
     font-size: 9pt;
     font-style: normal;
     font-weight: 400;
@@ -153,6 +154,7 @@
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search {
     /* background-image: url("../../icons/chevron-down.svg"); */
+
     /* align-items: center;
     appearance: none;
     background-position: right 5px center;
@@ -186,7 +188,6 @@
     position: absolute;
     right: .5rem;
     top: 55%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: -1;
 }
@@ -197,9 +198,7 @@
     top: 14px;
     background: #fff;
     padding: 16px;
-    border: 1px solid;
-    border-radius: 15px;
-    box-shadow: 1px 3px 4px 0 rgba(0, 0, 0, .2901960784);
+    box-shadow: 1px 3px 4px 0 rgb(0 0 0 / 29%);
     border: 1px solid #969696 !important;
     border-radius: .75rem !important;
     color: #1d1b1b;
@@ -207,7 +206,7 @@
     max-width: 289px;
     z-index: 4;
     letter-spacing: 0.75px;
-    font-family: "PP Montreal Thin";
+    font-family: "PP Montreal Thin",sans-serif;
 }
 
 
@@ -220,11 +219,11 @@
     left: 0;
     width: 89%;
     padding: 0 1rem 1rem;
-    overflow-y: scroll;
+    overflow: hidden scroll;
+
     /* max-height: 100%; */
     height: calc(89vh - 250px);
     scrollbar-width: thin;
-    overflow-x: hidden;
     border: .0625rem solid #85888c;
     cursor: pointer;
 }
@@ -245,17 +244,18 @@
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .amount {
     color: #222;
-    font-family: "PP Montreal Bold";
+    font-family: "PP Montreal Bold",sans-serif;
     font-size: 24px;
     font-style: normal;
     line-height: normal;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     font-weight: 600;
     margin: 0;
 
 }
+
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .amount .global-tooltip{
     width: 13px;
     height: 13px;
@@ -264,7 +264,7 @@
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .toolbar {
     color: var(--Primary-Vida-Orange, #ff5310);
-    font-family: "PP Montreal Medium";
+    font-family: "PP Montreal Medium",sans-serif;
     font-size: 1pc;
     font-style: normal;
     font-weight: 500;
@@ -281,22 +281,21 @@
     font-weight: 400;
     line-height: normal;
     margin: unset;
-    font-family: 'PP Montreal Book';
+    font-family: 'PP Montreal Book',sans-serif;
 }
 
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .buy-btn {
-    color: var(--Neutral-Dark-Grey, #222);
     font-size: 1pc;
     font-weight: 600;
     align-items: center;
     background: #ff5310;
     border-radius: .5rem;
-    box-shadow: 0 .46875rem .9375rem 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 .46875rem .9375rem 0 rgb(0 0 0 / 10%);
     color: #fff;
     cursor: pointer;
     display: flex;
-    font-family: "PP Montreal Bold";
+    font-family: "PP Montreal Bold",sans-serif;
     height: 3.25rem;
     justify-content: center;
     width: 100%;
@@ -310,7 +309,6 @@
 
 
 @media (width > 900px) {
-
     .section.heromodelview-container .heromodelview-wrapper {
         height: 780px;
         max-width: 1440px;
@@ -349,7 +347,7 @@
 
     .section.heromodelview-container.citypricedropdown-container .model-wrapper>p {
         color: #222;
-        font-family: "PP Montreal Bold";
+        font-family: "PP Montreal Bold",sans-serif;
         font-size: 60px;
         font-style: normal;
         font-weight: 600;
@@ -392,13 +390,13 @@
 
     .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .input-city {
         color: #222;
-        font-family: "PP Montreal Medium";
+        font-family: "PP Montreal Medium",sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        background: #fff;
         border: 1px solid #85888c;
+
         /* height: 54px; */
         padding: 17px 16px;
         width: 11.25rem;
@@ -411,7 +409,6 @@
     }
 
     .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .price-text {
-
         font-size: 1rem;
     }
 
@@ -420,7 +417,7 @@
     }
 
     .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .buy-btn {
-        font-family: "PP Montreal Bold";
+        font-family: "PP Montreal Bold",sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -439,69 +436,87 @@
     box-sizing: border-box;
     border-radius: 8px;
 }
+
 .whats-included-container p{
     font-size: 20px;
     color: #ff5310;
-    font-family: "PP Montreal Medium";
+    font-family: "PP Montreal Medium",sans-serif;
     margin: 0;
 }
+
 .whats-included-container ul{
     padding-left: 20px;
 }
+
 .whats-included-container ul li{
     padding-top: 20px;
-    font-family: "PP Montreal Book";
+    font-family: "PP Montreal Book",sans-serif;
 }
+
 @media (width < 768px){
    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow{
     width: 21px;
     height: 21px;
    }
+
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .input-city{
     margin-top: 9px;
 }
+
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left{
     font-size: 14px;
 }
+
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown {
     margin-bottom: 0;
 }
+
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow{
     top: 50%;
 }
+
 .colors>div.active{
     width: 22px !important;
     height: 22px !important;
 }
+
 .color{
     width: 14px !important;
     height: 14px !important;
 }
+
 .whats-included-container{
     padding: 16px;
 }
+
 .whats-included-container p{
     font-size: 16px;
 }
+
 .whats-included-container ul{
     padding-left: 20px;
 }
+
 .whats-included-container ul li{
-    padding-top: 0px;
+    padding-top: 0;
     font-size: 12px;
     padding-bottom: 10px;
 }
+
 .section.heromodelview-container .heromodelview-wrapper{
     height: 850px;
 }
+
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper{
     bottom: 3%;
 }
+
 .images{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 .section.heromodelview-container.citypricedropdown-container{
     height: auto;
 }

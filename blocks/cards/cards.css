@@ -35,17 +35,28 @@
 .section.variant-focused-view-container .cards-wrapper {
   padding: 0;
   max-width: 1400px;
+    background: linear-gradient(180deg, #fff, #222);
+  transition: 1 1.5s ease-out;
 }
 
-.section.variant-focused-view-container .cards-wrapper {
-  background: linear-gradient(180deg, #fff, #222);
-  transition: 1 1.5s ease-out;
+.section.offer-cards .cards-wrapper ul {
+  display: flex;
+  gap: 32px;
 }
 
 .section.variant-focused-view-container .cards-wrapper .cards.block ul {
   display: flex;
   flex-direction: column;
   grid-gap: unset;
+}
+
+.section.offer-cards .cards-wrapper ul li {
+  border: none;
+  background-color: #fff;
+  border-radius: .75rem;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+  padding: 1.5rem;
+  flex: 1;
 }
 
 .section.variant-focused-view-container .cards-wrapper .cards.block ul li {
@@ -56,8 +67,22 @@
   justify-content: space-between;
 }
 
+.section.offer-cards .cards-wrapper ul li .cards-card-body:nth-child(2) {
+  margin: 0;
+}
+
 .section.variant-focused-view-container .cards-wrapper .cards.block ul li .cards-card-body {
   margin: 0;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body h3 {
+  font-size: 28px;
+  line-height: normal;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  padding-bottom: 16px;
+    font-family: 'PP Montreal Bold',sans-serif;
 }
 
 .section.variant-focused-view-container .cards-wrapper .cards.block ul li h3 {
@@ -66,7 +91,17 @@
   font-weight: 600;
   line-height: normal;
   margin: 0;
-  font-family: 'PP Montreal Bold';
+  font-family: 'PP Montreal Bold',sans-serif;
+}
+
+.section.offer-cards .cards-wrapper ul li .cards-card-body p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  color: #222;
+  padding-bottom: 16px;
+  font-family: 'PP Montreal Book',sans-serif;
 }
 
 .section.variant-focused-view-container .cards-wrapper .cards.block ul li p {
@@ -76,7 +111,7 @@
   font-weight: 400;
   line-height: normal;
   padding-top: 32px;
-  font-family: 'PP Montreal Book';
+  font-family: 'PP Montreal Book',sans-serif;
 }
 
 .section.variant-focused-view-container .cards-wrapper .cards.block ul li:first-child .cards-card-body h3,
@@ -131,8 +166,10 @@
   padding: 0 5.5rem 0 0;
 }
 
-.section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(4) {
-  padding: 0 5.5rem 0 0;
+.section.offer-cards .cards-wrapper ul li .cards-card-body span img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
 }
 
 .section.variant-focused-view-container .cards-wrapper .cards.block ul li .cards-card-image img {
@@ -242,7 +279,7 @@
   }
 
   .section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(2) {
-    padding: 0 0 40px 0;
+    padding: 0 0 40px;
   }
 
   .section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(2) .cards-card-body {
@@ -257,7 +294,7 @@
   }
 
   .section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(3) {
-    padding: 0 0 40px 0;
+    padding: 0 0 40px;
     align-items: end;
   }
 
@@ -273,7 +310,7 @@
   }
 
   .section.variant-focused-view-container .cards-wrapper .cards.block ul li:nth-child(4) {
-    padding: 0 0 40px 0;
+    padding: 0 0 40px;
     align-items: start;
   }
 
@@ -326,25 +363,8 @@
   padding: 10px 88px;
 }
 
-.section.offer-cards .cards-wrapper ul {
-  display: flex;
-  gap: 32px;
-}
 
-.section.offer-cards .cards-wrapper ul li {
-  border: none;
-  background-color: #fff;
-  border-radius: .75rem;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
-  padding: 1.5rem;
-  flex: 1;
-}
-
-.section.offer-cards .cards-wrapper ul li .cards-card-body:nth-child(2) {
-  margin: 0;
-}
-
-.section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-partial_payment,
+.section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-partial-payment,
 .section.offer-cards .cards-wrapper ul li .cards-card-body span.icon.icon-grab {
   height: 30px;
   width: 30px;
@@ -355,34 +375,9 @@
   width: 336px;
 }
 
-.section.offer-cards .cards-wrapper ul li .cards-card-body span img {
-  height: 100%;
-  width: 100%;
-  border-radius: 0.5rem;
-}
-
-.section.offer-cards .cards-wrapper ul li .cards-card-body p {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: normal;
-  color: #222;
-  padding-bottom: 16px;
-  font-family: 'PP Montreal Book';
-}
-
-.section.offer-cards .cards-wrapper ul li .cards-card-body h3 {
-  font-size: 28px;
-  line-height: normal;
-  font-weight: 600;
-  color: #222;
-  margin: 0;
-  padding-bottom: 16px;
-    font-family: 'PP Montreal Bold';
-}
 
 .section.offer-cards .cards-wrapper ul li .cards-card-body p.button-container {
-  padding: 10px 0 12px 0;
+  padding: 10px 0 12px;
 }
 
 .section.offer-cards .cards-wrapper ul li .cards-card-body p.button-container a {
@@ -396,7 +391,7 @@
   margin: 0;
   padding: 0;
   display: unset;
-    font-family: 'PP Montreal Medium';
+    font-family: 'PP Montreal Medium',sans-serif;
 
 }
 
@@ -442,11 +437,13 @@
   .section.offer-cards .cards-wrapper ul li .cards-card-body p {
     font-size: 16px;
   }
+
   .section.offer-cards .cards-wrapper ul li .cards-card-body:nth-child(2){
     position: relative;
     height: 100%;
     min-height: 240px;
   }
+
 .section.offer-cards .cards-wrapper ul li .cards-card-body p.button-container {
   position: absolute;
   bottom: 0;

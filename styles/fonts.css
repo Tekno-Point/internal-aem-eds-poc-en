@@ -41,18 +41,21 @@
   font-weight: 800;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'PP Montreal Medium';
   src: url('/fonts/ppneuemontreal-medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'PP Montreal Thin';
   src: url('/fonts/ppneuemontreal-thin.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'PP Montreal Book';
   src: url('/fonts/ppneuemontreal-book.otf') format('opentype');

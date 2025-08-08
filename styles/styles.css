@@ -174,7 +174,7 @@ button {
 a:any-link {
   color: var(--link-color);
   text-decoration: none;
-  word-break: break-word;
+  word-break:normal;
 }
 
 a:hover {
@@ -245,6 +245,7 @@ main img {
 }
 
 /* sections */
+
 /* main>.section {
   margin: 40px 0;
 } */
@@ -313,7 +314,7 @@ main .section.highlight {
   .section.bottom-try-card-wrapper {
     display: block;
     backdrop-filter: blur(25px);
-    background: rgba(34, 34, 34, .5);
+    background: rgb(34 34 34 / 50%);
     position: fixed;
     bottom: 0;
     margin: 0;
@@ -339,7 +340,7 @@ main .section.highlight {
   }
 
   .section.bottom-try-card-wrapper ul li {
-    border-right: 1px solid hsla(0, 0%, 100%, .2);
+    border-right: 1px solid hsl(0deg 0% 100% / 20%);
     flex: 1;
   }
 
@@ -371,8 +372,8 @@ main .section.highlight {
 .section.sticky-tab .default-content-wrapper{
   display: none;
 }
+
 @media (width<768px) {
-  
 .section.sticky-tab .default-content-wrapper{
 display: block;
   position: fixed;
@@ -381,11 +382,12 @@ display: block;
   width: 100%;
   z-index: 101;
 }
+
 .section.sticky-tab .default-content-wrapper ul{
   display: flex;
   align-items: center;
   list-style: none;
-  background-color: hsla(0, 0%, 100%, .9);;
+  background-color: hsl(0deg 0% 100% / 90%);;
   gap: 10px;
   width: 100%;
   height: 82px;
@@ -393,6 +395,7 @@ display: block;
   justify-content: center;
   margin: 0;
 }
+
 .section.sticky-tab .default-content-wrapper ul li{
   background-color: #1d1b1b;
   color: #fff;
@@ -400,7 +403,7 @@ display: block;
   padding: 8px 14px;
   font-size: 14px;
   font-weight: 400;
-  font-family: "PP Montreal Book";
+  font-family: "PP Montreal Book", sans-serif;
   width: 98px;
   text-align: center;
 }

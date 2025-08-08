@@ -8,7 +8,7 @@ footer .footer>div {
 
 @media (width <=900px) {
   footer .footer>div {
-    padding: 32px 32px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
   }
@@ -60,7 +60,7 @@ footer .footer>div {
   line-height: 16px;
   font-weight: 500;
   text-decoration: underline;
-  font-family: "PP Montreal Medium";
+  font-family: "PP Montreal Medium",sans-serif;
 }
 
 .section.footer-address-conatiner .columns.block>div>div ul {
@@ -75,7 +75,7 @@ footer .footer>div {
   line-height: 16px;
   font-weight: 400;
   padding-top: 16px;
-  font-family: "PP Montreal Book";
+  font-family: "PP Montreal Book",sans-serif;
 }
 
 .section.footer-address-conatiner .columns.block>div>div ul li ul {
@@ -118,7 +118,7 @@ footer .footer>div {
   font-weight: 600;
   line-height: normal;
   padding: 0;
-  font-family: "PP Montreal Bold";
+  font-family: "PP Montreal Bold",sans-serif;
 }
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ul li ul {
@@ -137,7 +137,7 @@ footer .footer>div {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
-  font-family: "PP Montreal Book";
+  font-family: "PP Montreal Book",sans-serif;
 }
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ul li ul li a:hover {
@@ -147,7 +147,7 @@ footer .footer>div {
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ol {
   list-style: none;
-  margin: 32px 0 0 0;
+  margin: 32px 0 0;
   padding: 0;
 }
 
@@ -159,7 +159,7 @@ footer .footer>div {
   max-width: unset;
   margin: 0;
   padding-bottom: 10px;
-  font-family: "PP Montreal Bold";
+  font-family: "PP Montreal Bold",sans-serif;
 }
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ol li ol {
@@ -173,7 +173,7 @@ footer .footer>div {
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
-  font-family: "PP Montreal Book";
+  font-family: "PP Montreal Book",sans-serif;
 }
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ol li ol li a:hover {

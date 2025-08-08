@@ -27,7 +27,7 @@
     font-weight: 600;
     color: #1d1b1b;
     margin: 0;
-    font-family: 'PP Montreal Bold';
+    font-family: 'PP Montreal Bold',sans-serif;
 }
 
 .section.product-details-container .default-content-wrapper p {
@@ -37,13 +37,12 @@
     font-weight: 600;
     color: #1d1b1b;
     margin: 0;
-    font-family: 'PP Montreal Bold';
+    font-family: 'PP Montreal Bold',sans-serif;
 }
 
 .section.product-details-container .products-grid {
-    padding: 40px 88px 36px 88px;
-    row-gap: 36px;
-    column-gap: 20px;
+    padding: 40px 88px 36px;
+    gap: 36px 20px;
 }
 
 .section.product-details-container .products-grid .product-item .product-image {
@@ -63,7 +62,7 @@
     font-weight: 600;
     line-height: normal;
     margin: 8px 0 2px; 
-    font-family: "PP Montreal Bold";
+    font-family: "PP Montreal Bold",sans-serif;
 }
 
 .section.product-details-container .products-grid .product-item .product-content .value-container {
@@ -109,8 +108,7 @@
 
     .section.product-details-container .products-grid {
         padding: 24px 20px;
-        row-gap: 24px;
-        column-gap: 30px;
+        gap: 24px 30px;
     }
 
     .section.product-details-container .products-grid .product-item .product-image {
@@ -132,6 +130,7 @@
     .section.product-details-container .default-content-wrapper h2{
         font-size: 36px;
     }
+
     .productspecification .product-specification-heading__description{
         font-size: 24px;
     }

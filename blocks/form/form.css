@@ -14,7 +14,7 @@
 
 .form form>.field-wrapper+.field-wrapper,
 .form form fieldset .field-wrapper+.field-wrapper {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .form form>.selection-wrapper+.selection-wrapper,
@@ -91,7 +91,6 @@
 }
 
 @media (width >=600px) {
-
   .form input,
   .form select,
   .form textarea {
@@ -104,7 +103,6 @@
 }
 
 @media (width >=900px) {
-
   .form input,
   .form select,
   .form textarea {
@@ -175,10 +173,9 @@
 
 /* contact form css */
 .section.form-container {
-  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: rgb(0 0 0 / 70%);
   max-width: unset;
   height: 100vh;
   width: 100vw;
@@ -205,10 +202,8 @@
   display: none;
   background: #fff;
   border-radius: .5rem;
-  margin: .125rem 0 0;
   max-height: 15rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden scroll;
   scrollbar-width: none;
   position: absolute;
   top: 298px;
@@ -236,7 +231,7 @@
   font-weight: 600;
   line-height: normal;
   line-height: 2.125rem;
-  margin: 0 0 16px 0;
+  margin: 0 0 16px;
 }
 
 .form.contact-form form>div label {
@@ -317,7 +312,7 @@
 
   .form.contact-form form>div h2 {
     font-size: 20px;
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
   }
 
   .form.contact-form form>div input {
@@ -339,7 +334,7 @@
   }
 
   .form.contact-form form>div.field-wrapper.checkbox-wrapper.selection-wrapper {
-    margin: 24px 0 24px;
+    margin: 24px 0;
   }
 }
 
@@ -502,7 +497,7 @@
   }
 
   .form.valid-otp-form form>div.field-wrapper.fieldset-wrapper:has(fieldset#form-fieldset2) {
-    margin: 24px 0 24px;
+    margin: 24px 0;
   }
 
   .form.valid-otp-form form>div.field-wrapper.fieldset-wrapper fieldset#form-fieldset2 .field-wrapper.button-wrapper {

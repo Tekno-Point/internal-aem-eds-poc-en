@@ -2,7 +2,7 @@
 header .nav-wrapper {
   backdrop-filter: blur(25px);
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
   width: 100%;
   z-index: 100;
   position: fixed;
@@ -21,15 +21,16 @@ header nav {
   display: grid;
   grid-template:
     'brand tools hamburger' var(--nav-height); */
-  align-items: center;
 
   max-width: 1400px;
+
   /* height: var(--nav-height); */
   padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+
   /* font-family: var(--body-font-family); */
 }
 
@@ -39,7 +40,7 @@ header nav {
     'brand tools hamburger' var(--nav-height);
   grid-template-columns: 5fr 5fr 1fr;
   overflow-y: auto;
-  /* min-height: 100dvh; }*/
+  /* min-height: 100dvh; } */
 @media (width >=900px) {
   header nav[aria-expanded='true'] {
     min-height: 0;
@@ -90,6 +91,7 @@ header nav .nav-hamburger button {
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
+
   /* z-index: 4; */
 }
 
@@ -149,7 +151,6 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
 
 @media (width >=900px) {
   header nav .nav-hamburger {
-    display: block;
     visibility: visible;
     display: flex;
     align-items: center;
@@ -180,6 +181,7 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
 }
 
 /* brand */
+
 /* header .nav-brand {
   grid-area: brand;
   flex-basis: 128px;
@@ -231,6 +233,7 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
 }
 
 /* sections */
+
 /* header nav .nav-sections {
   grid-area: sections;
   display: block;
@@ -244,7 +247,7 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
 } */
 
 .navsection-wrapper {
-  background: rgba(0, 0, 0, .6);
+  background: rgb(0 0 0 / 60%);
   height: calc(100vh - 6pc);
 }
 
@@ -280,7 +283,6 @@ header nav .nav-sections .default-content-wrapper p span.icon.icon-close_icon {
 }
 
 header nav .nav-sections .default-content-wrapper ol {
-  padding: 0;
   margin: 0;
   list-style: none;
   padding: 0 0 1.5rem;
@@ -315,8 +317,8 @@ header nav .nav-sections .default-content-wrapper ol li ol li a {
 }
 
 header nav .nav-sections .default-content-wrapper ul {
-  margin: 0 0 8px 0;
-  padding: 0 0 10px 0;
+  margin: 0 0 8px;
+  padding: 0 0 10px;
   list-style: none;
   display: flex;
   gap: 2.625rem;
@@ -466,6 +468,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
 }
 
 /* tools */
+
 /* header nav .nav-tools {
   grid-area: tools;
 } */
@@ -517,7 +520,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   color: #3f3d3d;
   cursor: pointer;
   padding-right: 10px;
-  font-family: "PP Montreal Medium";
+  font-family: "PP Montreal Medium",sans-serif;
 }
 
 .head-accordion .accordion-item-body {
@@ -529,7 +532,6 @@ header nav .nav-sections .default-content-wrapper ol li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
   padding: 0;
   margin: 0 auto;
   gap: 60px;
@@ -570,11 +572,11 @@ header nav .nav-sections .default-content-wrapper ol li a {
   font-size: 14px;
   font-weight: 530;
   line-height: normal;
-  font-family: "PP Montreal Medium";
+  font-family: "PP Montreal Medium",sans-serif;
 }
 
 .head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul li strong {
-  background-color: rgb(0, 179, 72);
+  background-color: rgb(0 179 72);
   color: #fff;
   padding: 2px 6px;
   font-size: 12px;
@@ -589,7 +591,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   font-style: normal;
   font-weight: 450;
   margin-top: 4px;
-  font-family: "PP Montreal Medium";
+  font-family: "PP Montreal Medium",sans-serif;
 }
 
 .section.head-accordion .accordion-container:nth-child(1) .accordion-item-body {
@@ -599,8 +601,8 @@ header nav .nav-sections .default-content-wrapper ol li a {
   top: 100%;
   left: 0;
   width: 100%;
-  padding: 10px 0px 10px 0px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+  padding: 10px 0;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
   border-top: 1px solid lightgray;
 }
 
@@ -611,8 +613,8 @@ header nav .nav-sections .default-content-wrapper ol li a {
   top: 100%;
   left: 0;
   width: 100%;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
-  padding: 30px 0px 20px 0px;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+  padding: 30px 0 20px;
   border-top: 1px solid lightgray;
 }
 
@@ -642,7 +644,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   color: #1d1b1b;
   margin-bottom: 4px;
   cursor: pointer;
-  font-family: "PP Montreal Medium";
+  font-family: "PP Montreal Medium",sans-serif;
 }
 
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body>ul>li:hover {
@@ -655,7 +657,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   letter-spacing: .25px;
   color: #696767;
   margin-top: 10px;
-  font-family: "PP Montreal Book";
+  font-family: "PP Montreal Book",sans-serif;
 }
 
 .head-accordion .accordion-container:nth-child(2) .accordion-item-body ul li ul {
@@ -677,7 +679,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   text-decoration: none;
   margin-bottom: 20px;
   cursor: pointer;
-  font-family: "PP Montreal Medium";
+  font-family: "PP Montreal Medium",sans-serif;
 }
 
 .section.head-accordion .accordion-container:nth-child(2) ol li:hover {
@@ -697,7 +699,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   text-decoration: none;
   margin: 0;
   cursor: pointer;
-  font-family: "PP Montreal Medium";
+  font-family: "PP Montreal Medium",sans-serif;
 }
 
 .section.buy-style .default-content-wrapper p:nth-child(1):hover {
@@ -716,7 +718,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   margin: 0;
   margin-left: 30px;
   cursor: pointer;
-  font-family: "PP Montreal Medium";
+  font-family: "PP Montreal Medium",sans-serif;
 }
 
 .section.buy-style .default-content-wrapper p:nth-child(2):hover {
@@ -733,23 +735,24 @@ header nav .nav-sections .default-content-wrapper ol li a {
 }
 
 .section.head-accordion .accordion-item-label p::before {
-  content: '';
   position: absolute;
   right: -10px;
-  top: 0px;
+  top: 0;
   content: '';
   display: inline-block;
   width: 0.5em;
+
   /* Adjust size as needed */
   height: 0.5em;
+
   /* Adjust size as needed */
-  border-top: 0.1em solid currentColor;
-  border-right: 0.1em solid currentColor;
+  border-top: 0.1em solid currentcolor;
+  border-right: 0.1em solid currentcolor;
   transform: rotate(135deg);
   margin-left: 0.2em;
 }
 
-.section.head-accordion .accordion-item.active .accordion-item-label p:before {
+.section.head-accordion .accordion-item.active .accordion-item-label p::before {
   transform: rotate(315deg);
   top: 6px;
 }
@@ -774,5 +777,5 @@ header nav .nav-sections .default-content-wrapper ol li a {
 }
 
 *{
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+    -webkit-tap-highlight-color: rgb(255 255 255 / 0%) !important; 
 }
