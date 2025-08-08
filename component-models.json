@@ -166,42 +166,53 @@
     ]
   },
   {
-    "id": "feature-section",
+    "id": "product-overview",
     "fields": [
       {
         "component": "richtext",
-        "name": "title",
-        "label": "Section Title",
-        "description": "The main title for the section, including both lines."
+        "name": "activeColorText",
+        "label": "Active Color Text",
+        "description": "The text displayed for the active color."
       },
       {
-        "component": "reference",
-        "name": "image",
-        "label": "Section Image",
-        "description": "The image for the section."
+        "component": "richtext",
+        "name": "variantDetails",
+        "label": "Variant Details",
+        "description": "Details about the variant including price and model."
       },
       {
-        "component": "reference",
-        "name": "mobileImage",
-        "label": "Mobile Image",
-        "description": "The mobile-specific image for the section."
+        "component": "richtext",
+        "name": "bookNowLink",
+        "label": "Book Now Link",
+        "description": "The 'Book Now' CTA link with text."
       }
     ]
   },
   {
-    "id": "feature-item",
+    "id": "variant",
     "fields": [
       {
         "component": "reference",
-        "name": "icon",
-        "label": "Feature Icon",
-        "description": "The icon for the feature."
+        "name": "image",
+        "label": "Variant Image",
+        "description": "Image for the variant."
       },
       {
-        "component": "richtext",
-        "name": "description",
-        "label": "Feature Description",
-        "description": "The full description of the feature."
+        "component": "text",
+        "name": "variantName",
+        "label": "Variant Name",
+        "description": "Name of the variant."
+      }
+    ]
+  },
+  {
+    "id": "color",
+    "fields": [
+      {
+        "component": "text",
+        "name": "colorCode",
+        "label": "Color Code",
+        "description": "Hex color code for the swatch."
       }
     ]
   },

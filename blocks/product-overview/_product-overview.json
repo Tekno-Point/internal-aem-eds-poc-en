@@ -1,3 +1,4 @@
+
 {
   "definitions": [
     {
@@ -16,86 +17,97 @@
       }
     },
     {
-      "title": "Feature Section",
-      "id": "feature-section",
+      "title": "Variant",
+      "id": "variant",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Feature Section",
-              "model": "feature-section"
+              "name": "Variant",
+              "model": "variant"
             }
           }
         }
       }
     },
     {
-      "title": "Feature Item",
-      "id": "feature-item",
+      "title": "Color",
+      "id": "color",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Feature Item",
-              "model": "feature-item"
+              "name": "Color",
+              "model": "color"
             }
           }
         }
       }
     }
   ],
-    "models": [
-      {
-        "id": "feature-section",
-        "fields": [
-          {
-            "component": "richtext",
-            "name": "title",
-            "label": "Section Title",
-            "description": "The main title for the section, including both lines."
-          },
-          {
-            "component": "reference",
-            "name": "image",
-            "label": "Section Image",
-            "description": "The image for the section."
-          },
-          {
-            "component": "reference",
-            "name": "mobileImage",
-            "label": "Mobile Image",
-            "description": "The mobile-specific image for the section."
-          }
-        ]
-      },
-      {
-        "id": "feature-item",
-        "fields": [
-          {
-            "component": "reference",
-            "name": "icon",
-            "label": "Feature Icon",
-            "description": "The icon for the feature."
-          },
-          {
-            "component": "richtext",
-            "name": "description",
-            "label": "Feature Description",
-            "description": "The full description of the feature."
-          }
-        ]
-      }
-    ],
-      "filters": [
+  "models": [
+    {
+      "id": "product-overview",
+      "fields": [
         {
-          "id": "product-overview",
-          "components": [
-            "feature-section",
-            "feature-item"
-          ]
+          "component": "richtext",
+          "name": "activeColorText",
+          "label": "Active Color Text",
+          "description": "The text displayed for the active color."
+        },
+        {
+          "component": "richtext",
+          "name": "variantDetails",
+          "label": "Variant Details",
+          "description": "Details about the variant including price and model."
+        },
+        {
+          "component": "richtext",
+          "name": "bookNowLink",
+          "label": "Book Now Link",
+          "description": "The 'Book Now' CTA link with text."
         }
       ]
+    },
+    {
+      "id": "variant",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Variant Image",
+          "description": "Image for the variant."
+        },
+        {
+          "component": "text",
+          "name": "variantName",
+          "label": "Variant Name",
+          "description": "Name of the variant."
+        }
+      ]
+    },
+    {
+      "id": "color",
+      "fields": [
+        {
+          "component": "text",
+          "name": "colorCode",
+          "label": "Color Code",
+          "description": "Hex color code for the swatch."
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "product-overview",
+      "components": [
+        "variant",
+        "color"
+      ]
+    }
+  ]
 }
-
+  

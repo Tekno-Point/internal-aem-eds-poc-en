@@ -158,30 +158,30 @@
           }
         },
         {
-          "title": "Feature Section",
-          "id": "feature-section",
+          "title": "Variant",
+          "id": "variant",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Feature Section",
-                  "model": "feature-section"
+                  "name": "Variant",
+                  "model": "variant"
                 }
               }
             }
           }
         },
         {
-          "title": "Feature Item",
-          "id": "feature-item",
+          "title": "Color",
+          "id": "color",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Feature Item",
-                  "model": "feature-item"
+                  "name": "Color",
+                  "model": "color"
                 }
               }
             }
