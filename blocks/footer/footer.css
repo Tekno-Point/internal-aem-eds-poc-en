@@ -399,3 +399,9 @@ footer .footer>div {
     max-width: 230px;
   }
 }
+
+@media (width<768px){
+  footer .footer>div{
+    padding-bottom: 64px;
+  }
+}

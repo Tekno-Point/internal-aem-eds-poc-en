@@ -86,7 +86,7 @@
     font-weight: 400;
     line-height: normal;
     margin: unset;
-    padding-top: 64px;
+    /* padding-top: 64px; */
 }
 
 .section.essential-carousel.carousel-container .default-content-wrapper>h2 {
