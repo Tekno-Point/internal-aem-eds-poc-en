@@ -166,290 +166,36 @@
     ]
   },
   {
-    "id": "hero-model-view",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "backgroundImage",
-        "label": "Background Image",
-        "description": "Full-width background image for the hero section"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "backgroundImageAlt",
-        "label": "Background Image Alt Text",
-        "description": "Alternative text for background image accessibility"
-      },
-      {
-        "component": "select",
-        "name": "backgroundStyle",
-        "value": "cover",
-        "label": "Background Style",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Cover",
-            "value": "cover"
-          },
-          {
-            "name": "Contain",
-            "value": "contain"
-          },
-          {
-            "name": "Fixed",
-            "value": "fixed"
-          },
-          {
-            "name": "Parallax",
-            "value": "parallax"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "contentAlignment",
-        "value": "center",
-        "label": "Content Alignment",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Left",
-            "value": "left"
-          },
-          {
-            "name": "Center",
-            "value": "center"
-          },
-          {
-            "name": "Right",
-            "value": "right"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "contentWidth",
-        "value": "narrow",
-        "label": "Content Width",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Narrow",
-            "value": "narrow"
-          },
-          {
-            "name": "Wide",
-            "value": "wide"
-          },
-          {
-            "name": "Full",
-            "value": "full"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "animation",
-        "value": "fade-in",
-        "label": "Entrance Animation",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "None",
-            "value": "none"
-          },
-          {
-            "name": "Fade In",
-            "value": "fade-in"
-          },
-          {
-            "name": "Slide Up",
-            "value": "slide-up"
-          },
-          {
-            "name": "Slide Left",
-            "value": "slide-left"
-          },
-          {
-            "name": "Zoom In",
-            "value": "zoom-in"
-          }
-        ]
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "overlayColor",
-        "label": "Overlay Color",
-        "description": "Hex color code for background overlay (e.g., #00000080)"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "overlayOpacity",
-        "label": "Overlay Opacity",
-        "description": "Overlay opacity value (0-1)"
-      }
-    ]
-  },
-  {
-    "id": "hero-model-view-item",
+    "id": "standout-features",
     "fields": [
       {
         "component": "richtext",
-        "name": "content",
-        "value": "",
-        "label": "Content",
-        "valueType": "string",
-        "description": "Hero content with rich text formatting including headings, paragraphs, and links"
+        "name": "title",
+        "label": "Title Text",
+        "description": "The main title for the block, including both lines."
       },
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "ctaButton",
-        "label": "CTA Button",
-        "description": "Call-to-action button link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "ctaButtonText",
-        "label": "CTA Button Text",
-        "description": "Text for the call-to-action button"
-      },
-      {
-        "component": "select",
-        "name": "ctaButtonStyle",
-        "value": "primary",
-        "label": "CTA Button Style",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Primary",
-            "value": "primary"
-          },
-          {
-            "name": "Secondary",
-            "value": "secondary"
-          },
-          {
-            "name": "Outline",
-            "value": "outline"
-          },
-          {
-            "name": "Ghost",
-            "value": "ghost"
-          }
-        ]
+        "component": "container",
+        "name": "features",
+        "label": "Features",
+        "description": "A collection of standout features with icons and descriptions."
       }
     ]
   },
   {
-    "id": "hero",
+    "id": "feature-item",
     "fields": [
       {
         "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "service-counter",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "heading",
-        "label": "Heading",
-        "description": "Main heading for the service counter section"
+        "name": "icon",
+        "label": "Icon",
+        "description": "The icon image for the feature."
       },
       {
         "component": "richtext",
         "name": "description",
-        "value": "",
-        "label": "Description",
-        "valueType": "string",
-        "description": "Description text for the service counter section"
-      },
-      {
-        "component": "select",
-        "name": "columns",
-        "value": "4",
-        "label": "Columns",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "2 Columns",
-            "value": "2"
-          },
-          {
-            "name": "3 Columns",
-            "value": "3"
-          },
-          {
-            "name": "4 Columns",
-            "value": "4"
-          },
-          {
-            "name": "5 Columns",
-            "value": "5"
-          }
-        ],
-        "description": "Number of columns to display services"
-      }
-    ]
-  },
-  {
-    "id": "service-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Service Image",
-        "description": "Image representing the service",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Image Alt Text",
-        "description": "Alternative text for the service image"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Service Title",
-        "description": "Title of the service"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "link",
-        "label": "Service Link",
-        "description": "Link to more information about the service",
-        "multi": false
+        "label": "Feature Description",
+        "description": "The full description, including the value and unit."
       }
     ]
   }

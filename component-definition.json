@@ -143,77 +143,30 @@
           }
         },
         {
-          "title": "Hero Model View",
-          "id": "hero-model-view",
+          "title": "Standout Features",
+          "id": "standout-features",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Hero Model View",
-                  "model": "hero-model-view",
-                  "filter": "hero-model-view"
+                  "name": "standout-features",
+                  "filter": "standout-features"
                 }
               }
             }
           }
         },
         {
-          "title": "Hero Model View Item",
-          "id": "hero-model-view-item",
+          "title": "Feature Item",
+          "id": "feature-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Hero Model View Item",
-                  "model": "hero-model-view-item"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Hero",
-          "id": "hero",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Hero",
-                  "model": "hero"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Service Counter",
-          "id": "service-counter",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Service Counter",
-                  "model": "service-counter",
-                  "filter": "service-counter"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Service Item",
-          "id": "service-item",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Service Item",
-                  "model": "service-item"
+                  "name": "Feature Item",
+                  "model": "feature-item"
                 }
               }
             }

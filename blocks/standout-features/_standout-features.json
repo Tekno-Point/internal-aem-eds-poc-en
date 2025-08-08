@@ -1,0 +1,78 @@
+{
+  "definitions": [
+    {
+      "title": "Standout Features",
+      "id": "standout-features",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "standout-features",
+              "filter": "standout-features"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Feature Item",
+      "id": "feature-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Feature Item",
+              "model": "feature-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "standout-features",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "title",
+          "label": "Title Text",
+          "description": "The main title for the block, including both lines."
+        },
+        {
+          "component": "container",
+          "name": "features",
+          "label": "Features",
+          "description": "A collection of standout features with icons and descriptions."
+        }
+      ]
+    },
+    {
+      "id": "feature-item",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "icon",
+          "label": "Icon",
+          "description": "The icon image for the feature."
+        },
+        {
+          "component": "richtext",
+          "name": "description",
+          "label": "Feature Description",
+          "description": "The full description, including the value and unit."
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "standout-features",
+      "components": [
+        "feature-item"
+      ]
+    }
+  ]
+}
