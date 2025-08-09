@@ -169,11 +169,15 @@
     "id": "product-overview",
     "fields": [
       {
-        "component": "text",
-        "name": "classes",
-        "value": "coroal",
-        "label": "CSS classes",
-        "valueType": "string"
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          }
+        ]
       },
       {
         "component": "text",
