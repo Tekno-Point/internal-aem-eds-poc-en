@@ -152,7 +152,10 @@
                 "template": {
                   "name": "product-overview",
                   "model": "product-overview",
-                  "filter": "product-overview"
+                  "filter": "product-overview",
+                  "classNames": [
+                    "coroal"
+                  ]
                 }
               }
             }
@@ -168,7 +171,9 @@
                 "template": {
                   "name": "Product Variant",
                   "model": "product-variant",
-                  "classNames": ["coroal"]
+                  "classNames": [
+                    "coroal"
+                  ]
                 }
               }
             }
