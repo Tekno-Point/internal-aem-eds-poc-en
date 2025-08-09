@@ -168,7 +168,7 @@
                 "template": {
                   "name": "Product Variant",
                   "model": "product-variant",
-                  "classes": "custom-class"
+                  "classNames": ["coroal"]
                 }
               }
             }
