@@ -170,6 +170,13 @@
     "fields": [
       {
         "component": "text",
+        "name": "classes",
+        "value": "coroal",
+        "label": "CSS classes",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
         "name": "activeColorText",
         "label": "Active Color Text",
         "description": "The text displaying the active color of the product."
