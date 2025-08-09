@@ -25,7 +25,8 @@
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
               "name": "Product Variant",
-              "model": "product-variant"
+              "model": "product-variant",
+              "classes": "custom-class"
             }
           }
         }
