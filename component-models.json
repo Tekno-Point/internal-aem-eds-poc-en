@@ -222,6 +222,13 @@
     "id": "product-variant",
     "fields": [
       {
+        "component": "text",
+        "name": "classes",
+        "value": "coroal",
+        "label": "CSS classes",
+        "valueType": "string"
+      },
+      {
         "component": "reference",
         "name": "variantImage",
         "label": "Variant Image",
@@ -289,6 +296,13 @@
         "name": "description",
         "label": "Feature Description",
         "description": "The full description, including the value and unit."
+      },
+      {
+        "component": "text",
+        "name": "classes",
+        "value": "coroal",
+        "label": "CSS classes",
+        "valueType": "string"
       }
     ]
   }
