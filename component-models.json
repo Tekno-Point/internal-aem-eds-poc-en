@@ -169,11 +169,11 @@
     "id": "product-overview",
     "fields": [
       {
-        "component": "text",
+        "component": "select",
         "name": "classes",
+        "value": "",
         "label": "Teaser options",
-        "valueType": "string",
-        "value": "default-style"
+        "valueType": "string"
       },
       {
         "component": "text",
