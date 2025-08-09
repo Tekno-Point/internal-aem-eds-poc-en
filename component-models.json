@@ -230,7 +230,7 @@
     "fields": [
       {
         "component": "text",
-        "name": "classes",
+        "name": "style",
         "value": "coroal",
         "label": "CSS classes",
         "valueType": "string"
