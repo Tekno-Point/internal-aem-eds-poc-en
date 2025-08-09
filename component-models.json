@@ -169,50 +169,92 @@
     "id": "product-overview",
     "fields": [
       {
-        "component": "richtext",
+        "component": "text",
         "name": "activeColorText",
         "label": "Active Color Text",
-        "description": "The text displayed for the active color."
+        "description": "The text displaying the active color of the product."
+      },
+      {
+        "component": "text",
+        "name": "variant",
+        "label": "Product Variant",
+        "description": "The variant of the product."
+      },
+      {
+        "component": "text",
+        "name": "price",
+        "label": "Product Price",
+        "description": "The price of the product."
       },
       {
         "component": "richtext",
-        "name": "variantDetails",
-        "label": "Variant Details",
-        "description": "Details about the variant including price and model."
+        "name": "priceNote",
+        "label": "Price Note",
+        "description": "Additional note or description for the price."
       },
       {
-        "component": "richtext",
+        "component": "reference",
         "name": "bookNowLink",
         "label": "Book Now Link",
-        "description": "The 'Book Now' CTA link with text."
+        "description": "The link for the 'Book Now' button."
+      },
+      {
+        "component": "text",
+        "name": "bookNowText",
+        "label": "Book Now Button Text",
+        "description": "The text for the 'Book Now' button."
+      },
+      {
+        "component": "text",
+        "name": "bookNowLabel",
+        "label": "Book Now Button Label",
+        "description": "The label for the 'Book Now' button."
+      },
+      {
+        "component": "text",
+        "name": "bookNowModal",
+        "label": "Book Now Modal",
+        "description": "The modal identifier for the 'Book Now' button."
       }
     ]
   },
   {
-    "id": "variant",
+    "id": "product-variant",
     "fields": [
       {
         "component": "reference",
-        "name": "image",
+        "name": "variantImage",
         "label": "Variant Image",
-        "description": "Image for the variant."
+        "description": "The image representing the product variant."
+      },
+      {
+        "component": "text",
+        "name": "variantImageAlt",
+        "label": "Variant Image Alt Text",
+        "description": "The alternative text for the variant image."
       },
       {
         "component": "text",
         "name": "variantName",
         "label": "Variant Name",
-        "description": "Name of the variant."
+        "description": "The name of the product variant."
       }
     ]
   },
   {
-    "id": "color",
+    "id": "product-color",
     "fields": [
       {
         "component": "text",
         "name": "colorCode",
         "label": "Color Code",
-        "description": "Hex color code for the swatch."
+        "description": "The hex code or identifier for the color."
+      },
+      {
+        "component": "text",
+        "name": "colorName",
+        "label": "Color Name",
+        "description": "The name of the color."
       }
     ]
   },
