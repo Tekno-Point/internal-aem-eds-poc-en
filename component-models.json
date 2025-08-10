@@ -190,7 +190,8 @@
         ]
       },
       {
-        "name": "classes"
+        "name": "classes",
+        "valueType": "string"
       }
     ]
   },
