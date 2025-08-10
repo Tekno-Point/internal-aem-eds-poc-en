@@ -2,6 +2,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
+  console.log(block);
     debugger;
   // Parse the main block configuration fields
   const children = [...block.children];
