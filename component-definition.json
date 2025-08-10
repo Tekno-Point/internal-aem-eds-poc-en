@@ -108,7 +108,7 @@
                 "template": {
                   "name": "Card",
                   "model": "card",
-                  "classes": "custom-card-item-class"
+                  "itemClasses": "custom-card-item-class"
                 }
               }
             }
