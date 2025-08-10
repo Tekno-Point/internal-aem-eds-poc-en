@@ -195,13 +195,6 @@
     "id": "product-variant",
     "fields": [
       {
-        "component": "text",
-        "name": "class",
-        "value": "product-variant",
-        "label": "CSS classes",
-        "valueType": "string"
-      },
-      {
         "component": "reference",
         "name": "variantImage",
         "label": "Variant Image",
