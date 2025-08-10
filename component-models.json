@@ -190,11 +190,7 @@
         ]
       },
       {
-        "component": "text",
-        "name": "classes",
-        "valueType": "string",
-        "value": "default-class",
-        "defaultValue": "default-class"
+        "name": "classes"
       }
     ]
   },
