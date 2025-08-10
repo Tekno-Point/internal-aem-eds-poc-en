@@ -170,21 +170,22 @@
     "fields": [
       {
         "component": "container",
-        "label": "Container",
-        "name": "container",
-        "valueType": "string",
-        "collapsible": true,
+        "name": "test",
+        "label": "Multi Text",
+        "multi": true,
         "fields": [
           {
-            "component": "text-input",
-            "label": "Simple Text 1",
-            "name": "text",
+            "component": "reference",
+            "name": "image",
+            "value": "",
+            "label": "Sample Image",
             "valueType": "string"
           },
           {
-            "component": "text-input",
-            "label": "Simple Text 2",
-            "name": "text2",
+            "component": "text",
+            "name": "alt",
+            "value": "",
+            "label": "Alt Text",
             "valueType": "string"
           }
         ]
