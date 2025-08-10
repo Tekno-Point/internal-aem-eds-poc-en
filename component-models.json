@@ -190,6 +190,7 @@
         ]
       },
       {
+        "component": "text",
         "name": "classes",
         "value": "default-class"
       }
