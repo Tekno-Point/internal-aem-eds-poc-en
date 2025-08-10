@@ -170,7 +170,7 @@
     "fields": [
       {
         "component": "text",
-        "name": "classes",
+        "name": "class",
         "value": "side-by-class",
         "label": "Teaser options",
         "valueType": "string"
