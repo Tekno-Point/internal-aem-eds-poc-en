@@ -107,8 +107,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Card",
-                  "model": "card",
-                  "itemClasses": "custom-card-item-class"
+                  "model": "card"
                 }
               }
             }
@@ -154,8 +153,7 @@
                 "template": {
                   "name": "product-overview",
                   "model": "product-overview",
-                  "filter": "product-overview",
-                  "classes": "custom-class-changed-after-removed"
+                  "filter": "product-overview"
                 }
               }
             }
@@ -170,8 +168,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Product Variant",
-                  "model": "product-variant",
-                  "classes": "product-variant"
+                  "model": "product-variant"
                 }
               }
             }
@@ -186,8 +183,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Product Color",
-                  "model": "product-color",
-                  "classes": "product-color"
+                  "model": "product-color"
                 }
               }
             }
