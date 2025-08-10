@@ -153,7 +153,7 @@
                   "name": "product-overview",
                   "model": "product-overview",
                   "filter": "product-overview",
-                  "classes": "custom-class"
+                  "classes": "custom-class-changed"
                 }
               }
             }
