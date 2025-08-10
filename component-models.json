@@ -169,13 +169,10 @@
     "id": "product-overview",
     "fields": [
       {
+        "name": "classes",
+        "label": "Custom Classes",
         "component": "text",
-        "name": "class",
-        "class": "product-overview-teaser",
-        "value": "helloworlddd",
-        "label": "Background Color",
-        "description": "The quote background color",
-        "valueType": "string"
+        "defaultValue": "default-class"
       },
       {
         "component": "container",
