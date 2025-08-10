@@ -192,7 +192,9 @@
       {
         "component": "text",
         "name": "classes",
-        "value": "default-class"
+        "valueType": "string",
+        "value": "default-class",
+        "defaultValue": "default-class"
       }
     ]
   },
