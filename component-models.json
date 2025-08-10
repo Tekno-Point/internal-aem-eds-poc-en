@@ -169,24 +169,31 @@
     "id": "product-overview",
     "fields": [
       {
-        "component": "select",
+        "component": "text",
         "name": "classes",
-        "value": "",
+        "value": "helloworld",
         "label": "Background Color",
         "description": "The quote background color",
+        "valueType": "string"
+      },
+      {
+        "component": "container",
+        "label": "Container",
+        "name": "container",
         "valueType": "string",
-        "options": [
+        "collapsible": true,
+        "fields": [
           {
-            "name": "Red",
-            "value": "bg-red"
+            "component": "text-input",
+            "label": "Simple Text 1",
+            "name": "text",
+            "valueType": "string"
           },
           {
-            "name": "Green",
-            "value": "bg-green"
-          },
-          {
-            "name": "Blue",
-            "value": "bg-blue"
+            "component": "text-input",
+            "label": "Simple Text 2",
+            "name": "text2",
+            "valueType": "string"
           }
         ]
       }
