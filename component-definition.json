@@ -169,9 +169,7 @@
                 "template": {
                   "name": "Product Variant",
                   "model": "product-variant",
-                  "classNames": [
-                    "coroal"
-                  ]
+                  "classes": "product-variant"
                 }
               }
             }
@@ -186,7 +184,8 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Product Color",
-                  "model": "product-color"
+                  "model": "product-color",
+                  "classes": "product-color"
                 }
               }
             }
