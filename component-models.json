@@ -169,73 +169,26 @@
     "id": "product-overview",
     "fields": [
       {
-        "component": "text",
-        "name": "activeColorText",
-        "label": "Active Color Text",
-        "description": "The text displaying the active color of the product."
-      },
-      {
-        "component": "text",
+        "component": "select",
         "name": "classes",
-        "value": "with-classes-side-by-class",
-        "label": "Teaser options",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string[]",
-        "name": "test-multi",
-        "label": "Test Multi",
-        "multi": true 
-      },
-      {
-        "component": "text",
-        "name": "class",
-        "value": "with-class",
-        "label": "With Class",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "variant",
-        "label": "Product Variant",
-        "description": "The variant of the product."
-      },
-      {
-        "component": "text",
-        "name": "price",
-        "label": "Product Price",
-        "description": "The price of the product."
-      },
-      {
-        "component": "richtext",
-        "name": "priceNote",
-        "label": "Price Note",
-        "description": "Additional note or description for the price."
-      },
-      {
-        "component": "reference",
-        "name": "bookNowLink",
-        "label": "Book Now Link",
-        "description": "The link for the 'Book Now' button."
-      },
-      {
-        "component": "text",
-        "name": "bookNowText",
-        "label": "Book Now Button Text",
-        "description": "The text for the 'Book Now' button."
-      },
-      {
-        "component": "text",
-        "name": "bookNowLabel",
-        "label": "Book Now Button Label",
-        "description": "The label for the 'Book Now' button."
-      },
-      {
-        "component": "text",
-        "name": "bookNowModal",
-        "label": "Book Now Modal",
-        "description": "The modal identifier for the 'Book Now' button."
+        "value": "",
+        "label": "Background Color",
+        "description": "The quote background color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Red",
+            "value": "bg-red"
+          },
+          {
+            "name": "Green",
+            "value": "bg-green"
+          },
+          {
+            "name": "Blue",
+            "value": "bg-blue"
+          }
+        ]
       }
     ]
   },
