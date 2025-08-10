@@ -92,7 +92,7 @@
                 "template": {
                   "name": "Cards",
                   "filter": "cards",
-                  "classes": "custom-card-class "
+                  "classes": "custom-card-class"
                 }
               }
             }
