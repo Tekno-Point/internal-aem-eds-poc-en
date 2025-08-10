@@ -171,13 +171,20 @@
       {
         "component": "text",
         "name": "class",
-        "value": "side-by-class",
+        "value": "with-class",
         "label": "Teaser options",
         "valueType": "string"
       },
       {
         "component": "text",
-        "valueType": "string",
+        "name": "classes",
+        "value": "with-classes-side-by-class",
+        "label": "Teaser options",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string[]",
         "name": "test-multi",
         "label": "Test Multi",
         "multi": true 
