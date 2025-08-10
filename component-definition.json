@@ -152,18 +152,7 @@
                 "template": {
                   "name": "product-overview",
                   "model": "product-overview",
-                  "filter": "product-overview",
-                  "fields": [
-                    {
-                      "name": "content",
-                      "label": "Content",
-                      "component": "richtext"
-                    },
-                    {
-                      "name": "classes",
-                      "value": "default-class"
-                    }
-                  ]
+                  "filter": "product-overview"
                 }
               }
             }
