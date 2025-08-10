@@ -169,21 +169,11 @@
     "id": "product-overview",
     "fields": [
       {
-        "component": "select",
+        "component": "text",
         "name": "classes",
-        "value": "",
+        "value": "side-by-class",
         "label": "Teaser options",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Default",
-            "value": ""
-          },
-          {
-            "name": "Side-by-side",
-            "value": "side-by-side"
-          }
-        ]
+        "valueType": "string"
       },
       {
         "component": "text",
