@@ -170,13 +170,6 @@
     "fields": [
       {
         "component": "text",
-        "name": "class",
-        "value": "with-class",
-        "label": "Teaser options",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
         "name": "classes",
         "value": "with-classes-side-by-class",
         "label": "Teaser options",
@@ -184,10 +177,17 @@
       },
       {
         "component": "richtext",
-        "valueType": "string[]",
+        "valueType": "string",
         "name": "test-multi",
         "label": "Test Multi",
         "multi": true 
+      },
+      {
+        "component": "text",
+        "name": "class",
+        "value": "with-class",
+        "label": "With Class",
+        "valueType": "string"
       },
       {
         "component": "text",
