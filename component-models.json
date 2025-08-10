@@ -170,6 +170,12 @@
     "fields": [
       {
         "component": "text",
+        "name": "activeColorText",
+        "label": "Active Color Text",
+        "description": "The text displaying the active color of the product."
+      },
+      {
+        "component": "text",
         "name": "classes",
         "value": "with-classes-side-by-class",
         "label": "Teaser options",
@@ -177,7 +183,7 @@
       },
       {
         "component": "richtext",
-        "valueType": "string",
+        "valueType": "string[]",
         "name": "test-multi",
         "label": "Test Multi",
         "multi": true 
@@ -188,12 +194,6 @@
         "value": "with-class",
         "label": "With Class",
         "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "activeColorText",
-        "label": "Active Color Text",
-        "description": "The text displaying the active color of the product."
       },
       {
         "component": "text",
