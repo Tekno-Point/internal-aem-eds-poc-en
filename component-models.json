@@ -188,10 +188,6 @@
             "valueType": "string"
           }
         ]
-      },
-      {
-        "name": "classes",
-        "valueType": "string"
       }
     ]
   },
