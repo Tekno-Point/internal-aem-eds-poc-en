@@ -172,7 +172,8 @@
         "name": "classes",
         "label": "Custom Classes",
         "component": "text",
-        "defaultValue": "default-class"
+        "defaultValue": "default-class",
+        "value": "default-class"
       },
       {
         "component": "container",
