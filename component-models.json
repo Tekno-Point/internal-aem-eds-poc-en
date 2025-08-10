@@ -171,7 +171,8 @@
       {
         "component": "text",
         "name": "class",
-        "value": "helloworld",
+        "class": "product-overview-teaser",
+        "value": "helloworlddd",
         "label": "Background Color",
         "description": "The quote background color",
         "valueType": "string"
