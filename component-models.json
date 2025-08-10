@@ -177,6 +177,13 @@
       },
       {
         "component": "text",
+        "valueType": "string",
+        "name": "test-multi",
+        "label": "Test Multi",
+        "multi": true 
+      },
+      {
+        "component": "text",
         "name": "activeColorText",
         "label": "Active Color Text",
         "description": "The text displaying the active color of the product."
@@ -230,8 +237,8 @@
     "fields": [
       {
         "component": "text",
-        "name": "style",
-        "value": "coroal",
+        "name": "class",
+        "value": "product-variant",
         "label": "CSS classes",
         "valueType": "string"
       },

@@ -153,9 +153,7 @@
                   "name": "product-overview",
                   "model": "product-overview",
                   "filter": "product-overview",
-                  "classes": [
-                    "coroal"
-                  ],
+                  "class": "side-my-class",
                   "product-overview": "Meet the Experts"
                 }
               }
