@@ -152,9 +152,7 @@
                 "template": {
                   "name": "product-overview",
                   "model": "product-overview",
-                  "filter": "product-overview",
-                  "class": "side-my-class",
-                  "product-overview": "Meet the Experts"
+                  "filter": "product-overview"
                 }
               }
             }
