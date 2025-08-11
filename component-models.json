@@ -169,26 +169,52 @@
     "id": "product-overview",
     "fields": [
       {
-        "component": "container",
-        "label": "Container",
-        "name": "container",
-        "valueType": "string",
-        "collapsible": true,
-        "multi": true,
-        "fields": [
-          {
-            "component": "text-input",
-            "label": "Simple Text 1",
-            "name": "text",
-            "valueType": "string"
-          },
-          {
-            "component": "text-input",
-            "label": "Simple Text 2",
-            "name": "text2",
-            "valueType": "string"
-          }
-        ]
+        "component": "text",
+        "name": "activeColorText",
+        "label": "Active Color Text",
+        "description": "The text displaying the active color of the product."
+      },
+      {
+        "component": "text",
+        "name": "variant",
+        "label": "Product Variant",
+        "description": "The variant of the product."
+      },
+      {
+        "component": "text",
+        "name": "price",
+        "label": "Product Price",
+        "description": "The price of the product."
+      },
+      {
+        "component": "richtext",
+        "name": "priceNote",
+        "label": "Price Note",
+        "description": "Additional note or description for the price."
+      },
+      {
+        "component": "reference",
+        "name": "bookNowLink",
+        "label": "Book Now Link",
+        "description": "The link for the 'Book Now' button."
+      },
+      {
+        "component": "text",
+        "name": "bookNowText",
+        "label": "Book Now Button Text",
+        "description": "The text for the 'Book Now' button."
+      },
+      {
+        "component": "text",
+        "name": "bookNowLabel",
+        "label": "Book Now Button Label",
+        "description": "The label for the 'Book Now' button."
+      },
+      {
+        "component": "text",
+        "name": "bookNowModal",
+        "label": "Book Now Modal",
+        "description": "The modal identifier for the 'Book Now' button."
       }
     ]
   },
@@ -263,12 +289,100 @@
         "name": "description",
         "label": "Feature Description",
         "description": "The full description, including the value and unit."
+      }
+    ]
+  },
+  {
+    "id": "vehicle-specifications",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "entryImage",
+        "label": "Entry Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "entryMobileImage",
+        "label": "Entry Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "middleImage",
+        "label": "Middle Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "middleMobileImage",
+        "label": "Middle Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "lastImage",
+        "label": "Last Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "lastMobileImage",
+        "label": "Last Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "features",
+        "label": "Features List",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "brochure",
+        "label": "Brochure PDF",
+        "multi": false
       },
       {
         "component": "text",
-        "name": "classes",
-        "value": "coroal",
-        "label": "CSS classes",
+        "name": "brochureText",
+        "label": "Brochure Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "viewSpecificationsText",
+        "label": "View Specifications Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "modalTitle",
+        "label": "Modal Title",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "specification-tab",
+    "fields": [
+      {
+        "component": "text",
+        "name": "tabTitle",
+        "label": "Tab Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "tabContent",
+        "label": "Tab Content",
         "valueType": "string"
       }
     ]
