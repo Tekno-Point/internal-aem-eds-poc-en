@@ -316,7 +316,7 @@
       },
       {
         "component": "text",
-        "name": "text",
+        "name": "linkText",
         "label": "Text",
         "valueType": "string"
       }
