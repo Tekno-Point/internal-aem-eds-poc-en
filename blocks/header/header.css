@@ -271,11 +271,11 @@ header nav .nav-sections .default-content-wrapper p a:has(span.icon.icon-vida-he
   display: none;
 }
 
-header nav .nav-sections .default-content-wrapper p span.icon.icon-close_icon {
+/* header nav .nav-sections .default-content-wrapper p span.icon.icon-close_icon {
   position: absolute;
   top: 30px;
   right: 25px;
-}
+} */
 
 header nav .nav-sections .default-content-wrapper ol {
   margin: 0;
@@ -414,15 +414,12 @@ header nav .nav-sections .default-content-wrapper ol li a {
   header nav .nav-sections .default-content-wrapper ol:last-child {
     flex-direction: column;
     gap: 0;
+    font-size: 12px;
   }
 
   header nav .nav-sections .default-content-wrapper ol li ol:last-child {
     flex-direction: row;
     gap: 15px;
-  }
-
-  header nav .nav-sections .default-content-wrapper ol:last-child {
-    font-size: 12px;
   }
 
   header nav .nav-sections .default-content-wrapper ol li a {
@@ -455,11 +452,11 @@ header nav .nav-sections .default-content-wrapper ol li a {
     display: block;
   }
 
-  header nav .nav-sections .default-content-wrapper p span.icon.icon-close_icon {
+  /* header nav .nav-sections .default-content-wrapper p span.icon.icon-close_icon {
     position: absolute;
     top: 12px;
     right: 15px;
-  }
+  } */
 }
 
 /* tools */
@@ -602,7 +599,6 @@ header nav .nav-sections .default-content-wrapper ol li a {
 }
 
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body {
-  background-color: white;
   border-radius: 0 0 20px 20px;
   position: absolute;
   top: 100%;
@@ -611,9 +607,6 @@ header nav .nav-sections .default-content-wrapper ol li a {
   box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
   padding: 30px 0 20px;
   border-top: 1px solid lightgray;
-}
-
-.section.head-accordion .accordion-container:nth-child(2) .accordion-item-body {
   background-color: white;
   display: flex;
   justify-content: center;

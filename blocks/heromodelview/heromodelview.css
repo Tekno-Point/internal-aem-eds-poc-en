@@ -263,7 +263,7 @@
 }
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .toolbar {
-    color: var(--Primary-Vida-Orange, #ff5310);
+    color: #ff5310;
     font-family: "PP Montreal Medium",sans-serif;
     font-size: 1pc;
     font-style: normal;
@@ -291,7 +291,7 @@
     align-items: center;
     background: #ff5310;
     border-radius: .5rem;
-    box-shadow: 0 .46875rem .9375rem 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 .4688rem .9375rem 0 rgb(0 0 0 / 10%);
     color: #fff;
     cursor: pointer;
     display: flex;
@@ -457,6 +457,7 @@
    .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow{
     width: 21px;
     height: 21px;
+    top: 50%;
    }
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .input-city{
@@ -471,9 +472,6 @@
     margin-bottom: 0;
 }
 
-.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .arrow{
-    top: 50%;
-}
 
 .colors>div.active{
     width: 22px !important;

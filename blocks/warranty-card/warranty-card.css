@@ -26,7 +26,7 @@
 }
 
 .section.vida-warranty-card .warranty-card.block .warranty-card a {
-    padding: 3.375rem 2.71875rem;
+    padding: 3.375rem 2.7188rem;
     background: unset;
     display: flex;
     align-items: center;
@@ -240,9 +240,6 @@
     .section.cost-calculator-card .warranty-card.block .warranty-card a {
         height: 10.75rem;
         width: 20rem;
-    }
-
-    .section.cost-calculator-card .warranty-card.block .warranty-card a  {
         padding: 16px 16px 20px;
     }
 }

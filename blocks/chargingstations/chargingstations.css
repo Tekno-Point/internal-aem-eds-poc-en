@@ -145,19 +145,14 @@
     padding: 3rem 1.5rem; */
 }
 
-.section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon{
-    width: 91px;
-    height: 55px;
+/* .section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon{
     object-fit: contain;
-}
-
-.section.chargingstations-container .charging-accordian-container .charging-accordian-title-icon{
     width: 100%;
     height: 100%;
-}
+} */
 
 .section.chargingstations-container .charging-accordian-container .charging-accordian-title-text {
-    color: var(--Vida-Black, #222);
+    color: #222;
     font-family: 'PP Montreal Bold',sans-serif;
     font-size: 28px;
     font-style: normal;
@@ -420,7 +415,7 @@
     border-top: 1px solid #eee;
 }
 
-.mmi_autosuggest_list {
+/* .mmi_autosuggest_list {
     position: absolute;
     top: 100%;
     left: 0;
@@ -453,7 +448,7 @@
     z-index: 9999 !important;
     max-height: 300px;
     overflow-y: auto;
-}
+} */
 
 .custom-autosuggest-list {
     list-style: none;
@@ -556,12 +551,12 @@
         flex-direction: column;
     }
 
-    .section.chargingstations-container .charging-accordian-container .charging-accordian-title-container {
-        /* padding: 0 10px; */
-    }
+    /* .section.chargingstations-container .charging-accordian-container .charging-accordian-title-container {
+        padding: 0 10px;
+    } */
 
     .section.chargingstations-container .charging-accordian-container .charging-accordian-title-text {
-        color: var(--Neutral-Dark-Grey, #222);
+        color: #222;
         font-family: 'PP Montreal Bold',sans-serif;
         font-size: 1pc;
         font-style: normal;

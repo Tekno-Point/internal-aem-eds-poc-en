@@ -1,6 +1,7 @@
 {
   "extends": "stylelint-config-standard-scss",
   "rules": {
-    "length-zero-no-unit": null
+    "length-zero-no-unit": null,
+     "no-descending-specificity": null
   }
 }
