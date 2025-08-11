@@ -293,6 +293,36 @@
     ]
   },
   {
+    "id": "sub-header-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "icon",
+        "label": "Icon",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "iconAlt",
+        "label": "Icon Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "link",
+        "label": "Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "vehicle-specifications",
     "fields": [
       {

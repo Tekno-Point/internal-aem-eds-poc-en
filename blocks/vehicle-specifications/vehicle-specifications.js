@@ -1,11 +1,6 @@
-
-import { loadCSS } from '../../scripts/aem.js';
-import { getTextLabel, getPlaceholder } from '../../scripts/utils.js';
-
 export default async function decorate(block) {
   // Load specific CSS for this block
-  loadCSS(`${window.hlx.codeBasePath}/blocks/vehicle-specifications/vehicle-specifications.css`);
-
+  debugger;
   // Extract data from block children
   const children = [...block.children];
   const [
@@ -31,9 +26,9 @@ export default async function decorate(block) {
   const lastMobileImage = lastMobileImageDiv.querySelector('picture img')?.src || '';
   const featuresContent = featuresDiv.innerHTML || '';
   const brochureLink = brochureDiv.querySelector('a')?.href || '';
-  const brochureText = brochureTextDiv.textContent.trim() || getTextLabel('brochureText', 'Brochure');
-  const viewSpecificationsText = viewSpecificationsTextDiv.textContent.trim() || getTextLabel('viewSpecificationsText', 'View Full Specifications');
-  const modalTitle = modalTitleDiv.textContent.trim() || getTextLabel('modalTitle', 'SPECIFICATIONS of XOOM 160');
+  const brochureText = brochureTextDiv.textContent.trim();
+  const viewSpecificationsText = viewSpecificationsTextDiv.textContent.trim();
+  const modalTitle = modalTitleDiv.textContent.trim();
 
   // Create the main structure
   const mainContainer = document.createElement('div');

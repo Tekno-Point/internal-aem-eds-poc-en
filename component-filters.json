@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "vehicle-specifications"
+      "fragment"
     ]
   },
   {
@@ -51,6 +50,12 @@
     "id": "standout-features",
     "components": [
       "feature-item"
+    ]
+  },
+  {
+    "id": "sub-header",
+    "components": [
+      "sub-header-item"
     ]
   },
   {
