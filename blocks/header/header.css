@@ -184,6 +184,11 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
   font-weight: 700;
   line-height: 1;
 } */
+.section.nav-tools ul li a span {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+}
 
 .section.nav-brand .default-content-wrapper span {
   display: inline-block;
@@ -191,9 +196,35 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
   height: 24px;
 }
 
+.section.nav-tools ul li a span img {
+  height: 100%;
+  width: 100%;
+}
+
 .section.nav-brand .default-content-wrapper span img {
   width: 100%;
   height: 100%;
+}
+
+header nav .nav-sections .default-content-wrapper ol li p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+  margin: 0 0 8px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid #fff;
+}
+
+header nav .nav-sections .default-content-wrapper ul li p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding: 0 0 8px;
 }
 
 .section.nav-brand .default-content-wrapper p:nth-child(2) {
@@ -204,6 +235,16 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
   /* .section.nav-brand .default-content-wrapper p:first-child {
     display: none;
   } */
+.section.head-accordion .accordion-item-label p {
+  margin: 0;
+  font-size: 1pc;
+  font-weight: 500;
+  letter-spacing: .25px;
+  color: #3f3d3d;
+  cursor: pointer;
+  padding-right: 10px;
+  font-family: "PP Montreal Medium",sans-serif;
+}
 
   .section.nav-brand .default-content-wrapper p:nth-child(2) {
     display: flex;
@@ -267,6 +308,37 @@ header nav .nav-sections .default-content-wrapper {
   position: relative;
 }
 
+.section.nav-tools ul li a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
+  cursor: pointer;
+}
+
+header nav .nav-sections .default-content-wrapper ol li a {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav .nav-sections .default-content-wrapper ol li ol li a {
+  text-decoration: none;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #fff;
+  cursor: pointer;
+}
+
 header nav .nav-sections .default-content-wrapper p a:has(span.icon.icon-vida-hero-white-logo) {
   display: none;
 }
@@ -283,17 +355,6 @@ header nav .nav-sections .default-content-wrapper ol {
   padding: 0 0 1.5rem;
 }
 
-header nav .nav-sections .default-content-wrapper ol li p {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color: #fff;
-  margin: 0 0 8px;
-  padding: 0 0 8px;
-  border-bottom: 1px solid #fff;
-}
-
 header nav .nav-sections .default-content-wrapper ol li ol {
   display: flex;
   gap: 16px;
@@ -301,14 +362,12 @@ header nav .nav-sections .default-content-wrapper ol li ol {
   border-top: unset;
 }
 
-header nav .nav-sections .default-content-wrapper ol li ol li a {
-  text-decoration: none;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  color: #fff;
-  cursor: pointer;
+.section.nav-tools ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 header nav .nav-sections .default-content-wrapper ul {
@@ -320,18 +379,12 @@ header nav .nav-sections .default-content-wrapper ul {
   border-bottom: 1px solid #fff;
 }
 
-header nav .nav-sections .default-content-wrapper ul li {
-  flex: 1;
+.head-accordion .accordion-item-body ul li {
+  list-style: none;
 }
 
-header nav .nav-sections .default-content-wrapper ul li p {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  color: #fff;
-  border-bottom: 1px solid #fff;
-  padding: 0 0 8px;
+header nav .nav-sections .default-content-wrapper ul li {
+  flex: 1;
 }
 
 header nav .nav-sections .default-content-wrapper ul li ul li:last-child em {
@@ -345,6 +398,17 @@ header nav .nav-sections .default-content-wrapper ul li ul li:last-child em {
   padding: 20px 0 8px;
 }
 
+header nav .nav-sections .default-content-wrapper ul li ul li{
+  text-decoration: none;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #fff;
+  padding: .5rem 0 0;
+  cursor: pointer;
+}
+
 header nav .nav-sections .default-content-wrapper ul li ul li:last-child ul li {
   border: none;
 }
@@ -356,30 +420,12 @@ header nav .nav-sections .default-content-wrapper ul li ul {
   margin: 0;
 }
 
-header nav .nav-sections .default-content-wrapper ul li ul li,
-header nav .nav-sections .default-content-wrapper ul li ul li a {
-  text-decoration: none;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  color: #fff;
-  padding: .5rem 0 0;
-  cursor: pointer;
-}
 
 header nav .nav-sections .default-content-wrapper ol:last-child {
   display: flex;
   gap: 25px;
 }
 
-header nav .nav-sections .default-content-wrapper ol li a {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: normal;
-  color: #fff;
-  text-decoration: none;
-}
 
 @media (width <=900px) {
   header nav .nav-sections {
@@ -465,38 +511,6 @@ header nav .nav-sections .default-content-wrapper ol li a {
   grid-area: tools;
 } */
 
-.section.nav-tools ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.section.nav-tools ul li a {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  text-decoration: none;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  color: #fff;
-  cursor: pointer;
-}
-
-.section.nav-tools ul li a span {
-  display: inline-block;
-  height: 36px;
-  width: 36px;
-}
-
-.section.nav-tools ul li a span img {
-  height: 100%;
-  width: 100%;
-}
-
 @media (width <=900px) {
   /* header nav .nav-tools {
     display: none;
@@ -504,16 +518,6 @@ header nav .nav-sections .default-content-wrapper ol li a {
 }
 
 /* New Header CSS */
-.section.head-accordion .accordion-item-label p {
-  margin: 0;
-  font-size: 1pc;
-  font-weight: 500;
-  letter-spacing: .25px;
-  color: #3f3d3d;
-  cursor: pointer;
-  padding-right: 10px;
-  font-family: "PP Montreal Medium",sans-serif;
-}
 
 .head-accordion .accordion-item-body {
   display: flex;
@@ -529,6 +533,16 @@ header nav .nav-sections .default-content-wrapper ol li a {
   gap: 60px;
 }
 
+.head-accordion .accordion-container:nth-child(2) .accordion-item-body>ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 828px;
+}
+
 .head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul {
   display: flex;
   flex-direction: column;
@@ -536,14 +550,35 @@ header nav .nav-sections .default-content-wrapper ol li a {
   padding: 0;
 }
 
-.head-accordion .accordion-item-body ul li {
-  list-style: none;
-}
-
 .head-accordion .accordion-container:nth-child(1) .accordion-item-body>ul>li {
   flex: 1;
   transition: transform .2s ease, -webkit-transform .2s ease;
   cursor: pointer;
+}
+
+.section.head-accordion .accordion-container:nth-child(2) ol li {
+  font-size: 1pc;
+  font-weight: 500;
+  letter-spacing: .25px;
+  line-height: 20px;
+  color: #5c5a5a;
+  text-decoration: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-family: "PP Montreal Medium",sans-serif;
+}
+
+.head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul li {
+  padding: 0;
+}
+
+.section.head-accordion .accordion-container:nth-child(2) ul li ul li {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .25px;
+  color: #696767;
+  margin-top: 10px;
+  font-family: "PP Montreal Book",sans-serif;
 }
 
 .head-accordion .accordion-container:nth-child(1) .accordion-item-body>ul>li:hover {
@@ -555,8 +590,20 @@ header nav .nav-sections .default-content-wrapper ol li a {
   height: 135px;
 }
 
-.head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul li {
-  padding: 0;
+.section.head-accordion .accordion-container:nth-child(2) .accordion-item-body>ul>li {
+  box-sizing: border-box;
+  width: 240px;
+  font-size: 1pc;
+  font-weight: 500;
+  letter-spacing: .25px;
+  color: #1d1b1b;
+  margin-bottom: 4px;
+  cursor: pointer;
+  font-family: "PP Montreal Medium",sans-serif;
+}
+
+.section.head-accordion .accordion-container:nth-child(2) ol li:hover {
+  color: #ff5310;
 }
 
 .head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul li:nth-child(1) {
@@ -613,40 +660,10 @@ header nav .nav-sections .default-content-wrapper ol li a {
   align-items: flex-start;
 }
 
-.head-accordion .accordion-container:nth-child(2) .accordion-item-body>ul {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 828px;
-}
-
-.section.head-accordion .accordion-container:nth-child(2) .accordion-item-body>ul>li {
-  box-sizing: border-box;
-  width: 240px;
-  font-size: 1pc;
-  font-weight: 500;
-  letter-spacing: .25px;
-  color: #1d1b1b;
-  margin-bottom: 4px;
-  cursor: pointer;
-  font-family: "PP Montreal Medium",sans-serif;
-}
-
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body>ul>li:hover {
   color: #ff5310;
 }
 
-.section.head-accordion .accordion-container:nth-child(2) ul li ul li {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: .25px;
-  color: #696767;
-  margin-top: 10px;
-  font-family: "PP Montreal Book",sans-serif;
-}
 
 .head-accordion .accordion-container:nth-child(2) .accordion-item-body ul li ul {
   padding: 0;
@@ -656,22 +673,6 @@ header nav .nav-sections .default-content-wrapper ol li a {
 .section.head-accordion .accordion-container:nth-child(2) ol {
   border-left: 1px solid black;
   list-style: none;
-}
-
-.section.head-accordion .accordion-container:nth-child(2) ol li {
-  font-size: 1pc;
-  font-weight: 500;
-  letter-spacing: .25px;
-  line-height: 20px;
-  color: #5c5a5a;
-  text-decoration: none;
-  margin-bottom: 20px;
-  cursor: pointer;
-  font-family: "PP Montreal Medium",sans-serif;
-}
-
-.section.head-accordion .accordion-container:nth-child(2) ol li:hover {
-  color: #ff5310;
 }
 
 .section.buy-style .default-content-wrapper {
@@ -690,10 +691,6 @@ header nav .nav-sections .default-content-wrapper ol li a {
   font-family: "PP Montreal Medium",sans-serif;
 }
 
-.section.buy-style .default-content-wrapper p:nth-child(1):hover {
-  color: #ff5310;
-}
-
 .section.buy-style .default-content-wrapper p:nth-child(2) {
   background-color: #1d1b1b;
   color: #fff;
@@ -709,6 +706,10 @@ header nav .nav-sections .default-content-wrapper ol li a {
   font-family: "PP Montreal Medium",sans-serif;
 }
 
+.section.buy-style .default-content-wrapper p:nth-child(1):hover {
+  color: #ff5310;
+}
+
 .section.buy-style .default-content-wrapper p:nth-child(2):hover {
   background-color: #696767;
 }
@@ -716,6 +717,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
 .section.head-accordion .accordion-item-label {
   position: relative;
   list-style: none;
+  cursor: pointer;
 }
 
 .section.head-accordion .accordion-item.active .accordion-item-label p {
@@ -724,7 +726,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
 
 .section.head-accordion .accordion-item-label p::before {
   position: absolute;
-  right: -10px;
+  right: -25px;
   top: 0;
   content: '';
   display: inline-block;
