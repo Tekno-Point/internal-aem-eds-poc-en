@@ -76,8 +76,6 @@
     }
 }
 
-.section.essential-carousel.carousel-container {}
-
 .section.essential-carousel.carousel-container .default-content-wrapper>p {
     color: #222;
     font-family: 'PP Montreal Book',sans-serif;
@@ -101,10 +99,13 @@
 }
 
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide {
-    display: flex;
     gap: 10px;
-    height: 200px;
-    border: 1px solid rgb(230 229 229);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: unset;
+    margin-right: 10px;
 }
 
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-desktop picture,
@@ -116,6 +117,10 @@
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile img {
     width: 100%;
     height: 100%;
+}
+
+.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>div>p {
+    margin: unset;
 }
 
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-con p:last-child {
@@ -138,14 +143,6 @@
 }
 
 
-.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: unset;
-    margin-right: 10px;
-}
 
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper .swiper-slide .image-mobile {
     display: none;
@@ -170,7 +167,7 @@
 }
 
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide .text-wrapper>div>h2 {
-    color: var(--Neutral-Dark-Grey, #222);
+    color: #222;
     font-family: 'PP Montreal Bold',sans-serif;
     font-size: 1pc;
     font-style: normal;
@@ -185,13 +182,32 @@
     height: 100%;
 }
 
-.section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>div>p {
-    margin: unset;
+.section.essential-carousel.carousel-container .default-content-wrapper:last-child>p>a {
+    all: unset;
+    font-family: 'PP Montreal Bold',sans-serif;
+    font-size: 1pc;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    -webkit-box-align: center;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 10%) 0 0.3125rem 0.625rem 0;
+    color: rgb(255 255 255);
+    cursor: pointer;
+    display: flex;
+    height: auto;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: fit-content;
+    background: rgb(255 83 16);
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
 }
 
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>div>p>a {
     all: unset;
-    color: var(--Primary-Vida-Orange, #ff5310);
+    color: #ff5310;
     font-family: 'PP Montreal Medium',sans-serif;
     font-size: 20px;
     font-style: normal;
@@ -223,30 +239,6 @@
     margin: 1.5rem 0;
 }
 
-
-.section.essential-carousel.carousel-container .default-content-wrapper:last-child>p>a {
-    all: unset;
-    font-family: 'PP Montreal Bold',sans-serif;
-    font-size: 1pc;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    -webkit-box-align: center;
-    align-items: center;
-    box-shadow: rgb(0 0 0 / 10%) 0 0.3125rem 0.625rem 0;
-    color: rgb(255 255 255);
-    cursor: pointer;
-    display: flex;
-    height: auto;
-    -webkit-box-pack: center;
-    justify-content: center;
-    width: fit-content;
-    background: rgb(255 83 16);
-    border-radius: 0.5rem;
-    padding: 1rem 1.5rem;
-    text-decoration: none;
-}
-
 @media (width > 900px) {
     .section.essential-carousel.carousel-container {
         max-width: 1440px;
@@ -254,8 +246,18 @@
         padding: 0 5.5rem;
     }
 
+        .section.essential-carousel.carousel-container .default-content-wrapper>h2 {
+        color: #222;
+        font-family:'PP Montreal Bold',sans-serif;
+        font-size: 3pc;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: .5rem;
+    }
+
     .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide .text-wrapper>div>h2 {
-        color: var(--Vida-Black, #222);
+        color: #222;
         font-family: 'PP Montreal Bold',sans-serif;
         font-size: 28px;
         font-style: normal;
@@ -287,16 +289,6 @@
         border-radius: .75rem;
     }
 
-    .section.essential-carousel.carousel-container .default-content-wrapper>h2 {
-        color: #222;
-        font-family:'PP Montreal Bold',sans-serif;
-        font-size: 3pc;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        margin-top: .5rem;
-    }
-
     .section.essential-carousel.carousel-container .carousel-wrapper .carousel {
         margin: 2.5rem 0;
     }
@@ -307,7 +299,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        box-shadow: rgb(0 0 0 / 10%) 0 0.46875rem 0.9375rem 0;
+        box-shadow: rgb(0 0 0 / 10%) 0 0.4688rem 0.9375rem 0;
         color: rgb(255 255 255);
         height: auto;
         min-width: 9.75rem;

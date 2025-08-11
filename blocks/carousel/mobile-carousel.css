@@ -10,12 +10,12 @@
 }
 
 /* Swiper container */
-.section.mob-carousel .carousel.swiper.mySwiper {
+.section.mob-carousel .carousel.swiper.my-swiper {
     display: flex;
     gap: 24px;
 }
 
-.section.mob-carousel .carousel.swiper.mySwiper .swiper-wrapper {
+.section.mob-carousel .carousel.swiper.my-swiper .swiper-wrapper {
     display: flex;
     justify-content: space-between;
 }
@@ -47,6 +47,12 @@
 }
 
 /* Main image (e.g. L&T Finance banner) */
+.section.mob-carousel .swiper-slide.carousel-item>div>p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+    margin: unset;
+}
 
 .section.mob-carousel .swiper-slide.carousel-item>div>p:nth-of-type(2) {
     padding-top: 1rem;
@@ -67,12 +73,6 @@
 }
 
 /* Descriptive paragraphs */
-.section.mob-carousel .swiper-slide.carousel-item>div>p {
-    font-size: 15px;
-    color: #333;
-    line-height: 1.5;
-    margin: unset;
-}
 
 /* "Know More" button */
 .section.mob-carousel .swiper-slide.carousel-item .button-container .button {
@@ -96,7 +96,7 @@
 
 /* Responsive behavior */
 @media (width <= 768px) {
-    .section.mob-carousel .carousel.swiper.mySwiper {
+    .section.mob-carousel .carousel.swiper.my-swiper {
         flex-direction: column;
         gap: 16px;
     }

@@ -140,6 +140,14 @@ footer .footer>div {
   font-family: "PP Montreal Book",sans-serif;
 }
 
+.section.footer-address-conatiner .columns.block>div>div:last-child ol li ol li a {
+  color: #222;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  font-family: "PP Montreal Book",sans-serif;
+}
+
 .section.footer-address-conatiner .columns.block>div>div:last-child ul li ul li a:hover {
   text-decoration: none;
   color: #ff5310;
@@ -168,13 +176,6 @@ footer .footer>div {
   margin: 0;
 }
 
-.section.footer-address-conatiner .columns.block>div>div:last-child ol li ol li a {
-  color: #222;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
-  font-family: "PP Montreal Book",sans-serif;
-}
 
 .section.footer-address-conatiner .columns.block>div>div:last-child ol li ol li a:hover {
   text-decoration: none;
@@ -184,6 +185,11 @@ footer .footer>div {
 @media (width <=900px) {
   .section.footer-address-conatiner {
     padding-top: 32px;
+    order: 2;
+  }
+
+    .section.footer-address-conatiner .columns.block>div {
+    padding-bottom: unset;
   }
 
   .section.footer-address-conatiner .columns.block>div>div:first-child {
@@ -194,13 +200,6 @@ footer .footer>div {
     display: none;
   }
 
-  .section.footer-address-conatiner {
-    order: 2;
-  }
-
-  .section.footer-address-conatiner .columns.block>div {
-    padding-bottom: unset;
-  }
 
   .section.footer-address-conatiner .columns.block>div>div ul {
     border-top: .0625rem solid #85888c;
@@ -245,9 +244,6 @@ footer .footer>div {
 @media (width <=900px) {
   .section.footer-accordian {
     display: block;
-  }
-
-  .section.footer-accordian {
     order: 1;
   }
 

@@ -61,7 +61,7 @@ export default function decorate(block) {
         configData.navigation.prevEl = swiperButtonPrev || '';
         configData.pagination.el = swiperPagination || '';
     }
-    block.classList.add('swiper', 'mySwiper');
+    block.classList.add('swiper', 'my-swiper');
     block.append(swiperWrapper, swiperButtonNext, swiperButtonPrev, swiperPagination);
 
     if (!block.closest(".section.mob-carousel") ) {

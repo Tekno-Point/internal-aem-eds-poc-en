@@ -43,6 +43,14 @@
     flex: 3;
 }
 
+.section.dealership-locator-card .dealership-locator.block p {
+    color: #222;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    font-family: 'PP Montreal Book',sans-serif;
+}
+
 .section.dealership-locator-card .dealership-locator.block>div p {
     margin: 0;
 }
@@ -67,14 +75,6 @@
     font-family: 'PP Montreal Bold',sans-serif;
 }
 
-.section.dealership-locator-card .dealership-locator.block p {
-    color: #222;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: normal;
-    font-family: 'PP Montreal Book',sans-serif;
-}
-
 .section.dealership-locator-card .dealership-locator.block p.button-container {
     text-align: right;
 }
@@ -86,7 +86,7 @@
     font-weight: 600;
     line-height: normal;
     border-radius: 12px;
-    box-shadow: 0 .46875rem .9375rem 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 .4687rem .9375rem 0 rgb(0 0 0 / 10%);
     margin: 0;
     font-family: 'PP Montreal Bold',sans-serif;
 }

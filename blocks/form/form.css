@@ -321,13 +321,10 @@
   }
 
   .form.contact-form form>div button {
-    font-size: 16px;
-  }
-
-  .form.contact-form form>div button {
-    font-size: 16px;
+       font-size: 16px;
     padding: 16px 24px;
   }
+
 
   .form.contact-form form>div.field-wrapper.checkbox-wrapper.selection-wrapper label {
     font-size: 16px;
