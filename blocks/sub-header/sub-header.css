@@ -1,0 +1,268 @@
+.grecaptcha-badge {
+    display: none !important
+}
+
+.hp-new-padding-desk {
+    padding-top: 96px
+}
+
+.hp-new-padding-mob {
+    padding-top: 68px
+}
+
+.header {
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .3019607843);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .3019607843)
+}
+
+.header__model-selector .navbar__list a.active::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    width: .5rem;
+    height: .625rem;
+    left: 0;
+    right: 0;
+    bottom: -0.375rem;
+    border-top: 0;
+    border-right: .3125rem solid rgba(0, 0, 0, 0);
+    border-bottom: .4375rem solid #fff;
+    border-left: .3125rem solid rgba(0, 0, 0, 0)
+}
+
+.header__brand--logo img {
+    max-height: 2.5rem
+}
+
+.header__brand--navbar {
+    overflow: scrollbars-none;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+}
+
+@media(min-width: 1024px) {
+    .header__brand--navbar {
+        min-height: 2.5rem
+    }
+}
+
+.header__brand--navbar li a {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content
+}
+
+.header__brand--navbar li:hover {
+    color: #ee2326
+}
+
+.header__brand--navbar li:hover .me-4 span::before {
+    color: #ee2326
+}
+
+.header__brand--navbar li .variation-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px
+}
+
+@media(max-width: 1022px) {
+    .header__brand--navbar li .variation-icon {
+        width: 18px;
+        height: 18px
+    }
+}
+
+.header .header-banner-cta {
+    display: none
+}
+
+.header-sticky,
+.experiencefragment.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    background: var(--bg-white)
+}
+
+.header-sticky.product-banner-sticky .header .header-banner-cta,
+.experiencefragment.header-sticky.product-banner-sticky .header .header-banner-cta {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important
+}
+
+.header-sticky.product-banner-sticky .header .header-banner-cta a,
+.experiencefragment.header-sticky.product-banner-sticky .header .header-banner-cta a {
+    white-space: nowrap
+}
+
+.header-sticky .header .header-banner-cta a,
+.experiencefragment.header-sticky .header .header-banner-cta a {
+    white-space: nowrap
+}
+
+.header-sticky .header-sticky-menu,
+.experiencefragment.header-sticky .header-sticky-menu {
+    overflow-x: auto;
+    scrollbar-width: none
+}
+
+.header-sticky .header-sticky-menu::-webkit-scrollbar,
+.experiencefragment.header-sticky .header-sticky-menu::-webkit-scrollbar {
+    display: none
+}
+
+.breadcrumb.breadcrumb-sticky {
+    position: fixed;
+    top: 6.125rem;
+    z-index: 999;
+    width: 100%
+}
+
+@media(min-width: 1024px) {
+    .breadcrumb.breadcrumb-sticky {
+        top: 6.375rem
+    }
+}
+
+#new-destini-125 .header-sticky-menu {
+    -webkit-box-pack: justify !important;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+    gap: 1rem
+}
+
+#new-destini-125 .header-sticky-menu .header-banner-cta .button--secondary,
+#new-destini-125 .header-sticky-menu .header-banner-cta .button--primary {
+    font-size: 14px;
+    padding: .5rem 1.5rem !important;
+    line-height: 1.25rem;
+    font-family: "Montserrat-Medium" !important;
+    font-weight: 600
+}
+
+#new-destini-125 .header-sticky-menu .header-banner-cta .button--secondary {
+    margin-right: 1rem !important
+}
+
+#new-destini-125 .header-sticky-menu .header-banner-cta .button--primary {
+    background: linear-gradient(96deg, #AC0000 0%, #F00 26.35%, #FF3B3B 50.83%, #F00 72.71%, #F00 100%) !important;
+    line-height: 1.25rem;
+    font-family: "Montserrat-Medium" !important;
+    font-weight: 600
+}
+
+#new-destini-125 .header-sticky-menu .header-banner-cta #add-to-cart {
+    margin-right: 0 !important
+}
+
+#new-destini-125 .header-sticky-menu .header__brand--navbar li {
+    border-right: 1px solid #979797
+}
+
+#new-destini-125 .header-sticky-menu .header__brand--navbar li:last-child {
+    border-right: unset
+}
+
+@media(max-width: 1022px) {
+    #new-destini-125 .header-sticky-menu .header__brand--navbar li a {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        font-size: 12px
+    }
+}
+
+#new-destini-125 .header-sticky-menu .header__brand--navbar li:last-child a {
+    padding-right: 0 !important
+}
+
+#new-destini-125 .header-sticky-menu .header__brand--navbar li:first-child a {
+    padding-left: 0 !important
+}
+
+.header-banner-cta .shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 47.5%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(255, 255, 255, 0)), color-stop(60%, rgba(255, 255, 255, 0.5)), color-stop(50%, rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 50%);
+    -webkit-transform: skewX(-20deg) translateX(-40%);
+    transform: skewX(-20deg) translateX(-40%);
+    -webkit-animation: 2s linear 0s infinite forwards shine;
+    animation: 2s linear 0s infinite forwards shine
+}
+
+@-webkit-keyframes shine {
+
+    20%,
+    100% {
+        -webkit-transform: translateX(150%);
+        transform: translateX(150%)
+    }
+}
+
+@keyframes shine {
+
+    20%,
+    100% {
+        -webkit-transform: translateX(150%);
+        transform: translateX(150%)
+    }
+}
+
+.main-ticker {
+    width: 100%;
+    height: 34px;
+    background: -webkit-gradient(linear, left top, right top, from(#1C1C1C), color-stop(#555555), to(#1c1c1c));
+    background: linear-gradient(to right, #1C1C1C, #555555, #1c1c1c)
+}
+
+.main-ticker .ticker-content p {
+    color: #fff;
+    font-family: "TSTAR-PRO-Medium";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 7px 0px
+}
+
+.main-ticker .ticker-content p .ticker-content-bold {
+    font-family: "TSTAR-PRO-Bold";
+    font-weight: 700
+}
+
+.main-ticker .ticker-content p .main-ticker .break-line {
+    opacity: .3;
+    padding: 0 16px;
+    border: none
+}
+
+.header.new-header-commerce {
+    position: fixed;
+    top: 60px;
+    background: #fff
+}
+
+@media(max-width: 1310px) {
+    .header.new-header-commerce {
+        top: 56px
+    }
+}
+
+@media(max-width: 767px) {
+    .header.new-header-commerce {
+        top: 48px;
+        padding: 8px 0px
+    }
+}
+
+.header.new-header-commerce.fix-to-top {
+    top: 0
+}
