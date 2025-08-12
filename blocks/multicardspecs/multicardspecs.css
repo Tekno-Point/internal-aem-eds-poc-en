@@ -1,0 +1,186 @@
+
+.multicardspecs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.multicardspecs-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.multicardspecs-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color, #007acc);
+  margin: 0;
+  background: linear-gradient(135deg, #007acc 30%, #005f9e 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.multicardspecs-header p {
+  font-size: 1.1rem;
+  color: var(--text-color, #333);
+  margin: 0.5rem 0 0;
+}
+
+.multicardspecs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.multicardspecs-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color, #e5e7eb);
+}
+
+.multicardspecs-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 122, 204, 0.15);
+}
+
+.multicardspecs-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.multicardspecs-card-body {
+  padding: 1.5rem;
+}
+
+.multicardspecs-card-body h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading-color, #111827);
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.multicardspecs-card-body p {
+  font-size: 1rem;
+  color: var(--text-color, #6b7280);
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.multicardspecs-card-body a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--primary-color, #007acc);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.multicardspecs-card-body a:hover {
+  color: var(--primary-hover, #005f9e);
+  border-bottom-color: var(--primary-hover, #005f9e);
+}
+
+.multicardspecs-card-body a svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.multicardspecs-card-body a:hover svg {
+  transform: translateX(2px);
+}
+
+@media (max-width: 768px) {
+  .multicardspecs-container {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .multicardspecs-header h2 {
+    font-size: 2rem;
+  }
+
+  .multicardspecs-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .multicardspecs-card {
+    border-radius: 8px;
+  }
+
+  .multicardspecs-card-body {
+    padding: 1rem;
+  }
+
+  .multicardspecs-card-body h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .multicardspecs-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .multicardspecs-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .multicardspecs-card-body {
+    padding: 0.75rem;
+  }
+
+  .multicardspecs-card-body h3 {
+    font-size: 1.125rem;
+  }
+
+  .multicardspecs-card-body p {
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .multicardspecs-header h2 {
+    color: #ffffff;
+    background: linear-gradient(135deg, #007acc 30%, #005f9e 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .multicardspecs-card {
+    background: var(--dark-bg, #1f2937);
+    border-color: var(--dark-border, #374151);
+  }
+
+  .multicardspecs-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 122, 204, 0.2);
+  }
+
+  .multicardspecs-card-body h3 {
+    color: var(--dark-heading, #f9fafb);
+  }
+
+  .multicardspecs-card-body p {
+    color: var(--dark-text, #d1d5db);
+  }
+
+  .multicardspecs-card-body a {
+    color: var(--primary-color, #007acc);
+  }
+
+  .multicardspecs-card-body a:hover {
+    color: var(--primary-hover, #38bdf8);
+    border-bottom-color: var(--primary-hover, #38bdf8);
+  }
+}
+  

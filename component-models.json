@@ -166,6 +166,36 @@
     ]
   },
   {
+    "id": "multicardspecs-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "link",
+        "label": "Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "product-overview",
     "fields": [
       {

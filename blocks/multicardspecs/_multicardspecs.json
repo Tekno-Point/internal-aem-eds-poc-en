@@ -1,0 +1,76 @@
+
+{
+  "definitions": [
+    {
+      "title": "multicardspecs",
+      "id": "multicardspecs",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "multicardspecs",
+              "filter": "multicardspecs"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "multicardspecs Item",
+      "id": "multicardspecs-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "multicardspecs Item",
+              "model": "multicardspecs-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "multicardspecs-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "imageAlt",
+          "label": "Image Alt Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "link",
+          "label": "Link",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "linkText",
+          "label": "Text",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "multicardspecs",
+      "components": [
+        "multicardspecs-item"
+      ]
+    }
+  ]
+}
+  
