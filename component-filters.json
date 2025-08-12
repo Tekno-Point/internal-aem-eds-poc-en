@@ -15,8 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "multicardspecs"
+      "fragment"
     ]
   },
   {
@@ -43,7 +42,7 @@
   {
     "id": "multicardspecs",
     "components": [
-      "multicardspecs-item"
+      "multicardspecs"
     ]
   },
   {

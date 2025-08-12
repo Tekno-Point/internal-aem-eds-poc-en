@@ -158,15 +158,15 @@
           }
         },
         {
-          "title": "multicardspecs Item",
-          "id": "multicardspecs-item",
+          "title": "multicardspecs",
+          "id": "multicardspecs",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "multicardspecs Item",
-                  "model": "multicardspecs-item"
+                  "name": "multicardspecs",
+                  "model": "multicardspecs"
                 }
               }
             }
