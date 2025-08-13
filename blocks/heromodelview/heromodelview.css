@@ -97,7 +97,7 @@
 
 .section.heromodelview-container.citypricedropdown-container .model-wrapper>p {
     color: #222;
-    font-family: "PP Montreal Bold",sans-serif;
+    font-family: "PP Montreal Medium",sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
@@ -218,9 +218,8 @@
     border-bottom-right-radius: 8px;
     left: 0;
     width: 89%;
-    padding: 0 1rem 1rem;
+    /* padding: 0 1rem 1rem; */
     overflow: hidden scroll;
-
     /* max-height: 100%; */
     height: calc(89vh - 250px);
     scrollbar-width: thin;
@@ -229,8 +228,12 @@
 }
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .city-option-container .city-option {
-    padding: 4px 0;
+    padding: 5px 10px;
     text-transform: capitalize;
+}
+.section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .city-option-container .city-option:hover{
+    background-color: #007BFF;
+    color: #fff;
 }
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .left .input-search .input-city {
@@ -244,7 +247,7 @@
 
 .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .box-container .right .amount {
     color: #222;
-    font-family: "PP Montreal Bold",sans-serif;
+    font-family: "PP Montreal Medium",sans-serif;
     font-size: 24px;
     font-style: normal;
     line-height: normal;
@@ -295,7 +298,7 @@
     color: #fff;
     cursor: pointer;
     display: flex;
-    font-family: "PP Montreal Bold",sans-serif;
+    font-family: "PP Montreal Medium",sans-serif;
     height: 3.25rem;
     justify-content: center;
     width: 100%;
@@ -347,7 +350,7 @@
 
     .section.heromodelview-container.citypricedropdown-container .model-wrapper>p {
         color: #222;
-        font-family: "PP Montreal Bold",sans-serif;
+        font-family: "PP Montreal Medium",sans-serif;
         font-size: 60px;
         font-style: normal;
         font-weight: 600;
@@ -417,7 +420,7 @@
     }
 
     .section.heromodelview-container.citypricedropdown-container .citypricedropdown-wrapper .block.citypricedropdown .buy-btn {
-        font-family: "PP Montreal Bold",sans-serif;
+        font-family: "PP Montreal Medium",sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;

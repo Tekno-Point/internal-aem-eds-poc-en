@@ -627,8 +627,47 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-}
 
+  // Animation JS
+  const allComponents = document.querySelectorAll(".section");
+  const windowHeight = window.innerHeight;
+
+  allComponents.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+
+    // If the element is in first fold (any part visible on load)
+    if (rect.top < windowHeight && rect.bottom > 0) {
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
+    } else {
+      el.classList.add("fade-progress");
+    }
+  });
+
+  const fadedInSet = new Set();
+
+  window.addEventListener("scroll", () => {
+    allComponents.forEach((el) => {
+      if (fadedInSet.has(el) || el.style.opacity === "1") return;
+
+      const rect = el.getBoundingClientRect();
+      const startFade = windowHeight * 0.9;
+      const endFade = windowHeight * 0.2;
+
+      if (rect.top < startFade && rect.bottom > 0) {
+        let progress = 1 - (rect.top - endFade) / (startFade - endFade);
+        progress = Math.max(0, Math.min(1, progress));
+
+        el.style.opacity = progress;
+        el.style.transform = `translateY(${20 * (1 - progress)}px)`;
+
+        if (progress >= 1) {
+          fadedInSet.add(el);
+        }
+      }
+    });
+  });
+}
 loadPage();
 
 

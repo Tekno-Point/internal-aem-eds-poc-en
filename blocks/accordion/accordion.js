@@ -15,7 +15,7 @@ export default function decorate(block) {
     const button = row.children[2];
     button.className = 'know-more-button';
 
-    const details = document.createElement('details');
+    const details = document.createElement('div');
     details.className = 'accordion-item';
     details.append(summary, body);
 
@@ -26,7 +26,14 @@ export default function decorate(block) {
     wrapper.append(details);
     wrapper.append(button);
     row.replaceWith(wrapper);
+    document.querySelectorAll('.section.faq-card .accordion-item').forEach(label => {
+  // Example: Add a click listener
+  label.addEventListener('click', () => {
+    label.classList.toggle('active');
   });
+});
+  });
+  
 } 
 }
 // Hover Functionality

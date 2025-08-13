@@ -82,7 +82,7 @@
   color: #222;
   margin: 0;
   padding-bottom: 16px;
-    font-family: 'PP Montreal Bold',sans-serif;
+    font-family: 'PP Montreal Medium',sans-serif;
 }
 
 .section.variant-focused-view-container .cards-wrapper .cards.block ul li h3 {
@@ -91,7 +91,7 @@
   font-weight: 600;
   line-height: normal;
   margin: 0;
-  font-family: 'PP Montreal Bold',sans-serif;
+  font-family: 'PP Montreal Medium',sans-serif;
 }
 
 .section.offer-cards .cards-wrapper ul li .cards-card-body p {

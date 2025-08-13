@@ -27,7 +27,7 @@
     font-weight: 600;
     color: #1d1b1b;
     margin: 0;
-    font-family: 'PP Montreal Bold',sans-serif;
+    font-family: 'PP Montreal Medium',sans-serif;
 }
 
 .section.product-details-container .default-content-wrapper p {
@@ -37,7 +37,7 @@
     font-weight: 600;
     color: #1d1b1b;
     margin: 0;
-    font-family: 'PP Montreal Bold',sans-serif;
+    font-family: 'PP Montreal Medium',sans-serif;
 }
 
 .section.product-details-container .products-grid {
@@ -62,7 +62,7 @@
     font-weight: 600;
     line-height: normal;
     margin: 8px 0 2px; 
-    font-family: "PP Montreal Bold",sans-serif;
+    font-family: "PP Montreal Medium",sans-serif;
 }
 
 .section.product-details-container .products-grid .product-item .product-content .value-container {

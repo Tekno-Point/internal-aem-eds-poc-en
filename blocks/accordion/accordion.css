@@ -107,7 +107,7 @@
     font-weight: 600;
     padding-top: 32px;
     color: #222;
-    font-family: 'PP Montreal Bold',sans-serif;
+    font-family: 'PP Montreal Medium',sans-serif;
 }
 
 
@@ -164,4 +164,11 @@
     .section.faq-card .accordion-container .accordion-item.active summary p::after {
         top: -6px;
     }
+}
+.section.faq-card .accordion-item .accordion-item-body{
+    height: 0;
+    overflow: hidden;
+}
+.section.faq-card .accordion-item.active .accordion-item-body{
+    height: auto;
 }

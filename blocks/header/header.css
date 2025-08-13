@@ -10,7 +10,6 @@ header .nav-wrapper {
   left: 0;
 }
 
-
 header nav {
   /* box-sizing: border-box;
   display: grid;
@@ -20,7 +19,7 @@ header nav {
   max-width: 1400px;
 
   /* height: var(--nav-height); */
-  padding: 16px 24px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -184,14 +183,16 @@ header nav[aria-expanded='false'] .nav-hamburger-icon::after {
   font-weight: 700;
   line-height: 1;
 } */
-
+.section.nav-brand{
+  display: flex;
+}
 .section.nav-brand .default-content-wrapper span {
   display: inline-block;
   width: 170px;
   height: 24px;
 }
 
-.section.nav-brand .default-content-wrapper span img {
+.section.nav-brand .default-content-wrapper img {
   width: 100%;
   height: 100%;
 }
@@ -530,6 +531,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   padding: 0;
   margin: 0 auto;
   gap: 60px;
+  padding: 10px 0px;
 }
 
 .head-accordion .accordion-container:nth-child(1) .accordion-item-body ul li ul {
@@ -584,9 +586,9 @@ header nav .nav-sections .default-content-wrapper ol li a {
   line-height: 14px;
   color: #838282;
   font-style: normal;
-  font-weight: 450;
+  font-weight: 300;
   margin-top: 4px;
-  font-family: "PP Montreal Medium",sans-serif;
+  font-family: "PP Montreal Book",sans-serif;
 }
 
 .section.head-accordion .accordion-container:nth-child(1) .accordion-item-body {
@@ -596,9 +598,12 @@ header nav .nav-sections .default-content-wrapper ol li a {
   top: 100%;
   left: 0;
   width: 100%;
-  padding: 10px 0;
   box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
   border-top: 1px solid lightgray;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0;
 }
 
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body {
@@ -609,10 +614,15 @@ header nav .nav-sections .default-content-wrapper ol li a {
   left: 0;
   width: 100%;
   box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
-  padding: 30px 0 20px;
   border-top: 1px solid lightgray;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0;
 }
-
+.head-accordion .accordion-item.active .accordion-item-body {
+  max-height: 500px !important;
+}
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body {
   background-color: white;
   display: flex;
@@ -628,6 +638,7 @@ header nav .nav-sections .default-content-wrapper ol li a {
   flex-wrap: wrap;
   gap: 20px;
   width: 828px;
+    padding: 30px 0 20px;
 }
 
 .section.head-accordion .accordion-container:nth-child(2) .accordion-item-body>ul>li {
@@ -663,6 +674,8 @@ header nav .nav-sections .default-content-wrapper ol li a {
 .section.head-accordion .accordion-container:nth-child(2) ol {
   border-left: 1px solid black;
   list-style: none;
+  padding-left: 32px;
+  margin-top: 32px;
 }
 
 .section.head-accordion .accordion-container:nth-child(2) ol li {

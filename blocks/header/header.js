@@ -199,12 +199,10 @@ export default async function decorate(block) {
       let isHovering = false;
   
       function openAccordion() {
-        details.setAttribute('open', '');
         item.classList.add('active');
       }
   
       function closeAccordion() {
-        details.removeAttribute('open');
         item.classList.remove('active');
       }
   

@@ -12,14 +12,16 @@
 .swiper .swiper-button-next,
 .swiper .swiper-button-prev {
     display: block;
-    width: 30px;
+    width: 60px;
+    height: 60px;
+    top: 34%;
 }
 
 .swiper .swiper-button-next img,
 .swiper .swiper-button-prev img {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
 }
 
 .swiper .swiper-button-next::after,
@@ -90,7 +92,7 @@
 
 .section.essential-carousel.carousel-container .default-content-wrapper>h2 {
     color: #222;
-    font-family: 'PP Montreal Bold',sans-serif;
+    font-family: 'PP Montreal Medium',sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -168,7 +170,7 @@
 
 .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide .text-wrapper>div>h2 {
     color: #222;
-    font-family: 'PP Montreal Bold',sans-serif;
+    font-family: 'PP Montreal Medium',sans-serif;
     font-size: 1pc;
     font-style: normal;
     font-weight: 600;
@@ -184,7 +186,7 @@
 
 .section.essential-carousel.carousel-container .default-content-wrapper:last-child>p>a {
     all: unset;
-    font-family: 'PP Montreal Bold',sans-serif;
+    font-family: 'PP Montreal Medium',sans-serif;
     font-size: 1pc;
     font-style: normal;
     font-weight: 600;
@@ -248,7 +250,7 @@
 
         .section.essential-carousel.carousel-container .default-content-wrapper>h2 {
         color: #222;
-        font-family:'PP Montreal Bold',sans-serif;
+        font-family:'PP Montreal Medium',sans-serif;
         font-size: 3pc;
         font-style: normal;
         font-weight: 600;
@@ -258,7 +260,7 @@
 
     .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide .text-wrapper>div>h2 {
         color: #222;
-        font-family: 'PP Montreal Bold',sans-serif;
+        font-family: 'PP Montreal Medium',sans-serif;
         font-size: 28px;
         font-style: normal;
         font-weight: 600;
@@ -294,7 +296,7 @@
     }
 
     .section.essential-carousel.carousel-container .default-content-wrapper:last-child>p>a {
-        font-family: 'PP Montreal Bold',sans-serif;
+        font-family: 'PP Montreal Medium',sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -319,5 +321,17 @@
 
     .section.essential-carousel.carousel-container .default-content-wrapper>p{
         padding-top: 0;
+    }
+    .swiper .swiper-button-next img, .swiper .swiper-button-prev img{
+        width: 30px;
+        height: 30px;
+    }
+    .swiper .swiper-button-next, .swiper .swiper-button-prev{
+        width: 30px;
+        height: 30px;
+        top: 45%;
+    }
+    .section.essential-carousel.carousel-container .carousel-wrapper .carousel .swiper-wrapper>.swiper-slide>div>p>a{
+        font-size: 16px;
     }
 }

@@ -57,6 +57,12 @@ export default function decorate(block) {
         classes.remove();
     });
     if (configData) {
+        configData.slidesPerView = 1; // default for mobile
+        configData.breakpoints = {
+            320:{ slidesPerView:2},
+            768: { slidesPerView: 2 }, // tablets
+            1024: { slidesPerView: 4 } // desktop
+        };
         configData.navigation.nextEl = swiperButtonNext || '';
         configData.navigation.prevEl = swiperButtonPrev || '';
         configData.pagination.el = swiperPagination || '';
