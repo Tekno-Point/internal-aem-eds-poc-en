@@ -175,6 +175,16 @@ const embedTwitter = (url) => {
   return embedHTML;
 };
 
+const embedInstagram = (url) => {
+  const embedHTML = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="${url.href}" data-instgrm-version="14"></blockquote>`;
+  loadScript('https://www.instagram.com/embed.js', () => {
+    if (window.instgrm && window.instgrm.Embeds) {
+      window.instgrm.Embeds.process();
+    }
+  });
+  return embedHTML;
+};
+
 const loadEmbed = (block, link, autoplay) => {
   if (block.classList.contains('embed-is-loaded')) {
     return;
@@ -192,6 +202,10 @@ const loadEmbed = (block, link, autoplay) => {
     {
       match: ['twitter'],
       embed: embedTwitter,
+    },
+    {
+      match: ['instagram'],
+      embed: embedInstagram,
     },
   ];
 
@@ -636,6 +650,8 @@ function loadAutoBlock(doc) {
       decorateEmbed(a.parentElement);
     } else if (a && a.href && a.href.includes('/forms/')) {
       decorateForm(a.parentElement);
+    } else if (a && a.href && a.href.includes('instagram.com')) {
+      decorateEmbed(a.parentElement);
     }
   });
 }
