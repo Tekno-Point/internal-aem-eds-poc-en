@@ -197,6 +197,23 @@ const togglecityDrop = (e) => {
     cityOptionContainer.classList.add("dp-none");
   }
 };
+document.addEventListener("click", (e) => {
+  document.querySelectorAll(".city-option-container").forEach((drop) => {
+    // only operate on currently open dropdowns
+    if (drop.classList.contains("dp-none")) return;
+
+    const wrapper =
+      drop.closest(".citypricedropdown-wrapper") ||
+      drop.closest(".citypricedropdown-container") ||
+      drop.closest(".section");
+
+    // if click happened outside the wrapper (or we couldn't find the wrapper), close it
+    if (!wrapper || !wrapper.contains(e.target)) {
+      drop.classList.add("dp-none");
+    }
+  });
+});
+
 
 const selectCity = (e, cityContainer, filteredCityTemp) => {
   const selectedCity = e.target.textContent.trim();
