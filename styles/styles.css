@@ -450,7 +450,7 @@ display: block;
   width: 98px;
   text-align: center;
 }
-.section.sticky-tab.fade-progress{
+.section.sticky-tab{
   opacity: 1 !important;
   transform: none !important;
   transition: none !important;
