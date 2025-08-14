@@ -63,7 +63,7 @@
 
 .section[data-id="banner"] .banner-text .button-container .button,
 .section[data-id="banner"] .default-content-wrapper .button-container .button {
-    background-color: #red;
+    background-color: red;
     padding: 10px 32px;
     border-radius: 8px;
     color: rgb(255, 255, 255);
