@@ -63,11 +63,5 @@
     "components": [
       "sub-header-item"
     ]
-  },
-  {
-    "id": "vehicle-specifications",
-    "components": [
-      "specification-tab"
-    ]
   }
 ]

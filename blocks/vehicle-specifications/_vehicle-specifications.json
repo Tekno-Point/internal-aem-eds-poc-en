@@ -10,86 +10,70 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Vehicle Specifications",
-              "filter": "vehicle-specifications"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Specification Tab",
-      "id": "specification-tab",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Specification Tab",
-              "model": "specification-tab"
+              "model": "vehicle-specifications"
             }
           }
         }
       }
     }
   ],
-  "models": [
+  "models": [ 
     {
       "id": "vehicle-specifications",
       "fields": [
         {
           "component": "reference",
-          "valueType": "string",
           "name": "entryImage",
           "label": "Entry Image",
-          "multi": false
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "entryMobileImage",
-          "label": "Entry Mobile Image",
-          "multi": false
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "middleImage",
-          "label": "Middle Image",
-          "multi": false
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "middleMobileImage",
-          "label": "Middle Mobile Image",
-          "multi": false
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "lastImage",
-          "label": "Last Image",
-          "multi": false
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "lastMobileImage",
-          "label": "Last Mobile Image",
-          "multi": false
-        },
-        {
-          "component": "richtext",
-          "name": "features",
-          "label": "Features List",
+          "multi": false,
           "valueType": "string"
         },
         {
           "component": "reference",
-          "valueType": "string",
-          "name": "brochure",
-          "label": "Brochure PDF",
-          "multi": false
+          "name": "entryMobileImage",
+          "label": "Entry Mobile Image",
+          "multi": false,
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "name": "middleImage",
+          "label": "Middle Image",
+          "multi": false,
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "name": "middleMobileImage",
+          "label": "Middle Mobile Image",
+          "multi": false,
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "name": "lastImage",
+          "label": "Last Image",
+          "multi": false,
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "name": "lastMobileImage",
+          "label": "Last Mobile Image",
+          "multi": false,
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "specifications",
+          "label": "Specifications",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "brochureLink",
+          "label": "Brochure Link",
+          "valueType": "string"
         },
         {
           "component": "text",
@@ -108,34 +92,16 @@
           "name": "modalTitle",
           "label": "Modal Title",
           "valueType": "string"
-        }
-      ]
-    },
-    {
-      "id": "specification-tab",
-      "fields": [
-        {
-          "component": "text",
-          "name": "tabTitle",
-          "label": "Tab Title",
-          "valueType": "string"
         },
         {
           "component": "richtext",
-          "name": "tabContent",
-          "label": "Tab Content",
+          "name": "modalContent",
+          "label": "Modal Content",
           "valueType": "string"
         }
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "vehicle-specifications",
-      "components": [
-        "specification-tab"
-      ]
-    }
-  ]
+  "filters": []
 }
   

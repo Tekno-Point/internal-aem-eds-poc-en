@@ -1,10 +1,7 @@
 
 # Vehicle Specifications Block
 
-A visually stunning and interactive block showcasing vehicle specifications with animated images, feature highlights, and a modal with tabbed detailed specifications.
-
 ## JSON Model
-
 ```json
 [
   {
@@ -36,11 +33,11 @@ A visually stunning and interactive block showcasing vehicle specifications with
       },
       {
         "component": "richtext",
-        "name": "features"
+        "name": "specifications"
       },
       {
-        "component": "reference",
-        "name": "brochure"
+        "component": "text",
+        "name": "brochureLink"
       },
       {
         "component": "text",
@@ -53,27 +50,17 @@ A visually stunning and interactive block showcasing vehicle specifications with
       {
         "component": "text",
         "name": "modalTitle"
-      }
-    ]
-  },
-  {
-    "id": "specification-tab",
-    "fields": [
-      {
-        "component": "text",
-        "name": "tabTitle"
       },
       {
         "component": "richtext",
-        "name": "tabContent"
+        "name": "modalContent"
       }
     ]
   }
 ]
 ```
 
-## Sample Data
-
+## Data
 ```json
 {
   "entryImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_01.png",
@@ -82,124 +69,90 @@ A visually stunning and interactive block showcasing vehicle specifications with
   "middleMobileImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_02.png",
   "lastImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_03.png",
   "lastMobileImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_03.png",
-  "features": "<ul><li><ul><li>156cc</li><li>Displacement</li></ul></li><li><ul><li>10.9 kw @ 8000 rpm</li><li>Max Power (bhp/rpm)</li></ul></li><li><ul><li>14 Nm @ 6500 rpm</li><li>Max Torque (NM/rpm)</li></ul></li></ul>",
-  "brochure": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/pdf/xoom_160_Leaflet.pdf",
+  "specifications": "<h2>156cc</h2><p>Displacement</p><h2>10.9 kw @ 8000 rpm</h2><p>Max Power (bhp/rpm)</p><h2>14 Nm @ 6500 rpm</h2><p>Max Torque (NM/rpm)</p>",
+  "brochureLink": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-125/assets/pdf/xoom_160_Leaflet.pdf",
   "brochureText": "Brochure",
   "viewSpecificationsText": "View Full Specifications",
-  "modalTitle": "SPECIFICATIONS of XOOM 160"
+  "modalTitle": "SPECIFICATIONS of XOOM 160",
+  "modalContent": "<ul><li><a href='#engine'>Engine</a></li><li><a href='#transmission'>Transmission</a></li><li><a href='#suspension'>Suspension</a></li><li><a href='#tyres'>Tyres</a></li><li><a href='#dimensions'>Dimensions</a></li><li><a href='#electricals'>Electricals</a></li><li><a href='#weight'>Weight</a></li></ul><div id='engine'><h3>Engine</h3><p>Type: Liquid cooled, 4 Valve single cylinder SOHC</p><p>Displacement: 156cc</p><p>Max Power (bhp/rpm): 10.9 kw (14.6 bhp) @ 8000 rpm</p><p>Max Torque (Nm/rpm): 14 Nm @ 6500 rpm</p><p>Ignition: Fuel Injection (FI)</p></div>"
 }
 ```
 
-## Markdown Structure
-
+## Markdown
 ```
-+------------------------------------------------------------+
-| Vehicle Specifications                                    |
-+============================================================+
-| ![Entry Image][image0]                                    |
-+------------------------------------------------------------+
-| ![Entry Mobile Image][image1]                             |
-+------------------------------------------------------------+
-| ![Middle Image][image2]                                  |
-+------------------------------------------------------------+
-| ![Middle Mobile Image][image3]                           |
-+------------------------------------------------------------+
-| ![Last Image][image4]                                    |
-+------------------------------------------------------------+
-| ![Last Mobile Image][image5]                             |
-+------------------------------------------------------------+
-| <ul>                                                      |
-|   <li>                                                    |
-|     <ul>                                                  |
-|       <li>156cc</li>                                      |
-|       <li>Displacement</li>                              |
-|     </ul>                                                 |
-|   </li>                                                   |
-|   <li>                                                    |
-|     <ul>                                                  |
-|       <li>10.9 kw @ 8000 rpm</li>                        |
-|       <li>Max Power (bhp/rpm)</li>                      |
-|     </ul>                                                 |
-|   </li>                                                   |
-|   <li>                                                    |
-|     <ul>                                                  |
-|       <li>14 Nm @ 6500 rpm</li>                          |
-|       <li>Max Torque (NM/rpm)</li>                      |
-|     </ul>                                                 |
-|   </li>                                                   |
-| </ul>                                                     |
-+------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/...   |
-+------------------------------------------------------------+
-| Brochure                                                 |
-+------------------------------------------------------------+
-| View Full Specifications                                 |
-+------------------------------------------------------------+
-| SPECIFICATIONS of XOOM 160                               |
-+------------------------------------------------------------+
-| Specification Tab                                         |
-+------------------------------------------------------------+
-| Engine                                                   |
-+------------------------------------------------------------+
-| <ul>                                                      |
-|   <li>                                                    |
-|     <ul>                                                  |
-|       <li>Type</li>                                       |
-|       <li>Liquid cooled, 4 Valve single cylinder SOHC</li>|
-|     </ul>                                                 |
-|   </li>                                                   |
-|   <li>                                                    |
-|     <ul>                                                  |
-|       <li>Displacement</li>                              |
-|       <li>156cc</li>                                     |
-|     </ul>                                                 |
-|   </li>                                                   |
-|   ...                                                    |
-| </ul>                                                     |
-+------------------------------------------------------------+
-| Specification Tab                                         |
-+------------------------------------------------------------+
-| Transmission                                             |
-+------------------------------------------------------------+
-| <ul>                                                      |
-|   <li>                                                    |
-|     <ul>                                                  |
-|       <li>Type</li>                                       |
-|       <li>CVT</li>                                       |
-|     </ul>                                                 |
-|   </li>                                                   |
-|   ...                                                    |
-| </ul>                                                     |
-+------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+| Vehicle Specifications                                                                                                     |
++==============================================================================================================================+
+| ![entry-img][image0] ![middle-img][image1] ![last-img][image2]                                                               |
++------------------------------------------------------------------------------------------------------------------------------+
+| ![entry-mob-img][image3] ![middle-mob-img][image4] ![last-mob-img][image5]                                                   |
++------------------------------------------------------------------------------------------------------------------------------+
+| 156cc                                                                                                                       |
++------------------------------------------------------------------------------------------------------------------------------+
+| Displacement                                                                                                                 |
++------------------------------------------------------------------------------------------------------------------------------+
+| 10.9 kw @ 8000 rpm                                                                                                           |
++------------------------------------------------------------------------------------------------------------------------------+
+| Max Power (bhp/rpm)                                                                                                          |
++------------------------------------------------------------------------------------------------------------------------------+
+| 14 Nm @ 6500 rpm                                                                                                              |
++------------------------------------------------------------------------------------------------------------------------------+
+| Max Torque (NM/rpm)                                                                                                          |
++------------------------------------------------------------------------------------------------------------------------------+
+| [Brochure][link0]                                                                                                             |
++------------------------------------------------------------------------------------------------------------------------------+
+| View Full Specifications                                                                                                      |
++------------------------------------------------------------------------------------------------------------------------------+
+| SPECIFICATIONS of XOOM 160                                                                                                   |
++------------------------------------------------------------------------------------------------------------------------------+
+| Engine                                                                                                                        |
++------------------------------------------------------------------------------------------------------------------------------+
+| Transmission                                                                                                                   |
++------------------------------------------------------------------------------------------------------------------------------+
+| Suspension                                                                                                                    |
++------------------------------------------------------------------------------------------------------------------------------+
+| Tyres                                                                                                                         |
++------------------------------------------------------------------------------------------------------------------------------+
+| Dimensions                                                                                                                     |
++------------------------------------------------------------------------------------------------------------------------------+
+| Electricals                                                                                                                    |
++------------------------------------------------------------------------------------------------------------------------------+
+| Weight                                                                                                                         |
++------------------------------------------------------------------------------------------------------------------------------+
+| Type: Liquid cooled, 4 Valve single cylinder SOHC                                                                             |
++------------------------------------------------------------------------------------------------------------------------------+
+| Displacement: 156cc                                                                                                           |
++------------------------------------------------------------------------------------------------------------------------------+
+| Max Power (bhp/rpm): 10.9 kw (14.6 bhp) @ 8000 rpm                                                                             |
++------------------------------------------------------------------------------------------------------------------------------+
+| Max Torque (Nm/rpm): 14 Nm @ 6500 rpm                                                                                          |
++------------------------------------------------------------------------------------------------------------------------------+
+| Ignition: Fuel Injection (FI)                                                                                                  |
++------------------------------------------------------------------------------------------------------------------------------+
+
+[image0]: /content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_01.png
+[image1]: /content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_02.png
+[image2]: /content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_03.png
+[image3]: /content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_01.png
+[image4]: /content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_02.png
+[image5]: /content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_03.png
+[link0]: /content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-125/assets/pdf/xoom_160_Leaflet.pdf
 ```
 
-## Field Descriptions
-
-| Field | Component | Description |
-|-------|-----------|-------------|
-| entryImage | reference | Desktop image shown first |
-| entryMobileImage | reference | Mobile image shown first |
-| middleImage | reference | Desktop image shown second |
-| middleMobileImage | reference | Mobile image shown second |
-| lastImage | reference | Desktop image shown last |
-| lastMobileImage | reference | Mobile image shown last |
-| features | richtext | List of features with main heading and sub-heading |
-| brochure | reference | PDF brochure download link |
-| brochureText | text | Text for brochure CTA |
-| viewSpecificationsText | text | Text for view specifications CTA |
-| modalTitle | text | Title shown in specifications modal |
-| tabTitle | text | Title of each specification tab |
-| tabContent | richtext | Content of each specification tab |
-
-## Features
-
-* Animated image sequence with fade transitions
-* Interactive feature highlights with hover effects
-* Downloadable brochure link with icon
-* Modal with tabbed specifications for detailed info
-* Responsive design with mobile-optimized images
-* Dark mode support
-* Smooth animations and transitions
-* Accessible with proper focus states
-* Loading states for improved UX
-  
+## Authoring Guidelines
+```json
+{
+  "entryImage": "/path/to/entry-image.png",
+  "entryMobileImage": "/path/to/entry-mobile-image.png",
+  "middleImage": "/path/to/middle-image.png",
+  "middleMobileImage": "/path/to/middle-mobile-image.png",
+  "lastImage": "/path/to/last-image.png",
+  "lastMobileImage": "/path/to/last-mobile-image.png",
+  "specifications": "<h2>125cc</h2><p>Displacement</p><h2>10.9 kw @ 8000 rpm</h2><p>Max Power (bhp/rpm)</p><h2>14 Nm @ 6500 rpm</h2><p>Max Torque (NM/rpm)</p>",
+  "brochureLink": "https://example.com/brochure.pdf",
+  "brochureText": "Download Brochure",
+  "viewSpecificationsText": "View Specifications",
+  "modalTitle": "Vehicle Specifications",
+  "modalContent": "<ul><li><a href='#engine'>Engine</a></li><li><a href='#transmission'>Transmission</a></li><li><a href='#suspension'>Suspension</a></li><li><a href='#tyres'>Tyres</a></li><li><a href='#dimensions'>Dimensions</a></li><li><a href='#electricals'>Electricals</a></li><li><a href='#weight'>Weight</a></li></ul><div id='engine'><h3>Engine</h3><p>Type: Liquid cooled, 4 Valve single cylinder SOHC</p><p>Displacement: 125cc</p><p>Max Power (bhp/rpm): 10.9 kw (14.6 bhp) @ 8000 rpm</p><p>Max Torque (Nm/rpm): 14 Nm @ 6500 rpm</p><p>Ignition: Fuel Injection (FI)</p></div>"
+}
+```
