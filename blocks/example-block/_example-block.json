@@ -82,7 +82,7 @@
               "valueType": "string"
             },
             {
-              "component": "link",
+              "component": "text",
               "label": "View Specifications Link",
               "name": "viewSpecificationslink",
               "valueType": "string"
