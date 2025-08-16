@@ -398,85 +398,163 @@
     ]
   },
   {
-    "id": "vehicle-specifications",
+    "id": "vehicle-specification",
     "fields": [
       {
-        "component": "reference",
-        "name": "entryImage",
-        "label": "Entry Image",
-        "multi": false,
-        "valueType": "string"
+        "component": "container",
+        "label": "Desktop Images",
+        "name": "desktopImages",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "entryImage",
+            "label": "Entry Image",
+            "multi": false,
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "entryImageAlt",
+            "label": "Entry Image Alt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "middleImage",
+            "label": "Middle Image",
+            "multi": false,
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "middleImageAlt",
+            "label": "Middle Image Alt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "lastImage",
+            "label": "Last Image",
+            "multi": false,
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "lastImageAlt",
+            "label": "Last Image Alt",
+            "valueType": "string"
+          }
+        ]
       },
       {
-        "component": "reference",
-        "name": "entryMobileImage",
-        "label": "Entry Mobile Image",
-        "multi": false,
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "middleImage",
-        "label": "Middle Image",
-        "multi": false,
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "middleMobileImage",
-        "label": "Middle Mobile Image",
-        "multi": false,
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "lastImage",
-        "label": "Last Image",
-        "multi": false,
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "lastMobileImage",
-        "label": "Last Mobile Image",
-        "multi": false,
-        "valueType": "string"
+        "component": "container",
+        "label": "Mobile Images",
+        "name": "mobileImages",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "name": "entryMobImage",
+            "label": "Entry Mobile Image",
+            "multi": false,
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "entryMobImageAlt",
+            "label": "Entry Mobile Image Alt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "middleMobImage",
+            "label": "Middle Mobile Image",
+            "multi": false,
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "middleMobImageAlt",
+            "label": "Middle Mobile Image Alt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "lastMobImage",
+            "label": "Last Mobile Image",
+            "multi": false,
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "lastMobImageAlt",
+            "label": "Last Mobile Image Alt",
+            "valueType": "string"
+          }
+        ]
       },
       {
         "component": "richtext",
-        "name": "specifications",
-        "label": "Specifications",
+        "name": "features",
+        "label": "Features",
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "brochureLink",
-        "label": "Brochure Link",
-        "valueType": "string"
+        "component": "container",
+        "label": "CTA Links",
+        "name": "ctaLinks",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "brochureLink",
+            "label": "Brochure Link",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "brochureText",
+            "label": "Brochure Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "specificationLink",
+            "label": "Specification Link",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "specificationText",
+            "label": "Specification Text",
+            "valueType": "string"
+          }
+        ]
       },
       {
-        "component": "text",
-        "name": "brochureText",
-        "label": "Brochure Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "viewSpecificationsText",
-        "label": "View Specifications Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "modalTitle",
-        "label": "Modal Title",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "modalContent",
+        "component": "container",
         "label": "Modal Content",
-        "valueType": "string"
+        "name": "modalContent",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "modalTitle",
+            "label": "Modal Title",
+            "valueType": "string"
+          },
+          {
+            "component": "richtext",
+            "name": "modalTabs",
+            "label": "Modal Tabs",
+            "valueType": "string"
+          }
+        ]
       }
     ]
   }
