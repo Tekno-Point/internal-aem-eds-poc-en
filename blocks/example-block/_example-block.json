@@ -1,0 +1,102 @@
+{
+  "definitions": [
+    {
+      "title": "Example Block",
+      "id": "example-block",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Example Block",
+              "model": "example-block"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "example-block",
+      "fields": [
+        {
+          "component": "container",
+          "label": "Image Animation",
+          "name": "imageAnimation",
+          "valueType": "string",
+          "collapsible": true,
+          "fields": [
+            {
+              "component": "reference",
+              "label": "Entry Image (Desktop)",
+              "name": "entryImage",
+              "valueType": "string",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "label": "Entry Image Alt Text",
+              "name": "entryImageAlt",
+              "valueType": "string"
+            },
+            {
+              "component": "reference",
+              "label": "Entry Image (Mobile)",
+              "name": "entryMobImage",
+              "valueType": "string",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "label": "Entry Mobile Image Alt Text",
+              "name": "entryMobImageAlt",
+              "valueType": "string"
+            }
+          ]
+        },
+        {
+          "component": "richtext",
+          "label": "Feature Text",
+          "name": "featureText",
+          "valueType": "string"
+        },
+        {
+          "component": "container",
+          "label": "CTA Buttons",
+          "name": "ctaButtons",
+          "valueType": "string",
+          "collapsible": true,
+          "fields": [
+            {
+              "component": "aem-content",
+              "label": "Brochure PDF",
+              "name": "brochurePdf",
+              "valueType": "string",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "label": "Brochure PDF Text",
+              "name": "brochurePdfText",
+              "valueType": "string"
+            },
+            {
+              "component": "link",
+              "label": "View Specifications Link",
+              "name": "viewSpecificationslink",
+              "valueType": "string"
+            },
+            {
+              "component": "text",
+              "label": "View Specifications Text",
+              "name": "viewSpecificationslinkText",
+              "valueType": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

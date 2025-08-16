@@ -1,5 +1,6 @@
 
 export default function decorate(block) {
+  debugger;
   // Get all the direct child divs, which represent the repeating card items.
   const children = [...block.children];
 
@@ -61,7 +62,7 @@ export default function decorate(block) {
       }
       // Remove the original div to avoid duplicate content in the final output.
       child.remove();
-    } else if (heading) {
+    } else if (heading) { 
       const featureWrap = document.createElement('div');
       featureWrap.className = 'feature-wrap';
 
