@@ -257,14 +257,8 @@
         "fields": [
           {
             "component": "richtext",
-            "label": "Left Section Heading",
-            "name": "leftSectionHeading",
-            "valueType": "string"
-          },
-          {
-            "component": "richtext",
-            "label": "Left Section Sub Heading",
-            "name": "leftSectionSubHeading",
+            "label": "Left Section Text",
+            "name": "leftSectionText",
             "valueType": "string"
           },
           {
@@ -297,40 +291,34 @@
         "fields": [
           {
             "component": "richtext",
-            "label": "Center Section Heading",
-            "name": "centerSectionHeading",
-            "valueType": "string"
-          },
-          {
-            "component": "richtext",
-            "label": "Center Section Sub Heading",
-            "name": "centerSectionSubHeading",
+            "label": "Center Section Text",
+            "name": "centerSectionText",
             "valueType": "string"
           },
           {
             "component": "reference",
-            "label": "Center Section Desktop Image",
-            "name": "centerSectionDesktopImage",
+            "label": "Center Section Image (Desktop)",
+            "name": "centerSectionImage",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "label": "Center Section Desktop Image Alt Text",
-            "name": "centerSectionDesktopImageAlt",
+            "label": "Center Section Image Alt Text",
+            "name": "centerSectionImageAlt",
             "valueType": "string"
           },
           {
             "component": "reference",
-            "label": "Center Section Mobile Image",
-            "name": "centerSectionMobileImage",
+            "label": "Center Section Image (Mobile)",
+            "name": "centerSectionImageMobile",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
             "label": "Center Section Mobile Image Alt Text",
-            "name": "centerSectionMobileImageAlt",
+            "name": "centerSectionImageMobileAlt",
             "valueType": "string"
           }
         ]
@@ -344,40 +332,34 @@
         "fields": [
           {
             "component": "richtext",
-            "label": "Right Section Heading",
-            "name": "rightSectionHeading",
-            "valueType": "string"
-          },
-          {
-            "component": "richtext",
-            "label": "Right Section Sub Heading",
-            "name": "rightSectionSubHeading",
+            "label": "Right Section Text",
+            "name": "rightSectionText",
             "valueType": "string"
           },
           {
             "component": "reference",
-            "label": "Right Section Desktop Image",
-            "name": "rightSectionDesktopImage",
+            "label": "Right Section Image (Desktop)",
+            "name": "rightSectionImage",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "label": "Right Section Desktop Image Alt Text",
-            "name": "rightSectionDesktopImageAlt",
+            "label": "Right Section Image Alt Text",
+            "name": "rightSectionImageAlt",
             "valueType": "string"
           },
           {
             "component": "reference",
-            "label": "Right Section Mobile Image",
-            "name": "rightSectionMobileImage",
+            "label": "Right Section Image (Mobile)",
+            "name": "rightSectionImageMobile",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
             "label": "Right Section Mobile Image Alt Text",
-            "name": "rightSectionMobileImageAlt",
+            "name": "rightSectionImageMobileAlt",
             "valueType": "string"
           },
           {
@@ -390,106 +372,94 @@
       },
       {
         "component": "container",
-        "label": "Bottom Left Section",
-        "name": "bottomLeftSection",
+        "label": "Lower Left Section",
+        "name": "lowerLeftSection",
         "valueType": "string",
         "collapsible": true,
         "fields": [
           {
             "component": "richtext",
-            "label": "Bottom Left Section Heading",
-            "name": "bottomLeftSectionHeading",
+            "label": "Lower Left Section Text",
+            "name": "lowerLeftSectionText",
             "valueType": "string"
           },
           {
             "component": "richtext",
-            "label": "Bottom Left Section Sub Heading",
-            "name": "bottomLeftSectionSubHeading",
+            "label": "Lower Left Section Specs",
+            "name": "lowerLeftSectionSpecs",
             "valueType": "string"
           },
           {
             "component": "reference",
-            "label": "Bottom Left Section Desktop Image",
-            "name": "bottomLeftSectionDesktopImage",
+            "label": "Lower Left Section Image (Desktop)",
+            "name": "lowerLeftSectionImage",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "label": "Bottom Left Section Desktop Image Alt Text",
-            "name": "bottomLeftSectionDesktopImageAlt",
+            "label": "Lower Left Section Image Alt Text",
+            "name": "lowerLeftSectionImageAlt",
             "valueType": "string"
           },
           {
             "component": "reference",
-            "label": "Bottom Left Section Mobile Image",
-            "name": "bottomLeftSectionMobileImage",
+            "label": "Lower Left Section Image (Mobile)",
+            "name": "lowerLeftSectionImageMobile",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "label": "Bottom Left Section Mobile Image Alt Text",
-            "name": "bottomLeftSectionMobileImageAlt",
-            "valueType": "string"
-          },
-          {
-            "component": "richtext",
-            "label": "Bottom Left Section Specs",
-            "name": "bottomLeftSectionSpecs",
+            "label": "Lower Left Section Mobile Image Alt Text",
+            "name": "lowerLeftSectionImageMobileAlt",
             "valueType": "string"
           }
         ]
       },
       {
         "component": "container",
-        "label": "Bottom Right Section",
-        "name": "bottomRightSection",
+        "label": "Lower Right Section",
+        "name": "lowerRightSection",
         "valueType": "string",
         "collapsible": true,
         "fields": [
           {
             "component": "richtext",
-            "label": "Bottom Right Section Heading",
-            "name": "bottomRightSectionHeading",
+            "label": "Lower Right Section Text",
+            "name": "lowerRightSectionText",
             "valueType": "string"
           },
           {
             "component": "richtext",
-            "label": "Bottom Right Section Sub Heading",
-            "name": "bottomRightSectionSubHeading",
+            "label": "Lower Right Section Specs",
+            "name": "lowerRightSectionSpecs",
             "valueType": "string"
           },
           {
             "component": "reference",
-            "label": "Bottom Right Section Desktop Image",
-            "name": "bottomRightSectionDesktopImage",
+            "label": "Lower Right Section Image (Desktop)",
+            "name": "lowerRightSectionImage",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "label": "Bottom Right Section Desktop Image Alt Text",
-            "name": "bottomRightSectionDesktopImageAlt",
+            "label": "Lower Right Section Image Alt Text",
+            "name": "lowerRightSectionImageAlt",
             "valueType": "string"
           },
           {
             "component": "reference",
-            "label": "Bottom Right Section Mobile Image",
-            "name": "bottomRightSectionMobileImage",
+            "label": "Lower Right Section Image (Mobile)",
+            "name": "lowerRightSectionImageMobile",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "label": "Bottom Right Section Mobile Image Alt Text",
-            "name": "bottomRightSectionMobileImageAlt",
-            "valueType": "string"
-          },
-          {
-            "component": "richtext",
-            "label": "Bottom Right Section Specs",
-            "name": "bottomRightSectionSpecs",
+            "label": "Lower Right Section Mobile Image Alt Text",
+            "name": "lowerRightSectionImageMobileAlt",
             "valueType": "string"
           }
         ]
