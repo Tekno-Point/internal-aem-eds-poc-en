@@ -1,5 +1,5 @@
 
-        # multicard-specs
+# multicard-specs
 
 Authoring Guidelines:
 {
