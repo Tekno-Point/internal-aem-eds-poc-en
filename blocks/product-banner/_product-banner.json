@@ -1,0 +1,97 @@
+
+{
+  "definitions": [
+    {
+      "title": "Product Banner",
+      "id": "product-banner",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Product Banner",
+              "model": "product-banner"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-banner",
+      "fields": [
+        {
+          "component": "reference",
+          "label": "Desktop Banner Image",
+          "name": "desktopBannerImage",
+          "valueType": "string",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "label": "Desktop Banner Image Alt Text",
+          "name": "desktopBannerImageAlt",
+          "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "label": "Mobile Banner Image",
+          "name": "mobileBannerImage",
+          "valueType": "string",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "label": "Mobile Banner Image Alt Text",
+          "name": "mobileBannerImageAlt",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "label": "Banner Header",
+          "name": "bannerHeader",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "label": "Banner Title",
+          "name": "bannerTitle",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "label": "Price",
+          "name": "price",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "label": "Price Label",
+          "name": "priceLabel",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "label": "City Name",
+          "name": "cityName",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "label": "CTA Button Text",
+          "name": "ctaButtonText",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "label": "CTA Button Link",
+          "name": "ctaButtonLink",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
+    
