@@ -246,77 +246,334 @@
     ]
   },
   {
-    "id": "multicardspecs",
+    "id": "multicard-specs",
     "fields": [
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
+        "component": "container",
+        "label": "Left Text",
+        "name": "leftText",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "richtext",
+            "label": "Left Text",
+            "name": "leftText",
+            "valueType": "string"
+          }
+        ]
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
+        "component": "container",
+        "label": "Left Boxes",
+        "name": "leftBoxes",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "label": "Box Image",
+            "name": "boxImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Box Image Alt Text",
+            "name": "boxImageAlt",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Box Text",
+            "name": "boxText",
+            "valueType": "string"
+          }
+        ]
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
+        "component": "container",
+        "label": "Center Text",
+        "name": "centerText",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "richtext",
+            "label": "Center Text",
+            "name": "centerText",
+            "valueType": "string"
+          }
+        ]
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
+        "component": "container",
+        "label": "Center Images",
+        "name": "centerImages",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "label": "Desktop Image",
+            "name": "desktopImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Desktop Image Alt Text",
+            "name": "desktopImageAlt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "label": "Mobile Image",
+            "name": "mobileImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Mobile Image Alt Text",
+            "name": "mobileImageAlt",
+            "valueType": "string"
+          }
+        ]
       },
       {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
+        "component": "container",
+        "label": "Right Text",
+        "name": "rightText",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "richtext",
+            "label": "Right Text",
+            "name": "rightText",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Right Images",
+        "name": "rightImages",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "label": "Desktop Image",
+            "name": "desktopImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Desktop Image Alt Text",
+            "name": "desktopImageAlt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "label": "Mobile Image",
+            "name": "mobileImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Mobile Image Alt Text",
+            "name": "mobileImageAlt",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Right Boxes",
+        "name": "rightBoxes",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "label": "Box Image",
+            "name": "boxImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Box Image Alt Text",
+            "name": "boxImageAlt",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Box Text",
+            "name": "boxText",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Bottom Left Text",
+        "name": "bottomLeftText",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "richtext",
+            "label": "Bottom Left Text",
+            "name": "bottomLeftText",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Bottom Left Boxes",
+        "name": "bottomLeftBoxes",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "label": "Box Image",
+            "name": "boxImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Box Image Alt Text",
+            "name": "boxImageAlt",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Box Text",
+            "name": "boxText",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Bottom Left Images",
+        "name": "bottomLeftImages",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "label": "Desktop Image",
+            "name": "desktopImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Desktop Image Alt Text",
+            "name": "desktopImageAlt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "label": "Mobile Image",
+            "name": "mobileImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Mobile Image Alt Text",
+            "name": "mobileImageAlt",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Bottom Right Text",
+        "name": "bottomRightText",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "richtext",
+            "label": "Bottom Right Text",
+            "name": "bottomRightText",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Bottom Right Boxes",
+        "name": "bottomRightBoxes",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "label": "Box Image",
+            "name": "boxImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Box Image Alt Text",
+            "name": "boxImageAlt",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "label": "Box Text",
+            "name": "boxText",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "label": "Bottom Right Images",
+        "name": "bottomRightImages",
+        "valueType": "string",
+        "collapsible": true,
+        "fields": [
+          {
+            "component": "reference",
+            "label": "Desktop Image",
+            "name": "desktopImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Desktop Image Alt Text",
+            "name": "desktopImageAlt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "label": "Mobile Image",
+            "name": "mobileImage",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "label": "Mobile Image Alt Text",
+            "name": "mobileImageAlt",
+            "valueType": "string"
+          }
+        ]
       }
     ]
   },
