@@ -142,6 +142,21 @@ const getDefaultEmbed = (url) => `<div style="left: 0; width: 100%; height: 0; p
     </iframe>
   </div>`;
 
+// const embedYoutube = (url, autoplay) => {
+//   const usp = new URLSearchParams(url.search);
+//   const suffix = autoplay ? '&muted=1&autoplay=1' : '';
+//   let vid = usp.get('v') ? encodeURIComponent(usp.get('v')) : '';
+//   const embed = url.pathname;
+//   if (url.origin.includes('youtu.be')) {
+//     [, vid] = url.pathname.split('/');
+// }
+//   const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+//       <iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
+//       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>
+//     </div>`;
+//   return embedHTML;
+// };
+
 const embedYoutube = (url, autoplay) => {
   const usp = new URLSearchParams(url.search);
   const suffix = autoplay ? '&muted=1&autoplay=1' : '';
@@ -150,10 +165,11 @@ const embedYoutube = (url, autoplay) => {
   if (url.origin.includes('youtu.be')) {
     [, vid] = url.pathname.split('/');
   }
-  const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-      <iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
-      allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>
-    </div>`;
+  // The wrapper div has been removed. Styles are added directly to the iframe.
+  const embedHTML = `<iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" 
+    style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute; object-fit: cover;" 
+    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" 
+    allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>`;
   return embedHTML;
 };
 
@@ -221,21 +237,76 @@ const loadEmbed = (block, link, autoplay) => {
   block.classList.add('embed-is-loaded');
 };
 
+// export default function decorateEmbed(block) {
+//   const placeholder = block.querySelector('picture') || block.previousElementSibling?.querySelector('picture');
+//   const link = block.querySelector('a').href;
+//   block.textContent = '';
+
+//   if (placeholder) {
+//     const wrapper = document.createElement('div');
+//     wrapper.className = 'embed-placeholder';
+//     wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
+//     wrapper.prepend(placeholder);
+//     wrapper.addEventListener('click', () => {
+//       loadEmbed(block, link, true);
+//     });
+//     block.append(wrapper);
+//   } else {
+//     const observer = new IntersectionObserver((entries) => {
+//       if (entries.some((e) => e.isIntersecting)) {
+//         observer.disconnect();
+//         loadEmbed(block, link);
+//       }
+//     });
+//     observer.observe(block);
+//   }
+// }
+/**
+ * Checks if an element is visible in the initial viewport.
+ * @param {Element} el The element to check.
+ * @returns {boolean} True if the element is above the fold.
+ */
+function isAboveTheFold(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top >= 0 && rect.top <= window.innerHeight;
+}
+
 export default function decorateEmbed(block) {
   const placeholder = block.querySelector('picture') || block.previousElementSibling?.querySelector('picture');
   const link = block.querySelector('a').href;
   block.textContent = '';
 
-  if (placeholder) {
+  // --- CLS FIX ---
+  // Apply styles directly to the block to reserve its space.
+  // This prevents the layout from shifting when the embed loads.
+  block.style.position = 'relative';
+  block.style.width = '100%';
+  block.style.height = '0';
+  block.style.paddingBottom = '56.25%'; // 16:9 aspect ratio
+
+  // --- LCP FIX ---
+  // Decide how to load the embed based on its position on the page.
+  if (isAboveTheFold(block)) {
+    // Eager load: The block is visible on page load, so load the embed immediately.
+    loadEmbed(block, link, false);
+  } else if (placeholder) {
+    // Click-to-load: The block is below the fold and has a placeholder image.
     const wrapper = document.createElement('div');
-    wrapper.className = 'embed-placeholder';
+    wrapper.className = 'embed-placeholder'; // You may need to style this class
     wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
+    wrapper.style.position = 'absolute';
+    wrapper.style.top = '0';
+    wrapper.style.left = '0';
+    wrapper.style.width = '100%';
+    wrapper.style.height = '100%';
+    wrapper.style.cursor = 'pointer';
     wrapper.prepend(placeholder);
     wrapper.addEventListener('click', () => {
       loadEmbed(block, link, true);
     });
     block.append(wrapper);
   } else {
+    // Lazy-load: The block is below the fold with no placeholder, use IntersectionObserver.
     const observer = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {
         observer.disconnect();
