@@ -1,0 +1,245 @@
+
+.short-video-product {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.short-video-product .f-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.short-video-product .f-header span.ride {
+  color: #007bff;
+}
+
+.short-video-product .desk-car {
+  display: block;
+}
+
+.short-video-product .product-event-shorts {
+  margin: 0 -15px;
+}
+
+.short-video-product .slick-slide {
+  padding: 0 15px;
+}
+
+.short-video-product .evts-slider {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.short-video-product .evts-slider:hover {
+  transform: translateY(-5px);
+}
+
+.short-video-product video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.short-video-product .video-det {
+  padding: 20px;
+  text-align: center;
+}
+
+.short-video-product .video-det p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.short-video-product .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.short-video-product .slick-arrow:hover {
+  background: #0056b3;
+}
+
+.short-video-product .slick-prev {
+  left: 15px;
+}
+
+.short-video-product .slick-next {
+  right: 15px;
+}
+
+.short-video-product .slick-dots {
+  bottom: -30px;
+}
+
+.short-video-product .slick-dots li button:before {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.short-video-product .slick-dots li.slick-active button:before {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .short-video-product {
+    padding: 30px 15px;
+  }
+
+  .short-video-product .f-header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .short-video-product .slick-slide {
+    padding: 0 10px;
+  }
+
+  .short-video-product .video-det {
+    padding: 15px;
+  }
+
+  .short-video-product .video-det p {
+    font-size: 1rem;
+  }
+
+  .short-video-product .slick-prev {
+    left: 10px;
+  }
+
+  .short-video-product .slick-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .short-video-product {
+    padding: 20px 10px;
+  }
+
+  .short-video-product .f-header {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .short-video-product .slick-slide {
+    padding: 0 5px;
+  }
+
+  .short-video-product .video-det {
+    padding: 10px;
+  }
+
+  .short-video-product .video-det p {
+    font-size: 0.9rem;
+  }
+
+  .short-video-product .slick-prev {
+    left: 5px;
+  }
+
+  .short-video-product .slick-next {
+    right: 5px;
+  }
+}
+
+/* Animation and Hover Effects */
+.short-video-product .evts-slider {
+  transition: all 0.3s ease;
+}
+
+.short-video-product .evts-slider:hover {
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.3);
+  transform: translateY(-8px);
+}
+
+.short-video-product .slick-arrow {
+  transition: all 0.3s ease;
+}
+
+.short-video-product .slick-arrow:hover {
+  transform: scale(1.1);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .short-video-product {
+    background: #121212;
+  }
+
+  .short-video-product .f-header {
+    color: #fff;
+  }
+
+  .short-video-product .f-header span.ride {
+    color: #7ea8ff;
+  }
+
+  .short-video-product .evts-slider {
+    background: #1e1e1e;
+  }
+
+  .short-video-product .video-det p {
+    color: #e0e0e0;
+  }
+
+  .short-video-product .slick-dots li button:before {
+    color: #777;
+  }
+
+  .short-video-product .slick-dots li.slick-active button:before {
+    color: #7ea8ff;
+  }
+}
+
+/* Performance Optimizations */
+.short-video-product video {
+  object-fit: cover;
+}
+
+.short-video-product img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Accessibility Improvements */
+.short-video-product .slick-arrow {
+  font-size: 0;
+}
+
+.short-video-product .slick-prev::before {
+  content: 'Previous';
+  font-size: 14px;
+}
+
+.short-video-product .slick-next::before {
+  content: 'Next';
+  font-size: 14px;
+}
+
+.short-video-product .slick-slide {
+  outline: none;
+}
+
+.short-video-product .slick-slide:focus {
+  outline: 2px solid #007bff;
+}
+  

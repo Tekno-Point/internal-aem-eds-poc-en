@@ -15,9 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "product-banner",
-      "multicard-specs"
+      "fragment"
     ]
   },
   {
@@ -42,16 +40,16 @@
     ]
   },
   {
-    "id": "multicardspecs",
-    "components": [
-      "multicardspecs"
-    ]
-  },
-  {
     "id": "product-overview",
     "components": [
       "product-variant",
       "product-color"
+    ]
+  },
+  {
+    "id": "short-video-product",
+    "components": [
+      "short-video-product-item"
     ]
   },
   {
