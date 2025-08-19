@@ -57,7 +57,7 @@
           "collapsible": true,
           "fields": [
             {
-              "component": "aem-content",
+              "component": "reference",
               "valueType": "string",
               "name": "desktopVideo",
               "label": "Desktop Video",
@@ -80,7 +80,7 @@
           "collapsible": true,
           "fields": [
             {
-              "component": "aem-content",
+              "component": "reference",
               "valueType": "string",
               "name": "mobileVideo",
               "label": "Mobile Video",
