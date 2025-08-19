@@ -1,0 +1,116 @@
+
+{
+  "definitions": [
+    {
+      "title": "Short Product Video",
+      "id": "short-product-video",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Short Product Video",
+              "filter": "short-product-video"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Short Product Video Item",
+      "id": "short-product-video-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Short Product Video Item",
+              "model": "short-product-video-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "short-product-video",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "heading",
+          "value": "",
+          "label": "Heading",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
+      "id": "short-product-video-item",
+      "fields": [
+        {
+          "component": "container",
+          "name": "desktopVideo",
+          "label": "Desktop Video",
+          "valueType": "string",
+          "collapsible": true,
+          "fields": [
+            {
+              "component": "reference",
+              "valueType": "string",
+              "name": "desktopVideo",
+              "label": "Desktop Video",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "name": "desktopVideoAlt",
+              "value": "",
+              "label": "Desktop Video Alt",
+              "valueType": "string"
+            }
+          ]
+        },
+        {
+          "component": "container",
+          "name": "mobileVideo",
+          "label": "Mobile Video",
+          "valueType": "string",
+          "collapsible": true,
+          "fields": [
+            {
+              "component": "reference",
+              "valueType": "string",
+              "name": "mobileVideo",
+              "label": "Mobile Video",
+              "multi": false
+            },
+            {
+              "component": "text",
+              "name": "mobileVideoAlt",
+              "value": "",
+              "label": "Mobile Video Alt",
+              "valueType": "string"
+            }
+          ]
+        },
+        {
+          "component": "richtext",
+          "name": "videoDescription",
+          "value": "",
+          "label": "Video Description",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "short-product-video",
+      "components": [
+        "short-product-video-item"
+      ]
+    }
+  ]
+}
+    
