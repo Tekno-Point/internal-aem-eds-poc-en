@@ -1,4 +1,3 @@
-
 {
   "definitions": [
     {
@@ -38,11 +37,34 @@
       "id": "short-product-video",
       "fields": [
         {
-          "component": "richtext",
-          "name": "heading",
-          "value": "",
-          "label": "Heading",
-          "valueType": "string"
+          "component": "container",
+          "name": "desktop",
+          "label": "Desktop",
+          "valueType": "string",
+          "collapsible": true,
+          "fields": [
+            {
+              "component": "richtext",
+              "name": "desktopHeading",
+              "label": "Desktop Heading",
+              "valueType": "string"
+            }
+          ]
+        },
+        {
+          "component": "container",
+          "name": "mobile",
+          "label": "Mobile",
+          "valueType": "string",
+          "collapsible": true,
+          "fields": [
+            {
+              "component": "richtext",
+              "name": "mobileHeading",
+              "label": "Mobile Heading",
+              "valueType": "string"
+            }
+          ]
         }
       ]
     },
@@ -57,17 +79,15 @@
           "collapsible": true,
           "fields": [
             {
-              "component": "reference",
-              "valueType": "string",
-              "name": "desktopVideo",
-              "label": "Desktop Video",
-              "multi": false
+              "component": "text",
+              "name": "desktopVideoSrc",
+              "label": "Desktop Video Source",
+              "valueType": "string"
             },
             {
-              "component": "text",
-              "name": "desktopVideoAlt",
-              "value": "",
-              "label": "Desktop Video Alt",
+              "component": "richtext",
+              "name": "desktopVideoText",
+              "label": "Desktop Video Text",
               "valueType": "string"
             }
           ]
@@ -80,27 +100,18 @@
           "collapsible": true,
           "fields": [
             {
-              "component": "reference",
-              "valueType": "string",
-              "name": "mobileVideo",
-              "label": "Mobile Video",
-              "multi": false
+              "component": "text",
+              "name": "mobileVideoSrc",
+              "label": "Mobile Video Source",
+              "valueType": "string"
             },
             {
-              "component": "text",
-              "name": "mobileVideoAlt",
-              "value": "",
-              "label": "Mobile Video Alt",
+              "component": "richtext",
+              "name": "mobileVideoText",
+              "label": "Mobile Video Text",
               "valueType": "string"
             }
           ]
-        },
-        {
-          "component": "richtext",
-          "name": "videoDescription",
-          "value": "",
-          "label": "Video Description",
-          "valueType": "string"
         }
       ]
     }
@@ -114,4 +125,3 @@
     }
   ]
 }
-    

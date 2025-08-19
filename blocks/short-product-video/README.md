@@ -1,177 +1,91 @@
 
-📦 Short Product Video
+# Short Product Video
 
-📝 Authoring Guidelines:
+## Authoring Guidelines
+
+```json
 {
-  "heading": "<p>A SCOOTER THAT <span class="ride">LEAVES EVERYONE BEHIND</span></p>",
-  "desktopVideo1": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-1.mp4",
-  "desktopVideo1Alt": "Smart Key",
-  "mobileVideo1": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-1.mp4",
-  "mobileVideo1Alt": "Smart Key",
-  "videoDescription1": "<p>Smart Key</p>",
-  "desktopVideo2": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-2.mp4",
-  "desktopVideo2Alt": "Liquid Cooled Engine + i3s Silent",
-  "mobileVideo2": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-2.mp4",
-  "mobileVideo2Alt": "Liquid Cooled Engine + i3s Silent",
-  "videoDescription2": "<p>Liquid Cooled Engine + i3s Silent</p>",
-  "desktopVideo3": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-3.mp4",
-  "desktopVideo3Alt": "Digital Speedometer - TBT Navigation",
-  "mobileVideo3": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-3.mp4",
-  "mobileVideo3Alt": "Digital Speedometer - TBT Navigation",
-  "videoDescription3": "<p>Digital Speedometer - TBT Navigation</p>",
-  "desktopVideo4": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-4.mp4",
-  "desktopVideo4Alt": "14 inch Large Wheels - Block Pattern Tyres",
-  "mobileVideo4": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-4.mp4",
-  "mobileVideo4Alt": "14 inch Large Wheels - Block Pattern Tyres",
-  "videoDescription4": "<p>14 inch Large Wheels - Block Pattern Tyres</p>",
-  "desktopVideo5": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-5.mp4",
-  "desktopVideo5Alt": "Twin Rear Suspensions",
-  "mobileVideo5": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-5.mp4",
-  "mobileVideo5Alt": "Twin Rear Suspensions",
-  "videoDescription5": "<p>Twin Rear Suspensions</p>",
-  "desktopVideo6": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-6.mp4",
-  "desktopVideo6Alt": "Dual Chamber LED Headlamp",
-  "mobileVideo6": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-6.mp4",
-  "mobileVideo6Alt": "Dual Chamber LED Headlamp",
-  "videoDescription6": "<p>Dual Chamber LED Headlamp</p>",
-  "desktopVideo7": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-7.mp4",
-  "desktopVideo7Alt": "Longer Visor & Touring Box (Accessories)",
-  "mobileVideo7": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-7.mp4",
-  "mobileVideo7Alt": "Longer Visor & Touring Box (Accessories)",
-  "videoDescription7": "<p>Longer Visor & Touring Box (Accessories)</p>"
+  "desktopHeading": "<p>A SCOOTER THAT <span class='ride'>LEAVES EVERYONE BEHIND</span></p>",
+  "mobileHeading": "<p>A SCOOTER THAT <span class='ride'>LEAVES EVERYONE BEHIND</span></p>",
+  "desktopVideoSrc1": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-1.mp4",
+  "desktopVideoText1": "<p>Smart Key</p>",
+  "desktopVideoSrc2": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-2.mp4",
+  "desktopVideoText2": "<p>Liquid Cooled Engine + i3s Silent</p>",
+  "desktopVideoSrc3": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-3.mp4",
+  "desktopVideoText3": "<p>Digital Speedometer - TBT Navigation</p>",
+  "desktopVideoSrc4": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-4.mp4",
+  "desktopVideoText4": "<p>14 inch Large Wheels - Block Pattern Tyres</p>",
+  "desktopVideoSrc5": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-5.mp4",
+  "desktopVideoText5": "<p>Twin Rear Suspensions</p>",
+  "desktopVideoSrc6": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-6.mp4",
+  "desktopVideoText6": "<p>Dual Chamber LED Headlamp</p>",
+  "desktopVideoSrc7": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/web/feature-web-7.mp4",
+  "desktopVideoText7": "<p>Longer Visor & Touring Box (Accessories)</p>",
+  "mobileVideoSrc1": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-1.mp4",
+  "mobileVideoText1": "<p>Smart Key</p>",
+  "mobileVideoSrc2": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-2.mp4",
+  "mobileVideoText2": "<p>Liquid Cooled Engine + i3s Silent</p>",
+  "mobileVideoSrc3": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-3.mp4",
+  "mobileVideoText3": "<p>Digital Speedometer - TBT Navigation</p>",
+  "mobileVideoSrc4": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-4.mp4",
+  "mobileVideoText4": "<p>14 inch Large Wheels - Block Pattern Tyres</p>",
+  "mobileVideoSrc5": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-5.mp4",
+  "mobileVideoText5": "<p>Twin Rear Suspensions</p>",
+  "mobileVideoSrc6": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-6.mp4",
+  "mobileVideoText6": "<p>Dual Chamber LED Headlamp</p>",
+  "mobileVideoSrc7": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/shorts/mob/feature-mob-7.mp4",
+  "mobileVideoText7": "<p>Longer Visor & Touring Box (Accessories)</p>"
 }
+```
 
-⚙️ Thinking Process:
+## Thinking Process
 
-1. **Block Analysis**:
-   - The block displays a carousel of videos with descriptions, optimized for both desktop and mobile views.
-   - There are 7 videos each for desktop and mobile, with a heading that repeats in both sections.
-   - The carousel should support both desktop (3 slides visible) and mobile (1 slide visible) layouts.
+1. **HTML Analysis**: The provided HTML consists of two main sections: desktop and mobile. Each section contains a heading and a carousel of videos with corresponding text descriptions.
+2. **Field Planning**: Identified that videos and their descriptions are repeating elements. Decided to use a block-item model for better authoring experience and to handle complex data like video sources.
+3. **Content Model Mapping**: Mapped headings to richtext fields and video data to container fields within the block-item model.
+4. **Static Content**: Hardcoded video attributes like `playsinline` and `muted` in the JS transformation to reduce authoring burden.
+5. **Third-Party Integration**: Detected the use of Slick carousel based on class names and structure. Integrated Slick via dynamic asset loading in the JS file.
+6. **Responsive Design**: Ensured that both desktop and mobile sections are handled separately with appropriate breakpoints in the CSS.
+7. **Accessibility**: Included proper ARIA attributes for carousel navigation buttons to enhance accessibility.
+8. **Performance**: Used `intersectionObserver` for lazy loading of videos to improve initial page load performance.
+9. **Animation**: Added subtle hover effects and transition animations for enhanced user experience.
+10. **Modern CSS**: Utilized CSS Grid for layout, custom properties for theming, and modern typography techniques.
 
-2. **Field Planning**:
-   - **Heading**: A rich text field for the heading that includes a span for styling.
-   - **Videos**: Separate reference fields for desktop and mobile videos, each with alt text.
-   - **Descriptions**: Rich text fields for video descriptions, repeated for each video.
+## Markdown Table Representation
 
-3. **block.json Structure**:
-   - Used container fields to group desktop and mobile videos for better organization.
-   - Each video has a reference field for the video asset and a text field for the alt text.
-   - Descriptions are modeled as rich text fields.
+| Short Product Video                |
+|------------------------------------|
+| Desktop Heading                   |
+| Desktop Video 1                   |
+| Desktop Video 2                   |
+| Desktop Video 3                   |
+| Desktop Video 4                   |
+| Desktop Video 5                   |
+| Desktop Video 6                   |
+| Desktop Video 7                   |
+| Mobile Heading                    |
+| Mobile Video 1                    |
+| Mobile Video 2                    |
+| Mobile Video 3                    |
+| Mobile Video 4                    |
+| Mobile Video 5                    |
+| Mobile Video 6                    |
+| Mobile Video 7                    |
 
-4. **JS Transformation**:
-   - Restructured the DOM to separate desktop and mobile sections.
-   - Used Slick Carousel for the carousel functionality.
-   - Handled video and description mapping carefully to maintain the correct order.
+## Video Structure
 
-5. **CSS Styling**:
-   - Mobile-first approach with responsive breakpoints.
-   - Modern design with hover effects and shadow animations.
-   - Utilized CSS Grid and Flexbox for layout.
+Each video is represented by:
+- **Video Source**: A direct link to the MP4 video file.
+- **Video Text**: A richtext field that supports basic HTML formatting.
 
-📄 Markdown Table:
+## Responsive Behavior
 
-+-------------------------------------------------------------+
-| Short Product Video                                          |
-+=============================================================+
-| <p>A SCOOTER THAT <span class="ride">LEAVES EVERYONE        |
-| BEHIND</span></p>                                            |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/web/feature-web-1. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Smart Key                                                   |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/mob/feature-mob-1. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Smart Key                                                   |
-+-------------------------------------------------------------+
-| <p>Smart Key</p>                                             |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/web/feature-web-2. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Liquid Cooled Engine + i3s Silent                           |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/mob/feature-mob-2. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Liquid Cooled Engine + i3s Silent                           |
-+-------------------------------------------------------------+
-| <p>Liquid Cooled Engine + i3s Silent</p>                    |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/web/feature-web-3. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Digital Speedometer - TBT Navigation                         |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/mob/feature-mob-3. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Digital Speedometer - TBT Navigation                         |
-+-------------------------------------------------------------+
-| <p>Digital Speedometer - TBT Navigation</p>                 |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/web/feature-web-4. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| 14 inch Large Wheels - Block Pattern Tyres                  |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/mob/feature-mob-4. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| 14 inch Large Wheels - Block Pattern Tyres                  |
-+-------------------------------------------------------------+
-| <p>14 inch Large Wheels - Block Pattern Tyres</p>          |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/web/feature-web-5. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Twin Rear Suspensions                                       |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/mob/feature-mob-5. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Twin Rear Suspensions                                       |
-+-------------------------------------------------------------+
-| <p>Twin Rear Suspensions</p>                                |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/web/feature-web-6. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Dual Chamber LED Headlamp                                   |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/mob/feature-mob-6. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Dual Chamber LED Headlamp                                   |
-+-------------------------------------------------------------+
-| <p>Dual Chamber LED Headlamp</p>                           |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/web/feature-web-7. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Longer Visor & Touring Box (Accessories)                   |
-+-------------------------------------------------------------+
-| /content/dam/hero-commerce/in/en/products/scooters/          |
-| content-fragments/xoom-160/assets/shorts/mob/feature-mob-7. |
-| mp4                                                         |
-+-------------------------------------------------------------+
-| Longer Visor & Touring Box (Accessories)                   |
-+-------------------------------------------------------------+
-| <p>Longer Visor & Touring Box (Accessories)</p>           |
-+-------------------------------------------------------------+
+- **Desktop**: Shows 3 videos per slide with navigation arrows.
+- **Mobile**: Shows 1 video per slide with simplified navigation.
+- **Breakpoint**: 768px switches from desktop to mobile layout.
+
+## Performance Optimizations
+
+- **Lazy Loading**: Videos load only when they enter the viewport.
+- **IntersectionObserver**: Efficiently handles video loading with minimal performance impact.
     
