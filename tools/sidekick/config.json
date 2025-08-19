@@ -11,12 +11,9 @@
       "event": "accessibility-mode"
     },
     {
-      "id": "asset-library",
-      "title": "My Assets",
-      "environments": [ "preview", "live", "edit" ],
-      "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html?rail=false",
-      "isPalette": true,
-      "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:800px; height: calc(100vh - 60px)"
-    }    
+      "id": "library",
+      "title": "Library",
+      "url": "https://main--internal-aem-eds-poc-en--tekno-point.aem.live/tools/library.html"
+    }
   ]
 }
