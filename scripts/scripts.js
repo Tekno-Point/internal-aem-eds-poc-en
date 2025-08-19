@@ -13,6 +13,26 @@ import {
   toClassName,
 } from './aem.js';
 
+const experimentationIndex = '../plugins/experimentation/src/index.js';
+const experimentationConfig = {
+  prodHost: 'www.my-site.com',
+  audiences: {
+    mobile: () => window.innerWidth < 600,
+    desktop: () => window.innerWidth >= 600,
+    // define your custom audiences here as needed
+  },
+};
+
+let runExperimentation;
+let showExperimentationOverlay;
+const isExperimentationEnabled = document.head.querySelector('[name^="experiment"],[name^="campaign-"],[name^="audience-"],[property^="campaign:"],[property^="audience:"]')
+  || [...document.querySelectorAll('.section-metadata div')].some((d) => d.textContent.match(/Experiment|Campaign|Audience/i));
+if (isExperimentationEnabled) {
+  ({
+    loadEager: runExperimentation,
+    loadLazy: showExperimentationOverlay,
+  } = await import(experimentationIndex));
+}
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
@@ -37,6 +57,7 @@ export function moveAttributes(from, to, attributes) {
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
  */
+
 export function moveInstrumentation(from, to) {
   moveAttributes(
     from,
@@ -46,7 +67,45 @@ export function moveInstrumentation(from, to) {
       .filter((attr) => attr.startsWith('data-aue-') || attr.startsWith('data-richtext-')),
   );
 }
+/**
+ * Creates an element with the given tag name and properties.
+ * @param {string} tagName The tag name of the element to create.
+ * @param {object} props The properties to set on the element.
+ * @param {string|Element|Array} html The HTML content to append to the element.
+ * @returns {HTMLElement} The created element.
+ */
+export function createElement(tagName, props, html) {
+  const elem = document.createElement(tagName);
+  if (props) {
+    Object.keys(props).forEach((propName) => {
+      const val = props[propName];
+      if (propName === 'class') {
+        const classesArr = (typeof val === 'string') ? [val] : val;
+        elem.classList.add(...classesArr);
+      } else {
+        elem.setAttribute(propName, val);
+      }
+    });
+  }
 
+  if (html) {
+    const appendEl = (el) => {
+      if (el instanceof HTMLElement || el instanceof SVGElement) {
+        elem.append(el);
+      } else {
+        elem.insertAdjacentHTML('beforeend', el);
+      }
+    };
+
+    if (Array.isArray(html)) {
+      html.forEach(appendEl);
+    } else {
+      appendEl(html);
+    }
+  }
+
+  return elem;
+}
 /**
  * load fonts.css and set a session storage flag
  */
@@ -56,6 +115,225 @@ async function loadFonts() {
     if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
   } catch (e) {
     // do nothing
+  }
+}
+
+/*
+ * Embed Block
+ * Show videos and social posts directly on your page
+ * https://www.hlx.live/developer/block-collection/embed
+ */
+
+const loadScript = (url, callback, type) => {
+  const head = document.querySelector('head');
+  const script = document.createElement('script');
+  script.src = url;
+  if (type) {
+    script.setAttribute('type', type);
+  }
+  script.onload = callback;
+  head.append(script);
+  return script;
+};
+
+//const getDefaultEmbed = (url) => `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+//<iframe src="${url.href}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen=""
+//       scrolling="no" allow="encrypted-media" title="Content from ${url.hostname}" loading="lazy">
+//     </iframe>
+//   </div>`;
+
+const getDefaultEmbed = (url) => {
+  const embedHTML = `<iframe src="${url.href}" 
+    style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
+    allowfullscreen="" scrolling="no" allow="encrypted-media" 
+    title="Content from ${url.hostname}" loading="lazy">
+  </iframe>`;
+  return embedHTML;
+};
+
+// const embedYoutube = (url, autoplay) => {
+//   const usp = new URLSearchParams(url.search);
+//   const suffix = autoplay ? '&muted=1&autoplay=1' : '';
+//   let vid = usp.get('v') ? encodeURIComponent(usp.get('v')) : '';
+//   const embed = url.pathname;
+//   if (url.origin.includes('youtu.be')) {
+//     [, vid] = url.pathname.split('/');
+// }
+//   const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+//       <iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
+//       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>
+//     </div>`;
+//   return embedHTML;
+// };
+
+const embedYoutube = (url, autoplay) => {
+  const usp = new URLSearchParams(url.search);
+  const suffix = autoplay ? '&muted=1&autoplay=1' : '';
+  let vid = usp.get('v') ? encodeURIComponent(usp.get('v')) : '';
+  const embed = url.pathname;
+  if (url.origin.includes('youtu.be')) {
+    [, vid] = url.pathname.split('/');
+  }
+  // The wrapper div has been removed. Styles are added directly to the iframe.
+  const embedHTML = `<iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" 
+    style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute; object-fit: cover;" 
+    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" 
+    allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>`;
+  return embedHTML;
+};
+
+// const embedVimeo = (url, autoplay) => {
+//   const [, video] = url.pathname.split('/');
+//   const suffix = autoplay ? '?muted=1&autoplay=1' : '';
+//   const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+//       <iframe src="https://player.vimeo.com/video/${video}${suffix}" 
+//       style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
+//       frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  
+//       title="Content from Vimeo" loading="lazy"></iframe>
+//     </div>`;
+//   return embedHTML;
+// };
+
+const embedVimeo = (url, autoplay) => {
+  const [, video] = url.pathname.split('/');
+  const suffix = autoplay ? '?muted=1&autoplay=1' : '';
+  // Returns only the iframe, styled to fill its container
+  const embedHTML = `<iframe src="https://player.vimeo.com/video/${video}${suffix}" 
+    style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
+    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+    title="Content from Vimeo" loading="lazy"></iframe>`;
+  return embedHTML;
+};
+
+const embedTwitter = (url) => {
+  const embedHTML = `<blockquote class="twitter-tweet"><a href="${url.href}"></a></blockquote>`;
+  loadScript('https://platform.twitter.com/widgets.js');
+  return embedHTML;
+};
+
+const embedInstagram = (url) => {
+  const embedHTML = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="${url.href}" data-instgrm-version="14"></blockquote>`;
+  loadScript('https://www.instagram.com/embed.js', () => {
+    if (window.instgrm && window.instgrm.Embeds) {
+      window.instgrm.Embeds.process();
+    }
+  });
+  return embedHTML;
+};
+
+const loadEmbed = (block, link, autoplay) => {
+  if (block.classList.contains('embed-is-loaded')) {
+    return;
+  }
+
+  const EMBEDS_CONFIG = [
+    {
+      match: ['youtube', 'youtu.be'],
+      embed: embedYoutube,
+    },
+    {
+      match: ['vimeo'],
+      embed: embedVimeo,
+    },
+    {
+      match: ['twitter'],
+      embed: embedTwitter,
+    },
+    {
+      match: ['instagram'],
+      embed: embedInstagram,
+    },
+  ];
+
+  const config = EMBEDS_CONFIG.find((e) => e.match.some((match) => link.includes(match)));
+  const url = new URL(link);
+  if (config) {
+    block.innerHTML = config.embed(url, autoplay);
+    block.classList = `block embed embed-${config.match[0]}`;
+  } else {
+    block.innerHTML = getDefaultEmbed(url);
+    block.classList = 'block embed';
+  }
+  block.classList.add('embed-is-loaded');
+};
+
+// export default function decorateEmbed(block) {
+//   const placeholder = block.querySelector('picture') || block.previousElementSibling?.querySelector('picture');
+//   const link = block.querySelector('a').href;
+//   block.textContent = '';
+
+//   if (placeholder) {
+//     const wrapper = document.createElement('div');
+//     wrapper.className = 'embed-placeholder';
+//     wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
+//     wrapper.prepend(placeholder);
+//     wrapper.addEventListener('click', () => {
+//       loadEmbed(block, link, true);
+//     });
+//     block.append(wrapper);
+//   } else {
+//     const observer = new IntersectionObserver((entries) => {
+//       if (entries.some((e) => e.isIntersecting)) {
+//         observer.disconnect();
+//         loadEmbed(block, link);
+//       }
+//     });
+//     observer.observe(block);
+//   }
+// }
+/**
+ * Checks if an element is visible in the initial viewport.
+ * @param {Element} el The element to check.
+ * @returns {boolean} True if the element is above the fold.
+ */
+function isAboveTheFold(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top >= 0 && rect.top <= window.innerHeight;
+}
+
+export default function decorateEmbed(block) {
+  const placeholder = block.querySelector('picture') || block.previousElementSibling?.querySelector('picture');
+  const link = block.querySelector('a').href;
+  block.textContent = '';
+
+  // --- CLS FIX ---
+  // Apply styles directly to the block to reserve its space.
+  // This prevents the layout from shifting when the embed loads.
+  block.style.position = 'relative';
+  block.style.width = '100%';
+  block.style.height = '0';
+  block.style.paddingBottom = '56.25%'; // 16:9 aspect ratio
+
+  // --- LCP FIX ---
+  // Decide how to load the embed based on its position on the page.
+  if (isAboveTheFold(block)) {
+    // Eager load: The block is visible on page load, so load the embed immediately.
+    loadEmbed(block, link, false);
+  } else if (placeholder) {
+    // Click-to-load: The block is below the fold and has a placeholder image.
+    const wrapper = document.createElement('div');
+    wrapper.className = 'embed-placeholder'; // You may need to style this class
+    wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
+    wrapper.style.position = 'absolute';
+    wrapper.style.top = '0';
+    wrapper.style.left = '0';
+    wrapper.style.width = '100%';
+    wrapper.style.height = '100%';
+    wrapper.style.cursor = 'pointer';
+    wrapper.prepend(placeholder);
+    wrapper.addEventListener('click', () => {
+      loadEmbed(block, link, true);
+    });
+    block.append(wrapper);
+  } else {
+    // Lazy-load: The block is below the fold with no placeholder, use IntersectionObserver.
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        observer.disconnect();
+        loadEmbed(block, link);
+      }
+    });
+    observer.observe(block);
   }
 }
 
@@ -455,8 +733,16 @@ function loadAutoBlock(doc) {
   doc.querySelectorAll('a').forEach((a) => {
     if (a && a.href && a.href.includes('/fragments/')) {
       decorateFragment(a.parentElement);
+    } else if (a && a.href && a.href.includes('.youtube.')) {
+      decorateEmbed(a.parentElement);
+    } else if (a && a.href && a.href.includes('x.com')) {
+      decorateEmbed(a.parentElement);
+    } else if (a && a.href && a.href.includes('vimeo.com')) {
+      decorateEmbed(a.parentElement);
     } else if (a && a.href && a.href.includes('/forms/')) {
       decorateForm(a.parentElement);
+    } else if (a && a.href && a.href.includes('instagram.com')) {
+      decorateEmbed(a.parentElement);
     }
   });
 }
@@ -496,6 +782,9 @@ async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
+  if (runExperimentation) {
+    await runExperimentation(document, experimentationConfig);
+  }
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
@@ -531,6 +820,9 @@ async function loadLazy(doc) {
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
   loadAutoBlock(doc);
+  if (showExperimentationOverlay) {
+    await showExperimentationOverlay(document, experimentationConfig);
+  }
 }
 
 /**
