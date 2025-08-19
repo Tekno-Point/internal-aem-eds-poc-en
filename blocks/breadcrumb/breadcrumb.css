@@ -1,0 +1,91 @@
+/* breadcrumb in body */
+.section.breadcrumb-container {
+    font-size: var(--body-font-size-xs);
+    margin: 0;
+}
+.breadcrumb-container >.breadcrumb-wrapper{
+    padding: 60px 0 0 0;
+    max-width: 1280px;
+    margin: auto;
+}
+.breadcrumb-container .breadcrumb {
+    display: block;
+    width: 100%;
+    height: var(--breadcrumb-height);
+    overflow: hidden;
+}
+.breadcrumb-container .breadcrumb ol {
+    display: flex;
+    flex-flow: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    gap: 1ch;
+}
+.breadcrumb-container .breadcrumb ol li {
+    padding: 0;
+    color: var(--dark-color);
+}
+.breadcrumb-container .breadcrumb ol li:not(:last-child)::after {
+    content: "/";
+    padding-left: 1ch;
+}
+.breadcrumb-container .breadcrumb ol li[aria-current] {
+    color: var(--text-color);
+}
+/* @media (width >= 900px) {
+    .breadcrumb-container {
+        max-width: 1264px;
+        padding: 0 32px;
+    }
+} */
+/* Hide old header breadcrumb if present */
+header .breadcrumb {
+    display: none !important;
+}
+.breadcrumb > .container-fluid > ul {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    list-style: none;
+}
+.breadcrumb > .container-fluid > ul > .active {
+    color: black;
+    font-family: "OpenSans-Regular";
+    font-size: 0.875rem;
+}
+.breadcrumb > .container-fluid > ul > li > a {
+    color: #034ea2;
+}
+.breadcrumb > .container-fluid > ul > li {
+    color: #034ea2;
+    font-family: "OpenSans-Regular";
+}
+.breadcrumb > .container-fluid > ul > li > a {
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+.breadcrumb > .container-fluid > ul > li::marker {
+    font-size: 10px;
+}
+.breadcrumb > .container-fluid > ul > li:nth-child(1) {
+    list-style: none;
+}
+@media (max-width: 768px) {
+    .breadcrumb-container >.breadcrumb-wrapper {
+        padding: 0px 4px;
+    }
+    .breadcrumb-container>.breadcrumb-wrapper>.breadcrumb>.container-fluid ul{
+        overflow-x: scroll;
+        white-space: nowrap;
+        width: 100%;
+    }
+}
+
+
+
+
+
+

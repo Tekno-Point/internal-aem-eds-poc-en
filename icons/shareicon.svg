@@ -1,0 +1,9 @@
+<div class="tag-share-row">
+  <span class="tag">Accounts</span>
+  <a href="#" class="share">
+    <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.5 1a2.5 2.5 0 1 1-2.45 3.02l-5.02 2.5a2.5 2.5 0 0 1 0 2.96l5.02 2.5a2.5 2.5 0 1 1-.48.88l-5.02-2.5a2.5 2.5 0 1 1 0-4.72l5.02-2.5A2.5 2.5 0 0 1 13.5 1z"/>
+    </svg>
+    Share
+  </a>
+</div>
