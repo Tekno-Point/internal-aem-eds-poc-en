@@ -1,5 +1,5 @@
 
-import { moveInstrumentation } from '../../scripts/aem.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
@@ -22,7 +22,7 @@ export default function decorate(block) {
   const bottomSpecsWrap = document.createElement('div');
   bottomSpecsWrap.className = 'bottom-specs-wrap d-flex';
 
-  const leftSectionCards = block.children[0].children[2].querySelectorAll('li');
+  const leftSectionCards = block.children[3].querySelectorAll('li');
   leftSectionCards.forEach((card) => {
     const uniqueBoxes = document.createElement('div');
     uniqueBoxes.className = 'unique-boxes d-flex animate third fadeInUpStand';
@@ -56,13 +56,13 @@ export default function decorate(block) {
 
   const textStandout = document.createElement('div');
   textStandout.className = 'text-standout';
-  textStandout.innerHTML = block.children[1].children[0].innerHTML;
+  textStandout.innerHTML = block.children[4].innerHTML;
   centerUpperDiv.appendChild(textStandout);
 
   const imgStandout = document.createElement('div');
   imgStandout.className = 'img-standout';
   const img = document.createElement('img');
-  img.src = block.children[1].children[1].querySelector('img').src;
+  img.src = block.children[5].querySelector('img').src;
   img.loading = 'lazy';
   img.className = 'animate first enhanceImg';
   imgStandout.appendChild(img);
@@ -71,7 +71,7 @@ export default function decorate(block) {
   const imgMobStandout = document.createElement('div');
   imgMobStandout.className = 'img-mob-standout';
   const mobImg = document.createElement('img');
-  mobImg.src = block.children[1].children[2].querySelector('img').src;
+  mobImg.src = block.children[6].querySelector('img').src;
   mobImg.loading = 'lazy';
   mobImg.className = 'animate first enhanceImg';
   imgMobStandout.appendChild(mobImg);
@@ -85,11 +85,11 @@ export default function decorate(block) {
 
   const rightTextWrap = document.createElement('div');
   rightTextWrap.className = 'right-text-wrap';
-  rightTextWrap.innerHTML = block.children[2].children[0].innerHTML;
+  rightTextWrap.innerHTML = block.children[7].innerHTML;
   rightUpperDiv.appendChild(rightTextWrap);
 
   const bottomMobImg = document.createElement('img');
-  bottomMobImg.src = block.children[2].children[1].querySelector('img').src;
+  bottomMobImg.src = block.children[8].querySelector('img').src;
   bottomMobImg.loading = 'lazy';
   bottomMobImg.className = 'bottom-mob-img-wrap animate third fadeInRight';
   rightUpperDiv.appendChild(bottomMobImg);
@@ -97,7 +97,7 @@ export default function decorate(block) {
   const rightDescWrap = document.createElement('div');
   rightDescWrap.className = 'd-flex right-desc-wrap animate fifth fadeInUpStand';
 
-  const rightSectionCards = block.children[2].children[3].querySelectorAll('li');
+  const rightSectionCards = block.children[9].querySelectorAll('li');
   rightSectionCards.forEach((card) => {
     const descInfo = document.createElement('div');
     descInfo.className = 'desc-info lower-width';
@@ -119,7 +119,7 @@ export default function decorate(block) {
   rightUpperDiv.appendChild(rightDescWrap);
 
   const bottomImg = document.createElement('img');
-  bottomImg.src = block.children[2].children[1].querySelector('img').src;
+  bottomImg.src = block.children[10].querySelector('img').src;
   bottomImg.loading = 'lazy';
   bottomImg.className = 'bottom-img-wrap animate third fadeInRight';
   rightUpperDiv.appendChild(bottomImg);
@@ -132,13 +132,13 @@ export default function decorate(block) {
 
   const leftLowerTextWrap = document.createElement('div');
   leftLowerTextWrap.className = 'left-text-wrap';
-  leftLowerTextWrap.innerHTML = block.children[3].children[0].innerHTML;
+  leftLowerTextWrap.innerHTML = block.children[11].innerHTML;
   leftLowerDiv.appendChild(leftLowerTextWrap);
 
   const leftDescWrap = document.createElement('div');
   leftDescWrap.className = 'd-flex left-desc-wrap animate fifth fadeInUpStand';
 
-  const leftSectionBottomCards = block.children[3].children[3].querySelectorAll('li');
+  const leftSectionBottomCards = block.children[12].querySelectorAll('li');
   leftSectionBottomCards.forEach((card) => {
     const descInfo = document.createElement('div');
     descInfo.className = 'desc-info lower-width';
@@ -160,13 +160,13 @@ export default function decorate(block) {
   leftLowerDiv.appendChild(leftDescWrap);
 
   const leftMobImg = document.createElement('img');
-  leftMobImg.src = block.children[3].children[1].querySelector('img').src;
+  leftMobImg.src = block.children[13].querySelector('img').src;
   leftMobImg.loading = 'lazy';
   leftMobImg.className = 'img-mob-wrap-animation animate fifth fadeInRightAlt';
   leftLowerDiv.appendChild(leftMobImg);
 
   const leftImg = document.createElement('img');
-  leftImg.src = block.children[3].children[2].querySelector('img').src;
+  leftImg.src = block.children[14].querySelector('img').src;
   leftImg.loading = 'lazy';
   leftImg.className = 'img-wrap-animation animate fifth fadeInRightAlt';
   leftLowerDiv.appendChild(leftImg);
@@ -185,7 +185,7 @@ export default function decorate(block) {
   const rightDescWrapBottom = document.createElement('div');
   rightDescWrapBottom.className = 'd-flex left-desc-wrap animate fifth fadeInUpStand';
 
-  const rightSectionBottomCards = block.children[4].children[3].querySelectorAll('li');
+  const rightSectionBottomCards = block.children[15].querySelectorAll('li');
   rightSectionBottomCards.forEach((card) => {
     const descInfo = document.createElement('div');
     descInfo.className = 'desc-info lower-width';
@@ -207,13 +207,13 @@ export default function decorate(block) {
   rightLowerDiv.appendChild(rightDescWrapBottom);
 
   const rightMobImg = document.createElement('img');
-  rightMobImg.src = block.children[4].children[1].querySelector('img').src;
+  rightMobImg.src = block.children[16].querySelector('img').src;
   rightMobImg.loading = 'lazy';
   rightMobImg.className = 'img-mob-wrap-animation animate fifth fadeInRightAlt';
   rightLowerDiv.appendChild(rightMobImg);
 
   const rightImg = document.createElement('img');
-  rightImg.src = block.children[4].children[2].querySelector('img').src;
+  rightImg.src = block.children[17].querySelector('img').src;
   rightImg.loading = 'lazy';
   rightImg.className = 'img-wrap-animation animate fifth fadeInRightAlt';
   rightLowerDiv.appendChild(rightImg);
