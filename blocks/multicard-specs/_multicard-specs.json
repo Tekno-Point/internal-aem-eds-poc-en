@@ -1,4 +1,3 @@
-
 {
   "definitions": [
     {
@@ -10,7 +9,22 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Multicard Specs",
-              "model": "multicard-specs"
+              "filter": "multicard-specs"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Multicard Specs Item",
+      "id": "multicard-specs-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Multicard Specs Item",
+              "model": "multicard-specs-item"
             }
           }
         }
@@ -31,7 +45,6 @@
             {
               "component": "richtext",
               "name": "leftSectionText",
-              "value": "",
               "label": "Left Section Text",
               "valueType": "string"
             },
@@ -59,7 +72,6 @@
                     {
                       "component": "richtext",
                       "name": "leftSectionCard1Text",
-                      "value": "",
                       "label": "Left Section Card 1 Text",
                       "valueType": "string"
                     }
@@ -82,7 +94,6 @@
                     {
                       "component": "richtext",
                       "name": "leftSectionCard2Text",
-                      "value": "",
                       "label": "Left Section Card 2 Text",
                       "valueType": "string"
                     }
@@ -102,7 +113,6 @@
             {
               "component": "richtext",
               "name": "centerSectionText",
-              "value": "",
               "label": "Center Section Text",
               "valueType": "string"
             },
@@ -132,7 +142,6 @@
             {
               "component": "richtext",
               "name": "rightSectionText",
-              "value": "",
               "label": "Right Section Text",
               "valueType": "string"
             },
@@ -167,7 +176,6 @@
                     {
                       "component": "richtext",
                       "name": "rightSectionCard1Text",
-                      "value": "",
                       "label": "Right Section Card 1 Text",
                       "valueType": "string"
                     }
@@ -186,177 +194,204 @@
         },
         {
           "component": "container",
-          "label": "Lower Left Section",
-          "name": "lowerLeftSection",
+          "label": "Bottom Section",
+          "name": "bottomSection",
           "valueType": "string",
           "collapsible": true,
           "fields": [
             {
-              "component": "richtext",
-              "name": "lowerLeftSectionText",
-              "value": "",
-              "label": "Lower Left Section Text",
-              "valueType": "string"
-            },
-            {
               "component": "container",
-              "label": "Lower Left Section Cards",
-              "name": "lowerLeftSectionCards",
+              "label": "Bottom Section Left",
+              "name": "bottomSectionLeft",
               "valueType": "string",
               "collapsible": true,
               "fields": [
                 {
+                  "component": "richtext",
+                  "name": "bottomSectionLeftText",
+                  "label": "Bottom Section Left Text",
+                  "valueType": "string"
+                },
+                {
                   "component": "container",
-                  "label": "Lower Left Section Card 1",
-                  "name": "lowerLeftSectionCard1",
+                  "label": "Bottom Section Left Cards",
+                  "name": "bottomSectionLeftCards",
                   "valueType": "string",
                   "collapsible": true,
                   "fields": [
                     {
-                      "component": "reference",
+                      "component": "container",
+                      "label": "Bottom Section Left Card 1",
+                      "name": "bottomSectionLeftCard1",
                       "valueType": "string",
-                      "name": "lowerLeftSectionCard1Image",
-                      "label": "Lower Left Section Card 1 Image",
-                      "multi": false
+                      "collapsible": true,
+                      "fields": [
+                        {
+                          "component": "reference",
+                          "valueType": "string",
+                          "name": "bottomSectionLeftCard1Image",
+                          "label": "Bottom Section Left Card 1 Image",
+                          "multi": false
+                        },
+                        {
+                          "component": "richtext",
+                          "name": "bottomSectionLeftCard1Text",
+                          "label": "Bottom Section Left Card 1 Text",
+                          "valueType": "string"
+                        }
+                      ]
                     },
                     {
-                      "component": "richtext",
-                      "name": "lowerLeftSectionCard1Text",
-                      "value": "",
-                      "label": "Lower Left Section Card 1 Text",
-                      "valueType": "string"
+                      "component": "container",
+                      "label": "Bottom Section Left Card 2",
+                      "name": "bottomSectionLeftCard2",
+                      "valueType": "string",
+                      "collapsible": true,
+                      "fields": [
+                        {
+                          "component": "reference",
+                          "valueType": "string",
+                          "name": "bottomSectionLeftCard2Image",
+                          "label": "Bottom Section Left Card 2 Image",
+                          "multi": false
+                        },
+                        {
+                          "component": "richtext",
+                          "name": "bottomSectionLeftCard2Text",
+                          "label": "Bottom Section Left Card 2 Text",
+                          "valueType": "string"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "component": "container",
-                  "label": "Lower Left Section Card 2",
-                  "name": "lowerLeftSectionCard2",
+                  "component": "reference",
                   "valueType": "string",
-                  "collapsible": true,
-                  "fields": [
-                    {
-                      "component": "reference",
-                      "valueType": "string",
-                      "name": "lowerLeftSectionCard2Image",
-                      "label": "Lower Left Section Card 2 Image",
-                      "multi": false
-                    },
-                    {
-                      "component": "richtext",
-                      "name": "lowerLeftSectionCard2Text",
-                      "value": "",
-                      "label": "Lower Left Section Card 2 Text",
-                      "valueType": "string"
-                    }
-                  ]
+                  "name": "bottomSectionLeftMobileImage",
+                  "label": "Bottom Section Left Mobile Image",
+                  "multi": false
+                },
+                {
+                  "component": "reference",
+                  "valueType": "string",
+                  "name": "bottomSectionLeftImage",
+                  "label": "Bottom Section Left Image",
+                  "multi": false
                 }
               ]
             },
             {
-              "component": "reference",
-              "valueType": "string",
-              "name": "lowerLeftSectionMobileImage",
-              "label": "Lower Left Section Mobile Image",
-              "multi": false
-            },
-            {
-              "component": "reference",
-              "valueType": "string",
-              "name": "lowerLeftSectionImage",
-              "label": "Lower Left Section Image",
-              "multi": false
-            }
-          ]
-        },
-        {
-          "component": "container",
-          "label": "Lower Right Section",
-          "name": "lowerRightSection",
-          "valueType": "string",
-          "collapsible": true,
-          "fields": [
-            {
-              "component": "richtext",
-              "name": "lowerRightSectionText",
-              "value": "",
-              "label": "Lower Right Section Text",
-              "valueType": "string"
-            },
-            {
               "component": "container",
-              "label": "Lower Right Section Cards",
-              "name": "lowerRightSectionCards",
+              "label": "Bottom Section Right",
+              "name": "bottomSectionRight",
               "valueType": "string",
               "collapsible": true,
               "fields": [
                 {
+                  "component": "richtext",
+                  "name": "bottomSectionRightText",
+                  "label": "Bottom Section Right Text",
+                  "valueType": "string"
+                },
+                {
                   "component": "container",
-                  "label": "Lower Right Section Card 1",
-                  "name": "lowerRightSectionCard1",
+                  "label": "Bottom Section Right Cards",
+                  "name": "bottomSectionRightCards",
                   "valueType": "string",
                   "collapsible": true,
                   "fields": [
                     {
-                      "component": "reference",
+                      "component": "container",
+                      "label": "Bottom Section Right Card 1",
+                      "name": "bottomSectionRightCard1",
                       "valueType": "string",
-                      "name": "lowerRightSectionCard1Image",
-                      "label": "Lower Right Section Card 1 Image",
-                      "multi": false
+                      "collapsible": true,
+                      "fields": [
+                        {
+                          "component": "reference",
+                          "valueType": "string",
+                          "name": "bottomSectionRightCard1Image",
+                          "label": "Bottom Section Right Card 1 Image",
+                          "multi": false
+                        },
+                        {
+                          "component": "richtext",
+                          "name": "bottomSectionRightCard1Text",
+                          "label": "Bottom Section Right Card 1 Text",
+                          "valueType": "string"
+                        }
+                      ]
                     },
                     {
-                      "component": "richtext",
-                      "name": "lowerRightSectionCard1Text",
-                      "value": "",
-                      "label": "Lower Right Section Card 1 Text",
-                      "valueType": "string"
+                      "component": "container",
+                      "label": "Bottom Section Right Card 2",
+                      "name": "bottomSectionRightCard2",
+                      "valueType": "string",
+                      "collapsible": true,
+                      "fields": [
+                        {
+                          "component": "reference",
+                          "valueType": "string",
+                          "name": "bottomSectionRightCard2Image",
+                          "label": "Bottom Section Right Card 2 Image",
+                          "multi": false
+                        },
+                        {
+                          "component": "richtext",
+                          "name": "bottomSectionRightCard2Text",
+                          "label": "Bottom Section Right Card 2 Text",
+                          "valueType": "string"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "component": "container",
-                  "label": "Lower Right Section Card 2",
-                  "name": "lowerRightSectionCard2",
+                  "component": "reference",
                   "valueType": "string",
-                  "collapsible": true,
-                  "fields": [
-                    {
-                      "component": "reference",
-                      "valueType": "string",
-                      "name": "lowerRightSectionCard2Image",
-                      "label": "Lower Right Section Card 2 Image",
-                      "multi": false
-                    },
-                    {
-                      "component": "richtext",
-                      "name": "lowerRightSectionCard2Text",
-                      "value": "",
-                      "label": "Lower Right Section Card 2 Text",
-                      "valueType": "string"
-                    }
-                  ]
+                  "name": "bottomSectionRightMobileImage",
+                  "label": "Bottom Section Right Mobile Image",
+                  "multi": false
+                },
+                {
+                  "component": "reference",
+                  "valueType": "string",
+                  "name": "bottomSectionRightImage",
+                  "label": "Bottom Section Right Image",
+                  "multi": false
                 }
               ]
-            },
-            {
-              "component": "reference",
-              "valueType": "string",
-              "name": "lowerRightSectionMobileImage",
-              "label": "Lower Right Section Mobile Image",
-              "multi": false
-            },
-            {
-              "component": "reference",
-              "valueType": "string",
-              "name": "lowerRightSectionImage",
-              "label": "Lower Right Section Image",
-              "multi": false
             }
           ]
         }
       ]
+    },
+    {
+      "id": "multicard-specs-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "label": "Text",
+          "valueType": "string"
+        }
+      ]
     }
   ],
-  "filters": []
+  "filters": [
+    {
+      "id": "multicard-specs",
+      "components": [
+        "multicard-specs-item"
+      ]
+    }
+  ]
 }
-    
