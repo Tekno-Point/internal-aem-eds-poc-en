@@ -15,9 +15,7 @@
       "hero",
       "cards",
       "columns",
-      "fragment",
-      "multicard-specs",
-      "short-product-video"
+      "fragment"
     ]
   },
   {
@@ -49,9 +47,9 @@
     ]
   },
   {
-    "id": "short-video-product",
+    "id": "short-product-video",
     "components": [
-      "short-video-product-item"
+      "short-product-video-item"
     ]
   },
   {
