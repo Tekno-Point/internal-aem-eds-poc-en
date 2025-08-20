@@ -18,97 +18,89 @@ async function loadSlickAssets() {
 
 export default async function decorate(block) {
   // 1. Restructure the DOM
-  const wrapper = document.createElement('div');
-  wrapper.classList.add('product-event-shorts');
+  const children = Array.from(block.children);
 
-  const heading = block.querySelector('div:nth-child(1) > div > div');
-  const subHeading = block.querySelector('div:nth-child(2) > div > div');
+  // Extract headers
+  const deskCarHeader = children[0].querySelector('div:nth-child(1)');
+  const mobCarHeader = children[1].querySelector('div:nth-child(1)');
 
-  const headingWrapper = document.createElement('div');
-  headingWrapper.classList.add('f-header');
-  headingWrapper.appendChild(heading);
+  // Create desk-car and mob-car containers
+  const deskCarContainer = document.createElement('div');
+  deskCarContainer.className = 'desk-car';
+  const mobCarContainer = document.createElement('div');
+  mobCarContainer.className = 'mob-car';
 
-  const subHeadingWrapper = document.createElement('div');
-  subHeadingWrapper.classList.add('m-header');
-  subHeadingWrapper.appendChild(subHeading);
+  // Create slick containers
+  const deskSlickContainer = document.createElement('div');
+  deskSlickContainer.className = 'product-event-shorts';
+  const mobSlickContainer = document.createElement('div');
+  mobSlickContainer.className = 'product-event-shorts';
 
-  const deskCar = document.createElement('div');
-  deskCar.classList.add('desk-car');
-  deskCar.appendChild(headingWrapper);
+  // Move headers
+  deskCarContainer.appendChild(deskCarHeader);
+  mobCarContainer.appendChild(mobCarHeader);
 
-  const mobCar = document.createElement('div');
-  mobCar.classList.add('mob-car');
-  mobCar.appendChild(subHeadingWrapper);
+  // Move slick items
+  children.slice(2).forEach((child, index) => {
+    const deskVideo = child.querySelector('div:nth-child(1)');
+    const mobVideo = child.querySelector('div:nth-child(2)');
 
-  const slickWrapper = document.createElement('div');
-  slickWrapper.classList.add('slick-list');
-  slickWrapper.innerHTML = '<div class="slick-track"></div>';
+    // Create slick slide structure
+    const deskSlickSlide = document.createElement('div');
+    deskSlickSlide.className = 'evts-slider';
+    deskSlickSlide.style.width = '100%';
+    deskSlickSlide.style.display = 'inline-block';
 
-  const slickTrack = slickWrapper.querySelector('.slick-track');
+    const mobSlickSlide = document.createElement('div');
+    mobSlickSlide.className = 'evts-slider';
+    mobSlickSlide.style.width = '100%';
+    mobSlickSlide.style.display = 'inline-block';
 
-  Array.from(block.children).slice(2).forEach((slide) => {
-    const video = slide.querySelector('div:nth-child(1) > div > div > video');
-    const mobileVideo = slide.querySelector('div:nth-child(3) > div > div > video');
-    const videoDescription = slide.querySelector('div:nth-child(5) > div > div');
+    // Append video containers
+    deskSlickSlide.appendChild(deskVideo);
+    mobSlickSlide.appendChild(mobVideo);
 
-    const slideWrapper = document.createElement('div');
-    slideWrapper.classList.add('slick-slide');
-
-    const evtsSlider = document.createElement('div');
-    evtsSlider.classList.add('evts-slider');
-    evtsSlider.style.width = '100%';
-    evtsSlider.style.display = 'inline-block';
-
-    if (video) {
-      evtsSlider.appendChild(video);
-    }
-
-    if (mobileVideo) {
-      evtsSlider.appendChild(mobileVideo);
-    }
-
-    const videoDet = document.createElement('div');
-    videoDet.classList.add('video-det');
-    videoDet.appendChild(videoDescription);
-
-    evtsSlider.appendChild(videoDet);
-    slideWrapper.appendChild(evtsSlider);
-    slickTrack.appendChild(slideWrapper);
+    // Append to correct slick container
+    deskSlickContainer.appendChild(deskSlickSlide);
+    mobSlickContainer.appendChild(mobSlickSlide);
   });
 
-  deskCar.appendChild(slickWrapper.cloneNode(true));
-  mobCar.appendChild(slickWrapper.cloneNode(true));
+  // Append slick containers to car containers
+  deskCarContainer.appendChild(deskSlickContainer);
+  mobCarContainer.appendChild(mobSlickContainer);
 
+  // Clear block and append new structure
   block.innerHTML = '';
-  block.appendChild(deskCar);
-  block.appendChild(mobCar);
+  block.appendChild(deskCarContainer);
+  block.appendChild(mobCarContainer);
 
   // 2. Handle Dependencies
   await loadSlickAssets();
 
   // 3. Initialize Slick
-  // eslint-disable-next-line no-undef, no-new
-  $(block.querySelector('.desk-car .product-event-shorts')).slick({
+  $(deskSlickContainer).slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    dots: false,
+    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
+    nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>',
     responsive: [
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
-  // eslint-disable-next-line no-undef, no-new
-  $(block.querySelector('.mob-car .product-event-shorts')).slick({
+  $(mobSlickContainer).slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    dots: false,
+    prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
+    nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>'
   });
 }
+    
