@@ -47,9 +47,9 @@
     ]
   },
   {
-    "id": "short-product-video",
+    "id": "short-video-product",
     "components": [
-      "short-product-video-item"
+      "short-video"
     ]
   },
   {

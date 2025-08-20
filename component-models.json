@@ -588,84 +588,39 @@
     ]
   },
   {
-    "id": "short-product-video",
+    "id": "short-video-product",
     "fields": [
       {
-        "component": "container",
-        "name": "desktop",
-        "label": "Desktop",
-        "valueType": "string",
-        "collapsible": true,
-        "fields": [
-          {
-            "component": "richtext",
-            "name": "desktopHeading",
-            "label": "Desktop Heading",
-            "valueType": "string"
-          }
-        ]
+        "component": "richtext",
+        "name": "heading",
+        "label": "Heading"
       },
       {
-        "component": "container",
-        "name": "mobile",
-        "label": "Mobile",
-        "valueType": "string",
-        "collapsible": true,
-        "fields": [
-          {
-            "component": "richtext",
-            "name": "mobileHeading",
-            "label": "Mobile Heading",
-            "valueType": "string"
-          }
-        ]
+        "component": "richtext",
+        "name": "subHeading",
+        "label": "Sub Heading"
       }
     ]
   },
   {
-    "id": "short-product-video-item",
+    "id": "short-video",
     "fields": [
       {
-        "component": "container",
-        "name": "desktopVideo",
-        "label": "Desktop Video",
+        "component": "reference",
         "valueType": "string",
-        "collapsible": true,
-        "fields": [
-          {
-            "component": "text",
-            "name": "desktopVideoSrc",
-            "label": "Desktop Video Source",
-            "valueType": "string"
-          },
-          {
-            "component": "richtext",
-            "name": "desktopVideoText",
-            "label": "Desktop Video Text",
-            "valueType": "string"
-          }
-        ]
+        "name": "video",
+        "label": "Video",
+        "multi": false
       },
       {
-        "component": "container",
-        "name": "mobileVideo",
-        "label": "Mobile Video",
-        "valueType": "string",
-        "collapsible": true,
-        "fields": [
-          {
-            "component": "text",
-            "name": "mobileVideoSrc",
-            "label": "Mobile Video Source",
-            "valueType": "string"
-          },
-          {
-            "component": "richtext",
-            "name": "mobileVideoText",
-            "label": "Mobile Video Text",
-            "valueType": "string"
-          }
-        ]
+        "component": "text",
+        "name": "videoAlt",
+        "label": "Video Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "videoDescription",
+        "label": "Video Description"
       }
     ]
   },
