@@ -15,7 +15,9 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "short-video-product",
+      "vehicle-specification-duplicate"
     ]
   },
   {
@@ -62,12 +64,6 @@
     "id": "sub-header",
     "components": [
       "sub-header-item"
-    ]
-  },
-  {
-    "id": "vehicle-specification-duplicate",
-    "components": [
-      "feature"
     ]
   }
 ]
