@@ -1,132 +1,131 @@
+export default function decorate(block) {
+  // Extract all direct children of the block
+  const children = [...block.children];
 
-  export default function decorate(block) {
-    // Extract all direct children of the block
-    const children = [...block.children];
+  // Create wrappers for different sections
+  const imageAnimateWrap = document.createElement('div');
+  imageAnimateWrap.className = 'image-animate-wraps';
 
-    // Create wrappers for different sections
-    const imageAnimateWrap = document.createElement('div');
-    imageAnimateWrap.className = 'image-animate-wraps';
+  const textAnimateWrap = document.createElement('div');
+  textAnimateWrap.className = 'text-animate-wraps';
 
-    const textAnimateWrap = document.createElement('div');
-    textAnimateWrap.className = 'text-animate-wraps';
+  const featureTextWrap = document.createElement('div');
+  featureTextWrap.className = 'feature-text';
 
-    const featureTextWrap = document.createElement('div');
-    featureTextWrap.className = 'feature-text';
+  const featureCtasWrap = document.createElement('div');
+  featureCtasWrap.className = 'feature-ctas';
 
-    const featureCtasWrap = document.createElement('div');
-    featureCtasWrap.className = 'feature-ctas';
+  // Process image animation section
+  const imageContainer = children[0];
+  const imageChildren = [...imageContainer.children];
 
-    // Process image animation section
-    const imageContainer = children[0];
-    const imageChildren = [...imageContainer.children];
+  const imageWraps = [
+    { class: 'first-img-wrap', imgClass: 'entry-img' },
+    { class: 'second-img-wrap', imgClass: 'middle-img' },
+    { class: 'third-img-wrap', imgClass: 'last-img' }
+  ];
 
-    const imageWraps = [
-      { class: 'first-img-wrap', imgClass: 'entry-img' },
-      { class: 'second-img-wrap', imgClass: 'middle-img' },
-      { class: 'third-img-wrap', imgClass: 'last-img' }
-    ];
+  imageWraps.forEach((wrap, index) => {
+    const wrapDiv = document.createElement('div');
+    wrapDiv.className = wrap.class;
 
-    imageWraps.forEach((wrap, index) => {
-      const wrapDiv = document.createElement('div');
-      wrapDiv.className = wrap.class;
+    const imgDiv = imageChildren[index * 2];
+    const mobImgDiv = imageChildren[index * 2 + 1];
 
-      const imgDiv = imageChildren[index * 2];
-      const mobImgDiv = imageChildren[index * 2 + 1];
-
-      if (imgDiv) {
-        const img = imgDiv.querySelector('img');
-        if (img) {
-          img.className = wrap.imgClass;
-          wrapDiv.appendChild(img);
-        }
+    if (imgDiv) {
+      const img = imgDiv.querySelector('img');
+      if (img) {
+        img.className = wrap.imgClass;
+        wrapDiv.appendChild(img);
       }
-
-      if (mobImgDiv) {
-        const mobImg = mobImgDiv.querySelector('img');
-        if (mobImg) {
-          mobImg.className = `${wrap.imgClass}-mob`;
-          wrapDiv.appendChild(mobImg);
-        }
-      }
-
-      imageAnimateWrap.appendChild(wrapDiv);
-    });
-
-    // Process feature text section
-    const featureContainer = children[1];
-    const featureChildren = [...featureContainer.children];
-
-    featureChildren.forEach(featureChild => {
-      const featureWrap = document.createElement('div');
-      featureWrap.className = 'feature-wrap';
-
-      const mainHeading = document.createElement('div');
-      mainHeading.className = 'main-heading';
-      mainHeading.textContent = featureChild.textContent.trim();
-
-      const subHeading = document.createElement('div');
-      subHeading.className = 'sub-heading';
-      subHeading.textContent = featureChild.nextElementSibling.textContent.trim();
-
-      featureWrap.appendChild(mainHeading);
-      featureWrap.appendChild(subHeading);
-
-      featureTextWrap.appendChild(featureWrap);
-    });
-
-    textAnimateWrap.appendChild(featureTextWrap);
-
-    // Process CTA buttons section
-    const ctaContainer = children[2];
-    const ctaChildren = [...ctaContainer.children];
-
-    const ctaFirst = document.createElement('a');
-    ctaFirst.className = 'cta-first';
-    ctaFirst.href = '/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/pdf/xoom_160_Leaflet.pdf';
-    ctaFirst.download = 'Brochure';
-    ctaFirst.target = '_blank';
-
-    const downloadIconDiv = ctaChildren[0];
-    const downloadIcon = downloadIconDiv.querySelector('img');
-    if (downloadIcon) {
-      downloadIcon.className = '';
-      ctaFirst.appendChild(downloadIcon);
     }
 
-    const ctaTextFirst = document.createElement('div');
-    ctaTextFirst.className = 'cta-text';
-    ctaTextFirst.textContent = 'Brochure';
-    ctaFirst.appendChild(ctaTextFirst);
+    if (mobImgDiv) {
+      const mobImg = mobImgDiv.querySelector('img');
+      if (mobImg) {
+        mobImg.className = `${wrap.imgClass}-mob`;
+        wrapDiv.appendChild(mobImg);
+      }
+    }
 
-    const ctaSecond = document.createElement('div');
-    ctaSecond.className = 'cta-second';
+    imageAnimateWrap.appendChild(wrapDiv);
+  });
 
-    const ctaTextSecond = document.createElement('div');
-    ctaTextSecond.className = 'cta-text';
-    ctaTextSecond.setAttribute('data-bs-toggle', 'modal');
-    ctaTextSecond.setAttribute('data-bs-target', '#specModal');
-    ctaTextSecond.textContent = 'View Full Specifications';
-    ctaSecond.appendChild(ctaTextSecond);
+  // Process feature text section
+  const featureContainer = children[1];
+  const featureChildren = [...featureContainer.children];
 
-    const arrowIcon = document.createElement('img');
-    arrowIcon.src = '/content/dam/hero-commerce/in/en/products/scooters/content-fragments/new-destini-125/assets/icons/right_arrow_red.png';
-    arrowIcon.alt = 'link image';
-    ctaSecond.appendChild(arrowIcon);
+  featureChildren.forEach(featureChild => {
+    const featureWrap = document.createElement('div');
+    featureWrap.className = 'feature-wrap';
 
-    featureCtasWrap.appendChild(ctaFirst);
-    featureCtasWrap.appendChild(ctaSecond);
+    const mainHeading = document.createElement('div');
+    mainHeading.className = 'main-heading';
+    mainHeading.textContent = featureChild.textContent.trim();
 
-    textAnimateWrap.appendChild(featureCtasWrap);
+    const subHeading = document.createElement('div');
+    subHeading.className = 'sub-heading';
+    subHeading.textContent = featureChild.nextElementSibling.textContent.trim();
 
-    // Clear the original block content
-    block.innerHTML = '';
+    featureWrap.appendChild(mainHeading);
+    featureWrap.appendChild(subHeading);
 
-    // Append the new structure to the block
-    block.appendChild(imageAnimateWrap);
-    block.appendChild(textAnimateWrap);
+    featureTextWrap.appendChild(featureWrap);
+  });
 
-    // Add modal HTML directly to the body
-    const modalHTML = `
+  textAnimateWrap.appendChild(featureTextWrap);
+
+  // Process CTA buttons section
+  const ctaContainer = children[2];
+  const ctaChildren = [...ctaContainer.children];
+
+  const ctaFirst = document.createElement('a');
+  ctaFirst.className = 'cta-first';
+  ctaFirst.href = '/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/pdf/xoom_160_Leaflet.pdf';
+  ctaFirst.download = 'Brochure';
+  ctaFirst.target = '_blank';
+
+  const downloadIconDiv = ctaChildren[0];
+  const downloadIcon = downloadIconDiv.querySelector('img');
+  if (downloadIcon) {
+    downloadIcon.className = '';
+    ctaFirst.appendChild(downloadIcon);
+  }
+
+  const ctaTextFirst = document.createElement('div');
+  ctaTextFirst.className = 'cta-text';
+  ctaTextFirst.textContent = 'Brochure';
+  ctaFirst.appendChild(ctaTextFirst);
+
+  const ctaSecond = document.createElement('div');
+  ctaSecond.className = 'cta-second';
+
+  const ctaTextSecond = document.createElement('div');
+  ctaTextSecond.className = 'cta-text';
+  ctaTextSecond.setAttribute('data-bs-toggle', 'modal');
+  ctaTextSecond.setAttribute('data-bs-target', '#specModal');
+  ctaTextSecond.textContent = 'View Full Specifications';
+  ctaSecond.appendChild(ctaTextSecond);
+
+  const arrowIcon = document.createElement('img');
+  arrowIcon.src = '/content/dam/hero-commerce/in/en/products/scooters/content-fragments/new-destini-125/assets/icons/right_arrow_red.png';
+  arrowIcon.alt = 'link image';
+  ctaSecond.appendChild(arrowIcon);
+
+  featureCtasWrap.appendChild(ctaFirst);
+  featureCtasWrap.appendChild(ctaSecond);
+
+  textAnimateWrap.appendChild(featureCtasWrap);
+
+  // Clear the original block content
+  block.innerHTML = '';
+
+  // Append the new structure to the block
+  block.appendChild(imageAnimateWrap);
+  block.appendChild(textAnimateWrap);
+
+  // Add modal HTML directly to the body
+  const modalHTML = `
       <div class="modal fade" id="specModal" role="dialog">
         <div class="modal-dialog modal-dialog-scrollable modal-cont-mw modal-xl modal-dialog-centered">
           <div class="close" data-bs-dismiss="modal">
@@ -297,8 +296,7 @@
       </div>
     `;
 
-    const modalContainer = document.createElement('div');
-    modalContainer.innerHTML = modalHTML.trim();
-    document.body.appendChild(modalContainer);
-  }
-    
+  const modalContainer = document.createElement('div');
+  modalContainer.innerHTML = modalHTML.trim();
+  document.body.appendChild(modalContainer);
+}
