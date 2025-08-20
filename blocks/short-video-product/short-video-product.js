@@ -48,7 +48,8 @@ export default async function decorate(block) {
 
   Array.from(block.children).slice(2).forEach((slide) => {
     const video = slide.querySelector('div:nth-child(1) > div > div > video');
-    const videoDescription = slide.querySelector('div:nth-child(2) > div > div');
+    const mobileVideo = slide.querySelector('div:nth-child(3) > div > div > video');
+    const videoDescription = slide.querySelector('div:nth-child(5) > div > div');
 
     const slideWrapper = document.createElement('div');
     slideWrapper.classList.add('slick-slide');
@@ -60,6 +61,10 @@ export default async function decorate(block) {
 
     if (video) {
       evtsSlider.appendChild(video);
+    }
+
+    if (mobileVideo) {
+      evtsSlider.appendChild(mobileVideo);
     }
 
     const videoDet = document.createElement('div');

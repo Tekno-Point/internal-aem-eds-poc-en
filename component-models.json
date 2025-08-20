@@ -606,16 +606,42 @@
     "id": "short-video",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "video",
-        "label": "Video",
-        "multi": false
+        "component": "container",
+        "name": "desktopVideo",
+        "label": "Desktop Video",
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "video",
+            "label": "Video",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "name": "videoAlt",
+            "label": "Video Alt"
+          }
+        ]
       },
       {
-        "component": "text",
-        "name": "videoAlt",
-        "label": "Video Alt"
+        "component": "container",
+        "name": "mobileVideo",
+        "label": "Mobile Video",
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "mobileVideo",
+            "label": "Mobile Video",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "name": "mobileVideoAlt",
+            "label": "Mobile Video Alt"
+          }
+        ]
       },
       {
         "component": "richtext",
