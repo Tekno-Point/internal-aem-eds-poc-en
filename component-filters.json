@@ -15,7 +15,8 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "short-video-product"
     ]
   },
   {
@@ -49,7 +50,7 @@
   {
     "id": "short-video-product",
     "components": [
-      "short-video-product-item"
+      "short-video"
     ]
   },
   {
