@@ -50,17 +50,18 @@ export default function decorate(block) {
   featureTextWrapper.className = 'feature-text';
 
   // Process feature items
-  children.slice(6, 9).forEach((featureItem) => {
+  [...children.at(6).querySelectorAll('ul li')].forEach((featureItem) => {
+    const [mainTxt, subTxt] = featureItem.innerHTML.split('<br>');
     const featureWrap = document.createElement('div');
     featureWrap.className = 'feature-wrap';
 
     const mainHeading = document.createElement('div');
     mainHeading.className = 'main-heading';
-    mainHeading.textContent = featureItem.children[0].textContent.trim();
+    mainHeading.textContent = mainTxt.trim();
 
     const subHeading = document.createElement('div');
     subHeading.className = 'sub-heading';
-    subHeading.textContent = featureItem.children[1].textContent.trim();
+    subHeading.textContent = subTxt.trim();
 
     featureWrap.appendChild(mainHeading);
     featureWrap.appendChild(subHeading);
@@ -76,7 +77,7 @@ export default function decorate(block) {
   // Create brochure CTA
   const brochureCta = document.createElement('a');
   brochureCta.className = 'cta-first';
-  brochureCta.href = children[9].querySelector('a').href;
+  brochureCta.href = children[7].querySelector('a').href;
   brochureCta.download = 'Brochure';
   brochureCta.target = '_blank';
 
@@ -88,7 +89,7 @@ export default function decorate(block) {
 
   const brochureText = document.createElement('div');
   brochureText.className = 'cta-text';
-  brochureText.textContent = children[10].textContent.trim();
+  brochureText.textContent = children[7].textContent.trim();
   brochureCta.appendChild(brochureText);
 
   featureCtas.appendChild(brochureCta);
@@ -101,7 +102,7 @@ export default function decorate(block) {
   specificationText.className = 'cta-text';
   specificationText.setAttribute('data-bs-toggle', 'modal');
   specificationText.setAttribute('data-bs-target', '#specModal');
-  specificationText.textContent = children[11].textContent.trim();
+  specificationText.textContent = children[8].textContent.trim();
   specificationCta.appendChild(specificationText);
 
   const specificationIcon = document.createElement('img');
