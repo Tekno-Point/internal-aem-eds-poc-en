@@ -597,7 +597,9 @@
           {
             "component": "richtext",
             "name": "deskCarHeader",
-            "label": "Desk Car Header"
+            "label": "Desk Car Header",
+            "valueType": "string",
+            "value": ""
           }
         ]
       },
@@ -608,7 +610,9 @@
           {
             "component": "richtext",
             "name": "mobCarHeader",
-            "label": "Mob Car Header"
+            "label": "Mob Car Header",
+            "valueType": "string",
+            "value": ""
           }
         ]
       }
@@ -632,12 +636,15 @@
             "component": "text",
             "name": "deskVideoAlt",
             "label": "Desk Video Alt",
-            "valueType": "string"
+            "valueType": "string",
+            "value": ""
           },
           {
             "component": "richtext",
             "name": "deskVideoDescription",
-            "label": "Desk Video Description"
+            "label": "Desk Video Description",
+            "valueType": "string",
+            "value": ""
           }
         ]
       },
