@@ -1,74 +1,79 @@
 
-  📦 Vehicle Specification
+# Vehicle Specification Block
 
-  📝 Authoring Guidelines:
-  {
-    "entryImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_01.png",
-    "entryImageAlt": "entry-img",
-    "entryMobImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_01.png",
-    "entryMobImageAlt": "entry-img",
-    "middleImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_02.png",
-    "middleImageAlt": "middle-img",
-    "middleMobImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_02.png",
-    "middleMobImageAlt": "middle-img",
-    "lastImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_03.png",
-    "lastImageAlt": "last-img",
-    "lastMobImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_03.png",
-    "lastMobImageAlt": "last-img",
-    "features": "<ul><li>156cc<br>Displacement</li><li>10.9 kw @ 8000 rpm<br>Max Power (bhp/rpm)</li><li>14 Nm @ 6500 rpm<br>Max Torque (NM/rpm)</li></ul>",
-    "downloadIcon": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/new-destini-125/assets/icons/download_icon.png",
-    "downloadIconAlt": "link image"
-  }
+A modular and interactive vehicle specification block that displays key features and specifications with animated transitions and a modal dialog for detailed information.
 
-  ⚙️ Thinking Process:
+## Authoring Guidelines
 
-  1. **Block Analysis**:
-     - The block consists of an image animation section, a feature text section, and CTA buttons.
-     - The image animation section has three images with desktop and mobile variants.
-     - The feature text section contains a list of features with main headings and subheadings.
-     - CTA buttons include a download link and a modal trigger with icons.
+### JSON Object Representation
+```json
+{
+  "entryImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_01.png",
+  "entryImageAlt": "entry-img",
+  "entryMobileImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_01.png",
+  "entryMobileImageAlt": "entry-img",
+  "middleImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_02.png",
+  "middleImageAlt": "middle-img",
+  "middleMobileImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_02.png",
+  "middleMobileImageAlt": "middle-img",
+  "lastImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Web_03.png",
+  "lastImageAlt": "last-img",
+  "lastMobileImage": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/specification/Xoom_160_Mob_03.png",
+  "lastMobileImageAlt": "last-img",
+  "features": "<ul><li>156cc<br>Displacement</li><li>10.9 kw @ 8000 rpm<br>Max Power (bhp/rpm)</li><li>14 Nm @ 6500 rpm<br>Max Torque (NM/rpm)</li></ul>",
+  "brochureLink": "/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-125/assets/pdf/xoom_160_Leaflet.pdf",
+  "brochureLinkText": "Brochure",
+  "specificationLink": "/content/internal-aem-eds-poc/icicilombard/modals/specification",
+  "specificationLinkText": "View Full Specifications"
+}
+```
 
-  2. **Field Planning**:
-     - **Images**: Use reference fields with alt text for each image.
-     - **Features**: Use a rich text field for the features section to allow authors to format text easily.
-     - **Icons**: Use reference fields for CTA icons with alt text.
-     - **Modal**: The modal content is static and hardcoded in the JS to reduce authoring burden.
+## Thinking Process
 
-  3. **Field Collapse**:
-     - Images are collapsed with their alt text.
-     - CTA icons are collapsed with their alt text.
+### Structure Identification
+The vehicle specification block is a complex component with multiple sections:
+1. **Image Animation**: Three images that animate in sequence.
+2. **Feature List**: Three key features displayed in a grid.
+3. **CTA Buttons**: Two call-to-action buttons with different styles.
+4. **Modal Dialog**: A detailed specification modal with tabbed content.
 
-  4. **Container Fields**:
-     - Used to group related image fields and CTA icon fields for better organization.
+### Field Planning
+1. **Images**: Three sets of images (desktop and mobile) with alt text.
+2. **Features**: Three repeating features with main heading and sub-heading.
+3. **CTA Links**: Two links with text and optional download attribute.
+4. **Modal Content**: Pre-defined tab structure with specific content.
 
-  5. **Rich Text Field**:
-     - The features section uses a rich text field to allow authors to create a list of features easily.
+### Content Model Mapping
+1. **Images**: Use reference fields with alt text for better accessibility.
+2. **Features**: Use a rich text field with list items for simple repetition.
+3. **CTA Links**: Use aem-content fields with text collapse for better authoring.
+4. **Modal**: Hardcode modal structure and content in JS for consistency.
 
-  6. **Modal Integration**:
-     - The modal content is hardcoded in the JS to reduce authoring burden. The modal trigger is a rich text field with specific attributes.
+### Block.json Structure
+1. **Definitions**: Two definitions for the main block and feature items.
+2. **Models**:
+   - Main block with container for images, rich text for features, and container for CTA links.
+   - Feature item with rich text for content.
+3. **Filters**: Link main block to feature items.
 
-  📄 Markdown Table:
+## JS Implementation
+1. **Data Querying**: Extract images, features, and CTA links from block children.
+2. **DOM Transformation**:
+   - Create image containers with desktop and mobile images.
+   - Create feature wrappers with main and sub-headings.
+   - Create CTA buttons with icons and modal triggers.
+   - Hardcode modal structure with tabbed content.
+3. **Third-Party Integration**: Use Bootstrap classes for modal functionality.
 
-  +-------------------------------------------------------------+
-  | Vehicle Specification                                       |
-  +=============================================================+
-  | ![entry-img][entryImage] ![middle-img][middleImage]        |
-  | ![last-img][lastImage]                                     |
-  +-------------------------------------------------------------+
-  | ![entry-img][entryMobImage] ![middle-img][middleMobImage] |
-  | ![last-img][lastMobImage]                                 |
-  +-------------------------------------------------------------+
-  | 156cc                                                      |
-  | Displacement                                                |
-  +-------------------------------------------------------------+
-  | 10.9 kw @ 8000 rpm                                          |
-  | Max Power (bhp/rpm)                                         |
-  +-------------------------------------------------------------+
-  | 14 Nm @ 6500 rpm                                            |
-  | Max Torque (NM/rpm)                                         |
-  +-------------------------------------------------------------+
-  | ![link image][downloadIcon] Brochure                       |
-  +-------------------------------------------------------------+
-  | View Full Specifications ![link image][arrowIcon]          |
-  +-------------------------------------------------------------+
+## CSS Styling
+1. **Modern Design**: Glassmorphism effects with backdrop-filter.
+2. **Animation**: Smooth transitions and hover effects.
+3. **Responsive**: Mobile-first approach with media queries.
+4. **Accessibility**: Focus states and high contrast support.
+
+## Accessibility Features
+1. **Focus States**: Outline on focus for interactive elements.
+2. **Keyboard Navigation**: Modal can be closed with Escape key.
+3. **Screen Reader Support**: Proper ARIA labels and structure.
+4. **Reduced Motion**: Animation disabled for reduced motion preference.
     

@@ -1,302 +1,301 @@
+
 export default function decorate(block) {
   // Extract all direct children of the block
   const children = [...block.children];
 
-  // Create wrappers for different sections
-  const imageAnimateWrap = document.createElement('div');
-  imageAnimateWrap.className = 'image-animate-wraps';
+  // Create the main wrapper for the specification content
+  const specificationWrapper = document.createElement('div');
+  specificationWrapper.id = 'destini-specification-wrap';
+  specificationWrapper.className = 'destini-specification';
+  specificationWrapper.setAttribute('data-component', 'destini-specification');
 
-  const textAnimateWrap = document.createElement('div');
-  textAnimateWrap.className = 'text-animate-wraps';
+  // Create image animation wrapper
+  const imageAnimateWrapper = document.createElement('div');
+  imageAnimateWrapper.className = 'image-animate-wraps';
 
-  const featureTextWrap = document.createElement('div');
-  featureTextWrap.className = 'feature-text';
+  // Create image containers
+  const imageContainers = ['first-img-wrap', 'second-img-wrap', 'third-img-wrap'];
+  const imageClasses = ['entry-img', 'middle-img', 'last-img'];
+  const mobileImageClasses = ['entry-mob-img', 'middle-mob-img', 'last-mob-img'];
 
-  const featureCtasWrap = document.createElement('div');
-  featureCtasWrap.className = 'feature-ctas';
+  imageContainers.forEach((containerClass, index) => {
+    const container = document.createElement('div');
+    container.className = containerClass;
 
-  // Process image animation section
-  const imageContainer = children[0];
-  const imageChildren = [...imageContainer.children];
+    // Create desktop image
+    const desktopImage = document.createElement('img');
+    desktopImage.loading = 'lazy';
+    desktopImage.className = imageClasses[index];
+    desktopImage.src = children[index * 2].querySelector('img').src;
+    desktopImage.alt = children[index * 2].querySelector('img').alt;
+    container.appendChild(desktopImage);
 
-  const imageWraps = [
-    { class: 'first-img-wrap', imgClass: 'entry-img' },
-    { class: 'second-img-wrap', imgClass: 'middle-img' },
-    { class: 'third-img-wrap', imgClass: 'last-img' }
-  ];
+    // Create mobile image
+    const mobileImage = document.createElement('img');
+    mobileImage.loading = 'lazy';
+    mobileImage.className = mobileImageClasses[index];
+    mobileImage.src = children[index * 2 + 1].querySelector('img').src;
+    mobileImage.alt = children[index * 2 + 1].querySelector('img').alt;
+    container.appendChild(mobileImage);
 
-  imageWraps.forEach((wrap, index) => {
-    const wrapDiv = document.createElement('div');
-    wrapDiv.className = wrap.class;
-
-    const imgDiv = imageChildren[index * 2];
-    const mobImgDiv = imageChildren[index * 2 + 1];
-
-    if (imgDiv) {
-      const img = imgDiv.querySelector('img');
-      if (img) {
-        img.className = wrap.imgClass;
-        wrapDiv.appendChild(img);
-      }
-    }
-
-    if (mobImgDiv) {
-      const mobImg = mobImgDiv.querySelector('img');
-      if (mobImg) {
-        mobImg.className = `${wrap.imgClass}-mob`;
-        wrapDiv.appendChild(mobImg);
-      }
-    }
-
-    imageAnimateWrap.appendChild(wrapDiv);
+    imageAnimateWrapper.appendChild(container);
   });
 
-  // Process feature text section
-  const featureContainer = children[1];
-  const featureChildren = [...featureContainer.children];
+  // Create text animation wrapper
+  const textAnimateWrapper = document.createElement('div');
+  textAnimateWrapper.className = 'text-animate-wraps';
 
-  featureChildren.forEach(featureChild => {
+  // Create feature text wrapper
+  const featureTextWrapper = document.createElement('div');
+  featureTextWrapper.className = 'feature-text';
+
+  // Process feature items
+  children.slice(6, 9).forEach((featureItem) => {
     const featureWrap = document.createElement('div');
     featureWrap.className = 'feature-wrap';
 
     const mainHeading = document.createElement('div');
     mainHeading.className = 'main-heading';
-    mainHeading.textContent = featureChild.textContent.trim();
+    mainHeading.textContent = featureItem.children[0].textContent.trim();
 
     const subHeading = document.createElement('div');
     subHeading.className = 'sub-heading';
-    subHeading.textContent = featureChild.nextElementSibling.textContent.trim();
+    subHeading.textContent = featureItem.children[1].textContent.trim();
 
     featureWrap.appendChild(mainHeading);
     featureWrap.appendChild(subHeading);
-
-    featureTextWrap.appendChild(featureWrap);
+    featureTextWrapper.appendChild(featureWrap);
   });
 
-  textAnimateWrap.appendChild(featureTextWrap);
+  textAnimateWrapper.appendChild(featureTextWrapper);
 
-  // Process CTA buttons section
-  const ctaContainer = children[2];
-  const ctaChildren = [...ctaContainer.children];
+  // Create feature CTAs
+  const featureCtas = document.createElement('div');
+  featureCtas.className = 'feature-ctas';
 
-  const ctaFirst = document.createElement('a');
-  ctaFirst.className = 'cta-first';
-  ctaFirst.href = '/content/dam/hero-commerce/in/en/products/scooters/content-fragments/xoom-160/assets/pdf/xoom_160_Leaflet.pdf';
-  ctaFirst.download = 'Brochure';
-  ctaFirst.target = '_blank';
+  // Create brochure CTA
+  const brochureCta = document.createElement('a');
+  brochureCta.className = 'cta-first';
+  brochureCta.href = children[9].querySelector('a').href;
+  brochureCta.download = 'Brochure';
+  brochureCta.target = '_blank';
 
-  const downloadIconDiv = ctaChildren[0];
-  const downloadIcon = downloadIconDiv.querySelector('img');
-  if (downloadIcon) {
-    downloadIcon.className = '';
-    ctaFirst.appendChild(downloadIcon);
-  }
+  const brochureIcon = document.createElement('img');
+  brochureIcon.loading = 'lazy';
+  brochureIcon.src = '/content/dam/hero-commerce/in/en/products/scooters/content-fragments/new-destini-125/assets/icons/download_icon.png';
+  brochureIcon.alt = 'link image';
+  brochureCta.appendChild(brochureIcon);
 
-  const ctaTextFirst = document.createElement('div');
-  ctaTextFirst.className = 'cta-text';
-  ctaTextFirst.textContent = 'Brochure';
-  ctaFirst.appendChild(ctaTextFirst);
+  const brochureText = document.createElement('div');
+  brochureText.className = 'cta-text';
+  brochureText.textContent = children[10].textContent.trim();
+  brochureCta.appendChild(brochureText);
 
-  const ctaSecond = document.createElement('div');
-  ctaSecond.className = 'cta-second';
+  featureCtas.appendChild(brochureCta);
 
-  const ctaTextSecond = document.createElement('div');
-  ctaTextSecond.className = 'cta-text';
-  ctaTextSecond.setAttribute('data-bs-toggle', 'modal');
-  ctaTextSecond.setAttribute('data-bs-target', '#specModal');
-  ctaTextSecond.textContent = 'View Full Specifications';
-  ctaSecond.appendChild(ctaTextSecond);
+  // Create specification CTA
+  const specificationCta = document.createElement('div');
+  specificationCta.className = 'cta-second';
 
-  const arrowIcon = document.createElement('img');
-  arrowIcon.src = '/content/dam/hero-commerce/in/en/products/scooters/content-fragments/new-destini-125/assets/icons/right_arrow_red.png';
-  arrowIcon.alt = 'link image';
-  ctaSecond.appendChild(arrowIcon);
+  const specificationText = document.createElement('div');
+  specificationText.className = 'cta-text';
+  specificationText.setAttribute('data-bs-toggle', 'modal');
+  specificationText.setAttribute('data-bs-target', '#specModal');
+  specificationText.textContent = children[11].textContent.trim();
+  specificationCta.appendChild(specificationText);
 
-  featureCtasWrap.appendChild(ctaFirst);
-  featureCtasWrap.appendChild(ctaSecond);
+  const specificationIcon = document.createElement('img');
+  specificationIcon.loading = 'lazy';
+  specificationIcon.src = '/content/dam/hero-commerce/in/en/products/scooters/content-fragments/new-destini-125/assets/icons/right_arrow_red.png';
+  specificationIcon.alt = 'link image';
+  specificationCta.appendChild(specificationIcon);
 
-  textAnimateWrap.appendChild(featureCtasWrap);
+  featureCtas.appendChild(specificationCta);
 
-  // Clear the original block content
+  textAnimateWrapper.appendChild(featureCtas);
+
+  // Create modal
+  const modal = document.createElement('div');
+  modal.className = 'modal fade';
+  modal.id = 'specModal';
+  modal.setAttribute('role', 'dialog');
+
+  const modalDialog = document.createElement('div');
+  modalDialog.className = 'modal-dialog modal-dialog-scrollable modal-cont-mw modal-xl modal-dialog-centered';
+
+  const closeButton = document.createElement('div');
+  closeButton.className = 'close';
+  closeButton.setAttribute('data-bs-dismiss', 'modal');
+
+  const closeIcon = document.createElement('img');
+  closeIcon.loading = 'lazy';
+  closeIcon.className = 'specification-container-close-mob';
+  closeIcon.src = '/content/dam/hero-commerce/in/en/products/scooters/content-fragments/new-destini-125/assets/icons/close_cta.png';
+  closeIcon.alt = 'close';
+  closeButton.appendChild(closeIcon);
+
+  const modalContent = document.createElement('div');
+  modalContent.className = 'modal-content specification-container animate-modal-bottom';
+
+  const modalHeader = document.createElement('div');
+  modalHeader.className = 'modal-header';
+
+  const specHeader = document.createElement('div');
+  specHeader.className = 'spec-header';
+  specHeader.textContent = 'SPECIFICATIONS of XOOM 160';
+  modalHeader.appendChild(specHeader);
+
+  const closeButtonHeader = closeButton.cloneNode(true);
+  closeButtonHeader.querySelector('img').className = 'specification-container-close';
+  modalHeader.appendChild(closeButtonHeader);
+
+  const tabList = document.createElement('ul');
+  tabList.className = 'nav nav-tabs';
+  tabList.id = 'harley-specs';
+  tabList.setAttribute('role', 'tablist');
+
+  const tabItems = [
+    { id: 'engine', label: 'Engine', active: true },
+    { id: 'transmission', label: 'Transmission' },
+    { id: 'suspension', label: 'Suspension' },
+    { id: 'tyres', label: 'Tyres' },
+    { id: 'dimensions', label: 'Dimensions' },
+    { id: 'electricals', label: 'Electricals' },
+    { id: 'weight', label: 'Weight' }
+  ];
+
+  tabItems.forEach((tabItem, index) => {
+    const tabListItem = document.createElement('li');
+    tabListItem.className = 'tab-text';
+    if (tabItem.active) tabListItem.classList.add('active');
+
+    const tabLink = document.createElement('a');
+    tabLink.href = `#${tabItem.id}`;
+    tabLink.setAttribute('data-bs-toggle', 'tab');
+    tabLink.setAttribute('aria-selected', tabItem.active ? 'true' : 'false');
+    if (!tabItem.active) tabLink.setAttribute('tabindex', '-1');
+    tabLink.setAttribute('role', 'tab');
+    tabLink.textContent = tabItem.label;
+    if (tabItem.active) tabLink.classList.add('active');
+
+    tabListItem.appendChild(tabLink);
+    tabList.appendChild(tabListItem);
+  });
+
+  const tabContent = document.createElement('div');
+  tabContent.className = 'tab-content modal-body';
+
+  const tabData = [
+    {
+      id: 'engine',
+      active: true,
+      rows: [
+        { main: 'Type', desc: 'Liquid cooled, 4 Valve single cylinder SOHC' },
+        { main: 'Displacement', desc: '156cc' },
+        { main: 'Max Power (bhp/rpm)', desc: '10.9 kw (14.6 bhp) @ 8000 rpm' },
+        { main: 'Max Torque (Nm/rpm)', desc: '14 Nm @ 6500 rpm' },
+        { main: 'Ignition', desc: 'Fuel Injection (FI)' }
+      ]
+    },
+    {
+      id: 'transmission',
+      rows: [
+        { main: 'Type', desc: 'CVT' },
+        { main: 'Clutch Type', desc: 'Dry, Centrifugal' }
+      ]
+    },
+    {
+      id: 'suspension',
+      rows: [
+        { main: 'Front', desc: 'Telescopic Hydraulic shock absorber' },
+        { main: 'Rear', desc: 'Dual shock absorbers' }
+      ]
+    },
+    {
+      id: 'tyres',
+      rows: [
+        { main: 'Front Tyre', desc: '120/70 - 14"' },
+        { main: 'Rear Tyre', desc: '140/60 - 14"' }
+      ]
+    },
+    {
+      id: 'dimensions',
+      rows: [
+        { main: 'Length', desc: '1983 mm' },
+        { main: 'Width', desc: '772 mm' },
+        { main: 'Height', desc: '1214 mm' },
+        { main: 'Wheelbase', desc: '1348 mm' },
+        { main: 'Seat Height', desc: '787 mm' },
+        { main: 'Ground Clearance', desc: '155 mm' }
+      ]
+    },
+    {
+      id: 'electricals',
+      rows: [
+        { main: 'Battery', desc: '12V- 6Ah /ETZ-7' },
+        { main: 'Starting System', desc: 'Self' }
+      ]
+    },
+    {
+      id: 'weight',
+      rows: [
+        { main: 'Kerb Weight', desc: '142 kg' },
+        { main: 'Fuel Tank Capacity', desc: '7 L' }
+      ]
+    }
+  ];
+
+  tabData.forEach((tab) => {
+    const tabPane = document.createElement('div');
+    tabPane.id = tab.id;
+    tabPane.className = `tab-div tab-pane fade ${tab.active ? 'active show' : ''}`;
+    tabPane.setAttribute('role', 'tabpanel');
+
+    const table = document.createElement('table');
+    const tbody = document.createElement('tbody');
+
+    tab.rows.forEach((row, index) => {
+      const tr = document.createElement('tr');
+      tr.className = index % 2 === 0 ? 'even' : 'odd';
+
+      const mainTd = document.createElement('td');
+      mainTd.className = 'main-text';
+      const mainDiv = document.createElement('div');
+      mainDiv.textContent = row.main;
+      mainTd.appendChild(mainDiv);
+      tr.appendChild(mainTd);
+
+      const descTd = document.createElement('td');
+      descTd.className = 'main-desc';
+      const descDiv = document.createElement('div');
+      descDiv.textContent = row.desc;
+      descTd.appendChild(descDiv);
+      tr.appendChild(descTd);
+
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    tabPane.appendChild(table);
+    tabContent.appendChild(tabPane);
+  });
+
+  modalContent.appendChild(modalHeader);
+  modalContent.appendChild(tabList);
+  modalContent.appendChild(tabContent);
+
+  modalDialog.appendChild(closeButton);
+  modalDialog.appendChild(modalContent);
+
+  modal.appendChild(modalDialog);
+
+  // Assemble the final structure
+  specificationWrapper.appendChild(imageAnimateWrapper);
+  specificationWrapper.appendChild(textAnimateWrapper);
+  specificationWrapper.appendChild(modal);
+
+  // Replace the original block content
   block.innerHTML = '';
-
-  // Append the new structure to the block
-  block.appendChild(imageAnimateWrap);
-  block.appendChild(textAnimateWrap);
-
-  // Add modal HTML directly to the body
-  const modalHTML = `
-      <div class="modal fade" id="specModal" role="dialog">
-        <div class="modal-dialog modal-dialog-scrollable modal-cont-mw modal-xl modal-dialog-centered">
-          <div class="close" data-bs-dismiss="modal">
-            <img loading="lazy" class="specification-container-close-mob" src="/content/dam/hero-commerce/in/en/products/scooters/content-fragments/new-destini-125/assets/icons/close_cta.png" alt="close">
-          </div>
-          <div class="modal-content specification-container animate-modal-bottom">
-            <div class="modal-header">
-              <div class="spec-header">
-                SPECIFICATIONS of XOOM 160
-              </div>
-              <div class="close" data-bs-dismiss="modal">
-                <img loading="lazy" class="specification-container-close" src="/content/dam/hero-commerce/in/en/products/scooters/content-fragments/new-destini-125/assets/icons/close_icon.png" alt="close">
-              </div>
-            </div>
-            <ul class="nav nav-tabs" id="harley-specs" role="tablist">
-              <li class="tab-text active">
-                <a class="active" href="#engine" data-bs-toggle="tab" aria-selected="true" role="tab">Engine</a>
-              </li>
-              <li class="tab-text ">
-                <a href="#transmission" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Transmission</a>
-              </li>
-              <li class="tab-text ">
-                <a href="#suspension" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Suspension</a>
-              </li>
-              <li class="tab-text ">
-                <a href="#tyres" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Tyres</a>
-              </li>
-              <li class="tab-text ">
-                <a href="#dimensions" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Dimensions</a>
-              </li>
-              <li class="tab-text ">
-                <a href="#electricals" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Electricals</a>
-              </li>
-              <li class="tab-text ">
-                <a href="#weight" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab">Weight</a>
-              </li>
-            </ul>
-            <div class="tab-content modal-body">
-              <div id="engine" class="tab-div tab-pane fade active show" role="tabpanel">
-                <table>
-                  <tbody>
-                    <tr class="even">
-                      <td class="main-text"><div>Type</div></td>
-                      <td class="main-desc"><div>Liquid cooled, 4 Valve single cylinder SOHC</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Displacement</div></td>
-                      <td class="main-desc"><div>156cc</div></td>
-                    </tr>
-                    <tr class="even">
-                      <td class="main-text"><div>Max Power (bhp/rpm)</div></td>
-                      <td class="main-desc"><div>10.9 kw (14.6 bhp) @ 8000 rpm</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Max Torque (Nm/rpm)</div></td>
-                      <td class="main-desc"><div>14 Nm @ 6500 rpm</div></td>
-                    </tr>
-                    <tr class="even">
-                      <td class="main-text"><div>Ignition</div></td>
-                      <td class="main-desc"><div>Fuel Injection (FI)</div></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div id="transmission" class="tab-div tab-pane fade " role="tabpanel">
-                <table>
-                  <tbody>
-                    <tr class="even">
-                      <td class="main-text"><div>Type</div></td>
-                      <td class="main-desc"><div>CVT</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Clutch Type</div></td>
-                      <td class="main-desc"><div>Dry, Centrifugal</div></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div id="suspension" class="tab-div tab-pane fade " role="tabpanel">
-                <table>
-                  <tbody>
-                    <tr class="even">
-                      <td class="main-text"><div>Front</div></td>
-                      <td class="main-desc"><div>Telescopic Hydraulic shock absorber</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Rear</div></td>
-                      <td class="main-desc"><div>Dual shock absorbers</div></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div id="tyres" class="tab-div tab-pane fade " role="tabpanel">
-                <table>
-                  <tbody>
-                    <tr class="even">
-                      <td class="main-text"><div>Front Tyre</div></td>
-                      <td class="main-desc"><div>120/70 - 14"</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Rear Tyre</div></td>
-                      <td class="main-desc"><div>140/60 - 14"</div></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div id="dimensions" class="tab-div tab-pane fade " role="tabpanel">
-                <table>
-                  <tbody>
-                    <tr class="even">
-                      <td class="main-text"><div>Length</div></td>
-                      <td class="main-desc"><div>1983 mm</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Width</div></td>
-                      <td class="main-desc"><div>772 mm</div></td>
-                    </tr>
-                    <tr class="even">
-                      <td class="main-text"><div>Height</div></td>
-                      <td class="main-desc"><div>1214 mm</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Wheelbase</div></td>
-                      <td class="main-desc"><div>1348 mm</div></td>
-                    </tr>
-                    <tr class="even">
-                      <td class="main-text"><div>Seat Height</div></td>
-                      <td class="main-desc"><div>787 mm</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Ground Clearance</div></td>
-                      <td class="main-desc"><div>155 mm</div></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div id="electricals" class="tab-div tab-pane fade " role="tabpanel">
-                <table>
-                  <tbody>
-                    <tr class="even">
-                      <td class="main-text"><div>Battery</div></td>
-                      <td class="main-desc"><div>12V- 6Ah /ETZ-7</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Starting System</div></td>
-                      <td class="main-desc"><div>Self</div></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div id="weight" class="tab-div tab-pane fade " role="tabpanel">
-                <table>
-                  <tbody>
-                    <tr class="even">
-                      <td class="main-text"><div>Kerb Weight</div></td>
-                      <td class="main-desc"><div>142 kg</div></td>
-                    </tr>
-                    <tr class="odd">
-                      <td class="main-text"><div>Fuel Tank Capacity</div></td>
-                      <td class="main-desc"><div>7 L</div></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-
-  const modalContainer = document.createElement('div');
-  modalContainer.innerHTML = modalHTML.trim();
-  document.body.appendChild(modalContainer);
+  block.appendChild(specificationWrapper);
 }
+    

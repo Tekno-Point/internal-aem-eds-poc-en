@@ -714,7 +714,7 @@
     ]
   },
   {
-    "id": "vehicle-specification-duplicate",
+    "id": "vehicle-specification",
     "fields": [
       {
         "component": "container",
@@ -735,14 +735,14 @@
           },
           {
             "component": "reference",
-            "name": "entryMobImage",
+            "name": "entryMobileImage",
             "label": "Entry Mobile Image",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "name": "entryMobImageAlt",
+            "name": "entryMobileImageAlt",
             "label": "Entry Mobile Image Alt",
             "valueType": "string"
           },
@@ -761,14 +761,14 @@
           },
           {
             "component": "reference",
-            "name": "middleMobImage",
+            "name": "middleMobileImage",
             "label": "Middle Mobile Image",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "name": "middleMobImageAlt",
+            "name": "middleMobileImageAlt",
             "label": "Middle Mobile Image Alt",
             "valueType": "string"
           },
@@ -787,14 +787,14 @@
           },
           {
             "component": "reference",
-            "name": "lastMobImage",
+            "name": "lastMobileImage",
             "label": "Last Mobile Image",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "name": "lastMobImageAlt",
+            "name": "lastMobileImageAlt",
             "label": "Last Mobile Image Alt",
             "valueType": "string"
           }
@@ -808,19 +808,36 @@
       },
       {
         "component": "container",
-        "name": "ctaButtons",
+        "name": "ctaLinks",
         "fields": [
           {
-            "component": "reference",
-            "name": "downloadIcon",
-            "label": "Download Icon",
+            "component": "aem-content",
+            "name": "brochureLink",
+            "label": "Brochure Link",
             "valueType": "string",
-            "multi": false
+            "validation": {
+              "rootPath": "/content/dam"
+            }
           },
           {
             "component": "text",
-            "name": "downloadIconAlt",
-            "label": "Download Icon Alt",
+            "name": "brochureLinkText",
+            "label": "Brochure Link Text",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "specificationLink",
+            "label": "Specification Link",
+            "valueType": "string",
+            "validation": {
+              "rootPath": "/content"
+            }
+          },
+          {
+            "component": "text",
+            "name": "specificationLinkText",
+            "label": "Specification Link Text",
             "valueType": "string"
           }
         ]
