@@ -663,12 +663,15 @@
             "component": "text",
             "name": "mobVideoAlt",
             "label": "Mob Video Alt",
-            "valueType": "string"
+            "valueType": "string",
+            "value": ""
           },
           {
             "component": "richtext",
             "name": "mobVideoDescription",
-            "label": "Mob Video Description"
+            "label": "Mob Video Description",
+            "valueType": "string",
+            "value": ""
           }
         ]
       }
