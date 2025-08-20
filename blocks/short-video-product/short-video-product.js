@@ -18,89 +18,106 @@
 
 // export default async function decorate(block) {
 //   // 1. Restructure the DOM
-//   const children = Array.from(block.children);
+//   const heading = block.querySelector('div:nth-child(1)');
+//   heading.classList.add('f-header');
 
-//   // Extract headers
-//   const deskCarHeader = children[0].querySelector('div:nth-child(1)');
-//   const mobCarHeader = children[1].querySelector('div:nth-child(1)');
+//   const deskCar = document.createElement('div');
+//   deskCar.classList.add('desk-car');
 
-//   // Create desk-car and mob-car containers
-//   const deskCarContainer = document.createElement('div');
-//   deskCarContainer.className = 'desk-car';
-//   const mobCarContainer = document.createElement('div');
-//   mobCarContainer.className = 'mob-car';
+//   const productEventShorts = document.createElement('div');
+//   productEventShorts.classList.add('product-event-shorts');
 
-//   // Create slick containers
-//   const deskSlickContainer = document.createElement('div');
-//   deskSlickContainer.className = 'product-event-shorts';
-//   const mobSlickContainer = document.createElement('div');
-//   mobSlickContainer.className = 'product-event-shorts';
+//   const slickWrapper = document.createElement('div');
+//   slickWrapper.classList.add('slick-wrapper');
 
-//   // Move headers
-//   deskCarContainer.appendChild(deskCarHeader);
-//   mobCarContainer.appendChild(mobCarHeader);
+//   const slickTrack = document.createElement('div');
+//   slickTrack.classList.add('slick-track');
 
-//   // Move slick items
-//   children.slice(2).forEach((child, index) => {
-//     const deskVideo = child.querySelector('div:nth-child(1)');
-//     const mobVideo = child.querySelector('div:nth-child(2)');
+//   Array.from(block.children).slice(1).forEach((slide) => {
+//     const slickSlide = document.createElement('div');
+//     slickSlide.classList.add('slick-slide');
 
-//     // Create slick slide structure
-//     const deskSlickSlide = document.createElement('div');
-//     deskSlickSlide.className = 'evts-slider';
-//     deskSlickSlide.style.width = '100%';
-//     deskSlickSlide.style.display = 'inline-block';
+//     const evtsSlider = document.createElement('div');
+//     evtsSlider.classList.add('evts-slider');
 
-//     const mobSlickSlide = document.createElement('div');
-//     mobSlickSlide.className = 'evts-slider';
-//     mobSlickSlide.style.width = '100%';
-//     mobSlickSlide.style.display = 'inline-block';
+//     const desktopVideo = slide.querySelector('div:nth-child(1)');
+//     desktopVideo.classList.add('desktop-video');
+//     evtsSlider.appendChild(desktopVideo);
 
-//     // Append video containers
-//     deskSlickSlide.appendChild(deskVideo);
-//     mobSlickSlide.appendChild(mobVideo);
+//     const mobileVideo = slide.querySelector('div:nth-child(2)');
+//     mobileVideo.classList.add('mobile-video');
+//     evtsSlider.appendChild(mobileVideo);
 
-//     // Append to correct slick container
-//     deskSlickContainer.appendChild(deskSlickSlide);
-//     mobSlickContainer.appendChild(mobSlickSlide);
+//     const description = slide.querySelector('div:nth-child(3)');
+//     description.classList.add('video-det');
+//     evtsSlider.appendChild(description);
+
+//     slickSlide.appendChild(evtsSlider);
+//     slickTrack.appendChild(slickSlide);
 //   });
 
-//   // Append slick containers to car containers
-//   deskCarContainer.appendChild(deskSlickContainer);
-//   mobCarContainer.appendChild(mobSlickContainer);
+//   slickWrapper.appendChild(slickTrack);
+//   productEventShorts.appendChild(slickWrapper);
+//   deskCar.appendChild(productEventShorts);
 
-//   // Clear block and append new structure
+//   const mobCar = document.createElement('div');
+//   mobCar.classList.add('mob-car');
+
+//   const mHeader = document.createElement('div');
+//   mHeader.classList.add('m-header');
+//   mHeader.innerHTML = heading.innerHTML;
+//   mobCar.appendChild(mHeader);
+
+//   const mobProductEventShorts = document.createElement('div');
+//   mobProductEventShorts.classList.add('product-event-shorts');
+
+//   const mobSlickWrapper = document.createElement('div');
+//   mobSlickWrapper.classList.add('slick-wrapper');
+
+//   const mobSlickTrack = document.createElement('div');
+//   mobSlickTrack.classList.add('slick-track');
+
+//   Array.from(slickTrack.children).forEach((slide) => {
+//     const mobSlide = slide.cloneNode(true);
+//     mobSlide.classList.add('mob-slide');
+//     mobSlickTrack.appendChild(mobSlide);
+//   });
+
+//   mobSlickWrapper.appendChild(mobSlickTrack);
+//   mobProductEventShorts.appendChild(mobSlickWrapper);
+//   mobCar.appendChild(mobProductEventShorts);
+
 //   block.innerHTML = '';
-//   block.appendChild(deskCarContainer);
-//   block.appendChild(mobCarContainer);
+//   block.appendChild(heading);
+//   block.appendChild(deskCar);
+//   block.appendChild(mobCar);
 
 //   // 2. Handle Dependencies
 //   await loadSlickAssets();
 
 //   // 3. Initialize Slick
-//   $(deskSlickContainer).slick({
+//   $(productEventShorts).slick({
 //     slidesToShow: 3,
 //     slidesToScroll: 1,
 //     arrows: true,
-//     prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
-//     nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>',
+//     dots: false,
 //     responsive: [
 //       {
 //         breakpoint: 768,
 //         settings: {
 //           slidesToShow: 1,
-//           slidesToScroll: 1
+//           slidesToScroll: 1,
+//           arrows: true,
+//           dots: false,
 //         }
 //       }
 //     ]
 //   });
 
-//   $(mobSlickContainer).slick({
+//   $(mobProductEventShorts).slick({
 //     slidesToShow: 1,
 //     slidesToScroll: 1,
 //     arrows: true,
-//     prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
-//     nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>'
+//     dots: false,
 //   });
 // }
-    

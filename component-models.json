@@ -591,89 +591,61 @@
     "id": "short-video-product",
     "fields": [
       {
-        "component": "container",
-        "name": "deskCar",
-        "fields": [
-          {
-            "component": "richtext",
-            "name": "deskCarHeader",
-            "label": "Desk Car Header",
-            "valueType": "string",
-            "value": ""
-          }
-        ]
-      },
-      {
-        "component": "container",
-        "name": "mobCar",
-        "fields": [
-          {
-            "component": "richtext",
-            "name": "mobCarHeader",
-            "label": "Mob Car Header",
-            "valueType": "string",
-            "value": ""
-          }
-        ]
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
       }
     ]
   },
   {
-    "id": "short-video-product-item",
+    "id": "short-video",
     "fields": [
       {
         "component": "container",
-        "name": "deskCarItem",
+        "name": "Desktop Video",
         "fields": [
           {
             "component": "reference",
-            "name": "deskVideo",
-            "label": "Desk Video",
+            "name": "desktopVideo",
+            "label": "Desktop Video",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "name": "deskVideoAlt",
-            "label": "Desk Video Alt",
-            "valueType": "string",
-            "value": ""
-          },
-          {
-            "component": "richtext",
-            "name": "deskVideoDescription",
-            "label": "Desk Video Description",
-            "valueType": "string",
-            "value": ""
+            "name": "desktopVideoAlt",
+            "label": "Desktop Video Alt",
+            "valueType": "string"
           }
         ]
       },
       {
         "component": "container",
-        "name": "mobCarItem",
+        "name": "Mobile Video",
         "fields": [
           {
             "component": "reference",
-            "name": "mobVideo",
-            "label": "Mob Video",
+            "name": "mobileVideo",
+            "label": "Mobile Video",
             "valueType": "string",
             "multi": false
           },
           {
             "component": "text",
-            "name": "mobVideoAlt",
-            "label": "Mob Video Alt",
-            "valueType": "string",
-            "value": ""
-          },
-          {
-            "component": "richtext",
-            "name": "mobVideoDescription",
-            "label": "Mob Video Description",
-            "valueType": "string",
-            "value": ""
+            "name": "mobileVideoAlt",
+            "label": "Mobile Video Alt",
+            "valueType": "string"
           }
         ]
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
       }
     ]
   },
