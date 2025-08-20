@@ -714,7 +714,7 @@
     ]
   },
   {
-    "id": "vehicle-specification",
+    "id": "vehicle-specification-duplicate",
     "fields": [
       {
         "component": "container",

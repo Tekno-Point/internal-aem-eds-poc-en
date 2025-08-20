@@ -65,7 +65,7 @@
     ]
   },
   {
-    "id": "vehicle-specification",
+    "id": "vehicle-specification-duplicate",
     "components": [
       "feature"
     ]
