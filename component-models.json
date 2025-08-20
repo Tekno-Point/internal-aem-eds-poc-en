@@ -714,6 +714,131 @@
     ]
   },
   {
+    "id": "vehicle-specification-duplicate",
+    "fields": [
+      {
+        "component": "container",
+        "name": "imageAnimation",
+        "fields": [
+          {
+            "component": "reference",
+            "name": "entryImage",
+            "label": "Entry Image",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "name": "entryImageAlt",
+            "label": "Entry Image Alt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "entryMobImage",
+            "label": "Entry Mobile Image",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "name": "entryMobImageAlt",
+            "label": "Entry Mobile Image Alt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "middleImage",
+            "label": "Middle Image",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "name": "middleImageAlt",
+            "label": "Middle Image Alt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "middleMobImage",
+            "label": "Middle Mobile Image",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "name": "middleMobImageAlt",
+            "label": "Middle Mobile Image Alt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "lastImage",
+            "label": "Last Image",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "name": "lastImageAlt",
+            "label": "Last Image Alt",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "lastMobImage",
+            "label": "Last Mobile Image",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "name": "lastMobImageAlt",
+            "label": "Last Mobile Image Alt",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "features",
+        "label": "Features",
+        "valueType": "string"
+      },
+      {
+        "component": "container",
+        "name": "ctaButtons",
+        "fields": [
+          {
+            "component": "reference",
+            "name": "downloadIcon",
+            "label": "Download Icon",
+            "valueType": "string",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "name": "downloadIconAlt",
+            "label": "Download Icon Alt",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "feature",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "featureText",
+        "label": "Feature Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "vehicle-specification",
     "fields": [
       {

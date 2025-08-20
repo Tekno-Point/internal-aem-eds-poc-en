@@ -1,123 +1,75 @@
 
-// /**
-//  * Dynamically loads Slick's CSS and JS assets and waits for them to load.
-//  */
-// async function loadSlickAssets() {
-//   const css = document.createElement('link');
-//   css.rel = 'stylesheet';
-//   css.href = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css';
-//   document.head.appendChild(css);
+/**
+ * Dynamically loads Slick's CSS and JS assets and waits for them to load.
+ */
+async function loadSlickAssets() {
+  const css = document.createElement('link');
+  css.rel = 'stylesheet';
+  css.href = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css';
+  document.head.appendChild(css);
 
-//   await new Promise((resolve) => {
-//     const script = document.createElement('script');
-//     script.src = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
-//     script.onload = resolve;
-//     document.head.appendChild(script);
-//   });
-// }
+  await new Promise((resolve) => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
+    script.onload = resolve;
+    document.head.appendChild(script);
+  });
+}
 
-// export default async function decorate(block) {
-//   // 1. Restructure the DOM
-//   const heading = block.querySelector('div:nth-child(1)');
-//   heading.classList.add('f-header');
+export default async function decorate(block) {
+  // 1. Restructure the DOM
+  const deskWrapper = document.createElement('div');
+  deskWrapper.classList.add('desk-car');
+  deskWrapper.classList.add('product-event-shorts');
 
-//   const deskCar = document.createElement('div');
-//   deskCar.classList.add('desk-car');
+  const mobWrapper = document.createElement('div');
+  mobWrapper.classList.add('mob-car');
+  mobWrapper.classList.add('product-event-shorts');
 
-//   const productEventShorts = document.createElement('div');
-//   productEventShorts.classList.add('product-event-shorts');
+  const children = [...block.children];
+  const heading = children[0];
 
-//   const slickWrapper = document.createElement('div');
-//   slickWrapper.classList.add('slick-wrapper');
+  children.slice(1).forEach((slide) => {
+    slide.classList.add('evts-slider');
 
-//   const slickTrack = document.createElement('div');
-//   slickTrack.classList.add('slick-track');
+    // Get a static list of children BEFORE any DOM changes
+    const childDivs = [...slide.children];
+    const desktopVideo = childDivs[0];
+    const mobileVideo = childDivs[1];
+    const description = childDivs[2];
 
-//   Array.from(block.children).slice(1).forEach((slide) => {
-//     const slickSlide = document.createElement('div');
-//     slickSlide.classList.add('slick-slide');
+    if (desktopVideo) desktopVideo.classList.add('desktop-video');
+    if (mobileVideo) mobileVideo.classList.add('mobile-video');
+    if (description) description.classList.add('video-det');
 
-//     const evtsSlider = document.createElement('div');
-//     evtsSlider.classList.add('evts-slider');
+    deskWrapper.append(slide); // Move after all processing
+    mobWrapper.append(slide.cloneNode(true)); // Move after all processing
+  });
 
-//     const desktopVideo = slide.querySelector('div:nth-child(1)');
-//     desktopVideo.classList.add('desktop-video');
-//     evtsSlider.appendChild(desktopVideo);
+  block.textContent = '';
+  block.append(heading, deskWrapper, mobWrapper);
 
-//     const mobileVideo = slide.querySelector('div:nth-child(2)');
-//     mobileVideo.classList.add('mobile-video');
-//     evtsSlider.appendChild(mobileVideo);
+  // 2. Handle Dependencies
+  await loadSlickAssets();
 
-//     const description = slide.querySelector('div:nth-child(3)');
-//     description.classList.add('video-det');
-//     evtsSlider.appendChild(description);
+  // 3. Initialize Slick
+  // eslint-disable-next-line no-undef, no-new
+  $(deskWrapper).slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
+  });
 
-//     slickSlide.appendChild(evtsSlider);
-//     slickTrack.appendChild(slickSlide);
-//   });
-
-//   slickWrapper.appendChild(slickTrack);
-//   productEventShorts.appendChild(slickWrapper);
-//   deskCar.appendChild(productEventShorts);
-
-//   const mobCar = document.createElement('div');
-//   mobCar.classList.add('mob-car');
-
-//   const mHeader = document.createElement('div');
-//   mHeader.classList.add('m-header');
-//   mHeader.innerHTML = heading.innerHTML;
-//   mobCar.appendChild(mHeader);
-
-//   const mobProductEventShorts = document.createElement('div');
-//   mobProductEventShorts.classList.add('product-event-shorts');
-
-//   const mobSlickWrapper = document.createElement('div');
-//   mobSlickWrapper.classList.add('slick-wrapper');
-
-//   const mobSlickTrack = document.createElement('div');
-//   mobSlickTrack.classList.add('slick-track');
-
-//   Array.from(slickTrack.children).forEach((slide) => {
-//     const mobSlide = slide.cloneNode(true);
-//     mobSlide.classList.add('mob-slide');
-//     mobSlickTrack.appendChild(mobSlide);
-//   });
-
-//   mobSlickWrapper.appendChild(mobSlickTrack);
-//   mobProductEventShorts.appendChild(mobSlickWrapper);
-//   mobCar.appendChild(mobProductEventShorts);
-
-//   block.innerHTML = '';
-//   block.appendChild(heading);
-//   block.appendChild(deskCar);
-//   block.appendChild(mobCar);
-
-//   // 2. Handle Dependencies
-//   await loadSlickAssets();
-
-//   // 3. Initialize Slick
-//   $(productEventShorts).slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     arrows: true,
-//     dots: false,
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1,
-//           arrows: true,
-//           dots: false,
-//         }
-//       }
-//     ]
-//   });
-
-//   $(mobProductEventShorts).slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: true,
-//     dots: false,
-//   });
-// }
+  // eslint-disable-next-line no-undef, no-new
+  $(mobWrapper).slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
+  });
+}
