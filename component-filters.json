@@ -50,7 +50,7 @@
   {
     "id": "short-video-product",
     "components": [
-      "short-video"
+      "short-video-product-item"
     ]
   },
   {
