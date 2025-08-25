@@ -1,4 +1,7 @@
 import {
+  sampleRUM,
+  getAllMetadata,
+  getMetadata,
   loadHeader,
   loadFooter,
   decorateButtons,
@@ -6,472 +9,178 @@ import {
   decorateSections,
   decorateBlocks,
   decorateTemplateAndTheme,
-  waitForFirstImage,
-  loadSection,
-  loadSections,
+  waitForLCP,
+  loadBlocks,
   loadCSS,
-  toClassName,
-} from './aem.js';
+  buildBlock,
+  readBlockConfig,
+} from './lib-franklin.js';
+import {
+  analyticsTrack404,
+  analyticsTrackConversion,
+  analyticsTrackCWV,
+  analyticsTrackError,
+  initAnalyticsTrackingQueue,
+  setupAnalyticsTrackingWithAlloy,
+} from './analytics/lib-analytics.js';
 
-/**
- * Moves all the attributes from a given elmenet to another given element.
- * @param {Element} from the element to copy attributes from
- * @param {Element} to the element to copy attributes to
- */
-export function moveAttributes(from, to, attributes) {
-  if (!attributes) {
-    // eslint-disable-next-line no-param-reassign
-    attributes = [...from.attributes].map(({ nodeName }) => nodeName);
-  }
-  attributes.forEach((attr) => {
-    const value = from.getAttribute(attr);
-    if (value) {
-      to.setAttribute(attr, value);
-      from.removeAttribute(attr);
-    }
-  });
-}
+const LCP_BLOCKS = []; // add your LCP blocks to the list
+window.hlx.RUM_GENERATION = 'project-1'; // add your RUM generation information here
 
-/**
- * Move instrumentation attributes from a given element to another given element.
- * @param {Element} from the element to copy attributes from
- * @param {Element} to the element to copy attributes to
- */
-export function moveInstrumentation(from, to) {
-  moveAttributes(
-    from,
-    to,
-    [...from.attributes]
-      .map(({ nodeName }) => nodeName)
-      .filter((attr) => attr.startsWith('data-aue-') || attr.startsWith('data-richtext-')),
-  );
-}
-
-/**
- * load fonts.css and set a session storage flag
- */
-async function loadFonts() {
-  await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
-  try {
-    if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
-  } catch (e) {
-    // do nothing
-  }
-}
-
-function autolinkModals(element) {
-  element.addEventListener('click', async (e) => {
-    const origin = e.target.closest('a');
-
-    if (origin && origin.href && origin.href.includes('/modals/')) {
-      e.preventDefault();
-      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
-      openModal(origin.href);
-    }
-  });
-}
-
-function createFieldWrapper(fd) {
-  const fieldWrapper = document.createElement('div');
-  if (fd.Style) fieldWrapper.className = fd.Style;
-  fieldWrapper.classList.add('field-wrapper', `${fd.Type}-wrapper`);
-
-  fieldWrapper.dataset.fieldset = fd.Fieldset;
-
-  return fieldWrapper;
-}
-
-const ids = [];
-function generateFieldId(fd, suffix = '') {
-  const slug = toClassName(`form-${fd.Name}${suffix}`);
-  ids[slug] = ids[slug] || 0;
-  const idSuffix = ids[slug] ? `-${ids[slug]}` : '';
-  ids[slug] += 1;
-  return `${slug}${idSuffix}`;
-}
-
-function createLabel(fd) {
-  const label = document.createElement('label');
-  label.id = generateFieldId(fd, '-label');
-  label.textContent = fd.Label || fd.Name;
-  label.setAttribute('for', fd.Id);
-  if (fd.Mandatory.toLowerCase() === 'true' || fd.Mandatory.toLowerCase() === 'x') {
-    label.dataset.required = true;
-  }
-  return label;
-}
-
-function setCommonAttributes(field, fd) {
-  field.id = fd.Id;
-  field.name = fd.Name;
-  field.required = fd.Mandatory && (fd.Mandatory.toLowerCase() === 'true' || fd.Mandatory.toLowerCase() === 'x');
-  field.placeholder = fd.Placeholder;
-  field.value = fd.Value;
-}
-
-const createHeading = (fd) => {
-  const fieldWrapper = createFieldWrapper(fd);
-
-  const level = fd.Style && fd.Style.includes('sub-heading') ? 3 : 2;
-  const heading = document.createElement(`h${level}`);
-  heading.textContent = fd.Value || fd.Label;
-  heading.id = fd.Id;
-
-  fieldWrapper.append(heading);
-
-  return { field: heading, fieldWrapper };
+// Define the custom audiences mapping for experience decisioning
+const AUDIENCES = {
+  mobile: () => window.innerWidth < 600,
+  desktop: () => window.innerWidth >= 600,
+  'new-visitor': () => !localStorage.getItem('franklin-visitor-returning'),
+  'returning-visitor': () => !!localStorage.getItem('franklin-visitor-returning'),
 };
 
-const createPlaintext = (fd) => {
-  const fieldWrapper = createFieldWrapper(fd);
+window.hlx.plugins.add('rum-conversion', {
+  url: '/plugins/rum-conversion/src/index.js',
+  load: 'lazy',
+});
 
-  const text = document.createElement('p');
-  text.textContent = fd.Value || fd.Label;
-  text.id = fd.Id;
+window.hlx.plugins.add('experimentation', {
+  condition: () => getMetadata('experiment')
+    || Object.keys(getAllMetadata('campaign')).length
+    || Object.keys(getAllMetadata('audience')).length,
+  options: { audiences: AUDIENCES },
+  load: 'eager',
+  url: '/plugins/experimentation/src/index.js',
+});
 
-  fieldWrapper.append(text);
+export function getSiteRoot(level = 3, path = window.location.pathname) {
+  return path.split(/[/.]/, level).join('/');
+}
 
-  return { field: text, fieldWrapper };
-};
+/**
+ * Determine if we are serving content for the block-library, if so don't load the header or footer
+ * @returns {boolean} True if we are loading block library content
+ */
+export function isBlockLibrary() {
+  return window.location.pathname.includes('block-library');
+}
 
-const createSelect = async (fd) => {
-  const select = document.createElement('select');
-  setCommonAttributes(select, fd);
-  const addOption = ({ text, value }) => {
-    const option = document.createElement('option');
-    option.text = text.trim();
-    option.value = value.trim();
-    if (option.value === fd.Value) {
-      option.setAttribute('selected', '');
-    }
-    select.add(option);
-    return option;
-  };
-
-  if (fd.Placeholder) {
-    const ph = addOption({ text: fd.Placeholder, value: '' });
-    ph.setAttribute('disabled', '');
-  }
-
-  if (fd.Options) {
-    let options = [];
-    if (fd.Options.startsWith('https://')) {
-      const optionsUrl = new URL(fd.Options);
-      const resp = await fetch(`${optionsUrl.pathname}${optionsUrl.search}`);
-      const json = await resp.json();
-      json.data.forEach((opt) => {
-        options.push({
-          text: opt.Option,
-          value: opt.Value || opt.Option,
-        });
-      });
+/**
+ * Convience method for creating tags in one line of code
+ * @param {string} tag Tag to create
+ * @param {object} attributes Key/value object of attributes
+ * @param {HTMLElement | HTMLElement[] | string} children Child element
+ * @returns {HTMLElement} The created tag
+ */
+export function createTag(tag, attributes, children) {
+  const element = document.createElement(tag);
+  if (children) {
+    if (children instanceof HTMLElement
+      || children instanceof SVGElement
+      || children instanceof DocumentFragment) {
+      element.append(children);
+    } else if (Array.isArray(children)) {
+      element.append(...children);
     } else {
-      options = fd.Options.split(',').map((opt) => ({
-        text: opt.trim(),
-        value: opt.trim(),
+      element.insertAdjacentHTML('beforeend', children);
+    }
+  }
+  if (attributes) {
+    Object.entries(attributes).forEach(([key, val]) => {
+      element.setAttribute(key, val);
+    });
+  }
+  return element;
+}
+
+function buildTabs(main) {
+  const tabs = [...main.querySelectorAll(':scope > div')]
+    .map((section) => {
+      // section metadata not yet parsed
+      const sectionMeta = section.querySelector('div.section-metadata');
+      if (sectionMeta) {
+        const meta = readBlockConfig(sectionMeta);
+        return [section, meta.tab];
+      }
+      return [];
+    })
+    .filter((el) => !!el);
+  if (tabs.length) {
+    const section = document.createElement('div');
+    section.className = 'section';
+    const ul = document.createElement('ul');
+    ul.append(...tabs
+      .map(([, tab]) => {
+        const li = document.createElement('li');
+        li.innerText = tab;
+        return li;
       }));
-    }
-
-    options.forEach((opt) => addOption(opt));
-  }
-
-  const fieldWrapper = createFieldWrapper(fd);
-  fieldWrapper.append(select);
-  fieldWrapper.prepend(createLabel(fd));
-
-  return { field: select, fieldWrapper };
-};
-
-const createConfirmation = (fd, form) => {
-  form.dataset.confirmation = new URL(fd.Value).pathname;
-
-  return {};
-};
-
-const createSubmit = (fd) => {
-  const button = document.createElement('button');
-  button.textContent = fd.Label || fd.Name;
-  button.classList.add('button');
-  button.type = 'submit';
-
-  const fieldWrapper = createFieldWrapper(fd);
-  fieldWrapper.append(button);
-  return { field: button, fieldWrapper };
-};
-
-const createTextArea = (fd) => {
-  const field = document.createElement('textarea');
-  setCommonAttributes(field, fd);
-
-  const fieldWrapper = createFieldWrapper(fd);
-  const label = createLabel(fd);
-  field.setAttribute('aria-labelledby', label.id);
-  fieldWrapper.append(field);
-  fieldWrapper.prepend(label);
-
-  return { field, fieldWrapper };
-};
-
-const createInput = (fd) => {
-  const field = document.createElement('input');
-  field.type = fd.Type;
-  setCommonAttributes(field, fd);
-
-  const fieldWrapper = createFieldWrapper(fd);
-  const label = createLabel(fd);
-  field.setAttribute('aria-labelledby', label.id);
-  fieldWrapper.append(field);
-  if (fd.Type === 'radio' || fd.Type === 'checkbox') {
-    fieldWrapper.append(label);
-  } else {
-    fieldWrapper.prepend(label);
-  }
-
-  return { field, fieldWrapper };
-};
-
-const createFieldset = (fd) => {
-  const field = document.createElement('fieldset');
-  setCommonAttributes(field, fd);
-
-  if (fd.Label) {
-    const legend = document.createElement('legend');
-    legend.textContent = fd.Label;
-    field.append(legend);
-  }
-
-  const fieldWrapper = createFieldWrapper(fd);
-  fieldWrapper.append(field);
-
-  return { field, fieldWrapper };
-};
-
-const createToggle = (fd) => {
-  const { field, fieldWrapper } = createInput(fd);
-  field.type = 'checkbox';
-  if (!field.value) field.value = 'on';
-  field.classList.add('toggle');
-  fieldWrapper.classList.add('selection-wrapper');
-
-  const toggleSwitch = document.createElement('div');
-  toggleSwitch.classList.add('switch');
-  toggleSwitch.append(field);
-  fieldWrapper.append(toggleSwitch);
-
-  const slider = document.createElement('span');
-  slider.classList.add('slider');
-  toggleSwitch.append(slider);
-  slider.addEventListener('click', () => {
-    field.checked = !field.checked;
-  });
-
-  return { field, fieldWrapper };
-};
-
-const createCheckbox = (fd) => {
-  const { field, fieldWrapper } = createInput(fd);
-  if (!field.value) field.value = 'checked';
-  fieldWrapper.classList.add('selection-wrapper');
-
-  return { field, fieldWrapper };
-};
-
-const createRadio = (fd) => {
-  const { field, fieldWrapper } = createInput(fd);
-  if (!field.value) field.value = fd.Label || 'on';
-  fieldWrapper.classList.add('selection-wrapper');
-
-  return { field, fieldWrapper };
-};
-
-const FIELD_CREATOR_FUNCTIONS = {
-  select: createSelect,
-  heading: createHeading,
-  plaintext: createPlaintext,
-  'text-area': createTextArea,
-  toggle: createToggle,
-  submit: createSubmit,
-  confirmation: createConfirmation,
-  fieldset: createFieldset,
-  checkbox: createCheckbox,
-  radio: createRadio,
-};
-
-export async function createField(fd, form) {
-  fd.Id = fd.Id || generateFieldId(fd);
-  const type = fd.Type.toLowerCase();
-  const createFieldFunc = FIELD_CREATOR_FUNCTIONS[type] || createInput;
-  const fieldElements = await createFieldFunc(fd, form);
-
-  return fieldElements.fieldWrapper;
-}
-
-/**
- * Loads a fragment.
- * @param {string} path The path to the fragment
- * @returns {HTMLElement} The root element of the fragment
- */
-export async function loadFragment(path) {
-  if (path && path.startsWith('/')) {
-    // eslint-disable-next-line no-param-reassign
-    path = path.replace(/(\.plain)?\.html/, '');
-    const resp = await fetch(`${path}.plain.html`);
-    if (resp.ok) {
-      const main = document.createElement('main');
-      main.innerHTML = await resp.text();
-
-      // reset base path for media to fragment base
-      const resetAttributeBase = (tag, attr) => {
-        main.querySelectorAll(`${tag}[${attr}^="./media_"]`).forEach((elem) => {
-          elem[attr] = new URL(elem.getAttribute(attr), new URL(path, window.location)).href;
-        });
-      };
-      resetAttributeBase('img', 'src');
-      resetAttributeBase('source', 'srcset');
-      // eslint-disable-next-line
-      decorateMain(main);
-      await loadSections(main);
-      return main;
-    }
-  }
-  return null;
-}
-
-export default async function decorateFragment(block) {
-  const link = block.querySelector('a');
-  const path = link ? link.getAttribute('href') : block.textContent.trim();
-  const fragment = await loadFragment(path);
-  if (fragment) {
-    const fragmentSection = fragment.querySelector(':scope .section');
-    if (fragmentSection) {
-      block.classList.add(...fragmentSection.classList);
-      block.classList.remove('section');
-      block.replaceChildren(...fragmentSection.childNodes);
-    }
+    const tabsBlock = buildBlock('tabs', [[ul]]);
+    section.append(tabsBlock);
+    tabs[0][0].insertAdjacentElement('beforebegin', section);
   }
 }
 
-async function createForm(formHref, submitHref) {
-  const { pathname } = new URL(formHref);
-  const resp = await fetch(pathname);
-  const json = await resp.json();
-
-  const form = document.createElement('form');
-  form.dataset.action = submitHref;
-
-  const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
-  fields.forEach((field) => {
-    if (field) {
-      form.append(field);
-    }
-  });
-
-  // group fields into fieldsets
-  const fieldsets = form.querySelectorAll('fieldset');
-  fieldsets.forEach((fieldset) => {
-    form.querySelectorAll(`[data-fieldset="${fieldset.name}"`).forEach((field) => {
-      fieldset.append(field);
-    });
-  });
-
-  return form;
-}
-
-function generatePayload(form) {
-  const payload = {};
-
-  [...form.elements].forEach((field) => {
-    if (field.name && field.type !== 'submit' && !field.disabled) {
-      if (field.type === 'radio') {
-        if (field.checked) payload[field.name] = field.value;
-      } else if (field.type === 'checkbox') {
-        if (field.checked) payload[field.name] = payload[field.name] ? `${payload[field.name]},${field.value}` : field.value;
-      } else {
-        payload[field.name] = field.value;
-      }
-    }
-  });
-  return payload;
-}
-
-async function handleSubmit(form) {
-  if (form.getAttribute('data-submitting') === 'true') return;
-
-  const submit = form.querySelector('button[type="submit"]');
-  try {
-    form.setAttribute('data-submitting', 'true');
-    submit.disabled = true;
-
-    // create payload
-    const payload = generatePayload(form);
-    const response = await fetch(form.dataset.action, {
-      method: 'POST',
-      body: JSON.stringify({ data: payload }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    if (response.ok) {
-      if (form.dataset.confirmation) {
-        window.location.href = form.dataset.confirmation;
-      }
-    } else {
-      const error = await response.text();
-      throw new Error(error);
-    }
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.error(e);
-  } finally {
-    form.setAttribute('data-submitting', 'false');
-    submit.disabled = false;
-  }
-}
-
-export async function decorateForm(block) {
-  const formLink = block.querySelector('a').href;
-  const submitLink = '/api';
-  // if (!formLink || !submitLink) return;
-
-  const form = await createForm(formLink, submitLink);
-  block.replaceChildren(form);
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const valid = form.checkValidity();
-    if (valid) {
-      handleSubmit(form);
-    } else {
-      const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
-      if (firstInvalidEl) {
-        firstInvalidEl.focus();
-        firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
-}
-
-function loadAutoBlock(doc) {
-  doc.querySelectorAll('a').forEach((a) => {
-    if (a && a.href && a.href.includes('/fragments/')) {
-      decorateFragment(a.parentElement);
-    } else if (a && a.href && a.href.includes('/forms/')) {
-      decorateForm(a.parentElement);
-    }
-  });
-}
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
 function buildAutoBlocks(main) {
   try {
-    // TODO: add auto block, if needed
-    loadAutoBlock(main);
+    buildTabs(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
   }
+}
+
+function patchDemoBlocks(config) {
+  if (window.wknd.demoConfig.blocks && window.wknd.demoConfig.blocks[config.blockName]) {
+    const url = window.wknd.demoConfig.blocks[config.blockName];
+    const splits = new URL(url).pathname.split('/');
+    const [, owner, repo, , branch] = splits;
+    const path = splits.slice(5).join('/');
+
+    const franklinPath = `https://little-forest-58aa.david8603.workers.dev/?url=https://${branch}--${repo}--${owner}.hlx.live/${path}`;
+    return {
+      ...config,
+      jsPath: `${franklinPath}/${config.blockName}.js`,
+      cssPath: `${franklinPath}/${config.blockName}.css`,
+    };
+  }
+  return (config);
+}
+
+async function loadDemoConfig() {
+  const demoConfig = {};
+  const pathSegments = window.location.pathname.split('/');
+  if (window.location.pathname.startsWith('/drafts/') && pathSegments.length > 4) {
+    const demoBase = pathSegments.slice(0, 4).join('/');
+    const resp = await fetch(`${demoBase}/theme.json?sheet=default&sheet=blocks&`);
+    if (resp.status === 200) {
+      const json = await resp.json();
+      const tokens = json.data || json.default.data;
+      const root = document.querySelector(':root');
+      tokens.forEach((e) => {
+        root.style.setProperty(`--${e.token}`, `${e.value}`);
+        demoConfig[e.token] = e.value;
+      });
+      demoConfig.tokens = tokens;
+      demoConfig.demoBase = demoBase;
+      const blocks = json.blocks ? json.blocks.data : [];
+      demoConfig.blocks = {};
+      blocks.forEach((block) => {
+        demoConfig.blocks[block.name] = block.url;
+      });
+
+      window.hlx.patchBlockConfig.push(patchDemoBlocks);
+    }
+
+    if (!demoConfig.demoBase) {
+      const navCheck = await fetch(`${demoBase}/nav.plain.html`);
+      if (navCheck.status === 200) {
+        demoConfig.demoBase = demoBase;
+      }
+    }
+  }
+  window.wknd = window.wknd || {};
+  window.wknd.demoConfig = demoConfig;
 }
 
 /**
@@ -489,64 +198,168 @@ export function decorateMain(main) {
 }
 
 /**
- * Loads everything needed to get to LCP.
- * @param {Element} doc The container element
+ * loads everything needed to get to LCP.
  */
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+
+  await window.hlx.plugins.run('loadEager');
+
+  // load demo config
+  await loadDemoConfig();
+
   const main = doc.querySelector('main');
   if (main) {
+    await initAnalyticsTrackingQueue();
     decorateMain(main);
-    document.body.classList.add('appear');
-    await loadSection(main.querySelector('.section'), waitForFirstImage);
-  }
-
-  try {
-    /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
-    if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
-      loadFonts();
-    }
-  } catch (e) {
-    // do nothing
+    await waitForLCP(LCP_BLOCKS);
   }
 }
 
 /**
- * Loads everything that doesn't need to be delayed.
- * @param {Element} doc The container element
+ * Adds the favicon.
+ * @param {string} href The favicon URL
+ */
+export function addFavIcon(href) {
+  const link = document.createElement('link');
+  link.rel = 'icon';
+  link.type = 'image/png';
+  link.href = href;
+  const existingLink = document.querySelector('head link[rel="icon"]');
+  if (existingLink) {
+    existingLink.parentElement.replaceChild(link, existingLink);
+  } else {
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+}
+
+/**
+ * loads everything that doesn't need to be delayed.
  */
 async function loadLazy(doc) {
-  autolinkModals(doc);
   const main = doc.querySelector('main');
-  await loadSections(main);
+  await loadBlocks(main);
 
   const { hash } = window.location;
-  const element = hash ? doc.getElementById(hash.substring(1)) : false;
+  const element = hash ? main.querySelector(hash) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  if (!isBlockLibrary()) {
+    loadHeader(doc.querySelector('header'));
+    loadFooter(doc.querySelector('footer'));
+  }
 
-  loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
-  loadFonts();
-  loadAutoBlock(doc);
+  if (window.wknd.demoConfig.fonts) {
+    const fonts = window.wknd.demoConfig.fonts.split('\n');
+    fonts.forEach(async (font) => {
+      const [family, url] = font.split(': ');
+      const ff = new FontFace(family, `url('${url}')`);
+      await ff.load();
+      document.fonts.add(ff);
+    });
+  } else {
+    loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
+  }
+  addFavIcon(`${window.wknd.demoConfig.demoBase || window.hlx.codeBasePath}/favicon.png`);
+  sampleRUM('lazy');
+  sampleRUM.observe(main.querySelectorAll('div[data-block-name]'));
+  sampleRUM.observe(main.querySelectorAll('picture > img'));
+
+  // Mark customer as having viewed the page once
+  localStorage.setItem('franklin-visitor-returning', true);
+
+  window.hlx.plugins.run('loadLazy');
 }
 
 /**
- * Loads everything that happens a lot later,
- * without impacting the user experience.
+ * loads everything that happens a lot later, without impacting
+ * the user experience.
  */
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+  window.setTimeout(() => {
+    window.hlx.plugins.load('delayed');
+    window.hlx.plugins.run('loadDelayed');
+    return import('./delayed.js');
+  }, 3000);
   // load anything that can be postponed to the latest here
 }
 
 async function loadPage() {
+  await window.hlx.plugins.load('eager');
   await loadEager(document);
+  await window.hlx.plugins.load('lazy');
   await loadLazy(document);
+  const setupAnalytics = setupAnalyticsTrackingWithAlloy(document);
   loadDelayed();
+  await setupAnalytics;
 }
+
+const cwv = {};
+
+// Forward the RUM CWV cached measurements to edge using WebSDK before the page unloads
+window.addEventListener('beforeunload', () => {
+  if (!Object.keys(cwv).length) return;
+  analyticsTrackCWV(cwv);
+});
+
+// Callback to RUM CWV checkpoint in order to cache the measurements
+sampleRUM.always.on('cwv', async (data) => {
+  if (!data.cwv) return;
+  Object.assign(cwv, data.cwv);
+});
+
+sampleRUM.always.on('404', analyticsTrack404);
+sampleRUM.always.on('error', analyticsTrackError);
+
+// Declare conversionEvent, bufferTimeoutId and tempConversionEvent,
+// outside the convert function to persist them for buffering between
+// subsequent convert calls
+const CONVERSION_EVENT_TIMEOUT_MS = 100;
+let bufferTimeoutId;
+let conversionEvent;
+let tempConversionEvent;
+sampleRUM.always.on('convert', (data) => {
+  const { element } = data;
+  // eslint-disable-next-line no-undef
+  if (!element || !alloy) {
+    return;
+  }
+
+  if (element.tagName === 'FORM') {
+    conversionEvent = {
+      ...data,
+      event: 'Form Complete',
+    };
+
+    if (conversionEvent.event === 'Form Complete'
+      // Check for undefined, since target can contain value 0 as well, which is falsy
+      && (data.target === undefined || data.source === undefined)
+    ) {
+      // If a buffer has already been set and tempConversionEvent exists,
+      // merge the two conversionEvent objects to send to alloy
+      if (bufferTimeoutId && tempConversionEvent) {
+        conversionEvent = { ...tempConversionEvent, ...conversionEvent };
+      } else {
+        // Temporarily hold the conversionEvent object until the timeout is complete
+        tempConversionEvent = { ...conversionEvent };
+
+        // If there is partial form conversion data,
+        // set the timeout buffer to wait for additional data
+        bufferTimeoutId = setTimeout(async () => {
+          analyticsTrackConversion({ ...conversionEvent });
+          tempConversionEvent = undefined;
+          conversionEvent = undefined;
+        }, CONVERSION_EVENT_TIMEOUT_MS);
+      }
+    }
+    return;
+  }
+
+  analyticsTrackConversion({ ...data });
+  tempConversionEvent = undefined;
+  conversionEvent = undefined;
+});
 
 loadPage();
