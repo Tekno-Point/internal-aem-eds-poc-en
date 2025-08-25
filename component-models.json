@@ -140,14 +140,14 @@
     "id": "columns",
     "fields": [
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "number",
         "name": "columns",
         "value": "",
         "label": "Columns"
       },
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "number",
         "name": "rows",
         "value": "",

@@ -27,7 +27,9 @@
   },
   {
     "id": "columns",
-   "components": []
+    "components": [
+      "column"
+    ]
   },
   {
     "id": "column",
